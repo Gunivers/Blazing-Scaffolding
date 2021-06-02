@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:gravel"
+      }
+    }
+  },
+  "rewards": {
+    "function": "loumardes:scaffolding_rush/replenish_gravel"
+  }
+}
