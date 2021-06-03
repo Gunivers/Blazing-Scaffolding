@@ -22,12 +22,15 @@ scoreboard players set @a StartGame 0
 
 execute if entity @a[scores={Reset=1..}] run tp @e[type=area_effect_cloud,tag=ScR_LavaLevel,limit=1] 0 256 0
 execute if entity @a[scores={Reset=1..}] as @e[type=area_effect_cloud,tag=ScR_LavaLevel,limit=1] at @s run function loumardes:scaffolding_rush/clear_area
+execute if entity @a[scores={Reset=1..}] run scoreboard players set LavaLevel constant 1
 execute if entity @a[scores={Reset=1..}] run scoreboard players set GameRunning constant 0
 scoreboard players set @a Reset 0
 
 #rise lava level
 execute if score GameRunning constant matches 1 unless score Lavaspeed constant matches 0 run scoreboard players add LavaCountdown constant 1
-execute if score LavaCountdown constant >= Lavaspeed constant at @e[type=area_effect_cloud,tag=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava
-execute if score LavaCountdown constant >= Lavaspeed constant as @e[type=area_effect_cloud,tag=ScR_LavaLevel] at @s run tp @s ~ ~1 ~
+execute if score PerformanceMode constant matches 0 if score LavaCountdown constant >= Lavaspeed constant at @e[type=area_effect_cloud,tag=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava_globally
+execute if score LavaCountdown constant >= Lavaspeed constant run scoreboard players add LavaLevel constant 1
 execute if score LavaCountdown constant >= Lavaspeed constant run scoreboard players set LavaCountdown constant 0
 
+execute if score PerformanceMode constant matches 1 as @a at @s run function loumardes:scaffolding_rush/rise_lava_locally
+execute if score PerformanceMode constant matches 1 as @e[type=villager] at @s run function loumardes:scaffolding_rush/rise_lava_locally
