@@ -4,7 +4,8 @@ scoreboard players enable @a Reset
 scoreboard players enable @a performanceMode
 
 #respawn dead players
-execute as @a[scores={killed=1..}] run function loumardes:scaffolding_rush/respawn
+execute as @a[tag=killed] run function loumardes:scaffolding_rush/respawn
+tag @a[scores={killed=1..}] add killed
 scoreboard players set @a killed 0
 
 #move villagers
