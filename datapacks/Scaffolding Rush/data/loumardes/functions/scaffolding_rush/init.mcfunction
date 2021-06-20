@@ -14,14 +14,27 @@ scoreboard objectives add killed deathCount
 scoreboard objectives add villagerClick minecraft.custom:talked_to_villager
 
 #Configuration score
-execute unless score Lavaspeed constant matches 0.. run scoreboard players set Lavaspeed constant 100
+execute unless score Lavaspeed constant matches 0.. run scoreboard players set Lavaspeed constant 300
+execute unless score BuildHeight constant matches 2.. run scoreboard players set BuildHeight constant 10
 
 #teams
 team add red
 team add blue
+team add yellow
+team add green
+
+team modify red color red
+team modify blue color blue
+team modify yellow color yellow
+team modify green color green
+
 team modify red collisionRule never
 team modify blue collisionRule never
+team modify yellow collisionRule never
+team modify green collisionRule never
 team modify red friendlyFire false
 team modify blue friendlyFire false
+team modify yellow friendlyFire false
+team modify green friendlyFire false
 
 
