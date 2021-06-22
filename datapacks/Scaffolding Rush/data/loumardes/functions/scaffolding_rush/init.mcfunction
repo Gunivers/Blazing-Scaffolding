@@ -13,9 +13,13 @@ scoreboard objectives add constant dummy
 scoreboard objectives add killed deathCount
 scoreboard objectives add villagerClick minecraft.custom:talked_to_villager
 
-#Configuration score
+#Configuration scores
 execute unless score Lavaspeed constant matches 0.. run scoreboard players set Lavaspeed constant 300
 execute unless score BuildHeight constant matches 2.. run scoreboard players set BuildHeight constant 10
+
+execute unless score UseGravel constant matches 0.. run scoreboard players set UseGravel constant 1
+execute unless score UseSnowball constant matches 0.. run scoreboard players set UseSnowball constant 1
+
 
 #teams
 team add red

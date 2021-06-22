@@ -11,7 +11,7 @@ execute unless score LavaLevel constant matches ..2 as @e[type=area_effect_cloud
 
 #Lava Kill
 execute store result score @s constant run data get entity @s Pos[1]
-execute if score @s constant <= LavaLevel constant unless entity @s[gamemode=spectator] unless score LavaLevel constant matches 1 run kill @s
+execute if score @s constant <= LavaLevel constant unless entity @s[gamemode=spectator] unless score LavaLevel constant matches 1 unless block ~-0.3 ~ ~-0.3 minecraft:scaffolding unless block ~-0.3 ~ ~0.3 minecraft:scaffolding unless block ~0.3 ~ ~-0.3 minecraft:scaffolding unless block ~0.3 ~ ~0.3 minecraft:scaffolding run kill @s[tag=!killed]
 
 #Build Limit
 scoreboard players operation @e[type=area_effect_cloud,tag=ScR_LavaLevel,limit=1] constant = LavaLevel constant
