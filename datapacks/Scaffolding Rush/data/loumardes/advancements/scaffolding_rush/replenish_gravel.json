@@ -9,6 +9,6 @@
     }
   },
   "rewards": {
-    "function": "loumardes:scaffolding_rush/replenish_gravel"
+    "function": "loumardes:scaffolding_rush/item/replenish_gravel"
   }
 }

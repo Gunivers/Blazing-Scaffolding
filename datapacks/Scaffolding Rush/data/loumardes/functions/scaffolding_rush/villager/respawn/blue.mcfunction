@@ -1,0 +1,2 @@
+tellraw @a[team=blue] ["",{"text":"Your villager has died, you will get a new one in "},{"score":{"name":"VillagerRespawn","objective":"constant"}},{"text":" seconds"}]
+scoreboard players operation BlueVillagerRespawn constant = VillagerRespawnTics constant

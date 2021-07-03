@@ -1,3 +1,4 @@
+#DEPRECATED, TOO MUCH LAG
 # /!\ must be executed at the ScR_LavaLevel AEC
 #/execute at @e[type=area_effect_cloud,tag=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava
 
