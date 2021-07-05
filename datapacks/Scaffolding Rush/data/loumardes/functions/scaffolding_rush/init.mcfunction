@@ -59,3 +59,5 @@ team modify yellow friendlyFire false
 team modify green friendlyFire false
 
 
+#debug
+say sr init done

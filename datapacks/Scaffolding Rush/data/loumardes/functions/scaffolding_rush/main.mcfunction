@@ -90,3 +90,4 @@ execute as @e[name="Join Yellow"] at @s as @a[distance=..1,team=!yellow] run fun
 execute as @e[name="Join Green"] at @s as @a[distance=..1,team=!green] run function loumardes:scaffolding_rush/team/join/green 
 execute as @e[name="Join Red"] at @s as @a[distance=..1,team=!red] run function loumardes:scaffolding_rush/team/join/red 
 execute as @e[name="Join Blue"] at @s as @a[distance=..1,team=!blue] run function loumardes:scaffolding_rush/team/join/blue 
+execute as @e[name="Spectate"] at @s as @a[distance=..1,team=!] run function loumardes:scaffolding_rush/team/leave
