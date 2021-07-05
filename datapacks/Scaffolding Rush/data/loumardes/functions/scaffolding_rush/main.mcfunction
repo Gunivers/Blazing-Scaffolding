@@ -56,8 +56,9 @@ scoreboard players set @a killed 0
 execute as @a if score @s villagerClick matches 1.. at @s run function loumardes:scaffolding_rush/villager/grab/any
 
 #place villagers
-tag @a[scores={villagerPlaced=1..}] remove has_egg
-scoreboard players set @a villagerPlaced 0
+execute as @a[scores={villagerPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+#tag @a[scores={villagerPlaced=1..}] remove has_egg
+#scoreboard players set @a villagerPlaced 0
 
 #toggle performance saving mode
 execute if entity @a[scores={performanceMode=1}] run scoreboard players set PerformanceMode constant 0
