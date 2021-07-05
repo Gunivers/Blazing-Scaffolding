@@ -1,12 +1,10 @@
-
-tp @s ~ ~ ~
+#Recursive function building the scaffolding pillar
 
 setblock ~ ~ ~ scaffolding destroy
+particle lava ~ ~ ~ 0 0 0 1 1
+say ok
 
-execute store result score @s constant run data get entity @s Pos[1]
-tellraw @a ["",{"score":{"name":"@s","objective":"constant"}}]
+scoreboard players remove @s constant 1
 
-execute if score @s constant = LavaLevel constant run setblock ~ ~ ~ magma_block
-execute if score @s constant = LavaLevel constant run kill @s
-execute unless score @s constant = LavaLevel constant positioned ~ ~-1 ~ run function loumardes:scaffolding_rush/pillar
+execute unless score @s constant matches 0.. positioned ~ ~1 ~ run function loumardes:scaffolding_rush/pillar
 

@@ -31,18 +31,21 @@ scoreboard players set @a opt_vil_resp_cd 0
 execute as @a[scores={opt_lava_speed=1..}] run scoreboard players operation Lavaspeed constant = @s opt_vil_resp_cd
 scoreboard players set @a opt_lava_speed 0
 
-execute as @a[scores={opt_build_height=1..}] run scoreboard players operation BuildHeight constant = @s opt_vil_resp_cd
+execute as @a[scores={opt_build_height=1..}] run scoreboard players operation BuildHeight constant = @s opt_build_height
 scoreboard players set @a opt_build_height 0
 
 
 #instant pillar
-execute if score InstantPillar constant matches 1 as @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] at @s run function loumardes:scaffolding_rush/pillar
+execute if score InstantPillar constant matches 1 as @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] at @s run function loumardes:scaffolding_rush/pillar_start
 
 
 #kill items : other than villager eggs -> unless data entity @s Item.tag.EntityTag
-kill @e[type=minecraft:item]
+#kill @e[type=minecraft:item]
+#execute as @a run function loumardes:scaffolding_rush/item/management
+
 #items
-execute as @a run function loumardes:scaffolding_rush/item/management
+execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/item/catch_drop
+
 
 #respawn dead players
 execute as @a[tag=killed] run function loumardes:scaffolding_rush/respawn
