@@ -64,4 +64,7 @@ worldborder set 71
 
 
 #debug
-say sr init done
+say sr init done (reset in progress)
+function loumardes:scaffolding_rush/reset
+say sr reset done
+function loumardes:scaffolding_rush/lobby/load_lobby
