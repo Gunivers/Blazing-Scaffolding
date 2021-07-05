@@ -4,6 +4,10 @@ function loumardes:scaffolding_rush/villager/give/all
 
 
 function loumardes:scaffolding_rush/broadcast/10s
+
+schedule function loumardes:scaffolding_rush/clear_area 3s
+kill @e[tag=lobbyText]
+
 schedule function loumardes:scaffolding_rush/broadcast/5s 5s
 schedule function loumardes:scaffolding_rush/broadcast/4s 6s
 schedule function loumardes:scaffolding_rush/broadcast/3s 7s
