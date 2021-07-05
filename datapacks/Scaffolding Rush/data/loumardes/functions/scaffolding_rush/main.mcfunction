@@ -66,7 +66,7 @@ scoreboard players set @a[scores={performanceMode=2..}] performanceMode 0
 
 
 #starts the map
-execute if entity @a[scores={StartGame=1..}] run function loumardes:scaffolding_rush/start_game
+execute if entity @a[scores={StartGame=1..}] run function loumardes:scaffolding_rush/start_map
 scoreboard players set @a StartGame 0
 
 #reset the map
