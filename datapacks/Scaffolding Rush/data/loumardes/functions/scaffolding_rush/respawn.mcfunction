@@ -7,6 +7,8 @@ execute if entity @s[team=yellow] unless entity @e[type=villager,team=yellow] ru
 tp @s[team=green] @e[type=villager,team=green, limit=1]
 execute if entity @s[team=green] unless entity @e[type=villager,team=green] run gamemode spectator @s
 
+gamemode spectator @s[team=!red, team=!green, team=!blue, team=!yellow]
+
 tag @s remove has_egg
 clear @s villager_spawn_egg
 
