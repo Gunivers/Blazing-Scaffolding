@@ -1,8 +1,17 @@
 
-#clear the blocks in the playing area
-tp @e[type=area_effect_cloud,tag=ScR_LavaLevel,limit=1] 0 256 0
-execute as @e[type=area_effect_cloud,tag=ScR_LavaLevel,limit=1] at @s run function loumardes:scaffolding_rush/clear_area
+function loumardes:scaffolding_rush/launch_clear
+kill @e[tag=lobbyText]
+
+schedule clear loumardes:scaffolding_rush/launch_clear
+schedule clear loumardes:scaffolding_rush/team/create_base/create
+schedule clear loumardes:scaffolding_rush/broadcast/5s
+schedule clear loumardes:scaffolding_rush/broadcast/4s
+schedule clear loumardes:scaffolding_rush/broadcast/3s
+schedule clear loumardes:scaffolding_rush/broadcast/2s
+schedule clear loumardes:scaffolding_rush/broadcast/1s
+schedule clear loumardes:scaffolding_rush/start_game
 
 scoreboard players set LavaLevel constant 1
 scoreboard players set GameRunning constant 0
+scoreboard players set GameLoading constant 0
 
