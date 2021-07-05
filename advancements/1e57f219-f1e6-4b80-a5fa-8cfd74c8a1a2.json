@@ -89,6 +89,12 @@
     },
     "done": false
   },
+  "minecraft:recipes/misc/bone_meal": {
+    "criteria": {
+      "has_bone": "2021-07-05 14:07:05 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/armor_stand": {
     "criteria": {
       "has_stone_slab": "2021-06-02 23:08:59 +0200"
