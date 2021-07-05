@@ -5,7 +5,7 @@ function loumardes:scaffolding_rush/villager/give/all
 
 function loumardes:scaffolding_rush/broadcast/10s
 
-schedule function loumardes:scaffolding_rush/clear_area 3s
+schedule function loumardes:scaffolding_rush/reset 3s
 kill @e[tag=lobbyText]
 
 schedule function loumardes:scaffolding_rush/broadcast/5s 5s

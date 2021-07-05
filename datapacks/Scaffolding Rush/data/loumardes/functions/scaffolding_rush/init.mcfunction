@@ -58,6 +58,10 @@ team modify blue friendlyFire false
 team modify yellow friendlyFire false
 team modify green friendlyFire false
 
+#worldborder
+worldborder warning distance 1
+worldborder set 71
+
 
 #debug
 say sr init done
