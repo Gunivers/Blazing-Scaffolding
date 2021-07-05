@@ -1,4 +1,8 @@
 
+function loumardes:scaffolding_rush/villager/give/all
+
+
+
 function loumardes:scaffolding_rush/broadcast/10s
 schedule function loumardes:scaffolding_rush/broadcast/5s 5s
 schedule function loumardes:scaffolding_rush/broadcast/4s 6s
