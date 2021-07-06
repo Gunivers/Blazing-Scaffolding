@@ -100,10 +100,13 @@ gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
+setworldspawn 0 3 0
 
 #debug / à changer
-say sr init done (reset in progress)
+say [SR] init done (reset in progress)
+playsound ui.toast.in ambient @a
 function loumardes:scaffolding_rush/reset
-say sr reset done
-function loumardes:scaffolding_rush/lobby/load_lobby
+say [SR] reset done
+playsound ui.toast.out ambient @a
+#function loumardes:scaffolding_rush/lobby/load_lobby
 #teleport @a 0 3 0 0 0

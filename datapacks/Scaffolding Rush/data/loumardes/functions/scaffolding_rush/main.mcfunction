@@ -82,6 +82,9 @@ scoreboard players set @a Reset 0
 #warn villagers height
 function loumardes:scaffolding_rush/warn_villager
 
+#inform the player that he has the egg
+title @a[tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg !! Place it to respawn ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+
 #game logic
 execute if score GameRunning constant matches 1 run function loumardes:scaffolding_rush/game_logic
 

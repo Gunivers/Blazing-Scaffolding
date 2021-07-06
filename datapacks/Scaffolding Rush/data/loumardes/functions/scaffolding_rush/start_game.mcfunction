@@ -9,4 +9,6 @@ give @a[team=green] lime_concrete_powder
 give @a[team=red] red_concrete_powder
 give @a[team=yellow] yellow_concrete_powder
 
+function loumardes:scaffolding_rush/villager/give/all
+
 function loumardes:scaffolding_rush/broadcast/start
