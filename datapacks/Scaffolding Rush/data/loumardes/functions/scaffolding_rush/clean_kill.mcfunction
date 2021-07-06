@@ -1,2 +1,2 @@
-tp @s 0 -99 0
+teleport @s 0 -99 0
 kill @s

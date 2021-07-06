@@ -1,2 +1,2 @@
 gamemode spectator @s
-tp @s @e[type=villager,team=green, limit=1]
+teleport @s @e[type=villager,team=green, limit=1]

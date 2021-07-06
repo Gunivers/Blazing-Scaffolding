@@ -1,4 +1,6 @@
 
+clear @a
+function loumardes:scaffolding_rush/team/base_egg/give
 scoreboard players set GameLoading constant 1
 
 function loumardes:scaffolding_rush/villager/give/all

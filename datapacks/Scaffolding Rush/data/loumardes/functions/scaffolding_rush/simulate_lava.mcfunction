@@ -2,7 +2,7 @@
 #/execute at @e[type=area_effect_cloud,tag=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava
 
 #Get LavaLevel
-tp @e[type=area_effect_cloud,tag=ScR_LavaLevel,limit=1] @s
+teleport @e[type=area_effect_cloud,tag=ScR_LavaLevel,limit=1] @s
 execute store result entity @e[type=area_effect_cloud,tag=ScR_LavaLevel,limit=1] Pos[1] double 1 run scoreboard players get LavaLevel constant
 
 #Raise Lava
