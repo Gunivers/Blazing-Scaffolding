@@ -60,7 +60,43 @@ team modify green friendlyFire false
 
 #worldborder
 worldborder warning distance 1
-worldborder set 71
+worldborder damage amount 0
+worldborder set 100
+
+#gamerule
+gamerule announceAdvancements true
+gamerule commandBlockOutput false
+gamerule disableElytraMovementCheck false
+gamerule disableRaids true
+gamerule doDaylightCycle false
+gamerule doEntityDrops true
+gamerule doFireTick false
+gamerule doImmediateRespawn true
+gamerule doInsomnia false
+gamerule doLimitedCrafting
+gamerule doMobLoot true
+gamerule doMobSpawning false
+gamerule doPatrolSpawning false
+gamerule doTileDrops false
+gamerule doTraderSpawning false
+gamerule doWeatherCycle false
+gamerule drowningDamage true
+gamerule fallDamage true
+gamerule fireDamage true
+gamerule forgiveDeadPlayers true
+gamerule keepInventory true
+gamerule logAdminCommands true
+gamerule maxCommandChainLength 65536
+gamerule maxEntityCramming 24
+gamerule mobGriefing true
+gamerule naturalRegeneration true
+gamerule randomTickSpeed 3
+gamerule reducedDebugInfo false
+gamerule sendCommandFeedback true
+gamerule showDeathMessages true
+gamerule spawnRadius 0
+gamerule spectatorsGenerateChunks false
+gamerule universalAnger false
 
 
 #debug
