@@ -4,11 +4,12 @@
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": {},
-        "block": "minecraft:scaffolding"
+        "block": "minecraft:gravel"
       }
     }
   },
   "rewards": {
-    "function": "loumardes:scaffolding_rush/item/replenish_scaffoldings"
-  }
+    "function": "loumardes:scaffolding_rush/item/replenish/gravel"
+  },
+  "parent": "loumardes:scaffolding_rush/replenish"
 }

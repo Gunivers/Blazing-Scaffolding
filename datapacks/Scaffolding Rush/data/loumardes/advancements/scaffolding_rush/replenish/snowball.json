@@ -10,6 +10,7 @@
     }
   },
   "rewards": {
-    "function": "loumardes:scaffolding_rush/item/replenish_snowball"
-  }
+    "function": "loumardes:scaffolding_rush/item/replenish/snowball"
+  },
+  "parent": "loumardes:scaffolding_rush/replenish"
 }

@@ -37,6 +37,8 @@ execute unless score UseSnowball constant matches 0.. run scoreboard players set
 
 execute unless score InstantPillar constant matches 0.. run scoreboard players set InstantPillar constant 0
 
+#advancement replenish
+advancement revoke @a from loumardes:replenish
 
 #teams
 team add red
@@ -81,7 +83,7 @@ gamerule doTileDrops false
 gamerule doTraderSpawning false
 gamerule doWeatherCycle false
 gamerule drowningDamage true
-gamerule fallDamage true
+gamerule fallDamage false
 gamerule fireDamage true
 gamerule forgiveDeadPlayers true
 gamerule keepInventory true
@@ -99,9 +101,9 @@ gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
 
-#debug
+#debug / à changer
 say sr init done (reset in progress)
 function loumardes:scaffolding_rush/reset
 say sr reset done
 function loumardes:scaffolding_rush/lobby/load_lobby
-tp @a 0 3 0 0 0
+#teleport @a 0 3 0 0 0
