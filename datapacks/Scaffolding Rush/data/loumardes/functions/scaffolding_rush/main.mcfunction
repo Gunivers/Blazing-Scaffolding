@@ -1,5 +1,5 @@
 effect give @a minecraft:saturation 999999 1 true
-execute as @a at @s if score TeamBaseEgg global matches 1.. if block ~ ~-1 ~ minecraft:bedrock run effect give @s minecraft:speed 1 5 true
+execute as @a at @s if score TeamBaseEgg global matches 1.. if block ~ ~-1 ~ minecraft:grass_block run effect give @s minecraft:speed 1 5 true
 
 scoreboard players enable @a StartGame
 scoreboard players enable @a Reset
