@@ -16,6 +16,7 @@ scoreboard objectives add opt_snowball trigger
 scoreboard objectives add opt_vil_respawn trigger
 scoreboard objectives add opt_instant_pil trigger
 scoreboard objectives add opt_perf_mode trigger
+scoreboard objectives add opt_team_egg trigger
 
 #internal values
 scoreboard objectives add global dummy
@@ -45,6 +46,7 @@ execute unless score UseGravel options matches 0.. run scoreboard players set Us
 execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
 
 execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
+execute unless score TeamEgg options matches 0.. run scoreboard players set score options 0
 
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
 
