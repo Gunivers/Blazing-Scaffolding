@@ -1,5 +1,24 @@
 {
     "values":[
-
+        "dirt",
+        "grass_block",
+        "white_concrete",
+        "black_concrete_powder",
+        "blue_concrete_powder",
+        "red_concrete_powder",
+        "green_concrete_powder",
+        "yellow_concrete_powder",
+        "light_gray_concrete_powder",
+        "coal_block",
+        "blackstone",
+        "blackstone_slab",
+        "bedrock",
+        "magmablock",
+        "oak_planks",
+        "spruce_planks",
+        "birch_planks",
+        "red_stained_glass",
+        "red_stained_glass_plane",
+        "enchanting_table"
     ]
    }
