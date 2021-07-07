@@ -1,6 +1,7 @@
 
 clear @a
 function loumardes:scaffolding_rush/team/base_egg/give
+scoreboard players set GameLobby constant 0
 scoreboard players set GameLoading constant 1
 
 function loumardes:scaffolding_rush/broadcast/10s
