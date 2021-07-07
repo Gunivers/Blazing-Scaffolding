@@ -9,7 +9,4 @@ execute if entity @s[team=green] unless entity @e[type=villager,team=green] run 
 
 gamemode spectator @s[team=!red, team=!green, team=!blue, team=!yellow]
 
-tag @s remove has_egg
-clear @s villager_spawn_egg
-
-scoreboard players set @a killed 0
+scoreboard players set @s killed 0
