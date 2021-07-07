@@ -12,4 +12,3 @@ give @a[team=yellow] yellow_concrete_powder
 function loumardes:scaffolding_rush/villager/give/all
 
 function loumardes:scaffolding_rush/broadcast/start
-fill -90 1 -90 90 1 90 magma_block
