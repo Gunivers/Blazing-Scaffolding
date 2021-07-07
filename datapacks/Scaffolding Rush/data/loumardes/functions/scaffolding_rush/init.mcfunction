@@ -37,6 +37,8 @@ execute unless score UseSnowball constant matches 0.. run scoreboard players set
 
 execute unless score InstantPillar constant matches 0.. run scoreboard players set InstantPillar constant 0
 
+execute unless score PerformanceMode constant matches 0.. run scoreboard players set PerformanceMode constant 0
+
 
 #teams
 team add red

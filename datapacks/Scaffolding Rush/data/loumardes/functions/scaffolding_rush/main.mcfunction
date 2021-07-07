@@ -2,7 +2,7 @@ effect give @a minecraft:saturation 999999 1 true
 
 scoreboard players enable @a StartGame
 scoreboard players enable @a Reset
-#scoreboard players enable @a performanceMode
+scoreboard players enable @a performanceMode
 
 #options triggers
 execute if score GameRunning constant matches 0 run scoreboard players enable @a opt_lava_speed
@@ -12,12 +12,14 @@ execute if score GameRunning constant matches 0 run scoreboard players enable @a
 execute if score GameRunning constant matches 0 run scoreboard players enable @a opt_vil_respawn
 execute if score GameRunning constant matches 0 run scoreboard players enable @a opt_vil_resp_cd
 execute if score GameRunning constant matches 0 run scoreboard players enable @a opt_instant_pil
+execute if score GameRunning constant matches 0 run scoreboard players enable @a performanceMode
 
 #flip the constant value
 execute if entity @a[scores={opt_gravel=1..}] store success score UseGravel constant if score UseGravel constant matches 0
 execute if entity @a[scores={opt_snowball=1..}] store success score UseSnowball constant if score UseSnowball constant matches 0
 execute if entity @a[scores={opt_instant_pil=1..}] store success score InstantPillar constant if score InstantPillar constant matches 0
 execute if entity @a[scores={opt_vil_respawn=1..}] store success score VillagerForgiveness constant if score VillagerForgiveness constant matches 0
+execute if entity @a[scores={performanceMode=1..}] store success score PerformanceMode constant if score PerformanceMode constant matches 0
 
 scoreboard players set @a opt_gravel 0
 scoreboard players set @a opt_snowball 0
@@ -28,7 +30,7 @@ scoreboard players set @a opt_vil_respawn 0
 execute as @a[scores={opt_vil_resp_cd=1..}] run scoreboard players operation VillagerRespawn constant = @s opt_vil_resp_cd
 scoreboard players set @a opt_vil_resp_cd 0
 
-execute as @a[scores={opt_lava_speed=1..}] run scoreboard players operation Lavaspeed constant = @s opt_vil_resp_cd
+execute as @a[scores={opt_lava_speed=1..}] run scoreboard players operation Lavaspeed constant = @s opt_lava_speed
 scoreboard players set @a opt_lava_speed 0
 
 execute as @a[scores={opt_build_height=1..}] run scoreboard players operation BuildHeight constant = @s opt_build_height
