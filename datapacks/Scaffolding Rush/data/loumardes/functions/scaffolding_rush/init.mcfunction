@@ -18,25 +18,30 @@ scoreboard objectives add opt_vil_respawn trigger
 scoreboard objectives add opt_instant_pil trigger
 
 #internal values
-scoreboard objectives add constant dummy
+scoreboard objectives add global dummy
+scoreboard objectives add options dummy
+scoreboard objectives add YPlayer dummy
+scoreboard objectives add YVillager dummy
+scoreboard objectives add YVillager dummy
+
 scoreboard objectives add killed deathCount
 scoreboard objectives add villagerClick minecraft.custom:talked_to_villager
 scoreboard objectives add villagerPlaced minecraft.used:villager_spawn_egg
 
-scoreboard players set 20 constant 20
+scoreboard players set 20 global 20
 
 
 #Configuration scores
-execute unless score Lavaspeed constant matches 0.. run scoreboard players set Lavaspeed constant 300
-execute unless score BuildHeight constant matches 2.. run scoreboard players set BuildHeight constant 10
+execute unless score Lavaspeed options matches 0.. run scoreboard players set Lavaspeed options 300
+execute unless score BuildHeight options matches 2.. run scoreboard players set BuildHeight options 10
 
-execute unless score VillagerForgiveness constant matches 0.. run scoreboard players set VillagerForgiveness constant 1
-execute unless score VillagerRespawn constant matches 0.. run scoreboard players set VillagerRespawn constant 30
+execute unless score VillagerForgiveness options matches 0.. run scoreboard players set VillagerForgiveness options 1
+execute unless score VillagerRespawn options matches 0.. run scoreboard players set VillagerRespawn options 30
 
-execute unless score UseGravel constant matches 0.. run scoreboard players set UseGravel constant 1
-execute unless score UseSnowball constant matches 0.. run scoreboard players set UseSnowball constant 0
+execute unless score UseGravel options matches 0.. run scoreboard players set UseGravel options 1
+execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
 
-execute unless score InstantPillar constant matches 0.. run scoreboard players set InstantPillar constant 0
+execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish

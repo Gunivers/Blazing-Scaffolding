@@ -1,8 +1,8 @@
 
 clear @a
 function loumardes:scaffolding_rush/team/base_egg/give
-scoreboard players set GameLobby constant 0
-scoreboard players set GameLoading constant 1
+scoreboard players set GameLobby global 0
+scoreboard players set GameLoading global 1
 
 function loumardes:scaffolding_rush/broadcast/10s
 
@@ -32,11 +32,11 @@ scoreboard players reset @a performanceMode
 
 
 #get villager respawn timer in tics
-scoreboard players operation VillagerRespawnTics constant = VillagerRespawn constant
-scoreboard players operation VillagerRespawnTics constant *= 20 constant
+scoreboard players operation VillagerRespawnTics global = VillagerRespawn options
+scoreboard players operation VillagerRespawnTics global *= 20 global
 
 #reset villagers respawn countdowns
-scoreboard players set RedVillagerRespawn constant -1
-scoreboard players set BlueVillagerRespawn constant -1
-scoreboard players set YellowVillagerRespawn constant -1
-scoreboard players set GreenVillagerRespawn constant -1
+scoreboard players set RedVillagerRespawn global -1
+scoreboard players set BlueVillagerRespawn global -1
+scoreboard players set YellowVillagerRespawn global -1
+scoreboard players set GreenVillagerRespawn global -1

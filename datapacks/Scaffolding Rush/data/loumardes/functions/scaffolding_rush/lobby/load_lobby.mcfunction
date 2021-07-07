@@ -11,8 +11,8 @@ summon area_effect_cloud 1 4 8 {CustomName:'{"text":"Start Game","bold":true}',T
 summon area_effect_cloud -3 4 6 {CustomName:'{"text":"How to play","bold":true,"color":"light_purple"}',Tags:["lobbyText"],CustomNameVisible: 1,Age: -2147483648, Duration: -1, WaitTime: -2147483648}
 
 
-scoreboard players set GameLobby constant 1
-scoreboard players set TeamBaseEgg constant 1
+scoreboard players set GameLobby global 1
+scoreboard players set TeamBaseEgg global 1
 
 give @a minecraft:scaffolding
 give @a minecraft:gravel
