@@ -17,7 +17,7 @@ schedule clear loumardes:scaffolding_rush/broadcast/2s
 schedule clear loumardes:scaffolding_rush/broadcast/1s
 schedule clear loumardes:scaffolding_rush/start_game
 
-scoreboard players set LavaLevel global 3
+scoreboard players set LavaLevel global 2
 scoreboard players set GameRunning global 0
 scoreboard players set GameLoading global 0
 
