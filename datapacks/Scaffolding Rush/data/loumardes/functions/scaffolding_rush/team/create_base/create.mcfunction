@@ -5,6 +5,8 @@ execute unless entity @a[team=yellow] run kill @e[name="Yellow",tag=baseTeam]
 
 execute as @e[tag=baseTeam] at @s run function loumardes:scaffolding_rush/team/create_base/load_structure
 
+function loumardes:scaffolding_rush/team/create_base/armor
+
 execute at @e[tag=baseTeam,name="Blue",limit=1] run teleport @a[team=blue] ~ 4 ~
 execute at @e[tag=baseTeam,name="Green",limit=1] run teleport @a[team=green] ~ 4 ~
 execute at @e[tag=baseTeam,name="Red",limit=1] run teleport @a[team=red] ~ 4 ~
