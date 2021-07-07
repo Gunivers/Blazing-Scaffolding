@@ -12,7 +12,7 @@ execute if score @s global <= LavaLevel global unless entity @s[gamemode=spectat
 execute unless entity @e[type=area_effect_cloud,tag=ScR_BuildLimit,limit=1] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ScR_BuildLimit"]}
 
 tp @e[type=area_effect_cloud,tag=ScR_BuildLimit,limit=1] ~ ~ ~
-scoreboard players operation @e[type=area_effect_cloud,tag=ScR_BuildLimit,limit=1] global = LavaLevel options
+scoreboard players operation @e[type=area_effect_cloud,tag=ScR_BuildLimit,limit=1] global = LavaLevel global
 scoreboard players operation @e[type=area_effect_cloud,tag=ScR_BuildLimit,limit=1] global += BuildHeight options
 execute as @e[type=area_effect_cloud,tag=ScR_BuildLimit,limit=1] store result entity @s Pos[1] double 1 run scoreboard players get @s global
 

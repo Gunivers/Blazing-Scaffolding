@@ -27,7 +27,7 @@ scoreboard players reset @a opt_snowball
 scoreboard players reset @a opt_vil_respawn
 scoreboard players reset @a opt_vil_resp_cd
 scoreboard players reset @a opt_instant_pil
-scoreboard players reset @a performanceMode
+scoreboard players reset @a opt_perf_mode
 
 
 

@@ -2,7 +2,6 @@ effect give @a minecraft:saturation 999999 1 true
 
 scoreboard players enable @a StartGame
 scoreboard players enable @a Reset
-scoreboard players enable @a performanceMode
 
 #options triggers
 execute if score GameRunning global matches 0 run scoreboard players enable @a opt_lava_speed
@@ -12,18 +11,20 @@ execute if score GameRunning global matches 0 run scoreboard players enable @a o
 execute if score GameRunning global matches 0 run scoreboard players enable @a opt_vil_respawn
 execute if score GameRunning global matches 0 run scoreboard players enable @a opt_vil_resp_cd
 execute if score GameRunning global matches 0 run scoreboard players enable @a opt_instant_pil
+execute if score GameRunning global matches 0 run scoreboard players enable @a opt_perf_mode
 
 #flip the options value
 execute if entity @a[scores={opt_gravel=1..}] store success score UseGravel options if score UseGravel options matches 0
 execute if entity @a[scores={opt_snowball=1..}] store success score UseSnowball options if score UseSnowball options matches 0
 execute if entity @a[scores={opt_instant_pil=1..}] store success score InstantPillar options if score InstantPillar options matches 0
 execute if entity @a[scores={opt_vil_respawn=1..}] store success score VillagerForgiveness options if score VillagerForgiveness options matches 0
-execute if entity @a[scores={performanceMode=1..}] store success score PerformanceMode options if score PerformanceMode options matches 0
+execute if entity @a[scores={opt_perf_mode=1..}] store success score PerformanceMode options if score PerformanceMode options matches 0
 
 scoreboard players set @a opt_gravel 0
 scoreboard players set @a opt_snowball 0
 scoreboard players set @a opt_instant_pil 0
 scoreboard players set @a opt_vil_respawn 0
+scoreboard players set @a opt_perf_mode 0
 
 #set the selected value
 execute as @a[scores={opt_vil_resp_cd=1..}] run scoreboard players operation VillagerRespawn options = @s opt_vil_resp_cd
@@ -62,9 +63,9 @@ execute as @a[scores={villagerPlaced=1..}] run function loumardes:scaffolding_ru
 #scoreboard players set @a villagerPlaced 0
 
 #toggle performance saving mode
-execute if entity @a[scores={performanceMode=1}] run scoreboard players set PerformanceMode options 0
-execute if entity @a[scores={performanceMode=2}] run scoreboard players set PerformanceMode options 1
-scoreboard players set @a[scores={performanceMode=2..}] performanceMode 0
+execute if entity @a[scores={opt_perf_mode=1}] run scoreboard players set PerformanceMode options 0
+execute if entity @a[scores={opt_perf_mode=2}] run scoreboard players set PerformanceMode options 1
+scoreboard players set @a[scores={opt_perf_mode=2..}] performanceMode 0
 
 
 #starts the map

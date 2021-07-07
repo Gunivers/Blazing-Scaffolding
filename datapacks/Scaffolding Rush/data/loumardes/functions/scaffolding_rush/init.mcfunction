@@ -7,7 +7,6 @@ execute unless entity @e[type=area_effect_cloud,tag=ScR_LavaLevel] run summon mi
 #trigger controls
 scoreboard objectives add StartGame trigger
 scoreboard objectives add Reset trigger
-scoreboard objectives add performanceMode trigger
 
 scoreboard objectives add opt_lava_speed trigger
 scoreboard objectives add opt_build_height trigger
@@ -16,6 +15,7 @@ scoreboard objectives add opt_gravel trigger
 scoreboard objectives add opt_snowball trigger
 scoreboard objectives add opt_vil_respawn trigger
 scoreboard objectives add opt_instant_pil trigger
+scoreboard objectives add opt_perf_mode trigger
 
 #internal values
 scoreboard objectives add global dummy
@@ -42,6 +42,8 @@ execute unless score UseGravel options matches 0.. run scoreboard players set Us
 execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
 
 execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
+
+execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish
@@ -109,7 +111,7 @@ gamerule universalAnger false
 setworldspawn 0 3 0
 
 #debug / à changer
-say [SR] init done (reset in progress)
+#say [SR] init done (reset in progress)
 playsound ui.toast.in ambient @a
 function loumardes:scaffolding_rush/reset
 say [SR] reset done
