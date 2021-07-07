@@ -1,3 +1,4 @@
+setblock 1 5 8 air
 scoreboard players set TeamBaseEgg global 0
 
 clear @a
