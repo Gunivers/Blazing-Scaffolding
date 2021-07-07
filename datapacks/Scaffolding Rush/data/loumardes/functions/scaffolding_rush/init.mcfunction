@@ -74,7 +74,13 @@ team modify green friendlyFire false
 #worldborder
 worldborder warning distance 1
 worldborder damage amount 0
-worldborder set 100
+
+execute store result score worldborder global run worldborder get
+execute if score worldborder global matches 128.. run worldborder set 100
+
+
+#time
+time set noon
 
 #gamerule
 gamerule announceAdvancements true
