@@ -6,5 +6,5 @@ say ok
 
 scoreboard players remove @s global 1
 
-execute unless score @s global matches 0.. positioned ~ ~1 ~ run function loumardes:scaffolding_rush/pillar
+execute unless score @s global matches ..0 positioned ~ ~1 ~ run function loumardes:scaffolding_rush/pillar
 
