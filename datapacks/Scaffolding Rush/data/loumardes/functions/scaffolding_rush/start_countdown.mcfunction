@@ -1,12 +1,16 @@
 
-function loumardes:scaffolding_rush/villager/give/all
-
-
+clear @a
+function loumardes:scaffolding_rush/team/base_egg/give
+scoreboard players set GameLobby constant 0
+scoreboard players set GameLoading constant 1
 
 function loumardes:scaffolding_rush/broadcast/10s
 
-schedule function loumardes:scaffolding_rush/clear_area 3s
+schedule function loumardes:scaffolding_rush/launch_clear 1s
 kill @e[tag=lobbyText]
+gamemode spectator @a[team=]
+
+schedule function loumardes:scaffolding_rush/team/create_base/create 4s
 
 schedule function loumardes:scaffolding_rush/broadcast/5s 5s
 schedule function loumardes:scaffolding_rush/broadcast/4s 6s

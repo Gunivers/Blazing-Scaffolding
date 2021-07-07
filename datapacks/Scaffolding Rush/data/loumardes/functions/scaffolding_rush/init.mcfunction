@@ -1,3 +1,4 @@
+kill @e[type=!player]
 
 #summons the AEC indiquant la position de la lave
 execute unless entity @e[type=area_effect_cloud,tag=ScR_LavaLevel] run summon minecraft:area_effect_cloud 0 1 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ScR_LavaLevel"]}
@@ -37,8 +38,8 @@ execute unless score UseSnowball constant matches 0.. run scoreboard players set
 
 execute unless score InstantPillar constant matches 0.. run scoreboard players set InstantPillar constant 0
 
-execute unless score PerformanceMode constant matches 0.. run scoreboard players set PerformanceMode constant 0
-
+#advancement replenish
+advancement revoke @a from loumardes:replenish
 
 #teams
 team add red
@@ -60,4 +61,53 @@ team modify blue friendlyFire false
 team modify yellow friendlyFire false
 team modify green friendlyFire false
 
+#worldborder
+worldborder warning distance 1
+worldborder damage amount 0
+worldborder set 100
 
+#gamerule
+gamerule announceAdvancements true
+gamerule commandBlockOutput false
+gamerule disableElytraMovementCheck false
+gamerule disableRaids true
+gamerule doDaylightCycle false
+gamerule doEntityDrops true
+gamerule doFireTick false
+gamerule doImmediateRespawn true
+gamerule doInsomnia false
+gamerule doLimitedCrafting
+gamerule doMobLoot true
+gamerule doMobSpawning false
+gamerule doPatrolSpawning false
+gamerule doTileDrops false
+gamerule doTraderSpawning false
+gamerule doWeatherCycle false
+gamerule drowningDamage true
+gamerule fallDamage false
+gamerule fireDamage true
+gamerule forgiveDeadPlayers true
+gamerule keepInventory true
+gamerule logAdminCommands true
+gamerule maxCommandChainLength 65536
+gamerule maxEntityCramming 24
+gamerule mobGriefing true
+gamerule naturalRegeneration true
+gamerule randomTickSpeed 3
+gamerule reducedDebugInfo false
+gamerule sendCommandFeedback true
+gamerule showDeathMessages true
+gamerule spawnRadius 0
+gamerule spectatorsGenerateChunks false
+gamerule universalAnger false
+
+setworldspawn 0 3 0
+
+#debug / à changer
+say [SR] init done (reset in progress)
+playsound ui.toast.in ambient @a
+function loumardes:scaffolding_rush/reset
+say [SR] reset done
+playsound ui.toast.out ambient @a
+#function loumardes:scaffolding_rush/lobby/load_lobby
+#teleport @a 0 3 0 0 0

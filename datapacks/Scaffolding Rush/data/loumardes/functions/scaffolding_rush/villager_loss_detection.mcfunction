@@ -1,8 +1,9 @@
 #trigger respawn
-execute unless score RedVillagerRespawn constant matches 0.. if entity @a[team=red] unless entity @e[type=villager,team=red,limit=1] unless entity @a[tag=has_egg,team=red] run function loumardes:scaffolding_rush/villager/respawn/red
-execute unless score BlueVillagerRespawn constant matches 0.. if entity @a[team=blue] unless entity @e[type=villager,team=blue,limit=1] unless entity @a[tag=has_egg,team=blue] run function loumardes:scaffolding_rush/villager/respawn/blue
-execute unless score YellowVillagerRespawn constant matches 0.. if entity @a[team=yellow] unless entity @e[type=villager,team=yellow,limit=1] unless entity @a[tag=has_egg,team=yellow] run function loumardes:scaffolding_rush/villager/respawn/yellow
-execute unless score GreenVillagerRespawn constant matches 0.. if entity @a[team=green] unless entity @e[type=villager,team=green,limit=1] unless entity @a[tag=has_egg,team=green] run function loumardes:scaffolding_rush/villager/respawn/green
+execute if entity @a[team=blue] unless entity @e[type=villager,team=blue,limit=1] unless entity @a[tag=has_egg,team=blue] run function loumardes:scaffolding_rush/villager/test_respawn/blue
+execute if entity @a[team=green] unless entity @e[type=villager,team=green,limit=1] unless entity @a[tag=has_egg,team=green] run function loumardes:scaffolding_rush/villager/test_respawn/green
+execute if entity @a[team=red] unless entity @e[type=villager,team=red,limit=1] unless entity @a[tag=has_egg,team=red] run function loumardes:scaffolding_rush/villager/test_respawn/red
+execute if entity @a[team=yellow] unless entity @e[type=villager,team=yellow,limit=1] unless entity @a[tag=has_egg,team=yellow] run function loumardes:scaffolding_rush/villager/test_respawn/yellow
+
 
 #respawn countdown
 execute if score RedVillagerRespawn constant matches 0.. run scoreboard players remove RedVillagerRespawn constant 1

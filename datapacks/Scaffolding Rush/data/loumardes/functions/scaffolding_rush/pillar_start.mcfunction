@@ -1,6 +1,6 @@
 #starts a recursive function to build a scaffolding pillar
 
-setblock ~ ~1 ~ scaffolding destroy
+#setblock ~ ~1 ~ scaffolding destroy
 
 execute store result score @s constant run data get entity @s Pos[1]
 scoreboard players operation @s constant -= LavaLevel constant
