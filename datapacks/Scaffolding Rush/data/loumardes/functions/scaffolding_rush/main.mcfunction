@@ -15,6 +15,9 @@ execute if score GameRunning global matches 0 run scoreboard players enable @a o
 execute if score GameRunning global matches 0 run scoreboard players enable @a opt_instant_pil
 execute if score GameRunning global matches 0 run scoreboard players enable @a opt_perf_mode
 
+#suffocatio,
+execute as @a at @s if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~1 ~
+
 #flip the options value
 execute if entity @a[scores={opt_gravel=1..}] store success score UseGravel options if score UseGravel options matches 0
 execute if entity @a[scores={opt_snowball=1..}] store success score UseSnowball options if score UseSnowball options matches 0
