@@ -16,7 +16,7 @@ execute if score GameRunning global matches 0 run scoreboard players enable @a o
 execute if score GameRunning global matches 0 run scoreboard players enable @a opt_perf_mode
 
 #suffocatio,
-execute as @a at @s if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~1 ~
+execute as @a at @s if score GameRunning global matches 0 if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~1 ~
 
 #flip the options value
 execute if entity @a[scores={opt_gravel=1..}] store success score UseGravel options if score UseGravel options matches 0
