@@ -117,7 +117,7 @@ gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
-setworldspawn 0 3 0
+setworldspawn 0 4 0
 
 #debug / à changer
 #say [SR] init done (reset in progress)
