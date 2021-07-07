@@ -50,9 +50,7 @@ execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/
 
 
 #respawn dead players
-execute as @a[tag=killed] run function loumardes:scaffolding_rush/respawn/any
-tag @a[scores={killed=1..}] add killed
-scoreboard players set @a killed 0
+execute as @a[scores={killed=1..}] run function loumardes:scaffolding_rush/respawn/any
 
 #move villagers
 execute as @a if score @s villagerClick matches 1.. at @s run function loumardes:scaffolding_rush/villager/grab/any
