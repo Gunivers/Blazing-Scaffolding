@@ -1,6 +1,5 @@
 
 clear @a
-function loumardes:scaffolding_rush/team/base_egg/give
 scoreboard players set GameLobby global 0
 scoreboard players set GameLoading global 1
 
