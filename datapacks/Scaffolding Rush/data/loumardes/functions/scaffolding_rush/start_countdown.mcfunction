@@ -1,3 +1,4 @@
+scoreboard players set TeamBaseEgg global 0
 
 clear @a
 scoreboard players set GameLobby global 0
@@ -27,8 +28,6 @@ scoreboard players reset @a opt_vil_respawn
 scoreboard players reset @a opt_vil_resp_cd
 scoreboard players reset @a opt_instant_pil
 scoreboard players reset @a opt_perf_mode
-
-
 
 #get villager respawn timer in tics
 scoreboard players operation VillagerRespawnTics global = VillagerRespawn options
