@@ -56,10 +56,10 @@ execute as @a[scores={killed=1..}] run function loumardes:scaffolding_rush/respa
 execute as @a if score @s villagerClick matches 1.. at @s run function loumardes:scaffolding_rush/villager/grab/any
 
 #place villagers
-execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/respawn/red
-execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/respawn/red
+execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/respawn/blue
+execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/respawn/green
 execute as @a[scores={redPlaced=1..}] run function loumardes:scaffolding_rush/respawn/red
-execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/respawn/red
+execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/respawn/yellow
 #tag @a[scores={villagerPlaced=1..}] remove has_egg
 #scoreboard players set @a villagerPlaced 0
 
