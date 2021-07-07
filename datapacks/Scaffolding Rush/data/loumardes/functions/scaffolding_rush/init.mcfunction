@@ -26,7 +26,10 @@ scoreboard objectives add YVillager dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add villagerClick minecraft.custom:talked_to_villager
-scoreboard objectives add villagerPlaced minecraft.used:villager_spawn_egg
+scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
+scoreboard objectives add greenPlaced minecraft.used:slime_spawn_egg
+scoreboard objectives add redPlaced minecraft.used:mooshroom_spawn_egg
+scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 
 scoreboard players set 20 global 20
 
