@@ -10,8 +10,8 @@ scoreboard players enable @a Reset
 kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:scaffolding"}}]
 
 #gravel tower
-execute as @a at @s if block ~ ~-1 ~ #loumardes:tower run gamemode adventure @s
-execute as @a at @s unless block ~ ~-1 ~ #loumardes:tower run gamemode survival @s
+execute as @a at @s if block ~ ~-2 ~ #loumardes:tower run gamemode adventure @s
+execute as @a at @s unless block ~ ~-2 ~ #loumardes:tower run gamemode survival @s
 
 #startbutton
 execute if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
