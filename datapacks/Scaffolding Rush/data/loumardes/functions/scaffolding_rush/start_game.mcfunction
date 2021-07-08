@@ -2,7 +2,7 @@ scoreboard players set GameRunning global 1
 scoreboard players set GameLoading global 0
 scoreboard players set LavaCountdown global 0
 
-gamemode survival @a[team=!Spectator]
+gamemode survival @a[team=!]
 #give items
 give @a[team=!] scaffolding
 give @a[team=blue] blue_concrete_powder
