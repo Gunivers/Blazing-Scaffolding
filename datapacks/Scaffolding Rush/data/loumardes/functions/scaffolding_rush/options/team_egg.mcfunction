@@ -9,3 +9,5 @@ execute as @a run function loumardes:scaffolding_rush/team/base_egg/clear_egg
 
 scoreboard players set @a opt_team_egg 0
 scoreboard players enable @a opt_team_egg
+
+function loumardes:scaffolding_rush/options/refresh

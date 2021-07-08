@@ -16,3 +16,4 @@ scoreboard players set TeamBaseEgg global 1
 
 give @a minecraft:scaffolding
 give @a minecraft:gravel{CanPlaceOn:["minecraft:scaffolding"]}
+function loumardes:scaffolding_rush/lobby/give_book

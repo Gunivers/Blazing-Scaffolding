@@ -5,3 +5,5 @@ tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The build height has bee
 
 scoreboard players set @a opt_build_height 0
 scoreboard players enable @a opt_build_height
+
+function loumardes:give_book
