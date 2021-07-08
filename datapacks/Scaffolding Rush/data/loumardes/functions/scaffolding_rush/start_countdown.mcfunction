@@ -8,7 +8,7 @@ scoreboard players set GameLoading global 1
 
 function loumardes:scaffolding_rush/broadcast/10s
 
-schedule function loumardes:scaffolding_rush/launch_clear 4s
+schedule function loumardes:scaffolding_rush/launch_clear
 kill @e[tag=lobbyText]
 gamemode spectator @a[team=]
 
