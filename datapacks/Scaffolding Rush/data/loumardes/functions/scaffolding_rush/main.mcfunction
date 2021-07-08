@@ -8,17 +8,6 @@ execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at 
 scoreboard players enable @a StartGame
 scoreboard players enable @a Reset
 
-#options triggers
-execute if score GameRunning global matches 0 run scoreboard players enable @a opt_lava_speed
-execute if score GameRunning global matches 0 run scoreboard players enable @a opt_build_height
-execute if score GameRunning global matches 0 run scoreboard players enable @a opt_gravel
-execute if score GameRunning global matches 0 run scoreboard players enable @a opt_snowball
-execute if score GameRunning global matches 0 run scoreboard players enable @a opt_vil_respawn
-execute if score GameRunning global matches 0 run scoreboard players enable @a opt_vil_resp_cd
-execute if score GameRunning global matches 0 run scoreboard players enable @a opt_instant_pil
-execute if score GameRunning global matches 0 run scoreboard players enable @a opt_perf_mode
-execute if score GameRunning global matches 0 run scoreboard players enable @a opt_team_egg
-
 #startbutton
 execute if score GameLoading global matches 0 if block 1 5 8 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
 execute if score GameLobby global matches 1 unless block 1 5 8 minecraft:spruce_button run setblock 1 5 8 minecraft:spruce_button[face=floor] replace
@@ -31,29 +20,7 @@ execute as @a at @s if score GameRunning global matches 0 if block ~ ~ ~ #loumar
 execute as @a at @s if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~1 ~
 
 #flip the options value
-execute if entity @a[scores={opt_gravel=1..}] store success score UseGravel options if score UseGravel options matches 0
-execute if entity @a[scores={opt_snowball=1..}] store success score UseSnowball options if score UseSnowball options matches 0
-execute if entity @a[scores={opt_instant_pil=1..}] store success score InstantPillar options if score InstantPillar options matches 0
-execute if entity @a[scores={opt_vil_respawn=1..}] store success score VillagerForgiveness options if score VillagerForgiveness options matches 0
-execute if entity @a[scores={opt_perf_mode=1..}] store success score PerformanceMode options if score PerformanceMode options matches 0
 function loumardes:scaffolding_rush/options/any
-
-scoreboard players set @a opt_gravel 0
-scoreboard players set @a opt_snowball 0
-scoreboard players set @a opt_instant_pil 0
-scoreboard players set @a opt_vil_respawn 0
-scoreboard players set @a opt_perf_mode 0
-
-#set the selected value
-execute as @a[scores={opt_vil_resp_cd=1..}] run scoreboard players operation VillagerRespawn options = @s opt_vil_resp_cd
-scoreboard players set @a opt_vil_resp_cd 0
-
-execute as @a[scores={opt_lava_speed=1..}] run scoreboard players operation Lavaspeed options = @s opt_lava_speed
-scoreboard players set @a opt_lava_speed 0
-
-execute as @a[scores={opt_build_height=1..}] run scoreboard players operation BuildHeight options = @s opt_build_height
-scoreboard players set @a opt_build_height 0
-
 
 #instant pillar
 execute if score InstantPillar options matches 1 at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ScR_Pillar"]}
