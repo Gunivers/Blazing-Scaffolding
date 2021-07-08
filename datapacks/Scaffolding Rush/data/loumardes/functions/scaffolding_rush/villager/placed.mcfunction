@@ -5,7 +5,10 @@ execute as @a[gamemode=spectator,team=blue] run function loumardes:scaffolding_r
 execute as @a[gamemode=spectator,team=yellow] run function loumardes:scaffolding_rush/respawn/yellow
 execute as @a[gamemode=spectator,team=green] run function loumardes:scaffolding_rush/respawn/green
 
-scoreboard players set @s villagerPlaced 0
+scoreboard players set @s bluePlaced 0
+scoreboard players set @s greenPlaced 0
+scoreboard players set @s redPlaced 0
+scoreboard players set @s yellowPlaced 0
 
 execute as @a[team=blue] at @e[type=minecraft:villager,team=blue] run spawnpoint @s ~ ~ ~
 execute as @a[team=green] at @e[type=minecraft:villager,team=green] run spawnpoint @s ~ ~ ~

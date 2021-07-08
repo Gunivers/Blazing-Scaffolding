@@ -57,7 +57,10 @@ execute if entity @a[scores={opt_perf_mode=2}] run scoreboard players set Perfor
 scoreboard players set @a[scores={opt_perf_mode=2..}] performanceMode 0
 
 #villager placed
-execute as @a[scores={villagerPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={redPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
 
 #starts the map
 execute if entity @a[scores={StartGame=1..}] run function loumardes:scaffolding_rush/start_countdown
