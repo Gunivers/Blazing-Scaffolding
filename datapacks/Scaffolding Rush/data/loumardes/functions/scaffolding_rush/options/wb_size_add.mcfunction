@@ -44,4 +44,4 @@ execute if score WBSize options matches 165.. run worldborder set 165 1
 scoreboard players set @a opt_wb_size_add 0
 scoreboard players enable @a opt_wb_size_add
 
-function loumardes:give_book
+function loumardes:scaffolding_rush/options/refresh
