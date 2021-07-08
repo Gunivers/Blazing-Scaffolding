@@ -6,3 +6,5 @@ execute unless score UseGravel options matches 0 run tellraw @a ["",{"text":"[SR
 
 scoreboard players set @a opt_gravel 0
 scoreboard players enable @a opt_gravel
+
+function loumardes:scaffolding_rush/options/refresh

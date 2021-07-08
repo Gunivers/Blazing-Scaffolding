@@ -6,3 +6,5 @@ execute unless score VillagerForgiveness options matches 0 run tellraw @a ["",{"
 
 scoreboard players set @a opt_vil_respawn 0
 scoreboard players enable @a opt_vil_respawn
+
+function loumardes:scaffolding_rush/options/refresh

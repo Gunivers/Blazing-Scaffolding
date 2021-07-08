@@ -14,5 +14,8 @@ summon area_effect_cloud 2 4.7 11 {CustomName:'{"text":"How to play","bold":true
 scoreboard players set GameLobby global 1
 scoreboard players set TeamBaseEgg global 1
 
-give @a minecraft:scaffolding
+give @a minecraft:scaffolding_rush
+
 give @a minecraft:gravel{CanPlaceOn:["minecraft:scaffolding","#loumardes:lobby"],CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"]}
+give @a minecraft:gravel{CanPlaceOn:["minecraft:scaffolding"]}
+

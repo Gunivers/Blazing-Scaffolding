@@ -6,3 +6,5 @@ execute unless score UseSnowball options matches 0 run tellraw @a ["",{"text":"[
 
 scoreboard players set @a opt_snowball 0
 scoreboard players enable @a opt_snowball
+
+function loumardes:scaffolding_rush/options/refresh
