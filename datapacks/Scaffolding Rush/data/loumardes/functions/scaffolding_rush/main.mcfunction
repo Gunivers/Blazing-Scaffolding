@@ -15,8 +15,7 @@ execute if score GameLobby global matches 1 unless block 0 5 7 minecraft:spruce_
 #execute if score GameLobby global matches 1 unless block 3 4 6 minecraft:spruce_sign run setblock 3 4 6 minecraft:spruce_sign[rotation=6]{Text1:'{"text":"===","clickEvent":{"action":"run_command","value":"function loumardes:scaffolding_rush/lobby/settings_btn"},"color":"dark_green"}',Text2:'{"text":"[Settings]","color":"green"}',Text3:'{"text":""}',Text4:'{"text":"===","color":"dark_green"}'}
 
 #suffocation
-execute as @a at @s if score GameRunning global matches 0 if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~0.5 ~
-execute as @a at @s if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~1 ~
+execute as @a[gamemode=!spectator] at @s if score GameRunning global matches 0 if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~0.5 ~
 
 #flip the options value
 function loumardes:scaffolding_rush/options/any
