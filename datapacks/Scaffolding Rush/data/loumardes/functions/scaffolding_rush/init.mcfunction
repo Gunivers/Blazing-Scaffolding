@@ -18,6 +18,7 @@ scoreboard objectives add opt_vil_respawn trigger
 scoreboard objectives add opt_instant_pil trigger
 scoreboard objectives add opt_perf_mode trigger
 scoreboard objectives add opt_team_egg trigger
+scoreboard objectives add opt_wb_size_add trigger
 
 #internal values
 scoreboard objectives add global dummy
@@ -27,17 +28,12 @@ scoreboard objectives add YVillager dummy
 scoreboard objectives add YVillager dummy
 
 scoreboard objectives add killed deathCount
-scoreboard objectives add villagerClick minecraft.custom:talked_to_villager
-scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
-scoreboard objectives add greenPlaced minecraft.used:slime_spawn_egg
-scoreboard objectives add redPlaced minecraft.used:mooshroom_spawn_egg
-scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 
 scoreboard players set 20 global 20
 
 
 #Configuration scores
-execute unless score LavaSpeed options matches 0.. run scoreboard players set LavaSpeed options 300
+execute unless score LavaSpeed options matches 1.. run scoreboard players set LavaSpeed options 300
 execute unless score BuildHeight options matches 2.. run scoreboard players set BuildHeight options 10
 
 execute unless score VillagerForgiveness options matches 0.. run scoreboard players set VillagerForgiveness options 1
@@ -50,6 +46,7 @@ execute unless score InstantPillar options matches 0.. run scoreboard players se
 execute unless score TeamEgg options matches 0.. run scoreboard players set score options 0
 
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
+execute unless score WBZise options matches 20..165 run scoreboard players set WBZise options 100
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish
@@ -77,10 +74,7 @@ team modify green friendlyFire false
 #worldborder
 worldborder warning distance 1
 worldborder damage amount 0
-
-execute store result score worldborder global run worldborder get
-execute if score worldborder global matches 128.. run worldborder set 100
-
+execute if score worldborder global matches 100 run worldborder set 100
 
 #time
 time set noon
