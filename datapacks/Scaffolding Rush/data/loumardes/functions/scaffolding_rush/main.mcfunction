@@ -7,11 +7,13 @@ execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at 
 
 scoreboard players enable @a Reset
 
-kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:scaffolding"}}]
-
 #gravel tower
-execute as @a at @s if block ~ ~-2 ~ #loumardes:tower run gamemode adventure @s
-execute as @a at @s unless block ~ ~-2 ~ #loumardes:tower run gamemode survival @s
+execute as @a[nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
+execute as @a[nbt={SelectedItem:{id:"blue_concrete_powder"}}] run gamemode adventure
+execute as @a[nbt={SelectedItem:{id:"lime_concrete_powder"}}] run gamemode adventure
+execute as @a[nbt={SelectedItem:{id:"red_concrete_powder"}}] run gamemode adventure
+execute as @a[nbt={SelectedItem:{id:"yellow_concrete_powder"}}] run gamemode adventure
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:gravel"}},nbt=!{SelectedItem:{id:"blue_concrete_powder"}},nbt=!{SelectedItem:{id:"lime_concrete_powder"}},nbt=!{SelectedItem:{id:"red_concrete_powder"}},nbt=!{SelectedItem:{id:"yellow_concrete_powder"}}] run gamemode survival
 
 #startbutton
 execute if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
