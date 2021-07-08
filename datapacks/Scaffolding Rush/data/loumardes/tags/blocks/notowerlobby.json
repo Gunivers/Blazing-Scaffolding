@@ -10,6 +10,8 @@
         "spruce_planks",
         "birch_planks",
         "red_stained_glass",
-        "white_concrete"
+        "white_concrete",
+        "black_concrete_powder",
+        "light_gray_concrete_powder"
     ]
 }
