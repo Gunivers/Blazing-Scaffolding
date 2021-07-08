@@ -5,7 +5,6 @@ execute as @a if score TeamBaseEgg global matches 1 if score @s global matches 4
 execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at @s if entity @a[distance=..1] run effect give @s minecraft:invisibility 1 1 true
 execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #loumardes:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~
 
-scoreboard players enable @a StartGame
 scoreboard players enable @a Reset
 
 #startbutton

@@ -2,12 +2,16 @@ setblock 1 5 8 air
 gamemode adventure @a[team=!]
 scoreboard players set TeamBaseEgg global 0
 
+scoreboard players reset @a StartGame
+
 clear @a
 scoreboard players set GameLobby global 0
 scoreboard players set GameLoading global 1
 
 function loumardes:scaffolding_rush/broadcast/10s
-function loumardes:scaffolding_rush/launch_clear
+
+schedule function loumardes:scaffolding_rush/launch_clear 2s
+
 kill @e[tag=lobbyText]
 gamemode spectator @a[team=]
 
@@ -21,14 +25,7 @@ schedule function loumardes:scaffolding_rush/broadcast/1s 9s
 schedule function loumardes:scaffolding_rush/start_game 10s
 
 #disable trigers
-scoreboard players reset @a opt_lava_speed
-scoreboard players reset @a opt_build_height
-scoreboard players reset @a opt_gravel
-scoreboard players reset @a opt_snowball
-scoreboard players reset @a opt_vil_respawn
-scoreboard players reset @a opt_vil_resp_cd
-scoreboard players reset @a opt_instant_pil
-scoreboard players reset @a opt_perf_mode
+function loumardes:scaffolding_rush/options/disable_all
 
 #get villager respawn timer in tics
 scoreboard players operation VillagerRespawnTics global = VillagerRespawn options
