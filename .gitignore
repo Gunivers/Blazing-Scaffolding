@@ -1,14 +1,13 @@
-/stats/
-/playerdata/
-/data/
-/advancements/
-/data/raids.dat
-/DIM-1/data/raids.dat
-/DIM1/data/raids_end.dat
-/level.dat_old
+stats/
+playerdata/
+data/
+advancements/
+data/raids.dat
+DIM-1/data/raids.dat
+DIM1/data/raids_end.dat
+level.dat_old
 level.dat
-data/raids.dat
 *.mca
-datapacks/Scaffolding Rush/data/loumardes/functions/scaffolding_rush/team/create_base/armor.mcfunction
-data/raids.dat
-datapacks/Scaffolding Rush/data/loumardes/functions/scaffolding_rush/broadcast/start.mcfunction
+
+dploy.yaml
+.vscode
