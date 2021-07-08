@@ -8,12 +8,12 @@ execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at 
 scoreboard players enable @a Reset
 
 #gravel tower
-execute as @a[gamemode=!spectator,nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
-execute as @a[gamemode=!spectator,nbt={SelectedItem:{id:"minecraft:blue_concrete_powder"}}] run gamemode adventure
-execute as @a[gamemode=!spectator,nbt={SelectedItem:{id:"minecraft:lime_concrete_powder"}}] run gamemode adventure
-execute as @a[gamemode=!spectator,nbt={SelectedItem:{id:"minecraft:red_concrete_powder"}}] run gamemode adventure
-execute as @a[gamemode=!spectator,nbt={SelectedItem:{id:"minecraft:yellow_concrete_powder"}}] run gamemode adventure
-execute as @a[gamemode=!spectator,nbt=!{SelectedItem:{id:"minecraft:gravel"}},nbt=!{SelectedItem:{id:"minecraft:blue_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:lime_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:red_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:yellow_concrete_powder"}}] run gamemode survival
+execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:blue_concrete_powder"}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:lime_concrete_powder"}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:red_concrete_powder"}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:yellow_concrete_powder"}}] run gamemode adventure
+execute as @a[gamemode=adventure,nbt=!{SelectedItem:{id:"minecraft:gravel"}},nbt=!{SelectedItem:{id:"minecraft:blue_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:lime_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:red_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:yellow_concrete_powder"}}] run gamemode survival
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
