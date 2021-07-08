@@ -27,6 +27,10 @@ schedule function loumardes:scaffolding_rush/start_game 10s
 #disable trigers
 function loumardes:scaffolding_rush/options/disable_all
 
+#get lavaspeed timer in tics
+scoreboard players operation LavaSpeedTics options = LavaSpeed options
+scoreboard players operation LavaSpeedTics options *= 20 global
+
 #get villager respawn timer in tics
 scoreboard players operation VillagerRespawnTics global = VillagerRespawn options
 scoreboard players operation VillagerRespawnTics global *= 20 global
