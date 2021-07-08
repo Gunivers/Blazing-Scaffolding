@@ -7,6 +7,12 @@ execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at 
 
 scoreboard players enable @a Reset
 
+#spawnpoint
+execute as @a[team=blue] at @e[type=minecraft:villager,team=blue] run spawnpoint @s ~ ~ ~
+execute as @a[team=green] at @e[type=minecraft:villager,team=green] run spawnpoint @s ~ ~ ~
+execute as @a[team=red] at @e[type=minecraft:villager,team=red] run spawnpoint @s ~ ~ ~
+execute as @a[team=yellow] at @e[type=minecraft:villager,team=yellow] run spawnpoint @s ~ ~ ~
+
 #gravel tower
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:blue_concrete_powder"}}] run gamemode adventure
