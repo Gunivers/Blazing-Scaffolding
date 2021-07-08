@@ -7,12 +7,6 @@ execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at 
 
 scoreboard players enable @a Reset
 
-#spawnpoint
-execute as @a[team=blue] at @e[type=minecraft:villager,team=blue] run spawnpoint @s ~ ~ ~
-execute as @a[team=green] at @e[type=minecraft:villager,team=green] run spawnpoint @s ~ ~ ~
-execute as @a[team=red] at @e[type=minecraft:villager,team=red] run spawnpoint @s ~ ~ ~
-execute as @a[team=yellow] at @e[type=minecraft:villager,team=yellow] run spawnpoint @s ~ ~ ~
-
 #gravel tower
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:blue_concrete_powder"}}] run gamemode adventure
@@ -97,15 +91,15 @@ execute if score GameRunning global matches 1 run function loumardes:scaffolding
 #Lobby
 #
 #team join lobby
-execute as @e[name="Join Blue"] at @s as @a[distance=..1,team=!blue] run function loumardes:scaffolding_rush/team/join/blue
-execute as @e[name="Join Green"] at @s as @a[distance=..1,team=!green] run function loumardes:scaffolding_rush/team/join/green
-execute as @e[name="Join Red"] at @s as @a[distance=..1,team=!red] run function loumardes:scaffolding_rush/team/join/red
-execute as @e[name="Join Yellow"] at @s as @a[distance=..1,team=!yellow] run function loumardes:scaffolding_rush/team/join/yellow
-execute as @e[name="Spectate"] at @s as @a[distance=..1,team=!] run function loumardes:scaffolding_rush/team/leave
+execute as @e[name="Join Blue"] at @s as @a[distance=..2,team=!blue] run function loumardes:scaffolding_rush/team/join/blue
+execute as @e[name="Join Green"] at @s as @a[distance=..2,team=!green] run function loumardes:scaffolding_rush/team/join/green
+execute as @e[name="Join Red"] at @s as @a[distance=..2,team=!red] run function loumardes:scaffolding_rush/team/join/red
+execute as @e[name="Join Yellow"] at @s as @a[distance=..2,team=!yellow] run function loumardes:scaffolding_rush/team/join/yellow
+execute as @e[name="Spectate"] at @s as @a[distance=..2,team=!] run function loumardes:scaffolding_rush/team/leave
 
 #base
 execute if score TeamEgg options matches 1 if score TeamBaseEgg global matches 1 run function loumardes:scaffolding_rush/team/base_egg/give
 
 #howtoplay
-execute as @e[name="How to play"] at @s as @a[distance=..3,tag=!howtoplay] run function loumardes:scaffolding_rush/lobby/how_to_play
-execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=..3] run tag @s remove howtoplay 
+execute as @e[name="How to play"] at @s as @a[distance=..2,tag=!howtoplay] run function loumardes:scaffolding_rush/lobby/how_to_play
+execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=..2] run tag @s remove howtoplay 
