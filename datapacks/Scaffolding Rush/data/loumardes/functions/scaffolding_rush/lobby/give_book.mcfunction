@@ -1,1 +1,1 @@
-loot replace entity Trock0 hotbar.8 loot loumardes:book_menu
+loot replace entity @a hotbar.8 loot loumardes:book_menu
