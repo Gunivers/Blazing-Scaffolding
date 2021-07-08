@@ -8,11 +8,11 @@ execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at 
 scoreboard players enable @a Reset
 
 #startbutton
-execute if score GameLoading global matches 0 if block 1 5 8 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
-execute if score GameLobby global matches 1 unless block 1 5 8 minecraft:spruce_button run setblock 1 5 8 minecraft:spruce_button[face=floor] replace
+execute if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
+execute if score GameLobby global matches 1 unless block 0 5 7 minecraft:spruce_button run setblock 1 5 8 minecraft:spruce_button[face=floor] replace
 
 #lobby sign
-execute if score GameLobby global matches 1 unless block 3 4 6 minecraft:spruce_sign run setblock 3 4 6 minecraft:spruce_sign[rotation=6]{Text1:'{"text":"===","clickEvent":{"action":"run_command","value":"function loumardes:scaffolding_rush/lobby/settings_btn"},"color":"dark_green"}',Text2:'{"text":"[Settings]","color":"green"}',Text3:'{"text":""}',Text4:'{"text":"===","color":"dark_green"}'}
+#execute if score GameLobby global matches 1 unless block 3 4 6 minecraft:spruce_sign run setblock 3 4 6 minecraft:spruce_sign[rotation=6]{Text1:'{"text":"===","clickEvent":{"action":"run_command","value":"function loumardes:scaffolding_rush/lobby/settings_btn"},"color":"dark_green"}',Text2:'{"text":"[Settings]","color":"green"}',Text3:'{"text":""}',Text4:'{"text":"===","color":"dark_green"}'}
 
 #suffocation
 execute as @a at @s if score GameRunning global matches 0 if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~0.5 ~
