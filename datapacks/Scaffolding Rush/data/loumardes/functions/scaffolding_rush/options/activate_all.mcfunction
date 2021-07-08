@@ -1,0 +1,9 @@
+scoreboard players enable @a opt_lava_speed
+scoreboard players enable @a opt_build_height
+scoreboard players enable @a opt_gravel
+scoreboard players enable @a opt_snowball
+scoreboard players enable @a opt_vil_respawn
+scoreboard players enable @a opt_vil_resp_cd
+scoreboard players enable @a opt_instant_pil
+scoreboard players enable @a opt_perf_mode
+scoreboard players enable @a opt_team_egg
