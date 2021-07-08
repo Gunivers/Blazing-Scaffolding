@@ -37,7 +37,7 @@ scoreboard players set 20 global 20
 
 
 #Configuration scores
-execute unless score Lavaspeed options matches 0.. run scoreboard players set Lavaspeed options 300
+execute unless score LavaSpeed options matches 0.. run scoreboard players set LavaSpeed options 300
 execute unless score BuildHeight options matches 2.. run scoreboard players set BuildHeight options 10
 
 execute unless score VillagerForgiveness options matches 0.. run scoreboard players set VillagerForgiveness options 1

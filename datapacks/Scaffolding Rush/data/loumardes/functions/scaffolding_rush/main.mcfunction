@@ -76,7 +76,7 @@ scoreboard players set @a Reset 0
 
 #rise lava level
 #globally
-#execute if score PerformanceMode options matches 0 if score LavaCountdown global >= Lavaspeed options at @e[type=area_effect_cloud,tag=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava_globally
+#execute if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeed options at @e[type=area_effect_cloud,tag=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava_globally
 #locally
 
 #warn villagers height
@@ -91,15 +91,15 @@ execute if score GameRunning global matches 1 run function loumardes:scaffolding
 #Lobby
 #
 #team join lobby
-execute as @e[name="Join Blue"] at @s as @a[distance=..1,team=!blue] run function loumardes:scaffolding_rush/team/join/blue
-execute as @e[name="Join Green"] at @s as @a[distance=..1,team=!green] run function loumardes:scaffolding_rush/team/join/green
-execute as @e[name="Join Red"] at @s as @a[distance=..1,team=!red] run function loumardes:scaffolding_rush/team/join/red
-execute as @e[name="Join Yellow"] at @s as @a[distance=..1,team=!yellow] run function loumardes:scaffolding_rush/team/join/yellow
-execute as @e[name="Spectate"] at @s as @a[distance=..1,team=!] run function loumardes:scaffolding_rush/team/leave
+execute as @e[name="Join Blue"] at @s as @a[distance=..1.5,team=!blue] run function loumardes:scaffolding_rush/team/join/blue
+execute as @e[name="Join Green"] at @s as @a[distance=..1.5,team=!green] run function loumardes:scaffolding_rush/team/join/green
+execute as @e[name="Join Red"] at @s as @a[distance=..1.5,team=!red] run function loumardes:scaffolding_rush/team/join/red
+execute as @e[name="Join Yellow"] at @s as @a[distance=..1.5,team=!yellow] run function loumardes:scaffolding_rush/team/join/yellow
+execute as @e[name="Spectate"] at @s as @a[distance=..1.5,team=!] run function loumardes:scaffolding_rush/team/leave
 
 #base
 execute if score TeamEgg options matches 1 if score TeamBaseEgg global matches 1 run function loumardes:scaffolding_rush/team/base_egg/give
 
 #howtoplay
-execute as @e[name="How to play"] at @s as @a[distance=..3,tag=!howtoplay] run function loumardes:scaffolding_rush/lobby/how_to_play
-execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=..3] run tag @s remove howtoplay 
+execute as @e[name="How to play"] at @s as @a[distance=..2,tag=!howtoplay] run function loumardes:scaffolding_rush/lobby/how_to_play
+execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=..2] run tag @s remove howtoplay 
