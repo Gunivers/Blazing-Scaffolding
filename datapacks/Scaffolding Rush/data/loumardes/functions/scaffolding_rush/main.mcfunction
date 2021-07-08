@@ -8,12 +8,12 @@ execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at 
 scoreboard players enable @a Reset
 
 #gravel tower
-execute as @a[nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
-execute as @a[nbt={SelectedItem:{id:"blue_concrete_powder"}}] run gamemode adventure
-execute as @a[nbt={SelectedItem:{id:"lime_concrete_powder"}}] run gamemode adventure
-execute as @a[nbt={SelectedItem:{id:"red_concrete_powder"}}] run gamemode adventure
-execute as @a[nbt={SelectedItem:{id:"yellow_concrete_powder"}}] run gamemode adventure
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:gravel"}},nbt=!{SelectedItem:{id:"blue_concrete_powder"}},nbt=!{SelectedItem:{id:"lime_concrete_powder"}},nbt=!{SelectedItem:{id:"red_concrete_powder"}},nbt=!{SelectedItem:{id:"yellow_concrete_powder"}}] run gamemode survival
+execute as @a[team=!,nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
+execute as @a[team=!,nbt={SelectedItem:{id:"blue_concrete_powder"}}] run gamemode adventure
+execute as @a[team=!,nbt={SelectedItem:{id:"lime_concrete_powder"}}] run gamemode adventure
+execute as @a[team=!,nbt={SelectedItem:{id:"red_concrete_powder"}}] run gamemode adventure
+execute as @a[team=!,nbt={SelectedItem:{id:"yellow_concrete_powder"}}] run gamemode adventure
+execute as @a[team=!,nbt=!{SelectedItem:{id:"minecraft:gravel"}},nbt=!{SelectedItem:{id:"blue_concrete_powder"}},nbt=!{SelectedItem:{id:"lime_concrete_powder"}},nbt=!{SelectedItem:{id:"red_concrete_powder"}},nbt=!{SelectedItem:{id:"yellow_concrete_powder"}}] run gamemode survival
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"blue_concrete_powder"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"lime_concrete_powder"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
