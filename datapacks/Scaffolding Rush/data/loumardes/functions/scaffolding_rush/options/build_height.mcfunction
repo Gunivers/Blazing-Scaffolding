@@ -1,5 +1,5 @@
 
-execute as @a[scores={opt_lava_speed=1..}] run scoreboard players operation BuildHeight options = @s opt_build_height
+execute as @a[scores={opt_build_height=1..}] run scoreboard players operation BuildHeight options = @s opt_build_height
 
 tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The build height has been set to "},{"score":{"name":"BuildHeight","objective":"options"},"color":"gold"}]
 

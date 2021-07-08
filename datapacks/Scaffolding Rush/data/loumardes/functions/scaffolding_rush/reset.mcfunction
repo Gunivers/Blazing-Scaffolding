@@ -21,6 +21,8 @@ scoreboard players set LavaLevel global 2
 scoreboard players set GameRunning global 0
 scoreboard players set GameLoading global 0
 
+function loumardes:scaffolding_rush/options/activate_all
+
 tag @a remove has_egg
 
 gamemode survival @a
