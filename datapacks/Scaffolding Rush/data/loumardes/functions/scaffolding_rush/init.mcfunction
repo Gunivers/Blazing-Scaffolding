@@ -1,3 +1,4 @@
+execute as @e[type=villager] run function loumardes:scaffolding_rush/clean_kill
 kill @e[type=!player]
 
 #summons the AEC indiquant la position de la lave
