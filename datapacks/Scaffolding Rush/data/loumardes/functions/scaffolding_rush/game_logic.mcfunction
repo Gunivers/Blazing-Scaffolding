@@ -1,6 +1,4 @@
 
-
-
 #Rise Lava
 execute unless score LavaSpeed options matches 0 run scoreboard players add LavaCountdown global 1
 execute if score LavaCountdown global >= LavaSpeed options run scoreboard players add LavaLevel global 1
@@ -10,9 +8,8 @@ execute if score LavaCountdown global >= LavaSpeed options run scoreboard player
 execute as @a[gamemode=!spectator] at @s run function loumardes:scaffolding_rush/simulate_lava
 execute as @e[type=villager] at @s run function loumardes:scaffolding_rush/simulate_lava
 
-
 #villager egg respawn
-execute if score VillagerForgiveness options matches 1 run function loumardes:scaffolding_rush/villager_loss_detection
+execute if score VillagerForgiveness options matches 1 run function loumardes:scaffolding_rush/villager/respawn/villager_loss_detection
 
 #detect end of game
 scoreboard players set RemainingTeam global 0
