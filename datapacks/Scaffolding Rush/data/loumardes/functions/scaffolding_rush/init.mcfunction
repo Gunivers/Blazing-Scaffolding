@@ -34,6 +34,7 @@ scoreboard objectives add redPlaced minecraft.used:mooshroom_spawn_egg
 scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 
 scoreboard players set 20 global 20
+scoreboard players set 10 global 10
 
 
 #Configuration scores
@@ -50,7 +51,7 @@ execute unless score InstantPillar options matches 0.. run scoreboard players se
 execute unless score TeamEgg options matches 0.. run scoreboard players set score options 0
 
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
-execute unless score WBSize options matches 20..165 run scoreboard players set WBSize options 100
+execute unless score WBSize options matches 15..165 run scoreboard players set WBSize options 95
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish
@@ -78,7 +79,7 @@ team modify green friendlyFire false
 #worldborder
 worldborder warning distance 1
 worldborder damage amount 0
-execute if score worldborder global matches 100 run worldborder set 100
+execute if score worldborder global matches 95 run worldborder set 95
 
 #time
 time set noon
