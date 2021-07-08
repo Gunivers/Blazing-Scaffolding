@@ -6,7 +6,7 @@ execute if score GameLoading global matches 0 if score GameRunning global matche
 function loumardes:scaffolding_rush/launch_clear
 kill @e[tag=lobbyText]
 kill @e[tag=baseTeam]
-kill @e[type=villager]
+execute as @e[type=villager] run function loumardes:scaffolding_rush/clean_kill
 
 schedule clear loumardes:scaffolding_rush/launch_clear
 schedule clear loumardes:scaffolding_rush/team/create_base/create

@@ -1,4 +1,5 @@
 setblock 1 5 8 air
+gamemode adventure @a[team=!Spectator]
 scoreboard players set TeamBaseEgg global 0
 
 clear @a
