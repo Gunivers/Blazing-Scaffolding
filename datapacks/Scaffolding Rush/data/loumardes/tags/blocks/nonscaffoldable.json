@@ -1,0 +1,10 @@
+{
+    "values":[
+        "air",
+        "cave_air",
+        "void_air",
+        "structure_void",
+        "blackstone_slab",
+        "red_stained_glass_pane"
+    ]
+}
