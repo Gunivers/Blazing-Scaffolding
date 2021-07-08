@@ -91,11 +91,11 @@ execute if score GameRunning global matches 1 run function loumardes:scaffolding
 #Lobby
 #
 #team join lobby
-execute as @e[name="Join Blue"] at @s as @a[distance=..2,team=!blue] run function loumardes:scaffolding_rush/team/join/blue
-execute as @e[name="Join Green"] at @s as @a[distance=..2,team=!green] run function loumardes:scaffolding_rush/team/join/green
-execute as @e[name="Join Red"] at @s as @a[distance=..2,team=!red] run function loumardes:scaffolding_rush/team/join/red
-execute as @e[name="Join Yellow"] at @s as @a[distance=..2,team=!yellow] run function loumardes:scaffolding_rush/team/join/yellow
-execute as @e[name="Spectate"] at @s as @a[distance=..2,team=!] run function loumardes:scaffolding_rush/team/leave
+execute as @e[name="Join Blue"] at @s as @a[distance=..1.5,team=!blue] run function loumardes:scaffolding_rush/team/join/blue
+execute as @e[name="Join Green"] at @s as @a[distance=..1.5,team=!green] run function loumardes:scaffolding_rush/team/join/green
+execute as @e[name="Join Red"] at @s as @a[distance=..1.5,team=!red] run function loumardes:scaffolding_rush/team/join/red
+execute as @e[name="Join Yellow"] at @s as @a[distance=..1.5,team=!yellow] run function loumardes:scaffolding_rush/team/join/yellow
+execute as @e[name="Spectate"] at @s as @a[distance=..1.5,team=!] run function loumardes:scaffolding_rush/team/leave
 
 #base
 execute if score TeamEgg options matches 1 if score TeamBaseEgg global matches 1 run function loumardes:scaffolding_rush/team/base_egg/give
