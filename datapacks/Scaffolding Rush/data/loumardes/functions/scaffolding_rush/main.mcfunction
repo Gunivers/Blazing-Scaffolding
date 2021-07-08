@@ -14,11 +14,11 @@ execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:lime_concrete_p
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:red_concrete_powder"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:yellow_concrete_powder"}}] run gamemode adventure
 execute as @a[gamemode=adventure,nbt=!{SelectedItem:{id:"minecraft:gravel"}},nbt=!{SelectedItem:{id:"minecraft:blue_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:lime_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:red_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:yellow_concrete_powder"}}] run gamemode survival
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:red_concrete_powder"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:yellow_concrete_powder"}}] at @s if block ~ ~-0.5 ~ #loumardes:tower run kill @s
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-1 ~ #loumardes:tower run kill @s
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-1 ~ #loumardes:tower run kill @s
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-1 ~ #loumardes:tower run kill @s
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:red_concrete_powder"}}] at @s if block ~ ~-1 ~ #loumardes:tower run kill @s
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:yellow_concrete_powder"}}] at @s if block ~ ~-1 ~ #loumardes:tower run kill @s
 
 #startbutton
 execute if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
