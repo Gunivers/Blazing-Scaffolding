@@ -15,4 +15,4 @@ scoreboard players set GameLobby global 1
 scoreboard players set TeamBaseEgg global 1
 
 give @a minecraft:scaffolding
-give @a minecraft:gravel
+give @a minecraft:gravel{CanPlaceOn:["minecraft:scaffolding"]}

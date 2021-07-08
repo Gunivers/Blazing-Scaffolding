@@ -1,6 +1,6 @@
 #>1.16
 replaceitem entity @a[advancements={loumardes:scaffolding_rush/replenish/gravel=true}] weapon.mainhand air
-replaceitem entity @a[advancements={loumardes:scaffolding_rush/replenish/gravel=true}] weapon.mainhand minecraft:gravel
+replaceitem entity @a[advancements={loumardes:scaffolding_rush/replenish/gravel=true}] weapon.mainhand minecraft:gravel{CanPlaceOn:["minecraft:scaffolding"]}
 
 #1.17
 #item replace entity @a[advancements={loumardes:scaffolding_rush/replenish/gravel=true}] weapon.mainhand air
