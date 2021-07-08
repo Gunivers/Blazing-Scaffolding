@@ -57,7 +57,7 @@ scoreboard players set @a opt_build_height 0
 
 
 #instant pillar
-execute if score InstantPillar options matches 1 at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ScR_Pillar"],CustomName:'{"text":"Join Blue","color":"blue"}',CustomNameVisible: 1}
+execute if score InstantPillar options matches 1 at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ScR_Pillar"]}
 execute if score InstantPillar options matches 1 as @e[type=area_effect_cloud ,tag=ScR_Pillar] at @s run function loumardes:scaffolding_rush/pillar_start
 
 
