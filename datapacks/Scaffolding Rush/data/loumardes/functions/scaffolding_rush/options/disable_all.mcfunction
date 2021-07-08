@@ -7,3 +7,4 @@ scoreboard players reset @a opt_vil_resp_cd
 scoreboard players reset @a opt_instant_pil
 scoreboard players reset @a opt_perf_mode
 scoreboard players reset @a opt_team_egg
+scoreboard players reset @a opt_wb_size_add

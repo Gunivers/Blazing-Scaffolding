@@ -8,3 +8,5 @@ execute if entity @a[scores={opt_perf_mode=1..}] run function loumardes:scaffold
 execute if entity @a[scores={opt_team_egg=1..}] run function loumardes:scaffolding_rush/options/team_egg
 execute if entity @a[scores={opt_vil_resp_cd=1..}] run function loumardes:scaffolding_rush/options/vil_resp_cd
 execute if entity @a[scores={opt_vil_respawn=1..}] run function loumardes:scaffolding_rush/options/vil_respawn
+execute unless entity @a[scores={opt_wb_size_add=0}] run function loumardes:scaffolding_rush/options/opt_wb_size_add
+
