@@ -46,7 +46,7 @@ execute unless score InstantPillar options matches 0.. run scoreboard players se
 execute unless score TeamEgg options matches 0.. run scoreboard players set score options 0
 
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
-execute unless score WBZise options matches 20..165 run scoreboard players set WBZise options 100
+execute unless score WBSize options matches 20..165 run scoreboard players set WBSize options 100
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish
