@@ -3,7 +3,7 @@ execute as @a at @s if score TeamBaseEgg global matches 1 store result score @s 
 execute as @a at @s if score TeamBaseEgg global matches 1 if score @s global matches ..2 run effect give @s minecraft:speed 1 2 true
 execute as @a at @s if score TeamBaseEgg global matches 1 if score @s global matches 4.. run effect clear @a minecraft:speed
 execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at @s if entity @a[distance=..1] run effect give @s minecraft:invisibility 1 1 true
-execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #loumardes:air unless block ~ ~ ~ minecraft:scaffolding run kill @s
+execute if score TeamBaseEgg global matches 0 as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #loumardes:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.5 ~
 
 scoreboard players enable @a StartGame
 scoreboard players enable @a Reset
