@@ -15,4 +15,4 @@ scoreboard players operation @e[type=area_effect_cloud,name=ScR_BuildLimit,limit
 scoreboard players operation @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] global += BuildHeight options
 execute as @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] store result entity @s Pos[1] double 1 run scoreboard players get @s global
 
-execute as @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] at @s run fill ~-7 ~1 ~-7 ~7 ~5 ~7 air
+execute as @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] at @s run fill ~-2 ~1 ~-2 ~2 ~2 ~2 air
