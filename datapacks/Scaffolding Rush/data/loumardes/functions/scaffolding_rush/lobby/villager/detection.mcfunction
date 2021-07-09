@@ -1,1 +1,0 @@
-execute at @e[type=minecraft:armor_stand,tag=baseTeam] unless entity @e[type=minecraft:villager,distance=..1] run summon villager ~ ~1 ~ {Invulnerable:1,Silent:1,NoAI:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:999999,ShowParticles:0b}]}
