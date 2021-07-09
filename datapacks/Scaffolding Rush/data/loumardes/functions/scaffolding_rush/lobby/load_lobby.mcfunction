@@ -15,6 +15,6 @@ scoreboard players set GameLobby global 1
 scoreboard players set TeamBaseEgg global 1
 
 give @a minecraft:scaffolding
-give @a minecraft:gravel{HideFlags:24,CanPlaceOn:["minecraft:scaffolding","#loumardes:notowerlobby"],CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"]}
+give @a minecraft:gravel{HideFlags:31,CanPlaceOn:["minecraft:scaffolding","#loumardes:notowerlobby"],CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"]}
 
 function loumardes:scaffolding_rush/lobby/give_book
