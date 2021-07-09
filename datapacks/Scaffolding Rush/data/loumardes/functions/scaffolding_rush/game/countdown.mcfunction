@@ -1,5 +1,5 @@
-setblock 1 5 8 air
 gamemode adventure @a[team=!]
+setblock 0 5 7 air destroy
 
 clear @a
 scoreboard players set GameLobby global 0
