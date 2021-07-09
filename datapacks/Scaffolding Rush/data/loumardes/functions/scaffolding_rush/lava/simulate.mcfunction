@@ -1,8 +1,7 @@
 # /!\ must be executed at the ScR_LavaLevel AEC
-#/execute at @e[type=area_effect_cloud,name=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava
 
 #Local lava
-execute if score PerformanceMode options matches 1 run function loumardes:scaffolding_rush/rise_lava_locally
+execute if score PerformanceMode options matches 1 run function loumardes:scaffolding_rush/lava/rise_locally
 
 #Lava Kill
 execute store result score @s[scores={killed=0}] global run data get entity @s Pos[1]

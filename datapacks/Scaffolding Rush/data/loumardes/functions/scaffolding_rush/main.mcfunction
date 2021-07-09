@@ -71,7 +71,7 @@ scoreboard players set @a Reset 0
 
 #rise lava level
 #globally
-#execute if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeed options at @e[type=area_effect_cloud,name=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava_globally
+#execute if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeed options at @e[type=area_effect_cloud,name=ScR_LavaLevel] run function loumardes:scaffolding_rush/lava/rise_globally
 #locally
 
 #game logic
