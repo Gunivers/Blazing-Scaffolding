@@ -1,5 +1,5 @@
 
-scoreboard players set GameRunning global 0
+scoreboard players set GameRunning global -1
 
 function loumardes:scaffolding_rush/broadcast/finish
 
