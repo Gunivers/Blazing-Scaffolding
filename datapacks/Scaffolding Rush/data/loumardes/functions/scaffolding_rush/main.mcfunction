@@ -32,8 +32,8 @@ execute as @a[gamemode=!spectator] at @s if score GameRunning global matches 0 i
 function loumardes:scaffolding_rush/options/any
 
 #instant pillar
-execute if score InstantPillar options matches 1 at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ScR_Pillar"]}
-execute if score InstantPillar options matches 1 as @e[type=area_effect_cloud ,tag=ScR_Pillar] at @s run function loumardes:scaffolding_rush/pillar_start
+execute if score InstantPillar options matches 1 at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:2147483647, CustomName:'{"text":"ScR_Pillar"}'}
+execute if score InstantPillar options matches 1 as @e[type=area_effect_cloud ,name=ScR_Pillar] at @s run function loumardes:scaffolding_rush/pillar_start
 
 #items
 execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/item/catch_drop
@@ -71,7 +71,7 @@ scoreboard players set @a Reset 0
 
 #rise lava level
 #globally
-#execute if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeed options at @e[type=area_effect_cloud,tag=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava_globally
+#execute if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeed options at @e[type=area_effect_cloud,name=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava_globally
 #locally
 
 #game logic
