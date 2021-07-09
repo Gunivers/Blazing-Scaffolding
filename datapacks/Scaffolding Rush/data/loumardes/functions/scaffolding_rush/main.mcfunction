@@ -22,7 +22,8 @@ execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:red_
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:yellow_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
 
 #startbutton
-execute if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
+execute if score RemainingTeam global matches 2.. if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
+execute if score RemainingTeam global matches ..1 if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Not enough players","color":"red"}]
 execute if score GameLobby global matches 1 unless block 0 5 7 minecraft:spruce_button run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
 
 #suffocation
@@ -60,19 +61,6 @@ title @a[tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold
 execute if entity @a[scores={opt_perf_mode=1}] run scoreboard players set PerformanceMode options 0
 execute if entity @a[scores={opt_perf_mode=2}] run scoreboard players set PerformanceMode options 1
 scoreboard players set @a[scores={opt_perf_mode=2..}] performanceMode 0
-
-#starts the map
-execute if entity @a[scores={StartGame=1..}] run function loumardes:scaffolding_rush/start_countdown
-scoreboard players set @a StartGame 0
-
-#reset the map
-execute if entity @a[scores={Reset=1..}] run function loumardes:scaffolding_rush/reset
-scoreboard players set @a Reset 0
-
-#rise lava level
-#globally
-#execute if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeed options at @e[type=area_effect_cloud,name=ScR_LavaLevel] run function loumardes:scaffolding_rush/lava/rise_globally
-#locally
 
 #game logic
 execute if score GameRunning global matches 1 run function loumardes:scaffolding_rush/game_logic
