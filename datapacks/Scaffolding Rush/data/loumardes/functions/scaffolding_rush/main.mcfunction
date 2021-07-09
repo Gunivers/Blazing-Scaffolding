@@ -24,7 +24,7 @@ execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:yell
 #startbutton
 execute if score RemainingTeam global matches 2.. if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
 execute if score RemainingTeam global matches ..1 if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Not enough players","color":"red"}]
-execute if score GameLobby global matches 1 unless block 0 5 7 minecraft:spruce_button run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
+execute if score GameLobby global matches 1 unless block 0 5 7 minecraft:spruce_button[powered=false] run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
 
 #suffocation
 execute as @a[gamemode=!spectator] at @s if score GameRunning global matches 0 if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~0.5 ~
