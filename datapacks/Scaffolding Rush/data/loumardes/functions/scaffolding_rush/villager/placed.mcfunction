@@ -5,7 +5,7 @@ scoreboard players set @s greenPlaced 0
 scoreboard players set @s redPlaced 0
 scoreboard players set @s yellowPlaced 0
 
-schedule function loumardes:scaffolding_rush/lobby/villager/kill 1t
+schedule function loumardes:scaffolding_rush/lobby/villager/detection 1t
 
 execute as @a[gamemode=spectator,team=red] run function loumardes:scaffolding_rush/villager/player_respawn/red
 execute as @a[gamemode=spectator,team=blue] run function loumardes:scaffolding_rush/villager/player_respawn/blue
