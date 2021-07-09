@@ -19,4 +19,4 @@ execute if entity @a[team=green,gamemode=!spectator,limit=1] run scoreboard play
 execute if entity @a[team=red,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 execute if entity @a[team=yellow,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 
-#execute if score RemainingTeam global matches ..1 run function loumardes:scaffolding_rush/finish
+execute if score RemainingTeam global matches ..1 run function loumardes:scaffolding_rush/finish
