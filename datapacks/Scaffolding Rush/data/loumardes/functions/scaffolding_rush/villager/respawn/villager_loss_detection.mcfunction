@@ -5,10 +5,10 @@ execute if entity @a[team=red] unless entity @e[type=villager,team=red,limit=1] 
 execute if entity @a[team=yellow] unless entity @e[type=villager,team=yellow,limit=1] unless entity @a[tag=has_egg,team=yellow] run function loumardes:scaffolding_rush/villager/respawn/test/yellow
 
 #respawn countdown
-execute if score RedVillagerRespawn global matches 1.. run scoreboard players remove RedVillagerRespawn global 1
-execute if score BlueVillagerRespawn global matches 1.. run scoreboard players remove BlueVillagerRespawn global 1
-execute if score YellowVillagerRespawn global matches 1.. run scoreboard players remove YellowVillagerRespawn global 1
-execute if score GreenVillagerRespawn global matches 1.. run scoreboard players remove GreenVillagerRespawn global 1
+execute if score RedVillagerRespawn global matches 0.. run scoreboard players remove RedVillagerRespawn global 1
+execute if score BlueVillagerRespawn global matches 0.. run scoreboard players remove BlueVillagerRespawn global 1
+execute if score YellowVillagerRespawn global matches 0.. run scoreboard players remove YellowVillagerRespawn global 1
+execute if score GreenVillagerRespawn global matches 0.. run scoreboard players remove GreenVillagerRespawn global 1
 
 execute if score RedVillagerRespawn global matches 0 as @a[team=red,gamemode=!spectator,sort=random,limit=1] run function loumardes:scaffolding_rush/villager/give/red
 execute if score BlueVillagerRespawn global matches 0 as @a[team=blue,gamemode=!spectator,sort=random,limit=1] run function loumardes:scaffolding_rush/villager/give/blue

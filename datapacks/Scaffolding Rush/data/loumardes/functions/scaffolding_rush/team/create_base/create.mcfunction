@@ -14,7 +14,7 @@ execute as @e[tag=baseTeam] at @s run function loumardes:scaffolding_rush/team/c
 
 function loumardes:scaffolding_rush/team/create_base/armor
 
-effect give @a minecraft:levitation 6 255 true
+effect give @a minecraft:jump_boost 6 254 true
 
 execute at @e[tag=baseTeam,name="Blue",limit=1] run teleport @a[team=blue] ~ 4 ~
 execute at @e[tag=baseTeam,name="Green",limit=1] run teleport @a[team=green] ~ 4 ~

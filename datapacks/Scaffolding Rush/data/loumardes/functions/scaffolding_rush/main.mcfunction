@@ -50,7 +50,7 @@ execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush
 execute as @a[scores={villagerClick=1..}] at @s run function loumardes:scaffolding_rush/villager/give/any
 
 #warn villagers height
-function loumardes:scaffolding_rush/warn_villager
+function loumardes:scaffolding_rush/villager/warn
 
 #inform the player that he has the egg
 title @a[tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg !! Place it to respawn ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
