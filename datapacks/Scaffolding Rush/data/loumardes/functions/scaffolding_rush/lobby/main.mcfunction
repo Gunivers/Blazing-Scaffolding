@@ -14,12 +14,12 @@ execute as @e[name="Spectate"] at @s as @a[distance=..1.5,team=!] run function l
 execute if score TeamEgg options matches 1 run function loumardes:scaffolding_rush/team/base_egg/give
 
 #howtoplay
-execute as @e[name="How to play"] at @s as @a[distance=..2,tag=!howtoplay] run function loumardes:scaffolding_rush/lobby/how_to_play
-execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=..2] run tag @s remove howtoplay 
+execute as @e[name="How to play"] at @s as @a[distance=..3,tag=!howtoplay] run function loumardes:scaffolding_rush/lobby/how_to_play
+execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=..3] run tag @s remove howtoplay 
 
 #startbutton
 execute if score RemainingTeam global matches 2.. if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/game/countdown
 execute if score RemainingTeam global matches ..1 if block 0 5 7 minecraft:spruce_button[powered=true] run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Not enough players","color":"red"}]
 execute unless block 0 5 7 minecraft:spruce_button[powered=false] run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
 
-execute as @a[scores={villagerClick=1..}] run function loumardes:scaffolding_rush/lobby/villager_kill
+execute as @a[scores={villagerClick=1..}] run function loumardes:scaffolding_rush/lobby/villager/kill
