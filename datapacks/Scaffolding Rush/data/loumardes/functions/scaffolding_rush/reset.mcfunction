@@ -28,6 +28,8 @@ tag @a remove has_egg
 gamemode survival @a
 clear @a
 
+spawnpoint @s 0 4 0
+
 #advancement replenish
 advancement revoke @a from loumardes:replenish
 
