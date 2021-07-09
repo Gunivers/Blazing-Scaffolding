@@ -1,9 +1,10 @@
 gamemode adventure @a[team=!]
-setblock 0 5 7 air destroy
 
 clear @a
 scoreboard players set GameLobby global 0
 scoreboard players set GameLoading global 1
+
+setblock 0 5 7 air destroy
 
 function loumardes:scaffolding_rush/broadcast/10s
 
