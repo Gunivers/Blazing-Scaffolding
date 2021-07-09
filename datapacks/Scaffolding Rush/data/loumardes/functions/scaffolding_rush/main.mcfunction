@@ -24,9 +24,6 @@ execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:yell
 execute if score GameLoading global matches 0 if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/start_countdown
 execute if score GameLobby global matches 1 unless block 0 5 7 minecraft:spruce_button run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
 
-#lobby sign
-#execute if score GameLobby global matches 1 unless block 3 4 6 minecraft:spruce_sign run setblock 3 4 6 minecraft:spruce_sign[rotation=6]{Text1:'{"text":"===","clickEvent":{"action":"run_command","value":"function loumardes:scaffolding_rush/lobby/settings_btn"},"color":"dark_green"}',Text2:'{"text":"[Settings]","color":"green"}',Text3:'{"text":""}',Text4:'{"text":"===","color":"dark_green"}'}
-
 #suffocation
 execute as @a[gamemode=!spectator] at @s if score GameRunning global matches 0 if block ~ ~ ~ #loumardes:lobby run tp @s ~ ~0.5 ~
 
@@ -37,30 +34,31 @@ function loumardes:scaffolding_rush/options/any
 execute if score InstantPillar options matches 1 at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["ScR_Pillar"]}
 execute if score InstantPillar options matches 1 as @e[type=area_effect_cloud ,tag=ScR_Pillar] at @s run function loumardes:scaffolding_rush/pillar_start
 
-
-#kill items : other than villager eggs -> unless data entity @s Item.tag.EntityTag
-#kill @e[type=minecraft:item]
-#execute as @a run function loumardes:scaffolding_rush/item/management
-
 #items
 execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/item/catch_drop
 
 #respawn dead players
-execute as @a[scores={killed=1..}] run function loumardes:scaffolding_rush/respawn/any
-
-#move villagers
-execute as @a[scores={villagerClick=1..}] at @s run function loumardes:scaffolding_rush/villager/give/any
-
-#toggle performance saving mode
-execute if entity @a[scores={opt_perf_mode=1}] run scoreboard players set PerformanceMode options 0
-execute if entity @a[scores={opt_perf_mode=2}] run scoreboard players set PerformanceMode options 1
-scoreboard players set @a[scores={opt_perf_mode=2..}] performanceMode 0
+execute as @a[scores={killed=1..}] run function loumardes:scaffolding_rush/died
 
 #villager placed
 execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
 execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
 execute as @a[scores={redPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
 execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+
+#move villagers
+execute as @a[scores={villagerClick=1..}] at @s run function loumardes:scaffolding_rush/villager/give/any
+
+#warn villagers height
+function loumardes:scaffolding_rush/warn_villager
+
+#inform the player that he has the egg
+title @a[tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg !! Place it to respawn ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+
+#toggle performance saving mode
+execute if entity @a[scores={opt_perf_mode=1}] run scoreboard players set PerformanceMode options 0
+execute if entity @a[scores={opt_perf_mode=2}] run scoreboard players set PerformanceMode options 1
+scoreboard players set @a[scores={opt_perf_mode=2..}] performanceMode 0
 
 #starts the map
 execute if entity @a[scores={StartGame=1..}] run function loumardes:scaffolding_rush/start_countdown
@@ -74,12 +72,6 @@ scoreboard players set @a Reset 0
 #globally
 #execute if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeed options at @e[type=area_effect_cloud,tag=ScR_LavaLevel] run function loumardes:scaffolding_rush/rise_lava_globally
 #locally
-
-#warn villagers height
-function loumardes:scaffolding_rush/warn_villager
-
-#inform the player that he has the egg
-title @a[tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg !! Place it to respawn ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 
 #game logic
 execute if score GameRunning global matches 1 run function loumardes:scaffolding_rush/game_logic
