@@ -14,3 +14,5 @@ execute as @a[team=blue] at @e[type=minecraft:villager,team=blue] run spawnpoint
 execute as @a[team=green] at @e[type=minecraft:villager,team=green] run spawnpoint @s ~ ~ ~
 execute as @a[team=red] at @e[type=minecraft:villager,team=red] run spawnpoint @s ~ ~ ~
 execute as @a[team=yellow] at @e[type=minecraft:villager,team=yellow] run spawnpoint @s ~ ~ ~
+
+execute as @e[type=minecraft:villager] run data merge entity @s {CustomName:""}
