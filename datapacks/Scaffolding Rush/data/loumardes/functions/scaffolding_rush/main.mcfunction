@@ -38,3 +38,13 @@ execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/v
 execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
 execute as @a[scores={redPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
 execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+
+#player in teams
+scoreboard players set RemainingTeam global 0
+
+execute if entity @a[team=blue,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
+execute if entity @a[team=green,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
+execute if entity @a[team=red,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
+execute if entity @a[team=yellow,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
+
+execute if score RemainingTeam global matches ..1 run function loumardes:scaffolding_rush/game/finish
