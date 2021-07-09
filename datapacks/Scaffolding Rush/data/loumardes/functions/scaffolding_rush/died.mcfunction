@@ -9,6 +9,6 @@ clear @s slime_spawn_egg
 clear @s mooshroom_spawn_egg
 clear @s blaze_spawn_egg
 
-tp @s[gamemode=spectator] 0 ~ 0
+spawnpoint @s[gamemode=spectator] 0 ~ 0
 
 scoreboard players set @s killed 0
