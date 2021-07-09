@@ -3,6 +3,6 @@ execute if entity @s[team=blue] unless entity @e[type=villager,team=blue] run ga
 execute if entity @s[team=yellow] unless entity @e[type=villager,team=yellow] run gamemode spectator @s
 execute if entity @s[team=green] unless entity @e[type=villager,team=green] run gamemode spectator @s
 
-gamemode spectator @s[team=!red, team=!green, team=!blue, team=!yellow]
+tp @s[gamemode=spectator] 0 ~ 0
 
 scoreboard players set @s killed 0
