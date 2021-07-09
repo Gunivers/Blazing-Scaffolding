@@ -7,7 +7,7 @@ scoreboard players set GameLoading global 1
 
 function loumardes:scaffolding_rush/broadcast/10s
 
-schedule function loumardes:scaffolding_rush/launch_clear 2s
+schedule function loumardes:scaffolding_rush/clear/launch 2s
 
 kill @e[tag=lobbyText]
 gamemode spectator @a[team=]
@@ -19,18 +19,18 @@ schedule function loumardes:scaffolding_rush/broadcast/4s 6s
 schedule function loumardes:scaffolding_rush/broadcast/3s 7s
 schedule function loumardes:scaffolding_rush/broadcast/2s 8s
 schedule function loumardes:scaffolding_rush/broadcast/1s 9s
-schedule function loumardes:scaffolding_rush/start_game 10s
+schedule function loumardes:scaffolding_rush/game/start 10s
 
 #disable trigers
 function loumardes:scaffolding_rush/options/disable_all
 
 #get lavaspeed timer in tics
 scoreboard players operation LavaSpeedTics options = LavaSpeed options
-scoreboard players operation LavaSpeedTics options *= 20 global
+scoreboard players operation LavaSpeedTics options *= #20 global
 
 #get villager respawn timer in tics
 scoreboard players operation VillagerRespawnTics global = VillagerRespawn options
-scoreboard players operation VillagerRespawnTics global *= 20 global
+scoreboard players operation VillagerRespawnTics global *= #20 global
 
 #reset villagers respawn countdowns
 scoreboard players set RedVillagerRespawn global -1

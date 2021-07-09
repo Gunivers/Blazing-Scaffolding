@@ -22,7 +22,6 @@ scoreboard objectives add global dummy
 scoreboard objectives add options dummy
 scoreboard objectives add YPlayer dummy
 scoreboard objectives add YVillager dummy
-scoreboard objectives add YVillager dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
@@ -30,8 +29,8 @@ scoreboard objectives add greenPlaced minecraft.used:slime_spawn_egg
 scoreboard objectives add redPlaced minecraft.used:mooshroom_spawn_egg
 scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 
-scoreboard players set 20 global 20
-scoreboard players set 10 global 10
+scoreboard players set #20 global 20
+scoreboard players set #10 global 10
 
 
 #Configuration scores
