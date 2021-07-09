@@ -1,4 +1,3 @@
-scoreboard players set GameEnd global 0
 execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress..."}]
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress..."}]
 execute if score GameLoading global matches 0 if score GameRunning global matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress..."}]
@@ -18,6 +17,8 @@ schedule clear loumardes:scaffolding_rush/broadcast/1s
 schedule clear loumardes:scaffolding_rush/game/start
 
 scoreboard players set LavaLevel global 2
+scoreboard players set GameLobby global 1
+scoreboard players set GameEnd global 0
 scoreboard players set GameRunning global 0
 scoreboard players set GameLoading global 0
 
