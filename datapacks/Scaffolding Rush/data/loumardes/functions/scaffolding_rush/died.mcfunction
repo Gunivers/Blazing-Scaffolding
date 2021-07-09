@@ -10,5 +10,6 @@ clear @s mooshroom_spawn_egg
 clear @s blaze_spawn_egg
 
 spawnpoint @s[gamemode=spectator] 0 ~ 0
+tp @s[gamemode=spectator] 0 ~ 0
 
 scoreboard players set @s killed 0
