@@ -32,3 +32,9 @@ execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/
 
 #game logic
 execute if score GameRunning global matches 1 run function loumardes:scaffolding_rush/game_logic
+
+#villager placed
+execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={redPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed

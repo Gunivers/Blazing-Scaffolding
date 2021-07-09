@@ -24,12 +24,6 @@ execute if score RemainingTeam global matches ..1 run function loumardes:scaffol
 #respawn dead players
 execute as @a[scores={killed=1..}] run function loumardes:scaffolding_rush/died
 
-#villager placed
-execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
-execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
-execute as @a[scores={redPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
-execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
-
 #move villagers
 execute as @a[scores={villagerClick=1..}] at @s run function loumardes:scaffolding_rush/villager/give/any
 
