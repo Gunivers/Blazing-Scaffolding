@@ -1,8 +1,5 @@
 setblock 1 5 8 air
 gamemode adventure @a[team=!]
-scoreboard players set TeamBaseEgg global 0
-
-scoreboard players reset @a StartGame
 
 clear @a
 scoreboard players set GameLobby global 0

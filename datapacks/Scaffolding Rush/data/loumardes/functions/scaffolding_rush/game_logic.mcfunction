@@ -20,3 +20,24 @@ execute if entity @a[team=red,gamemode=!spectator,limit=1] run scoreboard player
 execute if entity @a[team=yellow,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 
 execute if score RemainingTeam global matches ..1 run function loumardes:scaffolding_rush/finish
+
+#respawn dead players
+execute as @a[scores={killed=1..}] run function loumardes:scaffolding_rush/died
+
+#villager placed
+execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={redPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+
+#move villagers
+execute as @a[scores={villagerClick=1..}] at @s run function loumardes:scaffolding_rush/villager/give/any
+
+#warn villagers height
+function loumardes:scaffolding_rush/villager/warn
+
+#inform the player that he has the egg
+title @a[tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg !! Place it to respawn ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+
+execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s if entity @a[distance=..1] run effect give @s minecraft:invisibility 1 1 true
+execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #loumardes:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~

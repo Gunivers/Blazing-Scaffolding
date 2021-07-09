@@ -6,9 +6,6 @@ execute unless entity @e[type=area_effect_cloud,name=ScR_LavaLevel] run summon m
 
 
 #trigger controls
-scoreboard objectives add StartGame trigger
-scoreboard objectives add Reset trigger
-
 scoreboard objectives add opt_lava_speed trigger
 scoreboard objectives add opt_build_height trigger
 scoreboard objectives add opt_vil_resp_cd trigger
