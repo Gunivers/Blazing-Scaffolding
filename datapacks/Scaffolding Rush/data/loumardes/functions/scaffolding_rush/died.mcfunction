@@ -11,5 +11,6 @@ clear @s blaze_spawn_egg
 
 spawnpoint @s[gamemode=spectator] 0 ~ 0
 tp @s[gamemode=spectator] 0 ~ 0
+kill @s[gamemode=!spectator]
 
 scoreboard players set @s killed 0
