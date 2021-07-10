@@ -26,5 +26,5 @@ scoreboard players set @s[gamemode=!spectator] killed 20
 schedule function loumardes:scaffolding_rush/died/loop_tp 1t
 
 #Recup delay
-tag @s[gamemode=!spectator] add VillagerRecup
+tag @s[gamemode=!spectator,tag=!has_egg] add VillagerRecup
 schedule function loumardes:scaffolding_rush/villager/give/recup_delay 2s

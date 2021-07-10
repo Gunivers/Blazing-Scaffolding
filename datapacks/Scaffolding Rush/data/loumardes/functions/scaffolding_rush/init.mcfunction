@@ -28,7 +28,7 @@ scoreboard objectives add global dummy
 scoreboard objectives add options dummy
 scoreboard objectives add YPlayer dummy
 scoreboard objectives add YVillager dummy
-scoreboard objectives add villagerClick dummy
+scoreboard objectives add villagerClick minecraft.custom:minecraft.talked_to_villager
 scoreboard objectives add gameId dummy
 
 scoreboard objectives add killed deathCount
