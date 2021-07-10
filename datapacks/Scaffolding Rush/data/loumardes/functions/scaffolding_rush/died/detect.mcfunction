@@ -20,7 +20,7 @@ execute if entity @s[team=yellow,gamemode=!spectator] at @e[type=villager,team=y
 execute if entity @s[team=green,gamemode=!spectator] at @e[type=villager,team=green] run tp @s ~ ~ ~
 
 title @a times 0 20 0
-title @s[gamemode=!spectator title ["",{"text":"Respawning...","color":"red"}]
+title @s[gamemode=!spectator] title ["",{"text":"Respawning...","color":"red"}]
 
 scoreboard players set @s[gamemode=spectator] killed 0
 scoreboard players set @s[gamemode=!spectator] killed 20
