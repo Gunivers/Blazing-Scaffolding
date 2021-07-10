@@ -1,4 +1,4 @@
-execute as @a[team=yellow] run function loumardes:scaffolding_rush/villager/respawn/egg_counter/msg_dead
+execute as @a[team=yellow] run function loumardes:scaffolding_rush/villager/respawn/msg_dead
 
 scoreboard players operation YellowVillagerRespawn global = VillagerRespawnTics global
 
