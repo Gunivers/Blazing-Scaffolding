@@ -4,11 +4,11 @@ execute if entity @a[team=green] unless entity @e[type=minecraft:armor_stand,tag
 execute if entity @a[team=red] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Red"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Red"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
 execute if entity @a[team=yellow] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Yellow"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Yellow"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
 
-execute positioned 0 0 0 if score worldborder global matches 20..39 run spreadplayers 0 0 5 10 false @e[type=minecraft:armor_stand,tag=spread]
-execute positioned 0 0 0 if score worldborder global matches 40..89 run spreadplayers 0 0 10 20 false @e[type=minecraft:armor_stand,tag=spread]
-execute positioned 0 0 0 if score worldborder global matches 90..159 run spreadplayers 0 0 20 45 false @e[type=minecraft:armor_stand,tag=spread]
-execute positioned 0 0 0 if score worldborder global matches 160..239 run spreadplayers 0 0 40 80 false @e[type=minecraft:armor_stand,tag=spread]
-execute positioned 0 0 0 if score worldborder global matches 240..360 run spreadplayers 0 0 60 120 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score worldborder global matches 15..19 run spreadplayers 0 0 5 7 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score worldborder global matches 20..34 run spreadplayers 0 0 7 10 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score worldborder global matches 35..79 run spreadplayers 0 0 14 17 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score worldborder global matches 80..119 run spreadplayers 0 0 35 40 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score worldborder global matches 120..165 run spreadplayers 0 0 55 60 false @e[type=minecraft:armor_stand,tag=spread]
 
 execute as @e[tag=baseTeam] at @s run function loumardes:scaffolding_rush/team/create_base/load_structure
 
