@@ -7,18 +7,13 @@ execute if entity @s[team=yellow] unless entity @e[type=villager,team=yellow] ru
 execute if entity @s[team=green] unless entity @e[type=villager,team=green] run gamemode spectator @s
 
 tag @s remove has_egg
-clear @s squid_spawn_egg
-clear @s slime_spawn_egg
-clear @s mooshroom_spawn_egg
-clear @s blaze_spawn_egg
+clear @s
 
 tp @s[gamemode=spectator] 0 ~ 0
 tag @s[gamemode=!spectator] add Respawning
 
-execute if entity @s[team=red,gamemode=!spectator] at @e[type=villager,team=red] run tp @s ~ ~ ~
-execute if entity @s[team=blue,gamemode=!spectator] at @e[type=villager,team=blue] run tp @s ~ ~ ~
-execute if entity @s[team=yellow,gamemode=!spectator] at @e[type=villager,team=yellow] run tp @s ~ ~ ~
-execute if entity @s[team=green,gamemode=!spectator] at @e[type=villager,team=green] run tp @s ~ ~ ~
+effect give @s[gamemode=!spectator] minecraft:slowness 1 9 true
+effect give @s[gamemode=!spectator] minecraft:invisibility 1 1 true
 
 title @a times 0 20 0
 title @s[gamemode=!spectator] title ["",{"text":"Respawning...","color":"red"}]
