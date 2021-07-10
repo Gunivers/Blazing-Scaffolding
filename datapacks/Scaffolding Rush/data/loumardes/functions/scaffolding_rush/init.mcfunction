@@ -26,6 +26,7 @@ scoreboard objectives add global dummy
 scoreboard objectives add options dummy
 scoreboard objectives add YPlayer dummy
 scoreboard objectives add YVillager dummy
+scoreboard objectives add AgeVillager dummy
 scoreboard objectives add gameId dummy
 
 scoreboard objectives add killed deathCount
