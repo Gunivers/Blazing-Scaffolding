@@ -1,8 +1,6 @@
-tellraw @a[team=yellow] ["",{"text":"[SR] ","color":"gold"},{"text":"Your villager has died, you will get a new one in ","color":"red"},{"score":{"name":"VillagerRespawn","objective":"options","color":"gray"}},{"text":" seconds","color":"red"}]
+execute as @a[team=yellow] run function loumardes:scaffolding_rush/villager/respawn/egg_counter/msg_dead
+
 scoreboard players operation YellowVillagerRespawn global = VillagerRespawnTics global
-execute if score VillagerRespawn options matches 3 run give @a[team=yellow] minecraft:ghast_spawn_egg{HideFlags:24,CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"],display:{Name:'{"text":"Your villager is dead","color":"red","italic":false}'}} 3
-execute if score VillagerRespawn options matches 5 run give @a[team=yellow] minecraft:ghast_spawn_egg{HideFlags:24,CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"],display:{Name:'{"text":"Your villager is dead","color":"red","italic":false}'}} 5
-execute if score VillagerRespawn options matches 10 run give @a[team=yellow] minecraft:ghast_spawn_egg{HideFlags:24,CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"],display:{Name:'{"text":"Your villager is dead","color":"red","italic":false}'}} 10
-execute if score VillagerRespawn options matches 20 run give @a[team=yellow] minecraft:ghast_spawn_egg{HideFlags:24,CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"],display:{Name:'{"text":"Your villager is dead","color":"red","italic":false}'}} 20
-execute if score VillagerRespawn options matches 30 run give @a[team=yellow] minecraft:ghast_spawn_egg{HideFlags:24,CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"],display:{Name:'{"text":"Your villager is dead","color":"red","italic":false}'}} 30
+
+execute as @a[team=yellow] run function loumardes:scaffolding_rush/villager/respawn/egg_counter/give
 execute as @a[team=yellow] run schedule function loumardes:scaffolding_rush/villager/respawn/egg_counter/yellow 1s
