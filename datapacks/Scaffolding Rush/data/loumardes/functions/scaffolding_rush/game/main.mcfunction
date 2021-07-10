@@ -38,4 +38,4 @@ execute as @a[team=green,tag=!has_egg] at @s as @e[type=minecraft:villager,limit
 execute as @a[team=yellow,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=!yellow] run tag @p add VillagerRecup2
 execute as @a[team=yellow,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=yellow] run tag @p remove VillagerRecup2
 
-execute as @a[tag=has_egg,nbt=!{Inventory::{id:"minecraft:squid_spawn_egg"}},nbt=!{Inventory::{id:"minecraft:slime_spawn_egg"}},nbt=!{Inventory::{id:"mooshroom_spawn_egg"}},nbt=!{Inventory::{id:"minecraft:blaze"}}] run function loumardes:scaffolding_rush/villager/give/any
+execute as @a[tag=has_egg,nbt=!{Inventory::{id:"minecraft:squid_spawn_egg"}},nbt=!{Inventory:{id:"minecraft:slime_spawn_egg"}},nbt=!{Inventory:{id:"mooshroom_spawn_egg"}},nbt=!{Inventory:{id:"minecraft:blaze_spawn_egg"}}] run function loumardes:scaffolding_rush/villager/give/any
