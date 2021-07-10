@@ -8,7 +8,7 @@ execute if entity @s[team=yellow] unless entity @e[type=villager,team=yellow] ru
 execute if entity @s[team=green] unless entity @e[type=villager,team=green] run gamemode spectator @s
 execute at @s run playsound minecraft:entity.player.hurt_on_fire ambient @s ~ ~ ~
 
-execute if entity @a run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"selector":"@s"},{"text":" died in the lava","color":"gray"}]
+execute if entity @e[type=minecraft:player] run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"selector":"@s"},{"text":" died in the lava","color":"gray"}]
 
 tag @s remove has_egg
 clear @s
