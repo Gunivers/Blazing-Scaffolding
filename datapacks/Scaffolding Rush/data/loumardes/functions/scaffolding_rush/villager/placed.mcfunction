@@ -16,4 +16,4 @@ execute as @e[type=minecraft:villager] run data merge entity @s {CustomName:""}
 
 #Recup delay
 tag @s add VillagerRecup
-execute at @s run schedule function loumardes:scaffolding_rush/villager/give/recup_delay 3s
+schedule function loumardes:scaffolding_rush/villager/give/recup_delay 1s

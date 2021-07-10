@@ -35,4 +35,4 @@ scoreboard players set @s killed 0
 
 #Recup delay
 tag @s add VillagerRecup
-execute at @s run schedule function loumardes:scaffolding_rush/villager/give/recup_delay 3s
+schedule function loumardes:scaffolding_rush/villager/give/recup_delay 2s

@@ -4,7 +4,3 @@ execute if entity @s[team=yellow,gamemode=!spectator,tag=!VillagerRecup] run fun
 execute if entity @s[team=green,gamemode=!spectator,tag=!VillagerRecup] run function loumardes:scaffolding_rush/villager/give/green
 
 scoreboard players set @s villagerClick 0
-
-#Recup delay
-tag @s add VillagerRecup
-execute at @s run schedule function loumardes:scaffolding_rush/villager/give/recup_delay 3s
