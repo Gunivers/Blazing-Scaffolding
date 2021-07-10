@@ -1,8 +1,8 @@
 #trigger respawn
-execute if entity @a[team=blue] unless entity @e[type=villager,team=blue,limit=1] unless entity @a[tag=has_egg,team=blue] run function loumardes:scaffolding_rush/villager/respawn/test/blue
-execute if entity @a[team=green] unless entity @e[type=villager,team=green,limit=1] unless entity @a[tag=has_egg,team=green] run function loumardes:scaffolding_rush/villager/respawn/test/green
-execute if entity @a[team=red] unless entity @e[type=villager,team=red,limit=1] unless entity @a[tag=has_egg,team=red] run function loumardes:scaffolding_rush/villager/respawn/test/red
-execute if entity @a[team=yellow] unless entity @e[type=villager,team=yellow,limit=1] unless entity @a[tag=has_egg,team=yellow] run function loumardes:scaffolding_rush/villager/respawn/test/yellow
+execute if entity @a[team=blue,gamemode=!spectator] unless entity @e[type=villager,team=blue,limit=1] unless entity @a[tag=has_egg,team=blue] run function loumardes:scaffolding_rush/villager/respawn/test/blue
+execute if entity @a[team=green,gamemode=!spectator] unless entity @e[type=villager,team=green,limit=1] unless entity @a[tag=has_egg,team=green] run function loumardes:scaffolding_rush/villager/respawn/test/green
+execute if entity @a[team=red,gamemode=!spectator] unless entity @e[type=villager,team=red,limit=1] unless entity @a[tag=has_egg,team=red] run function loumardes:scaffolding_rush/villager/respawn/test/red
+execute if entity @a[team=yellow,gamemode=!spectator] unless entity @e[type=villager,team=yellow,limit=1] unless entity @a[tag=has_egg,team=yellow] run function loumardes:scaffolding_rush/villager/respawn/test/yellow
 
 #respawn countdown
 execute if score RedVillagerRespawn global matches 0.. run scoreboard players remove RedVillagerRespawn global 1
