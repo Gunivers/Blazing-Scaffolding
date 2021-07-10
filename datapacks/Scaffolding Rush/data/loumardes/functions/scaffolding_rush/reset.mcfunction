@@ -24,6 +24,7 @@ scoreboard players set GameRunning global 0
 scoreboard players set GameLoading global 0
 
 function loumardes:scaffolding_rush/options/activate_all
+function loumardes:scaffolding_rush/options/labels
 
 tag @a remove has_egg
 tag @a remove VillagerRecup
