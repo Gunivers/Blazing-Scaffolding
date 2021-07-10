@@ -35,6 +35,7 @@ tag @a remove VillagerRecup
 
 gamemode survival @a
 clear @a
+effect clear @a
 
 spawnpoint @s 0 4 0
 
