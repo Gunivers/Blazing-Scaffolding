@@ -17,5 +17,5 @@ scoreboard players set @s yellowPlaced 0
 execute as @e[type=minecraft:villager] run data merge entity @s {CustomName:""}
 
 #Recup delay
-tag @s add VillagerRecup
+tag @s[tag=!has_egg] add VillagerRecup
 schedule function loumardes:scaffolding_rush/villager/give/recup_delay 5t
