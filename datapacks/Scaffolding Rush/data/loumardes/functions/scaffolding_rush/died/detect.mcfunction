@@ -13,7 +13,6 @@ execute if entity @s[type=minecraft:player] run tellraw @a ["",{"text":"[SR] ","
 tag @s remove has_egg
 clear @s
 
-tp @s[gamemode=spectator] 0 ~ 0
 tag @s[gamemode=!spectator] add Respawning
 
 effect give @s[gamemode=!spectator] minecraft:slowness 1 9 true
