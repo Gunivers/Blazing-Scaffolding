@@ -25,3 +25,5 @@ title @a[tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold
 
 execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s if entity @a[distance=..1] run effect give @s minecraft:invisibility 1 1 true
 execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #loumardes:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~
+
+execute if score GameEnd global matches 0 if score RemainingTeam global matches ..1 run function loumardes:scaffolding_rush/game/finish

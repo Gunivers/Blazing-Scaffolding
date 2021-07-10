@@ -33,7 +33,7 @@ execute if score InstantPillar options matches 1 as @e[type=area_effect_cloud ,n
 execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/item/catch_drop
 
 #game logic
-execute if score GameRunning global matches 1 run function loumardes:scaffolding_rush/game_logic
+execute if score GameRunning global matches 1 run function loumardes:scaffolding_rush/game/main
 
 #villager placed
 execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
@@ -48,5 +48,3 @@ execute if score GameEnd global matches 0 if entity @a[team=blue,gamemode=!spect
 execute if score GameEnd global matches 0 if entity @a[team=green,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 execute if score GameEnd global matches 0 if entity @a[team=red,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 execute if score GameEnd global matches 0 if entity @a[team=yellow,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
-
-execute if score GameEnd global matches 0 if score GameLobby global matches 0 if score RemainingTeam global matches ..1 run function loumardes:scaffolding_rush/game/finish
