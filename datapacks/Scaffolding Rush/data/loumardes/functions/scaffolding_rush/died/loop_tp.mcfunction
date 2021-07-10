@@ -7,3 +7,4 @@ execute as @a[scores={killed=1..}] run schedule function loumardes:scaffolding_r
 execute as @a[scores={killed=0}] run gamemode survival @s
 execute as @a[scores={killed=0}] run function loumardes:scaffolding_rush/team/create_base/armor
 execute as @a[scores={killed=0}] run tag @s remove Respawning
+execute as @a[scores={killed=0}] run function loumardes:scaffolding_rush/game/items
