@@ -14,7 +14,6 @@ clear @s slime_spawn_egg
 clear @s mooshroom_spawn_egg
 clear @s blaze_spawn_egg
 
-spawnpoint @s[tag=Eliminated] 0 ~ 0
 tp @s[tag=Eliminated] 0 ~ 0
 
 execute if entity @s[team=red,tag=!Eliminated] at @e[type=villager,team=red] run tp @s ~ ~ ~
@@ -23,7 +22,7 @@ execute if entity @s[team=yellow,tag=!Eliminated] at @e[type=villager,team=yello
 execute if entity @s[team=green,tag=!Eliminated] at @e[type=villager,team=green] run tp @s ~ ~ ~
 
 title @a times 0 20 0
-title @s[tag=!Eliminated title ["",{"text":"Respawning...","color":"red"}]
+title @s[tag=!Eliminated] title ["",{"text":"Respawning...","color":"red"}]
 
 scoreboard players set @s[tag=Eliminated] killed 0
 scoreboard players set @s[tag=!Eliminated] killed 20
