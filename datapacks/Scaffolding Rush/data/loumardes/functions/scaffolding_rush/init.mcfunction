@@ -2,7 +2,7 @@ execute as @e[type=villager] run function loumardes:scaffolding_rush/clean_kill
 kill @e[type=!player]
 
 #summons the AEC indiquant la position de la lave
-execute unless entity @e[type=area_effect_cloud,name=ScR_LavaLevel] run summon minecraft:area_effect_cloud 0 1 0 {Duration:2147483647, CustomName:'{"text":"ScR_LavaLevel"}'}
+execute unless entity @e[type=area_effect_cloud,name="ScR_LavaLevel"] run summon minecraft:area_effect_cloud 0 1 0 {Duration:2147483647, CustomName:'{"text":"ScR_LavaLevel"}'}
 
 
 #trigger controls

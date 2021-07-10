@@ -5,7 +5,7 @@ execute if score GameLoading global matches 0 if score GameRunning global matche
 function loumardes:scaffolding_rush/clear/launch
 kill @e[tag=lobbyText]
 kill @e[tag=baseTeam]
-kill @e[type=area_effect_cloud ,name=ScR_Pillar]
+kill @e[type=area_effect_cloud ,name="ScR_Pillar"]
 execute as @e[type=villager] run function loumardes:scaffolding_rush/clean_kill
 
 schedule clear loumardes:scaffolding_rush/clear/launch

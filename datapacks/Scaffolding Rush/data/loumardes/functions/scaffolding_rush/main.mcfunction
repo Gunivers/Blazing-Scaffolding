@@ -27,7 +27,7 @@ function loumardes:scaffolding_rush/options/any
 
 #instant pillar
 execute if score InstantPillar options matches 1 at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:2147483647, CustomName:'{"text":"ScR_Pillar"}'}
-execute if score InstantPillar options matches 1 as @e[type=area_effect_cloud ,name=ScR_Pillar] at @s run function loumardes:scaffolding_rush/pillar/start
+execute if score InstantPillar options matches 1 as @e[type=area_effect_cloud ,name="ScR_Pillar"] at @s run function loumardes:scaffolding_rush/pillar/start
 
 #items
 execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/item/catch_drop
