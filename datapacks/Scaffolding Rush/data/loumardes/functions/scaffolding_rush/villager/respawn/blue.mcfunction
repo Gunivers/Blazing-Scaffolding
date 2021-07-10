@@ -1,4 +1,4 @@
-tellraw @a[team=blue] ["",{"text":"[SR] ","color":"gold"},{"text":"Your villager has died, you will get a new one in ","color":"red"},{"score":{"name":"VillagerRespawn","objective":"options"}},{"text":" seconds","color":"red"}]
+tellraw @a[team=blue] ["",{"text":"[SR] ","color":"gold"},{"text":"Your villager has died, you will get a new one in ","color":"red"},{"score":{"name":"VillagerRespawn","objective":"options","color":"gray"}},{"text":" seconds","color":"red"}]
 scoreboard players operation BlueVillagerRespawn global = VillagerRespawnTics global
 execute if score VillagerRespawn options matches 3 run give @a[team=blue] minecraft:ghast_spawn_egg{HideFlags:24,CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"],display:{Name:'{"text":"Your villager is dead","color":"red","italic":false}'}} 3
 execute if score VillagerRespawn options matches 5 run give @a[team=blue] minecraft:ghast_spawn_egg{HideFlags:24,CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"],display:{Name:'{"text":"Your villager is dead","color":"red","italic":false}'}} 5
