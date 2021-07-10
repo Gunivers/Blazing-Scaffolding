@@ -32,6 +32,8 @@ scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 scoreboard players set #20 global 20
 scoreboard players set #10 global 10
 
+scoreboard players set GameId global 0 
+
 
 #Configuration scores
 execute unless score LavaSpeed options matches 1.. run scoreboard players set LavaSpeed options 10
@@ -75,7 +77,8 @@ team modify green friendlyFire false
 #worldborder
 worldborder warning distance 1
 worldborder damage amount 0
-execute if score worldborder global matches 95 run worldborder set 95
+
+function loumardes:scaffolding_rush/options/wb_size_refresh
 
 #time
 time set noon
