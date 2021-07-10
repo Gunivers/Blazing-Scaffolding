@@ -13,7 +13,4 @@ summon area_effect_cloud 2 4.7 11 {CustomName:'{"text":"How to play","bold":true
 
 scoreboard players set GameLobby global 1
 
-give @a minecraft:scaffolding
-give @a minecraft:gravel{HideFlags:24,CanPlaceOn:["minecraft:scaffolding","#loumardes:notowerlobby"],CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"]}
-
-function loumardes:scaffolding_rush/lobby/give_book
+execute as @a run function loumardes:scaffolding_rush/lobby/give_items.mcfunction

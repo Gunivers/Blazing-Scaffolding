@@ -3,6 +3,8 @@ effect give @a minecraft:saturation 999999 1 true
 #Lobby main
 execute if score GameLobby global matches 1 run function loumardes:scaffolding_rush/lobby/main
 
+execute as @a unless score @s gameId = GameId global as @s run function loumardes:scaffolding_rush/join/main
+
 #gravel tower
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:blue_concrete_powder"}}] run gamemode adventure

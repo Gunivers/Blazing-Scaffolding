@@ -4,6 +4,9 @@ clear @a
 scoreboard players set GameLobby global 0
 scoreboard players set GameLoading global 1
 
+scoreboard players add GameId global 1
+scoreboard players operation @a gameId = GameId global
+
 setblock 0 5 7 air destroy
 
 function loumardes:scaffolding_rush/broadcast/10s
