@@ -3,6 +3,7 @@ execute if entity @s[team=blue] unless entity @e[type=villager,team=blue] run ga
 execute if entity @s[team=yellow] unless entity @e[type=villager,team=yellow] run gamemode spectator @s
 execute if entity @s[team=green] unless entity @e[type=villager,team=green] run gamemode spectator @s
 
+#stop motion
 tp @s @s
 
 tag @s remove has_egg
@@ -28,3 +29,7 @@ title @a times 0 20 0
 title @s[gamemode=!spectator] title ["",{"text":"Respawning...","color":"red"}]
 
 scoreboard players set @s killed 0
+
+#Recup dellay
+tag @s add VillagerRecup
+execute as @s run schedule function loumardes:scaffolding_rush/villager/give/recup_delay 3s
