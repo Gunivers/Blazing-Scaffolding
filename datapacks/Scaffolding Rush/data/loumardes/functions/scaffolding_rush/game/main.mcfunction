@@ -29,11 +29,11 @@ execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s
 execute if score GameEnd global matches 0 if score RemainingTeam global matches ..1 run function loumardes:scaffolding_rush/game/finish
 
 #Ennemi villager interraction
-execute at @e[type=minecraft:villager,team=blue] run tag @a[team=!blue,distance=..3] add VillagerRecup
-execute at @e[type=minecraft:villager,team=blue] run tag @a[team=!blue,distance=3..] remove VillagerRecup
-execute at @e[type=minecraft:villager,team=green] run tag @a[team=!green,distance=..3] add VillagerRecup
-execute at @e[type=minecraft:villager,team=green] run tag @a[team=!green,distance=3..] remove VillagerRecup
-execute at @e[type=minecraft:villager,team=red] run tag @a[team=!red,distance=..3] add VillagerRecup
-execute at @e[type=minecraft:villager,team=red] run tag @a[team=!red,distance=3..] remove VillagerRecup
-execute at @e[type=minecraft:villager,team=yellow] run tag @a[team=!yellow,distance=..3] add VillagerRecup
-execute at @e[type=minecraft:villager,team=yellow] run tag @a[team=!yellow,distance=3..] remove VillagerRecup
+execute as @a[team=blue] at @s unless entity @e[type=minecraft:villager,limit=1,sort=nearest,team=blue] run tag @s add VillagerRecup
+execute as @a[team=blue] at @s if entity @e[type=minecraft:villager,limit=1,sort=nearest,team=blue] run tag @s remove VillagerRecup
+execute as @a[team=red] at @s unless entity @e[type=minecraft:villager,limit=1,sort=nearest,team=red] run tag @s add VillagerRecup
+execute as @a[team=red] at @s if entity @e[type=minecraft:villager,limit=1,sort=nearest,team=red] run tag @s remove VillagerRecup
+execute as @a[team=green] at @s unless entity @e[type=minecraft:villager,limit=1,sort=nearest,team=green] run tag @s add VillagerRecup
+execute as @a[team=green] at @s if entity @e[type=minecraft:villager,limit=1,sort=nearest,team=green] run tag @s remove VillagerRecup
+execute as @a[team=yellow] at @s unless entity @e[type=minecraft:villager,limit=1,sort=nearest,team=yellow] run tag @s add VillagerRecup
+execute as @a[team=yellow] at @s if entity @e[type=minecraft:villager,limit=1,sort=nearest,team=yellow] run tag @s remove VillagerRecup
