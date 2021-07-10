@@ -56,4 +56,4 @@ execute if score GameEnd global matches 0 if entity @a[team=green,gamemode=!spec
 execute if score GameEnd global matches 0 if entity @a[team=red,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 execute if score GameEnd global matches 0 if entity @a[team=yellow,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 
-execute as @e[type=villager,!nbt={Age:0}] run function loumardes:scaffolding_rush/clean_kill
+execute as @e[type=villager,nbt=!{Age:0}] run function loumardes:scaffolding_rush/clean_kill
