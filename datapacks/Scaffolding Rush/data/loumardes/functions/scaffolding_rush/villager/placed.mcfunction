@@ -7,6 +7,8 @@ execute as @a[gamemode=spectator,team=green] if entity @a[scores={greenPlaced=1.
 
 execute if score GameLobby global matches 1 run function loumardes:scaffolding_rush/lobby/villager/spawn
 
+scoreboard players set @e[type=minecraft:villager] killed 0
+
 scoreboard players set @s bluePlaced 0
 scoreboard players set @s greenPlaced 0
 scoreboard players set @s redPlaced 0
