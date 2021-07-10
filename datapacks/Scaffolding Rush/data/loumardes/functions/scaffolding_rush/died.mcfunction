@@ -17,4 +17,9 @@ execute if entity @s[team=blue] at @e[type=villager,team=blue] run tp @s ~ ~ ~
 execute if entity @s[team=yellow] at @e[type=villager,team=yellow] run tp @s ~ ~ ~
 execute if entity @s[team=green] at @e[type=villager,team=green] run tp @s ~ ~ ~
 
+effect give @s[gamemode=!spectator] minecraft:slowness 1 5 true
+
+title @a times 0 20 0
+title @s[gamemode=!spectator] title ["",{"text":"Respawning","color":"red"}]
+
 scoreboard players set @s killed 0
