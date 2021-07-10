@@ -1,1 +1,1 @@
-tag @s remove VillagerRecup
+tag @p[tag=VillagerRecup] remove VillagerRecup
