@@ -1,2 +1,3 @@
+function loumardes:scaffolding_rush/options/labels
 
-function loumardes:scaffolding_rush/lobby/give_book
+execute as @a run function loumardes:scaffolding_rush/lobby/give_book
