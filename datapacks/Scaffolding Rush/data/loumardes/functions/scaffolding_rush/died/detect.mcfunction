@@ -22,9 +22,9 @@ title @a times 0 20 0
 title @s[gamemode=!spectator] title ["",{"text":"Respawning...","color":"red"}]
 
 scoreboard players set @s[gamemode=spectator] killed 0
-scoreboard players set @s[gamemode=!spectator] killed 20
+scoreboard players set @s[gamemode=!spectator] killed 5
 schedule function loumardes:scaffolding_rush/died/loop_tp 1t
 
 #Recup delay
 tag @s[gamemode=!spectator,tag=!has_egg] add VillagerRecup
-schedule function loumardes:scaffolding_rush/villager/give/recup_delay 2s
+schedule function loumardes:scaffolding_rush/villager/give/recup_delay 1s
