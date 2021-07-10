@@ -1,5 +1,5 @@
 #kill villager
-execute if entity @s[type=minecraft:villager] run kill @s
+execute if entity @s[type=minecraft:villager] run function loumardes:scaffolding_rush/clean_kill
 
 execute if entity @s[team=red] unless entity @e[type=villager,team=red] run gamemode spectator @s
 execute if entity @s[team=blue] unless entity @e[type=villager,team=blue] run gamemode spectator @s
