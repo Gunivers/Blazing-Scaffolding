@@ -26,6 +26,7 @@ scoreboard players set GameLoading global 0
 function loumardes:scaffolding_rush/options/activate_all
 
 tag @a remove has_egg
+tag @a remove VillagerRecup
 
 gamemode survival @a
 clear @a
