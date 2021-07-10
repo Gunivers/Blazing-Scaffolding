@@ -13,4 +13,4 @@ summon area_effect_cloud 2 4.7 11 {CustomName:'{"text":"How to play","bold":true
 
 scoreboard players set GameLobby global 1
 
-execute as @a run function loumardes:scaffolding_rush/lobby/give_items.mcfunction
+execute as @a run function loumardes:scaffolding_rush/lobby/give_items
