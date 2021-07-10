@@ -12,7 +12,7 @@ execute as @e[type=villager] at @s run function loumardes:scaffolding_rush/lava/
 execute if score VillagerForgiveness options matches 1 run function loumardes:scaffolding_rush/villager/respawn/villager_loss_detection
 
 #respawn dead players
-execute as @a[scores={killed=1}] run function loumardes:scaffolding_rush/died/detect
+execute as @a[scores={killed=1..},tag=!Respawning] run function loumardes:scaffolding_rush/died/detect
 
 #move villagers
 execute as @a[scores={villagerClick=1..}] at @s run function loumardes:scaffolding_rush/villager/give/any

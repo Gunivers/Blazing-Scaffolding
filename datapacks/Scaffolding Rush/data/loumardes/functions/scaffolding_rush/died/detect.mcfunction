@@ -13,6 +13,7 @@ clear @s mooshroom_spawn_egg
 clear @s blaze_spawn_egg
 
 tp @s[gamemode=spectator] 0 ~ 0
+tag @s[gamemode=!spectator] add Respawning
 
 execute if entity @s[team=red,gamemode=!spectator] at @e[type=villager,team=red] run tp @s ~ ~ ~
 execute if entity @s[team=blue,gamemode=!spectator] at @e[type=villager,team=blue] run tp @s ~ ~ ~
@@ -29,5 +30,3 @@ schedule function loumardes:scaffolding_rush/died/loop_tp 1t
 #Recup delay
 tag @s[gamemode=!spectator] add VillagerRecup
 schedule function loumardes:scaffolding_rush/villager/give/recup_delay 2s
-
-tag @s remove Eliminated
