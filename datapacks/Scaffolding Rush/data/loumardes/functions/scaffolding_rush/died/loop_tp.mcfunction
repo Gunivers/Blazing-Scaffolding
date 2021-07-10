@@ -4,4 +4,4 @@ execute if entity @s[team=yellow,gamemode=!spectator] at @e[type=villager,team=y
 execute if entity @s[team=green,gamemode=!spectator] at @e[type=villager,team=green] run tp @s ~ ~ ~
 scoreboard players remove @s killed 1
 execute as @a[scores={killed=1..}] run schedule function loumardes:scaffolding_rush/died/loop_tp 1t
-execute as @a[scores={killed=0},tag=Respawning] run loumardes:scaffolding_rush/died/loop_end
+execute as @a[scores={killed=0},tag=Respawning] run function loumardes:scaffolding_rush/died/loop_end
