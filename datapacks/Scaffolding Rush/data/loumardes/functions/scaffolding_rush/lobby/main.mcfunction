@@ -4,11 +4,11 @@ execute as @a if score @s global matches ..2 run effect give @s minecraft:speed 
 execute as @a if score @s global matches 4.. run effect clear @s minecraft:speed
 
 #team join lobby
-execute as @e[name="Join Blue"] at @s as @a[distance=..1.5,team=!blue] run function loumardes:scaffolding_rush/team/join/blue
-execute as @e[name="Join Green"] at @s as @a[distance=..1.5,team=!green] run function loumardes:scaffolding_rush/team/join/green
-execute as @e[name="Join Red"] at @s as @a[distance=..1.5,team=!red] run function loumardes:scaffolding_rush/team/join/red
-execute as @e[name="Join Yellow"] at @s as @a[distance=..1.5,team=!yellow] run function loumardes:scaffolding_rush/team/join/yellow
-execute as @e[name="Spectate"] at @s as @a[distance=..1.5,team=!] run function loumardes:scaffolding_rush/team/leave
+execute at @e[name="Join Blue"] as @a[distance=..1.5,team=!blue] run function loumardes:scaffolding_rush/team/join/blue
+execute at @e[name="Join Green"] as @a[distance=..1.5,team=!green] run function loumardes:scaffolding_rush/team/join/green
+execute at @e[name="Join Red"] as @a[distance=..1.5,team=!red] run function loumardes:scaffolding_rush/team/join/red
+execute at @e[name="Join Yellow"] as @a[distance=..1.5,team=!yellow] run function loumardes:scaffolding_rush/team/join/yellow
+execute at @e[name="Spectate"] as @a[distance=..1.5,team=!] run function loumardes:scaffolding_rush/team/leave
 
 #base
 execute if score TeamEgg options matches 1 run function loumardes:scaffolding_rush/team/base_egg/give

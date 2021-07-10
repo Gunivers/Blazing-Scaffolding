@@ -27,3 +27,13 @@ execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s
 execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #loumardes:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~
 
 execute if score GameEnd global matches 0 if score RemainingTeam global matches ..1 run function loumardes:scaffolding_rush/game/finish
+
+#Ennemi villager interraction
+execute at @e[type=minecraft:villager,team=blue] run tag @a[team=!blue,distance=..3] add VillagerRecup
+execute at @e[type=minecraft:villager,team=blue] run tag @a[team=!blue,distance=3..] remove VillagerRecup
+execute at @e[type=minecraft:villager,team=green] run tag @a[team=!green,distance=..3] add VillagerRecup
+execute at @e[type=minecraft:villager,team=green] run tag @a[team=!green,distance=3..] remove VillagerRecup
+execute at @e[type=minecraft:villager,team=red] run tag @a[team=!red,distance=..3] add VillagerRecup
+execute at @e[type=minecraft:villager,team=red] run tag @a[team=!red,distance=3..] remove VillagerRecup
+execute at @e[type=minecraft:villager,team=yellow] run tag @a[team=!yellow,distance=..3] add VillagerRecup
+execute at @e[type=minecraft:villager,team=yellow] run tag @a[team=!yellow,distance=3..] remove VillagerRecup
