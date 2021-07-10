@@ -121,8 +121,8 @@ gamerule universalAnger false
 
 setworldspawn 0 4 0
 
-execute unless entity @e[type=area_effect_cloud,name="✔"] run summon minecraft:area_effect_cloud 0 0 0 {Duration:2147483647, CustomName:'{"text":"✔"}'}
-execute unless entity @e[type=area_effect_cloud,name="✖"] run summon minecraft:area_effect_cloud 0 0 0 {Duration:2147483647, CustomName:'{"text":"✖"}'}
+execute unless entity @e[type=area_effect_cloud,name="✔"] run summon minecraft:area_effect_cloud 0 0 0 {Duration:2147483647, CustomName:'{"text":"✔","color":"green"}'}
+execute unless entity @e[type=area_effect_cloud,name="✖"] run summon minecraft:area_effect_cloud 0 0 0 {Duration:2147483647, CustomName:'{"text":"✖","color":"red"}'}
 
 #debug / à changer
 #say [SR] init done (reset in progress)
