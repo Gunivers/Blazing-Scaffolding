@@ -12,10 +12,10 @@ clear @s blaze_spawn_egg
 spawnpoint @s[gamemode=spectator] 0 ~ 0
 tp @s[gamemode=spectator] 0 ~ 0
 
-execute if entity @s[team=red] at @e[type=villager,team=red] run tp @s ~ ~ ~
-execute if entity @s[team=blue] at @e[type=villager,team=blue] run tp @s ~ ~ ~
-execute if entity @s[team=yellow] at @e[type=villager,team=yellow] run tp @s ~ ~ ~
-execute if entity @s[team=green] at @e[type=villager,team=green] run tp @s ~ ~ ~
+execute if entity @s[team=red] at @e[type=villager,team=red] run tp @s ~ ~0.1 ~
+execute if entity @s[team=blue] at @e[type=villager,team=blue] run tp @s ~ ~0.1 ~
+execute if entity @s[team=yellow] at @e[type=villager,team=yellow] run tp @s ~0.1 ~ ~
+execute if entity @s[team=green] at @e[type=villager,team=green] run tp @s ~ ~0.1 ~
 
 effect give @s[gamemode=!spectator] minecraft:slowness 1 255 true
 effect give @s[gamemode=!spectator] minecraft:weakness 1 255 true
