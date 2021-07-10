@@ -7,6 +7,8 @@ scoreboard players set GameLoading global 1
 scoreboard players add GameId global 1
 scoreboard players operation @a gameId = GameId global
 
+scoreboard players reset @a StartGame
+
 setblock 0 5 7 cave_air
 
 function loumardes:scaffolding_rush/broadcast/10s

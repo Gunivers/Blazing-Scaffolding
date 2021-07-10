@@ -1,3 +1,5 @@
+scoreboard players reset @a Reset
+
 execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 0 if score GameRunning global matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
@@ -24,6 +26,8 @@ scoreboard players set GameRunning global 0
 scoreboard players set GameLoading global 0
 
 function loumardes:scaffolding_rush/options/activate_all
+scoreboard players enable @a StartGame
+
 function loumardes:scaffolding_rush/options/labels
 
 tag @a remove has_egg
