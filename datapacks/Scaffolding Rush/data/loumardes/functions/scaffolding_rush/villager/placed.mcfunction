@@ -5,6 +5,8 @@ execute as @a[gamemode=spectator,team=blue] if entity @a[scores={bluePlaced=1..}
 execute as @a[gamemode=spectator,team=yellow] if entity @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/villager/player_respawn/yellow
 execute as @a[gamemode=spectator,team=green] if entity @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/villager/player_respawn/green
 
+execute if score GameLobby global matches 1 run function loumardes:scaffolding_rush/lobby/villager/spawn
+
 scoreboard players set @s bluePlaced 0
 scoreboard players set @s greenPlaced 0
 scoreboard players set @s redPlaced 0
