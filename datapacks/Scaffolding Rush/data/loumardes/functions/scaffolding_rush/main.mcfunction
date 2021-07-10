@@ -13,6 +13,11 @@ execute if score GameLobby global matches 1 run function loumardes:scaffolding_r
 
 execute as @a unless score @s gameId = GameId global as @s run function loumardes:scaffolding_rush/join/main
 
+#villager placed
+execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={redPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
+execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
 
 #==Gameplay==
 #game logic
@@ -41,12 +46,6 @@ execute if score InstantPillar options matches 1 as @e[type=area_effect_cloud ,n
 
 #items
 execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/item/catch_drop
-
-#villager placed
-execute as @a[scores={bluePlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
-execute as @a[scores={greenPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
-execute as @a[scores={redPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
-execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush/villager/placed
 
 #player in teams
 execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0
