@@ -20,6 +20,6 @@ execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=
 #startbutton
 execute if score RemainingTeam global matches 2.. if block 0 5 7 minecraft:spruce_button[powered=true] run function loumardes:scaffolding_rush/game/countdown
 execute if score RemainingTeam global matches ..1 if block 0 5 7 minecraft:spruce_button[powered=true] run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Not enough teams","color":"red"}]
-execute if block 0 5 7 minecraft:spruce_button unless block 0 5 7 minecraft:spruce_button[powered=false] run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
+execute if block 0 5 7 minecraft:spruce_button unless block 0 5 7 minecraft:spruce_button[powered=true] run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
 
 execute as @a[scores={villagerClick=1..}] run function loumardes:scaffolding_rush/lobby/villager/kill
