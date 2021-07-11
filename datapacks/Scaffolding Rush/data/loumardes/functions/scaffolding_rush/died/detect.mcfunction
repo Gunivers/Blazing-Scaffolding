@@ -13,7 +13,6 @@ execute if entity @s[type=minecraft:player] run tellraw @a ["",{"text":"[SR] ","
 tag @s remove has_egg
 clear @s
 
-tp @s[gamemode=spectator] 0 ~ 0
 tag @s[gamemode=!spectator] add Respawning
 
 effect give @s[gamemode=!spectator] minecraft:slowness 1 9 true
@@ -23,9 +22,9 @@ title @a times 0 20 0
 title @s[gamemode=!spectator] title ["",{"text":"Respawning...","color":"red"}]
 
 scoreboard players set @s[gamemode=spectator] killed 0
-scoreboard players set @s[gamemode=!spectator] killed 20
+scoreboard players set @s[gamemode=!spectator] killed 5
 schedule function loumardes:scaffolding_rush/died/loop_tp 1t
 
 #Recup delay
-tag @s[gamemode=!spectator] add VillagerRecup
-schedule function loumardes:scaffolding_rush/villager/give/recup_delay 2s
+tag @s[gamemode=!spectator,tag=!has_egg] add VillagerRecup
+schedule function loumardes:scaffolding_rush/villager/give/recup_delay 1s

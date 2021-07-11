@@ -2,6 +2,8 @@ execute as @e[type=villager] run function loumardes:scaffolding_rush/clean_kill
 kill @e[type=!player]
 kill @e[type=!player]
 
+fill -90 0 -90 90 0 90 bedrock
+
 #summons the AEC indiquant la position de la lave
 execute unless entity @e[type=area_effect_cloud,name="ScR_LavaLevel"] run summon minecraft:area_effect_cloud 0 1 0 {Duration:2147483647, CustomName:'{"text":"ScR_LavaLevel"}'}
 
@@ -26,6 +28,7 @@ scoreboard objectives add global dummy
 scoreboard objectives add options dummy
 scoreboard objectives add YPlayer dummy
 scoreboard objectives add YVillager dummy
+scoreboard objectives add villagerClick minecraft.custom:minecraft.talked_to_villager
 scoreboard objectives add gameId dummy
 
 scoreboard objectives add killed deathCount
