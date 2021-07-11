@@ -8,11 +8,11 @@ execute store result score @s[scores={killed=0}] YEntity run data get entity @s 
 execute if score @s[scores={killed=0}] YEntity <= LavaLevel global unless entity @s[gamemode=spectator] unless score LavaLevel global matches 1 unless block ~-0.3 ~ ~-0.3 minecraft:scaffolding unless block ~-0.3 ~ ~0.3 minecraft:scaffolding unless block ~0.3 ~ ~-0.3 minecraft:scaffolding unless block ~0.3 ~ ~0.3 minecraft:scaffolding run scoreboard players add @s killed 1
 
 #Build Limit
-execute unless entity @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:2147483647, CustomName:'{"text":"ScR_BuildLimit"}'}
+execute unless entity @e[type=area_effect_cloud,name="ScR_BuildLimit",limit=1] run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:2147483647, CustomName:'{"text":"ScR_BuildLimit"}'}
 
-tp @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] ~ ~ ~
-scoreboard players operation @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] YEntity = LavaLevel global
-scoreboard players operation @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] YEntity += BuildHeight options
-execute as @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] store result entity @s Pos[1] double 1 run scoreboard players get @s YEntity
+tp @e[type=area_effect_cloud,name="ScR_BuildLimit",limit=1] ~ ~ ~
+scoreboard players operation @e[type=area_effect_cloud,name="ScR_BuildLimit",limit=1] YEntity = LavaLevel global
+scoreboard players operation @e[type=area_effect_cloud,name="ScR_BuildLimit",limit=1] YEntity += BuildHeight options
+execute as @e[type=area_effect_cloud,name="ScR_BuildLimit",limit=1] store result entity @s Pos[1] double 1 run scoreboard players get @s YEntity
 
-execute as @e[type=area_effect_cloud,name=ScR_BuildLimit,limit=1] at @s run fill ~-7 ~1 ~-7 ~7 ~5 ~7 air
+execute as @e[type=area_effect_cloud,name="ScR_BuildLimit",limit=1] at @s run fill ~-7 ~1 ~-7 ~7 ~5 ~7 air

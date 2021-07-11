@@ -120,7 +120,7 @@ gamerule mobGriefing true
 gamerule naturalRegeneration true
 gamerule randomTickSpeed 3
 gamerule reducedDebugInfo false
-gamerule sendCommandFeedback true
+gamerule sendCommandFeedback false
 gamerule showDeathMessages true
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
@@ -139,3 +139,4 @@ say [SR] reset done
 playsound ui.toast.out ambient @a
 #function loumardes:scaffolding_rush/lobby/load_lobby
 #teleport @a 0 3 0 0 0
+#gamerule sendCommandFeedback true
