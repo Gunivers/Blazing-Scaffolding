@@ -17,6 +17,7 @@ tag @s[gamemode=!spectator] add Respawning
 
 effect give @s[gamemode=!spectator] minecraft:slowness 1 9 true
 effect give @s[gamemode=!spectator] minecraft:invisibility 1 1 true
+effect give @s[gamemode=!spectator] minecraft:weakness 1 1 true
 
 title @a times 0 10 0
 title @s[gamemode=!spectator] title ["",{"text":"Respawning...","color":"red"}]
