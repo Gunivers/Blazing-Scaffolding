@@ -32,6 +32,7 @@ function loumardes:scaffolding_rush/options/labels
 
 tag @a remove has_egg
 tag @a remove VillagerRecup
+tag @a remove Respawning
 
 gamemode survival @a
 clear @a
