@@ -18,6 +18,7 @@ schedule clear loumardes:scaffolding_rush/broadcast/3s
 schedule clear loumardes:scaffolding_rush/broadcast/2s
 schedule clear loumardes:scaffolding_rush/broadcast/1s
 schedule clear loumardes:scaffolding_rush/game/start
+schedule clear loumardes:scaffolding_rush/lava/sound
 
 scoreboard players set LavaLevel global 2
 scoreboard players set GameLobby global 1
