@@ -1,4 +1,4 @@
-setblock 0 2 0 minecraft:structure_block[mode=load]{mode:"LOAD",posX:-14,posY:0,posZ:-7,sizeX:32,sizeY:17,sizeZ:29,name:"loumardes:scaffolding_rush/lobby"}
+setblock 0 2 0 minecraft:structure_block[mode=load]{mode:"LOAD",posX:-20,posY:0,posZ:-14,name:"loumardes:scaffolding_rush/lobby"}
 setblock 0 3 0 minecraft:redstone_block
 
 summon area_effect_cloud -4.0 4 2.0 {CustomName:'{"text":"Join Blue","color":"blue"}',Tags:["lobbyText"],CustomNameVisible: 1,Age: -2147483648, Duration: -1, WaitTime: -2147483648}
