@@ -1,5 +1,5 @@
 give @s minecraft:scaffolding
-give @s minecraft:gravel{HideFlags:24,CanPlaceOn:["minecraft:scaffolding","#loumardes:notowerlobby"],CanDestroy:["minecraft:scaffolding","#loumardes:lobby","#loumardes:tower"]}
+execute if score UseGravel options matches 1.. run loot give @s loot loumardes:lobby_gravel
 execute if score UseSnowball options matches 1.. run give @s minecraft:snowball
 
 function loumardes:scaffolding_rush/lobby/give_book
