@@ -47,6 +47,9 @@ execute if score InstantPillar options matches 1 as @e[type=area_effect_cloud ,n
 #items
 execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/item/catch_drop
 
+#snowball
+execute as @e[type=snowball,tag=!t] at @s run function loumardes:scaffolding_rush/item/snowball
+
 #player in teams
 execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0
 

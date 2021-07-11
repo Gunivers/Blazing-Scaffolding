@@ -29,6 +29,7 @@ scoreboard objectives add options dummy
 scoreboard objectives add YPlayer dummy
 scoreboard objectives add YVillager dummy
 scoreboard objectives add villagerClick minecraft.custom:minecraft.talked_to_villager
+scoreboard objectives add usedSnowball minecraft.used:minecraft.snowball
 scoreboard objectives add gameId dummy
 
 scoreboard objectives add killed deathCount
@@ -134,7 +135,7 @@ execute unless entity @e[type=area_effect_cloud,name="✖"] run summon minecraft
 #debug / à changer
 #say [SR] init done (reset in progress)
 playsound ui.toast.in ambient @a
-function loumardes:scaffolding_rush/reset
+#function loumardes:scaffolding_rush/reset
 say [SR] reset done
 playsound ui.toast.out ambient @a
 #function loumardes:scaffolding_rush/lobby/load_lobby
