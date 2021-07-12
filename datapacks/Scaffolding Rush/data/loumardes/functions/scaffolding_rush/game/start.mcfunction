@@ -14,5 +14,4 @@ execute as @a[team=yellow,gamemode=!spectator,sort=random,limit=1] run function 
 execute as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function loumardes:scaffolding_rush/villager/give/green
 
 function loumardes:scaffolding_rush/broadcast/start
-execute as @e[type=area_effect_cloud,name="ScR_BuildLimit"] at @s run function loumardes:scaffolding_rush/game/build_limit
 function loumardes:scaffolding_rush/lava/sound

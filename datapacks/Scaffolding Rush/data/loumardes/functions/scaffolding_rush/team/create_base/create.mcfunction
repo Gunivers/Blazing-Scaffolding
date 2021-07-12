@@ -23,3 +23,4 @@ execute at @e[tag=baseTeam,name="Yellow",limit=1] run teleport @a[team=yellow] ~
 
 kill @e[tag=baseTeam]
 execute as @a run function loumardes:scaffolding_rush/lobby/base_egg/clear_egg
+execute as @e[type=area_effect_cloud,name="ScR_BuildLimit"] at @s run function loumardes:scaffolding_rush/game/build_limit
