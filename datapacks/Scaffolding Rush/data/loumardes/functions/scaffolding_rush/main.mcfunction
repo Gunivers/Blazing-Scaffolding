@@ -49,6 +49,7 @@ execute as @e[type=item,tag=!processed] run function loumardes:scaffolding_rush/
 
 #snowball
 execute as @e[type=snowball,tag=!t] at @s run function loumardes:scaffolding_rush/item/snowball
+kill @e[type=arrow,nbt={inGround: 1b}]
 
 #player in teams
 execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0

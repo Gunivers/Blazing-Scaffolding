@@ -16,6 +16,9 @@ function loumardes:scaffolding_rush/broadcast/10s
 schedule function loumardes:scaffolding_rush/clear/launch 2s
 
 kill @e[tag=lobbyText]
+kill @e[type=falling_block]
+kill @e[type=arrow]
+kill @e[type=item]
 gamemode spectator @a[team=]
 
 schedule function loumardes:scaffolding_rush/team/create_base/create 4s
