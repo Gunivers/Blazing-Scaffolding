@@ -1,4 +1,4 @@
-execute as @a[nbt=!{ActiveEffects:[{Id:23b}]}] run effect give @a minecraft:saturation 999999 1 true
+effect give @a minecraft:saturation 999999 1 true
 
 #flip the options value
 function loumardes:scaffolding_rush/options/any
