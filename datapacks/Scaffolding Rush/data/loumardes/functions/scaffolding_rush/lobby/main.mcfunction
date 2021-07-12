@@ -8,7 +8,7 @@ execute as @a[team=!blue] at @e[name="Join Blue"] as @s[distance=..1.5] run func
 execute as @a[team=!green] at @e[name="Join Green"] as @s[distance=..1.5] run function loumardes:scaffolding_rush/team/join/green
 execute as @a[team=!red] at @e[name="Join Red"] as @s[distance=..1.5,team=!red] run function loumardes:scaffolding_rush/team/join/red
 execute as @a[team=!yellow] at @e[name="Join Yellow"] as @s[distance=..1.5] run function loumardes:scaffolding_rush/team/join/yellow
-execute as @a[team=!] at @e[name="Spectate"] as @a[distance=..1.5] run function loumardes:scaffolding_rush/team/leave
+execute as @a[team=!] at @e[name="Spectate"] as @s[distance=..1.5] run function loumardes:scaffolding_rush/team/leave
 
 #base
 execute if score TeamEgg options matches 1 run function loumardes:scaffolding_rush/team/base_egg/give
