@@ -11,7 +11,7 @@ execute as @a[team=!yellow] at @e[name="Join Yellow"] as @s[distance=..1.5] run 
 execute as @a[team=!] at @e[name="Spectate"] as @s[distance=..1.5] run function loumardes:scaffolding_rush/team/leave
 
 #base
-execute if score TeamEgg options matches 1 run function loumardes:scaffolding_rush/team/base_egg/give
+execute if score TeamEgg options matches 1 run function loumardes:scaffolding_rush/lobby/base_egg/give
 
 #howtoplay
 execute as @e[name="How to play"] at @s as @a[distance=..3,tag=!howtoplay] run function loumardes:scaffolding_rush/lobby/how_to_play
