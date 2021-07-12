@@ -23,5 +23,5 @@ execute if score RemainingTeam global matches ..1 if block 0 5 7 minecraft:spruc
 execute unless block 0 5 7 minecraft:cave_air unless block 0 5 7 minecraft:spruce_button[powered=false] run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
 
 #button place base
-execute positioned 0 6 7 run kill @e[type=minecraft:armor_stand]
+execute positioned 0 6 7 run kill @e[type=minecraft:armor_stand,distance=..1]
 advancement revoke @a everything
