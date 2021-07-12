@@ -41,8 +41,3 @@ execute as @a[team=yellow,tag=!has_egg] at @s as @e[type=minecraft:villager,limi
 execute as @a[team=yellow,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=yellow] run tag @p remove VillagerRecup2
 
 execute as @a[tag=has_egg,nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:slime_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:blaze_spawn_egg"}]}] run function loumardes:scaffolding_rush/villager/give/any
-
-execute as @a[team=blue] facing entity @e[type=minecraft:villager,team=blue] eyes run effect give @s minecraft:weakness 1 1 true
-execute as @a[team=red] facing entity @e[type=minecraft:villager,team=red] eyes run effect give @s minecraft:weakness 1 1 true
-execute as @a[team=green] facing entity @e[type=minecraft:villager,team=green] eyes run effect give @s minecraft:weakness 1 1 true
-execute as @a[team=yellow] facing entity @e[type=minecraft:villager,team=yellow] eyes run effect give @s minecraft:weakness 1 1 true
