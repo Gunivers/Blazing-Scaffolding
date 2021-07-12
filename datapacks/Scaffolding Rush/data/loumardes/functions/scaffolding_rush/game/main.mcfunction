@@ -44,4 +44,4 @@ execute as @a[team=yellow,tag=!has_egg] at @s as @e[type=minecraft:villager,limi
 
 execute as @a[tag=has_egg,nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:slime_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:blaze_spawn_egg"}]}] run function loumardes:scaffolding_rush/villager/give/any
 
-execute as @a[gamemode=!spectator] run function loumardes:scaffolding_rush/game/build_limit
+execute as @a[gamemode=!spectator] at @s run function loumardes:scaffolding_rush/game/build_limit
