@@ -6,9 +6,6 @@ fill -90 0 -90 90 0 90 bedrock
 
 #summons the AEC indiquant la position de la lave
 execute unless entity @e[type=area_effect_cloud,name="ScR_LavaLevel"] run summon minecraft:area_effect_cloud 0 1 0 {Duration:2147483647, CustomName:'{"text":"ScR_LavaLevel"}'}
-#create a marker entity 
-execute unless entity @e[type=area_effect_cloud,name="ScR_BuildLimit",limit=1] run summon minecraft:area_effect_cloud 0 0 0 {Duration:2147483647, CustomName:'{"text":"ScR_BuildLimit"}'}
-
 
 #trigger controls
 scoreboard objectives add StartGame trigger
