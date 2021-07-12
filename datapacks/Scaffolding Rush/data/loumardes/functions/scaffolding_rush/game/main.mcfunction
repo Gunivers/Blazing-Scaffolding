@@ -32,16 +32,6 @@ execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s
 
 execute if score GameEnd global matches 0 if score RemainingTeam global matches ..1 run function loumardes:scaffolding_rush/game/finish
 
-#Ennemi villager interraction
-execute as @a[team=blue,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=!blue] run tag @p add VillagerRecup2
-execute as @a[team=blue,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=blue] run tag @p remove VillagerRecup2
-execute as @a[team=red,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=!red] run tag @p add VillagerRecup2
-execute as @a[team=red,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=red] run tag @p remove VillagerRecup2
-execute as @a[team=green,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=!green] run tag @p add VillagerRecup2
-execute as @a[team=green,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=green] run tag @p remove VillagerRecup2
-execute as @a[team=yellow,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=!yellow] run tag @p add VillagerRecup2
-execute as @a[team=yellow,tag=!has_egg] at @s as @e[type=minecraft:villager,limit=1,sort=nearest] if entity @s[team=yellow] run tag @p remove VillagerRecup2
-
 execute as @a[tag=has_egg,nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:slime_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:blaze_spawn_egg"}]}] run function loumardes:scaffolding_rush/villager/give/any
 
 execute as @a[gamemode=!spectator] at @s run function loumardes:scaffolding_rush/game/build_limit

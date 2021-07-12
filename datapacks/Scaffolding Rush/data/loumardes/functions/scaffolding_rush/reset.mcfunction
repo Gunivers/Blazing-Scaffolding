@@ -22,6 +22,11 @@ scoreboard players set GameEnd global 0
 scoreboard players set GameRunning global 0
 scoreboard players set GameLoading global 0
 
+team modify blue seeFriendlyInvisibles false
+team modify green seeFriendlyInvisibles false
+team modify red seeFriendlyInvisibles false
+team modify yellow seeFriendlyInvisibles false
+
 scoreboard players add GameId global 1
 scoreboard players operation @a gameId = GameId global
 
