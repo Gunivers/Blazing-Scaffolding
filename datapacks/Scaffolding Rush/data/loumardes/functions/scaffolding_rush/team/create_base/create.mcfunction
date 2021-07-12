@@ -1,14 +1,13 @@
-execute store result score worldborder global run worldborder get
 execute if entity @a[team=blue] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Blue"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Blue"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
 execute if entity @a[team=green] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Green"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Green"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
 execute if entity @a[team=red] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Red"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Red"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
 execute if entity @a[team=yellow] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Yellow"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Yellow"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
 
-execute positioned 0 0 0 if score worldborder global matches 15..19 run spreadplayers 0 0 5 7 false @e[type=minecraft:armor_stand,tag=spread]
-execute positioned 0 0 0 if score worldborder global matches 20..34 run spreadplayers 0 0 7 10 false @e[type=minecraft:armor_stand,tag=spread]
-execute positioned 0 0 0 if score worldborder global matches 35..79 run spreadplayers 0 0 14 17 false @e[type=minecraft:armor_stand,tag=spread]
-execute positioned 0 0 0 if score worldborder global matches 80..119 run spreadplayers 0 0 35 40 false @e[type=minecraft:armor_stand,tag=spread]
-execute positioned 0 0 0 if score worldborder global matches 120..165 run spreadplayers 0 0 55 60 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score WBSize global matches 15..19 run spreadplayers 0 0 5 7 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score WBSize global matches 20..34 run spreadplayers 0 0 7 10 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score WBSize global matches 35..79 run spreadplayers 0 0 14 17 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score WBSize global matches 80..119 run spreadplayers 0 0 35 40 false @e[type=minecraft:armor_stand,tag=spread]
+execute positioned 0 0 0 if score WBSize global matches 120..165 run spreadplayers 0 0 55 60 false @e[type=minecraft:armor_stand,tag=spread]
 
 execute as @e[tag=baseTeam] at @s run function loumardes:scaffolding_rush/team/create_base/load_structure
 

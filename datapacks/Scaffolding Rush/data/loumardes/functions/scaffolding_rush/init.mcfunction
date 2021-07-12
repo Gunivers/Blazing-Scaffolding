@@ -41,7 +41,7 @@ scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 scoreboard players set #20 global 20
 scoreboard players set #10 global 10
 
-execute unless score GameId options matches 0.. run scoreboard players set GameId options 0
+execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
 
 
 #Configuration scores
@@ -55,7 +55,7 @@ execute unless score UseGravel options matches 0.. run scoreboard players set Us
 execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
 
 execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
-execute unless score TeamEgg options matches 0.. run scoreboard players set score options 0
+execute unless score TeamEgg options matches 0.. run scoreboard players set TeamEgg options 0
 
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
 execute unless score WBSize options matches 15..165 run scoreboard players set WBSize options 95
