@@ -8,6 +8,6 @@
       }
     },
     "rewards": {
-      "function": "loumardes:scaffolding_rush/build_limit"
+      "function": "loumardes:scaffolding_rush/game/check"
     }
 }
