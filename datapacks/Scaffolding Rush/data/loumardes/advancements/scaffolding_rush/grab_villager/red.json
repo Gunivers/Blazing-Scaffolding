@@ -15,7 +15,7 @@
         }
       },
       "rewards": {
-        "function": "loumardes:scaffolding_rush/game/check"
+        "function": "loumardes:scaffolding_rush/villager/give/red"
       }
     }
 }
