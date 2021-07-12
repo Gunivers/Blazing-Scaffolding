@@ -1,8 +1,7 @@
-effect give @a minecraft:saturation 999999 1 true
+execute as @a[nbt=!{ActiveEffects:[{Id:23b}]}] run effect give @a minecraft:saturation 999999 1 true
 
 #flip the options value
 function loumardes:scaffolding_rush/options/any
-scoreboard players enable @a Reset
 
 execute if entity @a[scores={StartGame=1..}] run function loumardes:scaffolding_rush/game/countdown
 execute if entity @a[scores={Reset=1..}] run function loumardes:scaffolding_rush/reset
