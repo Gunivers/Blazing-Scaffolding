@@ -8,6 +8,7 @@ gamemode survival @a[team=!]
 #give items
 give @a[team=!] scaffolding
 execute if score UseGravel options matches 1 as @a run loot give @s loot loumardes:gravel
+execute if score UseSnowball options matches 1 run give @a snowball
 
 execute as @a[team=blue,gamemode=!spectator,sort=random,limit=1] run function loumardes:scaffolding_rush/villager/give/blue
 execute as @a[team=red,gamemode=!spectator,sort=random,limit=1] run function loumardes:scaffolding_rush/villager/give/red
