@@ -1,5 +1,4 @@
 gamemode adventure @a[team=!]
-execute as @e[type=area_effect_cloud,name="ScR_BuildLimit"] at @s run function loumardes:scaffolding_rush/game/build_limit
 
 clear @a
 scoreboard players set GameLobby global 0
