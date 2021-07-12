@@ -15,3 +15,8 @@ execute as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function l
 
 function loumardes:scaffolding_rush/broadcast/start
 function loumardes:scaffolding_rush/lava/sound
+
+team modify blue seeFriendlyInvisibles true
+team modify green seeFriendlyInvisibles true
+team modify red seeFriendlyInvisibles true
+team modify yellow seeFriendlyInvisibles true
