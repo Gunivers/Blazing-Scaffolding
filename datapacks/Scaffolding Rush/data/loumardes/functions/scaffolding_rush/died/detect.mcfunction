@@ -28,4 +28,4 @@ execute as @s[gamemode=!spectator] run schedule function loumardes:scaffolding_r
 
 #Recup delay
 tag @s[gamemode=!spectator,tag=!has_egg] add VillagerRecup
-schedule function loumardes:scaffolding_rush/villager/give/recup_delay 1s
+schedule function loumardes:scaffolding_rush/villager/give/recup_delay 2s
