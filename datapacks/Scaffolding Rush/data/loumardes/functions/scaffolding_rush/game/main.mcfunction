@@ -32,3 +32,8 @@ execute if score GameEnd global matches 0 if score RemainingTeam global matches 
 execute as @a[tag=has_egg,nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:slime_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory:[{id:"minecraft:blaze_spawn_egg"}]}] run function loumardes:scaffolding_rush/villager/give/any
 
 execute as @a[gamemode=!spectator] at @s run function loumardes:scaffolding_rush/game/build_limit
+
+execute as @a[team=bleu,gamemode=spectator,tag=!TeamEliminated] unless entity @a[team=blue,gamemode=!spectator] run function loumardes:scaffolding_rush/game/elimination/blue
+execute as @a[team=red,gamemode=spectator,tag=!TeamEliminated] unless entity @a[team=red,gamemode=!spectator] run function loumardes:scaffolding_rush/game/elimination/red
+execute as @a[team=green,gamemode=spectator,tag=!TeamEliminated] unless entity @a[team=green,gamemode=!spectator] run function loumardes:scaffolding_rush/game/elimination/green
+execute as @a[team=yellow,gamemode=spectator,tag=!TeamEliminated] unless entity @a[team=yellow,gamemode=!spectator] run function loumardes:scaffolding_rush/game/elimination/yellow
