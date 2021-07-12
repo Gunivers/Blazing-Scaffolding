@@ -2,7 +2,6 @@ scoreboard players set GameRunning global 1
 scoreboard players set GameLoading global 0
 scoreboard players set LavaCountdown global 0
 scoreboard players set @a killed 0
-kill @e[type=!minecraft:player]
 clear @a
 
 gamemode survival @a[team=!]
