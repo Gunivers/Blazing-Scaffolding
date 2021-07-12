@@ -7,3 +7,4 @@ execute if entity @s[name="Red"] run fill ~-2 2 ~-2 ~2 6 ~2 red_concrete_powder 
 execute if entity @s[name="Yellow"] run fill ~-2 2 ~-2 ~2 6 ~2 yellow_concrete_powder replace light_gray_concrete_powder
 
 fill -90 1 -90 90 1 90 magma_block
+execute as @e[type=area_effect_cloud,name="ScR_BuildLimit"] at @s run function loumardes:scaffolding_rush/game/build_limit
