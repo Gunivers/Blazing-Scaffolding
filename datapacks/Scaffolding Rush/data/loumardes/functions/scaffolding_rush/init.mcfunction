@@ -26,9 +26,9 @@ scoreboard objectives add opt_wb_size_add trigger
 #internal values
 scoreboard objectives add global dummy
 scoreboard objectives add options dummy
-scoreboard objectives add YPlayer dummy
-scoreboard objectives add YVillager dummy
+scoreboard objectives add YEntity dummy
 scoreboard objectives add villagerClick minecraft.custom:minecraft.talked_to_villager
+scoreboard objectives add usedSnowball minecraft.used:minecraft.snowball
 scoreboard objectives add gameId dummy
 
 scoreboard objectives add killed deathCount
@@ -120,7 +120,7 @@ gamerule mobGriefing true
 gamerule naturalRegeneration true
 gamerule randomTickSpeed 3
 gamerule reducedDebugInfo false
-gamerule sendCommandFeedback true
+gamerule sendCommandFeedback false
 gamerule showDeathMessages true
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
@@ -139,3 +139,4 @@ say [SR] reset done
 playsound ui.toast.out ambient @a
 #function loumardes:scaffolding_rush/lobby/load_lobby
 #teleport @a 0 3 0 0 0
+#gamerule sendCommandFeedback true

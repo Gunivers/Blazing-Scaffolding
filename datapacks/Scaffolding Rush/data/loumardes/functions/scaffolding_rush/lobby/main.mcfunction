@@ -1,7 +1,7 @@
 #speed
-execute as @a store result score @s global run data get entity @s Pos[1]
-execute as @a if score @s global matches ..2 run effect give @s minecraft:speed 1 2 true
-execute as @a if score @s global matches 4.. run effect clear @s minecraft:speed
+execute as @a store result score @s YEntity run data get entity @s Pos[1]
+execute as @a if score @s YEntity matches ..2 run effect give @s minecraft:speed 1 2 true
+execute as @a if score @s YEntity matches 4.. run effect clear @s minecraft:speed
 
 #team join lobby
 execute at @e[name="Join Blue"] as @a[distance=..1.5,team=!blue] run function loumardes:scaffolding_rush/team/join/blue

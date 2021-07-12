@@ -24,6 +24,9 @@ scoreboard players set GameEnd global 0
 scoreboard players set GameRunning global 0
 scoreboard players set GameLoading global 0
 
+scoreboard players add GameId global 1
+scoreboard players operation @a gameId = GameId global
+
 function loumardes:scaffolding_rush/options/activate_all
 scoreboard players enable @a StartGame
 

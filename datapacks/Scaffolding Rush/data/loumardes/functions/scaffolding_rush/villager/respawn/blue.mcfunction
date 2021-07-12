@@ -2,5 +2,5 @@ execute as @a[team=blue] run function loumardes:scaffolding_rush/villager/respaw
 
 scoreboard players operation BlueVillagerRespawn global = VillagerRespawnTics global
 
-execute as @a[team=blue] run function loumardes:scaffolding_rush/villager/respawn/egg_counter/give
-execute as @a[team=blue] run schedule function loumardes:scaffolding_rush/villager/respawn/egg_counter/blue 1s
+execute if score VillagerForgiveness options matches 1 as @a[team=blue] run function loumardes:scaffolding_rush/villager/respawn/egg_counter/give
+execute if score VillagerForgiveness options matches 1 as @a[team=blue] run schedule function loumardes:scaffolding_rush/villager/respawn/egg_counter/blue 1s
