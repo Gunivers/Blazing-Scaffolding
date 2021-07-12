@@ -20,7 +20,7 @@ execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush
 
 #==Gameplay==
 #game logic
-execute if score GameRunning global matches 1 run function loumardes:scaffolding_rush/game/maxCommandChainLength
+execute if score GameRunning global matches 1 run function loumardes:scaffolding_rush/game/main
 
 #gravel tower
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:blue_concrete_powder"}}] run gamemode adventure
