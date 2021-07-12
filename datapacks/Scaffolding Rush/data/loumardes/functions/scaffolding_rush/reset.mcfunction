@@ -53,3 +53,5 @@ scoreboard players set @a StartGame 0
 scoreboard players enable @a StartGame
 scoreboard players set @a Reset 0
 scoreboard players enable @a Reset
+
+tag @a remove TeamEliminated
