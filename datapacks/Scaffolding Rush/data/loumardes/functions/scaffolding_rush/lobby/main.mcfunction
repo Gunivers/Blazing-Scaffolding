@@ -24,3 +24,4 @@ execute unless block 0 5 7 minecraft:cave_air unless block 0 5 7 minecraft:spruc
 
 #button place base
 execute positioned 0 6 7 run kill @e[type=minecraft:armor_stand]
+advancement revoke @a everything

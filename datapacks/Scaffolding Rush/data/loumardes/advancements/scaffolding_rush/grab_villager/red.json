@@ -19,7 +19,7 @@
     }
   },
     "rewards": {
-      "function": "loumardes:scaffolding_rush/villager/talked_to/red"
+      "function": "loumardes:scaffolding_rush/villager/talked_to"
     }
   }
   
