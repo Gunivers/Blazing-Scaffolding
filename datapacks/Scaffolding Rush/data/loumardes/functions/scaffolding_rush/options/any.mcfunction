@@ -1,3 +1,4 @@
+execute as @a[scores={opt_preset=1..}] run function loumardes:scaffolding_rush/options/preset
 execute if entity @a[scores={opt_build_height=1..}] run function loumardes:scaffolding_rush/options/build_height
 execute if entity @a[scores={opt_gravel=1..}] run function loumardes:scaffolding_rush/options/gravel
 execute if entity @a[scores={opt_instant_pil=1..}] run function loumardes:scaffolding_rush/options/instant_pillar

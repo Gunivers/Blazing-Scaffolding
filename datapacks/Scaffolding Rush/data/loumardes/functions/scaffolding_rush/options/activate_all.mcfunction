@@ -1,3 +1,4 @@
+scoreboard players enable @a opt_preset
 scoreboard players enable @a opt_lava_speed
 scoreboard players enable @a opt_build_height
 scoreboard players enable @a opt_gravel
