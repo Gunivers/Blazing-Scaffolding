@@ -13,9 +13,9 @@
             }
           ]
         }
-      },
-      "rewards": {
-        "function": "loumardes:scaffolding_rush/villager/give/green"
       }
+    },
+    "rewards": {
+      "function": "loumardes:scaffolding_rush/villager/talked_to/green"
     }
 }
