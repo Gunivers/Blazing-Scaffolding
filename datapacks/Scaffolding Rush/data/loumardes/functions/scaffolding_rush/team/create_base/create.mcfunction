@@ -22,4 +22,4 @@ execute at @e[tag=baseTeam,name="Red",limit=1] run teleport @a[team=red] ~ 4 ~
 execute at @e[tag=baseTeam,name="Yellow",limit=1] run teleport @a[team=yellow] ~ 4 ~
 
 kill @e[tag=baseTeam]
-execute as @a run function loumardes:scaffolding_rush/team/base_egg/clear_egg
+execute as @a run function loumardes:scaffolding_rush/lobby/base_egg/clear_egg
