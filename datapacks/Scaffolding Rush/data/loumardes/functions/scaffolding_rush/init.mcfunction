@@ -29,7 +29,6 @@ scoreboard objectives add opt_wb_size_add trigger
 scoreboard objectives add global dummy
 scoreboard objectives add options dummy
 scoreboard objectives add YEntity dummy
-scoreboard objectives add villagerClick minecraft.custom:minecraft.talked_to_villager
 scoreboard objectives add usedSnowball minecraft.used:minecraft.snowball
 scoreboard objectives add gameId dummy
 

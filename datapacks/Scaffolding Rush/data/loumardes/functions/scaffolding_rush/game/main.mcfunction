@@ -18,9 +18,6 @@ function loumardes:scaffolding_rush/villager/respawn/villager_loss_detection
 #respawn dead players
 execute as @e[scores={killed=1..},tag=!Respawning] run function loumardes:scaffolding_rush/died/detect
 
-#move villagers
-execute as @a[scores={villagerClick=1..}] at @s run function loumardes:scaffolding_rush/villager/give/any
-
 #warn villagers height
 function loumardes:scaffolding_rush/villager/warn
 
