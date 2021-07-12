@@ -15,3 +15,4 @@ execute as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function l
 
 function loumardes:scaffolding_rush/broadcast/start
 function loumardes:scaffolding_rush/lava/sound
+execute as @e[type=area_effect_cloud,name="ScR_BuildLimit"] at @s run function loumardes:scaffolding_rush/game/build_limit
