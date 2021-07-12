@@ -23,6 +23,13 @@ execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush
 execute if score GameRunning global matches 1 run function loumardes:scaffolding_rush/game/main
 
 #gravel tower
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:gravel",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:blue_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:lime_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:red_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:yellow_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:ghast_spawn_egg",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:blue_concrete_powder"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:lime_concrete_powder"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:red_concrete_powder"}}] run gamemode adventure
