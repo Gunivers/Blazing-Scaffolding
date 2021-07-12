@@ -1,4 +1,3 @@
-scoreboard players enable @a StartGame
 
 execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
@@ -44,3 +43,8 @@ spawnpoint @s 0 4 0
 advancement revoke @a from loumardes:replenish
 
 function loumardes:scaffolding_rush/lobby/load_lobby
+
+scoreboard players set @a StartGame 0
+scoreboard players enable @a StartGame
+scoreboard players set @a Reset 0
+scoreboard players enable @a Reset
