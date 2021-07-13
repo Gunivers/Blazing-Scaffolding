@@ -11,11 +11,15 @@ scoreboard players reset @a StartGame
 
 setblock 0 5 7 cave_air
 
+execute if score Random options matches 1 run function loumardes:scaffolding_rush/team/join/random
+
 function loumardes:scaffolding_rush/broadcast/10s
 
 schedule function loumardes:scaffolding_rush/clear/launch 2s
 
 kill @e[tag=lobbyText]
+kill @e[tag=lobbyTeam]
+kill @e[tag=lobbyrandom]
 kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]

@@ -5,8 +5,6 @@ scoreboard players set LavaCountdown global 0
 scoreboard players set @a killed 0
 clear @a
 
-execute if score Random options matches 1 run function loumardes:scaffolding_rush/team/join/random
-
 gamemode survival @a[team=!]
 #give items
 execute as @a[team=!] run function loumardes:scaffolding_rush/game/give_items
