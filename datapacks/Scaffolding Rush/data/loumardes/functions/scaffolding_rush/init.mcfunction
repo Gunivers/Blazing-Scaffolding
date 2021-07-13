@@ -69,20 +69,24 @@ team add red
 team add blue
 team add yellow
 team add green
+team add random
 
 team modify red color red
 team modify blue color blue
 team modify yellow color yellow
 team modify green color green
+team modify random color dark_purple
 
 team modify red collisionRule never
 team modify blue collisionRule never
 team modify yellow collisionRule never
 team modify green collisionRule never
+team modify random collisionRule never
 team modify red friendlyFire false
 team modify blue friendlyFire false
 team modify yellow friendlyFire false
 team modify green friendlyFire false
+team modify random friendlyFire false
 
 #worldborder
 worldborder warning distance 1
