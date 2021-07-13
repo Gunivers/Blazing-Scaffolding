@@ -12,4 +12,4 @@ execute as @a[scores={opt_vil_respawn=1..}] run function loumardes:scaffolding_r
 execute as @a[scores={opt_wb_size_add=1..}] run function loumardes:scaffolding_rush/options/wb_size_add
 execute as @a[scores={opt_wb_size_add=..-1}] run function loumardes:scaffolding_rush/options/wb_size_add
 execute as @a[scores={opt_randomteam=1..}] run function loumardes:scaffolding_rush/options/random_team
-execute as @a[scores={opt_team_number=1..}] run function loumardes:scaffolding_rush/options/random_team
+execute as @a[scores={opt_team_number=1..}] run function loumardes:scaffolding_rush/options/team_number
