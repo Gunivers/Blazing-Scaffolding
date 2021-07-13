@@ -12,6 +12,9 @@ execute as @e[type=villager] at @s run function loumardes:scaffolding_rush/lava/
 
 execute as @e[type=area_effect_cloud,name="ScR_LavaLevel",limit=1] run particle lava ~ ~ ~ 160 0 160 1 20 normal
 
+#bossbar
+execute store result bossbar filling_lava value run scoreboard players get LavaCountdown global
+
 #villager egg respawn
 function loumardes:scaffolding_rush/villager/respawn/villager_loss_detection
 

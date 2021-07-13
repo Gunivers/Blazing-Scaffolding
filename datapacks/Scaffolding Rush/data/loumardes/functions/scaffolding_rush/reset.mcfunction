@@ -56,3 +56,6 @@ scoreboard players set @a Reset 0
 scoreboard players enable @a Reset
 
 tag @a remove TeamEliminated
+
+#Bossbar
+bossbar set minecraft:filling_lava visible false
