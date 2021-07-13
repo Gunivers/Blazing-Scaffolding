@@ -25,6 +25,7 @@ scoreboard objectives add opt_perf_mode trigger
 scoreboard objectives add opt_team_egg trigger
 scoreboard objectives add opt_wb_size_add trigger
 scoreboard objectives add opt_randomteam trigger
+scoreboard objectives add opt_team_number trigger
 
 #internal values
 scoreboard objectives add global dummy
