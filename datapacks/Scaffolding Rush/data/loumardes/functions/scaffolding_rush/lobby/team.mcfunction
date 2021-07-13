@@ -1,7 +1,6 @@
 kill @e[type=minecraft:area_effect_cloud,tag=lobbyRandom]
 execute if score TeamNumber options matches 3.. run kill @e[type=minecraft:area_effect_cloud,tag=lobbyRandom,tag=3]
 execute if score TeamNumber options matches 4.. run kill @e[type=minecraft:area_effect_cloud,tag=lobbyRandom,tag=4]
-team leave @a
 
 fill -3 3 -2 -2 3 -3 minecraft:light_gray_concrete_powder
 fill -3 3 6 -4 3 5 minecraft:red_concrete_powder

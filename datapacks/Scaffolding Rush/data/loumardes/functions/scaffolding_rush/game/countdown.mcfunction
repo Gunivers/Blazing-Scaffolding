@@ -19,7 +19,7 @@ schedule function loumardes:scaffolding_rush/clear/launch 2s
 
 kill @e[tag=lobbyText]
 kill @e[tag=lobbyTeam]
-kill @e[tag=lobbyrandom]
+kill @e[tag=lobbyRandom]
 kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]
