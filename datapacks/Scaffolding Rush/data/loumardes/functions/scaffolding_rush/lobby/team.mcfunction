@@ -1,4 +1,6 @@
 kill @e[type=minecraft:area_effect_cloud,tag=lobbyText]
+team leave @a
+
 setblock 0 2 0 minecraft:structure_block[mode=load]{mode:"LOAD",posX:-20,posY:0,posZ:-14,name:"loumardes:scaffolding_rush/lobby"}
 setblock 0 3 0 minecraft:redstone_block
 

@@ -9,7 +9,7 @@ execute as @a[team=!green] at @e[type=minecraft:area_effect_cloud,name="Join Gre
 execute as @a[team=!red] at @e[type=minecraft:area_effect_cloud,name="Join Red"] as @s[distance=..1.5,team=!red] run function loumardes:scaffolding_rush/team/join/red
 execute as @a[team=!yellow] at @e[type=minecraft:area_effect_cloud,name="Join Yellow"] as @s[distance=..1.5] run function loumardes:scaffolding_rush/team/join/yellow
 execute as @a[team=!] at @e[type=minecraft:area_effect_cloud,name="Spectate"] as @s[distance=..1.5] run function loumardes:scaffolding_rush/team/leave
-execute as @a at @e[type=minecraft:area_effect_cloud,name="Join Game"] as @s[distance=..1.5] run function loumardes:scaffolding_rush/team/leave
+execute as @a[team=!random] at @e[type=minecraft:area_effect_cloud,name="Join Game"] as @s[distance=..1.5] run function loumardes:scaffolding_rush/team/random
 
 #base
 execute if score TeamEgg options matches 1 run function loumardes:scaffolding_rush/lobby/base_egg/give
