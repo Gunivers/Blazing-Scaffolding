@@ -27,6 +27,8 @@ scoreboard objectives add opt_wb_size_add trigger
 scoreboard objectives add opt_regen trigger
 scoreboard objectives add opt_fall_damage trigger
 
+scoreboard objectives add opt_randomteam trigger
+scoreboard objectives add opt_team_number trigger
 
 #internal values
 scoreboard objectives add global dummy
@@ -74,20 +76,24 @@ team add red
 team add blue
 team add yellow
 team add green
+team add random
 
 team modify red color red
 team modify blue color blue
 team modify yellow color yellow
 team modify green color green
+team modify random color dark_purple
 
 team modify red collisionRule never
 team modify blue collisionRule never
 team modify yellow collisionRule never
 team modify green collisionRule never
+team modify random collisionRule never
 team modify red friendlyFire false
 team modify blue friendlyFire false
 team modify yellow friendlyFire false
 team modify green friendlyFire false
+team modify random friendlyFire false
 
 #worldborder
 worldborder warning distance 1
@@ -144,6 +150,5 @@ playsound ui.toast.in ambient @a
 function loumardes:scaffolding_rush/reset
 say [SR] reset done
 playsound ui.toast.out ambient @a
-#function loumardes:scaffolding_rush/lobby/load_lobby
 #teleport @a 0 3 0 0 0
 #gamerule sendCommandFeedback true

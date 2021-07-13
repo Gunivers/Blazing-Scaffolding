@@ -23,12 +23,24 @@ execute as @a[scores={yellowPlaced=1..}] run function loumardes:scaffolding_rush
 execute if score GameRunning global matches 1 run function loumardes:scaffolding_rush/game/main
 
 #gravel tower
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:gravel",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:blue_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:lime_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:red_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:yellow_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:ghast_spawn_egg",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
+execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:blue_concrete_powder"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:lime_concrete_powder"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:red_concrete_powder"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:yellow_concrete_powder"}}] run gamemode adventure
 execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:ghast_spawn_egg"}}] run gamemode adventure
-execute if score GameLoading global matches 0 as @a[gamemode=adventure,nbt=!{SelectedItem:{id:"minecraft:gravel"}},nbt=!{SelectedItem:{id:"minecraft:blue_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:lime_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:red_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:yellow_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:ghast_spawn_egg"}}] run gamemode survival
+execute if score GameLoading global matches 0 as @a[gamemode=adventure,nbt=!{SelectedItem:{id:"minecraft:gravel"}},nbt=!{SelectedItem:{id:"minecraft:blue_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:lime_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:red_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:yellow_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:ghast_spawn_egg"}},nbt=!{Inventory:[{id:"minecraft:gravel",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:blue_concrete_powder",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:lime_concrete_powder",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:red_concrete_powder",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:yellow_concrete_powder",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:ghast_spawn_egg",Slot:-106b}]}] run gamemode survival
+execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:scaffolding"}}] run gamemode survival
+execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:squid_spawn_egg"}}] run gamemode survival
+execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:slime_spawn_egg"}}] run gamemode survival
+execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:mooshroom_spawn_egg"}}] run gamemode survival
+execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:minecraft:blaze_spawn_egg"}}] run gamemode survival
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
@@ -56,5 +68,8 @@ execute if score GameEnd global matches 0 if entity @a[team=blue,gamemode=!spect
 execute if score GameEnd global matches 0 if entity @a[team=green,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 execute if score GameEnd global matches 0 if entity @a[team=red,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 execute if score GameEnd global matches 0 if entity @a[team=yellow,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
+execute if score GameEnd global matches 0 as @a[team=random] run scoreboard players add RemainingTeam global 1
 
 execute as @e[type=villager,nbt=!{Age:0}] run function loumardes:scaffolding_rush/clean_kill
+
+advancement revoke @a everything
