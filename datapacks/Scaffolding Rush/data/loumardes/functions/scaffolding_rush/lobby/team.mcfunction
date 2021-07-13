@@ -1,3 +1,6 @@
+setblock 0 2 0 minecraft:structure_block[mode=load]{mode:"LOAD",posX:-20,posY:0,posZ:-14,name:"loumardes:scaffolding_rush/lobby"}
+setblock 0 3 0 minecraft:redstone_block
+
 fill -2 3 -2 -3 3 -3 minecraft:light_gray_concrete_powder
 fill -4 3 2 -5 3 1 minecraft:blue_concrete_powder
 fill -3 3 6 -4 3 5 minecraft:red_concrete_powder
