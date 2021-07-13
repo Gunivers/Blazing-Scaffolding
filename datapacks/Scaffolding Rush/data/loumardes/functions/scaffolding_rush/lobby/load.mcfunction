@@ -9,4 +9,3 @@ scoreboard players set GameLobby global 1
 
 execute if score Random options matches 0 run function loumardes:scaffolding_rush/lobby/team
 execute if score Random options matches 1 run function loumardes:scaffolding_rush/lobby/random
-execute as @a run function loumardes:scaffolding_rush/lobby/give_items
