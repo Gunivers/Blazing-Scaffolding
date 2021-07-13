@@ -40,7 +40,7 @@ execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:scaffolding"}}
 execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:squid_spawn_egg"}}] run gamemode survival
 execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:slime_spawn_egg"}}] run gamemode survival
 execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:mooshroom_spawn_egg"}}] run gamemode survival
-execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:minecraft:blaze_spawn_egg"}}] run gamemode survival
+execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:blaze_spawn_egg"}}] run gamemode survival
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
