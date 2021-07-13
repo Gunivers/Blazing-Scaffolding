@@ -24,6 +24,9 @@ scoreboard objectives add opt_instant_pil trigger
 scoreboard objectives add opt_perf_mode trigger
 scoreboard objectives add opt_team_egg trigger
 scoreboard objectives add opt_wb_size_add trigger
+scoreboard objectives add opt_regen trigger
+scoreboard objectives add opt_fall_damage trigger
+
 
 #internal values
 scoreboard objectives add global dummy
@@ -59,6 +62,9 @@ execute unless score TeamEgg options matches 0.. run scoreboard players set Team
 
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
 execute unless score WBSize options matches 15..165 run scoreboard players set WBSize options 95
+
+execute unless score Regen options matches 0.. run scoreboard players set Regen options 1
+execute unless score FallDamage options matches 0.. run scoreboard players set FallDamage options 0
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish

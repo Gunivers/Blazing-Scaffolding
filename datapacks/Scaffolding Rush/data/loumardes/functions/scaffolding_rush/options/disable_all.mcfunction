@@ -9,3 +9,5 @@ scoreboard players reset @a opt_instant_pil
 scoreboard players reset @a opt_perf_mode
 scoreboard players reset @a opt_team_egg
 scoreboard players reset @a opt_wb_size_add
+scoreboard players reset @a opt_regen
+scoreboard players reset @a opt_fall_damage
