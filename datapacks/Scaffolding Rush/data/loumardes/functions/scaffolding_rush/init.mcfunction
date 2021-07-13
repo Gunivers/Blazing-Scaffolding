@@ -24,6 +24,7 @@ scoreboard objectives add opt_instant_pil trigger
 scoreboard objectives add opt_perf_mode trigger
 scoreboard objectives add opt_team_egg trigger
 scoreboard objectives add opt_wb_size_add trigger
+scoreboard objectives add opt_randomteam trigger
 
 #internal values
 scoreboard objectives add global dummy
@@ -138,6 +139,5 @@ playsound ui.toast.in ambient @a
 function loumardes:scaffolding_rush/reset
 say [SR] reset done
 playsound ui.toast.out ambient @a
-#function loumardes:scaffolding_rush/lobby/load_lobby
 #teleport @a 0 3 0 0 0
 #gamerule sendCommandFeedback true

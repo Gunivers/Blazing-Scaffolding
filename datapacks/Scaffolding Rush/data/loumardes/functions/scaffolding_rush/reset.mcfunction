@@ -47,7 +47,7 @@ spawnpoint @s 0 4 0
 #advancement replenish
 advancement revoke @a from loumardes:replenish
 
-function loumardes:scaffolding_rush/lobby/load_lobby
+function loumardes:scaffolding_rush/lobby/load
 
 scoreboard players set @a StartGame 0
 scoreboard players enable @a StartGame

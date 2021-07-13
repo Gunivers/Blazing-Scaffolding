@@ -11,3 +11,4 @@ execute if entity @a[scores={opt_vil_resp_cd=1..}] run function loumardes:scaffo
 execute if entity @a[scores={opt_vil_respawn=1..}] run function loumardes:scaffolding_rush/options/vil_respawn
 execute as @a[scores={opt_wb_size_add=1..}] run function loumardes:scaffolding_rush/options/wb_size_add
 execute as @a[scores={opt_wb_size_add=..-1}] run function loumardes:scaffolding_rush/options/wb_size_add
+execute as @a[scores={opt_randomteam=..-1}] run function loumardes:scaffolding_rush/options/random_team
