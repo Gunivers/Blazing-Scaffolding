@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "snowball_thrown": {
+      "trigger": "minecraft:used_item",
+      "conditions": {
+        "item": {
+          "tag": "minecraft:snowball"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "scaffolding_rush:item/replenish/snowball"
+  },
+  "parent": "scaffolding_rush:replenish"
+}
