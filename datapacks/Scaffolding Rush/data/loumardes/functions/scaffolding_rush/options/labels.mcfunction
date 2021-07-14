@@ -38,3 +38,15 @@ execute as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s o
 
 execute if score VillagerForgiveness options matches 1 as @e[type=area_effect_cloud,name="✔"] run scoreboard players set @s opt_vil_respawn 1
 execute if score VillagerForgiveness options matches 0 as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s opt_vil_respawn 1
+
+execute as @e[type=area_effect_cloud,name="✔"] run scoreboard players set @s opt_regen 0
+execute as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s opt_regen 0
+
+execute if score Regen options matches 1 as @e[type=area_effect_cloud,name="✔"] run scoreboard players set @s opt_regen 1
+execute if score Regen options matches 0 as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s opt_regen 1
+
+execute as @e[type=area_effect_cloud,name="✔"] run scoreboard players set @s opt_fall_damage 0
+execute as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s opt_fall_damage 0
+
+execute if score FallDamage options matches 1 as @e[type=area_effect_cloud,name="✔"] run scoreboard players set @s opt_fall_damage 1
+execute if score FallDamage options matches 0 as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s opt_fall_damage 1

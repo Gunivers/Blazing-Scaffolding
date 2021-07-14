@@ -27,7 +27,7 @@ scoreboard objectives add opt_wb_size_add trigger
 scoreboard objectives add opt_regen trigger
 scoreboard objectives add opt_fall_damage trigger
 
-scoreboard objectives add opt_randomteam trigger
+scoreboard objectives add opt_random_team trigger
 scoreboard objectives add opt_team_number trigger
 
 #internal values
