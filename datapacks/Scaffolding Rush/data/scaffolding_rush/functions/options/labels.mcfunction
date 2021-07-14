@@ -50,3 +50,9 @@ execute as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s o
 
 execute if score FallDamage options matches 1 as @e[type=area_effect_cloud,name="✔"] run scoreboard players set @s opt_fall_damage 1
 execute if score FallDamage options matches 0 as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s opt_fall_damage 1
+
+execute as @e[type=area_effect_cloud,name="✔"] run scoreboard players set @s opt_random_team 0
+execute as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s opt_random_team 0
+
+execute if score RandomTeam options matches 1 as @e[type=area_effect_cloud,name="✔"] run scoreboard players set @s opt_random_team 1
+execute if score RandomTeam options matches 0 as @e[type=area_effect_cloud,name="✖"] run scoreboard players set @s opt_random_team 1
