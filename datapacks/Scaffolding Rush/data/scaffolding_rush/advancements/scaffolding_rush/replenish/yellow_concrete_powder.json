@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:yellow_concrete_powder"
+      }
+    }
+  },
+  "rewards": {
+    "function": "scaffolding_rush:scaffolding_rush/item/replenish/yellow_concrete_powder"
+  },
+  "parent": "scaffolding_rush:scaffolding_rush/replenish"
+}
