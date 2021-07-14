@@ -2,7 +2,7 @@ execute as @a[tag=Respawning] run execute if entity @s[team=red] at @e[type=vill
 execute as @a[tag=Respawning] run execute if entity @s[team=blue] at @e[type=villager,team=blue] run tp @s ~ ~ ~
 execute as @a[tag=Respawning] run execute if entity @s[team=yellow] at @e[type=villager,team=yellow] run tp @s ~ ~ ~
 execute as @a[tag=Respawning] run execute if entity @s[team=green] at @e[type=villager,team=green] run tp @s ~ ~ ~
-execute as @a[tag=Respawning] run title @s times 0 1 0
+execute as @a[tag=Respawning] run title @s times 0 1000 0
 execute as @a[tag=Respawning] run title @s[gamemode=!spectator] title ["",{"text":"Respawning...","color":"red"}]
 execute as @a[tag=Respawning] run effect give @s minecraft:slowness 1 9 true
 execute as @a[tag=Respawning] run effect give @s minecraft:invisibility 1 1 true
