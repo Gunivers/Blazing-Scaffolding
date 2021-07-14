@@ -13,4 +13,4 @@ scoreboard players reset @a opt_regen
 scoreboard players reset @a opt_fall_damage
 scoreboard players reset @a opt_random_team
 scoreboard players reset @a opt_team_number
-scoreboard players reset @a opt_respawn_delay
+scoreboard players reset @a opt_resp_delay

@@ -13,4 +13,4 @@ scoreboard players enable @a opt_regen
 scoreboard players enable @a opt_fall_damage
 scoreboard players enable @a opt_random_team
 scoreboard players enable @a opt_team_number
-scoreboard players enable @a opt_respawn_delay
+scoreboard players enable @a opt_resp_delay
