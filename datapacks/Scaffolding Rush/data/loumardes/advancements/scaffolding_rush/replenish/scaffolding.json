@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "scaffolding placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:scaffolding"
+      }
+    }
+  },
+  "rewards": {
+    "function": "loumardes:scaffolding_rush/item/replenish/scaffolding"
+  },
+  "parent": "loumardes:scaffolding_rush/replenish"
+}

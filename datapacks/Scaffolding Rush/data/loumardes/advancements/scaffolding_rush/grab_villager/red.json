@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": {
+          "team": "red"
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "team": "red"
+            }
+          }
+        ]
+      }
+    }
+  },
+    "rewards": {
+      "function": "loumardes:scaffolding_rush/villager/talked_to"
+    }
+  }
+  
