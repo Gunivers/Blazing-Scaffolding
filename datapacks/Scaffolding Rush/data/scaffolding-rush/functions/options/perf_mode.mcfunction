@@ -7,4 +7,4 @@ execute unless score PerformanceMode options matches 0 run tellraw @a ["",{"text
 scoreboard players set @a opt_perf_mode 0
 scoreboard players enable @a opt_perf_mode
 
-function loumardes:scaffolding_rush/options/refresh
+function scaffolding_rush:options/refresh

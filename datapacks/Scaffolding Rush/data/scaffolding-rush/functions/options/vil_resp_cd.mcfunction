@@ -6,4 +6,4 @@ tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The time to get your vil
 scoreboard players set @a opt_vil_resp_cd 0
 scoreboard players enable @a opt_vil_resp_cd
 
-function loumardes:scaffolding_rush/options/refresh
+function scaffolding_rush:options/refresh

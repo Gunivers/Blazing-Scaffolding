@@ -9,9 +9,9 @@ execute positioned 0 0 0 if score WBSize options matches 35..79 run spreadplayer
 execute positioned 0 0 0 if score WBSize options matches 80..119 run spreadplayers 0 0 35 40 false @e[type=minecraft:armor_stand,tag=spread]
 execute positioned 0 0 0 if score WBSize options matches 120..165 run spreadplayers 0 0 55 60 false @e[type=minecraft:armor_stand,tag=spread]
 
-execute as @e[tag=baseTeam] at @s run function loumardes:scaffolding_rush/team/create_base/load_structure
+execute as @e[tag=baseTeam] at @s run function scaffolding_rush:team/create_base/load_structure
 
-function loumardes:scaffolding_rush/team/create_base/armor
+function scaffolding_rush:team/create_base/armor
 
 effect give @a minecraft:jump_boost 6 254 true
 
@@ -21,6 +21,6 @@ execute at @e[tag=baseTeam,name="Red",limit=1] run teleport @a[team=red] ~ 4 ~
 execute at @e[tag=baseTeam,name="Yellow",limit=1] run teleport @a[team=yellow] ~ 4 ~
 
 kill @e[tag=baseTeam]
-execute as @a run function loumardes:scaffolding_rush/lobby/base_egg/clear_egg
+execute as @a run function scaffolding_rush:lobby/base_egg/clear_egg
 
-execute as @a[gamemode=!spectator] at @s run function loumardes:scaffolding_rush/game/build_limit
+execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit

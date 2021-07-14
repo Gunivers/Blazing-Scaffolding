@@ -8,5 +8,5 @@ execute as @a[tag=Respawning] run effect give @s minecraft:slowness 1 9 true
 execute as @a[tag=Respawning] run effect give @s minecraft:invisibility 1 1 true
 execute as @a[tag=Respawning] run effect give @s minecraft:weakness 1 1 true
 execute as @a[tag=Respawning] run scoreboard players remove @s killed 1
-execute as @a[scores={killed=1..},tag=Respawning] run schedule function loumardes:scaffolding_rush/died/loop_tp 1t
-execute as @a[scores={killed=0},tag=Respawning] run function loumardes:scaffolding_rush/died/loop_end
+execute as @a[scores={killed=1..},tag=Respawning] run schedule function scaffolding_rush:died/loop_tp 1t
+execute as @a[scores={killed=0},tag=Respawning] run function scaffolding_rush:died/loop_end

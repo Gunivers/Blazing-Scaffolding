@@ -1,4 +1,4 @@
-function loumardes:scaffolding_rush/team/join/killbase
+function scaffolding_rush:team/join/killbase
 kill @e[type=minecraft:area_effect_cloud,tag=lobbyTeam]
 
 fill -4 3 2 -5 3 1 minecraft:light_gray_concrete_powder

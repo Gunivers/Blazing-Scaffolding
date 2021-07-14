@@ -7,4 +7,4 @@ tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The lava speed has been 
 scoreboard players set @a opt_lava_speed 0
 scoreboard players enable @a opt_lava_speed
 
-function loumardes:scaffolding_rush/options/refresh
+function scaffolding_rush:options/refresh

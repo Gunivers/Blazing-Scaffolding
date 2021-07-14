@@ -61,7 +61,7 @@
   "functions": [
     {
       "function": "minecraft:set_nbt",
-      "tag": "{HideFlags:24,CanPlaceOn:[\"minecraft:scaffolding\",\"#loumardes:notowerlobby\"],CanDestroy:[\"minecraft:scaffolding\",\"#loumardes:lobby\",\"#loumardes:tower\"]}"
+      "tag": "{HideFlags:24,CanPlaceOn:[\"minecraft:scaffolding\",\"#scaffolding_rush:notowerlobby\"],CanDestroy:[\"minecraft:scaffolding\",\"#scaffolding_rush:lobby\",\"#scaffolding_rush:tower\"]}"
     }
   ]
 }

@@ -10,4 +10,4 @@ execute unless score FallDamage options matches 0 run gamerule fallDamage true
 scoreboard players set @a opt_fall_damage 0
 scoreboard players enable @a opt_fall_damage
 
-function loumardes:scaffolding_rush/options/refresh
+function scaffolding_rush:options/refresh

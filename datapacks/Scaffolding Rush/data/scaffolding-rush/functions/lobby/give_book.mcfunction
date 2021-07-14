@@ -1,1 +1,1 @@
-loot replace entity @s hotbar.8 loot loumardes:book_menu
+loot replace entity @s hotbar.8 loot scaffolding_rush:book_menu

@@ -9,7 +9,7 @@
     }
   },
   "rewards": {
-    "function": "loumardes:scaffolding_rush/item/replenish/yellow_concrete_powder"
+    "function": "scaffolding_rush:item/replenish/yellow_concrete_powder"
   },
-  "parent": "loumardes:scaffolding_rush/replenish"
+  "parent": "scaffolding_rush:replenish"
 }

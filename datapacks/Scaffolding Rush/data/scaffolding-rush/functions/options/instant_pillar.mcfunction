@@ -7,4 +7,4 @@ execute unless score InstantPillar options matches 0 run tellraw @a ["",{"text":
 scoreboard players set @a opt_instant_pil 0
 scoreboard players enable @a opt_instant_pil
 
-function loumardes:scaffolding_rush/options/refresh
+function scaffolding_rush:options/refresh

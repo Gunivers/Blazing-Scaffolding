@@ -9,4 +9,4 @@ execute unless score Regen options matches 0 run gamerule naturalRegeneration tr
 
 scoreboard players set @a opt_regen 0
 scoreboard players enable @a opt_regen
-function loumardes:scaffolding_rush/options/refresh
+function scaffolding_rush:options/refresh

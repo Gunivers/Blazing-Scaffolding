@@ -7,15 +7,15 @@ clear @a
 
 gamemode survival @a[team=!]
 #give items
-execute as @a[team=!] run function loumardes:scaffolding_rush/game/give_items
+execute as @a[team=!] run function scaffolding_rush:game/give_items
 
-execute as @a[team=blue,gamemode=!spectator,sort=random,limit=1] run function loumardes:scaffolding_rush/villager/give/blue
-execute as @a[team=red,gamemode=!spectator,sort=random,limit=1] run function loumardes:scaffolding_rush/villager/give/red
-execute as @a[team=yellow,gamemode=!spectator,sort=random,limit=1] run function loumardes:scaffolding_rush/villager/give/yellow
-execute as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function loumardes:scaffolding_rush/villager/give/green
+execute as @a[team=blue,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/blue
+execute as @a[team=red,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/red
+execute as @a[team=yellow,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/yellow
+execute as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/green
 
-function loumardes:scaffolding_rush/broadcast/start
-function loumardes:scaffolding_rush/lava/sound
+function scaffolding_rush:broadcast/start
+function scaffolding_rush:lava/sound
 
 team modify blue seeFriendlyInvisibles true
 team modify green seeFriendlyInvisibles true

@@ -1,4 +1,4 @@
-execute as @e[type=villager] run function loumardes:scaffolding_rush/clean_kill
+execute as @e[type=villager] run function scaffolding_rush:clean_kill
 kill @e[type=!player]
 kill @e[type=!player]
 
@@ -73,7 +73,7 @@ execute unless score TeamNumber options matches 2.. run scoreboard players set T
 execute unless score RandomTeam options matches 0.. run scoreboard players set RandomTeam options 0
 
 #advancement replenish
-advancement revoke @a from loumardes:replenish
+advancement revoke @a from scaffolding_rush:replenish
 
 #teams
 team add red
@@ -103,7 +103,7 @@ team modify random friendlyFire false
 worldborder warning distance 1
 worldborder damage amount 0
 
-function loumardes:scaffolding_rush/options/wb_size_refresh
+function scaffolding_rush:options/wb_size_refresh
 
 #time
 time set noon
@@ -155,7 +155,7 @@ bossbar set minecraft:filling_lava color red
 #debug / à changer
 #say [SR] init done (reset in progress)
 #playsound ui.toast.in ambient @a
-function loumardes:scaffolding_rush/reset
+function scaffolding_rush:reset
 #say [SR] reset done
 #playsound ui.toast.out ambient @a
 #teleport @a 0 3 0 0 0

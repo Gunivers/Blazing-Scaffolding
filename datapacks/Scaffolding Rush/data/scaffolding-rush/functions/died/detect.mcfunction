@@ -1,6 +1,6 @@
 #kill villager
 execute if entity @s[type=minecraft:villager] at @s run playsound minecraft:entity.player.hurt_on_fire ambient @a ~ ~ ~
-execute if entity @s[type=minecraft:villager] run function loumardes:scaffolding_rush/clean_kill
+execute if entity @s[type=minecraft:villager] run function scaffolding_rush:clean_kill
 
 execute if entity @s[team=red] unless entity @e[type=villager,team=red] run gamemode spectator @s
 execute if entity @s[team=blue] unless entity @e[type=villager,team=blue] run gamemode spectator @s
@@ -18,8 +18,8 @@ tag @s[gamemode=!spectator] add Respawning
 
 scoreboard players set @s[gamemode=spectator] killed 0
 scoreboard players operation @s[gamemode=!spectator] killed = RespawnDelay options
-execute as @s[gamemode=!spectator] run schedule function loumardes:scaffolding_rush/died/loop_tp 1t
+execute as @s[gamemode=!spectator] run schedule function scaffolding_rush:died/loop_tp 1t
 
 #Recup delay
 tag @s[gamemode=!spectator,tag=!has_egg] add VillagerRecup
-schedule function loumardes:scaffolding_rush/villager/give/recup_delay 15t
+schedule function scaffolding_rush:villager/give/recup_delay 15t

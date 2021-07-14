@@ -6,4 +6,4 @@ tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The delay for respawn ha
 scoreboard players set @a opt_resp_delay 0
 scoreboard players enable @a opt_resp_delay
 
-function loumardes:scaffolding_rush/options/refresh
+function scaffolding_rush:options/refresh
