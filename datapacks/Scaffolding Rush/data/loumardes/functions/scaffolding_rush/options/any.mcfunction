@@ -15,3 +15,4 @@ execute if entity @a[scores={opt_regen=1..}] run function loumardes:scaffolding_
 execute if entity @a[scores={opt_fall_damage=1..}] run function loumardes:scaffolding_rush/options/fall_damage
 execute as @a[scores={opt_randomteam=1..}] run function loumardes:scaffolding_rush/options/random_team
 execute as @a[scores={opt_team_number=1..}] run function loumardes:scaffolding_rush/options/team_number
+execute as @a[scores={opt_respawn_delay=1..}] run function loumardes:scaffolding_rush/options/respawn_delay

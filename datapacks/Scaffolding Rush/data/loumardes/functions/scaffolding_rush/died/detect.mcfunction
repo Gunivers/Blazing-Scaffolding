@@ -15,15 +15,9 @@ clear @s
 
 tag @s[gamemode=!spectator] add Respawning
 
-effect give @s[gamemode=!spectator] minecraft:slowness 1 9 true
-effect give @s[gamemode=!spectator] minecraft:invisibility 1 1 true
-effect give @s[gamemode=!spectator] minecraft:weakness 1 1 true
-
-title @a times 0 10 0
-title @s[gamemode=!spectator] title ["",{"text":"Respawning...","color":"red"}]
 
 scoreboard players set @s[gamemode=spectator] killed 0
-scoreboard players set @s[gamemode=!spectator] killed 10
+scoreboard players operation @s[gamemode=!spectator] killed = RespawnDelay options
 execute as @s[gamemode=!spectator] run schedule function loumardes:scaffolding_rush/died/loop_tp 1t
 
 #Recup delay
