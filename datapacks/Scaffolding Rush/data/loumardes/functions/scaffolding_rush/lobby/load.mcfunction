@@ -6,5 +6,5 @@ setblock 0 3 0 minecraft:redstone_block
 
 scoreboard players set GameLobby global 1
 
-execute if score Random options matches 0 run function loumardes:scaffolding_rush/lobby/team
-execute if score Random options matches 1 run function loumardes:scaffolding_rush/lobby/random
+execute if score RandomTeam options matches 0 run function loumardes:scaffolding_rush/lobby/team
+execute if score RandomTeam options matches 1 run function loumardes:scaffolding_rush/lobby/random

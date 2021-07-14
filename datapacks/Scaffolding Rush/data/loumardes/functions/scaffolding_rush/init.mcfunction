@@ -28,7 +28,7 @@ scoreboard objectives add opt_regen trigger
 scoreboard objectives add opt_fall_damage trigger
 scoreboard objectives add opt_respawn_delay
 
-scoreboard objectives add opt_randomteam trigger
+scoreboard objectives add opt_random_team trigger
 scoreboard objectives add opt_team_number trigger
 
 #internal values
@@ -68,6 +68,9 @@ execute unless score WBSize options matches 15..165 run scoreboard players set W
 
 execute unless score Regen options matches 0.. run scoreboard players set Regen options 1
 execute unless score FallDamage options matches 0.. run scoreboard players set FallDamage options 0
+
+execute unless score TeamNumber options matches 2.. run scoreboard players set TeamNumber options 4
+execute unless score RandomTeam options matches 0.. run scoreboard players set RandomTeam options 0
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish
@@ -151,9 +154,9 @@ bossbar set minecraft:filling_lava color red
 
 #debug / à changer
 #say [SR] init done (reset in progress)
-playsound ui.toast.in ambient @a
+#playsound ui.toast.in ambient @a
 function loumardes:scaffolding_rush/reset
-say [SR] reset done
-playsound ui.toast.out ambient @a
+#say [SR] reset done
+#playsound ui.toast.out ambient @a
 #teleport @a 0 3 0 0 0
 #gamerule sendCommandFeedback true

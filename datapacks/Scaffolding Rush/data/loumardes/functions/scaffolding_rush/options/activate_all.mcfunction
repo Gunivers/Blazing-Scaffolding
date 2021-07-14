@@ -11,6 +11,6 @@ scoreboard players enable @a opt_team_egg
 scoreboard players enable @a opt_wb_size_add
 scoreboard players enable @a opt_regen
 scoreboard players enable @a opt_fall_damage
-scoreboard players enable @a opt_randomteam
+scoreboard players enable @a opt_random_team
 scoreboard players enable @a opt_team_number
-scoreboard players enable @a opt_respawn_delay
+scoreboard players enable @a opt_resp_delay

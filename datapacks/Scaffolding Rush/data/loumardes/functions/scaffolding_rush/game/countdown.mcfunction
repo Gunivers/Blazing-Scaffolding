@@ -11,7 +11,7 @@ scoreboard players reset @a StartGame
 
 setblock 0 5 7 cave_air
 
-execute if score Random options matches 1 run function loumardes:scaffolding_rush/team/join/random
+execute if score RandomTeam options matches 1 run function loumardes:scaffolding_rush/team/join/random
 
 function loumardes:scaffolding_rush/broadcast/10s
 
