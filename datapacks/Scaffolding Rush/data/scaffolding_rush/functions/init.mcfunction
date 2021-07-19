@@ -26,15 +26,16 @@ scoreboard objectives add opt_team_egg trigger
 scoreboard objectives add opt_wb_size_add trigger
 scoreboard objectives add opt_regen trigger
 scoreboard objectives add opt_fall_damage trigger
-scoreboard objectives add opt_resp_delay trigger
 
-scoreboard objectives add opt_random_team trigger
+scoreboard objectives add opt_randomteam trigger
 scoreboard objectives add opt_team_number trigger
 
 #internal values
 scoreboard objectives add global dummy
 scoreboard objectives add options dummy
+scoreboard objectives add XEntity dummy
 scoreboard objectives add YEntity dummy
+scoreboard objectives add ZEntity dummy
 scoreboard objectives add usedSnowball minecraft.used:minecraft.snowball
 scoreboard objectives add gameId dummy
 
@@ -46,6 +47,8 @@ scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 
 scoreboard players set #20 global 20
 scoreboard players set #10 global 10
+scoreboard players set #2 global 2
+scoreboard players set #0 global 0
 
 execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
 
@@ -69,11 +72,8 @@ execute unless score WBSize options matches 15..165 run scoreboard players set W
 execute unless score Regen options matches 0.. run scoreboard players set Regen options 1
 execute unless score FallDamage options matches 0.. run scoreboard players set FallDamage options 0
 
-execute unless score TeamNumber options matches 2.. run scoreboard players set TeamNumber options 4
-execute unless score RandomTeam options matches 0.. run scoreboard players set RandomTeam options 0
-
 #advancement replenish
-advancement revoke @a from scaffolding_rush:replenish
+advancement revoke @a from loumardes:replenish
 
 #teams
 team add red
@@ -104,6 +104,10 @@ worldborder warning distance 1
 worldborder damage amount 0
 
 function scaffolding_rush:options/wb_size_refresh
+
+#set the border dimensions
+scoreboard players set WBbyTwo global 47
+scoreboard players set -WBbyTwo global -47
 
 #time
 time set noon
@@ -154,9 +158,9 @@ bossbar set minecraft:filling_lava color red
 
 #debug / à changer
 #say [SR] init done (reset in progress)
-#playsound ui.toast.in ambient @a
+playsound ui.toast.in ambient @a
 function scaffolding_rush:reset
-#say [SR] reset done
-#playsound ui.toast.out ambient @a
+say [SR] reset done
+playsound ui.toast.out ambient @a
 #teleport @a 0 3 0 0 0
 #gamerule sendCommandFeedback true

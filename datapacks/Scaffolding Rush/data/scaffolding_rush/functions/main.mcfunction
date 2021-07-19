@@ -41,14 +41,11 @@ execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:squid_spawn_eg
 execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:slime_spawn_egg"}}] run gamemode survival
 execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:mooshroom_spawn_egg"}}] run gamemode survival
 execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:blaze_spawn_egg"}}] run gamemode survival
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:red_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:yellow_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-
-#suffocation
-execute as @a[gamemode=!spectator] at @s if score GameRunning global matches 0 if block ~ ~ ~ #scaffolding_rush:lobby run tp @s ~ ~0.5 ~
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:red_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
+execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:yellow_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #loumardes:tower run kill @s
 
 #instant pillar
 execute if score InstantPillar options matches 1 at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:2147483647, CustomName:'{"text":"ScR_Pillar"}'}

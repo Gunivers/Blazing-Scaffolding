@@ -1,1 +1,0 @@
-tp @a[advancements={loumardes:scaffolding_rush/bellow_y0=true}] ~ 4 ~

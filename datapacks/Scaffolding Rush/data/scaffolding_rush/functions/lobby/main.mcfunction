@@ -1,5 +1,9 @@
-#speed
+#updating coordonate vars
+execute as @a store result score @s XEntity run data get entity @s Pos[0]
 execute as @a store result score @s YEntity run data get entity @s Pos[1]
+execute as @a store result score @s ZEntity run data get entity @s Pos[2]
+
+#speed
 execute as @a if score @s YEntity matches ..2 run effect give @s minecraft:speed 1 2 true
 execute as @a if score @s YEntity matches 4.. run effect clear @s minecraft:speed
 
@@ -25,3 +29,6 @@ execute unless block 0 5 7 minecraft:cave_air unless block 0 5 7 minecraft:spruc
 
 #button place base
 execute positioned 0 6 7 run kill @e[type=minecraft:armor_stand,distance=..1]
+
+#check player coordonates
+function scaffolding_rush:lobby/correct_coordinates

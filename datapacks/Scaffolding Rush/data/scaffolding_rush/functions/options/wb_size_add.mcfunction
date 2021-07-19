@@ -13,3 +13,9 @@ scoreboard players set @a opt_wb_size_add 0
 scoreboard players enable @a opt_wb_size_add
 
 function scaffolding_rush:options/refresh
+
+#set the border dimensions
+scoreboard players operation WBbyTwo global = WBSize options
+scoreboard players operation WBbyTwo global /= #2 global
+scoreboard players set -WBbyTwo global 0
+scoreboard players operation -WBbyTwo global -= WBbyTwo global
