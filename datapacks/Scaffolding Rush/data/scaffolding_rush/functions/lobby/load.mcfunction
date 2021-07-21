@@ -6,5 +6,7 @@ setblock 0 3 0 minecraft:redstone_block
 
 scoreboard players set GameLobby global 1
 
+kill @e[tag=lobbyTeam]
+
 execute if score RandomTeam options matches 0 run function scaffolding_rush:lobby/team
 execute if score RandomTeam options matches 1 run function scaffolding_rush:lobby/random
