@@ -4,12 +4,7 @@ data modify entity @e[type=arrow,limit=1,sort=nearest] LeftOwner set from entity
 data modify entity @e[type=arrow,limit=1,sort=nearest] Motion set from entity @s Motion
 kill @s
 
-#<1.16
-replaceitem entity @a[scores={usedSnowball=1..}] weapon.mainhand air
-replaceitem entity @a[scores={usedSnowball=1..}] weapon.mainhand minecraft:snowball
-
-#1.17
-#item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand air
-#item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand minecraft:snowball
+item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with air
+item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with minecraft:snowball
 
 scoreboard players set @a usedSnowball 0
