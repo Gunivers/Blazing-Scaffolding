@@ -103,12 +103,6 @@ team modify random friendlyFire false
 worldborder warning distance 1
 worldborder damage amount 0
 
-function scaffolding_rush:options/wb_size_refresh
-
-#set the border dimensions
-scoreboard players set WBbyTwo global 47
-scoreboard players set -WBbyTwo global -47
-
 #time
 time set noon
 
