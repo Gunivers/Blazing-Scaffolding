@@ -67,7 +67,7 @@ execute unless score InstantPillar options matches 0.. run scoreboard players se
 execute unless score TeamEgg options matches 0.. run scoreboard players set TeamEgg options 0
 
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
-execute unless score WBSize options matches 15..165 run scoreboard players set WBSize options 95
+execute unless score RandomTeam options matches 0..1 run scoreboard players set RandomTeam options 0
 
 execute unless score Regen options matches 0.. run scoreboard players set Regen options 1
 execute unless score FallDamage options matches 0.. run scoreboard players set FallDamage options 0

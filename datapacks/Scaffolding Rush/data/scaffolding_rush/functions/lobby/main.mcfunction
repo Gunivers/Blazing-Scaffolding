@@ -1,7 +1,7 @@
 #updating coordonate vars
-execute as @a store result score @s XEntity run data get entity @s Pos[0]
+execute as @e store result score @s XEntity run data get entity @s Pos[0]
 execute as @a store result score @s YEntity run data get entity @s Pos[1]
-execute as @a store result score @s ZEntity run data get entity @s Pos[2]
+execute as @e store result score @s ZEntity run data get entity @s Pos[2]
 
 #speed
 execute as @a if score @s YEntity matches ..2 run effect give @s minecraft:speed 1 2 true
