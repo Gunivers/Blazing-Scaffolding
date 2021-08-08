@@ -40,3 +40,7 @@ execute as @a[team=blue,gamemode=spectator,tag=!TeamEliminated,limit=1] unless e
 execute as @a[team=red,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=red,gamemode=!spectator] run function scaffolding_rush:game/elimination/red
 execute as @a[team=green,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=green,gamemode=!spectator] run function scaffolding_rush:game/elimination/green
 execute as @a[team=yellow,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=yellow,gamemode=!spectator] run function scaffolding_rush:game/elimination/yellow
+
+#ff villager
+effect clear @a minecraft:weakness
+execute as @a[gamemode=!spectator] if predicate scaffolding_rush:villagerff run effect give @s minecraft:weakness 1 1 true
