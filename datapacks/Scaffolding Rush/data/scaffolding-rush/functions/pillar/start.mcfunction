@@ -4,7 +4,7 @@ kill @e[type=falling_block,distance=..0]
 
 execute as @s at @s run function scaffolding_rush:pillar/loop
 
-fill ~ 0 ~ ~ 200 ~ scaffolding replace green_stained_glass
+fill ~ 0 ~ ~ 255 ~ scaffolding replace green_stained_glass
 particle crit ~ ~1.5 ~ 0.2 0.2 0 0.2 5
 
 kill @s
