@@ -1,4 +1,5 @@
 tag @a remove TeamEliminated
+tag @a remove has_egg
 scoreboard players set GameRunning global 1
 scoreboard players set GameLoading global 0
 scoreboard players set LavaCountdown global 0

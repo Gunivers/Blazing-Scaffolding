@@ -17,3 +17,5 @@ execute as @a[scores={opt_random_team=1..}] run function scaffolding_rush:option
 execute as @a[scores={opt_team_number=1..}] run function scaffolding_rush:options/team_number
 execute as @a[scores={opt_resp_delay=1..}] run function scaffolding_rush:options/respawn_delay
 execute as @a[scores={opt_public=1..}] run function scaffolding_rush:options/public
+execute as @a[scores={opt_vil_no=1..}] run function scaffolding_rush:options/vil_no
+execute as @a[scores={opt_vil_killable=1..}] run function scaffolding_rush:options/vil_killable
