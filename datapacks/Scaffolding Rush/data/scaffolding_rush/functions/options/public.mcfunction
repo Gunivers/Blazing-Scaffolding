@@ -5,6 +5,7 @@ execute unless score Public options matches 0 run tellraw @a ["",{"text":"[SR] "
 
 tag @a remove admin
 execute if score Public options matches 0 run tag @a[scores={opt_public=1}] add admin
+execute if score Public options matches 0 run clear @a[tag=!admin] minecraft:book
 
 scoreboard players set @a opt_public 0
 scoreboard players enable @a opt_public
