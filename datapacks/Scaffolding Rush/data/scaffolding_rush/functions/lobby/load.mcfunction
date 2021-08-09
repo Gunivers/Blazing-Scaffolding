@@ -4,6 +4,7 @@ execute unless entity @e[type=minecraft:area_effect_cloud,tag=lobbyText,name="Ho
 setblock 0 2 0 minecraft:structure_block[mode=load]{mode:"LOAD",posX:-20,posY:0,posZ:-14,name:"scaffolding_rush:lobby"}
 setblock 0 3 0 minecraft:redstone_block
 
+function scaffolding_rush:lobby/base_egg/clear_egg
 scoreboard players set GameLobby global 1
 
 kill @e[tag=lobbyTeam]
