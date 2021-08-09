@@ -9,10 +9,10 @@ gamemode survival @a[team=!]
 #give items
 execute as @a[team=!] run function scaffolding_rush:game/give_items
 
-execute as @a[team=blue,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/blue
-execute as @a[team=red,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/red
-execute as @a[team=yellow,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/yellow
-execute as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/green
+execute if score NoVillager options matches 1 as @a[team=blue,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/blue
+execute if score NoVillager options matches 1 as @a[team=red,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/red
+execute if score NoVillager options matches 1 as @a[team=yellow,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/yellow
+execute if score NoVillager options matches 1 as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/green
 
 function scaffolding_rush:broadcast/start
 function scaffolding_rush:lava/sound
