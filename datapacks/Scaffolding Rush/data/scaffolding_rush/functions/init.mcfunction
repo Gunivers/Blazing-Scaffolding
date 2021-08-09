@@ -143,8 +143,8 @@ gamerule universalAnger false
 
 setworldspawn 0 4 0
 
-execute unless entity @e[type=marker,name="✔"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✔","color":"green"}'}
-execute unless entity @e[type=marker,name="✖"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✖","color":"red"}'}
+execute unless entity @e[type=area_effect_cloud,name="✔"] run summon minecraft:area_effect_cloud 0 0 0 {Duration:2147483647,CustomName:'{"text":"✔","color":"green"}'}
+execute unless entity @e[type=area_effect_cloud,name="✖"] run summon minecraft:area_effect_cloud 0 0 0 {Duration:2147483647,CustomName:'{"text":"✖","color":"red"}'}
 
 #Bossbar
 bossbar add filling_lava ""
