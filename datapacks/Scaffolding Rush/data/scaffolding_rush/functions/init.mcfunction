@@ -5,9 +5,9 @@ kill @e[type=!player]
 fill -90 0 -90 90 0 90 bedrock
 
 #summons the AEC indiquant la position de la lave
-execute unless entity @e[type=area_effect_cloud,name="ScR_LavaLevel"] run summon minecraft:area_effect_cloud 0 1 0 {Duration:2147483647, CustomName:'{"text":"ScR_LavaLevel"}'}
-execute unless entity @e[type=area_effect_cloud,name="ScR_BuildLimit"] run summon minecraft:area_effect_cloud 0 1 0 {Duration:2147483647, CustomName:'{"text":"ScR_BuildLimit"}'}
-execute unless entity @e[type=area_effect_cloud,name="ScR_Build"] run summon minecraft:area_effect_cloud 0 1 0 {Duration:2147483647, CustomName:'{"text":"ScR_Build"}'}
+execute unless entity @e[type=marker,name="ScR_LavaLevel"] run summon minecraft:marker 0 1 0 {CustomName:'{"text":"ScR_LavaLevel"}'}
+execute unless entity @e[type=marker,name="ScR_BuildLimit"] run summon minecraft:marker 0 1 0 {CustomName:'{"text":"ScR_BuildLimit"}'}
+execute unless entity @e[type=marker,name="ScR_Build"] run summon minecraft:marker 0 1 0 {CustomName:'{"text":"ScR_Build"}'}
 
 #trigger controls
 scoreboard objectives add StartGame trigger
@@ -143,8 +143,8 @@ gamerule universalAnger false
 
 setworldspawn 0 4 0
 
-execute unless entity @e[type=area_effect_cloud,name="✔"] run summon minecraft:area_effect_cloud 0 0 0 {Duration:2147483647, CustomName:'{"text":"✔","color":"green"}'}
-execute unless entity @e[type=area_effect_cloud,name="✖"] run summon minecraft:area_effect_cloud 0 0 0 {Duration:2147483647, CustomName:'{"text":"✖","color":"red"}'}
+execute unless entity @e[type=marker,name="✔"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✔","color":"green"}'}
+execute unless entity @e[type=marker,name="✖"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✖","color":"red"}'}
 
 #Bossbar
 bossbar add filling_lava ""
