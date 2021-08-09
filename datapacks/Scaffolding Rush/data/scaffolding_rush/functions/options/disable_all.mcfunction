@@ -14,3 +14,6 @@ scoreboard players reset @a opt_fall_damage
 scoreboard players reset @a opt_random_team
 scoreboard players reset @a opt_team_number
 scoreboard players reset @a opt_resp_delay
+scoreboard players reset @a opt_public
+scoreboard players reset @a opt_vil_no
+scoreboard players reset @a opt_vil_killable

@@ -14,3 +14,6 @@ scoreboard players enable @a opt_fall_damage
 scoreboard players enable @a opt_random_team
 scoreboard players enable @a opt_team_number
 scoreboard players enable @a opt_resp_delay
+scoreboard players enable @a opt_public
+scoreboard players enable @a opt_vil_no
+scoreboard players enable @a opt_vil_killable
