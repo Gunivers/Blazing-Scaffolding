@@ -34,7 +34,9 @@ team modify yellow seeFriendlyInvisibles false
 scoreboard players add GameId global 1
 scoreboard players operation @a gameId = GameId global
 
-function scaffolding_rush:options/activate_all
+execute if score Admin options matches 1 as @a[tag=!admin] run function scaffolding_rush:options/disable_all
+execute if score Admin options matches 0 run function scaffolding_rush:options/activate_all
+scoreboard players enable @a opt_admin
 
 function scaffolding_rush:options/labels
 

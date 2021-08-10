@@ -7,7 +7,7 @@ execute if score Admin options matches 1.. run clear @a[tag=!admin] minecraft:wr
 
 execute if score Admin options matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"closed","color":"red"}]
 execute if score Admin options matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"open","color":"green"}]
-execute if score Admin options matches 1.. run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"selector":"@r","color":"gold"},{"text":" is now the administrator","color":"gray"}]
+execute if score Admin options matches 1.. run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"selector":"@a[tag=admin]","color":"gold"},{"text":" is now the administrator","color":"gray"}]
 
 scoreboard players set @a opt_admin 0
 execute if score Admin options matches 1 as @a[tag=!admin] run function scaffolding_rush:options/disable_all
