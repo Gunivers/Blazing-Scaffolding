@@ -56,3 +56,9 @@ execute as @e[type=marker,name="✖"] run scoreboard players set @s opt_random_t
 
 execute if score RandomTeam options matches 1 as @e[type=marker,name="✔"] run scoreboard players set @s opt_random_team 1
 execute if score RandomTeam options matches 0 as @e[type=marker,name="✖"] run scoreboard players set @s opt_random_team 1
+
+execute as @e[type=marker,name="✔"] run scoreboard players set @s opt_admin 0
+execute as @e[type=marker,name="✖"] run scoreboard players set @s opt_admin 0
+
+execute if score UseGravel options matches 1 as @e[type=marker,name="✔"] run scoreboard players set @s opt_admin 1
+execute if score UseGravel options matches 0 as @e[type=marker,name="✖"] run scoreboard players set @s opt_admin 1
