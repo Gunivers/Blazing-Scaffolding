@@ -17,3 +17,5 @@ scoreboard players reset @s opt_resp_delay
 scoreboard players reset @s opt_admin
 scoreboard players reset @s opt_vil_no
 scoreboard players reset @s opt_vil_killable
+scoreboard players reset @s Reset
+scoreboard players reset @s StartGame
