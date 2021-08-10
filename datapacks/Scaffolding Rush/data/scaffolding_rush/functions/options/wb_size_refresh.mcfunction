@@ -7,9 +7,9 @@ scoreboard players operation WBAddTemp options *= #10 global
 scoreboard players operation WBSize options += WBAddTemp options
 
 # check 
-execute unless score WBSize options matches 20..178 run scoreboard players set WBAddTemp options 0
-execute if score WBSize options matches ..19 run worldborder set 19 1
-execute if score WBSize options matches ..19 run scoreboard players set WBSize options 19
+execute unless score WBSize options matches 25..165 run scoreboard players set WBAddTemp options 0
+execute if score WBSize options matches ..25 run worldborder set 25 1
+execute if score WBSize options matches ..25 run scoreboard players set WBSize options 25
 execute if score WBSize options matches 165.. run worldborder set 165 1
 execute if score WBSize options matches 165.. run scoreboard players set WBSize options 165
 
