@@ -71,3 +71,5 @@ execute if score GameEnd global matches 0 as @a[team=random] run scoreboard play
 execute as @e[type=villager,nbt=!{Age:0}] run function scaffolding_rush:clean_kill
 
 advancement revoke @a everything
+
+execute unless entity @a[tag=admin] if score Admin options matches 1 run function scaffolding_rush:options/admin

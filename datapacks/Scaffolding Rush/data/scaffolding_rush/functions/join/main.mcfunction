@@ -1,9 +1,8 @@
 scoreboard players reset @s leave
 execute if entity @a[tag=admin] run tag @s remove admin
+tag @a remove Has_egg
 clear @s
 team leave @s
-
-execute unless entity @a[tag=admin] if score Admin options matches 1 run function scaffolding_rush:options/admin
 
 execute as @s if entity @a[tag=admin] run function scaffolding_rush:options/disable_all
 
