@@ -10,6 +10,7 @@ execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:reset
 #Lobby main
 execute if score GameLobby global matches 1 run function scaffolding_rush:lobby/main
 
+execute as @a[scores={leave=1..}] run function scaffolding_rush:join/main
 execute as @a unless score @s gameId = GameId global as @s run function scaffolding_rush:join/main
 
 #villager placed

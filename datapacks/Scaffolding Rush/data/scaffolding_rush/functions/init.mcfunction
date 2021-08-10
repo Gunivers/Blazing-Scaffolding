@@ -33,6 +33,7 @@ scoreboard objectives add opt_randomteam trigger
 scoreboard objectives add opt_team_number trigger
 
 #internal values
+scoreboard objectives add leave minecraft.custom:minecraft.leave_game
 scoreboard objectives add global dummy
 scoreboard objectives add options dummy
 scoreboard objectives add XEntity dummy
