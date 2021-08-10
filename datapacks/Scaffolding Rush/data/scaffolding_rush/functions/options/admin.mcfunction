@@ -3,7 +3,7 @@ execute as @a[tag=!admin,scores={opt_admin=1}] if score Admin options matches 1 
 
 execute if score Admin options matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"closed","color":"red"}]
 execute if score Admin options matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"open","color":"green"}]
-execute if score Admin options matches 1.. run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"selector":"@a[tag=admin]","color":"gold"},{"text":" is now the administrator","color":"gray"}]
+execute if score Admin options matches 1.. run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"selector":"@a[scores={opt_admin=1}]","color":"gold"},{"text":" is now the administrator","color":"gray"}]
 
 execute if score Admin options matches 1.. run scoreboard players set Admin options 1
 
