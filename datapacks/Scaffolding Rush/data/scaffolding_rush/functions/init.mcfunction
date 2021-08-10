@@ -26,8 +26,7 @@ scoreboard objectives add opt_team_egg trigger
 scoreboard objectives add opt_wb_size_add trigger
 scoreboard objectives add opt_regen trigger
 scoreboard objectives add opt_fall_damage trigger
-scoreboard objectives add opt_vil_no trigger
-scoreboard objectives add opt_vil_killable trigger
+scoreboard objectives add opt_villager trigger
 
 scoreboard objectives add opt_admin trigger
 scoreboard objectives add opt_randomteam trigger

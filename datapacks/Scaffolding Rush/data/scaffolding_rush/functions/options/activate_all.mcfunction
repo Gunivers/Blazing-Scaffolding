@@ -15,7 +15,6 @@ scoreboard players enable @s opt_random_team
 scoreboard players enable @s opt_team_number
 scoreboard players enable @s opt_resp_delay
 scoreboard players enable @s opt_admin
-scoreboard players enable @s opt_vil_no
-scoreboard players enable @s opt_vil_killable
+scoreboard players enable @s opt_villager
 scoreboard players enable @s Reset
 scoreboard players enable @s StartGame
