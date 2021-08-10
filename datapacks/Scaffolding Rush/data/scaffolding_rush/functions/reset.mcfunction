@@ -52,8 +52,8 @@ advancement revoke @a from scaffolding_rush:replenish
 function scaffolding_rush:lobby/load
 execute as @a run function scaffolding_rush:lobby/give_items
 
-scoreboard players set @a StartGame 0
-scoreboard players set @a Reset 0
+scoreboard players reset @a StartGame
+scoreboard players reset @a Reset
 
 execute as @a run function scaffolding_rush:options/disable_all
 execute if score Admin options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
