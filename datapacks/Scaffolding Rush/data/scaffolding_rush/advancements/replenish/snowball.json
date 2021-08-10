@@ -4,7 +4,9 @@
       "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
-          "tag": "minecraft:snowball"
+          "items": [
+            "minecraft:snowball"
+          ]
         }
       }
     }
