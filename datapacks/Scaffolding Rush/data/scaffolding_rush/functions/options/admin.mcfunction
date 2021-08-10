@@ -10,8 +10,9 @@ execute if score Admin options matches 0 run tellraw @a ["",{"text":"[SR] ","col
 execute if score Admin options matches 1.. run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"selector":"@a[tag=admin]","color":"gold"},{"text":" is now the administrator","color":"gray"}]
 
 scoreboard players set @a opt_admin 0
-execute if score Admin options matches 1 as @a[tag=!admin] run function scaffolding_rush:options/disable_all
-execute if score Admin options matches 0 run function scaffolding_rush:options/activate_all
+execute as @a run function scaffolding_rush:options/disable_all
+execute if score Admin options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
+execute if score Admin options matches 0 as @a run function scaffolding_rush:options/activate_all
 scoreboard players enable @a opt_admin
 
 function scaffolding_rush:options/refresh
