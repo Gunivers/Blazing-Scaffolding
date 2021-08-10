@@ -1,7 +1,7 @@
 {
   "criteria": {
     "snowball_thrown": {
-      "trigger": "minecraft:used_item",
+      "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
           "tag": "minecraft:snowball"
