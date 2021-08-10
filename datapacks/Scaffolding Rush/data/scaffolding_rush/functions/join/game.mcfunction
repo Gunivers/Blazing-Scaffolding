@@ -1,3 +1,4 @@
+execute if entity @a[tag=admin] run tag @s remove admin
 gamemode spectator
 team leave @s
 clear @s

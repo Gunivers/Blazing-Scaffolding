@@ -1,3 +1,4 @@
+execute if entity @a[tag=admin] run tag @s remove admin
 gamemode survival
 teleport @s 0 4 0 0 0
 clear @s
