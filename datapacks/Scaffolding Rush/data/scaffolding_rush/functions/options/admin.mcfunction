@@ -1,4 +1,4 @@
-execute store success score Admin options if score Admin options matches 0
+execute store success score Admin options unless score Admin options matches 1..
 execute as @a[tag=!admin,scores={opt_admin=1}] if score Admin options matches 1 run scoreboard players set Admin options 2
 
 execute if score Admin options matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"closed","color":"red"}]
