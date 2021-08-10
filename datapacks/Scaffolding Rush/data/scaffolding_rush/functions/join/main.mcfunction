@@ -3,6 +3,9 @@ execute if entity @a[tag=admin] run tag @s remove admin
 clear @s
 team leave @s
 
+execute unless entity @a[tag=admin] run scoreboard players set Admin options 1
+execute unless entity @a[tag=admin] run function scaffolding_rush:options/admin
+
 execute as @s if entity @a[tag=admin] run function scaffolding_rush:options/disable_all
 
 execute unless score @s gameId matches 0.. run function scaffolding_rush:join/new_player
