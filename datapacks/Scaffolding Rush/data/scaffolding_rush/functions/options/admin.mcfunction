@@ -11,7 +11,8 @@ execute if score Admin options matches 1.. run tellraw @a ["",{"text":"[SR] ","c
 
 scoreboard players set @a opt_admin 0
 execute as @a run function scaffolding_rush:options/disable_all
-execute if score Admin options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
+execute if score Admin options matches 1.. as @a[tag=admin] run function scaffolding_rush:options/activate_all
+execute if score Admin options matches 1.. run setblock 0 5 7 cave_air
 execute if score Admin options matches 0 as @a run function scaffolding_rush:options/activate_all
 scoreboard players enable @a opt_admin
 

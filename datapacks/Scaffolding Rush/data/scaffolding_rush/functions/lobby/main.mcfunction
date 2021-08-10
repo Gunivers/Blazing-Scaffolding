@@ -25,7 +25,7 @@ execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=
 #startbutton
 execute if score RemainingTeam global matches 2.. if block 0 5 7 minecraft:spruce_button[powered=true] run function scaffolding_rush:game/countdown
 execute if score RemainingTeam global matches ..1 if block 0 5 7 minecraft:spruce_button[powered=true] run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Not enough teams","color":"red"}]
-execute unless block 0 5 7 minecraft:cave_air unless block 0 5 7 minecraft:spruce_button[powered=false] run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
+execute if score Admin options matches 1.. unless block 0 5 7 minecraft:cave_air unless block 0 5 7 minecraft:spruce_button[powered=false] run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
 
 #button place base
 execute positioned 0 6 7 run kill @e[type=minecraft:armor_stand,distance=..1]
