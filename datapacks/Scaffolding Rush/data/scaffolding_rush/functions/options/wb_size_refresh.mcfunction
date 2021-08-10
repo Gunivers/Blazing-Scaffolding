@@ -33,10 +33,10 @@ scoreboard players set -WBbyTwo global 0
 scoreboard players operation -WBbyTwo global -= WBbyTwo global
 
 # check for bases
-execute as @e[type=!minecraft:player] if score @s XEntity > WBbyTwo global run kill @s
-execute as @e[type=!minecraft:player] if score @s XEntity < -WBbyTwo global run kill @s
-execute as @e[type=!minecraft:player] if score @s ZEntity > WBbyTwo global run kill @s
-execute as @e[type=!minecraft:player] if score @s ZEntity < -WBbyTwo global run kill @s
+execute as @e[type=!minecraft:player] if score @s XEntity > WBbyTwo global run function scaffolding_rush:clean_kill
+execute as @e[type=!minecraft:player] if score @s XEntity < -WBbyTwo global run function scaffolding_rush:clean_kill
+execute as @e[type=!minecraft:player] if score @s ZEntity > WBbyTwo global run function scaffolding_rush:clean_kill
+execute as @e[type=!minecraft:player] if score @s ZEntity < -WBbyTwo global run function scaffolding_rush:clean_kill
 
 # reset values
 scoreboard players set WBAddTemp options 0
