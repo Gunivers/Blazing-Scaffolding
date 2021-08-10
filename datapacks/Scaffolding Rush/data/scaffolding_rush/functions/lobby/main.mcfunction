@@ -23,7 +23,7 @@ execute as @e[name="How to play"] at @s as @a[distance=..3,tag=!howtoplay] run f
 execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=..3] run tag @s remove howtoplay 
 
 #startbutton
-execute if score Admin options matches 1.. run setblock 0 5 7 air replace
+execute if score Admin options matches 1 run setblock 0 5 7 air replace
 execute if block 0 5 7 minecraft:spruce_button[powered=true] run function scaffolding_rush:game/launch
 execute if score RemainingTeam global matches ..1 if block 0 5 7 minecraft:spruce_button[powered=true] run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Not enough teams","color":"red"}]
 execute if score Admin options matches 0 unless block 0 5 7 minecraft:cave_air unless block 0 5 7 minecraft:spruce_button[powered=false] run setblock 0 5 7 minecraft:spruce_button[face=floor] replace

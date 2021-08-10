@@ -34,7 +34,7 @@ schedule function scaffolding_rush:game/start 10s
 
 #disable trigers
 execute as @a run function scaffolding_rush:options/disable_all
-execute if score Admin options matches 1.. as @a[tag=admin] run scoreboard players enable @s Reset
+execute if score Admin options matches 1 as @a[tag=admin] run scoreboard players enable @s Reset
 execute if score Admin options matches 0 run scoreboard players enable @a Reset
 
 #get lavaspeed timer in tics
