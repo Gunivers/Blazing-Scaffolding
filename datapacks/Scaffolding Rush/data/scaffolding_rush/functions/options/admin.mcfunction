@@ -13,8 +13,12 @@ execute if score Admin options matches 1 run clear @a[tag=!admin] minecraft:writ
 
 scoreboard players set @a opt_admin 0
 execute as @a run function scaffolding_rush:options/disable_all
-execute if score Admin options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
-execute if score Admin options matches 0 as @a run function scaffolding_rush:options/activate_all
+execute if score GameLobby global matches 1 if score Admin options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
+execute if score GameLobby global matches 1 if score Admin options matches 0 as @a run function scaffolding_rush:options/activate_all
+execute if score GameRunning global matches 1 as @a run function scaffolding_rush:options/disable_all
+execute if score GameRunning global matches 1 if score Admin options matches 1 as @a[tag=admin] run scoreboard players enable @s Reset
+execute if score GameRunning global matches 1 if score Admin options matches 0 run scoreboard players enable @a Reset
+
 scoreboard players enable @a opt_admin
 
-function scaffolding_rush:options/refresh
+execute if score GameLobby global matches 1 run function scaffolding_rush:options/refresh
