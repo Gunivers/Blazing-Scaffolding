@@ -29,7 +29,7 @@ scoreboard objectives add opt_fall_damage trigger
 scoreboard objectives add opt_vil_no trigger
 scoreboard objectives add opt_vil_killable trigger
 
-scoreboard objectives add opt_public trigger
+scoreboard objectives add opt_admin trigger
 scoreboard objectives add opt_randomteam trigger
 scoreboard objectives add opt_team_number trigger
 

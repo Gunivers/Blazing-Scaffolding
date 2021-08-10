@@ -33,7 +33,7 @@ schedule function scaffolding_rush:broadcast/1s 9s
 schedule function scaffolding_rush:game/start 10s
 
 #disable trigers
-function scaffolding_rush:options/disable_all
+execute as @a run function scaffolding_rush:options/disable_all
 
 #get lavaspeed timer in tics
 scoreboard players operation LavaSpeedTics options = LavaSpeed options
