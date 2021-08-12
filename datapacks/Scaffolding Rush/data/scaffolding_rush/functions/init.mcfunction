@@ -74,6 +74,7 @@ execute unless score RandomTeam options matches 0..1 run scoreboard players set 
 
 execute unless score Regen options matches 0.. run scoreboard players set Regen options 1
 execute unless score FallDamage options matches 0.. run scoreboard players set FallDamage options 0
+execute unless score Admin options matches 0.. run scoreboard players set Admin options 0
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish
