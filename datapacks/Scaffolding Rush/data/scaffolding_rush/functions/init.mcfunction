@@ -72,6 +72,7 @@ execute unless score FallDamage options matches 0.. run scoreboard players set F
 execute unless score Admin options matches 0.. run scoreboard players set Admin options 0
 execute unless score TeamNumber options matches 0.. run scoreboard players set TeamNumber options 2
 execute unless score Villager options matches 0.. run scoreboard players set Villager options 0
+execute unless score RespawnDelay options matches 10 run scoreboard players set RespawnDelay options 10
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish

@@ -15,7 +15,6 @@ clear @s
 
 tag @s[gamemode=!spectator] add Respawning
 
-
 scoreboard players set @s[gamemode=spectator] killed 0
 scoreboard players operation @s[gamemode=!spectator] killed = RespawnDelay options
 execute as @s[gamemode=!spectator] run schedule function scaffolding_rush:died/loop_tp 1t
