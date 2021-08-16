@@ -1,3 +1,6 @@
+execute unless entity @e[type=marker,name="ScR_LavaLevel"] run summon minecraft:marker 0 1 0 {CustomName:'{"text":"ScR_LavaLevel"}'}
+execute unless entity @e[type=marker,name="ScR_BuildLimit"] run summon minecraft:marker 0 1 0 {CustomName:'{"text":"ScR_BuildLimit"}'}
+execute unless entity @e[type=marker,name="ScR_Build"] run summon minecraft:marker 0 1 0 {CustomName:'{"text":"ScR_Build"}'}
 
 execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
