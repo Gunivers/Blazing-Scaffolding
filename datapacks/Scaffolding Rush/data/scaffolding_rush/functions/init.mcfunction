@@ -148,9 +148,9 @@ bossbar set minecraft:filling_lava color red
 
 #debug / à changer
 #say [SR] init done (reset in progress)
-playsound ui.toast.in ambient @a
-function scaffolding_rush:reset
-say [SR] reset done
-playsound ui.toast.out ambient @a
+#playsound ui.toast.in ambient @a
+#playsound ui.toast.out ambient @a
 #teleport @a 0 3 0 0 0
 #gamerule sendCommandFeedback true
+
+function scaffolding_rush:reset

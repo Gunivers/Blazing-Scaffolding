@@ -66,3 +66,5 @@ scoreboard players enable @a opt_admin
 bossbar set minecraft:filling_lava visible false
 
 effect give @a minecraft:jump_boost 5 255 true
+
+tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gray"}]
