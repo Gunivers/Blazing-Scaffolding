@@ -24,9 +24,7 @@ scoreboard players set GameLobby global 1
 scoreboard players set GameEnd global 0
 scoreboard players set GameRunning global 0
 scoreboard players set GameLoading global 0
-scoreboard players set WBSize options 64
 scoreboard players set WBAddTemp options 0
-worldborder set 64 1
 function scaffolding_rush:options/wb_size_refresh
 
 team modify blue seeFriendlyInvisibles false
