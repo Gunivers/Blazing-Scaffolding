@@ -93,7 +93,7 @@ team modify red friendlyFire false
 team modify blue friendlyFire false
 team modify yellow friendlyFire false
 team modify green friendlyFire false
-team modify random friendlyFire false
+team modify random friendlyFire true
 
 #worldborder
 worldborder warning distance 1
@@ -139,8 +139,8 @@ gamerule universalAnger false
 
 setworldspawn 0 4 0
 
-execute unless entity @e[type=marker,name="✔"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✔","color":"green"}'}
-execute unless entity @e[type=marker,name="✖"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✖","color":"red"}'}
+#execute unless entity @e[type=marker,name="✔"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✔","color":"green"}'}
+#execute unless entity @e[type=marker,name="✖"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✖","color":"red"}'}
 
 #Bossbar
 bossbar add filling_lava ""

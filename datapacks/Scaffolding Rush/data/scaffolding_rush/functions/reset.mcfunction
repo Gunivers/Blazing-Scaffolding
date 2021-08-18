@@ -37,6 +37,7 @@ scoreboard players operation @a gameId = GameId global
 
 function scaffolding_rush:options/labels
 
+tag @a remove TeamEliminated
 tag @a remove has_egg
 tag @a remove VillagerRecup
 tag @a remove Respawning
@@ -61,7 +62,7 @@ execute if score Admin options matches 1 as @a[tag=admin] run function scaffoldi
 execute if score Admin options matches 0 as @a run function scaffolding_rush:options/activate_all
 scoreboard players enable @a opt_admin
 
-tag @a remove TeamEliminated
-
 #Bossbar
 bossbar set minecraft:filling_lava visible false
+
+effect give @a minecraft:jump_boost 5 255 true
