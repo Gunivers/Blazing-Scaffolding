@@ -13,7 +13,7 @@ execute if score RandomTeam options matches 1 run function scaffolding_rush:team
 
 function scaffolding_rush:broadcast/10s
 
-schedule function scaffolding_rush:clear/launch 2s
+function scaffolding_rush:clear/launch
 
 kill @e[tag=lobbyText]
 kill @e[type=falling_block]

@@ -3,7 +3,7 @@ execute as @a[gamemode=!spectator] at @s if score @s XEntity > WBbyTwo global ru
 execute as @a[gamemode=!spectator] at @s if score @s XEntity < -WBbyTwo global run tp @s ~2 ~ ~ 
 
 #check Y
-execute as @a at @s if score @s YEntity < #0 global run tp @s ~ ~2 ~
+execute as @a at @s if score @s YEntity < #0 global run tp @s ~ 3 ~
 
 #check Z
 execute as @a[gamemode=!spectator] at @s if score @s ZEntity > WBbyTwo global run tp @s ~ ~ ~-2

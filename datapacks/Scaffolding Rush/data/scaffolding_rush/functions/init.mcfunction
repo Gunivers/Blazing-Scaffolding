@@ -154,3 +154,5 @@ bossbar set minecraft:filling_lava color red
 #gamerule sendCommandFeedback true
 
 function scaffolding_rush:reset
+function scaffolding_rush:clear/launch
+schedule function scaffolding_rush:lobby/load 52t

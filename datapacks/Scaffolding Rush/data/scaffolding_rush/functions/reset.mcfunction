@@ -6,10 +6,8 @@ execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] "
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 0 if score GameRunning global matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
 
-function scaffolding_rush:clear/launch
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 
-schedule clear scaffolding_rush:clear/launch
 schedule clear scaffolding_rush:team/create_base/create
 schedule clear scaffolding_rush:broadcast/5s
 schedule clear scaffolding_rush:broadcast/4s
@@ -51,7 +49,6 @@ spawnpoint @s 0 4 0
 #advancement replenish
 advancement revoke @a from scaffolding_rush:replenish
 
-function scaffolding_rush:lobby/load
 execute as @a run function scaffolding_rush:lobby/give_items
 
 scoreboard players reset @a StartGame

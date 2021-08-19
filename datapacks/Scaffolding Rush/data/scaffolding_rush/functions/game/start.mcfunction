@@ -1,3 +1,5 @@
+tp @e[type=marker,name="ScR_LavaLevel",limit=1] ~ 2 ~
+
 tag @a remove TeamEliminated
 tag @a remove has_egg
 scoreboard players set GameRunning global 1
