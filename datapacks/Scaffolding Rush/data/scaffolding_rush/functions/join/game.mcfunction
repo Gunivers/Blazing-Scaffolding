@@ -1,4 +1,5 @@
 gamemode spectator
+team leave @s
 
 tellraw @s ["",{"text":"[SR]","color":"gold"},{"text":" A game is already running. You can join a game after they finish it !\n\n ","color":"gray"}]
 

@@ -1,7 +1,7 @@
-execute if entity @a[team=blue] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Blue"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Blue"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
-execute if entity @a[team=green] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Green"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Green"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
-execute if entity @a[team=red] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Red"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Red"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
-execute if entity @a[team=yellow] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Yellow"] run summon minecraft:armor_stand 0 0 0 {NoGravity:1b,CustomName:'{"text":"Yellow"}',Tags:["baseTeam","spread"],Invulnerable:1b,Invisible:1b}
+execute if entity @a[team=blue] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Blue"] run summon minecraft:armor_stand 0 0 0 {NoGravity: 1b, CustomName: '{"text":"Blue"}', Tags: ["baseTeam", "spread"], Invulnerable: 1b, Invisible: 1b}
+execute if entity @a[team=green] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Green"] run summon minecraft:armor_stand 0 0 0 {NoGravity: 1b, CustomName: '{"text":"Green"}', Tags: ["baseTeam", "spread"], Invulnerable: 1b, Invisible: 1b}
+execute if entity @a[team=red] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Red"] run summon minecraft:armor_stand 0 0 0 {NoGravity: 1b, CustomName: '{"text":"Red"}', Tags: ["baseTeam", "spread"], Invulnerable: 1b, Invisible: 1b}
+execute if entity @a[team=yellow] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Yellow"] run summon minecraft:armor_stand 0 0 0 {NoGravity: 1b, CustomName: '{"text":"Yellow"}', Tags: ["baseTeam", "spread"], Invulnerable: 1b, Invisible: 1b}
 
 execute positioned 0 0 0 if score WBSize options matches 15..19 run spreadplayers 0 0 5 7 false @e[type=minecraft:armor_stand,tag=spread]
 execute positioned 0 0 0 if score WBSize options matches 20..34 run spreadplayers 0 0 7 10 false @e[type=minecraft:armor_stand,tag=spread]
@@ -21,6 +21,7 @@ execute at @e[tag=baseTeam,name="Red",limit=1] run teleport @a[team=red] ~ 4 ~
 execute at @e[tag=baseTeam,name="Yellow",limit=1] run teleport @a[team=yellow] ~ 4 ~
 
 kill @e[tag=baseTeam]
+kill @e[tag=LobbyBase]
 execute as @a run function scaffolding_rush:lobby/base_egg/clear_egg
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
