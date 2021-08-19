@@ -21,7 +21,7 @@ execute at @e[tag=baseTeam,name="Red",limit=1] run teleport @a[team=red] ~ 4 ~
 execute at @e[tag=baseTeam,name="Yellow",limit=1] run teleport @a[team=yellow] ~ 4 ~
 
 kill @e[tag=baseTeam]
-kill @e[tag=LobbyBase]
+execute as @e[type=villager,tag=LobbyBase] run function scaffolding_rush:clean_kill
 execute as @a run function scaffolding_rush:lobby/base_egg/clear_egg
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit

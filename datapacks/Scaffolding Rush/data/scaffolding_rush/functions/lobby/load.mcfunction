@@ -1,5 +1,5 @@
 kill @e[tag=baseTeam]
-kill @e[tag=LobbyBase]
+execute as @e[type=villager,tag=LobbyBase] run function scaffolding_rush:clean_kill
 
 execute unless entity @e[type=minecraft:area_effect_cloud,tag=lobbyText,name="Start Game"] run summon area_effect_cloud 0 5 7 {CustomName: '{"text":"Start Game","bold":true}', Tags: ["lobbyText"], CustomNameVisible: 1, Age: -2147483648, Duration: -1, WaitTime: -2147483648}
 execute unless entity @e[type=minecraft:area_effect_cloud,tag=lobbyText,name="How to play"] run summon area_effect_cloud 2 4.7 11 {CustomName: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], CustomNameVisible: 1, Age: -2147483648, Duration: -1, WaitTime: -2147483648}
