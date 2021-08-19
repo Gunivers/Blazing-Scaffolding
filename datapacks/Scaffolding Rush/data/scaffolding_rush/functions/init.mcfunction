@@ -23,7 +23,7 @@ scoreboard objectives add opt_fall_damage trigger
 scoreboard objectives add opt_villager trigger
 
 scoreboard objectives add opt_admin trigger
-scoreboard objectives add opt_randomteam trigger
+scoreboard objectives add opt_random_team trigger
 scoreboard objectives add opt_team_number trigger
 
 #internal values
@@ -51,8 +51,8 @@ execute unless score GameId global matches 0.. run scoreboard players set GameId
 
 
 #Configuration scores
-execute unless score LavaSpeed options matches 1.. run scoreboard players set LavaSpeed options 10
-execute unless score BuildHeight options matches 2.. run scoreboard players set BuildHeight options 10
+execute unless score LavaSpeed options matches 1.. run scoreboard players set LavaSpeed options 7
+execute unless score BuildHeight options matches 2.. run scoreboard players set BuildHeight options 20
 execute unless score VillagerForgiveness options matches 0.. run scoreboard players set VillagerForgiveness options 1
 execute unless score VillagerRespawn options matches 0.. run scoreboard players set VillagerRespawn options 30
 execute unless score UseGravel options matches 0.. run scoreboard players set UseGravel options 1
@@ -67,6 +67,7 @@ execute unless score Admin options matches 0.. run scoreboard players set Admin 
 execute unless score TeamNumber options matches 0.. run scoreboard players set TeamNumber options 2
 execute unless score Villager options matches 0.. run scoreboard players set Villager options 0
 execute unless score RespawnDelay options matches 10 run scoreboard players set RespawnDelay options 10
+execute unless score WBSize options matches 25..165 run scoreboard players set WBSize options 95
 
 #advancement replenish
 advancement revoke @a from loumardes:replenish
@@ -120,7 +121,8 @@ gamerule doTileDrops false
 gamerule doTraderSpawning false
 gamerule doWeatherCycle false
 gamerule drowningDamage true
-gamerule fallDamage false
+execute if score FallDamage options matches 0 run gamerule fallDamage false
+execute unless score FallDamage options matches 0 run gamerule fallDamage true
 gamerule fireDamage true
 gamerule forgiveDeadPlayers true
 gamerule keepInventory true
@@ -128,7 +130,8 @@ gamerule logAdminCommands true
 gamerule maxCommandChainLength 65536
 gamerule maxEntityCramming 24
 gamerule mobGriefing true
-gamerule naturalRegeneration true
+execute if score Regen options matches 0 run gamerule naturalRegeneration false
+execute unless score Regen options matches 0 run gamerule naturalRegeneration true
 gamerule randomTickSpeed 3
 gamerule reducedDebugInfo false
 gamerule sendCommandFeedback false
