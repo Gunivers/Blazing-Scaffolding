@@ -1,6 +1,9 @@
 gamemode adventure @a[team=!]
-
+gamemode spectator @a[team=]
 clear @a
+effect clear @a
+effect give @a minecraft:instant_health 1 100 true
+
 scoreboard players set GameLobby global 0
 scoreboard players set GameLoading global 1
 
@@ -19,7 +22,6 @@ kill @e[tag=lobbyText]
 kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]
-gamemode spectator @a[team=]
 
 schedule function scaffolding_rush:team/create_base/create 4s
 
