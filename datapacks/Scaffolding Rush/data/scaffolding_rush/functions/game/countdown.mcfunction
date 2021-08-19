@@ -16,6 +16,7 @@ execute if score RandomTeam options matches 1 run function scaffolding_rush:team
 
 function scaffolding_rush:broadcast/10s
 
+teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 0 270 0
 function scaffolding_rush:clear/launch
 
 kill @e[tag=lobbyText]

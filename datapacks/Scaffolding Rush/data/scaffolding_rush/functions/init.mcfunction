@@ -65,7 +65,7 @@ execute unless score Regen options matches 0.. run scoreboard players set Regen 
 execute unless score FallDamage options matches 0.. run scoreboard players set FallDamage options 0
 execute unless score Admin options matches 0.. run scoreboard players set Admin options 0
 execute unless score TeamNumber options matches 0.. run scoreboard players set TeamNumber options 2
-execute unless score Villager options matches 0.. run scoreboard players set Villager options 0
+execute unless score Villager options matches 0.. run scoreboard players set Villager options 1
 execute unless score RespawnDelay options matches 10 run scoreboard players set RespawnDelay options 10
 execute unless score WBSize options matches 25..165 run scoreboard players set WBSize options 95
 
@@ -156,6 +156,4 @@ bossbar set minecraft:filling_lava color red
 #teleport @a 0 3 0 0 0
 #gamerule sendCommandFeedback true
 
-function scaffolding_rush:reset
-function scaffolding_rush:clear/launch
-schedule function scaffolding_rush:lobby/load 52t
+function scaffolding_rush:reset_with_clear
