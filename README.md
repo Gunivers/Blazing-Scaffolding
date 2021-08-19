@@ -12,7 +12,7 @@ This work is licensed under the Creative Commons Attribution-NonCommercial-Share
 
 
 # Team : 
- - Leîroff : concept idea
+ - Leirof : concept idea
  - Loumardes : dev, Minimal Viable Product
  - Theaustudio : dev, trailer
  - Laizo : dev
