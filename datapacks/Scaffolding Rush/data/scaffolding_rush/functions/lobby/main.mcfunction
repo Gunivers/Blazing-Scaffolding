@@ -16,7 +16,7 @@ execute as @a[team=!] at @e[type=minecraft:area_effect_cloud,name="Spectate"] as
 execute as @a[team=!random] at @e[type=minecraft:area_effect_cloud,name="Join Game"] as @s[distance=..1.5] run function scaffolding_rush:team/random
 
 #base
-execute unless entity @e[type=minecraft:item,nbt={Item:{tag:{EntityTag:{Tags:["baseTeam"]}}}}] if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
+execute if entity @e[type=minecraft:item,nbt={Item:{tag:{EntityTag:{Tags:["baseTeam"]}}}}] if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
 
 #howtoplay
 execute as @e[name="How to play"] at @s as @a[distance=..3,tag=!howtoplay] run function scaffolding_rush:lobby/how_to_play
