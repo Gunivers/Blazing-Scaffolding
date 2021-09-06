@@ -1,5 +1,4 @@
-
 item replace entity @a[advancements={scaffolding_rush:replenish/scaffolding=true}] weapon.mainhand with air
-item replace entity @a[advancements={scaffolding_rush:replenish/scaffolding=true}] weapon.mainhand with minecraft:scaffolding
+item replace entity @a[advancements={scaffolding_rush:replenish/scaffolding=true}] weapon.mainhand with minecraft:scaffolding{HideFlags: 24, CanPlaceOn: ["minecraft:scaffolding", "#scaffolding_rush:notowerlobby", "#scaffolding_rush:tower"], CanDestroy: ["minecraft:scaffolding", "#scaffolding_rush:lobby", "#scaffolding_rush:tower"]}
 
 advancement revoke @a only scaffolding_rush:replenish/scaffolding
