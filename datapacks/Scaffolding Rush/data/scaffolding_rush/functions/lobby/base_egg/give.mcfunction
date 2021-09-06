@@ -1,4 +1,3 @@
-kill @e[type=minecraft:item]
 execute if entity @e[name="Blue",tag=baseTeam] run clear @a squid_spawn_egg
 execute as @a[team=blue] unless entity @e[name="Blue",tag=baseTeam] as @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg"}]}] run function scaffolding_rush:lobby/base_egg/blue
 execute if entity @e[name="Green",tag=baseTeam] run clear @a slime_spawn_egg
