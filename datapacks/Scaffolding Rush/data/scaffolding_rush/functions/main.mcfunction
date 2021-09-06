@@ -24,24 +24,9 @@ execute as @a[scores={yellowPlaced=1..}] run function scaffolding_rush:villager/
 execute if score GameRunning global matches 1 run function scaffolding_rush:game/main
 
 #gravel tower
-execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:gravel",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:blue_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:lime_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:red_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:yellow_concrete_powder",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={Inventory:[{id:"minecraft:ghast_spawn_egg",Slot:-106b}]},nbt=!{SelectedItem:{}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:gravel"}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:blue_concrete_powder"}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:lime_concrete_powder"}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:red_concrete_powder"}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:yellow_concrete_powder"}}] run gamemode adventure
-execute as @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:ghast_spawn_egg"}}] run gamemode adventure
-execute if score GameLoading global matches 0 as @a[gamemode=adventure,nbt=!{SelectedItem:{id:"minecraft:gravel"}},nbt=!{SelectedItem:{id:"minecraft:blue_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:lime_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:red_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:yellow_concrete_powder"}},nbt=!{SelectedItem:{id:"minecraft:ghast_spawn_egg"}},nbt=!{Inventory:[{id:"minecraft:gravel",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:blue_concrete_powder",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:lime_concrete_powder",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:red_concrete_powder",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:yellow_concrete_powder",Slot:-106b}]},nbt=!{Inventory:[{id:"minecraft:ghast_spawn_egg",Slot:-106b}]}] run gamemode survival
-execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:scaffolding"}}] run gamemode survival
-execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:squid_spawn_egg"}}] run gamemode survival
-execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:slime_spawn_egg"}}] run gamemode survival
-execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:mooshroom_spawn_egg"}}] run gamemode survival
-execute as @a[gamemode=adventure,nbt={SelectedItem:{id:"minecraft:blaze_spawn_egg"}}] run gamemode survival
+item replace entity @a weapon.offhand with air
+execute as @s[nbt=!{SelectedItem: {}}] run gamemode survival
+execute as @s[nbt=!{SelectedItem: {}}] run gamemode adventure
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
@@ -58,13 +43,6 @@ execute as @e[type=item,tag=!processed] run function scaffolding_rush:item/catch
 #snowball
 execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:item/snowball
 kill @e[type=arrow,nbt={inGround: 1b}]
-
-#ghostblocks
-#bruteforce
-#execute at @a run clone ~-12 ~-4 ~-12 ~12 ~1 ~12 ~-12 ~-4 ~-12 replace force
-#delicate
-#execute at @e[type=falling_block, tag=!updated] run setblock ~ ~ ~ air
-#tag @e[type=falling_block, tag=!updated] add updated
 
 #player in teams
 execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0
