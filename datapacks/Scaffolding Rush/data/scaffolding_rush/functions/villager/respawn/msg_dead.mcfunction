@@ -2,7 +2,7 @@ execute if score VillagerForgiveness options matches 1 run tellraw @s ["",{"text
 
 execute if score VillagerForgiveness options matches 0 run tellraw @s ["",{"text":"[SR] ","color":"gold"},{"text":"Your villager has died, you can't respawn","color":"red"}]
 
-title @s times 0 3 2
+title @s times 0 60 40
 title @s title {"text":""}
 title @s subtitle [{"text":"Villager lost","color":"red","bold":"true"}]
 
