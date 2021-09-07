@@ -1,0 +1,1 @@
+tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Lobby loaded","color":"gray"}]

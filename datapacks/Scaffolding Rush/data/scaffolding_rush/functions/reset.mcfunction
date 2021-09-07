@@ -17,6 +17,7 @@ schedule clear scaffolding_rush:broadcast/2s
 schedule clear scaffolding_rush:broadcast/1s
 schedule clear scaffolding_rush:game/start
 schedule clear scaffolding_rush:lava/sound
+function scaffolding_rush:lava/global_rising/stop
 
 scoreboard players set LavaLevel global 2
 scoreboard players set GameLobby global 1
