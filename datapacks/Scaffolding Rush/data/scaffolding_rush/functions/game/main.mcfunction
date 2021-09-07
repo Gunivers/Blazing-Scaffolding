@@ -10,7 +10,7 @@ execute if score LavaCountdown global >= LavaSpeedTics options run scoreboard pl
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:lava/simulate
 execute as @e[type=villager,tag=!LobbyBase] at @s run function scaffolding_rush:lava/simulate
 
-execute as @e[type=marker,name="ScR_LavaLevel",limit=1] run particle lava ~ ~ ~ 160 0 160 1 20 normal
+execute as @e[type=marker,name="ScR_LavaLevel",limit=1] at @s run particle lava ~ ~ ~ 160 0 160 1 20 normal
 
 #bossbar
 execute store result bossbar filling_lava value run scoreboard players get LavaCountdown global
