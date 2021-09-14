@@ -1,2 +1,2 @@
-fill -90 1 -90 90 1 90 grass_block
-fill -90 0 -90 90 0 90 bedrock
+fill 910 1 910 910 1 910 grass_block
+fill 910 0 910 910 0 910 bedrock
