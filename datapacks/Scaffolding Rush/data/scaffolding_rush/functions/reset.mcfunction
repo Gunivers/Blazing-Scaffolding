@@ -1,4 +1,4 @@
-execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:clear/lobby
+worldborder center 0 0
 
 execute unless entity @e[type=marker,name="ScR_LavaLevel"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_LavaLevel"}'}
 execute unless entity @e[type=marker,name="ScR_BuildLimit"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_BuildLimit"}'}
@@ -73,3 +73,5 @@ tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gra
 
 
 execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
+
+execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:clear/lobby

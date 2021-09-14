@@ -159,4 +159,4 @@ bossbar set minecraft:filling_lava color red
 #teleport @a 0 3 0 0 0
 #gamerule sendCommandFeedback true
 
-function scaffolding_rush:reset_with_clear
+function scaffolding_rush:reset
