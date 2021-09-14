@@ -2,6 +2,9 @@ execute as @e[type=villager] run function scaffolding_rush:clean_kill
 kill @e[type=!player]
 
 fill -90 0 -90 90 0 90 bedrock
+fill 1090 0 1090 910 0 910 bedrock
+
+forceload add 1100 1100 900 900
 
 #trigger controls
 scoreboard objectives add StartGame trigger
