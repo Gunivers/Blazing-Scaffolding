@@ -18,3 +18,4 @@ bossbar set minecraft:filling_lava visible false
 function scaffolding_rush:lava/global_rising/stop
 
 execute as @a at @s run tp @s ~-1000 ~ ~-1000
+worldborder center 0 0
