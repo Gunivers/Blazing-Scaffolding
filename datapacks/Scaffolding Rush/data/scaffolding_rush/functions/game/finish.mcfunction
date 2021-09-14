@@ -3,7 +3,7 @@ scoreboard players set GameRunning global 0
 
 function scaffolding_rush:broadcast/finish
 
-execute at @e[type=marker,name="ScR_BuildLimit"] run teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 0 ~10 0
+execute at @e[type=marker,name="ScR_BuildLimit"] run teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 ~10 1000
 
 function scaffolding_rush:clear/launch
 schedule function scaffolding_rush:lobby/load 52t
@@ -18,3 +18,4 @@ bossbar set minecraft:filling_lava visible false
 function scaffolding_rush:lava/global_rising/stop
 
 execute as @a at @s run tp @s ~-1000 ~ ~-1000
+worldborder center 0 0

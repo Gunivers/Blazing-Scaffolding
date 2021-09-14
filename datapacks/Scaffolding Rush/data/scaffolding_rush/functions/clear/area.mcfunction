@@ -8,5 +8,5 @@ execute as @e[type=marker,name="ScR_LavaLevel",limit=1] store result score @s YE
 
 #execute unless score @s YEntity matches 2 at @s run function scaffolding_rush:clear/area
 execute unless score @e[type=marker,name="ScR_LavaLevel",limit=1] YEntity matches ..2 run schedule function scaffolding_rush:clear/area 1t
-execute if score @e[type=marker,name="ScR_LavaLevel",limit=1] YEntity matches ..2 run function scaffolding_rush:clear/finish
+execute if score @e[type=marker,name="ScR_LavaLevel",limit=1] YEntity matches ..2 at @s run function scaffolding_rush:clear/finish
 
