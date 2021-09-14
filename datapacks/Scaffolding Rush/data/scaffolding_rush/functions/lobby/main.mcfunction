@@ -32,5 +32,3 @@ execute positioned 0 6 7 run kill @e[type=minecraft:armor_stand,distance=..1]
 
 #check player coordonates
 function scaffolding_rush:lobby/correct_coordinates
-
-execute as @a[x=1000,y=128,z=1000,distance=..150,gamemode=!creative] at @s run tp @s ~-1000 ~ ~-1000
