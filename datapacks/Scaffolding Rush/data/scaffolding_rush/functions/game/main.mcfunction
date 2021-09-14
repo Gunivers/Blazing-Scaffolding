@@ -40,3 +40,5 @@ execute as @a[team=blue,gamemode=spectator,tag=!TeamEliminated,limit=1] unless e
 execute as @a[team=red,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=red,gamemode=!spectator] run function scaffolding_rush:game/elimination/red
 execute as @a[team=green,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=green,gamemode=!spectator] run function scaffolding_rush:game/elimination/green
 execute as @a[team=yellow,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=yellow,gamemode=!spectator] run function scaffolding_rush:game/elimination/yellow
+
+execute as @a[x=0,y=128,z=0,distance=..150] at @s run tp @s ~1000 ~ ~1000

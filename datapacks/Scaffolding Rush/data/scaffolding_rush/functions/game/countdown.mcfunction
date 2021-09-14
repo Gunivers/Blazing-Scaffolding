@@ -1,3 +1,4 @@
+execute as @a at @s run tp @s ~1000 ~ ~1000
 gamemode adventure @a[team=!]
 gamemode spectator @a[team=]
 clear @a

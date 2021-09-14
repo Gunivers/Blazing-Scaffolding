@@ -1,5 +1,6 @@
 tp @e[type=marker,name="ScR_LavaLevel",limit=1] ~ 2 ~
 
+
 tag @a remove TeamEliminated
 tag @a remove has_egg
 
@@ -28,3 +29,4 @@ team modify blue seeFriendlyInvisibles true
 team modify green seeFriendlyInvisibles true
 team modify red seeFriendlyInvisibles true
 team modify yellow seeFriendlyInvisibles true
+
