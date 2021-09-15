@@ -7,3 +7,5 @@ kill @e[tag=lobbyTeam]
 
 execute if score RandomTeam options matches 0 run function scaffolding_rush:lobby/team
 execute if score RandomTeam options matches 1 run function scaffolding_rush:lobby/random
+
+execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
