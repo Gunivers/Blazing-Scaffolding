@@ -4,7 +4,7 @@ effect give @a minecraft:saturation 999999 1 true
 function scaffolding_rush:options/any
 
 execute if entity @a[scores={StartGame=1..}] run function scaffolding_rush:game/launch
-execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:reset_with_clear
+execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:reset
 
 
 #Lobby main

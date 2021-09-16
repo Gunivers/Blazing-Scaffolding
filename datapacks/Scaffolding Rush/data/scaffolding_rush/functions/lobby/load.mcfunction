@@ -6,12 +6,4 @@ execute unless entity @e[type=minecraft:area_effect_cloud,tag=lobbyText,name="Ho
 summon villager 0 0 0 {Invulnerable: 1, Silent: 1, NoAI: 1, ActiveEffects: [{Id: 14, Amplifier: 0, Duration: 999999, ShowParticles: 0b}], Tags: ["LobbyBase"]}
 
 setblock 0 1 0 minecraft:structure_block[mode=load]{mode: "LOAD", posX: -20, posY: 0, posZ: -13, name: "scaffolding_rush:lobby"}
-setblock 0 2 0 minecraft:redstone_block
-
-function scaffolding_rush:lobby/base_egg/clear_egg
-scoreboard players set GameLobby global 1
-
-kill @e[tag=lobbyTeam]
-
-execute if score RandomTeam options matches 0 run function scaffolding_rush:lobby/team
-execute if score RandomTeam options matches 1 run function scaffolding_rush:lobby/random
+schedule function scaffolding_rush:lobby/load_build 5t

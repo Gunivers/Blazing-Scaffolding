@@ -1,3 +1,5 @@
+worldborder center 0 0
+
 execute unless entity @e[type=marker,name="ScR_LavaLevel"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_LavaLevel"}'}
 execute unless entity @e[type=marker,name="ScR_BuildLimit"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_BuildLimit"}'}
 execute unless entity @e[type=marker,name="ScR_Build"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_Build"}'}
@@ -49,6 +51,8 @@ effect give @a minecraft:instant_health 1 100 true
 
 spawnpoint @s 0 4 0
 
+execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:clear/lobby
+
 #advancement replenish
 advancement revoke @a from scaffolding_rush:replenish
 
@@ -68,6 +72,3 @@ bossbar set minecraft:filling_lava visible false
 effect give @a minecraft:jump_boost 5 255 true
 
 tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gray"}]
-
-
-execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
