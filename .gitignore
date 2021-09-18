@@ -8,6 +8,9 @@ DIM1/data/raids_end.dat
 level.dat_old
 level.dat
 
+region/*
+entities/*
+
 dploy.yaml
 .vscode/*
 datapacks/.rev
