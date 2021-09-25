@@ -25,6 +25,7 @@ kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]
 
+fill 1090 1 1090 1010 1 1010 magma_block
 schedule function scaffolding_rush:team/create_base/create 4s
 
 schedule function scaffolding_rush:broadcast/5s 5s
