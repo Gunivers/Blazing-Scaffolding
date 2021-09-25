@@ -73,7 +73,7 @@ execute unless score RespawnDelay options matches 10 run scoreboard players set 
 execute unless score WBSize options matches 25..165 run scoreboard players set WBSize options 95
 
 #advancement replenish
-advancement revoke @a from loumardes:replenish
+advancement revoke @a from scaffolding_rush:replenish
 
 #teams
 team add red
