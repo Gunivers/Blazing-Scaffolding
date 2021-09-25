@@ -5,3 +5,5 @@ execute if entity @s[x=1000,y=-10,z=1000,dy=20] run fill 1090 1 1090 910 1 910 m
 
 execute if entity @s[x=0,y=-10,z=0,dy=20] run schedule function scaffolding_rush:lobby/load 2t
 execute if entity @s[x=0,y=-10,z=0,dy=20] run schedule function scaffolding_rush:broadcast/lobby_loaded 6t
+
+scoreboard players set ClearRunning global 0
