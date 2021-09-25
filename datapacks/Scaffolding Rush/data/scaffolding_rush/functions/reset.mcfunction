@@ -9,6 +9,8 @@ execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] "
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 0 if score GameRunning global matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
 
+execute if score GameRunning global matches 1 as @a at @s run teleport @s ~-1000 ~ ~-1000
+
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 
 schedule clear scaffolding_rush:team/create_base/create
