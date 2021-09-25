@@ -107,7 +107,7 @@ worldborder damage amount 0
 time set noon
 
 #gamerule
-gamerule announceAdvancements true
+gamerule announceAdvancements false
 gamerule commandBlockOutput false
 gamerule disableElytraMovementCheck false
 gamerule disableRaids true
