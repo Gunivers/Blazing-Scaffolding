@@ -54,6 +54,7 @@ effect give @a minecraft:instant_health 1 100 true
 spawnpoint @s 0 4 0
 
 execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:clear/lobby
+execute unless score RandomTeam options matches 0 run team join random @a[team=!]
 
 #advancement replenish
 advancement revoke @a from scaffolding_rush:replenish
