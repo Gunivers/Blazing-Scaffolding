@@ -14,6 +14,7 @@ scoreboard players operation @a gameId = GameId global
 setblock 0 5 7 cave_air
 
 execute if score RandomTeam options matches 1 run function scaffolding_rush:team/join/random
+execute unless entity @e[type=marker,name="ScR_LavaLevel"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_LavaLevel"}'}
 
 function scaffolding_rush:broadcast/10s
 
