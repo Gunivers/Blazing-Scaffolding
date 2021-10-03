@@ -10,6 +10,13 @@ execute if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker
 execute if score LavaCountdown global >= LavaSpeedTics options run scoreboard players set LavaCountdown global 0
 
 
+
+execute as @a[gamemode=!spectator] at @s store result score @s[scores={killed=0}] YEntity run data get entity @s Pos[1]
+execute as @a[gamemode=!spectator] at @s if block ~ ~-0.0001 ~ magma_block run scoreboard players add @s killed 1
+
+execute as @e[type=villager,tag=!LobbyBase] at @s store result score @s[scores={killed=0}] YEntity run data get entity @s Pos[1]
+execute as @e[type=villager,tag=!LobbyBase] at @s if block ~ ~-0.0001 ~ magma_block run scoreboard players add @s killed 1
+
 execute as @e[type=marker,name="ScR_LavaLevel",limit=1] at @s run particle lava ~ ~ ~ 160 0 160 1 20 normal
 
 #bossbar

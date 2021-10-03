@@ -1,6 +1,4 @@
 
-execute store result score @s[scores={killed=0}] YEntity run data get entity @s Pos[1]
-execute if block ~ ~-0.0001 ~ magma_block run scoreboard players add @s killed 1
 
 #Get LavaLevel
 tp @e[type=marker,name="ScR_LavaLevel",limit=1] @s
