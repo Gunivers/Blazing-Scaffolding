@@ -152,12 +152,5 @@ setworldspawn 0 4 0
 bossbar add filling_lava ""
 bossbar set minecraft:filling_lava color red
 
-#debug / à changer
-#say [SR] init done (reset in progress)
-#playsound ui.toast.in ambient @a
-#playsound ui.toast.out ambient @a
-#teleport @a 0 3 0 0 0
-#gamerule sendCommandFeedback true
-
 function scaffolding_rush:reset
-function scaffolding_rush:clear/lobby
+function scaffolding_rush:clear/lobby/launch
