@@ -15,6 +15,6 @@ bossbar set minecraft:filling_lava visible false
 
 function scaffolding_rush:lava/global_rising/stop
 
-execute as @a at @s run tp @s ~-1000 ~ ~-1000
+schedule function lobby/tp_to_lobby 3s
 worldborder center 0 0
 function scaffolding_rush:clear/game
