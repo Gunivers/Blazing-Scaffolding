@@ -1,9 +1,10 @@
+scoreboard players set GameRunning global 0
+
 worldborder center 0 0
 
 execute unless entity @e[type=marker,name="ScR_LavaLevel"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_LavaLevel"}'}
 execute unless entity @e[type=marker,name="ScR_BuildLimit"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_BuildLimit"}'}
 execute unless entity @e[type=marker,name="ScR_Build"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_Build"}'}
-execute unless entity @e[type=villager,name="LobbyBase"] run summon villager 0 0 0 {Invulnerable: 1, Silent: 1, NoAI: 1, ActiveEffects: [{Id: 14, Amplifier: 0, Duration: 999999, ShowParticles: 0b}], Tags: ["LobbyBase"]}
 
 execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
@@ -78,3 +79,7 @@ bossbar set minecraft:filling_lava visible false
 effect give @a minecraft:jump_boost 5 255 true
 
 tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gray"}]
+
+function scaffolding_rush:lobby/tp_to_lobby
+
+execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset

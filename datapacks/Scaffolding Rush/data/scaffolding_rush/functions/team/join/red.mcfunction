@@ -1,6 +1,5 @@
 team join red @s
-execute as @s run function scaffolding_rush:lobby/base_egg/clear_egg
-execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
+execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 function scaffolding_rush:team/join/killbase
 
 playsound minecraft:block.note_block.bit ambient @s ~ ~ ~ 1 1 1

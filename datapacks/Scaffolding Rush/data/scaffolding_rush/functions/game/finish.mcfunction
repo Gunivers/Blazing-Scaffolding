@@ -1,5 +1,4 @@
 scoreboard players set GameEnd global 1
-scoreboard players set GameRunning global 0
 
 function scaffolding_rush:broadcast/finish
 
@@ -13,6 +12,3 @@ execute if score RandomTeam options matches 1 as @a[team=!] run team join random
 bossbar set minecraft:filling_lava visible false
 
 function scaffolding_rush:lava/global_rising/stop
-
-schedule function lobby/tp_to_lobby 3s
-worldborder center 0 0
