@@ -8,3 +8,5 @@ execute if entity @s[team=blue] run team join blue @e[type=villager,tag=teamBase
 execute if entity @s[team=green] run team join green @e[type=villager,tag=teamBaseVillager,team=]
 execute if entity @s[team=red] run team join red @e[type=villager,tag=teamBaseVillager,team=]
 execute if entity @s[team=yellow] run team join yellow @e[type=villager,tag=teamBaseVillager,team=]
+
+execute as @a run function scaffolding_rush:lobby/base_egg/give

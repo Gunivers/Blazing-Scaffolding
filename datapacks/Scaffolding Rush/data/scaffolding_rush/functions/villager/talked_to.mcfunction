@@ -5,4 +5,4 @@ execute unless entity @s[tag=VillagerRecup] as @e[type=!minecraft:player,team=ye
 
 execute unless entity @s[tag=VillagerRecup] if score GameRunning global matches 1 as @s run function scaffolding_rush:villager/give/any
 
-execute if score GameLobby global matches 1 if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
+execute if score GameLobby global matches 1 if score TeamEgg options matches 1 as @a run function scaffolding_rush:lobby/base_egg/give
