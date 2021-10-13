@@ -1,7 +1,19 @@
 tp @e[type=marker,name="ScR_LavaLevel",limit=1] ~ 2 ~
 
 tag @a remove TeamEliminated
+say remove start
 tag @a remove has_egg
+scoreboard players set @a killed 0
+
+scoreboard players set RedVillagerRespawn global -1
+scoreboard players set BlueVillagerRespawn global -1
+scoreboard players set YellowVillagerRespawn global -1
+scoreboard players set GreenVillagerRespawn global -1
+
+scoreboard players set @a bluePlaced 0
+scoreboard players set @a greenPlaced 0
+scoreboard players set @a redPlaced 0
+scoreboard players set @a yellowPlaced 0
 
 clear @a
 effect clear @a
@@ -29,4 +41,3 @@ team modify yellow seeFriendlyInvisibles true
 scoreboard players set GameRunning global 1
 scoreboard players set GameLoading global 0
 scoreboard players set LavaCountdown global 0
-scoreboard players set @a killed 0

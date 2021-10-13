@@ -32,6 +32,16 @@ scoreboard players set ClearRunning global 0
 scoreboard players set WBAddTemp options 0
 function scaffolding_rush:options/wb_size_refresh
 
+scoreboard players set RedVillagerRespawn global -1
+scoreboard players set BlueVillagerRespawn global -1
+scoreboard players set YellowVillagerRespawn global -1
+scoreboard players set GreenVillagerRespawn global -1
+
+scoreboard players set @a bluePlaced 0
+scoreboard players set @a greenPlaced 0
+scoreboard players set @a redPlaced 0
+scoreboard players set @a yellowPlaced 0
+
 team modify blue seeFriendlyInvisibles false
 team modify green seeFriendlyInvisibles false
 team modify red seeFriendlyInvisibles false
