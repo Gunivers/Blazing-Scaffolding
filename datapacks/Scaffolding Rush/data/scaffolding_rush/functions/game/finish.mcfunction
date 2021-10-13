@@ -1,3 +1,4 @@
+scoreboard players set GameRunning global 0
 scoreboard players set GameEnd global 1
 
 function scaffolding_rush:broadcast/finish
