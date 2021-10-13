@@ -9,4 +9,3 @@ execute unless entity @a[team=red] as @e[tag=teamBaseVillager,team=red] run func
 
 execute unless entity @a[team=yellow] run kill @e[type=minecraft:armor_stand,name="Yellow",tag=baseTeam]
 execute unless entity @a[team=yellow] as @e[tag=teamBaseVillager,team=yellow] run function clean_kill
-

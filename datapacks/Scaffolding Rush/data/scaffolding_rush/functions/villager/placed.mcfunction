@@ -5,9 +5,6 @@ execute as @a[gamemode=spectator,team=green] if entity @a[scores={greenPlaced=1.
 execute as @a[gamemode=spectator,team=red] if entity @a[scores={redPlaced=1..}] if entity @e[type=villager,team=red,limit=1] run function scaffolding_rush:villager/player_respawn/red
 execute as @a[gamemode=spectator,team=yellow] if entity @a[scores={yellowPlaced=1..}] if entity @e[type=villager,team=yellow,limit=1] run function scaffolding_rush:villager/player_respawn/yellow
 
-
-execute if score GameLobby global matches 1 run function scaffolding_rush:lobby/base_egg/spawn
-
 scoreboard players set @e[type=minecraft:villager] killed 0
 
 execute as @e[type=minecraft:villager] run data merge entity @s {CustomName:""}

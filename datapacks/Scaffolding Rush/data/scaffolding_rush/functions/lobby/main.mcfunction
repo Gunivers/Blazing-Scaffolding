@@ -17,6 +17,7 @@ execute as @a[team=!random] at @e[type=minecraft:area_effect_cloud,name="Join Ga
 
 #base
 execute at @e[type=minecraft:item,nbt={Item:{tag:{EntityTag:{Tags:["baseTeam"]}}}}] as @a[distance=..5] if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
+execute as @e[type=minecraft:armor_stand,tag=baseTeam,tag=!villagerSpawned] run function scaffolding_rush:lobby/base_egg/spawn
 
 #howtoplay
 execute as @e[name="How to play"] at @s as @a[distance=..3,tag=!howtoplay] run function scaffolding_rush:lobby/how_to_play
