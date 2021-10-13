@@ -31,4 +31,4 @@ execute if score Admin options matches 0 unless block 0 5 7 minecraft:cave_air u
 execute positioned 0 6 7 run kill @e[type=minecraft:armor_stand,distance=..1]
 
 #check player coordonates
-execute if score GameRunnng global matches 0 run function scaffolding_rush:lobby/correct_coordinates
+execute if score GameRunnning global matches 0 run function scaffolding_rush:lobby/correct_coordinates
