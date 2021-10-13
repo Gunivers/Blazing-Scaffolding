@@ -14,10 +14,10 @@ execute as @a[scores={leave=1..}] run function scaffolding_rush:join/main
 execute as @a unless score @s gameId = GameId global as @s run function scaffolding_rush:join/main
 
 #villager placed
-execute as @a[scores={bluePlaced=1..}] run function scaffolding_rush:villager/placed
-execute as @a[scores={greenPlaced=1..}] run function scaffolding_rush:villager/placed
-execute as @a[scores={redPlaced=1..}] run function scaffolding_rush:villager/placed
-execute as @a[scores={yellowPlaced=1..}] run function scaffolding_rush:villager/placed
+execute if score GameRunning global matches 1 as @a[scores={bluePlaced=1..}] run function scaffolding_rush:villager/placed
+execute if score GameRunning global matches 1 as @a[scores={greenPlaced=1..}] run function scaffolding_rush:villager/placed
+execute if score GameRunning global matches 1 as @a[scores={redPlaced=1..}] run function scaffolding_rush:villager/placed
+execute if score GameRunning global matches 1 as @a[scores={yellowPlaced=1..}] run function scaffolding_rush:villager/placed
 
 #==Gameplay==
 #game logic
