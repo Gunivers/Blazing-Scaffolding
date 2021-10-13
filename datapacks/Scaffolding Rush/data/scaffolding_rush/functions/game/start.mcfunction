@@ -1,7 +1,6 @@
 tp @e[type=marker,name="ScR_LavaLevel",limit=1] ~ 2 ~
 
 tag @a remove TeamEliminated
-say remove start
 tag @a remove has_egg
 scoreboard players set @a killed 0
 
