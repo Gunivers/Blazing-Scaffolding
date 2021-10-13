@@ -9,7 +9,11 @@ execute if score PerformanceMode options matches 1 as @e[type=villager,tag=!Lobb
 execute if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_Build"] at @s run function scaffolding_rush:game/air_replace
 execute if score LavaCountdown global >= LavaSpeedTics options run scoreboard players set LavaCountdown global 0
 
-
+#villager placed
+execute if score GameRunning global matches 1 as @a[scores={bluePlaced=1..}] run function scaffolding_rush:villager/placed
+execute if score GameRunning global matches 1 as @a[scores={greenPlaced=1..}] run function scaffolding_rush:villager/placed
+execute if score GameRunning global matches 1 as @a[scores={redPlaced=1..}] run function scaffolding_rush:villager/placed
+execute if score GameRunning global matches 1 as @a[scores={yellowPlaced=1..}] run function scaffolding_rush:villager/placed
 
 execute as @a[gamemode=!spectator] at @s store result score @s[scores={killed=0}] YEntity run data get entity @s Pos[1]
 execute as @a[gamemode=!spectator] at @s if block ~ ~-0.0001 ~ magma_block run scoreboard players add @s killed 1

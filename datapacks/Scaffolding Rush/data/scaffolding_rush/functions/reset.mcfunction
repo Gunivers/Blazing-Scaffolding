@@ -1,9 +1,7 @@
 
 worldborder center 0 0
 
-execute unless entity @e[type=marker,name="ScR_LavaLevel"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_LavaLevel"}'}
-execute unless entity @e[type=marker,name="ScR_BuildLimit"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_BuildLimit"}'}
-execute unless entity @e[type=marker,name="ScR_Build"] run summon minecraft:marker 1000 1 1000 {CustomName: '{"text":"ScR_Build"}'}
+function scaffolding_rush:game/summon_markers
 
 execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
@@ -28,7 +26,8 @@ scoreboard players set GameLobby global 1
 scoreboard players set GameEnd global 0
 scoreboard players set GameRunning global 0
 scoreboard players set GameLoading global 0
-scoreboard players set ClearRunning global 0
+scoreboard players set ClearGame global 0
+scoreboard players set ClearLobby global 0
 scoreboard players set WBAddTemp options 0
 function scaffolding_rush:options/wb_size_refresh
 
