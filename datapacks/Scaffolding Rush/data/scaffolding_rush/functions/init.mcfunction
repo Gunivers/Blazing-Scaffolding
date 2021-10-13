@@ -143,6 +143,11 @@ gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
+scoreboard objectives add const dummy
+scoreboard players set -1 const -1
+scoreboard players set 100 const 100
+scoreboard players set 256 const 256
+
 setworldspawn 0 4 0
 
 #execute unless entity @e[type=marker,name="✔"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✔","color":"green"}'}
