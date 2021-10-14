@@ -4,6 +4,7 @@ clear @a
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 worldborder center 1000 1000
+schedule clear scaffolding_rush:lobby/particles
 
 scoreboard players set GameLobby global 0
 scoreboard players set GameLoading global 1

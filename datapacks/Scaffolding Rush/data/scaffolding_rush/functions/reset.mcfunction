@@ -5,9 +5,7 @@ function scaffolding_rush:game/summon_markers
 
 execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
-execute if score GameLoading global matches 0 if score GameRunning global matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
-
-execute if score GameRunning global matches 1 as @a at @s run teleport @s ~-1000 ~ ~-1000
+execute if score GameLoading global matches 0 if score GameRunning global matches 0 if score GameEnd global matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
 
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 
@@ -20,6 +18,7 @@ schedule clear scaffolding_rush:broadcast/1s
 schedule clear scaffolding_rush:game/start
 schedule clear scaffolding_rush:lava/sound
 function scaffolding_rush:lava/global_rising/stop
+schedule clear scaffolding_rush:lobby/particles
 
 scoreboard players set LavaLevel global 2
 scoreboard players set GameLobby global 1
