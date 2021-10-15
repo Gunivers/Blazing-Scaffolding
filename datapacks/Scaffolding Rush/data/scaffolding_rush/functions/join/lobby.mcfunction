@@ -1,4 +1,4 @@
-execute as @a[x=1000,y=128,z=1000,distance=..150] at @s run tp @s ~-1000 ~ ~-1000
+execute as @s[tag=InGame] at @s run function scaffolding_rush:lobby/tp_to_lobby
 
 gamemode survival
 execute as @s run function scaffolding_rush:lobby/give_items

@@ -4,11 +4,6 @@ tag @a remove TeamEliminated
 tag @a remove has_egg
 scoreboard players set @a killed 0
 
-scoreboard players set RedVillagerRespawn global -1
-scoreboard players set BlueVillagerRespawn global -1
-scoreboard players set YellowVillagerRespawn global -1
-scoreboard players set GreenVillagerRespawn global -1
-
 scoreboard players set @a bluePlaced 0
 scoreboard players set @a greenPlaced 0
 scoreboard players set @a redPlaced 0
@@ -18,8 +13,6 @@ clear @a
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 gamemode survival @a[team=!]
-
-execute as @a[team=] at @s run teleport @s ~1000 ~ ~1000
 
 #give items
 execute as @a[team=!] run function scaffolding_rush:game/give_items

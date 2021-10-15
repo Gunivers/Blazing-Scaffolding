@@ -88,6 +88,6 @@ effect give @a minecraft:jump_boost 5 255 true
 #TODO mettre le message en dev seuleument
 execute if score DevelopementMode global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gray"}]
 
-function scaffolding_rush:lobby/tp_to_lobby
+execute as @a[tag=InGame] run function scaffolding_rush:lobby/tp_to_lobby
 
 execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
