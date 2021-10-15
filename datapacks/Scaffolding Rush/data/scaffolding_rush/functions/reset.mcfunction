@@ -5,7 +5,7 @@ function scaffolding_rush:game/summon_markers
 
 execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
-execute if score GameLoading global matches 0 if score GameRunning global matches 0 if score GameEnd global matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
+execute if score DevelopementMode global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
 
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 
@@ -85,7 +85,8 @@ bossbar set minecraft:filling_lava visible false
 
 effect give @a minecraft:jump_boost 5 255 true
 
-execute if score GameEnd global matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gray"}]
+#TODO mettre le message en dev seuleument
+execute if score DevelopementMode global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gray"}]
 
 function scaffolding_rush:lobby/tp_to_lobby
 
