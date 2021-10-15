@@ -16,5 +16,7 @@ scoreboard players enable @s opt_team_number
 scoreboard players enable @s opt_resp_delay
 scoreboard players enable @s opt_admin
 scoreboard players enable @s opt_villager
+scoreboard players enable @s opt_language
+
 scoreboard players enable @s Reset
 scoreboard players enable @s StartGame
