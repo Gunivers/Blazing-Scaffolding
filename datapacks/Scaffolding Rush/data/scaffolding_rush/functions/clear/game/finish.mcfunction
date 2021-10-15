@@ -4,4 +4,5 @@ fill 1090 1 1090 910 1 910 magma_block
 scoreboard players set ClearGame global 0
 
 
-bossbar remove reset_map
+bossbar remove reset_map_en
+bossbar remove reset_map_fr

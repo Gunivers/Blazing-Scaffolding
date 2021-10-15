@@ -8,4 +8,5 @@ execute if score DevelopementMode global matches 1 run schedule function scaffol
 scoreboard players set ClearLobby global 0
 
 
-bossbar remove reset_lobby
+bossbar remove reset_lobby_en
+bossbar remove reset_lobby_fr

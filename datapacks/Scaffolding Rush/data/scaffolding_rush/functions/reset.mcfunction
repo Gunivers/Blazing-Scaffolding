@@ -28,6 +28,7 @@ scoreboard players set GameLoading global 0
 scoreboard players set ClearGame global 0
 scoreboard players set ClearLobby global 0
 scoreboard players set WBAddTemp options 0
+scoreboard players set Language options 0
 function scaffolding_rush:options/wb_size_refresh
 
 scoreboard players set RedVillagerRespawn global -1

@@ -40,7 +40,8 @@ execute as @e[scores={killed=1..},tag=!Respawning] run function scaffolding_rush
 function scaffolding_rush:villager/warn
 
 #inform the player that he has the egg
-title @a[tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg !! Place it to respawn ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+title @a[scores={language=0},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg!! Place it to respawn! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+title @a[scores={language=1},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" Vous avez l'œuf !! Placez-le pour réapparaître ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 
 execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s if entity @a[distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
 execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #scaffolding_rush:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~

@@ -1,7 +1,8 @@
 
 execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2.. run scoreboard players operation TeamNumber options = @s opt_team_number
 
-execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2.. run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The number of teams has been set to ","color":"gray"},{"score":{"name":"TeamNumber","objective":"options"},"color":"gold"}]
+execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2.. run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The number of teams has been set to ","color":"gray"},{"score":{"name":"TeamNumber","objective":"options"},"color":"gold"}]
+execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2.. run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le nombre d'équipe a été mis sur ","color":"gray"},{"score":{"name":"TeamNumber","objective":"options"},"color":"gold"}]
 
 function scaffolding_rush:lobby/load
 
