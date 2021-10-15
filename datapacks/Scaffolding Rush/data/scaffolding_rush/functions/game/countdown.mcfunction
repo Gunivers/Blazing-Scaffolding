@@ -14,7 +14,7 @@ scoreboard players operation @a gameId = GameId global
 
 setblock 0 5 7 cave_air
 
-execute if score RandomTeam options matches 1 run function scaffolding_rush:team/join/random
+function scaffolding_rush:team/join/random
 
 function scaffolding_rush:game/summon_markers
 
