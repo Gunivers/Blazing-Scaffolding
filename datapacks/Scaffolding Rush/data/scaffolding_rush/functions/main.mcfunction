@@ -20,8 +20,6 @@ execute if score GameRunning global matches 1 run function scaffolding_rush:game
 #gravel tower
 execute as @a[nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand
 item replace entity @a weapon.offhand with air
-execute as @a[nbt=!{SelectedItem: {}},gamemode=adventure] run gamemode survival
-execute as @a[nbt={SelectedItem: {}},gamemode=survival] run gamemode adventure
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s

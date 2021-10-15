@@ -23,6 +23,10 @@ execute as @e[type=villager,tag=!LobbyBase,team=!] at @s if block ~ ~-0.0001 ~ m
 
 execute as @e[type=marker,name="ScR_LavaLevel",limit=1] at @s run particle lava ~ ~ ~ 160 0 160 1 20 normal
 
+#can place on
+execute as @a[nbt=!{SelectedItem: {}},gamemode=adventure] run gamemode survival
+execute as @a[nbt={SelectedItem: {}},gamemode=survival] run gamemode adventure
+
 #bossbar
 execute store result bossbar filling_lava value run scoreboard players get LavaCountdown global
 
