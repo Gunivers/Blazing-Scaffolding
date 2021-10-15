@@ -7,3 +7,5 @@ execute if score @s language matches 1 run tellraw @s ["",{"text":"[SR] ","color
 
 scoreboard players set @a opt_language 0
 scoreboard players enable @a opt_language
+
+function scaffolding_rush:options/refresh
