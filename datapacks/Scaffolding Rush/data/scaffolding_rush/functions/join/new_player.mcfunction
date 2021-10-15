@@ -1,5 +1,5 @@
+scoreboard players set @s language 0
+
 tellraw @s[scores={language=0}] ["",{"text":"\n"},{"text":"Welcome on ","color":"gold"},{"text":"Scaffolding Rush","bold":true,"color":"gold"},{"text":"\u2122!","color":"gold"},{"text":"\n\n"},{"text":" ","color":"green"},{"text":"[English]","color":"green","clickEvent":{"action":"run_command","value":"/trigger opt_language set 1"}},{"text":" \u0020","color":"green"},{"text":"[Français]","color":"green","clickEvent":{"action":"run_command","value":"/trigger opt_language set 2"}},{"text":"\n "}]
 tellraw @s[scores={language=1}] ["",{"text":"\n"},{"text":"Bienvenue sur ","color":"gold"},{"text":"Scaffolding Rush","bold":true,"color":"gold"},{"text":"\u2122 !","color":"gold"},{"text":"\n\n"},{"text":" ","color":"green"},{"text":"[English]","color":"green","clickEvent":{"action":"run_command","value":"/trigger opt_language set 1"}},{"text":" \u0020","color":"green"},{"text":"[Français]","color":"green","clickEvent":{"action":"run_command","value":"/trigger opt_language set 2"}},{"text":"\n "}]
 #lol personne le verra mais yolo
-
-scoreboard players set @s language 0
