@@ -19,6 +19,7 @@ schedule clear scaffolding_rush:game/start
 schedule clear scaffolding_rush:lava/sound
 function scaffolding_rush:lava/global_rising/stop
 schedule clear scaffolding_rush:lobby/particles
+schedule clear scaffolding_rush:game/ghostblocks
 
 scoreboard players set LavaLevel global 2
 scoreboard players set GameLobby global 1

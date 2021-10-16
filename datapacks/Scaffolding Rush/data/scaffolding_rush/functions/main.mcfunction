@@ -46,9 +46,6 @@ execute as @e[type=item,tag=!processed] run function scaffolding_rush:item/catch
 execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:item/snowball
 kill @e[type=arrow,nbt={inGround: 1b}]
 
-#ghostblocks
-execute at @a run clone ~-1 ~-1 ~-1 ~1 ~ ~1 ~-1 ~-1 ~-1 replace force
-
 #player in teams
 execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0
 

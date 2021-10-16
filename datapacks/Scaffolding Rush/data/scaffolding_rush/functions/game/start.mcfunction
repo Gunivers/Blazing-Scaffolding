@@ -30,6 +30,8 @@ team modify green seeFriendlyInvisibles true
 team modify red seeFriendlyInvisibles true
 team modify yellow seeFriendlyInvisibles true
 
+execute if score PerformanceMode options matches 0 run function scaffolding_rush:game/ghostblocks
+
 scoreboard players set GameRunning global 1
 scoreboard players set GameLoading global 0
 scoreboard players set LavaCountdown global 0
