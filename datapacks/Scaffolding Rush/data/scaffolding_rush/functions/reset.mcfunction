@@ -62,8 +62,6 @@ clear @a
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 
-spawnpoint @s 0 4 0
-
 function scaffolding_rush:clear/game/launch
 execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:clear/lobby/launch
 

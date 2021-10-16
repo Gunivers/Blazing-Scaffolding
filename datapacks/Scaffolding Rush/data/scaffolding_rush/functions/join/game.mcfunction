@@ -6,4 +6,6 @@ tellraw @s[scores={language=1}] ["",{"text":"[SR]","color":"gold"},{"text":" Une
 
 execute if score Admin options matches 1 unless entity @a[tag=admin] run scoreboard players enable @s Reset
 
-execute as @s[tag=!InGame] at @s run function scaffolding_rush:game/tp_to_game
+execute as @s[tag=!InGame] if score @s gameId matches 1.. at @s run function scaffolding_rush:game/tp_to_game
+
+execute at @e[type=marker,name="ScR_LavaLevel",limit=1] run teleport @s ~ ~50 ~ 0 90
