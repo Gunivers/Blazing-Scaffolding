@@ -6,4 +6,4 @@ execute as @e[type=marker,name="ScR_BuildLimit"] store result entity @s Pos[1] d
 
 execute as @e[type=marker,name="ScR_BuildLimit"] at @s run fill ~-5 ~1 ~-5 ~5 ~1 ~5 minecraft:moving_piston replace minecraft:air
 
-execute as @e[type=marker,name="ScR_BuildLimit"] at @s run particle dust 0.227 0.18 0.169 0.5 ~ ~1 ~ 1 0 1 0 1 normal
+execute as @e[type=marker,name="ScR_BuildLimit"] at @s run particle dust 0.227 0.18 0.169 0.5 ~ ~1 ~ 1 0 1 0 3 normal @s
