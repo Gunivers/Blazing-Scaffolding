@@ -42,6 +42,8 @@ scoreboard players set @a greenPlaced 0
 scoreboard players set @a redPlaced 0
 scoreboard players set @a yellowPlaced 0
 
+scoreboard players reset * killed
+
 team modify blue seeFriendlyInvisibles false
 team modify green seeFriendlyInvisibles false
 team modify red seeFriendlyInvisibles false
