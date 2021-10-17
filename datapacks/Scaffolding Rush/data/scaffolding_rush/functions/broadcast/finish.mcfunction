@@ -1,5 +1,6 @@
 
 title @a times 0 60 20
+title @a subtitle {"text":""}
 
 execute if entity @a[team=blue,gamemode=!spectator,limit=1] run title @a[scores={language=0}] title ["",{"text":"Team "},{"text":"Blue","color":"blue"},{"text":" wins!"}]
 execute if entity @a[team=blue,gamemode=!spectator,limit=1] run tellraw @a[scores={language=0}] ["",{"text":"====================================","color":"dark_gray"},{"text":"\n\n"},{"text":"[SR] ","color":"gold"},{"text":"Team ","color":"gray"},{"text":"Blue","color":"blue"},{"text":" wins!","color":"gray"},{"text":"\n\n"},{"text":"====================================","color":"dark_gray"}]

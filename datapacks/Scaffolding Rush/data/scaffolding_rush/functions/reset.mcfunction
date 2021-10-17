@@ -3,9 +3,14 @@ worldborder center 0 0
 
 function scaffolding_rush:game/summon_markers
 
-execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress...","color":"gray"}]
-execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
-execute if score DevelopementMode global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
+execute if score GameRunning global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]
+execute if score GameRunning global matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"La partie a été stoppée","color":"gray"}]
+
+execute if score GameLoading global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped","color":"gray"}]
+execute if score GameLoading global matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le lancement de la partie a été annulé","color":"gray"}]
+
+execute if score DevelopementMode global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
+execute if score DevelopementMode global matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Rechargement en cours...","color":"gray"}]
 
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 
