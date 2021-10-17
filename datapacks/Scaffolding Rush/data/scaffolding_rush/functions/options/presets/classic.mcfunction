@@ -12,6 +12,6 @@ scoreboard players set UseGravel options 1
 scoreboard players set UseSnowball options 0
 scoreboard players set Regen options 1
 scoreboard players set FallDamage options 0
-scoreboard players set RespawnDelay options 10
+scoreboard players set RespawnDelay options 3
 
 function scaffolding_rush:options/refresh

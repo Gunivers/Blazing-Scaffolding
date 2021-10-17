@@ -25,7 +25,7 @@ scoreboard objectives add opt_regen trigger
 scoreboard objectives add opt_fall_damage trigger
 scoreboard objectives add opt_villager trigger
 scoreboard objectives add opt_language trigger
-
+scoreboard objectives add opt_resp_delay trigger
 scoreboard objectives add opt_admin trigger
 scoreboard objectives add opt_random_team trigger
 scoreboard objectives add opt_team_number trigger
@@ -40,6 +40,7 @@ scoreboard objectives add ZEntity dummy
 scoreboard objectives add usedSnowball minecraft.used:minecraft.snowball
 scoreboard objectives add gameId dummy
 scoreboard objectives add language dummy
+scoreboard objectives add respawnTime dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
@@ -71,7 +72,7 @@ execute unless score FallDamage options matches 0.. run scoreboard players set F
 execute unless score Admin options matches 0.. run scoreboard players set Admin options 0
 execute unless score TeamNumber options matches 0.. run scoreboard players set TeamNumber options 2
 execute unless score Villager options matches 0.. run scoreboard players set Villager options 1
-execute unless score RespawnDelay options matches 10 run scoreboard players set RespawnDelay options 10
+execute unless score RespawnDelay options matches 1.. run scoreboard players set RespawnDelay options 3
 execute unless score WBSize options matches 25..165 run scoreboard players set WBSize options 95
 
 #advancement replenish

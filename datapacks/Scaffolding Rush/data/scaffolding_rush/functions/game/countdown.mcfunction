@@ -50,6 +50,9 @@ scoreboard players operation LavaSpeedTics options *= #20 global
 scoreboard players operation VillagerRespawnTics global = VillagerRespawn options
 scoreboard players operation VillagerRespawnTics global *= #20 global
 
+scoreboard players operation RespawnDelayTics global = RespawnDelay options
+scoreboard players operation RespawnDelayTics global *= #20 global
+
 #reset villagers respawn countdowns
 scoreboard players set RedVillagerRespawn global -1
 scoreboard players set BlueVillagerRespawn global -1
