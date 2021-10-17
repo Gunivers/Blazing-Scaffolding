@@ -9,3 +9,6 @@ execute if score RandomTeam options matches 0 run function scaffolding_rush:lobb
 execute if score RandomTeam options matches 1 run function scaffolding_rush:lobby/random
 
 execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
+
+schedule clear scaffolding_rush:lobby/particles
+function scaffolding_rush:lobby/particles

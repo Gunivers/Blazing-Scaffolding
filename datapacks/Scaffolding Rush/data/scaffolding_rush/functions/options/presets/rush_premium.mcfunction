@@ -1,4 +1,5 @@
-tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The preset mode has been set to ","color":"gray"},{"text":"Rush Premium","color":"light_purple"}]
+tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Rush Premium","color":"light_purple"},{"text":" has been chosen","color":"gray"}]
+tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Rush Premium","color":"light_purple"},{"text":" a été choisi","color":"gray"}]
 
 scoreboard players set LavaSpeed options 3
 scoreboard players set BuildHeight options 30

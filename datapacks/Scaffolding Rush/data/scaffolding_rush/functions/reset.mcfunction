@@ -5,9 +5,7 @@ function scaffolding_rush:game/summon_markers
 
 execute if score GameRunning global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped. Reset in progress...","color":"gray"}]
 execute if score GameLoading global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The launching of the game has been stopped. Reset in progress...","color":"gray"}]
-execute if score GameLoading global matches 0 if score GameRunning global matches 0 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
-
-execute if score GameRunning global matches 1 as @a at @s run teleport @s ~-1000 ~ ~-1000
+execute if score DevelopementMode global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
 
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 
@@ -20,6 +18,8 @@ schedule clear scaffolding_rush:broadcast/1s
 schedule clear scaffolding_rush:game/start
 schedule clear scaffolding_rush:lava/sound
 function scaffolding_rush:lava/global_rising/stop
+schedule clear scaffolding_rush:lobby/particles
+schedule clear scaffolding_rush:game/ghostblocks
 
 scoreboard players set LavaLevel global 2
 scoreboard players set GameLobby global 1
@@ -29,6 +29,7 @@ scoreboard players set GameLoading global 0
 scoreboard players set ClearGame global 0
 scoreboard players set ClearLobby global 0
 scoreboard players set WBAddTemp options 0
+scoreboard players set Language options 0
 function scaffolding_rush:options/wb_size_refresh
 
 scoreboard players set RedVillagerRespawn global -1
@@ -61,8 +62,6 @@ clear @a
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 
-spawnpoint @s 0 4 0
-
 function scaffolding_rush:clear/game/launch
 execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:clear/lobby/launch
 
@@ -86,8 +85,9 @@ bossbar set minecraft:filling_lava visible false
 
 effect give @a minecraft:jump_boost 5 255 true
 
-tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gray"}]
+#TODO mettre le message en dev seuleument
+execute if score DevelopementMode global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gray"}]
 
-function scaffolding_rush:lobby/tp_to_lobby
+execute as @a[tag=InGame] run function scaffolding_rush:lobby/tp_to_lobby
 
 execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset

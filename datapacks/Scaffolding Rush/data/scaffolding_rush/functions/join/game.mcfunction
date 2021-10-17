@@ -1,8 +1,11 @@
 gamemode spectator
 team leave @s
 
-tellraw @s ["",{"text":"[SR]","color":"gold"},{"text":" A game is already running. You can join a game after they finish it !\n\n ","color":"gray"}]
+tellraw @s[scores={language=0}] ["",{"text":"[SR]","color":"gold"},{"text":" A game is already running. You can join a game after they finish it!\n\n ","color":"gray"}]
+tellraw @s[scores={language=1}] ["",{"text":"[SR]","color":"gold"},{"text":" Une partie est déjà en cours. Vous pourrez rejoindre après la fin de partie !\n\n ","color":"gray"}]
 
 execute if score Admin options matches 1 unless entity @a[tag=admin] run scoreboard players enable @s Reset
 
-execute as @a[x=0,y=128,z=0,distance=..150] at @s run tp @s ~1000 ~ ~1000
+execute as @s[tag=!InGame] if score @s gameId matches 1.. at @s run function scaffolding_rush:game/tp_to_game
+
+execute at @e[type=marker,name="ScR_LavaLevel",limit=1] run teleport @s ~ ~50 ~ 0 90

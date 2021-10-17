@@ -16,5 +16,7 @@ scoreboard players reset @s opt_team_number
 scoreboard players reset @s opt_resp_delay
 scoreboard players reset @s opt_admin
 scoreboard players reset @s opt_villager
+scoreboard players reset @s opt_language
+
 scoreboard players reset @s Reset
 scoreboard players reset @s StartGame

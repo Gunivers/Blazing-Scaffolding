@@ -23,6 +23,10 @@ execute as @e[type=villager,tag=!LobbyBase,team=!] at @s if block ~ ~-0.0001 ~ m
 
 execute as @e[type=marker,name="ScR_LavaLevel",limit=1] at @s run particle lava ~ ~ ~ 160 0 160 1 20 normal
 
+#can place on
+execute as @a[nbt=!{SelectedItem: {}},gamemode=adventure] run gamemode survival
+execute as @a[nbt={SelectedItem: {}},gamemode=survival] run gamemode adventure
+
 #bossbar
 execute store result bossbar filling_lava value run scoreboard players get LavaCountdown global
 
@@ -36,10 +40,15 @@ execute as @e[scores={killed=1..},tag=!Respawning] run function scaffolding_rush
 function scaffolding_rush:villager/warn
 
 #inform the player that he has the egg
-title @a[tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg !! Place it to respawn ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+title @a[scores={language=0},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg!! Place it to respawn! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+title @a[scores={language=1},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" Vous avez l'œuf !! Placez-le pour réapparaître ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 
-execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s if entity @a[distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
-execute if score GameLobby global matches 0 as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #scaffolding_rush:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~
+execute as @e[type=minecraft:villager] at @s if entity @a[distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
+
+#ghostblocks
+execute at @a run clone ~-1 ~-1 ~-1 ~1 ~ ~1 ~-1 ~-1 ~-1 replace force
+
+execute as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #scaffolding_rush:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~
 
 execute if score GameEnd global matches 0 unless score DevelopementMode global matches 1 if score RemainingTeam global matches ..1 run function scaffolding_rush:game/finish
 

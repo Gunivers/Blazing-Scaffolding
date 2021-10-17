@@ -20,8 +20,6 @@ execute if score GameRunning global matches 1 run function scaffolding_rush:game
 #gravel tower
 execute as @a[nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand
 item replace entity @a weapon.offhand with air
-execute as @a[nbt=!{SelectedItem: {}},gamemode=adventure] run gamemode survival
-execute as @a[nbt={SelectedItem: {}},gamemode=survival] run gamemode adventure
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:gravel"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
 execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
@@ -41,13 +39,12 @@ execute if score InstantPillar options matches 1 as @e[type=marker,name="ScR_Pil
 #items
 execute as @e[type=item,tag=!processed] run function scaffolding_rush:item/catch_drop
 
+#execute as @e[type=arrow] at @s run setblock ~ ~-1 ~ tnt
+#execute as @e[type=arrow,nbt={inGround: 1b}] at @s run summon minecraft:creeper ~ ~1 ~ {Fuse:0,ignited:1}
+
 #snowball
 execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:item/snowball
 kill @e[type=arrow,nbt={inGround: 1b}]
-
-#ghostblocks
-#bruteforce
-execute at @a run clone ~-1 ~-1 ~-1 ~1 ~ ~1 ~-1 ~-1 ~-1 replace force
 
 #player in teams
 execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0
@@ -63,3 +60,4 @@ execute as @e[type=villager,nbt=!{Age:0}] run function scaffolding_rush:clean_ki
 advancement revoke @a everything
 
 execute unless entity @a[tag=admin] if score Admin options matches 1 run function scaffolding_rush:options/admin
+

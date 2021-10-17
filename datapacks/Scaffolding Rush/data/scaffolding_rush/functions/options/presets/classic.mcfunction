@@ -1,4 +1,5 @@
-tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"The preset mode has been set to ","color":"gray"},{"text":"Classic","color":"light_purple"}]
+tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Classic","color":"light_purple"},{"text":" has been chosen","color":"gray"}]
+tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Classique","color":"light_purple"},{"text":" a été choisi","color":"gray"}]
 
 scoreboard players set LavaSpeed options 7
 scoreboard players set BuildHeight options 20

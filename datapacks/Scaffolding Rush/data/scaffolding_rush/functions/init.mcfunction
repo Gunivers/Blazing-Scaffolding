@@ -24,6 +24,7 @@ scoreboard objectives add opt_wb_size_add trigger
 scoreboard objectives add opt_regen trigger
 scoreboard objectives add opt_fall_damage trigger
 scoreboard objectives add opt_villager trigger
+scoreboard objectives add opt_language trigger
 
 scoreboard objectives add opt_admin trigger
 scoreboard objectives add opt_random_team trigger
@@ -38,6 +39,7 @@ scoreboard objectives add YEntity dummy
 scoreboard objectives add ZEntity dummy
 scoreboard objectives add usedSnowball minecraft.used:minecraft.snowball
 scoreboard objectives add gameId dummy
+scoreboard objectives add language dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
