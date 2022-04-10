@@ -5,6 +5,6 @@ data modify entity @e[type=arrow,limit=1,sort=nearest] Motion set from entity @s
 kill @s
 
 execute if score GameLoading global matches 0 run item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with air
-execute if score GameLoading global matches 0 run item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with minecraft:snowball
+execute if score GameLoading global matches 0 run item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with minecraft:snowball{CanDestroy:["minecraft:scaffolding","#scaffolding_rush:lobby","#scaffolding_rush:tower"]}
 
 scoreboard players set @a usedSnowball 0
