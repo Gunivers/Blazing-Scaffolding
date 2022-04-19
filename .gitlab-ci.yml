@@ -20,5 +20,8 @@ before_script:
   - apt-get install -y lftp
 
 deploy:
+  only:
+    refs:
+      - server
   script:
-    - lftp -e "open play.gunivers.net; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete ./datapack scaffolding-rush/datapack/; bye"
+    - lftp -e "open play.gunivers.net:$FTP_PORT; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete datapacks/ Scaff/datapacks/; bye"
