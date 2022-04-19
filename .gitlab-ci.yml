@@ -24,4 +24,5 @@ deploy:
     refs:
       - server
   script:
-    - lftp -e "open -d -u $FTP_USERNAME,$FTP_PASSWORD -p $FTP_PORT play.gunivers.net:$FTP_PORT; mirror -X .* -X .*/ --reverse --verbose --delete datapacks/ Scaff/datapacks/; bye"
+    - lftp sftp://$FTP_USERNAME:$FTP_PASSWORD@play.gunivers.net:5658 -e "mirror -e -R datapacks/ Scaff/datapacks/ ; quit"
+    #- lftp -e "open -d -u $FTP_USERNAME,$FTP_PASSWORD -p $FTP_PORT play.gunivers.net:$FTP_PORT; mirror -X .* -X .*/ --reverse --verbose --delete datapacks/ Scaff/datapacks/; bye"
