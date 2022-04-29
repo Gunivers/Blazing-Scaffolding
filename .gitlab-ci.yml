@@ -13,12 +13,16 @@
 #
 # For more information, see: https://docs.gitlab.com/ee/ci/yaml/index.html#stages
 
-image: ubuntu:18.04
+#image: ubuntu:18.04
 
 before_script:
   - apt-get update -qy
   - apt-get install -y lftp
 
 deploy:
+  only:
+    refs:
+      - server
   script:
-    - lftp -e "open play.gunivers.net; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete ./datapack scaffolding-rush/datapack/; bye"
+    - lftp sftp://$FTP_USERNAME:$FTP_PASSWORD@play.gunivers.net:5658 -e "mirror -e -R datapacks/ Scaff/datapacks/ ; quit"
+    #- lftp -e "open -d -u $FTP_USERNAME,$FTP_PASSWORD -p $FTP_PORT play.gunivers.net:$FTP_PORT; mirror -X .* -X .*/ --reverse --verbose --delete datapacks/ Scaff/datapacks/; bye"
