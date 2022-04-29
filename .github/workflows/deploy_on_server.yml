@@ -30,6 +30,6 @@ jobs:
           host: ${{ env.SFTP_IP }}
           port: ${{ env.SFTP_PORT }}
           user: ${{ env.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          password: ${{ env.SFTP_PASSWORD }}
           remote_path: /world/
           ignore: .github/**,.gitignore,**/.gitignore,**/.git/**, entities/**, poi/**, region/**, README.md, icon.png, level.dat, session.lock
