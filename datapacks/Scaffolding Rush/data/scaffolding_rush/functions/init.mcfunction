@@ -7,6 +7,7 @@ fill 1090 0 1090 910 0 910 bedrock
 forceload add 1100 1100 900 900
 
 #trigger controls
+# use "/scoreboard players set DevelopementMode global 1" in order to start the map solo
 scoreboard objectives add StartGame trigger
 scoreboard objectives add Reset trigger
 
@@ -29,6 +30,7 @@ scoreboard objectives add opt_resp_delay trigger
 scoreboard objectives add opt_admin trigger
 scoreboard objectives add opt_random_team trigger
 scoreboard objectives add opt_team_number trigger
+scoreboard objectives add opt_lasting_bases trigger
 
 #internal values
 scoreboard objectives add leave minecraft.custom:minecraft.leave_game

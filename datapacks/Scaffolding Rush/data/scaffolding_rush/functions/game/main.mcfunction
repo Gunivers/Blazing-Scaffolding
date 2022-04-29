@@ -6,6 +6,10 @@ execute if score PerformanceMode options matches 0 if score LavaCountdown global
 execute if score PerformanceMode options matches 1 as @a[gamemode=!spectator] at @s run function scaffolding_rush:lava/rise_locally
 execute if score PerformanceMode options matches 1 as @e[type=villager,tag=!LobbyBase] at @s run function scaffolding_rush:lava/rise_locally
 
+execute unless score lasting_bases options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[tag=baseTeam] at @s run tp @s ~ ~1 ~
+execute unless score lasting_bases options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[tag=baseTeam] at @s run function scaffolding_rush:team/create_base/load_structure
+execute unless score lasting_bases options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[tag=baseTeam] at @s positioned ~-3 ~ ~-3 as @e[type=!marker,dx=6,dy=3,dz=6] at @s run tp @s ~ ~1 ~
+
 execute if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_Build"] at @s run function scaffolding_rush:game/air_replace
 execute if score LavaCountdown global >= LavaSpeedTics options run scoreboard players set LavaCountdown global 0
 

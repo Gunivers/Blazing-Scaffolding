@@ -19,3 +19,4 @@ execute as @a[scores={opt_resp_delay=1..}] run function scaffolding_rush:options
 execute as @a[scores={opt_admin=1..}] run function scaffolding_rush:options/admin
 execute as @a[scores={opt_villager=1..}] run function scaffolding_rush:options/villager
 execute as @a[scores={opt_language=1..}] run function scaffolding_rush:options/language
+execute as @a[scores={opt_lasting_bases=1..}] run function scaffolding_rush:options/lasting_bases
