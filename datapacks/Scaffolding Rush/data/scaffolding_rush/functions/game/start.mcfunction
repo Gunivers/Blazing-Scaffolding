@@ -23,7 +23,7 @@ execute if score Villager options matches 1 as @a[team=yellow,gamemode=!spectato
 execute if score Villager options matches 1 as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/green
 
 function scaffolding_rush:broadcast/start
-function scaffolding_rush:lava/sound
+function scaffolding_rush:game/lava/sound
 
 team modify blue seeFriendlyInvisibles true
 team modify green seeFriendlyInvisibles true

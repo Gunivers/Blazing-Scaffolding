@@ -21,8 +21,8 @@ schedule clear scaffolding_rush:broadcast/3s
 schedule clear scaffolding_rush:broadcast/2s
 schedule clear scaffolding_rush:broadcast/1s
 schedule clear scaffolding_rush:game/start
-schedule clear scaffolding_rush:lava/sound
-function scaffolding_rush:lava/global_rising/stop
+schedule clear scaffolding_rush:game/lava/sound
+function scaffolding_rush:game/lava/global_rising/stop
 schedule clear scaffolding_rush:lobby/particles
 schedule clear scaffolding_rush:game/ghostblocks
 

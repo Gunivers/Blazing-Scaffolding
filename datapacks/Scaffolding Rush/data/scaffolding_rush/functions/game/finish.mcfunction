@@ -12,4 +12,4 @@ execute if score RandomTeam options matches 1 as @a[team=!] run team join random
 
 bossbar set minecraft:filling_lava visible false
 
-function scaffolding_rush:lava/global_rising/stop
+function scaffolding_rush:game/lava/global_rising/stop
