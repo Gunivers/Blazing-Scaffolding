@@ -20,3 +20,4 @@ execute as @a[scores={opt_admin=1..}] run function scaffolding_rush:options/admi
 execute as @a[scores={opt_villager=1..}] run function scaffolding_rush:options/villager
 execute as @a[scores={opt_language=1..}] run function scaffolding_rush:options/language
 execute as @a[scores={opt_lasting_bases=1..}] run function scaffolding_rush:options/lasting_bases
+execute as @a[scores={opt_flag_hunt=1..}] run function scaffolding_rush:options/flag_hunt

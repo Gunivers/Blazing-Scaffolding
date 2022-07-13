@@ -1,6 +1,9 @@
 
 worldborder center 0 0
 
+#remove bases markers
+kill @e[tag=baseTeam]
+
 function scaffolding_rush:game/summon_markers
 
 execute if score GameRunning global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]

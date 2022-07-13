@@ -31,6 +31,7 @@ scoreboard objectives add opt_admin trigger
 scoreboard objectives add opt_random_team trigger
 scoreboard objectives add opt_team_number trigger
 scoreboard objectives add opt_lasting_bases trigger
+scoreboard objectives add opt_flag_hunt trigger
 
 #internal values
 scoreboard objectives add leave minecraft.custom:minecraft.leave_game
