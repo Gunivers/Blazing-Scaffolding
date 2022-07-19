@@ -1,0 +1,5 @@
+{
+    "function":"set_nbt",
+    "tag":"{HideFlags:24,CanPlaceOn:[],CanDestroy:[]}",
+    "replace":true
+}
