@@ -4,12 +4,12 @@ execute store success score InteractibleLobby options if score InteractibleLobby
 execute if score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Interactible lobby has been ","color":"gray"},{"text":"desactivated","color":"red"}]
 execute if score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] {"text":"You can no longer place and break blocks in the lobby","color":"gray"}
 execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The instant pillar has been ","color":"gray"},{"text":"activated","color":"green"}]
-execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"You can now ","color":"gray"},{"text":"try the scaffoldings","color":"gold"},{"text":", place and break blocks in the lobby !","color":"gray"}]
+execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"Try the scaffoldings! ","color":"gold"},{"text":" You can now place and break blocks in the lobby!","color":"gray"}]
 
 execute if score InteractibleLobby options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le lobby intéractif a été ","color":"gray"},{"text":"désactivé","color":"red"}]
 execute if score InteractibleLobby options matches 0 run tellraw @a[scores={language=1}] {"text":"Vous ne pouvez plus placer et casser des blocs dans le lobby","color":"gray"}
 execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le lobby intéractif a été ","color":"gray"},{"text":"activé","color":"green"}]
-execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"Vous pouvez maintenant ","color":"gray"},{"text":"tester les échafaudages","color":"gold"},{"text":", placer et casser des blocs dans le lobby !","color":"gray"}]
+execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"Testez les échafaudages ! ","color":"gold"},{"text":"Vous pouvez maintenant placer et casser des blocs dans le lobby !","color":"gray"}]
 
 scoreboard players set @a opt_interactible_lobby 0
 scoreboard players enable @a opt_interactible_lobby
