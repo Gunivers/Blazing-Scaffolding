@@ -20,6 +20,9 @@ execute if score GameRunning global matches 1 run function scaffolding_rush:game
 execute if entity @a[scores={StartGame=1..}] run function scaffolding_rush:game/launch
 execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:reset
 
+# Ghostblocks
+execute as @a at @s run function scaffolding_rush:game/ghostblock_detection
+
 #  ____  _           _     _ _                               _   _                                     _                 _          
 # |  _ \(_)___  __ _| |__ | (_)_ __   __ _       _ __   __ _| |_(_)_   _____       _ __ ___   ___  ___| |__   __ _ _ __ (_) ___ ___ 
 # | | | | / __|/ _` | '_ \| | | '_ \ / _` |     | '_ \ / _` | __| \ \ / / _ \     | '_ ` _ \ / _ \/ __| '_ \ / _` | '_ \| |/ __/ __|
