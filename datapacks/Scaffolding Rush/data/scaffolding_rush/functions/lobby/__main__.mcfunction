@@ -4,7 +4,7 @@ execute as @a store result score @s YEntity run data get entity @s Pos[1]
 execute as @e store result score @s ZEntity run data get entity @s Pos[2]
 
 #can place on
-execute as @a[nbt=!{SelectedItem: {}},gamemode=adventure] run gamemode survival
+execute unless score InteractibleLobby options matches 0 as @a[nbt=!{SelectedItem: {}},gamemode=adventure] run gamemode survival
 execute as @a[nbt={SelectedItem: {}},gamemode=survival] run gamemode adventure
 
 #speed
