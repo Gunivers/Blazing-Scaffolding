@@ -11,6 +11,8 @@ forceload add 1100 1100 900 900
 scoreboard objectives add StartGame trigger
 scoreboard objectives add Reset trigger
 
+scoreboard objectives add glib.res0 dummy
+
 scoreboard objectives add opt_preset trigger
 scoreboard objectives add opt_lava_speed trigger
 scoreboard objectives add opt_build_height trigger
@@ -154,6 +156,7 @@ scoreboard objectives add const dummy
 scoreboard players set -1 const -1
 scoreboard players set 100 const 100
 scoreboard players set 256 const 256
+scoreboard players set 3000 const 3000
 
 setworldspawn 0 4 0
 
@@ -165,4 +168,4 @@ bossbar add filling_lava ""
 bossbar set minecraft:filling_lava color red
 
 function scaffolding_rush:reset
-function scaffolding_rush:clear/lobby/launch
+#function scaffolding_rush:clear/lobby/launch
