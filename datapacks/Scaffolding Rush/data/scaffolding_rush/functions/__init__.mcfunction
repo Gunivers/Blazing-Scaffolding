@@ -37,6 +37,7 @@ scoreboard objectives add opt_flag_hunt trigger
 scoreboard objectives add opt_interactible_lobby trigger
 
 #internal values
+scoreboard objectives add timer dummy
 scoreboard objectives add leave minecraft.custom:minecraft.leave_game
 scoreboard objectives add global dummy
 scoreboard objectives add options dummy
@@ -168,4 +169,4 @@ bossbar add filling_lava ""
 bossbar set minecraft:filling_lava color red
 
 function scaffolding_rush:reset
-#function scaffolding_rush:clear/lobby/launch
+function scaffolding_rush:clear/lobby/launch

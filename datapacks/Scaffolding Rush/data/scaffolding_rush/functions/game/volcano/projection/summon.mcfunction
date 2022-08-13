@@ -1,4 +1,4 @@
-summon armor_stand ~ ~ ~ {NoGravity:1,Invisible:1,Tags:["Volcano","Volcano_New"],ArmorItems:[{},{},{},{id:"minecraft:magma_block",Count:1b}]}
+summon armor_stand ~ ~ ~ {NoGravity:1,Invisible:1,Tags:["Volcano","VolcanoPop","Volcano_New"],ArmorItems:[{},{},{},{id:"minecraft:magma_block",Count:1b}]}
 
 # execute as @e[tag=Volcano_New] run tellraw @a [{"text":"---"}]
 

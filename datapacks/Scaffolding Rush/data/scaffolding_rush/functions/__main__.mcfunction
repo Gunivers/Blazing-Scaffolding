@@ -1,3 +1,4 @@
+# say /main
 function scaffolding_rush:game/volcano/__main__
 
 #  __  __       _                           _                     
