@@ -67,7 +67,6 @@ tag @a remove has_egg
 tag @a remove VillagerRecup
 tag @a remove Respawning
 
-gamemode survival @a
 clear @a
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
