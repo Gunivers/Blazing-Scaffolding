@@ -1,7 +1,7 @@
 
 execute store success score UseSnowball options if score UseSnowball options matches 0
 
-execute if score UseSnowball options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The snowball has been ","color":"gray"},{"text":"desactivated","color":"red"}]
+execute if score UseSnowball options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The snowball has been ","color":"gray"},{"text":"deactivated","color":"red"}]
 execute unless score UseSnowball options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The snowball has been ","color":"gray"},{"text":"activated","color":"green"}]
 
 execute if score UseSnowball options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"La Boule de neige ","color":"gray"},{"text":"désactivée","color":"red"}]

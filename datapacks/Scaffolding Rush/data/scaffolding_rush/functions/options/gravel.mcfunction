@@ -1,7 +1,7 @@
 
 execute store success score UseGravel options if score UseGravel options matches 0
 
-execute if score UseGravel options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The gravel has been ","color":"gray"},{"text":"desactivated","color":"red"}]
+execute if score UseGravel options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The gravel has been ","color":"gray"},{"text":"deactivated","color":"red"}]
 execute unless score UseGravel options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The gravel has been ","color":"gray"},{"text":"activated","color":"green"}]
 
 execute if score UseGravel options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le gravier a été ","color":"gray"},{"text":"désactivé","color":"red"}]

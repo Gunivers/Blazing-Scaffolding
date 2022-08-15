@@ -1,7 +1,7 @@
 
 execute store success score InteractibleLobby options if score InteractibleLobby options matches 0
 
-execute if score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Interactible lobby has been ","color":"gray"},{"text":"desactivated","color":"red"}]
+execute if score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Interactible lobby has been ","color":"gray"},{"text":"deactivated","color":"red"}]
 execute if score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] {"text":"You can no longer place and break blocks in the lobby","color":"gray"}
 execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Interactible lobby has been ","color":"gray"},{"text":"activated","color":"green"}]
 execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"Try the scaffoldings! ","color":"gold"},{"text":" You can now place and break blocks in the lobby!","color":"gray"}]
