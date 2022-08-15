@@ -1,6 +1,6 @@
 execute as @s[tag=InGame] at @s run function scaffolding_rush:lobby/tp_to_lobby
 
-gamemode survival
+#gamemode survival
 execute as @s run function scaffolding_rush:lobby/give_items
 function scaffolding_rush:lobby/base_egg/give
 
