@@ -10,7 +10,7 @@ execute unless score UseSnowball options matches 0 run tellraw @a[scores={langua
 execute if score UseSnowball options matches 0 run clear @a minecraft:snowball
 execute unless score UseSnowball options matches 0 run give @a minecraft:snowball
 
-scoreboard players set @a opt_snowball 0
-scoreboard players enable @a opt_snowball
+scoreboard players set @s opt_snowball 0
+scoreboard players enable @s opt_snowball
 
 function scaffolding_rush:options/refresh

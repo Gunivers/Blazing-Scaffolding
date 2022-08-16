@@ -10,7 +10,7 @@ execute unless score FallDamage options matches 0 run tellraw @a[scores={languag
 execute if score FallDamage options matches 0 run gamerule fallDamage false
 execute unless score FallDamage options matches 0 run gamerule fallDamage true
 
-scoreboard players set @a opt_fall_damage 0
-scoreboard players enable @a opt_fall_damage
+scoreboard players set @s opt_fall_damage 0
+scoreboard players enable @s opt_fall_damage
 
 function scaffolding_rush:options/refresh

@@ -10,7 +10,7 @@ execute unless score UseGravel options matches 0 run tellraw @a[scores={language
 execute if score UseGravel options matches 0 run clear @a minecraft:gravel
 execute unless score UseGravel options matches 0 run loot give @a loot scaffolding_rush:lobby_gravel
 
-scoreboard players set @a opt_gravel 0
-scoreboard players enable @a opt_gravel
+scoreboard players set @s opt_gravel 0
+scoreboard players enable @s opt_gravel
 
 function scaffolding_rush:options/refresh

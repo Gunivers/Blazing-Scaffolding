@@ -12,7 +12,7 @@ execute unless score RandomTeam options matches 0 run tellraw @a[scores={languag
 
 function scaffolding_rush:lobby/load
 
-scoreboard players set @a opt_random_team 0
-scoreboard players enable @a opt_random_team
+scoreboard players set @s opt_random_team 0
+scoreboard players enable @s opt_random_team
 
 function scaffolding_rush:options/refresh
