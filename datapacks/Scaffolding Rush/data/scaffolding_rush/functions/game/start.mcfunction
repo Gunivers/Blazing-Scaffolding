@@ -9,7 +9,7 @@ scoreboard players set @a greenPlaced 0
 scoreboard players set @a redPlaced 0
 scoreboard players set @a yellowPlaced 0
 
-scoreboard players set VolcanoSummonTimer tmp 0
+scoreboard players set VolcanoSummonTimer timer 0
 
 clear @a
 effect clear @a
