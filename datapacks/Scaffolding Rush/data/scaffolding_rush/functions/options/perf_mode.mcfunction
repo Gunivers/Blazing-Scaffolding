@@ -7,7 +7,7 @@ execute unless score PerformanceMode options matches 0 run tellraw @a[scores={la
 execute if score PerformanceMode options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le mode de performance a été ","color":"gray"},{"text":"désactivé","color":"red"}]
 execute unless score PerformanceMode options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le mode de performance a été ","color":"gray"},{"text":"activé","color":"green"}]
 
-scoreboard players set @a opt_perf_mode 0
-scoreboard players enable @a opt_perf_mode
+scoreboard players set @s opt_perf_mode 0
+scoreboard players enable @s opt_perf_mode
 
 function scaffolding_rush:options/refresh

@@ -10,6 +10,6 @@ execute unless score Regen options matches 0 run tellraw @a[scores={language=1}]
 execute if score Regen options matches 0 run gamerule naturalRegeneration false
 execute unless score Regen options matches 0 run gamerule naturalRegeneration true
 
-scoreboard players set @a opt_regen 0
-scoreboard players enable @a opt_regen
+scoreboard players set @s opt_regen 0
+scoreboard players enable @s opt_regen
 function scaffolding_rush:options/refresh

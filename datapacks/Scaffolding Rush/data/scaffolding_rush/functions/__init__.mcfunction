@@ -11,6 +11,8 @@ forceload add 1100 1100 900 900
 scoreboard objectives add StartGame trigger
 scoreboard objectives add Reset trigger
 
+scoreboard objectives add glib.res0 dummy
+
 scoreboard objectives add opt_preset trigger
 scoreboard objectives add opt_lava_speed trigger
 scoreboard objectives add opt_build_height trigger
@@ -33,8 +35,12 @@ scoreboard objectives add opt_team_number trigger
 scoreboard objectives add opt_lasting_bases trigger
 scoreboard objectives add opt_flag_hunt trigger
 scoreboard objectives add opt_interactible_lobby trigger
+scoreboard objectives add opt_volcano trigger
+scoreboard objectives add opt_volcano_summon_period trigger
+scoreboard objectives add opt_volcano_pop_period trigger
 
 #internal values
+scoreboard objectives add timer dummy
 scoreboard objectives add leave minecraft.custom:minecraft.leave_game
 scoreboard objectives add global dummy
 scoreboard objectives add options dummy
@@ -78,6 +84,9 @@ execute unless score TeamNumber options matches 0.. run scoreboard players set T
 execute unless score Villager options matches 0.. run scoreboard players set Villager options 1
 execute unless score RespawnDelay options matches 1.. run scoreboard players set RespawnDelay options 3
 execute unless score WBSize options matches 25..165 run scoreboard players set WBSize options 95
+execute unless score Volcano options matches 0.. run scoreboard players set Volcano options 0
+execute unless score VolcanoSummonPeriod options matches 0.. run scoreboard players set VolcanoSummonPeriod options 1200
+execute unless score VolcanoPopPeriod options matches 0.. run scoreboard players set VolcanoPopPeriod options 10
 
 #advancement replenish
 advancement revoke @a from scaffolding_rush:replenish
@@ -154,6 +163,7 @@ scoreboard objectives add const dummy
 scoreboard players set -1 const -1
 scoreboard players set 100 const 100
 scoreboard players set 256 const 256
+scoreboard players set 3000 const 3000
 
 setworldspawn 0 4 0
 

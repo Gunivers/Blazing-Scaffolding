@@ -1,3 +1,5 @@
+#Volcano system
+execute if score Volcano options matches 1 run function scaffolding_rush:game/volcano/__main__
 
 #Rise Lava
 execute unless score LavaSpeedTics options matches 0 run scoreboard players add LavaCountdown global 1

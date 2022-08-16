@@ -8,7 +8,7 @@ execute unless score TeamEgg options matches 0 run tellraw @a[scores={language=1
 
 execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 
-scoreboard players set @a opt_team_egg 0
-scoreboard players enable @a opt_team_egg
+scoreboard players set @s opt_team_egg 0
+scoreboard players enable @s opt_team_egg
 
 function scaffolding_rush:options/refresh
