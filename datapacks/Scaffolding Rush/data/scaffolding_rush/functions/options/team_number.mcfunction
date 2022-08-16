@@ -13,7 +13,7 @@ execute if score TeamNumber options matches 2..3 run team join random @a[team=gr
 execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 function scaffolding_rush:team/join/killbase
 
-scoreboard players set @a opt_team_number 0
-scoreboard players enable @a opt_team_number
+scoreboard players set @s opt_team_number 0
+scoreboard players enable @s opt_team_number
 
 function scaffolding_rush:options/refresh

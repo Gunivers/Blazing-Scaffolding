@@ -7,7 +7,7 @@ execute if score Villager options matches 0 run tellraw @a[scores={language=1}] 
 execute unless score Villager options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le villageois a été ","color":"gray"},{"text":"activé","color":"green"}]
 
 
-scoreboard players set @a opt_villager 0
-scoreboard players enable @a opt_villager
+scoreboard players set @s opt_villager 0
+scoreboard players enable @s opt_villager
 
 function scaffolding_rush:options/refresh
