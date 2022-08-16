@@ -35,6 +35,7 @@ scoreboard objectives add opt_team_number trigger
 scoreboard objectives add opt_lasting_bases trigger
 scoreboard objectives add opt_flag_hunt trigger
 scoreboard objectives add opt_interactible_lobby trigger
+scoreboard objectives add opt_volcano trigger
 scoreboard objectives add opt_volcano_summon_period trigger
 scoreboard objectives add opt_volcano_pop_period trigger
 
@@ -83,6 +84,7 @@ execute unless score TeamNumber options matches 0.. run scoreboard players set T
 execute unless score Villager options matches 0.. run scoreboard players set Villager options 1
 execute unless score RespawnDelay options matches 1.. run scoreboard players set RespawnDelay options 3
 execute unless score WBSize options matches 25..165 run scoreboard players set WBSize options 95
+execute unless score Volcano options matches 0.. run scoreboard players set Volcano options 0
 execute unless score VolcanoSummonPeriod options matches 0.. run scoreboard players set VolcanoSummonPeriod options 1200
 execute unless score VolcanoPopPeriod options matches 0.. run scoreboard players set VolcanoPopPeriod options 10
 
