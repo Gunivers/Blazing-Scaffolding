@@ -20,6 +20,8 @@ scoreboard players enable @s opt_language
 scoreboard players enable @s opt_lasting_bases
 scoreboard players enable @s opt_flag_hunt
 scoreboard players enable @s opt_interactible_lobby
+scoreboard players enable @s opt_volcano_summon_period
+scoreboard players enable @s opt_volcano_pop_period
 
 
 scoreboard players enable @s Reset

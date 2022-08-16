@@ -1,9 +1,8 @@
-scoreboard players set VolcanoSummonPeriod options 1200
+
 execute if score VolcanoSummonTimer timer = VolcanoSummonPeriod options run function scaffolding_rush:game/volcano/summon
 execute if score VolcanoSummonTimer timer = VolcanoSummonPeriod options run scoreboard players set VolcanoSummonTimer timer 0
 scoreboard players add VolcanoSummonTimer timer 1
 
-scoreboard players set VolcanoPopPeriod options 10
 execute if score VolcanoPopTimer timer = VolcanoPopPeriod options at @e[tag=VolcanoBase] positioned ~ ~3 ~ run function scaffolding_rush:game/volcano/projection/summon
 execute if score VolcanoPopTimer timer = VolcanoPopPeriod options run scoreboard players set VolcanoPopTimer timer 0
 scoreboard players add VolcanoPopTimer timer 1
