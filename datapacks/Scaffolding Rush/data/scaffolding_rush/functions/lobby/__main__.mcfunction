@@ -33,7 +33,7 @@ execute if block 0 5 7 minecraft:spruce_button[powered=true] run function scaffo
 execute if score Admin options matches 0 unless block 0 5 7 minecraft:cave_air unless block 0 5 7 minecraft:spruce_button[powered=false] run setblock 0 5 7 minecraft:spruce_button[face=floor] replace
 
 #button place base
-execute positioned 0 6 7 run kill @e[tag=LobbyBase,distance=..1]
+execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function scaffolding_rush:lobby/base_egg/remove_at_button
 
 #check player coordonates
 execute unless score GameEnd global matches 1 run function scaffolding_rush:lobby/correct_coordinates
