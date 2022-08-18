@@ -5,6 +5,7 @@ fill -90 0 -90 90 0 90 bedrock
 fill 1090 0 1090 910 0 910 bedrock
 
 forceload add 1100 1100 900 900
+forceload add 100 100 -100 -100
 
 #trigger controls
 # use "/scoreboard players set DevelopementMode global 1" in order to start the map solo
