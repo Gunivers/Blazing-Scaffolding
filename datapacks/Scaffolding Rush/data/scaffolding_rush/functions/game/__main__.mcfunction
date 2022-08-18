@@ -51,7 +51,7 @@ title @a[scores={language=1},tag=has_egg] actionbar ["",{"text":"||","obfuscated
 
 execute as @e[type=minecraft:villager] at @s if entity @a[distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
 
-execute as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #scaffolding_rush:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~
+execute as @e[type=minecraft:villager] at @s unless block ~ ~ ~ air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~
 
 execute if score GameEnd global matches 0 unless score DevelopementMode global matches 1 if score RemainingTeam global matches ..1 run function scaffolding_rush:game/finish
 
