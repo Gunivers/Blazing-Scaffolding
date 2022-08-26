@@ -25,3 +25,4 @@ execute as @a[scores={opt_interactible_lobby=1..}] run function scaffolding_rush
 execute as @a[scores={opt_volcano=1..}] run function scaffolding_rush:options/volcano
 execute as @a[scores={opt_volcano_summon_period=1..}] run function scaffolding_rush:options/volcano_summon_period
 execute as @a[scores={opt_volcano_pop_period=1..}] run function scaffolding_rush:options/volcano_pop_period
+execute as @a[scores={opt_scaff_stops_arrow=1..}] run function scaffolding_rush:options/scaff_stops_arrow
