@@ -87,4 +87,3 @@ execute unless entity @a[tag=admin] if score Admin options matches 1 run functio
 
 # Scaffoldings blocks arrows
 execute as @e[type=arrow] at @s if score ScaffoldingStopsArrow options matches 1 if block ~ ~ ~ minecraft:scaffolding run kill @s
-execute as @e[type=arrow] at @s if score ScaffoldingStopsArrow options matches 1 if block ^ ^-1 ^ minecraft:scaffolding run kill @s
