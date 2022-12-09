@@ -73,9 +73,12 @@ scoreboard players reset @a[nbt={OnGround:1b}] fallDistance
 execute unless score flag_hunt options matches 0 if score FlagHuntCountdown global >= FlagHuntSpawnInterval options run function scaffolding_rush:flag/new_spreaded
 execute unless score flag_hunt options matches 0 run scoreboard players add FlagHuntCountdown global 1
 
+#remove flags in lava
+execute unless score flag_hunt options matches 0 as @e[type=armor_stand,tag=Flag] at @s if block ~ ~2 ~ magma_block run kill @s
+
 #grabbing flag
-execute unless score flag_hunt options matches 0 as @a[gamemode=adventure,tag=!flag_carry] at @s if entity @e[type=armor_stand,tag=Flag,distance=..1] run function scaffolding_rush:flag/grab
-execute unless score flag_hunt options matches 0 as @a[gamemode=survival,tag=!flag_carry] at @s if entity @e[type=armor_stand,tag=Flag,distance=..1] run function scaffolding_rush:flag/grab
+execute unless score flag_hunt options matches 0 as @a[gamemode=adventure,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..2] run function scaffolding_rush:flag/grab
+execute unless score flag_hunt options matches 0 as @a[gamemode=survival,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..2] run function scaffolding_rush:flag/grab
 
 #depositing flag
 execute unless score flag_hunt options matches 0 as @a[tag=flag_carry,team=blue] at @s if entity @e[type=villager,distance=..1, team=blue] run function scaffolding_rush:flag/claim/by_blue
