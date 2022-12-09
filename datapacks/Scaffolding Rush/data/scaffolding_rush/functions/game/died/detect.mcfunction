@@ -1,7 +1,5 @@
-#Executed once on players and villagers with killed score equal to 1 or more
-#kills villagers and detects if a player need to be respawned
-
-
+#Executed once on players with killed score equal to 1 or more
+#detects if this player need to be respawned
 
 gamemode spectator @s
 
