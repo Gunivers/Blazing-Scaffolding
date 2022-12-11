@@ -1,1 +1,1 @@
-tag @s remove whiteFlag
+tag @s remove flagOne

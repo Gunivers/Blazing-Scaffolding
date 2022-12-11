@@ -30,5 +30,5 @@ tellraw @a ["",{"selector":"@s"},{"text":" has fallen from "},{"score":{"name":"
 
 #flag drop
 tag @s remove flag_carry
-execute if entity @s[tag=whiteFlag] at @s run function scaffolding_rush:flag/drop/white
-tag @s remove whiteFlag
+execute if entity @s[tag=flagOne] at @s run function scaffolding_rush:flag/drop/white
+tag @s remove flagOne
