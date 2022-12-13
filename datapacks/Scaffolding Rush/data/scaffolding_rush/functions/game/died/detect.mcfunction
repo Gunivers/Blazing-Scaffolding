@@ -29,6 +29,4 @@ scoreboard players operation @s fallDistance /= #100 global
 tellraw @a ["",{"selector":"@s"},{"text":" has fallen from "},{"score":{"name":"@s","objective":"fallDistance"}},{"text":" blocks"}]
 
 #flag drop
-tag @s remove flag_carry
-execute if entity @s[tag=flagOne] at @s run function scaffolding_rush:flag/drop/white
-tag @s remove flagOne
+execute if entity @s[tag=flag_carry] at @s run function scaffolding_rush:flag/drop/any

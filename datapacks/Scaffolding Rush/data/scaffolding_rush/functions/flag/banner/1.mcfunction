@@ -1,1 +1,1 @@
-item replace entity @s armor.head with minecraft:cyan_banner{BlockEntityTag:{Patterns:[{Pattern:cs,Color:0},{Pattern:tl,Color:0},{Pattern:cbo,Color:9},{Pattern:bs,Color:0},{Pattern:bo,Color:9}]}}
+item replace entity @s armor.head with minecraft:purple_banner{BlockEntityTag:{Patterns:[{Pattern:cs,Color:0},{Pattern:tl,Color:0},{Pattern:cbo,Color:10},{Pattern:bs,Color:0},{Pattern:bo,Color:10}]}}

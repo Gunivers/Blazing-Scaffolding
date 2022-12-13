@@ -68,6 +68,7 @@ scoreboard players set #20 global 20
 scoreboard players set #10 global 10
 scoreboard players set #2 global 2
 scoreboard players set #0 global 0
+scoreboard players set #-1 global -1
 
 execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
 

@@ -68,6 +68,10 @@ tag @a remove TeamEliminated
 tag @a remove has_egg
 tag @a remove VillagerRecup
 tag @a remove Respawning
+tag @a remove flag_carry
+tag @a remove flagOne
+tag @a remove flagTwo
+tag @a remove flagFive
 
 clear @a
 effect clear @a

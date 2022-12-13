@@ -41,8 +41,8 @@ execute if score tick200 global matches 200.. run scoreboard players set tick200
 effect give @a minecraft:saturation 999999 1 true
 
 # Disable offhand
-execute as @a[nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand
-item replace entity @a weapon.offhand with air
+execute as @a[tag=!flag_carry,nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand
+item replace entity @a[tag=!flag_carry] weapon.offhand with air
 
 # Disable drop
 execute as @e[type=item,tag=!processed] run function scaffolding_rush:item/catch_drop

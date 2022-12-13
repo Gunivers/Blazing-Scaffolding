@@ -1,7 +1,7 @@
-execute positioned 0 0 0 run function scaffolding_rush:flag/summon
-execute positioned 0 0 0 run function scaffolding_rush:flag/summon
-execute positioned 0 0 0 run function scaffolding_rush:flag/summon
-execute positioned 0 0 0 run function scaffolding_rush:flag/summon
+execute positioned 0 0 0 run function scaffolding_rush:flag/summon/random
+execute positioned 0 0 0 run function scaffolding_rush:flag/summon/random
+execute positioned 0 0 0 run function scaffolding_rush:flag/summon/random
+execute positioned 0 0 0 run function scaffolding_rush:flag/summon/random
 
 tag @e[type=minecraft:armor_stand,tag=new] add spread
 
