@@ -2,10 +2,10 @@
 #detects if this player need to be respawned
 
 #P
-execute if entity @s[team=red] if entity @e[type=villager, tag=red_villager] run tag @s add Respawning
-execute if entity @s[team=blue] if entity @e[type=villager,tag=blue_villager] run tag @s add Respawning
-execute if entity @s[team=yellow] if entity @e[type=villager, tag=yellow_villager] run tag @s add Respawning
-execute if entity @s[team=green] if entity @e[type=villager,tag=green_villager] run tag @s add Respawning
+execute if entity @s[team=red] if entity @e[type=villager,team=red] run tag @s add Respawning
+execute if entity @s[team=blue] if entity @e[type=villager,team=blue] run tag @s add Respawning
+execute if entity @s[team=yellow] if entity @e[type=villager,team=yellow] run tag @s add Respawning
+execute if entity @s[team=green] if entity @e[type=villager,team=green] run tag @s add Respawning
 execute unless entity @s[tag=Respawning] at @s run playsound minecraft:entity.player.hurt_on_fire ambient @s ~ ~ ~
 
 execute if entity @s run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"selector":"@s"},{"text":" died in the lava","color":"gray"}]
