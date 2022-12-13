@@ -157,6 +157,7 @@ execute unless score Regen options matches 0 run gamerule naturalRegeneration tr
 gamerule randomTickSpeed 3
 gamerule reducedDebugInfo false
 gamerule sendCommandFeedback false
+execute if score DevelopementMode global matches 1 run gamerule sendCommandFeedback true
 gamerule showDeathMessages true
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
