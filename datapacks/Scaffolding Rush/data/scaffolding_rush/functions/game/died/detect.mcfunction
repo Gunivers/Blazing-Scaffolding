@@ -1,6 +1,8 @@
 #Executed once on players with killed score equal to 1 or more
 #detects if this player need to be respawned
 
+gamemode spectator @s
+
 #P
 execute if entity @s[team=red] if entity @e[type=villager,team=red] run tag @s add Respawning
 execute if entity @s[team=blue] if entity @e[type=villager,team=blue] run tag @s add Respawning
@@ -13,8 +15,6 @@ execute if entity @s run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","co
 
 tag @s remove has_egg
 clear @s
-
-gamemode spectator @s[tag=!Respawning]
 
 scoreboard players set @s killed 0
 scoreboard players operation @s[tag=Respawning] respawnTimeTics = RespawnDelayTics global
