@@ -1,3 +1,5 @@
+# Summon a new flag in the playing area
+
 summon area_effect_cloud ~ ~ ~ {Tags:["random"],Age:1}
 execute store result score alea global run data get entity @e[type=area_effect_cloud,tag=random,limit=1] UUID[0] 1
 kill @e[type=area_effect_cloud,tag=random]

@@ -1,3 +1,5 @@
+
+# animation loop
 function scaffolding_rush:flag/animation/__main__
 
 # keep the flag one

@@ -1,3 +1,6 @@
+# When a player drops his flag, as when he is dead
+# Return the flag to the playing area and remove it from the player
+
 execute if entity @s[tag=flagOne] at @s run function scaffolding_rush:flag/drop/point/1
 execute if entity @s[tag=flagTwo] at @s run function scaffolding_rush:flag/drop/point/2
 execute if entity @s[tag=flagFive] at @s run function scaffolding_rush:flag/drop/point/5

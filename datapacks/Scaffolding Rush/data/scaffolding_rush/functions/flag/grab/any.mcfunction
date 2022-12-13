@@ -1,3 +1,6 @@
+# When a player grab a flag
+# Remove it from the playing area, give it to the player in his helmet slot and his offhand
+
 tag @s add flag_carry
 
 tag @e[type=armor_stand,tag=Flag,sort=nearest,limit=1] add processed

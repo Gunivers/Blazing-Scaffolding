@@ -1,3 +1,4 @@
+# When a flag held by a player is given to the villager
 
 execute if entity @s[tag=flagOne] run function scaffolding_rush:flag/claim/point/1
 execute if entity @s[tag=flagTwo] run function scaffolding_rush:flag/claim/point/2
