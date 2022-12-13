@@ -11,8 +11,8 @@ execute as @a[scores={opt_vil_resp_cd=1..}] run function scaffolding_rush:option
 execute as @a[scores={opt_vil_respawn=1..}] run function scaffolding_rush:options/vil_respawn
 execute if score WBAddTemp options matches 0 as @a[scores={opt_wb_size_add=1..}] run function scaffolding_rush:options/wb_size_add
 execute if score WBAddTemp options matches 0 as @a[scores={opt_wb_size_add=..-1}] run function scaffolding_rush:options/wb_size_add
-execute if entity @a[scores={opt_regen=1..}] run function scaffolding_rush:options/regen
-execute if entity @a[scores={opt_fall_damage=1..}] run function scaffolding_rush:options/fall_damage
+execute as @a[scores={opt_regen=1..}] run function scaffolding_rush:options/regen
+execute as @a[scores={opt_fall_damage=1..}] run function scaffolding_rush:options/fall_damage
 execute as @a[scores={opt_random_team=1..}] run function scaffolding_rush:options/random_team
 execute as @a[scores={opt_team_number=1..}] run function scaffolding_rush:options/team_number
 execute as @a[scores={opt_resp_delay=1..}] run function scaffolding_rush:options/respawn_delay
