@@ -1,6 +1,6 @@
 execute as @a[team=blue] run function scaffolding_rush:villager/respawn/msg_dead
 
-execute as @a[team=blue,tag=Respawning] run function scaffolding_rush:game/died/detect
+tag @a[team=blue,tag=Respawning] remove Respawning
 
 scoreboard players operation BlueVillagerRespawn global = VillagerRespawnTics global
 

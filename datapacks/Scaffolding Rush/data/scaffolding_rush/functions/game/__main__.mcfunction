@@ -24,8 +24,8 @@ execute if score GameRunning global matches 1 as @a[scores={yellowPlaced=1..}] r
 execute as @a[gamemode=!spectator] at @s store result score @s[scores={killed=0}] YEntity run data get entity @s Pos[1]
 execute as @a[gamemode=!spectator] at @s if block ~ ~-0.0001 ~ magma_block run scoreboard players add @s killed 1
 
-execute as @e[type=villager,tag=!LobbyBase,team=!] at @s store result score @s[scores={killed=0}] YEntity run data get entity @s Pos[1]
-execute as @e[type=villager,tag=!LobbyBase,team=!] at @s if block ~ ~-0.0001 ~ magma_block run scoreboard players add @s killed 1
+execute as @e[type=villager,tag=!LobbyBase,team=!] at @s store result score @s YEntity run data get entity @s Pos[1]
+execute as @e[type=villager,tag=!LobbyBase,team=!] at @s if block ~ ~-0.0001 ~ magma_block run function scaffolding_rush:game/died/villager
 
 execute as @e[type=marker,name="ScR_LavaLevel",limit=1] at @s run particle lava ~ ~ ~ 160 0 160 1 20 normal
 
@@ -46,8 +46,8 @@ execute as @e[scores={killed=1..},tag=!Respawning] run function scaffolding_rush
 function scaffolding_rush:villager/warn
 
 #inform the player that he has the egg
-title @a[scores={language=0},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg!! Place it to respawn! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
-title @a[scores={language=1},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" Vous avez l'œuf !! Placez-le pour réapparaître ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+title @a[scores={language=0},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg!! Place it to be able to respawn! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+title @a[scores={language=1},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" Vous avez l'œuf !! Placez-le pour pouvoir réapparaître ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 
 execute as @e[type=minecraft:villager] at @s if entity @a[distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
 
@@ -59,7 +59,7 @@ execute as @a[tag=has_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
 
-execute as @a[team=blue,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=blue,gamemode=!spectator] run function scaffolding_rush:game/elimination/blue
-execute as @a[team=red,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=red,gamemode=!spectator] run function scaffolding_rush:game/elimination/red
-execute as @a[team=green,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=green,gamemode=!spectator] run function scaffolding_rush:game/elimination/green
-execute as @a[team=yellow,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=yellow,gamemode=!spectator] run function scaffolding_rush:game/elimination/yellow
+execute as @a[team=blue,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,gamemode=spectator, tag=Respawning] run function scaffolding_rush:game/elimination/blue
+execute as @a[team=red,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=blue,gamemode=spectator, tag=Respawning] run function scaffolding_rush:game/elimination/red
+execute as @a[team=green,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=blue,gamemode=spectator, tag=Respawning] run function scaffolding_rush:game/elimination/green
+execute as @a[team=yellow,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=blue,gamemode=spectator, tag=Respawning] run function scaffolding_rush:game/elimination/yellow
