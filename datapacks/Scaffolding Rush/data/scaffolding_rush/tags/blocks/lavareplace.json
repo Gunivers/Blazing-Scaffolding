@@ -6,6 +6,10 @@
         "lime_concrete_powder",
         "red_concrete_powder",
         "yellow_concrete_powder",
+        "blue_concrete",
+        "lime_concrete",
+        "red_concrete",
+        "yellow_concrete",
         "gravel"
     ]
 }
