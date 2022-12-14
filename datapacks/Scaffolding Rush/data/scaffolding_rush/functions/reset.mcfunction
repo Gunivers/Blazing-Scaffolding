@@ -4,6 +4,8 @@ worldborder center 0 0
 #remove bases markers
 kill @e[tag=baseTeam]
 
+kill @e[type=armor_stand,tag=Flag]
+
 function scaffolding_rush:game/summon_markers
 
 execute if score GameRunning global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]
@@ -66,6 +68,10 @@ tag @a remove TeamEliminated
 tag @a remove has_egg
 tag @a remove VillagerRecup
 tag @a remove Respawning
+tag @a remove flag_carry
+tag @a remove flagOne
+tag @a remove flagTwo
+tag @a remove flagFive
 
 clear @a
 effect clear @a
@@ -94,7 +100,7 @@ bossbar set minecraft:filling_lava visible false
 
 effect give @a minecraft:jump_boost 5 255 true
 
-#TODO mettre le message en dev seuleument
+#confirmation message
 execute if score DevelopementMode global matches 1 run tellraw @a ["",{"text":"[SR] ","color":"gold"},{"text":"Reset done","color":"gray"}]
 
 execute as @a[tag=InGame] run function scaffolding_rush:lobby/tp_to_lobby
