@@ -5,7 +5,7 @@ execute if score Admin options matches 0 as @a run scoreboard players enable @s 
 execute if score RemainingTeam global matches 2.. if score ClearGame global matches 0 run function scaffolding_rush:game/countdown
 
 # Start the game even if there are not enough players
-execute if score DevelopementMode global matches 1 if score ClearGame global matches 0 run function scaffolding_rush:game/countdown
+execute if score DevelopementMode global matches 1 if score ClearGame global matches 0 unless score GameLoading global matches 1 run function scaffolding_rush:game/countdown
 
 execute if score RemainingTeam global matches ..1 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Not enough teams","color":"red"}]
 execute if score ClearGame global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Please wait, a clear of the map is in progress","color":"red"}]
