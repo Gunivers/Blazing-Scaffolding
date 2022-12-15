@@ -23,6 +23,13 @@ execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:reset
 # Ghostblocks
 #execute as @a at @s run function scaffolding_rush:game/ghostblock_detection
 
+# Flag animation system
+function scaffolding_rush:flag/__main__
+
+# timer for animation
+scoreboard players add tick200 global 1
+execute if score tick200 global matches 200.. run scoreboard players set tick200 global 1
+
 #  ____  _           _     _ _                               _   _                                     _                 _          
 # |  _ \(_)___  __ _| |__ | (_)_ __   __ _       _ __   __ _| |_(_)_   _____       _ __ ___   ___  ___| |__   __ _ _ __ (_) ___ ___ 
 # | | | | / __|/ _` | '_ \| | | '_ \ / _` |     | '_ \ / _` | __| \ \ / / _ \     | '_ ` _ \ / _ \/ __| '_ \ / _` | '_ \| |/ __/ __|
@@ -34,8 +41,8 @@ execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:reset
 effect give @a minecraft:saturation 999999 1 true
 
 # Disable offhand
-execute as @a[nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand
-item replace entity @a weapon.offhand with air
+execute as @a[tag=!flag_carry,nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand
+item replace entity @a[tag=!flag_carry] weapon.offhand with air
 
 # Disable drop
 execute as @e[type=item,tag=!processed] run function scaffolding_rush:item/catch_drop

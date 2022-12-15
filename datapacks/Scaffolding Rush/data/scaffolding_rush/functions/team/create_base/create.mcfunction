@@ -12,8 +12,7 @@ kill @e[type=armor_stand,tag=baseTeam]
 
 function scaffolding_rush:spread_in_border
 
-execute as @e[tag=baseTeam] at @s run tp @s ~1000 ~2 ~1000
-execute as @e[tag=baseTeam] at @s run teleport @s ~ 4 ~
+execute as @e[tag=baseTeam] at @s run tp @s ~1000 4 ~1000
 
 execute as @e[tag=baseTeam] at @s run function scaffolding_rush:team/create_base/load_structure
 

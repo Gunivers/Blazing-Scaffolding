@@ -11,6 +11,9 @@ scoreboard players set @a yellowPlaced 0
 
 scoreboard players set VolcanoSummonTimer timer 0
 
+#reset flaghunt timer
+execute unless score flag_hunt options matches 0 run scoreboard players set FlagHuntCountdown global 0
+
 clear @a
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true

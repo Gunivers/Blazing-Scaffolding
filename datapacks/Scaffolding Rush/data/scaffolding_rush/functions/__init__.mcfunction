@@ -54,6 +54,8 @@ scoreboard objectives add gameId dummy
 scoreboard objectives add language dummy
 scoreboard objectives add respawnTime dummy
 scoreboard objectives add respawnTimeTics dummy
+scoreboard objectives add Score dummy
+scoreboard objectives add fallDistance minecraft.custom:minecraft.fall_one_cm
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
@@ -66,6 +68,7 @@ scoreboard players set #20 global 20
 scoreboard players set #10 global 10
 scoreboard players set #2 global 2
 scoreboard players set #0 global 0
+scoreboard players set #-1 global -1
 
 execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
 
@@ -92,7 +95,7 @@ execute unless score Volcano options matches 0.. run scoreboard players set Volc
 execute unless score VolcanoSummonPeriod options matches 0.. run scoreboard players set VolcanoSummonPeriod options 1200
 execute unless score VolcanoPopPeriod options matches 0.. run scoreboard players set VolcanoPopPeriod options 10
 execute unless score ScaffoldingStopsArrow options matches 0.. run scoreboard players set ScaffoldingStopsArrow options 0
-
+execute unless score FlagHuntSpawnInterval options matches 0.. run scoreboard players set FlagHuntSpawnInterval options 600
 #advancement replenish
 advancement revoke @a from scaffolding_rush:replenish
 
@@ -119,6 +122,12 @@ team modify blue friendlyFire false
 team modify yellow friendlyFire false
 team modify green friendlyFire false
 team modify random friendlyFire true
+
+#Score
+team join blue Blue
+team join green Green
+team join red Red
+team join yellow Yellow
 
 #worldborder
 worldborder warning distance 1
