@@ -7,9 +7,6 @@ execute if entity @s[team=blue] if entity @e[type=villager,team=blue] run tag @s
 execute if entity @s[team=yellow] if entity @e[type=villager,team=yellow] run tag @s add Respawning
 execute if entity @s[team=green] if entity @e[type=villager,team=green] run tag @s add Respawning
 
-execute if entity @s run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"selector":"@s"},{"text":" died in the lava","color":"gray"}]
-execute if entity @s run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"selector":"@s"},{"text":" est mort·e dans la lave","color":"gray"}]
-
 tag @s remove has_egg
 clear @s
 gamemode spectator @s

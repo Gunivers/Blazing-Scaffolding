@@ -49,7 +49,8 @@ execute as @a[tag=has_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
 
-execute as @a[team=blue,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/blue
-execute as @a[team=red,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/red
-execute as @a[team=green,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/green
-execute as @a[team=yellow,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/yellow
+# Elimination if team exist, unless players in game, unless players are respawning
+execute if entity @a[team=blue,tag=!TeamEliminated] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/blue
+execute if entity @a[team=green,tag=!TeamEliminated] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=green,tag=Respawning] run function scaffolding_rush:game/elimination/green
+execute if entity @a[team=red,tag=!TeamEliminated] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=red,tag=Respawning] run function scaffolding_rush:game/elimination/red
+execute if entity @a[team=yellow,tag=!TeamEliminated] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=yellow,tag=Respawning] run function scaffolding_rush:game/elimination/yellow

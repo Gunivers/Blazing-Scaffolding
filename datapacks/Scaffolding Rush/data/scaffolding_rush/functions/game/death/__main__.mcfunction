@@ -1,14 +1,14 @@
 
 # Kill players in lava
 execute as @a[gamemode=!spectator,tag=!Respawning] at @s store result score @s[scores={killed=0}] YEntity run data get entity @s Pos[1]
-execute as @a[gamemode=!spectator,tag=!Respawning] at @s if block ~ ~-0.0001 ~ magma_block run function scaffolding_rush:game/death/player/kill
+execute as @a[gamemode=!spectator,tag=!Respawning] at @s if block ~ ~-0.0001 ~ magma_block run function scaffolding_rush:game/death/player/kill/lava
 
 #Kill villager in lava
 execute as @e[type=villager,tag=!LobbyBase,team=!] at @s store result score @s YEntity run data get entity @s Pos[1]
 execute as @e[type=villager,tag=!LobbyBase,team=!] at @s if block ~ ~-0.0001 ~ magma_block run function scaffolding_rush:game/death/villager/kill
 
 # If player has been killed
-execute as @a[scores={killed=0..}] at @s run function scaffolding_rush:game/death/player/kill
+execute as @a[scores={killed=1..}] at @s run function scaffolding_rush:game/death/player/kill
 
 # Check if villager is alive
 function scaffolding_rush:game/death/villager/villager_loss_detection
