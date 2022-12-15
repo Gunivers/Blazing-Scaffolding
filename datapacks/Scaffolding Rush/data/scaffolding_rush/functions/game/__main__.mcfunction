@@ -21,11 +21,7 @@ execute if score GameRunning global matches 1 as @a[scores={greenPlaced=1..}] ru
 execute if score GameRunning global matches 1 as @a[scores={redPlaced=1..}] run function scaffolding_rush:villager/placed
 execute if score GameRunning global matches 1 as @a[scores={yellowPlaced=1..}] run function scaffolding_rush:villager/placed
 
-execute as @a[gamemode=!spectator] at @s store result score @s[scores={killed=0}] YEntity run data get entity @s Pos[1]
-execute as @a[gamemode=!spectator] at @s if block ~ ~-0.0001 ~ magma_block run scoreboard players add @s killed 1
-
-execute as @e[type=villager,tag=!LobbyBase,team=!] at @s store result score @s YEntity run data get entity @s Pos[1]
-execute as @e[type=villager,tag=!LobbyBase,team=!] at @s if block ~ ~-0.0001 ~ magma_block run function scaffolding_rush:game/died/villager
+function scaffolding_rush:game/death/__main__
 
 execute as @e[type=marker,name="ScR_LavaLevel",limit=1] at @s run particle lava ~ ~ ~ 160 0 160 1 20 normal
 
@@ -35,12 +31,6 @@ execute as @a[nbt={SelectedItem: {}},gamemode=survival] run gamemode adventure
 
 #bossbar
 execute store result bossbar filling_lava value run scoreboard players get LavaCountdown global
-
-#villager egg respawn
-function scaffolding_rush:villager/respawn/villager_loss_detection
-
-#respawn dead players
-execute as @e[scores={killed=1..},tag=!Respawning] run function scaffolding_rush:game/died/detect
 
 #warn villagers height
 function scaffolding_rush:villager/warn
@@ -59,7 +49,7 @@ execute as @a[tag=has_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
 
-execute as @a[team=blue,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,gamemode=spectator, tag=Respawning] run function scaffolding_rush:game/elimination/blue
-execute as @a[team=red,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=blue,gamemode=spectator, tag=Respawning] run function scaffolding_rush:game/elimination/red
-execute as @a[team=green,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=blue,gamemode=spectator, tag=Respawning] run function scaffolding_rush:game/elimination/green
-execute as @a[team=yellow,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=blue,gamemode=spectator, tag=Respawning] run function scaffolding_rush:game/elimination/yellow
+execute as @a[team=blue,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/blue
+execute as @a[team=red,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/red
+execute as @a[team=green,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/green
+execute as @a[team=yellow,gamemode=spectator,tag=!TeamEliminated,limit=1] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/yellow

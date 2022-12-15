@@ -1,3 +1,6 @@
+# When the player has finished respawning
+execute if score DevelopementMode global matches 1 run say game/death/player/respawn/loop_end
+
 gamemode survival @s
 function scaffolding_rush:team/create_base/armor
 
