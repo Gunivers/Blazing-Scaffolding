@@ -36,6 +36,13 @@ execute as @a[nbt={SelectedItem: {}},gamemode=survival] run gamemode adventure
 #bossbar
 execute store result bossbar filling_lava value run scoreboard players get LavaCountdown global
 
+#Add new villagers to team manually in case of server issues
+team join blue @e[type=villager,tag=new_villager,tag=blue_villager]
+team join green @e[type=villager,tag=new_villager,tag=green_villager]
+team join red @e[type=villager,tag=new_villager,tag=red_villager]
+team join yellow @e[type=villager,tag=new_villager,tag=yellow_villager]
+tag @e[type=villager,tag=new_villager] remove new_villager
+
 #villager egg respawn
 function scaffolding_rush:villager/respawn/villager_loss_detection
 
