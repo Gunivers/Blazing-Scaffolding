@@ -20,3 +20,6 @@ execute as @a[tag=flag_carry,tag=flagOne] unless entity @s[nbt={Inventory:[{id:"
 
 execute as @a[tag=flag_carry,tag=flagFive] if entity @s[nbt=!{Inventory:[{id:"minecraft:red_banner",Slot:-106b}]}] run item replace entity @s weapon.offhand with minecraft:red_banner{BlockEntityTag:{Patterns:[{Pattern:bs,Color:0},{Pattern:mr,Color:14},{Pattern:ts,Color:0},{Pattern:drs,Color:0},{Pattern:bo,Color:14}]}}
 execute as @a[tag=flag_carry,tag=flagFive] if entity @s[nbt=!{Inventory:[{id:"minecraft:red_banner",Slot:103b}]}] run function scaffolding_rush:flag/banner/5
+
+# Test flag in game
+execute as @a[gamemode=!spectator] at @s run fill ~-4 ~-4 ~-4 ~4 ~4 ~4 air replace #scaffolding_rush:flag
