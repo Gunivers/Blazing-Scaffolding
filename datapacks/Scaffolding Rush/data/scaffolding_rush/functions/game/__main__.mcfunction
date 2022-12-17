@@ -63,10 +63,10 @@ execute as @a[tag=has_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
 
 # Elimination if team exist, unless players in game, unless players are respawning
-execute if entity @a[team=blue,tag=!TeamEliminated] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] run function scaffolding_rush:game/elimination/blue
-execute if entity @a[team=green,tag=!TeamEliminated] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=green,tag=Respawning] run function scaffolding_rush:game/elimination/green
-execute if entity @a[team=red,tag=!TeamEliminated] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=red,tag=Respawning] run function scaffolding_rush:game/elimination/red
-execute if entity @a[team=yellow,tag=!TeamEliminated] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=yellow,tag=Respawning] run function scaffolding_rush:game/elimination/yellow
+execute if entity @a[team=blue,tag=!TeamEliminated] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] unless entity @e[type=villager,tag=blue_villager] run function scaffolding_rush:game/elimination/blue
+execute if entity @a[team=green,tag=!TeamEliminated] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=green,tag=Respawning] unless entity @e[type=villager,tag=green_villager] run function scaffolding_rush:game/elimination/green
+execute if entity @a[team=red,tag=!TeamEliminated] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=red,tag=Respawning] unless entity @e[type=villager,tag=red_villager] run function scaffolding_rush:game/elimination/red
+execute if entity @a[team=yellow,tag=!TeamEliminated] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=yellow,tag=Respawning] unless entity @e[type=villager,tag=yellow_villager] run function scaffolding_rush:game/elimination/yellow
 
 #fall distance
 scoreboard players reset @a[nbt={OnGround:1b}] fallDistance
