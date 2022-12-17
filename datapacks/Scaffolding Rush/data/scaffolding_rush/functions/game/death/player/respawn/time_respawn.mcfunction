@@ -1,3 +1,5 @@
+# Title when the player is respawning
+
 scoreboard players operation @s respawnTime = @s respawnTimeTics
 scoreboard players operation @s respawnTime *= #10 global
 scoreboard players operation @s respawnTime /= RespawnDelayTics global

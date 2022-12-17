@@ -1,6 +1,7 @@
 execute as @a[team=yellow] run function scaffolding_rush:villager/respawn/msg_dead
 
-tag @a[team=yellow,tag=Respawning] remove Respawning
+execute as @a[team=yellow,tag=Respawning] run function scaffolding_rush:game/death/player/die
+execute if score DevelopementMode global matches 1 run say villager/respawn/yellow @a[team=yellow,tag=Respawning]
 
 scoreboard players operation YellowVillagerRespawn global = VillagerRespawnTics global
 
