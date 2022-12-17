@@ -8,8 +8,8 @@ execute if score PerformanceMode options matches 0 if score LavaCountdown global
 execute if score PerformanceMode options matches 1 as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/lava/rise_locally
 execute if score PerformanceMode options matches 1 as @e[type=villager,tag=!LobbyBase] at @s run function scaffolding_rush:game/lava/rise_locally
 
+execute unless score lasting_bases options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[tag=baseTeam] at @s run function scaffolding_rush:team/create_base/rise
 execute unless score lasting_bases options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[tag=baseTeam] at @s run tp @s ~ ~1 ~
-execute unless score lasting_bases options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[tag=baseTeam] at @s run function scaffolding_rush:team/create_base/load_structure
 execute unless score lasting_bases options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[tag=baseTeam] at @s positioned ~-3 ~ ~-3 as @e[type=!marker,dx=6,dy=3,dz=6] at @s run tp @s ~ ~1 ~
 
 execute if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_Build"] at @s run function scaffolding_rush:game/air_replace
@@ -31,6 +31,19 @@ execute as @a[nbt={SelectedItem: {}},gamemode=survival] run gamemode adventure
 
 #bossbar
 execute store result bossbar filling_lava value run scoreboard players get LavaCountdown global
+
+#Add new villagers to team manually in case of server issues
+team join blue @e[type=villager,tag=new_villager,tag=blue_villager]
+team join green @e[type=villager,tag=new_villager,tag=green_villager]
+team join red @e[type=villager,tag=new_villager,tag=red_villager]
+team join yellow @e[type=villager,tag=new_villager,tag=yellow_villager]
+tag @e[type=villager,tag=new_villager] remove new_villager
+
+#villager egg respawn
+function scaffolding_rush:villager/respawn/villager_loss_detection
+
+#respawn dead players
+execute as @a[scores={killed=1..},tag=!Respawning] run function scaffolding_rush:game/died/detect
 
 #warn villagers height
 function scaffolding_rush:villager/warn
