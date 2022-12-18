@@ -1,6 +1,5 @@
-tag @a[team=yellow] remove has_egg
-clear @a[team=yellow] ghast_spawn_egg
-clear @a[team=yellow] blaze_spawn_egg
+
+execute as @a[team=yellow] run function scaffolding_rush:villager/egg/clear
 
 execute as @e[type=villager,tag=yellow_villager] run function scaffolding_rush:clean_kill
 

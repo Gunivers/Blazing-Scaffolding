@@ -10,8 +10,8 @@ execute if score VillagerForgiveness options matches 1 if score BlueVillagerResp
 execute if score VillagerForgiveness options matches 1 if score YellowVillagerRespawn global matches 0.. run scoreboard players remove YellowVillagerRespawn global 1
 execute if score VillagerForgiveness options matches 1 if score GreenVillagerRespawn global matches 0.. run scoreboard players remove GreenVillagerRespawn global 1
 
-execute if score VillagerForgiveness options matches 1 if score RedVillagerRespawn global matches 0 as @a[team=red,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/red
-execute if score VillagerForgiveness options matches 1 if score BlueVillagerRespawn global matches 0 as @a[team=blue,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/blue
-execute if score VillagerForgiveness options matches 1 if score YellowVillagerRespawn global matches 0 as @a[team=yellow,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/yellow
-execute if score VillagerForgiveness options matches 1 if score GreenVillagerRespawn global matches 0 as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/give/green
+execute if score VillagerForgiveness options matches 1 if score RedVillagerRespawn global matches 0 as @a[team=red,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/egg/give/red
+execute if score VillagerForgiveness options matches 1 if score BlueVillagerRespawn global matches 0 as @a[team=blue,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/egg/give/blue
+execute if score VillagerForgiveness options matches 1 if score YellowVillagerRespawn global matches 0 as @a[team=yellow,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/egg/give/yellow
+execute if score VillagerForgiveness options matches 1 if score GreenVillagerRespawn global matches 0 as @a[team=green,gamemode=!spectator,sort=random,limit=1] run function scaffolding_rush:villager/egg/give/green
 

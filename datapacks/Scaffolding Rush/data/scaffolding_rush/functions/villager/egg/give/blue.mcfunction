@@ -1,6 +1,5 @@
-tag @a[team=blue] remove has_egg
-clear @a[team=blue] ghast_spawn_egg
-clear @a[team=blue] squid_spawn_egg
+
+execute as @a[team=blue] run function scaffolding_rush:villager/egg/clear
 
 execute as @e[type=villager,tag=blue_villager] run function scaffolding_rush:clean_kill
 
