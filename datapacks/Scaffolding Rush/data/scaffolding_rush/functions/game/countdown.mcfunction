@@ -20,7 +20,7 @@ function scaffolding_rush:game/summon_markers
 
 function scaffolding_rush:broadcast/10s
 
-teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 270 1000
+teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 2 1000
 
 kill @e[tag=lobbyText]
 kill @e[type=falling_block]
