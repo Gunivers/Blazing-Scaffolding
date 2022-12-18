@@ -26,6 +26,11 @@ execute at @e[tag=baseTeam,name="Red",limit=1] run teleport @a[team=red] ~ 4 ~
 execute at @e[tag=baseTeam,name="Yellow",limit=1] run teleport @a[team=yellow] ~ 4 ~
 tag @a[team=!] add InGame
 
+execute at @e[tag=baseTeam,name="Blue",limit=1] run spawnpoint @a[team=blue] ~ 4 ~
+execute at @e[tag=baseTeam,name="Green",limit=1] run spawnpoint @a[team=green] ~ 4 ~
+execute at @e[tag=baseTeam,name="Red",limit=1] run spawnpoint @a[team=red] ~ 4 ~
+execute at @e[tag=baseTeam,name="Yellow",limit=1] run spawnpoint @a[team=yellow] ~ 4 ~
+
 execute as @a[team=] at @s run function scaffolding_rush:game/tp_to_game
 
 execute as @e[type=villager,tag=LobbyBase] run function scaffolding_rush:clean_kill

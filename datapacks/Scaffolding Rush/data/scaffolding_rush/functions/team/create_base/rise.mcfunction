@@ -27,3 +27,8 @@ execute if entity @s[name="Blue"] run fill ~-2 ~ ~-2 ~2 ~3 ~2 blue_concrete repl
 execute if entity @s[name="Green"] run fill ~-2 ~ ~-2 ~2 ~3 ~2 lime_concrete replace light_gray_concrete
 execute if entity @s[name="Red"] run fill ~-2 ~ ~-2 ~2 ~3 ~2 red_concrete replace light_gray_concrete
 execute if entity @s[name="Yellow"] run fill ~-2 ~ ~-2 ~2 ~3 ~2 yellow_concrete replace light_gray_concrete
+
+execute if entity @s[name="Blue"] run spawnpoint @a[team=blue] ~ ~5 ~
+execute if entity @s[name="Green"] run spawnpoint @a[team=green] ~ ~5 ~
+execute if entity @s[name="Red"] run spawnpoint @a[team=red] ~ ~5 ~
+execute if entity @s[name="Yellow"] run spawnpoint @a[team=yellow] ~ ~5 ~

@@ -8,7 +8,12 @@ execute if entity @s[team=yellow] if entity @e[type=villager,tag=yellow_villager
 execute if entity @s[team=green] if entity @e[type=villager,tag=green_villager] run tag @s add Respawning
 
 # Drop the flag
-execute unless score flag_hunt options matches 0 run function scaffolding_rush:flag/drop/any
+summon marker ~ ~ ~ {Tags:["last_death"]}
+execute store result entity @e[type=marker,tag=last_death,limit=1] Pos[0] double 1.0 run scoreboard players get @s XEntity
+execute store result entity @e[type=marker,tag=last_death,limit=1] Pos[1] double 1.0 run scoreboard players get @s YEntity
+execute store result entity @e[type=marker,tag=last_death,limit=1] Pos[2] double 1.0 run scoreboard players get @s ZEntity
+execute unless score flag_hunt options matches 0 if entity @s[tag=flag_carry] positioned as @e[type=marker,tag=last_death,limit=1] run function scaffolding_rush:flag/drop/any
+kill @e[type=marker,tag=last_death]
 
 tag @s remove has_egg
 clear @s

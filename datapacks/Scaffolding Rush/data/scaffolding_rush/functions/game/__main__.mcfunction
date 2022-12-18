@@ -42,8 +42,11 @@ tag @e[type=villager,tag=new_villager] remove new_villager
 #villager egg respawn
 function scaffolding_rush:villager/respawn/villager_loss_detection
 
-execute as @a[gamemode=!spectator,tag=!Respawning] at @s store result score @s[scores={killed=0}] YEntity run data get entity @s Pos[1]
-execute as @e[type=villager,tag=!LobbyBase,team=!] at @s store result score @s YEntity run data get entity @s Pos[1]
+execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store result score @s XEntity run data get entity @s Pos[0]
+execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store result score @s YEntity run data get entity @s Pos[1]
+execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store result score @s ZEntity run data get entity @s Pos[2]
+
+execute as @e[type=villager,tag=!LobbyBase] at @s store result score @s YEntity run data get entity @s Pos[1]
 
 
 #warn villagers height
