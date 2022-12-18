@@ -1,5 +1,6 @@
 {
  "values": [
-	"scaffolding_rush:__init__"
+	"scaffolding_rush:__init__",
+	"scgui:load"
  ]
 }
