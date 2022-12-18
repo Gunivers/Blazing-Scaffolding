@@ -28,4 +28,4 @@ execute unless entity @s[tag=Respawning] run function scaffolding_rush:game/deat
 
 #Recup delay
 tag @s[gamemode=!spectator,tag=!has_egg] add VillagerRecup
-schedule function scaffolding_rush:villager/give/recup_delay 15t
+schedule function scaffolding_rush:villager/egg/give/recup_delay 15t
