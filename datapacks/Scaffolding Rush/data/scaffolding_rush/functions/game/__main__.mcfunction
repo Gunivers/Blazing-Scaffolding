@@ -48,18 +48,29 @@ execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store
 
 execute as @e[type=villager,tag=!LobbyBase] at @s store result score @s YEntity run data get entity @s Pos[1]
 
+execute as @e[type=minecraft:villager] at @s if entity @a[distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
+
+execute as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #scaffolding_rush:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~
+
+# tag facing_villager
+execute as @a[gamemode=!spectator,tag=!Respawning] at @s run function scaffolding_rush:villager/facing/test
 
 #warn villagers height
-function scaffolding_rush:villager/warn
+execute as @e[type=villager] run function scaffolding_rush:villager/warn/test
+
+
+# Action bar msg
 
 #inform the player that he has the egg
 title @a[scores={language=0},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg!! Place it to be able to respawn! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 title @a[scores={language=1},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" Vous avez l'œuf !! Placez-le pour pouvoir réapparaître ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 
-execute as @e[type=minecraft:villager] at @s if entity @a[distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
+title @a[gamemode=!spectator,tag=!Respawning] times 0 2 0
+execute as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:villager/facing/msg
+execute as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg
 
-execute as @e[type=minecraft:villager] at @s unless block ~ ~ ~ #scaffolding_rush:air unless block ~ ~ ~ minecraft:scaffolding run tp @s ~ ~0.1 ~
 
+# End of game
 execute if score GameEnd global matches 0 unless score DevelopementMode global matches 1 if score RemainingTeam global matches ..1 run function scaffolding_rush:game/finish
 
 execute as @a[tag=has_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:slime_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:blaze_spawn_egg"}]}] run function scaffolding_rush:villager/give/any
