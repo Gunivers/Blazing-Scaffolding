@@ -25,6 +25,7 @@ scoreboard players enable @s opt_volcano_summon_period
 scoreboard players enable @s opt_volcano_pop_period
 scoreboard players enable @s opt_scaff_stops_arrow
 
-
 scoreboard players enable @s Reset
 scoreboard players enable @s StartGame
+
+#generated scores
