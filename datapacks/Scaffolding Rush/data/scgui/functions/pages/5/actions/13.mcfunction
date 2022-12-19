@@ -1,0 +1,2 @@
+
+function scaffolding_rush:options/instant_pillar
