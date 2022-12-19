@@ -98,6 +98,10 @@ execute unless score VolcanoSummonPeriod options matches 0.. run scoreboard play
 execute unless score VolcanoPopPeriod options matches 0.. run scoreboard players set VolcanoPopPeriod options 10
 execute unless score ScaffoldingStopsArrow options matches 0.. run scoreboard players set ScaffoldingStopsArrow options 0
 execute unless score FlagHuntSpawnInterval options matches 0.. run scoreboard players set FlagHuntSpawnInterval options 600
+
+#generated scores initialisation
+function scaffolding_rush:options/__init__
+
 #advancement replenish
 advancement revoke @a from scaffolding_rush:replenish
 
