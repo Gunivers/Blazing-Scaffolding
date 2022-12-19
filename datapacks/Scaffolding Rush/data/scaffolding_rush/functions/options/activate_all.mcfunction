@@ -29,3 +29,6 @@ scoreboard players enable @s Reset
 scoreboard players enable @s StartGame
 
 #generated scores
+scoreboard players enable @s opt_end_criteria
+scoreboard players enable @s opt_time_limit
+scoreboard players enable @s opt_score_limit

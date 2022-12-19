@@ -29,3 +29,6 @@ scoreboard players reset @s Reset
 scoreboard players reset @s StartGame
 
 #generated scores
+scoreboard players reset @s opt_end_criteria
+scoreboard players reset @s opt_time_limit
+scoreboard players reset @s opt_score_limit
