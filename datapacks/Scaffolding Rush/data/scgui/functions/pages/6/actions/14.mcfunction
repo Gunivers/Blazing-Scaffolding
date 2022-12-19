@@ -1,2 +1,2 @@
 
-function scaffolding_rush:options/fall_damage
+function scaffolding_rush:options/team_egg
