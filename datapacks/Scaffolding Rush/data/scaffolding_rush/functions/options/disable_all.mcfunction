@@ -27,3 +27,5 @@ scoreboard players reset @s opt_scaff_stops_arrow
 
 scoreboard players reset @s Reset
 scoreboard players reset @s StartGame
+
+#generated scores
