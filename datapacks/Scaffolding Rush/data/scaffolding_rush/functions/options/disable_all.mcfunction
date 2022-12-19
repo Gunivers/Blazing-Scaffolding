@@ -1,7 +1,7 @@
 scoreboard players reset @s opt_preset
 scoreboard players reset @s opt_lava_speed
 scoreboard players reset @s opt_build_height
-scoreboard players reset @s opt_gravel
+scoreboard players reset @s opt_sand
 scoreboard players reset @s opt_snowball
 scoreboard players reset @s opt_vil_respawn
 scoreboard players reset @s opt_vil_resp_cd

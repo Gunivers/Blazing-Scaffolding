@@ -1,15 +1,15 @@
 {
   "criteria": {
-    "scaffolding placed": {
+    "light_gray_concrete_powder placed": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": {},
-        "block": "minecraft:gravel"
+        "block": "minecraft:light_gray_concrete_powder"
       }
     }
   },
   "rewards": {
-    "function": "scaffolding_rush:item/replenish/gravel"
+    "function": "scaffolding_rush:item/replenish/light_gray_concrete_powder"
   },
   "parent": "scaffolding_rush:replenish"
 }

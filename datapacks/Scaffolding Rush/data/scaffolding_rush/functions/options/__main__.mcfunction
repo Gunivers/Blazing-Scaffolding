@@ -1,6 +1,6 @@
 execute as @a[scores={opt_preset=1..}] run function scaffolding_rush:options/preset
 execute as @a[scores={opt_build_height=1..}] run function scaffolding_rush:options/build_height
-execute as @a[scores={opt_gravel=1..}] run function scaffolding_rush:options/gravel
+execute as @a[scores={opt_sand=1..}] run function scaffolding_rush:options/sand
 execute as @a[scores={opt_instant_pil=1..}] run function scaffolding_rush:options/instant_pillar
 execute as @a[scores={opt_lava_speed=1..}] run function scaffolding_rush:options/lava_speed
 execute as @a[scores={opt_perf_mode=1..}] run function scaffolding_rush:options/perf_mode

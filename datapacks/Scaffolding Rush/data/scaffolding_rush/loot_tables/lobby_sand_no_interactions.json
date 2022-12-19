@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:gravel"
+          "name": "minecraft:light_gray_concrete_powder"
         }
       ],
       "functions": [

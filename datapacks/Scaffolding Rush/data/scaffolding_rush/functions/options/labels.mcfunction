@@ -1,9 +1,9 @@
 
-execute as @e[type=marker,name="✔"] run scoreboard players set @s opt_gravel 0
-execute as @e[type=marker,name="✖"] run scoreboard players set @s opt_gravel 0
+execute as @e[type=marker,name="✔"] run scoreboard players set @s opt_sand 0
+execute as @e[type=marker,name="✖"] run scoreboard players set @s opt_sand 0
 
-execute if score UseGravel options matches 1 as @e[type=marker,name="✔"] run scoreboard players set @s opt_gravel 1
-execute if score UseGravel options matches 0 as @e[type=marker,name="✖"] run scoreboard players set @s opt_gravel 1
+execute if score UseSand options matches 1 as @e[type=marker,name="✔"] run scoreboard players set @s opt_sand 1
+execute if score UseSand options matches 0 as @e[type=marker,name="✖"] run scoreboard players set @s opt_sand 1
 
 
 execute as @e[type=marker,name="✔"] run scoreboard players set @s opt_instant_pil 0
