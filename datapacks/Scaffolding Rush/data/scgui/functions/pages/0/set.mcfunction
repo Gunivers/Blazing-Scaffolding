@@ -4,11 +4,11 @@ item replace entity @s enderchest.1 with scaffolding{scgui:1, scgui.action:1, di
 item replace entity @s enderchest.2 with stone_sword{scgui:1, scgui.action:2, display:{Name:'[{"text":"Preset :","italic":false,"color":"gold"},{"text":" xxxxxx","italic":false,"color":"gold"}]',Lore:['[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Vitesse de lave : ","color":"gray"},{"text":"7s"},{"text":"","color":"dark_purple"}]','[{"text":"[...]","italic":false,"color":"white"}]']}} 1
 item replace entity @s enderchest.3 with white_banner{scgui:1, scgui.action:3, display:{Name:'[{"text":"Preset :","italic":false,"color":"gold"},{"text":" xxxxxx","italic":false,"color":"gold"}]',Lore:['[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Vitesse de lave : ","color":"gray"},{"text":"7s"},{"text":"","color":"dark_purple"}]','[{"text":"[...]","italic":false,"color":"white"}]']}} 1
 item replace entity @s enderchest.10 with magma_block{scgui:1, scgui.action:10} 1
-item replace entity @s enderchest.11 with air{scgui:1, scgui.action:11} 1
-item replace entity @s enderchest.12 with air{scgui:1, scgui.action:12} 1
-item replace entity @s enderchest.19 with air{scgui:1, scgui.action:13} 1
-item replace entity @s enderchest.20 with air{scgui:1, scgui.action:14} 1
-item replace entity @s enderchest.21 with air{scgui:1, scgui.action:15} 1
+item replace entity @s enderchest.11 with spyglass{scgui:1, scgui.action:11} 1
+item replace entity @s enderchest.12 with music_disc_pigstep{scgui:1, scgui.action:12} 1
+item replace entity @s enderchest.19 with name_tag{scgui:1, scgui.action:13} 7
+item replace entity @s enderchest.20 with name_tag{scgui:1, scgui.action:14} 8
+item replace entity @s enderchest.21 with name_tag{scgui:1, scgui.action:15} 9
 
 
 #options
