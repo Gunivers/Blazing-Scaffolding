@@ -23,7 +23,7 @@ jobs:
     - name: git-ftp push
       uses: sebastianpopp/git-ftp-action@3.0.0
       with:
-        url: ftp://${{ secrets.SFTP_IP }}:${{ secrets.SFTP_PORT }}/world/
+        url: sftp://${{ secrets.SFTP_IP }}:${{ secrets.SFTP_PORT }}/world/
         user: ${{ secrets.SFTP_USER }}
         password: ${{ secrets.SFTP_PASSWORD }}
         options: --auto-init --branch server
