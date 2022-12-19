@@ -21,9 +21,9 @@ jobs:
       with:
         fetch-depth: 0
     - name: git-ftp push
-      uses: sebastianpopp/git-ftp-action@3.0.0
+      uses: fabeabe/git-sftp-action@1.1.1
       with:
-        url: sftp://${{ secrets.SFTP_IP }}:${{ secrets.SFTP_PORT }}/world/
+        url: sftp://${{ secrets.SFTP_IP }}:${{ secrets.SFTP_PORT }}/
         user: ${{ secrets.SFTP_USER }}
         password: ${{ secrets.SFTP_PASSWORD }}
-        options: --auto-init --branch server
+        options: --auto-init --insecure --branch server --remote-root /world/
