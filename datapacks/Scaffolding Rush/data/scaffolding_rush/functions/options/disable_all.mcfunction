@@ -32,3 +32,4 @@ scoreboard players reset @s StartGame
 #generated options
 scoreboard players reset @s opt_time_limit
 scoreboard players reset @s opt_score_limit
+scoreboard players reset @s opt_enderpearl

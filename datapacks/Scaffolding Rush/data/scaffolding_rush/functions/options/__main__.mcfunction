@@ -29,3 +29,4 @@ execute as @a[scores={opt_volcano_pop_period=1..}] run function scaffolding_rush
 execute as @a[scores={opt_scaff_stops_arrow=1..}] run function scaffolding_rush:options/scaff_stops_arrow
 execute as @a[scores={opt_time_limit=1..}] run function scaffolding_rush:options/time_limit
 execute as @a[scores={opt_score_limit=1..}] run function scaffolding_rush:options/score_limit
+execute as @a[scores={opt_enderpearl=1..}] run function scaffolding_rush:options/enderpearl
