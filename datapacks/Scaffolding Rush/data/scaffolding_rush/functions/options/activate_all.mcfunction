@@ -1,4 +1,5 @@
 scoreboard players enable @s opt_preset
+scoreboard players enable @s opt_end_criteria
 scoreboard players enable @s opt_lava_speed
 scoreboard players enable @s opt_build_height
 scoreboard players enable @s opt_gravel

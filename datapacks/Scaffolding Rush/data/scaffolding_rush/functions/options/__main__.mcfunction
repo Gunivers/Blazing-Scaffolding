@@ -1,4 +1,5 @@
 execute as @a[scores={opt_preset=1..}] run function scaffolding_rush:options/preset
+execute as @a[scores={opt_end_criteria=1..}] run function scaffolding_rush:options/end_criteria
 execute as @a[scores={opt_build_height=1..}] run function scaffolding_rush:options/build_height
 execute as @a[scores={opt_gravel=1..}] run function scaffolding_rush:options/gravel
 execute as @a[scores={opt_instant_pil=1..}] run function scaffolding_rush:options/instant_pillar

@@ -15,6 +15,7 @@ scoreboard objectives add Reset trigger
 scoreboard objectives add glib.res0 dummy
 
 scoreboard objectives add opt_preset trigger
+scoreboard objectives add opt_end_criteria trigger
 scoreboard objectives add opt_lava_speed trigger
 scoreboard objectives add opt_build_height trigger
 scoreboard objectives add opt_vil_resp_cd trigger
@@ -75,6 +76,7 @@ execute unless score GameId global matches 0.. run scoreboard players set GameId
 
 #Configuration scores
 execute unless score LavaSpeed options matches 1.. run scoreboard players set LavaSpeed options 7
+execute unless score EndGameCriteria options matches 1..3 run scoreboard players set EndGameCriteria options 1
 execute unless score BuildHeight options matches 2.. run scoreboard players set BuildHeight options 20
 execute unless score VillagerForgiveness options matches 0.. run scoreboard players set VillagerForgiveness options 1
 execute unless score VillagerRespawn options matches 0.. run scoreboard players set VillagerRespawn options 30

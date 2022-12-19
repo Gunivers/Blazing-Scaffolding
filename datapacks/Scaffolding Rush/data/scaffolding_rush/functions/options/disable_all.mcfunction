@@ -1,4 +1,5 @@
 scoreboard players reset @s opt_preset
+scoreboard players reset @s opt_end_criteria
 scoreboard players reset @s opt_lava_speed
 scoreboard players reset @s opt_build_height
 scoreboard players reset @s opt_gravel

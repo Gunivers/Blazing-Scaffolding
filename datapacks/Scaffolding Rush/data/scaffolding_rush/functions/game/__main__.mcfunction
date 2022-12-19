@@ -21,6 +21,7 @@ execute if score GameRunning global matches 1 as @a[scores={greenPlaced=1..}] ru
 execute if score GameRunning global matches 1 as @a[scores={redPlaced=1..}] run function scaffolding_rush:villager/placed
 execute if score GameRunning global matches 1 as @a[scores={yellowPlaced=1..}] run function scaffolding_rush:villager/placed
 
+#death management
 function scaffolding_rush:game/death/__main__
 
 execute as @e[type=marker,name="ScR_LavaLevel",limit=1] at @s run particle lava ~ ~ ~ 160 0 160 1 20 normal
