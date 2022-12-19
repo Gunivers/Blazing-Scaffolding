@@ -1,2 +1,2 @@
 
-function scaffolding_rush:game/start
+function scaffolding_rush:game/launch
