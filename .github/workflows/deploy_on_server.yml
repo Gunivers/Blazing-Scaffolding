@@ -14,22 +14,16 @@ on:
 jobs:
   # This workflow contains a single job called "deploy"
   deploy:
-    # The type of runner that the job will run on
+    name: Deploy
     runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 10
-      # Deploys to the server
-      - name: deploy
-        uses:  swznd/sftp-deploy@master
-        with:
-          host: ${{ secrets.SFTP_IP }}
-          port: ${{ secrets.SFTP_PORT }}
-          user: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          remote_path: /world/
-          ignore: .github/**,.gitignore,**/.gitignore,**/.git/**, entities/**, poi/**, region/**, README.md, icon.png, level.dat, session.lock
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: git-ftp push
+      uses: sebastianpopp/git-ftp-action@3.0.0
+      with:
+        url: ftp://${{ secrets.SFTP_IP }}:${{ secrets.SFTP_PORT }}/world/
+        user: ${{ secrets.SFTP_USER }}
+        password: ${{ secrets.SFTP_PASSWORD }}
+        options: --auto-init --branch server
