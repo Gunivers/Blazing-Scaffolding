@@ -13,5 +13,8 @@ execute as @a[scores={scgui.page=8}] run function scgui:pages/8/index
 execute if score Admin options matches 1 run scoreboard players set @a[tag=!admin] scgui.page -1
 execute unless score Admin options matches 1 as @a if score @s scgui.page matches -1 run scoreboard players set @s scgui.page 0
 
+execute as @a unless score @s scgui.page matches -100..100 run scoreboard players set @s scgui.page 0
+
+
 clear @a #scgui:all{scgui:1}
 kill @e[nbt={Item:{tag:{scgui:1}}}]
