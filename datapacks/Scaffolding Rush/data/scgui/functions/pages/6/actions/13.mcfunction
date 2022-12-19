@@ -1,2 +1,2 @@
 
-function scaffolding_rush:options/fall_damage
+scoreboard players set @s opt_fall_damage 1

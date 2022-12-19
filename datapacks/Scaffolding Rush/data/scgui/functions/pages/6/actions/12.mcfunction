@@ -1,2 +1,2 @@
 
-function scaffolding_rush:options/regen
+scoreboard players set @s opt_regen 1

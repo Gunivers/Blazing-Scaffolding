@@ -1,7 +1,7 @@
 
-execute as @s[nbt=!{EnderItems:[{tag:{scgui.action:1}}]}, scores={scgui.change=0}] run function scgui:pages/0/actions/1
-execute as @s[nbt=!{EnderItems:[{tag:{scgui.action:2}}]}, scores={scgui.change=0}] run function scgui:pages/0/actions/2
-execute as @s[nbt=!{EnderItems:[{tag:{scgui.action:3}}]}, scores={scgui.change=0}] run function scgui:pages/0/actions/3
+execute as @s[nbt=!{EnderItems:[{tag:{scgui.action:10}}]}, scores={scgui.change=0}] run function scgui:pages/0/actions/10
+execute as @s[nbt=!{EnderItems:[{tag:{scgui.action:11}}]}, scores={scgui.change=0}] run function scgui:pages/0/actions/11
+execute as @s[nbt=!{EnderItems:[{tag:{scgui.action:12}}]}, scores={scgui.change=0}] run function scgui:pages/0/actions/12
 
 
 

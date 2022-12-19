@@ -1,2 +1,2 @@
 
-function scaffolding_rush:options/instant_pillar
+scoreboard players set @s opt_instant_pil 1

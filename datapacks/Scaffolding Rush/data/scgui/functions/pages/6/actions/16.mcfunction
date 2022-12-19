@@ -1,2 +1,2 @@
 
-function scaffolding_rush:options/perf_mode
+scoreboard players set @s opt_perf_mode 1

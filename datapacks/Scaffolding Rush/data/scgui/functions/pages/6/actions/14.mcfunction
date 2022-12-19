@@ -1,2 +1,2 @@
 
-function scaffolding_rush:options/team_egg
+scoreboard players set @s opt_team_egg 1

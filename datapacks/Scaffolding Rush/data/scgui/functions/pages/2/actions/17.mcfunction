@@ -1,2 +1,2 @@
 
-function scaffolding_rush:options/random_team
+scoreboard players set @s opt_random_team 1

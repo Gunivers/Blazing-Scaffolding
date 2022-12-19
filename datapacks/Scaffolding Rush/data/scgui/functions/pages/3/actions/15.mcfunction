@@ -1,3 +1,2 @@
 
-function scaffolding_rush:options/gravel
-
+scoreboard players set @s opt_vil_resp_cd 30
