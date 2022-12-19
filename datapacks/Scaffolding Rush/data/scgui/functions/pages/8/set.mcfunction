@@ -9,11 +9,11 @@ item replace entity @s enderchest.14 with orange_terracotta{scgui:1, scgui.actio
 item replace entity @s enderchest.15 with red_terracotta{scgui:1, scgui.action:15, display:{Name:'[{"text":"10s","italic":false,"color":"gold"}]',Lore:['[{"text":"10 secondes entre chaque montée","italic":false}]']}} 10
 
 item replace entity @s enderchest.19 with scaffolding{scgui:1, scgui.action:19, display:{Name:'[{"text":"Limite de contruction","italic":false,"color":"gold"}]',Lore:['[{"text":"Les joueurs ne pourront construire au dessus","italic":false}]']}} 1
-item replace entity @s enderchest.20 with green_terracotta{scgui:1, scgui.action:20, display:{Name:'[{"text":"5 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construir après 5 blocks au dessus de la lave","italic":false}]']}} 5
-item replace entity @s enderchest.21 with lime_terracotta{scgui:1, scgui.action:21, display:{Name:'[{"text":"10 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construir après 10 blocks au dessus de la lave","italic":false}]']}} 10
-item replace entity @s enderchest.22 with yellow_terracotta{scgui:1, scgui.action:22, display:{Name:'[{"text":"15 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construir après 15 blocks au dessus de la lave","italic":false}]']}} 15
-item replace entity @s enderchest.23 with orange_terracotta{scgui:1, scgui.action:23, display:{Name:'[{"text":"20 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construir après 20 blocks au dessus de la lave","italic":false}]']}} 20
-item replace entity @s enderchest.24 with red_terracotta{scgui:1, scgui.action:24, display:{Name:'[{"text":"30 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construir après 30 blocks au dessus de la lave","italic":false}]']}} 30
+item replace entity @s enderchest.20 with green_terracotta{scgui:1, scgui.action:20, display:{Name:'[{"text":"5 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construire après 5 blocks au dessus de la lave","italic":false}]']}} 5
+item replace entity @s enderchest.21 with lime_terracotta{scgui:1, scgui.action:21, display:{Name:'[{"text":"10 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construire après 10 blocks au dessus de la lave","italic":false}]']}} 10
+item replace entity @s enderchest.22 with yellow_terracotta{scgui:1, scgui.action:22, display:{Name:'[{"text":"15 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construire après 15 blocks au dessus de la lave","italic":false}]']}} 15
+item replace entity @s enderchest.23 with orange_terracotta{scgui:1, scgui.action:23, display:{Name:'[{"text":"20 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construire après 20 blocks au dessus de la lave","italic":false}]']}} 20
+item replace entity @s enderchest.24 with red_terracotta{scgui:1, scgui.action:24, display:{Name:'[{"text":"30 blocks","italic":false,"color":"gold"}]',Lore:['[{"text":"Vous ne pourrez construire après 30 blocks au dessus de la lave","italic":false}]']}} 30
 
 
 function scgui:pages/8/test
