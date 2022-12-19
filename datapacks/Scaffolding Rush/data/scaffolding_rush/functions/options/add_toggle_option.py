@@ -1,13 +1,11 @@
 #coding:utf-8
 
 #user iterface
-print("Generating a NUMERICAL option")
+print("Generating a TOGGLE option")
 print("Enter option name with spaces between words")
 option_name = input("option name : ")
 
-min_val = input("minimal value (leave empty if none) : ")
-default_val = input("default value : ")
-max_val = input("maximal value (leave empty if none) : ")
+default_val = input("default value (1 or 0) : ")
 
 #name management
 option_name = str.title(option_name)
@@ -25,7 +23,7 @@ print("option name : "+option_name)
 #   init the scores
 with open("__init__.mcfunction", "a", encoding='utf-8') as f:
     f.write("scoreboard objectives add opt_"+option_name+" trigger\n")
-    f.write("execute unless score "+fake_player_name+" options matches "+min_val+".."+max_val+" run scoreboard players set "+fake_player_name+" options "+default_val+"\n")
+    f.write("execute unless score "+fake_player_name+" options matches 0..1 run scoreboard players set "+fake_player_name+" options "+default_val+"\n")
 f.close
 
 #   activate all
@@ -48,13 +46,13 @@ with open(option_name+".mcfunction", "w", encoding='utf-8') as f:
     text = """
 #generated option function
 
-scoreboard players operation """+fake_player_name+""" options = @s opt_"""+option_name+"""
+execute store success score """+fake_player_name+""" options if score """+fake_player_name+""" options matches 0
 
-tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The """+option_name+""" option has been set to ","color":"gray"},{"score":{"name":\""""+fake_player_name+"""","objective":"options"},"color":"gold"},{"text":"","color":"gold"}]
+execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"deactivated","color":"red"}]
+execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"activated","color":"green"}]
 
-
-
-tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"L'option """+option_name+""" a été mise à ","color":"gray"},{"score":{"name":\""""+fake_player_name+"""","objective":"options"},"color":"gold"},{"text":"","color":"gold"}]
+execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"désactivée","color":"red"}]
+execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"activée","color":"green"}]
 
 scoreboard players set @s opt_"""+option_name+""" 0
 scoreboard players enable @s opt_"""+option_name+"""
