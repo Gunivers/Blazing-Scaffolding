@@ -9,10 +9,12 @@ scoreboard players set @a greenPlaced 0
 scoreboard players set @a redPlaced 0
 scoreboard players set @a yellowPlaced 0
 
-scoreboard players set VolcanoSummonTimer timer 0
 
 #reset flaghunt timer
 execute unless score flag_hunt options matches 0 run scoreboard players set FlagHuntCountdown global 0
+
+#reset volcano timer
+scoreboard players set VolcanoSummonTimer timer 0
 
 clear @a
 effect clear @a

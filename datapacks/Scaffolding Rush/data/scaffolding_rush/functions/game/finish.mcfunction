@@ -12,5 +12,6 @@ schedule function scaffolding_rush:lobby/load 64t
 execute if score RandomTeam options matches 1 as @a[team=!] run team join random @s
 
 bossbar set minecraft:filling_lava visible false
+bossbar set minecraft:time_limit visible false
 
 function scaffolding_rush:game/lava/global_rising/stop

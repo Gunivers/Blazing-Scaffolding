@@ -97,6 +97,7 @@ scoreboard players enable @a opt_admin
 
 #Bossbar
 bossbar set minecraft:filling_lava visible false
+bossbar set minecraft:time_limit visible false
 
 effect give @a minecraft:jump_boost 5 255 true
 

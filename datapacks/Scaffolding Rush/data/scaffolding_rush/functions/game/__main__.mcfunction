@@ -71,7 +71,7 @@ execute as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run func
 
 
 # End of game
-execute if score GameEnd global matches 0 unless score DevelopementMode global matches 1 if score RemainingTeam global matches ..1 run function scaffolding_rush:game/finish
+execute if score GameEnd global matches 0 run function scaffolding_rush:game/end
 
 execute as @a[tag=has_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:slime_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:blaze_spawn_egg"}]}] run function scaffolding_rush:villager/egg/give/any
 
