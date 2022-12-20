@@ -14,7 +14,7 @@ scoreboard players operation @a gameId = GameId global
 
 setblock 0 5 7 cave_air
 
-function scaffolding_rush:team/join/random
+function scaffolding_rush:team/random
 
 function scaffolding_rush:game/summon_markers
 

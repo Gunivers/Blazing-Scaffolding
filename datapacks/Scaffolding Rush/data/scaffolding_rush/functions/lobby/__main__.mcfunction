@@ -17,7 +17,7 @@ execute as @a[team=!green] at @e[type=minecraft:area_effect_cloud,name="Join Gre
 execute as @a[team=!red] at @e[type=minecraft:area_effect_cloud,name="Join Red"] as @s[distance=..1.5,team=!red] run function scaffolding_rush:team/join/red
 execute as @a[team=!yellow] at @e[type=minecraft:area_effect_cloud,name="Join Yellow"] as @s[distance=..1.5] run function scaffolding_rush:team/join/yellow
 execute as @a[team=!] at @e[type=minecraft:area_effect_cloud,name="Spectate"] as @s[distance=..1.5] run function scaffolding_rush:team/leave
-execute as @a[team=!random] at @e[type=minecraft:area_effect_cloud,name="Join Game"] as @s[distance=..1.5] run function scaffolding_rush:team/random
+execute as @a[team=!random] at @e[type=minecraft:area_effect_cloud,name="Join Game"] as @s[distance=..1.5] run function scaffolding_rush:team/join/random
 
 #base
 execute at @e[type=minecraft:item,nbt={Item:{tag:{EntityTag:{Tags:["baseTeam"]}}}}] as @a[distance=..5] if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give

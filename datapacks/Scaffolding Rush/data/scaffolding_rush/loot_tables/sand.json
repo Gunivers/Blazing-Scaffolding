@@ -1,17 +1,31 @@
 {
+  "type": "minecraft:generic",
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:yellow_concrete_powder",
+          "name": "minecraft:blue_concrete_powder",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "team": "yellow"
+                "team": "blue"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:green_concrete_powder",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "green"
               }
             }
           ]
@@ -31,37 +45,75 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:lime_concrete_powder",
+          "name": "minecraft:yellow_concrete_powder",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "team": "green"
+                "team": "yellow"
               }
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:blue_concrete_powder",
+          "name": "minecraft:light_gray_concrete_powder",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "team": "blue"
+                "team": "random"
+              }
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 42
+        },
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{HideFlags:24,CanPlaceOn:[\"minecraft:scaffolding\",\"#scaffolding_rush:notowerlobby\"],CanDestroy:[\"minecraft:scaffolding\",\"#scaffolding_rush:lobby\",\"#scaffolding_rush:tower\"]}"
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": {
+            "text": "Sand",
+            "italic": false
+          },
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": {
+            "text": "Sable",
+            "italic": false
+          },
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 1
               }
             }
           ]
         }
       ]
-    }
-  ],
-  "functions": [
-    {
-      "function": "minecraft:set_nbt",
-      "tag": "{HideFlags:24,CanPlaceOn:[\"minecraft:scaffolding\",\"#scaffolding_rush:notowerlobby\"],CanDestroy:[\"minecraft:scaffolding\",\"#scaffolding_rush:lobby\",\"#scaffolding_rush:tower\"]}"
     }
   ]
 }

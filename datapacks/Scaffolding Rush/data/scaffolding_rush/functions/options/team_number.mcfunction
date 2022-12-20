@@ -7,8 +7,8 @@ execute if score TeamNumber options matches 2.. if score @s opt_team_number matc
 function scaffolding_rush:lobby/load
 
 #When the number of team decrease, send the players to a random team when their team no longer exists
-execute if score TeamNumber options matches 2 run team join random @a[team=yellow]
-execute if score TeamNumber options matches 2..3 run team join random @a[team=green]
+execute if score TeamNumber options matches 2 as @a[team=yellow] run function scaffolding_rush:team/join/random
+execute if score TeamNumber options matches 2..3 as @a[team=green] run function scaffolding_rush:team/join/random
 
 execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 function scaffolding_rush:team/join/killbase
