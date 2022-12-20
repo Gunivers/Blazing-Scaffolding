@@ -1,7 +1,6 @@
-# detect if the game must end depending on selected criteria :
-# 1 : last team alive
-# 2 : time limit
-# 3 : score goal reached
+# detect if the game must end depending on selected criterias :
+# the game always stop if there is only one team remaining or none left
+# if the time limit and/or the goal score is enabled, the game is stopped when either complete
 
 #if only one team left, and no development mode, end the game
 execute unless score DevelopementMode global matches 1 if score RemainingTeam global matches ..1 run function scaffolding_rush:game/finish
