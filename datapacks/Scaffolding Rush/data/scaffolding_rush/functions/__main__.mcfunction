@@ -78,6 +78,9 @@ execute if score InstantPillar options matches 1 as @e[type=marker,name="ScR_Pil
 execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:item/snowball
 kill @e[type=arrow,nbt={inGround: 1b}]
 
+# hollow base
+execute as @e[type=falling_block,tag=hollow_base] run data modify entity @s Time set value 1
+
 # Count active teams
 execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0
 execute if score GameEnd global matches 0 if entity @a[team=blue,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1

@@ -32,3 +32,7 @@ execute if entity @s[name="Blue"] run spawnpoint @a[team=blue] ~ ~5 ~
 execute if entity @s[name="Green"] run spawnpoint @a[team=green] ~ ~5 ~
 execute if entity @s[name="Red"] run spawnpoint @a[team=red] ~ ~5 ~
 execute if entity @s[name="Yellow"] run spawnpoint @a[team=yellow] ~ ~5 ~
+
+teleport @s ~ ~1 ~
+effect clear @e levitation
+execute positioned ~-3 ~ ~-3 as @e[type=!marker,tag=!hollow_base,dx=6,dy=3,dz=6] at @s unless block ~ ~ ~ #scaffolding_rush:air run tp @s ~ ~1 ~
