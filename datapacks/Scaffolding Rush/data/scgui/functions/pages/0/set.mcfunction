@@ -1,0 +1,21 @@
+
+#preset
+item replace entity @s enderchest.10 with scaffolding{scgui: 1, scgui.action: 10, display: {Name: '[{"text":"Preset :","italic":false,"color":"gold"},{"text":" Classic","italic":false,"color":"gold"}]', Lore: ['[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Vitesse de lave : ","color":"gray"},{"text":"7s"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Hauteur de constuction: ","color":"gray"},{"text":"20 blocs"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Taille de zone de jeu : ","color":"gray"},{"text":"95 blocs"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Temps de réapparition : ","color":"gray"},{"text":"30s"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Temps de réapparition du villageois : ","color":"gray"},{"text":"30s"}]', '[{"text":""}]', '[{"text":"\\u2714","italic":false,"color":"gold"},{"text":" Régénération","color":"gray"}]', '[{"text":"\\u2714","italic":false,"color":"gold"},{"text":" Gravier","color":"gray"}]']}} 1
+item replace entity @s enderchest.11 with stone_sword{scgui: 1, scgui.action: 11, display: {Name: '[{"text":"Preset :","italic":false,"color":"gold"},{"text":" Rush Premium","italic":false,"color":"dark_purple"}]', Lore: ['[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Vitesse de lave : ","color":"gray"},{"text":"3s"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Hauteur de constuction: ","color":"gray"},{"text":"30 blocs"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Taille de zone de jeu : ","color":"gray"},{"text":"145 blocs"}]', '[{"text":""}]', '[{"text":"\\u2714","italic":false,"color":"gold"},{"text":" Pilliers instantanés","color":"gray"}]', '[{"text":"\\u2714","italic":false,"color":"gold"},{"text":" Boule de neige","color":"gray"}]', '[{"text":"\\u2714","italic":false,"color":"gold"},{"text":" Gravier","color":"gray"}]', '[{"text":""}]', '[{"text":"\\u2716","italic":false,"color":"gold"},{"text":" Réapparition","color":"gray"}]']}} 1
+item replace entity @s enderchest.12 with white_banner{scgui: 1, scgui.action: 12, display: {Name: '[{"text":"Preset :","italic":false,"color":"gold"},{"text":" Capture The Flag","italic":false,"color":"red"}]', Lore: ['[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Vitesse de lave : ","color":"gray"},{"text":"7s"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Hauteur de constuction: ","color":"gray"},{"text":"20 blocs"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Taille de zone de jeu : ","color":"gray"},{"text":"95 blocs"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Temps de réapparition : ","color":"gray"},{"text":"30s"}]', '[{"text":"\\u2666","italic":false,"color":"gold"},{"text":" Temps de réapparition du villageois : ","color":"gray"},{"text":"30s"}]', '[{"text":""}]', '[{"text":"\\u2714","italic":false,"color":"gold"},{"text":" Régénération","color":"gray"}]']}} 1
+
+
+#options
+item replace entity @s enderchest.8 with command_block{scgui: 1, scgui.action: 8, display: {Name: '[{"text":"Options avancées","italic":false,"color":"gold"}]', Lore: ['[{"text":"Configurer les options individuellements","italic":false}]']}} 1
+
+
+#start
+item replace entity @s enderchest.15 with lime_terracotta{scgui: 1, scgui.action: 15, display: {Name: '[{"text":"Démarrer la partie","italic":false,"bold": true,"color":"gold"}]'}} 1
+
+
+#admin
+item replace entity @s enderchest.26 with white_banner{scgui: 1, scgui.action: 28, BlockEntityTag: {Patterns: [{Pattern: mr, Color: 9}, {Pattern: bs, Color: 8}, {Pattern: cs, Color: 7}, {Pattern: bo, Color: 8}, {Pattern: ms, Color: 15}, {Pattern: hh, Color: 8}, {Pattern: mc, Color: 8}, {Pattern: bo, Color: 15}]}, HideFlags: 126, display: {Name: '[{"text":"Je suis l\'admin","italic":false,"color":"gold"}]', Lore: ['[{"text":"Vous seul peut configurer la partie","italic":false}]']}} 1
+
+function scgui:pages/0/test
+
+scoreboard players set @s scgui.change 0
