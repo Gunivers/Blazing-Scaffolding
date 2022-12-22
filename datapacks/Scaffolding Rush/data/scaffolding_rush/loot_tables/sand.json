@@ -19,7 +19,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:green_concrete_powder",
+          "name": "minecraft:lime_concrete_powder",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",
