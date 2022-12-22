@@ -77,7 +77,7 @@
         },
         {
           "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:24,CanPlaceOn:[\"minecraft:scaffolding\",\"#scaffolding_rush:notowerlobby\"],CanDestroy:[\"minecraft:scaffolding\",\"#scaffolding_rush:lobby\",\"#scaffolding_rush:tower\"]}"
+          "tag": "{HideFlags:24,CanPlaceOn:[\"minecraft:scaffolding\",\"#scaffolding_rush:lobby\"],CanDestroy:[\"minecraft:scaffolding\",\"#scaffolding_rush:clear_lobby\"]}"
         },
         {
           "function": "minecraft:set_name",

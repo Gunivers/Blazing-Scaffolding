@@ -5,7 +5,7 @@ execute unless score InteractibleLobby options matches 0 run data modify entity 
 execute unless score InteractibleLobby options matches 0 run kill @s
 
 execute if score GameLoading global matches 0 run item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with air
-execute if score GameLoading global matches 0 unless score InteractibleLobby options matches 0 run item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with minecraft:snowball{CanDestroy:["minecraft:scaffolding","#scaffolding_rush:lobby","#scaffolding_rush:tower"]}
+execute if score GameLoading global matches 0 unless score InteractibleLobby options matches 0 run item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with minecraft:snowball{CanDestroy:["minecraft:scaffolding","#scaffolding_rush:tower"]}
 execute if score GameLoading global matches 0 if score InteractibleLobby options matches 0 run item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with minecraft:snowball{CanDestroy:[]}
 
 scoreboard players set @a usedSnowball 0
