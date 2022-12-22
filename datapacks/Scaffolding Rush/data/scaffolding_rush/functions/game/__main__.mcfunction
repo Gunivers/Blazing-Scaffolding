@@ -70,8 +70,8 @@ execute as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run funct
 execute as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg
 
 
-# End of game
-execute if score GameEnd global matches 0 run function scaffolding_rush:game/end
+# Test end of game
+execute if score GameEnd global matches 0 run function scaffolding_rush:game/test_end
 
 execute as @a[tag=has_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:slime_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:blaze_spawn_egg"}]}] run function scaffolding_rush:villager/egg/give/any
 
@@ -82,6 +82,19 @@ execute if entity @a[team=blue,tag=!TeamEliminated] unless entity @a[team=blue,g
 execute if entity @a[team=green,tag=!TeamEliminated] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=green,tag=Respawning] unless entity @e[type=villager,tag=green_villager] run function scaffolding_rush:game/elimination/green
 execute if entity @a[team=red,tag=!TeamEliminated] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=red,tag=Respawning] unless entity @e[type=villager,tag=red_villager] run function scaffolding_rush:game/elimination/red
 execute if entity @a[team=yellow,tag=!TeamEliminated] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=yellow,tag=Respawning] unless entity @e[type=villager,tag=yellow_villager] run function scaffolding_rush:game/elimination/yellow
+
+# Revive players from changed gamemode
+execute if entity @a[team=blue,tag=TeamEliminated,gamemode=!spectator] run tag @a[team=blue] remove TeamEliminated
+execute if entity @a[team=green,tag=TeamEliminated,gamemode=!spectator] run tag @a[team=gree] remove TeamEliminated
+execute if entity @a[team=red,tag=TeamEliminated,gamemode=!spectator] run tag @a[team=red] remove TeamEliminated
+execute if entity @a[team=yellow,tag=TeamEliminated,gamemode=!spectator] run tag @a[team=yellow] remove TeamEliminated
+
+# Count active teams
+scoreboard players set RemainingTeam global 0
+execute if entity @a[team=blue,tag=!TeamEliminated] run scoreboard players add RemainingTeam global 1
+execute if entity @a[team=green,tag=!TeamEliminated] run scoreboard players add RemainingTeam global 1
+execute if entity @a[team=red,tag=!TeamEliminated] run scoreboard players add RemainingTeam global 1
+execute if entity @a[team=yellow,tag=!TeamEliminated] run scoreboard players add RemainingTeam global 1
 
 #fall distance
 scoreboard players reset @a[nbt={OnGround:1b}] fallDistance

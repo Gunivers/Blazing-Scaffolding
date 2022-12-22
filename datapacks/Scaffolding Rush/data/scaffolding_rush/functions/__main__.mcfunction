@@ -78,14 +78,6 @@ execute if score InstantPillar options matches 1 as @e[type=marker,name="ScR_Pil
 execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:item/snowball
 kill @e[type=arrow,nbt={inGround: 1b}]
 
-# Count active teams
-execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0
-execute if score GameEnd global matches 0 if entity @a[team=blue,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
-execute if score GameEnd global matches 0 if entity @a[team=green,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
-execute if score GameEnd global matches 0 if entity @a[team=red,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
-execute if score GameEnd global matches 0 if entity @a[team=yellow,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
-execute if score GameEnd global matches 0 as @a[team=random] run scoreboard players add RemainingTeam global 1
-
 # Clear unconsistent villagers
 execute as @e[type=villager,nbt=!{Age:0}] run function scaffolding_rush:clean_kill
 
