@@ -2,6 +2,8 @@
     "values":[
         "dirt",
         "grass_block",
+        "stone",
+        "bedrock",
         "shroomlight",
         "coal_block",
         "blackstone",

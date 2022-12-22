@@ -1,9 +1,6 @@
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 kill @e[type=!player]
 
-fill -90 0 -90 90 0 90 bedrock
-fill 1090 0 1090 910 0 910 bedrock
-
 forceload add 1100 1100 900 900
 forceload add 100 100 -100 -100
 
@@ -183,7 +180,7 @@ scoreboard players set 100 const 100
 scoreboard players set 256 const 256
 scoreboard players set 3000 const 3000
 
-setworldspawn 0 4 0
+setworldspawn 0 24 0
 
 #execute unless entity @e[type=marker,name="✔"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✔","color":"green"}'}
 #execute unless entity @e[type=marker,name="✖"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✖","color":"red"}'}
@@ -192,5 +189,8 @@ setworldspawn 0 4 0
 bossbar add filling_lava ""
 bossbar set minecraft:filling_lava color red
 
-execute unless score DevelopementMode global matches 1 run function scaffolding_rush:reset
-execute unless score DevelopementMode global matches 1 run function scaffolding_rush:clear/lobby/launch
+function scaffolding_rush:reset
+function scaffolding_rush:clear/lobby/launch
+
+#execute unless score DevelopementMode global matches 1 run function scaffolding_rush:reset
+#execute unless score DevelopementMode global matches 1 run function scaffolding_rush:clear/lobby/launch
