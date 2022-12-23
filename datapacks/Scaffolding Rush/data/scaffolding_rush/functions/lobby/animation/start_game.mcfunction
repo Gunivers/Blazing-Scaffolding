@@ -1,0 +1,1 @@
+particle minecraft:lava 0.56 25.06 6.38 0.0 0.0 0.0 1 25 normal

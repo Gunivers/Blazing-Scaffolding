@@ -35,3 +35,5 @@ execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function s
 
 #check player coordonates
 execute unless score GameEnd global matches 1 run function scaffolding_rush:lobby/correct_coordinates
+
+function scaffolding_rush:lobby/animation/__main__
