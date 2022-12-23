@@ -9,5 +9,5 @@ execute as @e[tag=VolcanoPop,scores={glib.lifetime=5..}] at @s unless block ~ ~1
 execute as @e[tag=VolcanoPopImpact] at @s run playsound minecraft:entity.generic.explode master @a[distance=..30] ~ ~ ~ 2 1 1
 execute as @e[tag=VolcanoPopImpact] at @s run particle explosion_emitter ~ ~1.7 ~ 0 0 0 0 1 force
 
-execute as @e[tag=VolcanoPopImpact] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace scaffolding
+execute as @e[tag=VolcanoPopImpact] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace #scaffolding_rush:scaffolding
 kill @e[tag=VolcanoPopImpact]
