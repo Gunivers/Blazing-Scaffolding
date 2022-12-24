@@ -77,11 +77,7 @@
         },
         {
           "function": "minecraft:set_nbt",
-<<<<<<< HEAD:datapacks/Scaffolding Rush/data/scaffolding_rush/loot_tables/sand.json
-          "tag": "{HideFlags:24,CanPlaceOn:[\"minecraft:scaffolding\",\"#scaffolding_rush:lobby\"],CanDestroy:[\"minecraft:scaffolding\",\"#scaffolding_rush:clear_lobby\"]}"
-=======
           "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
->>>>>>> master:datapacks/Scaffolding Rush/data/scaffolding_rush/loot_tables/item/sand.json
         },
         {
           "function": "minecraft:set_name",
