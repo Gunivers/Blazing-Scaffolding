@@ -1,14 +1,15 @@
 {
     "values":[
-        "dirt",
-        "grass_block",
-        "shroomlight",
-        "coal_block",
-        "blackstone",
-        "bedrock",
-        "oak_planks",
-        "spruce_planks",
-        "birch_planks",
-        "red_stained_glass"
+        "minecraft:stone",
+        "minecraft:bedrock",
+        "minecraft:coal_block",
+        "minecraft:blackstone",
+        "minecraft:oak_planks",
+        "minecraft:spruce_planks",
+        "minecraft:birch_planks",
+        "minecraft:deepslate",
+        "minecraft:brown_terracotta",
+        "minecraft:black_terracotta",
+        "minecraft:black_concrete_powder"
     ]
 }
