@@ -30,53 +30,8 @@ function scaffolding_rush:flag/__main__
 scoreboard players add tick200 global 1
 execute if score tick200 global matches 200.. run scoreboard players set tick200 global 1
 
-#  ____  _           _     _ _                               _   _                                     _                 _          
-# |  _ \(_)___  __ _| |__ | (_)_ __   __ _       _ __   __ _| |_(_)_   _____       _ __ ___   ___  ___| |__   __ _ _ __ (_) ___ ___ 
-# | | | | / __|/ _` | '_ \| | | '_ \ / _` |     | '_ \ / _` | __| \ \ / / _ \     | '_ ` _ \ / _ \/ __| '_ \ / _` | '_ \| |/ __/ __|
-# | |_| | \__ \ (_| | |_) | | | | | | (_| |     | | | | (_| | |_| |\ V /  __/     | | | | | |  __/ (__| | | | (_| | | | | | (__\__ \
-# |____/|_|___/\__,_|_.__/|_|_|_| |_|\__, |     |_| |_|\__,_|\__|_| \_/ \___|     |_| |_| |_|\___|\___|_| |_|\__,_|_| |_|_|\___|___/
-#                                    |___/                                                                                                                                                                                                                                      
-
-# Avoid hunger
-effect give @a minecraft:saturation 999999 1 true
-
-# Disable offhand
-execute as @a[tag=!flag_carry,nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand
-item replace entity @a[tag=!flag_carry] weapon.offhand with air
-
-# Disable drop
-execute as @e[type=item,tag=!processed] run function scaffolding_rush:item/catch_drop
-
-# Disable advancements
-advancement revoke @a everything
-
-#  _   _                                                    _          
-# | \ | | _____      __      _ __ ___   ___  ___ __ _ _ __ (_) ___ ___ 
-# |  \| |/ _ \ \ /\ / /     | '_ ` _ \ / _ \/ __/ _` | '_ \| |/ __/ __|
-# | |\  |  __/\ V  V /      | | | | | |  __/ (_| (_| | | | | | (__\__ \
-# |_| \_|\___| \_/\_/       |_| |_| |_|\___|\___\__,_|_| |_|_|\___|___/
-#                                                 
-
-# Avoid sand to physically stack (and then forbide creating sand towers)
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:light_gray_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:red_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:yellow_concrete_powder"}}] at @s if block ~ ~-0.75 ~ #scaffolding_rush:tower run kill @s
-
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:light_gray_concrete_powder"}}] at @s if block ~ ~-1.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:blue_concrete_powder"}}] at @s if block ~ ~-1.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:lime_concrete_powder"}}] at @s if block ~ ~-1.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:red_concrete_powder"}}] at @s if block ~ ~-1.75 ~ #scaffolding_rush:tower run kill @s
-execute as @e[type=minecraft:falling_block,nbt={BlockState:{Name:"minecraft:yellow_concrete_powder"}}] at @s if block ~ ~-1.75 ~ #scaffolding_rush:tower run kill @s
-
-# Make scaffolding pillars creating instantly (instead of having to place each block of the pillar and wait them to fall)
-execute if score InstantPillar options matches 1 at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:scaffolding"}}] run summon minecraft:marker ~ ~ ~ {CustomName:'{"text":"ScR_Pillar"}'}
-execute if score InstantPillar options matches 1 as @e[type=marker,name="ScR_Pillar"] at @s run function scaffolding_rush:options/pillar/start
-
-# Snowball behavior
-execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:item/snowball
-kill @e[type=arrow,nbt={inGround: 1b}]
+# Mechanics
+function scaffolding_rush:mechanics/__main__
 
 # Count active teams
 execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0
@@ -86,11 +41,5 @@ execute if score GameEnd global matches 0 if entity @a[team=red,gamemode=!specta
 execute if score GameEnd global matches 0 if entity @a[team=yellow,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
 execute if score GameEnd global matches 0 as @a[team=random] run scoreboard players add RemainingTeam global 1
 
-# Clear unconsistent villagers
-execute as @e[type=villager,nbt=!{Age:0}] run function scaffolding_rush:clean_kill
-
 # Admin mode
 execute unless entity @a[tag=admin] if score Admin options matches 1 run function scaffolding_rush:options/admin
-
-# Scaffoldings blocks arrows
-execute as @e[type=arrow] at @s if score ScaffoldingStopsArrow options matches 1 if block ~ ~ ~ minecraft:scaffolding run kill @s

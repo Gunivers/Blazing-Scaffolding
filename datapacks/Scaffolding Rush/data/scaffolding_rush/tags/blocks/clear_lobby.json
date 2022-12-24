@@ -1,10 +1,6 @@
 {
-    "values":[
-        "scaffolding",
-        "blue_concrete_powder",
-        "lime_concrete_powder",
-        "red_concrete_powder",
-        "yellow_concrete_powder",
-        "light_gray_concrete_powder"
+    "values": [
+        "#scaffolding_rush:scaffolding",
+        "#scaffolding_rush:sand"
     ]
 }

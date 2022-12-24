@@ -182,9 +182,6 @@ scoreboard players set 3000 const 3000
 
 setworldspawn 0 24 0
 
-#execute unless entity @e[type=marker,name="✔"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✔","color":"green"}'}
-#execute unless entity @e[type=marker,name="✖"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✖","color":"red"}'}
-
 #Bossbar
 bossbar add filling_lava ""
 bossbar set minecraft:filling_lava color red

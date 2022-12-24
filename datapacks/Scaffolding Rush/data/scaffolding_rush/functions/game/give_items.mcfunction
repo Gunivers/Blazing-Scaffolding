@@ -1,3 +1,4 @@
-give @s scaffolding{HideFlags: 24, CanPlaceOn: ["minecraft:scaffolding", "#scaffolding_rush:lavareplace"], CanDestroy: ["minecraft:scaffolding", "#scaffolding_rush:tower"]}
-execute if score UseSand options matches 1 run loot give @s loot scaffolding_rush:sand
-execute if score UseSnowball options matches 1 run give @s snowball
+
+loot give @s loot scaffolding_rush:item/scaffolding
+execute if score UseSand options matches 1 run loot give @s loot scaffolding_rush:item/sand
+execute if score UseSnowball options matches 1 run loot give @s loot scaffolding_rush:item/snowball

@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "scaffolding placed": {
+    "yellow_concrete_powder placed": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": {},
