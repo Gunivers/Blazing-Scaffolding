@@ -5,10 +5,6 @@ execute as @e store result score @s ZEntity run data get entity @s Pos[2]
 
 execute as @a[gamemode=survival] run gamemode adventure
 
-#speed
-execute as @a if score @s YEntity matches ..2 run effect give @s minecraft:speed 1 2 true
-execute as @a if score @s YEntity matches 4.. run effect clear @s minecraft:speed
-
 #team join lobby
 execute as @a[team=!blue] at @e[type=minecraft:area_effect_cloud,name="Join Blue"] as @s[distance=..1] run function scaffolding_rush:team/join/blue
 execute as @a[team=!green] at @e[type=minecraft:area_effect_cloud,name="Join Green"] as @s[distance=..1] run function scaffolding_rush:team/join/green
