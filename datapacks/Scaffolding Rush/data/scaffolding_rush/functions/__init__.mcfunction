@@ -60,7 +60,14 @@ scoreboard objectives add greenPlaced minecraft.used:slime_spawn_egg
 scoreboard objectives add redPlaced minecraft.used:mooshroom_spawn_egg
 scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 
+scoreboard objectives add const dummy
+scoreboard players set -1 const -1
+scoreboard players set 100 const 100
+scoreboard players set 256 const 256
+scoreboard players set 3000 const 3000
+
 scoreboard players set #100 global 100
+scoreboard players set #60 global 60
 scoreboard players set #20 global 20
 scoreboard players set #10 global 10
 scoreboard players set #2 global 2
@@ -181,11 +188,6 @@ gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
-scoreboard objectives add const dummy
-scoreboard players set -1 const -1
-scoreboard players set 100 const 100
-scoreboard players set 256 const 256
-scoreboard players set 3000 const 3000
 
 setworldspawn 0 24 0
 
@@ -193,6 +195,10 @@ setworldspawn 0 24 0
 bossbar add filling_lava ""
 bossbar set minecraft:filling_lava color red
 
+bossbar add time_limit ""
+bossbar set minecraft:time_limit color white
+
+# Reset
 execute unless score GameId global matches 0 run function scaffolding_rush:reset
 execute unless score GameId global matches 0 run function scaffolding_rush:clear/lobby/launch
 

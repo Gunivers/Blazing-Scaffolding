@@ -33,13 +33,8 @@ execute if score tick200 global matches 200.. run scoreboard players set tick200
 # Mechanics
 function scaffolding_rush:mechanics/__main__
 
-# Count active teams
-execute if score GameEnd global matches 0 run scoreboard players set RemainingTeam global 0
-execute if score GameEnd global matches 0 if entity @a[team=blue,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
-execute if score GameEnd global matches 0 if entity @a[team=green,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
-execute if score GameEnd global matches 0 if entity @a[team=red,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
-execute if score GameEnd global matches 0 if entity @a[team=yellow,gamemode=!spectator,limit=1] run scoreboard players add RemainingTeam global 1
-execute if score GameEnd global matches 0 as @a[team=random] run scoreboard players add RemainingTeam global 1
+# Clear unconsistent villagers
+execute as @e[type=villager,nbt=!{Age:0}] run function scaffolding_rush:clean_kill
 
 # Admin mode
 execute unless entity @a[tag=admin] if score Admin options matches 1 run function scaffolding_rush:options/admin
