@@ -67,8 +67,15 @@ scoreboard players set #2 global 2
 scoreboard players set #0 global 0
 scoreboard players set #-1 global -1
 
-execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
+# Init global
 
+execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
+execute unless score GameLobby global matches 0.. run scoreboard players set GameLobby global 1
+execute unless score GameEnd global matches 0.. run scoreboard players set GameEnd global 0
+execute unless score GameRunning global matches 0.. run scoreboard players set GameRunning global 0
+execute unless score GameLoading global matches 0.. run scoreboard players set GameLoading global 0
+execute unless score ClearGame global matches 0.. run scoreboard players set ClearGame global 0
+execute unless score ClearLobby global matches 0.. run scoreboard players set ClearLobby global 0
 
 #Configuration scores
 execute unless score LavaSpeed options matches 1.. run scoreboard players set LavaSpeed options 7
@@ -189,7 +196,4 @@ bossbar set minecraft:filling_lava color red
 execute unless score GameId global matches 0 run function scaffolding_rush:reset
 execute unless score GameId global matches 0 run function scaffolding_rush:clear/lobby/launch
 
-execute unless score gameId global matches 0 run function scaffolding_rush:lobby/load
-
-#execute unless score DevelopementMode global matches 1 run function scaffolding_rush:reset
-#execute unless score DevelopementMode global matches 1 run function scaffolding_rush:clear/lobby/launch
+execute unless score gameId global matches 0 run function scaffolding_rush:first_launch
