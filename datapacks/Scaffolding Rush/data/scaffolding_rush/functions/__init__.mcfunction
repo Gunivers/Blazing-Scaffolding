@@ -186,8 +186,10 @@ setworldspawn 0 24 0
 bossbar add filling_lava ""
 bossbar set minecraft:filling_lava color red
 
-function scaffolding_rush:reset
-function scaffolding_rush:clear/lobby/launch
+execute unless score GameId global matches 0 run function scaffolding_rush:reset
+execute unless score GameId global matches 0 run function scaffolding_rush:clear/lobby/launch
+
+execute unless score gameId global matches 0 run function scaffolding_rush:lobby/load
 
 #execute unless score DevelopementMode global matches 1 run function scaffolding_rush:reset
 #execute unless score DevelopementMode global matches 1 run function scaffolding_rush:clear/lobby/launch
