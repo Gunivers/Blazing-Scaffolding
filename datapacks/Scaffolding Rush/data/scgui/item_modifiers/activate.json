@@ -1,0 +1,46 @@
+
+[
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{Enchantments:[{}]}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+          {
+            "text": "Activé",
+            "bold": true
+          }
+        ],
+        "replace": false,
+        "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 1
+              }
+            }
+          ]
+      },
+      {
+        "function": "minecraft:set_lore",
+        "lore": [
+          {
+            "text": "Activated",
+            "bold": true
+          }
+        ],
+        "replace": false,
+        "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 0
+              }
+            }
+          ]
+      }
+  ]
+  

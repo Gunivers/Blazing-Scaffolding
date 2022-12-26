@@ -1,9 +1,6 @@
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 kill @e[type=!player]
 
-fill -90 0 -90 90 0 90 bedrock
-fill 1090 0 1090 910 0 910 bedrock
-
 forceload add 1100 1100 900 900
 forceload add 100 100 -100 -100
 
@@ -18,7 +15,7 @@ scoreboard objectives add opt_preset trigger
 scoreboard objectives add opt_lava_speed trigger
 scoreboard objectives add opt_build_height trigger
 scoreboard objectives add opt_vil_resp_cd trigger
-scoreboard objectives add opt_gravel trigger
+scoreboard objectives add opt_sand trigger
 scoreboard objectives add opt_snowball trigger
 scoreboard objectives add opt_vil_respawn trigger
 scoreboard objectives add opt_instant_pil trigger
@@ -77,15 +74,22 @@ scoreboard players set #2 global 2
 scoreboard players set #0 global 0
 scoreboard players set #-1 global -1
 
-execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
+# Init global
 
+execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
+execute unless score GameLobby global matches 0.. run scoreboard players set GameLobby global 1
+execute unless score GameEnd global matches 0.. run scoreboard players set GameEnd global 0
+execute unless score GameRunning global matches 0.. run scoreboard players set GameRunning global 0
+execute unless score GameLoading global matches 0.. run scoreboard players set GameLoading global 0
+execute unless score ClearGame global matches 0.. run scoreboard players set ClearGame global 0
+execute unless score ClearLobby global matches 0.. run scoreboard players set ClearLobby global 0
 
 #Configuration scores
 execute unless score LavaSpeed options matches 1.. run scoreboard players set LavaSpeed options 7
 execute unless score BuildHeight options matches 2.. run scoreboard players set BuildHeight options 20
 execute unless score VillagerForgiveness options matches 0.. run scoreboard players set VillagerForgiveness options 1
 execute unless score VillagerRespawn options matches 0.. run scoreboard players set VillagerRespawn options 30
-execute unless score UseGravel options matches 0.. run scoreboard players set UseGravel options 1
+execute unless score UseSand options matches 0.. run scoreboard players set UseSand options 1
 execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
 execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
 execute unless score TeamEgg options matches 0.. run scoreboard players set TeamEgg options 0
@@ -185,10 +189,7 @@ gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
 
-setworldspawn 0 4 0
-
-#execute unless entity @e[type=marker,name="✔"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✔","color":"green"}'}
-#execute unless entity @e[type=marker,name="✖"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✖","color":"red"}'}
+setworldspawn 0 24 0
 
 #Bossbar
 bossbar add filling_lava ""
@@ -197,5 +198,8 @@ bossbar set minecraft:filling_lava color red
 bossbar add time_limit ""
 bossbar set minecraft:time_limit color white
 
-function scaffolding_rush:reset
-function scaffolding_rush:clear/lobby/launch
+# Reset
+execute unless score GameId global matches 0 run function scaffolding_rush:reset
+execute unless score GameId global matches 0 run function scaffolding_rush:clear/lobby/launch
+
+execute unless score gameId global matches 0 run function scaffolding_rush:first_launch

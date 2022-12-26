@@ -24,10 +24,6 @@ gamemode survival @a[team=!]
 #give items
 execute as @a[team=!] run function scaffolding_rush:game/give_items
 
-execute if score Villager options matches 1 as @a[team=blue,gamemode=!spectator] run function scaffolding_rush:villager/egg/give/blue
-execute if score Villager options matches 1 as @a[team=red,gamemode=!spectator] run function scaffolding_rush:villager/egg/give/red
-execute if score Villager options matches 1 as @a[team=yellow,gamemode=!spectator] run function scaffolding_rush:villager/egg/give/yellow
-execute if score Villager options matches 1 as @a[team=green,gamemode=!spectator] run function scaffolding_rush:villager/egg/give/green
 
 function scaffolding_rush:broadcast/start
 function scaffolding_rush:game/lava/sound
