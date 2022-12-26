@@ -5,7 +5,7 @@ execute if score RandomTeam options matches 1 if entity @s[team=] run team join 
 execute if score TeamNumber options matches 2 run team join random @s[team=yellow]
 execute if score TeamNumber options matches 2..3 run team join random @s[team=green]
 
-execute as @s run function scaffolding_rush:lobby/give_items
+execute as @s[team=] run function scaffolding_rush:lobby/give_items
 execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
 
 execute if score Admin options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
