@@ -33,3 +33,6 @@ execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function s
 execute unless score GameEnd global matches 1 run function scaffolding_rush:lobby/correct_coordinates
 
 function scaffolding_rush:lobby/animation/__main__
+
+# Light
+execute as @e[type=marker,tag=lobbyLight] at @s if block ~ ~ ~ #scaffolding_rush:air run function scaffolding_rush:lobby/light

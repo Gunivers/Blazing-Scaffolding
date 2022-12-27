@@ -53,6 +53,7 @@ scoreboard objectives add respawnTime dummy
 scoreboard objectives add respawnTimeTics dummy
 scoreboard objectives add Score dummy
 scoreboard objectives add fallDistance minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives add lightLevel dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
