@@ -28,3 +28,8 @@ summon minecraft:marker 6 24 4 {Tags: ["lobbyLight"]}
 summon minecraft:marker 6 24 2 {Tags: ["lobbyLight"]}
 summon minecraft:marker 4 25 -2 {Tags: ["lobbyLight"]}
 execute as @e[type=marker,tag=lobbyLight] unless score @s lightLevel matches 0..15 run scoreboard players set @s lightLevel 10
+
+execute as @a[team=blue] run function scaffolding_rush:lobby/give_items
+execute as @a[team=green] run function scaffolding_rush:lobby/give_items
+execute as @a[team=red] run function scaffolding_rush:lobby/give_items
+execute as @a[team=yellow] run function scaffolding_rush:lobby/give_items
