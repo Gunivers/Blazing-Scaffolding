@@ -27,7 +27,6 @@ kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]
 
-fill 1090 1 1090 1010 1 1010 magma_block
 schedule function scaffolding_rush:team/create_base/create 4s
 
 schedule function scaffolding_rush:broadcast/5s 5s
@@ -41,6 +40,11 @@ schedule function scaffolding_rush:game/start 10s
 execute as @a run function scaffolding_rush:options/disable_all
 execute if score Admin options matches 1 as @a[tag=admin] run scoreboard players enable @s Reset
 execute if score Admin options matches 0 run scoreboard players enable @a Reset
+
+#initialize the countdown in tics
+scoreboard players operation TimeLeftTicks global = TimeLimit options
+scoreboard players operation TimeLeftTicks global *= #20 global
+scoreboard players operation TimeLeftTicks global *= #60 global
 
 #get lavaspeed timer in tics
 scoreboard players operation LavaSpeedTics options = LavaSpeed options
@@ -61,10 +65,10 @@ scoreboard players set GreenVillagerRespawn global -1
 
 #Reset teams scores, if relevant
 execute unless score flag_hunt options matches 0 run scoreboard objectives setdisplay sidebar Score
-execute unless score flag_hunt options matches 0 run scoreboard players set Blue Score 0
-execute unless score flag_hunt options matches 0 run scoreboard players set Green Score 0
-execute unless score flag_hunt options matches 0 run scoreboard players set Red Score 0
-execute unless score flag_hunt options matches 0 run scoreboard players set Yellow Score 0
+execute unless score flag_hunt options matches 0 if entity @a[team=blue] run scoreboard players set Blue Score 0
+execute unless score flag_hunt options matches 0 if entity @a[team=green] run scoreboard players set Green Score 0
+execute unless score flag_hunt options matches 0 if entity @a[team=red] run scoreboard players set Red Score 0
+execute unless score flag_hunt options matches 0 if entity @a[team=yellow] run scoreboard players set Yellow Score 0
 
 #create the firsts flags to capture in the flaghunt gamemode
 execute unless score flag_hunt options matches 0 run function scaffolding_rush:flag/new_spreaded
