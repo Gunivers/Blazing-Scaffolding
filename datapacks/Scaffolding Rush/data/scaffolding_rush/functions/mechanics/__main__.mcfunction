@@ -42,3 +42,5 @@ execute if score ScaffoldingStopsArrow options matches 1 as @e[type=arrow] at @s
 # Clear unconsistent villagers
 execute as @e[type=villager,nbt=!{Age:0}] run function scaffolding_rush:clean_kill
 
+# hollow base
+execute as @e[type=falling_block,tag=hollow_base] run data modify entity @s Time set value 1
