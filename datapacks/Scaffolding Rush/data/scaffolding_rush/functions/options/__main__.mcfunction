@@ -20,7 +20,7 @@ execute as @a[scores={opt_admin=1..}] run function scaffolding_rush:options/admi
 execute as @a[scores={opt_villager=1..}] run function scaffolding_rush:options/villager
 execute as @a[scores={opt_language=1..}] run function scaffolding_rush:options/language
 execute as @a[scores={opt_lasting_bases=1..}] run function scaffolding_rush:options/lasting_bases
-execute as @a[scores={opt_flag_hunt=1..}] run function scaffolding_rush:options/flag_hunt
+execute as @a[scores={opt_flag_take_over=1..}] run function scaffolding_rush:options/flag_take_over
 execute as @a[scores={opt_interactible_lobby=1..}] run function scaffolding_rush:options/interactible_lobby
 execute as @a[scores={opt_volcano=1..}] run function scaffolding_rush:options/volcano
 execute as @a[scores={opt_volcano_summon_period=1..}] run function scaffolding_rush:options/volcano_summon_period

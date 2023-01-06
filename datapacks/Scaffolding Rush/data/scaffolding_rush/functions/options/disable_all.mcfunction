@@ -18,7 +18,7 @@ scoreboard players reset @s opt_admin
 scoreboard players reset @s opt_villager
 scoreboard players reset @s opt_language
 scoreboard players reset @s opt_lasting_bases
-scoreboard players reset @s opt_flag_hunt
+scoreboard players reset @s opt_flag_take_over
 scoreboard players reset @s opt_interactible_lobby
 scoreboard players reset @s opt_volcano
 scoreboard players reset @s opt_volcano_summon_period

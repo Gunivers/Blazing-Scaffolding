@@ -11,7 +11,7 @@ scoreboard players set @a yellowPlaced 0
 
 
 #reset flaghunt timer
-execute unless score flag_hunt options matches 0 run scoreboard players set FlagHuntCountdown global 0
+execute unless score flag_take_over options matches 0 run scoreboard players set FlagTakeOverCountdown global 0
 
 #reset volcano timer
 scoreboard players set VolcanoSummonTimer timer 0

@@ -31,7 +31,7 @@ scoreboard objectives add opt_admin trigger
 scoreboard objectives add opt_random_team trigger
 scoreboard objectives add opt_team_number trigger
 scoreboard objectives add opt_lasting_bases trigger
-scoreboard objectives add opt_flag_hunt trigger
+scoreboard objectives add opt_flag_take_over trigger
 scoreboard objectives add opt_interactible_lobby trigger
 scoreboard objectives add opt_volcano trigger
 scoreboard objectives add opt_volcano_summon_period trigger
@@ -107,7 +107,7 @@ execute unless score Volcano options matches 0.. run scoreboard players set Volc
 execute unless score VolcanoSummonPeriod options matches 0.. run scoreboard players set VolcanoSummonPeriod options 1200
 execute unless score VolcanoPopPeriod options matches 0.. run scoreboard players set VolcanoPopPeriod options 10
 execute unless score ScaffoldingStopsArrow options matches 0.. run scoreboard players set ScaffoldingStopsArrow options 0
-execute unless score FlagHuntSpawnInterval options matches 0.. run scoreboard players set FlagHuntSpawnInterval options 600
+execute unless score FlagTakeOverSpawnInterval options matches 0.. run scoreboard players set FlagTakeOverSpawnInterval options 600
 #initialize options scores
 function scaffolding_rush:options/__init__
 

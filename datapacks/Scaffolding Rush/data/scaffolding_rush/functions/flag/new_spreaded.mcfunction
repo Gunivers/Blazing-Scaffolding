@@ -14,5 +14,5 @@ execute as @e[type=minecraft:armor_stand,tag=new] at @s run function scaffolding
 
 tag @e[type=minecraft:armor_stand,tag=new] remove new
 
-scoreboard players set FlagHuntCountdown global 0
+scoreboard players set FlagTakeOverCountdown global 0
 

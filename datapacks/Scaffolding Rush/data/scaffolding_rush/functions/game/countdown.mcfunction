@@ -64,11 +64,11 @@ scoreboard players set YellowVillagerRespawn global -1
 scoreboard players set GreenVillagerRespawn global -1
 
 #Reset teams scores, if relevant
-execute unless score flag_hunt options matches 0 run scoreboard objectives setdisplay sidebar Score
-execute unless score flag_hunt options matches 0 if entity @a[team=blue] run scoreboard players set Blue Score 0
-execute unless score flag_hunt options matches 0 if entity @a[team=green] run scoreboard players set Green Score 0
-execute unless score flag_hunt options matches 0 if entity @a[team=red] run scoreboard players set Red Score 0
-execute unless score flag_hunt options matches 0 if entity @a[team=yellow] run scoreboard players set Yellow Score 0
+execute unless score flag_take_over options matches 0 run scoreboard objectives setdisplay sidebar Score
+execute unless score flag_take_over options matches 0 if entity @a[team=blue] run scoreboard players set Blue Score 0
+execute unless score flag_take_over options matches 0 if entity @a[team=green] run scoreboard players set Green Score 0
+execute unless score flag_take_over options matches 0 if entity @a[team=red] run scoreboard players set Red Score 0
+execute unless score flag_take_over options matches 0 if entity @a[team=yellow] run scoreboard players set Yellow Score 0
 
 #create the firsts flags to capture in the flaghunt gamemode
-execute unless score flag_hunt options matches 0 run function scaffolding_rush:flag/new_spreaded
+execute unless score flag_take_over options matches 0 run function scaffolding_rush:flag/new_spreaded

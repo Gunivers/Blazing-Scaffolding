@@ -98,18 +98,18 @@ execute if entity @a[team=yellow,tag=!TeamEliminated] run scoreboard players add
 scoreboard players reset @a[nbt={OnGround:1b}] fallDistance
 
 #flag hunt
-execute unless score flag_hunt options matches 0 if score FlagHuntCountdown global >= FlagHuntSpawnInterval options run function scaffolding_rush:flag/new_spreaded
-execute unless score flag_hunt options matches 0 run scoreboard players add FlagHuntCountdown global 1
+execute unless score flag_take_over options matches 0 if score FlagTakeOverCountdown global >= FlagTakeOverSpawnInterval options run function scaffolding_rush:flag/new_spreaded
+execute unless score flag_take_over options matches 0 run scoreboard players add FlagTakeOverCountdown global 1
 
 #remove flags in lava
-execute unless score flag_hunt options matches 0 as @e[type=armor_stand,tag=Flag] at @s if block ~ ~2 ~ magma_block run kill @s
+execute unless score flag_take_over options matches 0 as @e[type=armor_stand,tag=Flag] at @s if block ~ ~2 ~ magma_block run kill @s
 
 #grabbing flag
-execute unless score flag_hunt options matches 0 as @a[gamemode=adventure,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..2] run function scaffolding_rush:flag/grab/any
-execute unless score flag_hunt options matches 0 as @a[gamemode=survival,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..2] run function scaffolding_rush:flag/grab/any
+execute unless score flag_take_over options matches 0 as @a[gamemode=adventure,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..2] run function scaffolding_rush:flag/grab/any
+execute unless score flag_take_over options matches 0 as @a[gamemode=survival,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..2] run function scaffolding_rush:flag/grab/any
 
 #depositing flag
-execute unless score flag_hunt options matches 0 as @a[tag=flag_carry,team=blue] at @s if entity @e[type=villager,distance=..1, team=blue] run function scaffolding_rush:flag/claim/team/blue
-execute unless score flag_hunt options matches 0 as @a[tag=flag_carry,team=red] at @s if entity @e[type=villager,distance=..1,team=red] run function scaffolding_rush:flag/claim/team/red
-execute unless score flag_hunt options matches 0 as @a[tag=flag_carry,team=green] at @s if entity @e[type=villager,distance=..1,team=green] run function scaffolding_rush:flag/claim/team/green
-execute unless score flag_hunt options matches 0 as @a[tag=flag_carry,team=yellow] at @s if entity @e[type=villager,distance=..1,team=yellow] run function scaffolding_rush:flag/claim/team/yellow
+execute unless score flag_take_over options matches 0 as @a[tag=flag_carry,team=blue] at @s if entity @e[type=villager,distance=..1, team=blue] run function scaffolding_rush:flag/claim/team/blue
+execute unless score flag_take_over options matches 0 as @a[tag=flag_carry,team=red] at @s if entity @e[type=villager,distance=..1,team=red] run function scaffolding_rush:flag/claim/team/red
+execute unless score flag_take_over options matches 0 as @a[tag=flag_carry,team=green] at @s if entity @e[type=villager,distance=..1,team=green] run function scaffolding_rush:flag/claim/team/green
+execute unless score flag_take_over options matches 0 as @a[tag=flag_carry,team=yellow] at @s if entity @e[type=villager,distance=..1,team=yellow] run function scaffolding_rush:flag/claim/team/yellow
