@@ -34,3 +34,4 @@ scoreboard players enable @s opt_score_limit
 scoreboard players enable @s opt_use_time_limit
 scoreboard players enable @s opt_use_score_limit
 scoreboard players enable @s opt_movable_villager
+scoreboard players enable @s opt_invulnerable_villager

@@ -31,3 +31,4 @@ execute as @a[scores={opt_score_limit=1..}] run function scaffolding_rush:option
 execute as @a[scores={opt_use_time_limit=1..}] run function scaffolding_rush:options/use_time_limit
 execute as @a[scores={opt_use_score_limit=1..}] run function scaffolding_rush:options/use_score_limit
 execute as @a[scores={opt_movable_villager=1..}] run function scaffolding_rush:options/movable_villager
+execute as @a[scores={opt_invulnerable_villager=1..}] run function scaffolding_rush:options/invulnerable_villager

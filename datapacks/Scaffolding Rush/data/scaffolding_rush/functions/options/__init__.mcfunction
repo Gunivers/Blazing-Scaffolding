@@ -10,3 +10,5 @@ scoreboard objectives add opt_use_score_limit trigger
 execute unless score UseScoreLimit options matches 0..1 run scoreboard players set UseScoreLimit options 0
 scoreboard objectives add opt_movable_villager trigger
 execute unless score MovableVillager options matches 0..1 run scoreboard players set MovableVillager options 1
+scoreboard objectives add opt_invulnerable_villager trigger
+execute unless score InvulnerableVillager options matches 0..1 run scoreboard players set InvulnerableVillager options 0
