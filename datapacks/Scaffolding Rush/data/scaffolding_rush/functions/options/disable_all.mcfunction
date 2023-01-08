@@ -1,3 +1,8 @@
+
+
+#tag used to detect when the player should have the score enabled
+tag @s remove game_options_enabled
+
 scoreboard players reset @s opt_preset
 scoreboard players reset @s opt_lava_speed
 scoreboard players reset @s opt_build_height
