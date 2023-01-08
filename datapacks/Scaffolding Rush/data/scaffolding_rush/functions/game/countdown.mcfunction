@@ -41,6 +41,9 @@ execute as @a run function scaffolding_rush:options/disable_all
 execute if score Admin options matches 1 as @a[tag=admin] run scoreboard players enable @s Reset
 execute if score Admin options matches 0 run scoreboard players enable @a Reset
 
+#reset the time
+scoreboard players set GameTimeTics global 0
+
 #initialize the countdown in tics
 scoreboard players operation TimeLeftTicks global = TimeLimit options
 scoreboard players operation TimeLeftTicks global *= #20 global
@@ -56,6 +59,11 @@ scoreboard players operation VillagerRespawnTics global *= #20 global
 
 scoreboard players operation RespawnDelayTics global = RespawnDelay options
 scoreboard players operation RespawnDelayTics global *= #20 global
+
+#initialize the wordborder start time in tics
+scoreboard players operation WorldborderStartTimeTics global = WorldborderStartTime options
+scoreboard players operation WorldborderStartTimeTics global *= #20 global
+scoreboard players operation WorldborderStartTimeTics global *= #60 global
 
 #reset villagers respawn countdowns
 scoreboard players set RedVillagerRespawn global -1

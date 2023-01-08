@@ -33,3 +33,6 @@ scoreboard players reset @s opt_time_limit
 scoreboard players reset @s opt_score_limit
 scoreboard players reset @s opt_use_time_limit
 scoreboard players reset @s opt_use_score_limit
+scoreboard players reset @s opt_worldborder_shrink
+scoreboard players reset @s opt_worldborder_start_time
+scoreboard players reset @s opt_worldborder_time_to_shrink

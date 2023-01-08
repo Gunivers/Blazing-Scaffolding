@@ -30,3 +30,6 @@ execute as @a[scores={opt_time_limit=1..}] run function scaffolding_rush:options
 execute as @a[scores={opt_score_limit=1..}] run function scaffolding_rush:options/score_limit
 execute as @a[scores={opt_use_time_limit=1..}] run function scaffolding_rush:options/use_time_limit
 execute as @a[scores={opt_use_score_limit=1..}] run function scaffolding_rush:options/use_score_limit
+execute as @a[scores={opt_worldborder_shrink=1..}] run function scaffolding_rush:options/worldborder_shrink
+execute as @a[scores={opt_worldborder_start_time=1..}] run function scaffolding_rush:options/worldborder_start_time
+execute as @a[scores={opt_worldborder_time_to_shrink=1..}] run function scaffolding_rush:options/worldborder_time_to_shrink
