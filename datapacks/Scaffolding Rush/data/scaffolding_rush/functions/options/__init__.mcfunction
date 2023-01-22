@@ -8,3 +8,5 @@ scoreboard objectives add opt_use_time_limit trigger
 execute unless score UseTimeLimit options matches 0..1 run scoreboard players set UseTimeLimit options 0
 scoreboard objectives add opt_use_score_limit trigger
 execute unless score UseScoreLimit options matches 0..1 run scoreboard players set UseScoreLimit options 0
+scoreboard objectives add opt_fast_climb trigger
+execute unless score FastClimb options matches 0..1 run scoreboard players set FastClimb options 0

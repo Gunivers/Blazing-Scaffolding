@@ -30,3 +30,4 @@ execute as @a[scores={opt_time_limit=1..}] run function scaffolding_rush:options
 execute as @a[scores={opt_score_limit=1..}] run function scaffolding_rush:options/score_limit
 execute as @a[scores={opt_use_time_limit=1..}] run function scaffolding_rush:options/use_time_limit
 execute as @a[scores={opt_use_score_limit=1..}] run function scaffolding_rush:options/use_score_limit
+execute as @a[scores={opt_fast_climb=1..}] run function scaffolding_rush:options/fast_climb
