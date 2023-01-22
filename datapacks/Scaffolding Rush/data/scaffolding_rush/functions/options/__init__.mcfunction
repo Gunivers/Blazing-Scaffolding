@@ -12,3 +12,5 @@ scoreboard objectives add opt_movable_villager trigger
 execute unless score MovableVillager options matches 0..1 run scoreboard players set MovableVillager options 1
 scoreboard objectives add opt_invulnerable_villager trigger
 execute unless score InvulnerableVillager options matches 0..1 run scoreboard players set InvulnerableVillager options 0
+scoreboard objectives add opt_fast_climb trigger
+execute unless score FastClimb options matches 0..1 run scoreboard players set FastClimb options 0

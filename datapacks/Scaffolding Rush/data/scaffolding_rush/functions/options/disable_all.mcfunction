@@ -33,5 +33,6 @@ scoreboard players reset @s opt_time_limit
 scoreboard players reset @s opt_score_limit
 scoreboard players reset @s opt_use_time_limit
 scoreboard players reset @s opt_use_score_limit
+scoreboard players reset @s opt_fast_climb
 scoreboard players reset @s opt_movable_villager
 scoreboard players reset @s opt_invulnerable_villager

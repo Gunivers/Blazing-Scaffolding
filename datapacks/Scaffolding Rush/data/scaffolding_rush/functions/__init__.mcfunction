@@ -53,6 +53,8 @@ scoreboard objectives add respawnTime dummy
 scoreboard objectives add respawnTimeTics dummy
 scoreboard objectives add Score dummy
 scoreboard objectives add fallDistance minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives add climbing minecraft.custom:minecraft.climb_one_cm
+scoreboard objectives add crouching minecraft.custom:minecraft.sneak_time
 scoreboard objectives add lightLevel dummy
 
 scoreboard objectives add killed deathCount

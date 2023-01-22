@@ -26,6 +26,9 @@ advancement revoke @a everything
 # |_| \_|\___| \_/\_/       |_| |_| |_|\___|\___\__,_|_| |_|_|\___|___/
 #                                                 
 
+# accelerate scaffolding climbing
+execute unless score FastClimb options matches 0 run function scaffolding_rush:mechanics/fast_climb/main
+
 # Avoid sand to physically stack (and then forbide creating sand towers)
 function scaffolding_rush:mechanics/sand/__main__
 
