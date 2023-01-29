@@ -29,6 +29,11 @@ execute as @a[scores={opt_time_limit=1..}] run function scaffolding_rush:options
 execute as @a[scores={opt_score_limit=1..}] run function scaffolding_rush:options/score_limit
 execute as @a[scores={opt_use_time_limit=1..}] run function scaffolding_rush:options/use_time_limit
 execute as @a[scores={opt_use_score_limit=1..}] run function scaffolding_rush:options/use_score_limit
+execute as @a[scores={opt_worldborder_shrink=1..}] run function scaffolding_rush:options/worldborder_shrink
+execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_worldborder_start_time
+execute as @a[tag=game_options_enabled] if score @s usedTrigger matches 1 run function scaffolding_rush:options/worldborder_start_time
+execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_worldborder_time_to_shrink
+execute as @a[tag=game_options_enabled] if score @s usedTrigger matches 1 run function scaffolding_rush:options/worldborder_time_to_shrink
 execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_lava_speed
 execute as @a[tag=game_options_enabled] if score @s usedTrigger matches 1 run function scaffolding_rush:options/lava_speed
 execute as @a[scores={opt_fast_climb=1..}] run function scaffolding_rush:options/fast_climb

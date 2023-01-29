@@ -37,6 +37,9 @@ scoreboard players enable @s opt_time_limit
 scoreboard players enable @s opt_score_limit
 scoreboard players enable @s opt_use_time_limit
 scoreboard players enable @s opt_use_score_limit
+scoreboard players enable @s opt_worldborder_shrink
+scoreboard players enable @s opt_worldborder_start_time
+scoreboard players enable @s opt_worldborder_time_to_shrink
 scoreboard players enable @s opt_lava_speed
 scoreboard players enable @s opt_fast_climb
 scoreboard players enable @s opt_movable_villager

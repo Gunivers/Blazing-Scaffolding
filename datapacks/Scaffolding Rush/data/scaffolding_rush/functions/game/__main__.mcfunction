@@ -1,6 +1,12 @@
 #Volcano system
 execute if score Volcano options matches 1 run function scaffolding_rush:game/volcano/__main__
 
+#starts to shrink the wordborder if enabled (need to be before time increment)
+execute unless score WorldborderShrink options matches 0 if score GameTimeTics global = WorldborderStartTimeTics global run function scaffolding_rush:game/shrink_worldborder
+
+#Time counter
+scoreboard players add GameTimeTics global 1
+
 #Rise Lava
 execute unless score LavaSpeedTics options matches 0 run scoreboard players add LavaCountdown global 1
 execute unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run scoreboard players add LavaLevel global 1
@@ -38,8 +44,6 @@ team join red @e[type=villager,tag=new_villager,tag=red_villager]
 team join yellow @e[type=villager,tag=new_villager,tag=yellow_villager]
 tag @e[type=villager,tag=new_villager] remove new_villager
 
-#villager egg respawn
-function scaffolding_rush:villager/respawn/villager_loss_detection
 
 execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store result score @s XEntity run data get entity @s Pos[0]
 execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store result score @s YEntity run data get entity @s Pos[1]
@@ -98,7 +102,7 @@ execute if entity @a[team=yellow,tag=!TeamEliminated] run scoreboard players add
 #fall distance
 scoreboard players reset @a[nbt={OnGround:1b}] fallDistance
 
-#flag hunt
+#flag takeover gamemode
 execute unless score flag_take_over options matches 0 if score FlagTakeOverCountdown global >= FlagTakeOverSpawnInterval options run function scaffolding_rush:flag/new_spreaded
 execute unless score flag_take_over options matches 0 run scoreboard players add FlagTakeOverCountdown global 1
 
