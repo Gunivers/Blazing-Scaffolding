@@ -50,7 +50,7 @@ with open(option_name+".mcfunction", "w", encoding='utf-8') as f:
     text = """
 #generated option function
 
-scoreboard players operation """+fake_player_name+""" options = @s opt_"""+option_name+"""
+execute if score @s opt_"""+option_name+""" matches """+min_val+""".."""+max_val+""" run scoreboard players operation """+fake_player_name+""" options = @s opt_"""+option_name+"""
 
 tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The """+option_name+""" option has been set to ","color":"gray"},{"score":{"name":\""""+fake_player_name+"""","objective":"options"},"color":"gold"},{"text":"","color":"gold"}]
 
