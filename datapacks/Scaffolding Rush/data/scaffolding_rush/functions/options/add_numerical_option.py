@@ -40,7 +40,9 @@ f.close
 
 #   main
 with open("__main__.mcfunction", "a", encoding='utf-8') as f:
-    f.write("execute as @a[scores={opt_"+option_name+"=1..}] run function scaffolding_rush:options/"+option_name+"\n")
+    f.write("execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_"+option_name+"\n")
+    f.write("execute as @a if score @s usedTrigger matches 1 run function scaffolding_rush:options/"+option_name+"\n")
+
 f.close
 
 #   option function
