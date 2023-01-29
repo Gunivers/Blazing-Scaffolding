@@ -1,5 +1,5 @@
 
-scoreboard players operation LavaSpeed options = @s opt_lava_speed
+execute if score @s opt_lava_speed matches 0.. run scoreboard players operation LavaSpeed options = @s opt_lava_speed
 
 
 tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The lava speed has been set to ","color":"gray"},{"score":{"name":"LavaSpeed","objective":"options"},"color":"gold"},{"text":" seconds","color":"gold"}]

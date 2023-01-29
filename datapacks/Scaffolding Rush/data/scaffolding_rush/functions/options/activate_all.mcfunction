@@ -1,3 +1,7 @@
+
+#tag used to detect when the player should have the score enabled
+tag @s add game_options_enabled
+
 scoreboard players enable @s opt_preset
 scoreboard players enable @s opt_lava_speed
 scoreboard players enable @s opt_build_height
@@ -33,6 +37,7 @@ scoreboard players enable @s opt_time_limit
 scoreboard players enable @s opt_score_limit
 scoreboard players enable @s opt_use_time_limit
 scoreboard players enable @s opt_use_score_limit
+scoreboard players enable @s opt_lava_speed
 scoreboard players enable @s opt_fast_climb
 scoreboard players enable @s opt_movable_villager
 scoreboard players enable @s opt_invulnerable_villager
