@@ -3,15 +3,16 @@ execute if score Volcano options matches 1 run function scaffolding_rush:game/vo
 
 #Rise Lava
 execute unless score LavaSpeedTics options matches 0 run scoreboard players add LavaCountdown global 1
-execute if score LavaCountdown global >= LavaSpeedTics options run scoreboard players add LavaLevel global 1
-execute if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_LavaLevel"] at @s run function scaffolding_rush:game/lava/rise_globally
-execute if score PerformanceMode options matches 1 as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/lava/rise_locally
-execute if score PerformanceMode options matches 1 as @e[type=villager,tag=!LobbyBase] at @s run function scaffolding_rush:game/lava/rise_locally
+execute unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run scoreboard players add LavaLevel global 1
+execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_LavaLevel"] at @s run function scaffolding_rush:game/lava/rise_globally
+execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 1 as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/lava/rise_locally
+execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 1 as @e[type=villager,tag=!LobbyBase] at @s run function scaffolding_rush:game/lava/rise_locally
 
-execute unless score lasting_bases options matches 0 if score LavaCountdown global >= LavaSpeedTics options run function scaffolding_rush:team/create_base/rise
+#rise lasting bases
+execute unless score lasting_bases options matches 0 unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run function scaffolding_rush:team/create_base/rise
 
-execute if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_Build"] at @s run function scaffolding_rush:game/air_replace
-execute if score LavaCountdown global >= LavaSpeedTics options run scoreboard players set LavaCountdown global 0
+execute unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_Build"] at @s run function scaffolding_rush:game/air_replace
+execute unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run scoreboard players set LavaCountdown global 0
 
 #villager placed
 execute if score GameRunning global matches 1 as @a[scores={bluePlaced=1..}] run function scaffolding_rush:villager/placed
