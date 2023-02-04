@@ -1,6 +1,7 @@
 [
     {
         "function": "minecraft:set_name",
+        "entity": "this",
         "name": [
             "",
             {

@@ -1,0 +1,1 @@
+execute as @s at @s run item modify entity @s enderchest.13 scgui:worldborder
