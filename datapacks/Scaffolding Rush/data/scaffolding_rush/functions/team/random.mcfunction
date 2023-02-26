@@ -1,6 +1,5 @@
-team join random @s
-execute as @s run function scaffolding_rush:lobby/base_egg/clear_egg
-
-playsound minecraft:block.note_block.bit ambient @s ~ ~ ~ 1 1 1
-tellraw @a[scores={language=0}] ["",{"text":"[SR]","color":"gold"},{"text":" "},{"selector":"@s","color":"dark_purple"},{"text":" is ready to play","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[SR]","color":"gold"},{"text":" "},{"selector":"@s","color":"dark_purple"},{"text":" est prêt·e à jouer","color":"gray"}]
+team join blue @r[team=random]
+team join red @r[team=random]
+execute if score TeamNumber options matches 3.. run team join yellow @r[team=random]
+execute if score TeamNumber options matches 4.. run team join green @r[team=random]
+execute if entity @a[team=random] run function scaffolding_rush:team/random

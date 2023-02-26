@@ -10,4 +10,4 @@ execute as @a[gamemode=!spectator] at @s if score @s ZEntity > WBbyTwo global ru
 execute as @a[gamemode=!spectator] at @s if score @s ZEntity < -WBbyTwo global run tp @s ~ ~ ~2
 
 #suffocation
-execute as @a[gamemode=!spectator] at @s if score GameRunning global matches 0 if block ~ ~ ~ #scaffolding_rush:lobby run tp @s ~ ~1 ~
+execute as @a[gamemode=!spectator] at @s if score GameRunning global matches 0 if block ~ ~ ~ #scaffolding_rush:lobby_suffocation run function scaffolding_rush:lobby/suffocation

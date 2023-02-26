@@ -1,8 +1,7 @@
 execute as @a[scores={opt_preset=1..}] run function scaffolding_rush:options/preset
 execute as @a[scores={opt_build_height=1..}] run function scaffolding_rush:options/build_height
-execute as @a[scores={opt_gravel=1..}] run function scaffolding_rush:options/gravel
+execute as @a[scores={opt_sand=1..}] run function scaffolding_rush:options/sand
 execute as @a[scores={opt_instant_pil=1..}] run function scaffolding_rush:options/instant_pillar
-execute as @a[scores={opt_lava_speed=1..}] run function scaffolding_rush:options/lava_speed
 execute as @a[scores={opt_perf_mode=1..}] run function scaffolding_rush:options/perf_mode
 execute as @a[scores={opt_snowball=1..}] run function scaffolding_rush:options/snowball
 execute as @a[scores={opt_perf_mode=1..}] run function scaffolding_rush:options/perf_mode
@@ -20,9 +19,23 @@ execute as @a[scores={opt_admin=1..}] run function scaffolding_rush:options/admi
 execute as @a[scores={opt_villager=1..}] run function scaffolding_rush:options/villager
 execute as @a[scores={opt_language=1..}] run function scaffolding_rush:options/language
 execute as @a[scores={opt_lasting_bases=1..}] run function scaffolding_rush:options/lasting_bases
-execute as @a[scores={opt_flag_hunt=1..}] run function scaffolding_rush:options/flag_hunt
+execute as @a[scores={opt_flag_take_over=1..}] run function scaffolding_rush:options/flag_take_over
 execute as @a[scores={opt_interactible_lobby=1..}] run function scaffolding_rush:options/interactible_lobby
 execute as @a[scores={opt_volcano=1..}] run function scaffolding_rush:options/volcano
 execute as @a[scores={opt_volcano_summon_period=1..}] run function scaffolding_rush:options/volcano_summon_period
 execute as @a[scores={opt_volcano_pop_period=1..}] run function scaffolding_rush:options/volcano_pop_period
 execute as @a[scores={opt_scaff_stops_arrow=1..}] run function scaffolding_rush:options/scaff_stops_arrow
+execute as @a[scores={opt_time_limit=1..}] run function scaffolding_rush:options/time_limit
+execute as @a[scores={opt_score_limit=1..}] run function scaffolding_rush:options/score_limit
+execute as @a[scores={opt_use_time_limit=1..}] run function scaffolding_rush:options/use_time_limit
+execute as @a[scores={opt_use_score_limit=1..}] run function scaffolding_rush:options/use_score_limit
+execute as @a[scores={opt_worldborder_shrink=1..}] run function scaffolding_rush:options/worldborder_shrink
+execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_worldborder_start_time
+execute as @a[tag=game_options_enabled] if score @s usedTrigger matches 1 run function scaffolding_rush:options/worldborder_start_time
+execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_worldborder_time_to_shrink
+execute as @a[tag=game_options_enabled] if score @s usedTrigger matches 1 run function scaffolding_rush:options/worldborder_time_to_shrink
+execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_lava_speed
+execute as @a[tag=game_options_enabled] if score @s usedTrigger matches 1 run function scaffolding_rush:options/lava_speed
+execute as @a[scores={opt_fast_climb=1..}] run function scaffolding_rush:options/fast_climb
+execute as @a[scores={opt_movable_villager=1..}] run function scaffolding_rush:options/movable_villager
+execute as @a[scores={opt_invulnerable_villager=1..}] run function scaffolding_rush:options/invulnerable_villager

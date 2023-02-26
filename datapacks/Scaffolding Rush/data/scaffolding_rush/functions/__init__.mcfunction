@@ -1,9 +1,6 @@
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 kill @e[type=!player]
 
-fill -90 0 -90 90 0 90 bedrock
-fill 1090 0 1090 910 0 910 bedrock
-
 forceload add 1100 1100 900 900
 forceload add 100 100 -100 -100
 
@@ -15,10 +12,9 @@ scoreboard objectives add Reset trigger
 scoreboard objectives add glib.res0 dummy
 
 scoreboard objectives add opt_preset trigger
-scoreboard objectives add opt_lava_speed trigger
 scoreboard objectives add opt_build_height trigger
 scoreboard objectives add opt_vil_resp_cd trigger
-scoreboard objectives add opt_gravel trigger
+scoreboard objectives add opt_sand trigger
 scoreboard objectives add opt_snowball trigger
 scoreboard objectives add opt_vil_respawn trigger
 scoreboard objectives add opt_instant_pil trigger
@@ -34,7 +30,7 @@ scoreboard objectives add opt_admin trigger
 scoreboard objectives add opt_random_team trigger
 scoreboard objectives add opt_team_number trigger
 scoreboard objectives add opt_lasting_bases trigger
-scoreboard objectives add opt_flag_hunt trigger
+scoreboard objectives add opt_flag_take_over trigger
 scoreboard objectives add opt_interactible_lobby trigger
 scoreboard objectives add opt_volcano trigger
 scoreboard objectives add opt_volcano_summon_period trigger
@@ -56,6 +52,9 @@ scoreboard objectives add respawnTime dummy
 scoreboard objectives add respawnTimeTics dummy
 scoreboard objectives add Score dummy
 scoreboard objectives add fallDistance minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives add climbing minecraft.custom:minecraft.climb_one_cm
+scoreboard objectives add crouching minecraft.custom:minecraft.sneak_time
+scoreboard objectives add lightLevel dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
@@ -63,22 +62,35 @@ scoreboard objectives add greenPlaced minecraft.used:slime_spawn_egg
 scoreboard objectives add redPlaced minecraft.used:mooshroom_spawn_egg
 scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 
+scoreboard objectives add const dummy
+scoreboard players set -1 const -1
+scoreboard players set 100 const 100
+scoreboard players set 256 const 256
+scoreboard players set 3000 const 3000
+
 scoreboard players set #100 global 100
+scoreboard players set #60 global 60
 scoreboard players set #20 global 20
 scoreboard players set #10 global 10
 scoreboard players set #2 global 2
 scoreboard players set #0 global 0
 scoreboard players set #-1 global -1
 
-execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
+# Init global
 
+execute unless score GameId global matches 0.. run scoreboard players set GameId global 0
+execute unless score GameLobby global matches 0.. run scoreboard players set GameLobby global 1
+execute unless score GameEnd global matches 0.. run scoreboard players set GameEnd global 0
+execute unless score GameRunning global matches 0.. run scoreboard players set GameRunning global 0
+execute unless score GameLoading global matches 0.. run scoreboard players set GameLoading global 0
+execute unless score ClearGame global matches 0.. run scoreboard players set ClearGame global 0
+execute unless score ClearLobby global matches 0.. run scoreboard players set ClearLobby global 0
 
 #Configuration scores
-execute unless score LavaSpeed options matches 1.. run scoreboard players set LavaSpeed options 7
-execute unless score BuildHeight options matches 2.. run scoreboard players set BuildHeight options 20
+execute unless score BuildHeight options matches 5.. run scoreboard players set BuildHeight options 20
 execute unless score VillagerForgiveness options matches 0.. run scoreboard players set VillagerForgiveness options 1
 execute unless score VillagerRespawn options matches 0.. run scoreboard players set VillagerRespawn options 30
-execute unless score UseGravel options matches 0.. run scoreboard players set UseGravel options 1
+execute unless score UseSand options matches 0.. run scoreboard players set UseSand options 1
 execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
 execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
 execute unless score TeamEgg options matches 0.. run scoreboard players set TeamEgg options 0
@@ -95,7 +107,10 @@ execute unless score Volcano options matches 0.. run scoreboard players set Volc
 execute unless score VolcanoSummonPeriod options matches 0.. run scoreboard players set VolcanoSummonPeriod options 1200
 execute unless score VolcanoPopPeriod options matches 0.. run scoreboard players set VolcanoPopPeriod options 10
 execute unless score ScaffoldingStopsArrow options matches 0.. run scoreboard players set ScaffoldingStopsArrow options 0
-execute unless score FlagHuntSpawnInterval options matches 0.. run scoreboard players set FlagHuntSpawnInterval options 600
+execute unless score FlagTakeOverSpawnInterval options matches 0.. run scoreboard players set FlagTakeOverSpawnInterval options 600
+#initialize options scores
+function scaffolding_rush:options/__init__
+
 #advancement replenish
 advancement revoke @a from scaffolding_rush:replenish
 
@@ -174,20 +189,18 @@ gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
-scoreboard objectives add const dummy
-scoreboard players set -1 const -1
-scoreboard players set 100 const 100
-scoreboard players set 256 const 256
-scoreboard players set 3000 const 3000
 
-setworldspawn 0 4 0
-
-#execute unless entity @e[type=marker,name="✔"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✔","color":"green"}'}
-#execute unless entity @e[type=marker,name="✖"] run summon minecraft:marker 0 0 0 {CustomName:'{"text":"✖","color":"red"}'}
+setworldspawn 0 24 0
 
 #Bossbar
 bossbar add filling_lava ""
 bossbar set minecraft:filling_lava color red
 
-execute unless score DevelopementMode global matches 1 run function scaffolding_rush:reset
-execute unless score DevelopementMode global matches 1 run function scaffolding_rush:clear/lobby/launch
+bossbar add time_limit ""
+bossbar set minecraft:time_limit color white
+
+# Reset
+execute unless score GameId global matches 0 run function scaffolding_rush:reset
+execute unless score GameId global matches 0 run function scaffolding_rush:clear/lobby/launch
+
+execute unless score gameId global matches 0 run function scaffolding_rush:first_launch

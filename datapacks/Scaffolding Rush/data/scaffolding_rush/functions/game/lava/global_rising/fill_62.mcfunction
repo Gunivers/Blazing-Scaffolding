@@ -1,6 +1,8 @@
-execute at @e[tag=fill,scores={fill=63}] run fill ~-62 ~ ~-62 ~-62 ~ ~62 magma_block
-execute at @e[tag=fill,scores={fill=63}] run fill ~-62 ~ ~-62 ~62 ~ ~-62 magma_block
-execute at @e[tag=fill,scores={fill=63}] run fill ~62 ~ ~62 ~-62 ~ ~62 magma_block
-execute at @e[tag=fill,scores={fill=63}] run fill ~62 ~ ~62 ~62 ~ ~-62 magma_block
-scoreboard players set @e[tag=fill,scores={fill=63}] fill 62
-schedule function scaffolding_rush:game/lava/global_rising/fill_61 2t
+
+execute at @e[tag=fill,scores={fill=61}] run fill ~-62 ~ ~-62 ~-62 ~ ~62 minecraft:magma_block
+execute at @e[tag=fill,scores={fill=61}] run fill ~-62 ~ ~-62 ~62 ~ ~-62 minecraft:magma_block
+execute at @e[tag=fill,scores={fill=61}] run fill ~62 ~ ~62 ~-62 ~ ~62 minecraft:magma_block
+execute at @e[tag=fill,scores={fill=61}] run fill ~62 ~ ~62 ~62 ~ ~-62 minecraft:magma_block
+scoreboard players set @e[tag=fill,scores={fill=61}] fill 62
+execute if score WBSize options matches 126.. run schedule function scaffolding_rush:game/lava/global_rising/fill_63 2t
+   

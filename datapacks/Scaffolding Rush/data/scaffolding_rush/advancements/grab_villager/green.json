@@ -11,7 +11,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "team": "green"
+                "nbt": "{Tags:[\"green_villager\"]}"
               }
             }
           ]

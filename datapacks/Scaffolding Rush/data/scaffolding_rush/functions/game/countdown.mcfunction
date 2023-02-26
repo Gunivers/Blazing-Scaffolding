@@ -14,20 +14,19 @@ scoreboard players operation @a gameId = GameId global
 
 setblock 0 5 7 cave_air
 
-function scaffolding_rush:team/join/random
+function scaffolding_rush:team/random
 
 function scaffolding_rush:game/summon_markers
 
 function scaffolding_rush:broadcast/10s
 
-teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 270 1000
+teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 2 1000
 
 kill @e[tag=lobbyText]
 kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]
 
-fill 1090 1 1090 1010 1 1010 magma_block
 schedule function scaffolding_rush:team/create_base/create 4s
 
 schedule function scaffolding_rush:broadcast/5s 5s
@@ -42,6 +41,14 @@ execute as @a run function scaffolding_rush:options/disable_all
 execute if score Admin options matches 1 as @a[tag=admin] run scoreboard players enable @s Reset
 execute if score Admin options matches 0 run scoreboard players enable @a Reset
 
+#reset the time
+scoreboard players set GameTimeTics global 0
+
+#initialize the countdown in tics
+scoreboard players operation TimeLeftTicks global = TimeLimit options
+scoreboard players operation TimeLeftTicks global *= #20 global
+scoreboard players operation TimeLeftTicks global *= #60 global
+
 #get lavaspeed timer in tics
 scoreboard players operation LavaSpeedTics options = LavaSpeed options
 scoreboard players operation LavaSpeedTics options *= #20 global
@@ -53,6 +60,11 @@ scoreboard players operation VillagerRespawnTics global *= #20 global
 scoreboard players operation RespawnDelayTics global = RespawnDelay options
 scoreboard players operation RespawnDelayTics global *= #20 global
 
+#initialize the wordborder start time in tics
+scoreboard players operation WorldborderStartTimeTics global = WorldborderStartTime options
+scoreboard players operation WorldborderStartTimeTics global *= #20 global
+scoreboard players operation WorldborderStartTimeTics global *= #60 global
+
 #reset villagers respawn countdowns
 scoreboard players set RedVillagerRespawn global -1
 scoreboard players set BlueVillagerRespawn global -1
@@ -60,11 +72,11 @@ scoreboard players set YellowVillagerRespawn global -1
 scoreboard players set GreenVillagerRespawn global -1
 
 #Reset teams scores, if relevant
-execute unless score flag_hunt options matches 0 run scoreboard objectives setdisplay sidebar Score
-execute unless score flag_hunt options matches 0 run scoreboard players set Blue Score 0
-execute unless score flag_hunt options matches 0 run scoreboard players set Green Score 0
-execute unless score flag_hunt options matches 0 run scoreboard players set Red Score 0
-execute unless score flag_hunt options matches 0 run scoreboard players set Yellow Score 0
+execute unless score flag_take_over options matches 0 run scoreboard objectives setdisplay sidebar Score
+execute unless score flag_take_over options matches 0 if entity @a[team=blue] run scoreboard players set Blue Score 0
+execute unless score flag_take_over options matches 0 if entity @a[team=green] run scoreboard players set Green Score 0
+execute unless score flag_take_over options matches 0 if entity @a[team=red] run scoreboard players set Red Score 0
+execute unless score flag_take_over options matches 0 if entity @a[team=yellow] run scoreboard players set Yellow Score 0
 
 #create the firsts flags to capture in the flaghunt gamemode
-execute unless score flag_hunt options matches 0 run function scaffolding_rush:flag/new_spreaded
+execute unless score flag_take_over options matches 0 run function scaffolding_rush:flag/new_spreaded

@@ -2,6 +2,14 @@ scoreboard players reset @a StartGame
 execute if score Admin options matches 1 as @a[tag=admin] run scoreboard players enable @s StartGame
 execute if score Admin options matches 0 as @a run scoreboard players enable @s StartGame
 
+# Count active teams
+scoreboard players set RemainingTeam global 0
+execute if entity @a[team=blue] run scoreboard players add RemainingTeam global 1
+execute if entity @a[team=green] run scoreboard players add RemainingTeam global 1
+execute if entity @a[team=red] run scoreboard players add RemainingTeam global 1
+execute if entity @a[team=yellow] run scoreboard players add RemainingTeam global 1
+execute as @a[team=random] run scoreboard players add RemainingTeam global 1
+
 execute if score RemainingTeam global matches 2.. if score ClearGame global matches 0 run function scaffolding_rush:game/countdown
 
 # Start the game even if there are not enough players
