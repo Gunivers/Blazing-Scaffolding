@@ -35,6 +35,7 @@ scoreboard objectives add opt_interactible_lobby trigger
 scoreboard objectives add opt_volcano trigger
 scoreboard objectives add opt_volcano_summon_period trigger
 scoreboard objectives add opt_volcano_pop_period trigger
+scoreboard objectives add opt_volcano_target_rate trigger
 scoreboard objectives add opt_scaff_stops_arrow trigger
 
 #internal values
@@ -106,6 +107,7 @@ execute unless score WBSize options matches 25..165 run scoreboard players set W
 execute unless score Volcano options matches 0.. run scoreboard players set Volcano options 0
 execute unless score VolcanoSummonPeriod options matches 0.. run scoreboard players set VolcanoSummonPeriod options 1200
 execute unless score VolcanoPopPeriod options matches 0.. run scoreboard players set VolcanoPopPeriod options 10
+execute unless score VolcanoTargetRate options matches 0.. run scoreboard players set VolcanoTargetRate options 25
 execute unless score ScaffoldingStopsArrow options matches 0.. run scoreboard players set ScaffoldingStopsArrow options 0
 execute unless score FlagTakeOverSpawnInterval options matches 0.. run scoreboard players set FlagTakeOverSpawnInterval options 600
 #initialize options scores

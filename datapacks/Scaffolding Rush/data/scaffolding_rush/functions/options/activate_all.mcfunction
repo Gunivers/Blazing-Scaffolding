@@ -27,6 +27,7 @@ scoreboard players enable @s opt_interactible_lobby
 scoreboard players enable @s opt_volcano
 scoreboard players enable @s opt_volcano_summon_period
 scoreboard players enable @s opt_volcano_pop_period
+scoreboard players enable @s opt_volcano_target_rate
 scoreboard players enable @s opt_scaff_stops_arrow
 
 scoreboard players enable @s Reset
