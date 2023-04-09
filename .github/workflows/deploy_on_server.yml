@@ -1,29 +1,39 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy
+name: Deploy on Minecraft server
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: dev
-#  pull_request:
-#    branches: dev
+    branches: [dev]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "deploy"
   deploy:
-    name: Deploy
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-    - name: git-ftp push
-      uses: sebastianpopp/git-ftp-action@3.0.0
-      with:
-        url: sftp://${{ secrets.SFTP_IP }}:${{ secrets.SFTP_PORT }}/world/
-        user: ${{ secrets.SFTP_USER }}
-        password: ${{ secrets.SFTP_PASSWORD }}
-        options: --auto-init --insecure --branch dev
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 10
+      # Deploys to the server
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Test
+        run: |
+          echo $RELEASE_VERSION
+          echo ${{ env.RELEASE_VERSION }}
+      - name: deploy
+        uses:  swznd/sftp-deploy@master
+        with:
+          host: ${{ secrets.SFTP_IP }}
+          port: ${{ secrets.SFTP_PORT }}
+          user: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          remote_path: /
+          ignore: .github/**,.gitignore,**/.gitignore,**/.git/**, /advancements/, /data/, /DIM-1/, /DIM1/, /entities/, /generated/, /playerdata/, /poi/, /region/ /stats/, /level.dat, /level.dat_old, /session.lock, /uid.dat, /docs/, /generators/
