@@ -6,9 +6,9 @@ name: Deploy
 # events but only for the master branch
 on:
   push:
-    branches: server
+    branches: dev
 #  pull_request:
-#    branches: server
+#    branches: dev
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,9 +21,9 @@ jobs:
       with:
         fetch-depth: 0
     - name: git-ftp push
-      uses: fabeabe/git-sftp-action@1.1.1
+      uses: sebastianpopp/git-ftp-action@3.0.0
       with:
-        url: sftp://${{ secrets.SFTP_IP }}:${{ secrets.SFTP_PORT }}/
+        url: sftp://${{ secrets.SFTP_IP }}:${{ secrets.SFTP_PORT }}/world/
         user: ${{ secrets.SFTP_USER }}
         password: ${{ secrets.SFTP_PASSWORD }}
-        options: --auto-init --insecure --branch server --remote-root /world/
+        options: --auto-init --insecure --branch server
