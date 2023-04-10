@@ -65,8 +65,12 @@ scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 
 scoreboard objectives add const dummy
 scoreboard players set -1 const -1
+scoreboard players set #1 const 1
+scoreboard players set #20 const 20
+scoreboard players set #60 const 60
 scoreboard players set 100 const 100
 scoreboard players set 256 const 256
+scoreboard players set #1200 const 1200
 scoreboard players set 3000 const 3000
 
 scoreboard players set #100 global 100
