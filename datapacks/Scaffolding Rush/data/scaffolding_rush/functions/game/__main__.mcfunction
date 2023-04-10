@@ -70,7 +70,8 @@ title @a[scores={language=1},tag=has_egg] actionbar ["",{"text":"||","obfuscated
 
 title @a[gamemode=!spectator,tag=!Respawning] times 0 2 0
 execute as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:villager/facing/msg
-execute as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg
+
+execute unless entity @e[type=minecraft:villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg
 
 
 # Test end of game
