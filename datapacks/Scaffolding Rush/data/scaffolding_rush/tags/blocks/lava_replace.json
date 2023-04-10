@@ -5,8 +5,7 @@
         "#scaffolding_rush:sand",
         "#scaffolding_rush:base",
         "#scaffolding_rush:lava",
-        "minecraft:coal_block",
-        "minecraft:blackstone_slab",
-        "minecraft:black_concrete_powder"
+        "#scaffolding_rush:volcano"
+        
     ]
 }
