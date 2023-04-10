@@ -8,10 +8,10 @@ execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] run scoreboard pla
 title @a times 0 60 20
 title @a subtitle {"text":""}
 
-execute if score TeamWin global matches 1 run function scaffolding_rush:broadcast/finis/1_team
-execute if score TeamWin global matches 2 run function scaffolding_rush:broadcast/finis/2_teams
-execute if score TeamWin global matches 3 run function scaffolding_rush:broadcast/finis/3_teams
-execute if score TeamWin global matches 4 run function scaffolding_rush:broadcast/finis/4_teams
+execute if score TeamWin global matches 1 run function scaffolding_rush:broadcast/finish/1_team
+execute if score TeamWin global matches 2 run function scaffolding_rush:broadcast/finish/2_teams
+execute if score TeamWin global matches 3 run function scaffolding_rush:broadcast/finish/3_teams
+execute if score TeamWin global matches 4 run function scaffolding_rush:broadcast/finish/4_teams
 
 
 execute if score TeamWin global matches 0 unless entity @a[tag=!TeamEliminated] run title @a[scores={language=0}] title ["",{"text":"No team won!"}]
