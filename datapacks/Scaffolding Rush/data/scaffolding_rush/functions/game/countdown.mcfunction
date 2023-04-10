@@ -45,9 +45,9 @@ execute if score Admin options matches 0 run scoreboard players enable @a Reset
 scoreboard players set GameTimeTics global 0
 
 #initialize the countdown in tics
-scoreboard players operation TimeLeftTicks global = TimeLimit options
-scoreboard players operation TimeLeftTicks global *= #20 global
-scoreboard players operation TimeLeftTicks global *= #60 global
+scoreboard players operation TimeLeftTicks timer = TimeLimit options
+scoreboard players operation TimeLeftTicks timer *= #20 global
+scoreboard players operation TimeLeftTicks timer *= #60 global
 
 #get lavaspeed timer in tics
 scoreboard players operation LavaSpeedTics options = LavaSpeed options
