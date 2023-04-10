@@ -209,7 +209,7 @@ bossbar add time_limit ""
 bossbar set minecraft:time_limit color white
 
 # Reset
-execute unless score GameId global matches 0 run schedule function scaffolding_rush:reset 40t
-execute unless score GameId global matches 0 run schedule function scaffolding_rush:clear/lobby/launch 40t
+execute unless score GameId global matches 0 run function scaffolding_rush:reset
+execute unless score GameId global matches 0 run function scaffolding_rush:clear/lobby/launch
 
 execute unless score gameId global matches 0 run function scaffolding_rush:first_launch
