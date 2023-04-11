@@ -2,6 +2,8 @@ scoreboard players set GameRunning global 0
 scoreboard players set GameEnd global 1
 kill @e[tag=Volcano]
 
+execute if score UseTimeLimit options matches 1.. run function scaffolding_rush:game/score_elimination
+
 function scaffolding_rush:broadcast/finish
 
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] run scoreboard players add @a[team=blue] Win 1

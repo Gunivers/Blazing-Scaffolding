@@ -17,5 +17,6 @@ scoreboard players set Villager options 1
 scoreboard players set lasting_bases options 0
 scoreboard players set flag_take_over options 0
 scoreboard players set Volcano options 0
+scoreboard players set UseTimeLimit options 0
 
 function scaffolding_rush:options/refresh
