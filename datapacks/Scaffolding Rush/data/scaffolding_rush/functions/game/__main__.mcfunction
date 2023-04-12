@@ -62,7 +62,7 @@ execute as @a[gamemode=!spectator,tag=!Respawning] at @s run function scaffoldin
 execute as @e[type=villager] run function scaffolding_rush:villager/warn/test
 
 # Protect vilalger against arrows
-execute as @e[type=minecraft:villager] at @s run function scaffolding_rush:villager/arrow_shield
+execute as @e[type=minecraft:villager] at @s positioned ~ ~1 ~ run function scaffolding_rush:villager/arrow_shield
 
 
 # Action bar msg
