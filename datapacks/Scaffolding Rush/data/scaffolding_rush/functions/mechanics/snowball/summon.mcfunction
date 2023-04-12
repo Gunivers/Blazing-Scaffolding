@@ -4,7 +4,7 @@ data modify entity @e[type=arrow,limit=1,sort=nearest] LeftOwner set from entity
 data modify entity @e[type=arrow,limit=1,sort=nearest] Motion set from entity @s Motion
 kill @s
 
-item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with air
-loot replace entity @a[scores={usedSnowball=1..}] weapon.mainhand loot scaffolding_rush:item/snowball
+# item replace entity @a[scores={usedSnowball=1..}] weapon.mainhand with air
+# loot replace entity @a[scores={usedSnowball=1..}] weapon.mainhand loot scaffolding_rush:item/snowball
 
 scoreboard players set @a usedSnowball 0

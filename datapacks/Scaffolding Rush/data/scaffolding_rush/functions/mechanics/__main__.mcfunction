@@ -37,6 +37,7 @@ execute if score InstantPillar options matches 1 run function scaffolding_rush:m
 
 # Snowball behavior
 execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:mechanics/snowball/summon
+function scaffolding_rush:item/replenish/snowball
 kill @e[type=arrow,nbt={inGround: 1b}]
 
 # Scaffoldings blocks arrows

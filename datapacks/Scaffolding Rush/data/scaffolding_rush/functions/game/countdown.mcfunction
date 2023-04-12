@@ -1,6 +1,7 @@
 gamemode adventure @a[team=!]
 gamemode spectator @a[team=]
 clear @a
+tag @a remove CanUseSnowball
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 worldborder center 1000 1000
