@@ -1,20 +1,17 @@
-item replace entity @s enderchest.0 with arrow{scgui:1, scgui.action:0, display:{Name:'[{"text":"Retour","italic":false,"color":"gold"}]'}} 1
+item replace entity @s enderchest.0 with arrow{scgui:1, scgui.action:0, display: {Name: '[{"text":"Retour","italic":false}]', Lore: ['[{"text":"Revenir a la page précedente","italic":false}]']}} 1
 
 
-item replace entity @s enderchest.2 with green_wool{scgui:1, scgui.action:2, display:{Name:'[{"text":"+ 10","italic":false,"color":"green"}]'}} 10
-item replace entity @s enderchest.3 with green_wool{scgui:1, scgui.action:3, display:{Name:'[{"text":"+ 20","italic":false,"color":"green"}]'}} 20
-item replace entity @s enderchest.4 with green_wool{scgui:1, scgui.action:4, display:{Name:'[{"text":"+ 30","italic":false,"color":"green"}]'}} 30
-item replace entity @s enderchest.5 with green_wool{scgui:1, scgui.action:5, display:{Name:'[{"text":"+ 40","italic":false,"color":"green"}]'}} 40
-item replace entity @s enderchest.6 with green_wool{scgui:1, scgui.action:6, display:{Name:'[{"text":"+ 50","italic":false,"color":"green"}]'}} 50
 
-item replace entity @s enderchest.13 with crimson_fence{scgui:1, scgui.action:13, display:{Name:'[{"text":"WorldBorder : ","italic":false,"color":"gold"}]',Lore:['[{"text":"Taille de la zone de jeu","italic":false}]']}} 1
 
-item replace entity @s enderchest.20 with red_wool{scgui:1, scgui.action:20, display:{Name:'[{"text":"- 10","italic":false,"color":"red"}]'}} 10
-item replace entity @s enderchest.21 with red_wool{scgui:1, scgui.action:21, display:{Name:'[{"text":"- 20","italic":false,"color":"red"}]'}} 20
-item replace entity @s enderchest.22 with red_wool{scgui:1, scgui.action:22, display:{Name:'[{"text":"- 30","italic":false,"color":"red"}]'}} 30
-item replace entity @s enderchest.23 with red_wool{scgui:1, scgui.action:23, display:{Name:'[{"text":"- 40","italic":false,"color":"red"}]'}} 40
-item replace entity @s enderchest.24 with red_wool{scgui:1, scgui.action:24, display:{Name:'[{"text":"- 50","italic":false,"color":"red"}]'}} 50
 
-function scgui:pages/7/test
 
+
+
+
+
+item replace entity @s enderchest.11 with tnt{scgui:1, scgui.action:11, display: {Name: '[{"text":"Mode performance","italic":false}]', Lore: ['[{"text":"Pour eviter que votre serveur fasse comme cette tnt","italic":false}]']}} 1
+item replace entity @s enderchest.12 with painting{scgui:1, scgui.action:12, display: {Name: '[{"text":"opt_flag_take_over","italic":false}]', Lore: ['[{"text":"Il y a une option opt_flag_take_over et je se sais pas ce que ça fait","italic":false}]']}} 1
+
+item replace entity @s enderchest.14 with diamond_pickaxe{scgui:1, scgui.action:14, display: {Name: '[{"text":"Lobby cassable","italic":false}]', Lore: ['[{"text":"Autorise les interactions dans le lobby","italic":false}]']}} 1
+item replace entity @s enderchest.15 with crimson_fence{scgui:1, scgui.action:15, display: {Name: '[{"text":"Bordure du jeu","italic":false}]', Lore: ['[{"text":"Reglez la bordure de la zone de jeu","italic":false}]']}} 1
 scoreboard players set @s scgui.change 0
