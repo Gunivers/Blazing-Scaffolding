@@ -28,6 +28,7 @@ scoreboard players reset @s opt_interactible_lobby
 scoreboard players reset @s opt_volcano
 scoreboard players reset @s opt_volcano_summon_period
 scoreboard players reset @s opt_volcano_pop_period
+scoreboard players reset @s opt_volcano_target_rate
 scoreboard players reset @s opt_scaff_stops_arrow
 
 scoreboard players reset @s Reset

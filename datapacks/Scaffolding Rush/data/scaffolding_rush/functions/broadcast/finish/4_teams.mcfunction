@@ -1,0 +1,2 @@
+title @a[scores={language=0}] title ["",{"text":"All teams win!"}]
+tellraw @a[scores={language=0}] ["",{"text":"====================================","color":"dark_gray"},{"text":"\n\n"},{"text":"[SR] ","color":"gold"},{"text":"All teams win!","color":"gray"},{"text":"\n\n"},{"text":"====================================","color":"dark_gray"}]

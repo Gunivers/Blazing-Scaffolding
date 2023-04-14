@@ -19,6 +19,7 @@ scoreboard players set VolcanoSummonTimer timer 0
 clear @a
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
+effect give @a minecraft:fire_resistance 20 100 true
 gamemode survival @a[team=!]
 
 #give items

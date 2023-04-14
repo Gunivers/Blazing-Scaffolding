@@ -10,4 +10,4 @@ execute if score UseTimeLimit options matches 0 unless score LavaSpeed options m
 
 execute unless score UseTimeLimit options matches 0 run bossbar set minecraft:time_limit players @a
 execute unless score UseTimeLimit options matches 0 run bossbar set minecraft:time_limit visible true
-execute unless score UseTimeLimit options matches 0 run execute store result bossbar time_limit max run scoreboard players get TimeLeftTicks global
+execute unless score UseTimeLimit options matches 0 run execute store result bossbar time_limit max run scoreboard players get TimeLeftTicks timer
