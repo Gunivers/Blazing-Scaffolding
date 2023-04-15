@@ -21,11 +21,11 @@ execute as @s[scores={glib.collision=1..}] at @s run function glib.move:by_vecto
 #__________________________________________________
 # Detect bloc on the 3 axes
 
-execute as @s[tag=glib.collisionFront] run tellraw @a ["",{"text":"   | CollisionFront"}]
 tag @s[tag=glib.collision] remove glib.collision
 tag @s[tag=glib.collisionTest] add glib.collisionFront
 execute as @s[scores={glib.collision=1..},tag=glib.collisionFront] at @s run function glib.move:by_vector/child/collision
 
+execute as @s[tag=glib.collision] run tag @s add Impact
 #__________________________________________________
 # Apply movement
 

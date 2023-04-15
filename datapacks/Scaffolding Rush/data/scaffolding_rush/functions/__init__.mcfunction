@@ -63,6 +63,10 @@ scoreboard objectives add greenPlaced minecraft.used:slime_spawn_egg
 scoreboard objectives add redPlaced minecraft.used:mooshroom_spawn_egg
 scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
 
+scoreboard objectives add fireball_timer dummy
+scoreboard objectives add fireball_count dummy
+scoreboard objectives add snowball dummy
+
 scoreboard objectives add const dummy
 scoreboard players set -1 const -1
 scoreboard players set #1 const 1

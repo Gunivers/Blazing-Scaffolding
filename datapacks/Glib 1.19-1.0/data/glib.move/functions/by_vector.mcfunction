@@ -27,7 +27,7 @@ scoreboard objectives add glib.vectorZ dummy [{"text":"GLib ","color":"gold"},{"
 # CONFIG
 
 # Manage precision of collision detection (1000 = 1 block, 500 = 0.5 blocks). More the system is accurate and more it will be heavy to run.
-scoreboard players set @s[tag=!glib.config.override] glib.precision 1000
+scoreboard players set @s[tag=!glib.config.override] glib.precision 250
 tag @s[tag=glib.config.override] remove glib.config.override
 
 #__________________________________________________
@@ -42,7 +42,7 @@ scoreboard players operation #backup.move.res0 glib = @s glib.res0
 
 # Absurd values security
 
-scoreboard players set @s[scores={glib.precision=..-1}] glib.precision 1000
+scoreboard players set @s[scores={glib.precision=..-1}] glib.precision 250
 
 # Decomposition in sum of vector with parameters <= glib.precision
 
