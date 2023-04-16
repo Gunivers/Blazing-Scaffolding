@@ -56,7 +56,6 @@ execute as @e[tag=ender_pearl,tag=TP_classical] at @s run function glib.move:by_
 # execute as @e[tag=ender_pearl,tag=TP_classical] at @s run summon block_display ~-0.05 ~1.7 ~-0.05 {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.1f,0.1f,0.1f]},block_state:{Name:"minecraft:red_concrete"},Tags:["bs.debug","bs.debug.move.by_vector","bs.move.TrajectoryDisplay"]}
 
 # Teleport if not cancelled
-execute as @e[tag=ender_pearl,tag=Impact,tag=!TP_cancelled] run function glib.id:check
-execute as @e[tag=ender_pearl,tag=Impact,tag=!TP_cancelled] at @s positioned ~ ~2.1 ~ run tp @a[tag=glib.id.match] ~ ~ ~
+execute as @e[tag=ender_pearl,tag=Impact] run function scaffolding_rush:mechanics/ender_pearl/on_impact
 
 kill @e[tag=ender_pearl,tag=Impact]
