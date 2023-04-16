@@ -75,8 +75,7 @@ tag @a remove flagFive
 
 clear @a
 effect clear @a
-tag @a remove CanUseSnowball
-tag @a remove CanUseFireball
+tag @a remove HaveItems
 effect give @a minecraft:instant_health 1 100 true
 
 function scaffolding_rush:clear/game/launch

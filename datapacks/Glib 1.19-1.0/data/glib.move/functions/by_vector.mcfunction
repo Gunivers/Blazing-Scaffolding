@@ -27,10 +27,7 @@ scoreboard objectives add glib.vectorZ dummy [{"text":"GLib ","color":"gold"},{"
 # CONFIG
 
 # Manage precision of collision detection (1000 = 1 block, 500 = 0.5 blocks). More the system is accurate and more it will be heavy to run.
-scoreboard players set @s[tag=!glib.config.override] glib.precision 1000
-scoreboard players set @s[tag=Fireball] glib.precision 100
-scoreboard players set @s[tag=VolcanoPop] glib.precision 500
-tag @s[tag=glib.config.override] remove glib.config.override
+
 
 #__________________________________________________
 # CODE
@@ -48,6 +45,11 @@ tag @s add glib.config.override
 scoreboard players operation vector.fastNormalization.lenght glib.config = @s glib.precision
 function glib.vector:classic/fast_normalize
 
+scoreboard players operation #move.normed_vectorX glib = @s glib.vectorX
+scoreboard players operation #move.normed_vectorY glib = @s glib.vectorY
+scoreboard players operation #move.normed_vectorZ glib = @s glib.vectorZ
+
+
 # Apply movement
 
 scoreboard players set move.decomposition.factor glib 1000
@@ -58,20 +60,18 @@ execute at @s if score move.decomposition.factor glib matches 1.. run function g
 
 # Rest of decomposition
 
-scoreboard players operation move.vectorX glib *= move.decomposition.factor.save glib
-scoreboard players operation move.vectorY glib *= move.decomposition.factor.save glib
-scoreboard players operation move.vectorZ glib *= move.decomposition.factor.save glib
-scoreboard players operation move.vectorX glib -= #backup.move.vectorX glib
-scoreboard players operation move.vectorY glib -= #backup.move.vectorY glib
-scoreboard players operation move.vectorZ glib -= #backup.move.vectorZ glib
-scoreboard players operation move.vectorX glib *= -1 glib.const
-scoreboard players operation move.vectorY glib *= -1 glib.const
-scoreboard players operation move.vectorZ glib *= -1 glib.const
+scoreboard players operation @s glib.vectorX = #backup.move.vectorX glib
+scoreboard players operation @s glib.vectorY = #backup.move.vectorY glib
+scoreboard players operation @s glib.vectorZ = #backup.move.vectorZ glib
+
+scoreboard players operation @s glib.vectorX %= #move.normed_vectorX glib
+scoreboard players operation @s glib.vectorY %= #move.normed_vectorY glib
+scoreboard players operation @s glib.vectorZ %= #move.normed_vectorZ glib
 
 # Apply movement for the rest
 
 tag @s add glib.move.by_vector.rest
-execute at @s run function glib.move:by_vector/child/loop
+execute if entity @s[tag=!glib.collision] at @s run function glib.move:by_vector/child/loop
 tag @s remove glib.move.by_vector.rest
 
 # Restore
