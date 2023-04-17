@@ -1,9 +1,9 @@
 #__________________________________________________
 # Get working vector
 
-execute if entity @s[tag=!glib.move.by_vector.rest] run scoreboard players operation move.vectorX glib = @s glib.vectorX
-execute if entity @s[tag=!glib.move.by_vector.rest] run scoreboard players operation move.vectorY glib = @s glib.vectorY
-execute if entity @s[tag=!glib.move.by_vector.rest] run scoreboard players operation move.vectorZ glib = @s glib.vectorZ
+scoreboard players operation move.vectorX glib = @s glib.vectorX
+scoreboard players operation move.vectorY glib = @s glib.vectorY
+scoreboard players operation move.vectorZ glib = @s glib.vectorZ
 
 #__________________________________________________
 # Collision
@@ -18,7 +18,6 @@ tag @s[tag=glib.collision] add Impact
 
 #__________________________________________________
 # Apply movement
-
 execute if entity @s[tag=!glib.collision] run scoreboard players operation @s glib.locX = move.vectorX glib
 execute if entity @s[tag=!glib.collision] run scoreboard players operation @s glib.locY = move.vectorY glib
 execute if entity @s[tag=!glib.collision] run scoreboard players operation @s glib.locZ = move.vectorZ glib
