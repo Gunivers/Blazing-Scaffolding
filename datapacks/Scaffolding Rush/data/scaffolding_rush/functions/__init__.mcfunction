@@ -56,6 +56,7 @@ scoreboard objectives add fallDistance minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add climbing minecraft.custom:minecraft.climb_one_cm
 scoreboard objectives add crouching minecraft.custom:minecraft.sneak_time
 scoreboard objectives add lightLevel dummy
+scoreboard objectives add health dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
