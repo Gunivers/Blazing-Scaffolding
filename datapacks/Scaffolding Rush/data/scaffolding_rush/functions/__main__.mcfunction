@@ -3,7 +3,10 @@
 # | |\/| |/ _` | | '_ \      / __| | | / __| __/ _ \ '_ ` _ \/ __|
 # | |  | | (_| | | | | |     \__ \ |_| \__ \ ||  __/ | | | | \__ \
 # |_|  |_|\__,_|_|_| |_|     |___/\__, |___/\__\___|_| |_| |_|___/
-#                                 |___/                                                    
+#                                 |___/                                 
+
+# Give an ID to each player
+execute as @a unless score @s glib.id matches 1.. run function glib.id:get_suid
 
 # Lobby management
 execute if score GameLobby global matches 1 run function scaffolding_rush:lobby/__main__
@@ -39,5 +42,6 @@ execute as @e[type=villager,nbt=!{Age:0}] run function scaffolding_rush:clean_ki
 # Admin mode
 execute unless entity @a[tag=admin] if score Admin options matches 1 run function scaffolding_rush:options/admin
 
-
 execute if score Regen options matches 1.. as @a unless entity @s[nbt={ActiveEffects:[{Id:10}]}] run effect give @s regeneration 10 0 true
+
+function scaffolding_rush:villager/health_bar

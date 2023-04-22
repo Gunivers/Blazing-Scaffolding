@@ -20,3 +20,7 @@ execute if score ClearGame global matches 1 run tellraw @a[scores={language=0}] 
 
 execute if score RemainingTeam global matches ..1 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Pas assez de team !","color":"red"}]
 execute if score ClearGame global matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Please wait, a clear of the map is in progress","color":"red"}]
+
+effect give @a minecraft:instant_health 1 100 true
+effect give @a minecraft:fire_resistance 20 100 true
+effect give @a minecraft:resistance 10 100 true

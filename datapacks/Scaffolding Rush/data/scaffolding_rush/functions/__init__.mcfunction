@@ -56,12 +56,21 @@ scoreboard objectives add fallDistance minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add climbing minecraft.custom:minecraft.climb_one_cm
 scoreboard objectives add crouching minecraft.custom:minecraft.sneak_time
 scoreboard objectives add lightLevel dummy
+scoreboard objectives add health dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg
 scoreboard objectives add greenPlaced minecraft.used:slime_spawn_egg
 scoreboard objectives add redPlaced minecraft.used:mooshroom_spawn_egg
 scoreboard objectives add yellowPlaced minecraft.used:blaze_spawn_egg
+
+scoreboard objectives add fireball_timer dummy
+scoreboard objectives add fireball_count dummy
+scoreboard objectives add enderpearl_timer dummy
+scoreboard objectives add enderpearl_count dummy
+scoreboard objectives add UsedEnderpearl minecraft.used:minecraft.ender_pearl
+scoreboard objectives add snowball dummy
+scoreboard objectives add glib.parentId dummy
 
 scoreboard objectives add const dummy
 scoreboard players set -1 const -1
