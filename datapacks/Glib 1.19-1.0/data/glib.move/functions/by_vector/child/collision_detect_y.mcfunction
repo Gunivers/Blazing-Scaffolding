@@ -10,7 +10,7 @@ execute as @e[tag=glib.new] at @s run function glib.location:add/accuracy/10-3
 #__________________________________________________
 # Detection
 
-execute at @e[type=area_effect_cloud,tag=glib.new,limit=1,sort=nearest] if block ~ ~ ~ #glib.move:by_vector/ignore_hitbox run tag @s remove glib.collisionY
+execute at @e[tag=glib.new,limit=1,sort=nearest] if block ~ ~1.7 ~ air run tag @s remove glib.collisionY
 tag @s[scores={VectorY=0}] remove glib.collisionY
 
 

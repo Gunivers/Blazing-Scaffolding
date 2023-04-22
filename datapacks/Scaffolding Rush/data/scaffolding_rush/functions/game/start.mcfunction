@@ -18,6 +18,7 @@ scoreboard players set VolcanoSummonTimer timer 0
 
 clear @a
 tag @a remove CanUseSnowball
+tag @a remove CanUseFireball
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 effect give @a minecraft:fire_resistance 20 100 true

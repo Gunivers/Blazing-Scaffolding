@@ -40,6 +40,11 @@ execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:mechanic
 function scaffolding_rush:item/replenish/snowball
 kill @e[type=arrow,nbt={inGround: 1b}]
 
+# Fireball behavior
+execute as @e[type=egg] at @s run function scaffolding_rush:mechanics/fireball/summon
+execute if entity @e[tag=Fireball] run function scaffolding_rush:mechanics/fireball/motion
+function scaffolding_rush:item/replenish/fireball
+
 # Scaffoldings blocks arrows
 execute if score ScaffoldingStopsArrow options matches 1 as @e[type=arrow] at @s if block ~ ~ ~ #scaffolding_rush:scaffolding run kill @s
 

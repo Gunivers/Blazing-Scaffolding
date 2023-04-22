@@ -9,6 +9,7 @@ scoreboard players operation @e[tag=VolcanoPopNew] glib.res0 %= VolcanoTargetRat
 # execute as @e[tag=VolcanoPopNew] if score @s glib.res0 matches 0 if entity @a[distance=..50,tag=InGame,gamemode=adventure] run effect give @s glowing 999 1 true
 execute as @e[tag=VolcanoPopNew] if score @s glib.res0 matches 0 if entity @a[distance=..50,tag=InGame,gamemode=adventure] run function scaffolding_rush:game/volcano/projection/target_random_player
 
+scoreboard players set @e[tag=VolcanoPopNew] glib.collision 0
 
 tag @e remove VolcanoPopNew
 
