@@ -42,4 +42,6 @@ execute as @e[type=villager,nbt=!{Age:0}] run function scaffolding_rush:clean_ki
 # Admin mode
 execute unless entity @a[tag=admin] if score Admin options matches 1 run function scaffolding_rush:options/admin
 
+execute if score Regen options matches 1.. as @a unless entity @s[nbt={ActiveEffects:[{Id:10}]}] run effect give @s regeneration 10 0 true
+
 function scaffolding_rush:villager/health_bar
