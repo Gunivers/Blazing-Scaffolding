@@ -17,8 +17,7 @@ execute unless score flag_take_over options matches 0 run scoreboard players set
 scoreboard players set VolcanoSummonTimer timer 0
 
 clear @a
-tag @a remove CanUseSnowball
-tag @a remove CanUseFireball
+tag @a remove HaveItems
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 effect give @a minecraft:fire_resistance 20 100 true

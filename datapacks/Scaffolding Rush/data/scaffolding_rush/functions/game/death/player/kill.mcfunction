@@ -17,8 +17,7 @@ kill @e[type=marker,tag=last_death]
 
 tag @s remove has_egg
 clear @s
-tag @s remove CanUseSnowball
-tag @s remove CanUseFireball
+tag @s remove HaveItems
 gamemode spectator @s
 scoreboard players set @s killed 0
 effect give @s instant_health 1 20

@@ -3,7 +3,10 @@
 # | |\/| |/ _` | | '_ \      / __| | | / __| __/ _ \ '_ ` _ \/ __|
 # | |  | | (_| | | | | |     \__ \ |_| \__ \ ||  __/ | | | | \__ \
 # |_|  |_|\__,_|_|_| |_|     |___/\__, |___/\__\___|_| |_| |_|___/
-#                                 |___/                                                    
+#                                 |___/                                 
+
+# Give an ID to each player
+execute as @a unless score @s glib.id matches 1.. run function glib.id:get_suid
 
 # Lobby management
 execute if score GameLobby global matches 1 run function scaffolding_rush:lobby/__main__

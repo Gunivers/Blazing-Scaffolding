@@ -45,6 +45,10 @@ execute as @e[type=egg] at @s run function scaffolding_rush:mechanics/fireball/s
 execute if entity @e[tag=Fireball] run function scaffolding_rush:mechanics/fireball/motion
 function scaffolding_rush:item/replenish/fireball
 
+execute as @e[type=ender_pearl,tag=!old_ender_pearl] at @s run function scaffolding_rush:mechanics/ender_pearl/summon
+execute if entity @e[tag=ender_pearl] run function scaffolding_rush:mechanics/ender_pearl/motion
+function scaffolding_rush:item/replenish/ender_pearl
+
 # Scaffoldings blocks arrows
 execute if score ScaffoldingStopsArrow options matches 1 as @e[type=arrow] at @s if block ~ ~ ~ #scaffolding_rush:scaffolding run kill @s
 

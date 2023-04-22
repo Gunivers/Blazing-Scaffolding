@@ -2,8 +2,7 @@ scoreboard players reset @s leave
 execute if entity @a[tag=admin] run tag @s remove admin
 tag @s remove has_egg
 clear @s
-tag @s remove CanUseSnowball
-tag @s remove CanUseFireball
+tag @a remove HaveItems
 
 execute as @s if entity @a[tag=admin] run function scaffolding_rush:options/disable_all
 
