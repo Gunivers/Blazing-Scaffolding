@@ -36,3 +36,6 @@ function scaffolding_rush:lobby/animation/__main__
 
 # Light
 execute as @e[type=marker,tag=lobbyLight] at @s if block ~ ~ ~ #scaffolding_rush:air run function scaffolding_rush:lobby/light
+
+# Suffocation
+execute as @a at @s if block ~ ~ ~ #scaffolding_rush:lobby_suffocation run function scaffolding_rush:lobby/suffocation
