@@ -1,5 +1,5 @@
 execute as @e[tag=ender_pearl] at @s run function glib.move:by_vector
-# execute as @e[tag=ender_pearl] at @s run particle dust 0.314 0 0.604 1 ~ ~2.1 ~ 0 0 0 0 1 force
+execute as @e[tag=ender_pearl] at @s run particle dust 0.314 0 0.604 1 ~ ~2.1 ~ 0 0 0 0 1 force
 
 # execute as @e[tag=ender_pearl] at @s run particle dust 1 0 0 1 ~ ~1.7 ~ 0 0 0 0 1 force
 # execute as @e[type=ender_pearl] at @s run particle dust 0 0 1 1 ~ ~ ~ 0 0 0 0 1 force
@@ -29,7 +29,22 @@ scoreboard players set @e[tag=ender_pearl,scores={glib.lifetime=0..}] glib.lifet
 execute as @e[tag=ender_pearl,tag=Impact] at @s positioned ~ ~2.1 ~ if block ~ ~ ~ scaffolding if block ~ ~1 ~ scaffolding run tag @s add TP_in_pillar
 execute as @e[tag=ender_pearl,tag=Impact,tag=!TP_in_pillar] at @s positioned ~ ~2.1 ~ if block ~ ~ ~ scaffolding if block ~ ~1 ~ air run tag @s add TP_on_bridge
 execute as @e[tag=ender_pearl,tag=Impact,tag=!TP_in_pillar,tag=!TP_on_bridge] at @s positioned ~ ~2.1 ~ if block ~ ~ ~ magma_block run tag @s add TP_cancelled
+execute as @e[tag=ender_pearl,tag=Impact,tag=!TP_in_pillar,tag=!TP_on_bridge] at @s positioned ~ ~2.1 ~ if block ~ ~ ~ lava run tag @s add TP_cancelled
 tag @e[tag=ender_pearl,tag=Impact,tag=!TP_in_pillar,tag=!TP_on_bridge,tag=!TP_cancelled] add TP_classical
+
+
+# If the pearl goes beyond the walls, it is cancelled
+execute as @e[tag=ender_pearl] at @s run function glib.location:get
+execute if score GameRunning global matches 1 run scoreboard players operation @e[tag=ender_pearl] glib.locX -= 1000 glib.const
+execute if score GameRunning global matches 1 run scoreboard players operation @e[tag=ender_pearl] glib.locZ -= 1000 glib.const
+scoreboard players operation @e[tag=ender_pearl,scores={glib.locX=..-1}] glib.locX *= -1 glib.const
+scoreboard players operation @e[tag=ender_pearl,scores={glib.locZ=..-1}] glib.locZ *= -1 glib.const
+scoreboard players operation @e[tag=ender_pearl] glib.locX *= 2 glib.const
+scoreboard players operation @e[tag=ender_pearl] glib.locZ *= 2 glib.const
+execute as @e[tag=ender_pearl] if score WBSize options <= @s glib.locX run tag @s add Impact
+execute as @e[tag=ender_pearl] if score WBSize options <= @s glib.locX run tag @s add TP_cancelled
+execute as @e[tag=ender_pearl] if score WBSize options <= @s glib.locZ run tag @s add Impact
+execute as @e[tag=ender_pearl] if score WBSize options <= @s glib.locZ run tag @s add TP_cancelled
 
 # execute if entity @e[tag=ender_pearl,tag=Impact,tag=TP_in_pillar] run say TP in pillar
 # execute if entity @e[tag=ender_pearl,tag=Impact,tag=TP_on_bridge] run say TP on bridge
