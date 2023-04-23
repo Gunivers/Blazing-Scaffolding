@@ -8,6 +8,8 @@ scoreboard players reset @s opt_lava_speed
 scoreboard players reset @s opt_build_height
 scoreboard players reset @s opt_sand
 scoreboard players reset @s opt_snowball
+scoreboard players reset @s opt_fireball
+scoreboard players reset @s opt_eder_pearl
 scoreboard players reset @s opt_vil_respawn
 scoreboard players reset @s opt_vil_resp_cd
 scoreboard players reset @s opt_instant_pil

@@ -4,6 +4,8 @@ execute as @a[scores={opt_sand=1..}] run function scaffolding_rush:options/sand
 execute as @a[scores={opt_instant_pil=1..}] run function scaffolding_rush:options/instant_pillar
 execute as @a[scores={opt_perf_mode=1..}] run function scaffolding_rush:options/perf_mode
 execute as @a[scores={opt_snowball=1..}] run function scaffolding_rush:options/snowball
+execute as @a[scores={opt_fireball=1..}] run function scaffolding_rush:options/fireball
+execute as @a[scores={opt_ender_pearl=1..}] run function scaffolding_rush:options/ender_pearl
 execute as @a[scores={opt_perf_mode=1..}] run function scaffolding_rush:options/perf_mode
 execute as @a[scores={opt_team_egg=1..}] run function scaffolding_rush:options/team_egg
 execute as @a[scores={opt_vil_resp_cd=1..}] run function scaffolding_rush:options/vil_resp_cd

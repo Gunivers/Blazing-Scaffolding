@@ -8,4 +8,4 @@ scoreboard players set @a[scores={fireball_count=0,fireball_timer=300..}] fireba
 scoreboard players set @a[scores={fireball_count=1..}] fireball_timer 300
 
 
-execute as @a[scores={fireball_timer=299,fireball_count=0},tag=HaveItems] run loot give @s loot scaffolding_rush:item/fireball
+execute if score UseFireball options matches 1.. as @a[scores={fireball_timer=299,fireball_count=0},tag=HaveItems] run loot give @s loot scaffolding_rush:item/fireball

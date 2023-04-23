@@ -16,6 +16,8 @@ scoreboard objectives add opt_build_height trigger
 scoreboard objectives add opt_vil_resp_cd trigger
 scoreboard objectives add opt_sand trigger
 scoreboard objectives add opt_snowball trigger
+scoreboard objectives add opt_fireball trigger
+scoreboard objectives add opt_ender_pearl trigger
 scoreboard objectives add opt_vil_respawn trigger
 scoreboard objectives add opt_instant_pil trigger
 scoreboard objectives add opt_perf_mode trigger
@@ -109,6 +111,8 @@ execute unless score VillagerForgiveness options matches 0.. run scoreboard play
 execute unless score VillagerRespawn options matches 0.. run scoreboard players set VillagerRespawn options 30
 execute unless score UseSand options matches 0.. run scoreboard players set UseSand options 1
 execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
+execute unless score UseFireball options matches 0.. run scoreboard players set UseFireball options 0
+execute unless score UseEnderPearl options matches 0.. run scoreboard players set UseEnderPearl options 0
 execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
 execute unless score TeamEgg options matches 0.. run scoreboard players set TeamEgg options 0
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0

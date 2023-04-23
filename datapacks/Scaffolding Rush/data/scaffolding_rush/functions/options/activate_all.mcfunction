@@ -7,6 +7,8 @@ scoreboard players enable @s opt_lava_speed
 scoreboard players enable @s opt_build_height
 scoreboard players enable @s opt_sand
 scoreboard players enable @s opt_snowball
+scoreboard players enable @s opt_fireball
+scoreboard players enable @s opt_ender_pearl
 scoreboard players enable @s opt_vil_respawn
 scoreboard players enable @s opt_vil_resp_cd
 scoreboard players enable @s opt_instant_pil

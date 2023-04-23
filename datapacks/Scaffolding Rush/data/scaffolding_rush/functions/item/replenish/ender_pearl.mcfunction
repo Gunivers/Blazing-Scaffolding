@@ -8,4 +8,4 @@ scoreboard players set @a[scores={enderpearl_count=0,enderpearl_timer=600..}] en
 scoreboard players set @a[scores={enderpearl_count=1..}] enderpearl_timer 600
 
 
-execute as @a[scores={enderpearl_timer=599,enderpearl_count=0},tag=HaveItems] run loot give @s loot scaffolding_rush:item/ender_pearl
+execute if score UseEnderPearl options matches 1.. as @a[scores={enderpearl_timer=599,enderpearl_count=0},tag=HaveItems] run loot give @s loot scaffolding_rush:item/ender_pearl
