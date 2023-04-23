@@ -46,11 +46,6 @@ execute as @e[tag=ender_pearl] if score WBSize options <= @s glib.locX run tag @
 execute as @e[tag=ender_pearl] if score WBSize options <= @s glib.locZ run tag @s add Impact
 execute as @e[tag=ender_pearl] if score WBSize options <= @s glib.locZ run tag @s add TP_cancelled
 
-# execute if entity @e[tag=ender_pearl,tag=Impact,tag=TP_in_pillar] run say TP in pillar
-# execute if entity @e[tag=ender_pearl,tag=Impact,tag=TP_on_bridge] run say TP on bridge
-# execute if entity @e[tag=ender_pearl,tag=Impact,tag=TP_cancelled] run say TP cancelled
-# execute if entity @e[tag=ender_pearl,tag=Impact,tag=TP_classical] run say TP classical
-
 # If TP in pillar, place the player at the same height, but inside the pillar
 execute as @e[tag=ender_pearl,tag=TP_in_pillar] at @s positioned ~ ~2.1 ~ align xyz run tp @s ~0.5 ~ ~0.5
 
