@@ -71,7 +71,7 @@ scoreboard objectives add fireball_count dummy
 scoreboard objectives add enderpearl_timer dummy
 scoreboard objectives add enderpearl_count dummy
 scoreboard objectives add UsedEnderpearl minecraft.used:minecraft.ender_pearl
-scoreboard objectives add snowball dummy
+scoreboard objectives add snowballs dummy
 scoreboard objectives add glib.parentId dummy
 
 scoreboard objectives add const dummy
