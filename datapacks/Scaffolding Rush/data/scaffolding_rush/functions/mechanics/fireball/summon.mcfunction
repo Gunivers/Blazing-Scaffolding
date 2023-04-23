@@ -1,5 +1,5 @@
 summon armor_stand ~ ~-1.7 ~ {NoGravity:1,Invisible:1,Tags:["Fireball","FireballNew"],ArmorItems:[{},{},{},{id:"minecraft:magma_block",Count:1b}]}
-playsound minecraft:entity.player.hurt_on_fire master @a[distance=..30] ~ ~ ~ 2 2 1
+playsound minecraft:entity.ghast.shoot master @a[distance=..30] ~ ~ ~ 2 2 1
 
 function glib.vector:classic/get_from_motion
 
