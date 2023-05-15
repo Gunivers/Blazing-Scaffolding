@@ -1,4 +1,5 @@
-execute as @a[scores={opt_preset=1..}] run function scaffolding_rush:options/preset
+execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_preset
+execute as @a[tag=game_options_enabled] if score @s usedTrigger matches 1 run function scaffolding_rush:options/preset
 execute as @a[scores={opt_build_height=1..}] run function scaffolding_rush:options/build_height
 execute as @a[scores={opt_sand=1..}] run function scaffolding_rush:options/sand
 execute as @a[scores={opt_instant_pil=1..}] run function scaffolding_rush:options/instant_pillar
