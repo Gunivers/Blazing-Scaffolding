@@ -32,7 +32,6 @@ scoreboard players set Rafts options 1
 # Villager
 scoreboard players set Villager options 1
 scoreboard players set VillagerForgiveness options 1
-scoreboard players set VillagerRespawn options 0
 scoreboard players set InvulnerableVillager options 1
 scoreboard players set MovableVillager options 0
 
