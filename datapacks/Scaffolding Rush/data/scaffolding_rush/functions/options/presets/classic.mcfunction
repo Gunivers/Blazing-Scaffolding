@@ -3,7 +3,7 @@ tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le 
 
 scoreboard players set LavaSpeed options 7
 scoreboard players set WBSize options 95
-function scaffolding_rush:options/wb_size_refresh
+function scaffolding_rush:options/map/wb_size_refresh
 scoreboard players set BuildHeight options 20
 scoreboard players set Regen options 1
 scoreboard players set FallDamage options 0
