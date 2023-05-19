@@ -1,9 +1,9 @@
-# Scaffolding-Rush
-This is a minecraft world allowing to play withwin it the minigame "Scaffolding Rush"
+# Blazing Scaffolding
+This is a minecraft world allowing to play withwin it the minigame **Blazing Scaffolding**
 
 
 
-Credits for the "Scaffolding Rush" concept goes to the gunivers association : https://gunivers.net/scaffolding-rush/
+Credits for the **Blazing Scaffolding** concept goes to the gunivers association : https://gunivers.net/blazing-scaffolding/
 
 
 
