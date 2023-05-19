@@ -3,9 +3,9 @@
 execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s if block ~ ~-0.0001 ~ magma_block run function scaffolding_rush:game/death/player/kill/lava
 
 #Kill villagers in lava, or save them if they are invulnerable
-execute if score InvulnerableVillager options matches 0 as @e[type=villager,tag=!LobbyBase] at @s if block ~ ~-0.0001 ~ magma_block run function scaffolding_rush:game/death/villager/kill
-execute unless score InvulnerableVillager options matches 0 as @e[type=villager,tag=!LobbyBase] at @s if block ~ ~-1.8 ~ magma_block run function scaffolding_rush:game/death/villager/save
-execute unless score InvulnerableVillager options matches 0 as @e[type=villager,tag=!LobbyBase] at @s if block ~ ~-1 ~ magma_block run function scaffolding_rush:game/death/villager/save
+execute if score InvulnerableVillager options matches 0 as @e[type=villager,tag=game_villager] at @s if block ~ ~-0.0001 ~ magma_block run function scaffolding_rush:game/death/villager/kill
+execute unless score InvulnerableVillager options matches 0 as @e[type=villager,tag=game_villager] at @s if block ~ ~-1.8 ~ magma_block run function scaffolding_rush:game/death/villager/save
+execute unless score InvulnerableVillager options matches 0 as @e[type=villager,tag=game_villager] at @s if block ~ ~-1 ~ magma_block run function scaffolding_rush:game/death/villager/save
 
 # If player has been killed
 execute as @a[scores={killed=1..}] at @s run function scaffolding_rush:game/death/player/kill
