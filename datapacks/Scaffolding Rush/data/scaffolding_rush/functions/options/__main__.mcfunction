@@ -22,6 +22,7 @@ execute as @a[scores={opt_villager=1..}] run function scaffolding_rush:options/v
 execute as @a[scores={opt_language=1..}] run function scaffolding_rush:options/language
 execute as @a[scores={opt_lasting_bases=1..}] run function scaffolding_rush:options/gameplay/lasting_bases
 execute as @a[scores={opt_flag_take_over=1..}] run function scaffolding_rush:options/flag/flag_take_over
+execute as @a[scores={opt_flag_spawn_interval=1..}] run function scaffolding_rush:options/flag/flag_spawn_interval
 execute as @a[scores={opt_interactible_lobby=1..}] run function scaffolding_rush:options/map/interactible_lobby
 execute as @a[scores={opt_volcano=1..}] run function scaffolding_rush:options/volcano/volcano
 execute as @a[scores={opt_volcano_summon_period=1..}] run function scaffolding_rush:options/volcano/volcano_summon_period
