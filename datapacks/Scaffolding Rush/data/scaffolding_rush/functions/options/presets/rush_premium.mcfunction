@@ -3,7 +3,7 @@ tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le 
 
 scoreboard players set LavaSpeed options 3
 scoreboard players set WBSize options 145
-function scaffolding_rush:options/wb_size_refresh
+function scaffolding_rush:options/map/wb_size_refresh
 scoreboard players set BuildHeight options 30
 scoreboard players set Regen options 0
 scoreboard players set FallDamage options 0
@@ -14,8 +14,8 @@ scoreboard players set InstantPillar options 1
 scoreboard players set RespawnDelay options 1
 scoreboard players set VillagerForgiveness options 0
 scoreboard players set Villager options 1
-scoreboard players set lasting_bases options 0
-scoreboard players set flag_take_over options 0
+scoreboard players set LastingBases options 0
+scoreboard players set FlagTakeOver options 0
 scoreboard players set Volcano options 0
 scoreboard players set UseTimeLimit options 0
 
