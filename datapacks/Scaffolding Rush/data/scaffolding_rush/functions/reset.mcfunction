@@ -40,7 +40,7 @@ scoreboard players set ClearGame global 0
 scoreboard players set ClearLobby global 0
 scoreboard players set WBAddTemp options 0
 scoreboard players set Language options 0
-function scaffolding_rush:options/wb_size_refresh
+function scaffolding_rush:options/map/wb_size_refresh
 
 scoreboard players set RedVillagerRespawn global -1
 scoreboard players set BlueVillagerRespawn global -1
@@ -61,8 +61,6 @@ team modify yellow seeFriendlyInvisibles false
 
 scoreboard players add GameId global 1
 scoreboard players operation @a gameId = GameId global
-
-function scaffolding_rush:options/labels
 
 tag @a remove TeamEliminated
 tag @a remove has_egg
