@@ -18,26 +18,26 @@ summon minecraft:villager -2 24.5 6 {VillagerData: {profession: "minecraft:none"
 summon minecraft:interaction -2 24 6 {height: 3, width: 0.9d, Tags: ["lobbyInteraction", "LobbyPresetVillager"]}
 summon minecraft:interaction -1.25 24.0 6.2 {height: 0.5d, width: 0.5d, Tags: ["lobbyInteraction", "LobbyPresetVillagerPrevious"]}
 summon minecraft:interaction -1.75 24.0 6.2 {height: 0.5d, width: 0.5d, Tags: ["lobbyInteraction", "LobbyPresetVillagerNext"]}
-summon minecraft:text_display -2 25.3 5.9 {text: '{"text":"Preset :","color":"white", "underlined": true}', Tags: ["lobbyText"], billboard: 'vertical'}
+summon minecraft:text_display -2 25.3 5.9 {text: '{"text":"Preset :","color":"white", "underlined": true}', Tags: ["lobbyText"], billboard: 'vertical', brightness: {block: 10, sky: 10}}
 summon minecraft:text_display -2 25.0 5.9 {text: '', Tags: ["lobbyText", "presetLabel"], billboard: 'vertical'}
-summon minecraft:text_display -1.75 24.1 5.95 {text: '{"text":">>","bold":true,"color":"#7027FF"}', Tags: ["lobbyText"], billboard: 'fixed', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], background: 0, shadow: 1b}
-summon minecraft:text_display -1.22 24.1 5.95 {text: '{"text":"<<","bold":true,"color":"#7027FF"}', Tags: ["lobbyText"], billboard: 'fixed', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], background: 0, shadow: 1b}
+summon minecraft:text_display -1.75 24.1 5.95 {text: '{"text":">>","bold":true,"color":"#7027FF"}', Tags: ["lobbyText"], billboard: 'fixed', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], background: 0, shadow: 1b, brightness: {block: 10, sky: 10}}
+summon minecraft:text_display -1.22 24.1 5.95 {text: '{"text":"<<","bold":true,"color":"#7027FF"}', Tags: ["lobbyText"], billboard: 'fixed', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], background: 0, shadow: 1b, brightness: {block: 10, sky: 10}}
 
 function scaffolding_rush:lobby/text/team/summon
 
 setblock -4 24 8 minecraft:ender_chest
-summon minecraft:text_display -4 25.2 8 {text: '{"text":"Options", "color":"gray"}', Tags: ["lobbyText"], billboard: 'center'}
+summon minecraft:text_display -4 25.2 8 {text: '{"text":"Options", "color":"gray"}', Tags: ["lobbyText"], billboard: 'center', brightness: {block: 10, sky: 10}}
 # How to play
-summon minecraft:text_display 4 25.5 -2 {text: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], billboard: 'center'}
+summon minecraft:text_display 4 25.5 -2 {text: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], billboard: 'center', brightness: {block: 10, sky: 10}}
 summon minecraft:interaction 4 24 -2 {height: 1.2d, width: 1.2d, Tags: ["lobbyInteraction", "LobbyHTP"]}
 
 scoreboard players reset @a bellring
 setblock 0 25 6 bell[attachment=floor,facing=south]
-summon minecraft:text_display 0 24.6 5.9 {text: '{"text":"Start Game","bold":true}', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], Tags: ["lobbyText", "startLabel"], billboard: 'fixed'}
+summon minecraft:text_display 0 24.6 5.9 {text: '{"text":"Start Game","bold":true}', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], Tags: ["lobbyText", "startLabel"], billboard: 'fixed', brightness: {block: 10, sky: 10}}
 
-summon minecraft:text_display -5.0 27 -2.99 {text: '["",{"text":"Credits","underlined":true,"color":"gold","bold":true},{"text":"\\n"},{"text":"Leirof\\nLoumardes\\nTheaustudio\\nLaizo\\nAscpial\\nTretinV3\\nKali\\n","color":"#e5e5e5"},{"text":"and many others...\\nthanks!","color":"gold"}]', Tags: ["lobbyText", "startLabel"], billboard: 'fixed', background: 0}
-summon minecraft:text_display -5.0 26.4 -2.99 {text: '["",{"text":"Join us on Discord!","color":"white"}]', billboard: 'fixed', background: -10983950}
-summon minecraft:text_display -5.0 26.1 -2.99 {text: '["",{"text":"gunivers.net","color":"gold"}]', Tags: ["lobbyText", "startLabel"], billboard: 'fixed', background: 0}
+summon minecraft:text_display -5.0 27 -2.99 {text: '["",{"text":"Credits","underlined":true,"color":"gold","bold":true},{"text":"\\n"},{"text":"Leirof\\nLoumardes\\nTheaustudio\\nLaizo\\nAscpial\\nTretinV3\\nKali\\n","color":"#e5e5e5"},{"text":"and many others...\\nthanks!","color":"gold"}]', Tags: ["lobbyText", "startLabel"], billboard: 'fixed', background: 0, brightness: {block: 10, sky: 10}}
+summon minecraft:text_display -5.0 26.4 -2.99 {text: '["",{"text":"Join us on Discord!","color":"white"}]', billboard: 'fixed', background: -10983950, brightness: {block: 10, sky: 10}}
+summon minecraft:text_display -5.0 26.1 -2.99 {text: '["",{"text":"gunivers.net","color":"gold"}]', Tags: ["lobbyText", "startLabel"], billboard: 'fixed', background: 0, brightness: {block: 10, sky: 10}}
 summon minecraft:interaction -5.0 25.5 -3.5 {height: 4d, width: 1.9d, Tags: ["lobbyInteraction", "LobbyCredits"]}
 
 
