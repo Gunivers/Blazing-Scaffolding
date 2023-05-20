@@ -10,7 +10,6 @@ scoreboard players set WBSize2 options 60
 scoreboard players set WBSize3 options 95
 scoreboard players set WBSize4 options 130
 scoreboard players set WorldborderShrink options 0
-function scaffolding_rush:options/map/wb_size_refresh
 scoreboard players set BuildHeight options 20
 scoreboard players set UseTimeLimit options 0
 scoreboard players set UseScoreLimit options 0
@@ -45,5 +44,5 @@ scoreboard players set VolcanoPopPeriod options 40
 scoreboard players set VolcanoSummonPeriod options 600
 scoreboard players set VolcanoTargetRate options 0
 
-function scaffolding_rush:options/wb_size_refresh
+function scaffolding_rush:options/map/wb_size_refresh
 function scaffolding_rush:options/refresh
