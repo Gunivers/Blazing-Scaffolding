@@ -1,10 +1,8 @@
 
-execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2.. run scoreboard players operation TeamNumber options = @s opt_team_number
+execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2..4 run scoreboard players operation TeamNumber options = @s opt_team_number
 
-execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2.. run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The number of teams has been set to ","color":"gray"},{"score":{"name":"TeamNumber","objective":"options"},"color":"gold"}]
-execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2.. run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le nombre d'équipe a été mis sur ","color":"gray"},{"score":{"name":"TeamNumber","objective":"options"},"color":"gold"}]
-
-function scaffolding_rush:lobby/load
+execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2..4 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The number of teams has been set to ","color":"gray"},{"score":{"name":"TeamNumber","objective":"options"},"color":"gold"}]
+execute if score TeamNumber options matches 2.. if score @s opt_team_number matches 2..4 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le nombre d'équipe a été mis sur ","color":"gray"},{"score":{"name":"TeamNumber","objective":"options"},"color":"gold"}]
 
 #When the number of team decrease, send the players to a random team when their team no longer exists
 execute if score TeamNumber options matches 2 as @a[team=yellow] run function scaffolding_rush:team/join/random

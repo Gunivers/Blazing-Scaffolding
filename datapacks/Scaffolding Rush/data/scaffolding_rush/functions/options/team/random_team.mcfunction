@@ -11,8 +11,6 @@ execute unless score RandomTeam options matches 0 run tellraw @a[scores={languag
 execute if score RandomTeam options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Les équipes aléatoires ont été ","color":"gray"},{"text":"désactivées","color":"red"}]
 execute unless score RandomTeam options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Les équipes aléatoires ont été ","color":"gray"},{"text":"activées","color":"green"}]
 
-function scaffolding_rush:lobby/load
-
 scoreboard players set @s opt_random_team 0
 scoreboard players enable @s opt_random_team
 
