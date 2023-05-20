@@ -4,5 +4,5 @@ execute as @a[team=red,tag=Respawning] run function scaffolding_rush:game/death/
 
 scoreboard players operation RedVillagerRespawn global = VillagerRespawnTics global
 
-execute if score VillagerForgiveness options matches 1 as @a[team=red] run function scaffolding_rush:villager/respawn/egg_counter/give
-execute if score VillagerForgiveness options matches 1 as @a[team=red] run schedule function scaffolding_rush:villager/respawn/egg_counter/red 1s
+execute if score VillagerForgiveness options matches 1 as @a[team=red,gamemode=!spectator] run function scaffolding_rush:villager/respawn/egg_counter/give
+schedule function scaffolding_rush:villager/respawn/egg_counter/red 1s
