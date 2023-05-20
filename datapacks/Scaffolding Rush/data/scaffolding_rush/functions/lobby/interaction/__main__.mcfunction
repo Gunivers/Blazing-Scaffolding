@@ -16,6 +16,7 @@ execute as @e[type=interaction,tag=teamRandom] if entity @s[nbt={interaction:{}}
 
 
 execute as @e[type=interaction,tag=LobbyHTP] if entity @s[nbt={interaction:{}}] run function scaffolding_rush:lobby/interaction/how_to_play
+execute as @e[type=interaction,tag=LobbyCredits] if entity @s[nbt={interaction:{}}] run function scaffolding_rush:lobby/interaction/credits
 
 
 execute as @e[tag=lobbyInteraction] run data remove entity @s interaction

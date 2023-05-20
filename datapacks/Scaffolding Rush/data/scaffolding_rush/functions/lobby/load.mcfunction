@@ -35,6 +35,11 @@ scoreboard players reset @a bellring
 setblock 0 25 6 bell[attachment=floor,facing=south]
 summon minecraft:text_display 0 24.6 5.9 {text: '{"text":"Start Game","bold":true}', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], Tags: ["lobbyText", "startLabel"], billboard: 'fixed'}
 
+summon minecraft:text_display -5.0 27 -2.99 {text: '["",{"text":"Credits","underlined":true,"color":"gold","bold":true},{"text":"\\n"},{"text":"Leirof\\nLoumardes\\nTheaustudio\\nLaizo\\nAscpial\\nTretinV3\\nKali\\n","color":"#e5e5e5"},{"text":"and many others...\\nthanks!","color":"gold"}]', Tags: ["lobbyText", "startLabel"], billboard: 'fixed', background: 0}
+summon minecraft:text_display -5.0 26.4 -2.99 {text: '["",{"text":"Join us on Discord!","color":"white"}]', billboard: 'fixed', background: -10983950}
+summon minecraft:text_display -5.0 26.1 -2.99 {text: '["",{"text":"gunivers.net","color":"gold"}]', Tags: ["lobbyText", "startLabel"], billboard: 'fixed', background: 0}
+summon minecraft:interaction -5.0 25.5 -3.5 {height: 4d, width: 1.9d, Tags: ["lobbyInteraction", "LobbyCredits"]}
+
 
 execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 
