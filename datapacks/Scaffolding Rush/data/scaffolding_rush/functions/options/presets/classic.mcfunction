@@ -10,6 +10,7 @@ scoreboard players set WBSize2 options 60
 scoreboard players set WBSize3 options 95
 scoreboard players set WBSize4 options 130
 scoreboard players set WorldborderShrink options 0
+function scaffolding_rush:options/map/wb_size_refresh
 scoreboard players set BuildHeight options 20
 scoreboard players set UseTimeLimit options 0
 scoreboard players set UseScoreLimit options 0
@@ -25,7 +26,7 @@ scoreboard players set UseFireball options 0
 scoreboard players set InstantPillar options 0
 scoreboard players set FastClimb options 0
 scoreboard players set RespawnDelay options 3
-scoreboard players set lasting_bases options 0
+scoreboard players set LastingBases options 0
 scoreboard players set Rafts options 0
 
 # Villager
@@ -36,7 +37,7 @@ scoreboard players set InvulnerableVillager options 0
 scoreboard players set MovableVillager options 1
 
 # Flags
-scoreboard players set flag_take_over options 0
+scoreboard players set FlagTakeOver options 0
 
 # Volcano
 scoreboard players set Volcano options 1

@@ -26,7 +26,7 @@ scoreboard players set UseFireball options 0
 scoreboard players set InstantPillar options 1
 scoreboard players set FastClimb options 0
 scoreboard players set RespawnDelay options 5
-scoreboard players set lasting_bases options 1
+scoreboard players set LastingBases options 1
 scoreboard players set Rafts options 1
 
 # Villager
@@ -36,7 +36,7 @@ scoreboard players set InvulnerableVillager options 1
 scoreboard players set MovableVillager options 0
 
 # Flags
-scoreboard players set flag_take_over options 1
+scoreboard players set FlagTakeOver options 1
 
 # Volcano
 scoreboard players set Volcano options 1
@@ -44,5 +44,5 @@ scoreboard players set VolcanoPopPeriod options 40
 scoreboard players set VolcanoSummonPeriod options 300
 scoreboard players set VolcanoTargetRate options 25
 
-function scaffolding_rush:options/wb_size_refresh
+function scaffolding_rush:options/map/wb_size_refresh
 function scaffolding_rush:options/refresh

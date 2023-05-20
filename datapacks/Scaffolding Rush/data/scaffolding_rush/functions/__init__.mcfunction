@@ -11,35 +11,6 @@ scoreboard objectives add Reset trigger
 
 scoreboard objectives add glib.res0 dummy
 
-scoreboard objectives add opt_preset trigger
-scoreboard objectives add opt_build_height trigger
-scoreboard objectives add opt_vil_resp_cd trigger
-scoreboard objectives add opt_sand trigger
-scoreboard objectives add opt_snowball trigger
-scoreboard objectives add opt_fireball trigger
-scoreboard objectives add opt_ender_pearl trigger
-scoreboard objectives add opt_vil_respawn trigger
-scoreboard objectives add opt_instant_pil trigger
-scoreboard objectives add opt_perf_mode trigger
-scoreboard objectives add opt_team_egg trigger
-scoreboard objectives add opt_wb_size_add trigger
-scoreboard objectives add opt_regen trigger
-scoreboard objectives add opt_fall_damage trigger
-scoreboard objectives add opt_villager trigger
-scoreboard objectives add opt_language trigger
-scoreboard objectives add opt_resp_delay trigger
-scoreboard objectives add opt_admin trigger
-scoreboard objectives add opt_random_team trigger
-scoreboard objectives add opt_team_number trigger
-scoreboard objectives add opt_lasting_bases trigger
-scoreboard objectives add opt_flag_take_over trigger
-scoreboard objectives add opt_interactible_lobby trigger
-scoreboard objectives add opt_volcano trigger
-scoreboard objectives add opt_volcano_summon_period trigger
-scoreboard objectives add opt_volcano_pop_period trigger
-scoreboard objectives add opt_volcano_target_rate trigger
-scoreboard objectives add opt_scaff_stops_arrow trigger
-
 #internal values
 scoreboard objectives add timer dummy
 scoreboard objectives add leave minecraft.custom:minecraft.leave_game
@@ -105,31 +76,6 @@ execute unless score GameLoading global matches 0.. run scoreboard players set G
 execute unless score ClearGame global matches 0.. run scoreboard players set ClearGame global 0
 execute unless score ClearLobby global matches 0.. run scoreboard players set ClearLobby global 0
 
-#Configuration scores
-execute unless score BuildHeight options matches 5.. run scoreboard players set BuildHeight options 20
-execute unless score VillagerForgiveness options matches 0.. run scoreboard players set VillagerForgiveness options 1
-execute unless score VillagerRespawn options matches 0.. run scoreboard players set VillagerRespawn options 30
-execute unless score UseSand options matches 0.. run scoreboard players set UseSand options 1
-execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
-execute unless score UseFireball options matches 0.. run scoreboard players set UseFireball options 0
-execute unless score UseEnderPearl options matches 0.. run scoreboard players set UseEnderPearl options 0
-execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
-execute unless score TeamEgg options matches 0.. run scoreboard players set TeamEgg options 0
-execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
-execute unless score RandomTeam options matches 0..1 run scoreboard players set RandomTeam options 0
-execute unless score Regen options matches 0.. run scoreboard players set Regen options 1
-execute unless score FallDamage options matches 0.. run scoreboard players set FallDamage options 0
-execute unless score Admin options matches 0.. run scoreboard players set Admin options 0
-execute unless score TeamNumber options matches 0.. run scoreboard players set TeamNumber options 2
-execute unless score Villager options matches 0.. run scoreboard players set Villager options 1
-execute unless score RespawnDelay options matches 1.. run scoreboard players set RespawnDelay options 3
-execute unless score WBSize options matches 25..165 run scoreboard players set WBSize options 95
-execute unless score Volcano options matches 0.. run scoreboard players set Volcano options 0
-execute unless score VolcanoSummonPeriod options matches 0.. run scoreboard players set VolcanoSummonPeriod options 1200
-execute unless score VolcanoPopPeriod options matches 0.. run scoreboard players set VolcanoPopPeriod options 10
-execute unless score VolcanoTargetRate options matches 0.. run scoreboard players set VolcanoTargetRate options 25
-execute unless score ScaffoldingStopsArrow options matches 0.. run scoreboard players set ScaffoldingStopsArrow options 0
-execute unless score FlagTakeOverSpawnInterval options matches 0.. run scoreboard players set FlagTakeOverSpawnInterval options 600
 #initialize options scores
 function scaffolding_rush:options/__init__
 
@@ -221,7 +167,7 @@ bossbar add time_limit ""
 bossbar set minecraft:time_limit color white
 
 # Reset
-execute unless score GameId global matches 0 run function scaffolding_rush:reset
+execute unless score GameId global matches 0 run schedule function scaffolding_rush:reset 5t
 execute unless score GameId global matches 0 run function scaffolding_rush:clear/lobby/launch
 
 execute unless score gameId global matches 0 run function scaffolding_rush:first_launch
