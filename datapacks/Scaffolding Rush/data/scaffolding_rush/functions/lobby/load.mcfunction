@@ -23,20 +23,9 @@ summon minecraft:text_display -2 25.0 5.9 {text: '', Tags: ["lobbyText", "preset
 summon minecraft:text_display -1.75 24.1 5.95 {text: '{"text":">>","bold":true,"color":"#7027FF"}', Tags: ["lobbyText"], billboard: 'fixed', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], background: 0, shadow: 1b}
 summon minecraft:text_display -1.22 24.1 5.95 {text: '{"text":"<<","bold":true,"color":"#7027FF"}', Tags: ["lobbyText"], billboard: 'fixed', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], background: 0, shadow: 1b}
 
-# Teams options
-summon minecraft:text_display 6 25.6 6 {text: '{"text":"Teams","bold":true,"color":"white"}', Tags: ["lobbyText"], billboard: 'fixed', transformation: {translation: [0f, 0f, 0f], left_rotation: [0f, 0.907f, 0f, -0.421f], scale: [1f, 1f, 1f], right_rotation: [0f, 0f, 0f, 1f]}, background: 0, shadow: 1b}
-summon minecraft:text_display 6 25.8 6 {text: '', Tags: ["lobbyText", "teamNumberLabel"], billboard: 'fixed', transformation: {translation: [0f, 0f, 0f], left_rotation: [0f, 0.907f, 0f, -0.421f], scale: [2f, 2f, 2f], right_rotation: [0f, 0f, 0f, 1f]}, background: 0, shadow: 1b, interpolation_duration: 20}
-summon minecraft:text_display 6 25.2 6 {text: '', Tags: ["lobbyText", "teamNumberActionsLabel"], billboard: 'fixed', transformation: {translation: [0f, 0f, 0f], left_rotation: [0f, 0.907f, 0f, -0.421f], scale: [1f, 1f, 1f], right_rotation: [0f, 0f, 0f, 1f]}, background: 0, shadow: 1b}
-summon minecraft:interaction 6.6 25.26 6.4 {height: 0.2d, width: 0.2d, Tags: ["lobbyInteraction", "LobbyTeamMinus"]}
-summon minecraft:interaction 6.4 25.26 6.6 {height: 0.2d, width: 0.2d, Tags: ["lobbyInteraction", "LobbyTeamPlus"]}
+function scaffolding_rush:lobby/text/team/summon
 
-# team random
-summon minecraft:text_display 6 24.8 6 {text: '', Tags: ["lobbyText", "lobbyRandomLabel"], billboard: 'fixed', transformation: {translation: [0f, 0f, 0f], left_rotation: [0f, 0.907f, 0f, -0.421f], scale: [0.7f, 0.7f, 0.7f], right_rotation: [0f, 0f, 0f, 1f]}, background: 0, shadow: 1b}
-summon minecraft:interaction 6 24.8 6 {height: 0.2d, width: 0.5d, Tags: ["lobbyInteraction", "LobbyTeamRandom"], transformation: {translation: [0f, 0f, 0f], left_rotation: [0f, 0.907f, 0f, -0.421f], scale: [1f, 1f, 1f], right_rotation: [0f, 0f, 0f, 1f]}}
-
-execute as @e[type=villager,tag=lobbyTeam] run function scaffolding_rush:clean_kill
-function scaffolding_rush:lobby/text/team/refresh
-
+setblock -4 24 8 minecraft:ender_chest
 summon minecraft:text_display -4 25.2 8 {text: '{"text":"Options", "color":"gray"}', Tags: ["lobbyText"], billboard: 'center'}
 # How to play
 summon minecraft:text_display 4 25.5 -2 {text: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], billboard: 'center'}
@@ -44,7 +33,7 @@ summon minecraft:interaction 4 24 -2 {height: 1.2d, width: 1.2d, Tags: ["lobbyIn
 
 scoreboard players reset @a bellring
 setblock 0 25 6 bell[attachment=floor,facing=south]
-summon minecraft:text_display 0 26.0 6 {text: '{"text":"Start Game","bold":true}', Tags: ["lobbyText", "startLabel"], billboard: 'center'}
+summon minecraft:text_display 0 24.6 5.9 {text: '{"text":"Start Game","bold":true}', transformation: [-1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 0f, 1f], Tags: ["lobbyText", "startLabel"], billboard: 'fixed'}
 
 
 execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
@@ -67,6 +56,8 @@ execute as @a[team=blue] run function scaffolding_rush:lobby/give_items
 execute as @a[team=green] run function scaffolding_rush:lobby/give_items
 execute as @a[team=red] run function scaffolding_rush:lobby/give_items
 execute as @a[team=yellow] run function scaffolding_rush:lobby/give_items
+
+function scaffolding_rush:lobby/text/scaff
 
 function scaffolding_rush:lobby/text/refresh
 function scaffolding_rush:lobby/preset_villager/refresh
