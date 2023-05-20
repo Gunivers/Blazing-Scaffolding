@@ -6,7 +6,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:egg"
+          "name": "minecraft:egg",
+          "functions": [
+                {
+                "function": "minecraft:set_name",
+                "name": "Fireball"
+                }
+            ]
         }
       ],
       "functions": [
