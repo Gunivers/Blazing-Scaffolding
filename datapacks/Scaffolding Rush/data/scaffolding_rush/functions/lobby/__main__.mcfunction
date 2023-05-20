@@ -6,12 +6,12 @@ execute as @e store result score @s ZEntity run data get entity @s Pos[2]
 execute as @a[gamemode=survival] run gamemode adventure
 
 #team join lobby
-execute as @a[team=!blue] at @e[type=minecraft:area_effect_cloud,name="Join Blue"] as @s[distance=..1] run function scaffolding_rush:team/join/blue
-execute as @a[team=!green] at @e[type=minecraft:area_effect_cloud,name="Join Green"] as @s[distance=..1] run function scaffolding_rush:team/join/green
-execute as @a[team=!red] at @e[type=minecraft:area_effect_cloud,name="Join Red"] as @s[distance=..1] run function scaffolding_rush:team/join/red
-execute as @a[team=!yellow] at @e[type=minecraft:area_effect_cloud,name="Join Yellow"] as @s[distance=..1] run function scaffolding_rush:team/join/yellow
-execute as @a[team=!] at @e[type=minecraft:area_effect_cloud,name="Spectate"] as @s[distance=..1] run function scaffolding_rush:team/leave
-execute as @a[team=!random] at @e[type=minecraft:area_effect_cloud,name="Join Game"] as @s[distance=..1] run function scaffolding_rush:team/join/random
+execute as @a[team=!blue] at @e[type=minecraft:marker,tag=teamBlue] as @s[distance=..0.5] run function scaffolding_rush:team/join/blue
+execute as @a[team=!green] at @e[type=minecraft:marker,tag=teamGreen] as @s[distance=..0.5] run function scaffolding_rush:team/join/green
+execute as @a[team=!red] at @e[type=minecraft:marker,tag=teamRed] as @s[distance=..0.5] run function scaffolding_rush:team/join/red
+execute as @a[team=!yellow] at @e[type=minecraft:marker,tag=teamYellow] as @s[distance=..0.5] run function scaffolding_rush:team/join/yellow
+execute as @a[team=!] at @e[type=minecraft:marker,tag=teamSpectate] as @s[distance=..0.5] run function scaffolding_rush:team/leave
+execute as @a[team=!random] at @e[type=minecraft:marker,tag=teamRandom] as @s[distance=..0.5] run function scaffolding_rush:team/join/random
 
 #base
 execute at @e[type=minecraft:item,nbt={Item:{tag:{EntityTag:{Tags:["baseTeam"]}}}}] as @a[distance=..5] if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
