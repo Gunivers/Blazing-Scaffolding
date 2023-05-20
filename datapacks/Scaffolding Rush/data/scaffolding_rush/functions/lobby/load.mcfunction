@@ -38,7 +38,9 @@ summon minecraft:interaction 6 24.8 6 {height: 0.2d, width: 0.5d, Tags: ["lobbyI
 function scaffolding_rush:lobby/text/team/refresh
 
 summon minecraft:text_display -4 24.5 8 {text: '{"text":"Options", "color":"gray"}', Tags: ["lobbyText"], billboard: 'center'}
-summon minecraft:text_display 4 24.7 -2 {text: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], billboard: 'center'}
+# How to play
+summon minecraft:text_display 4 25.5 -2 {text: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], billboard: 'center'}
+summon minecraft:interaction 4 24 -2 {height: 1.2d, width: 1.2d, Tags: ["lobbyInteraction", "LobbyHTP"]}
 
 scoreboard players reset @a bellring
 setblock 0 25 6 bell[attachment=floor,facing=south]

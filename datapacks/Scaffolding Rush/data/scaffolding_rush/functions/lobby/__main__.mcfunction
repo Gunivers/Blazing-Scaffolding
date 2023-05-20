@@ -17,12 +17,8 @@ execute as @a[team=!random] at @e[type=minecraft:area_effect_cloud,name="Join Ga
 execute at @e[type=minecraft:item,nbt={Item:{tag:{EntityTag:{Tags:["baseTeam"]}}}}] as @a[distance=..5] if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
 execute as @e[type=minecraft:armor_stand,tag=baseTeam,tag=!villagerSpawned] run function scaffolding_rush:lobby/base_egg/spawn
 
-#howtoplay
-execute as @e[name="How to play"] at @s as @a[distance=..3,tag=!howtoplay] run function scaffolding_rush:lobby/how_to_play
-execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=..3] run tag @s remove howtoplay 
-
-#button place base
-execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function scaffolding_rush:lobby/base_egg/remove_at_button
+# #button place base
+# execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function scaffolding_rush:lobby/base_egg/remove_at_button
 
 #check player coordonates
 execute unless score GameEnd global matches 1 run function scaffolding_rush:lobby/correct_coordinates

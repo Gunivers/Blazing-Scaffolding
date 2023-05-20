@@ -7,5 +7,7 @@ execute as @e[type=interaction,tag=LobbyTeamPlus] if entity @s[nbt={interaction:
 execute as @e[type=interaction,tag=LobbyTeamMinus] if entity @s[nbt={interaction:{}}] run function scaffolding_rush:lobby/interaction/team/minus
 execute as @e[type=interaction,tag=LobbyTeamRandom] if entity @s[nbt={interaction:{}}] run function scaffolding_rush:lobby/interaction/team/random
 
+execute as @e[type=interaction,tag=LobbyHTP] if entity @s[nbt={interaction:{}}] run function scaffolding_rush:lobby/interaction/how_to_play
+
 
 execute as @e[tag=lobbyInteraction] run data remove entity @s interaction
