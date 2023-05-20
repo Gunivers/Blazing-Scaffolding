@@ -14,4 +14,4 @@ execute if score RandomTeam options matches 0 run function scaffolding_rush:lobb
 execute if score RandomTeam options matches 1 run function scaffolding_rush:lobby/text/team/random_label
 
 execute if score RandomTeam options matches 0 run data merge entity @e[type=minecraft:text_display,tag=lobbyRandomLabel,limit=1] {text: '{"text":"random","color":"gray","strikethrough":true}'}
-execute if score RandomTeam options matches 1 run data merge entity @e[type=minecraft:text_display,tag=lobbyRandomLabel,limit=1] {text: '{"text":"random","color":"#7027FF","strikethrough":false}'}
+execute if score RandomTeam options matches 1 run data merge entity @e[type=minecraft:text_display,tag=lobbyRandomLabel,limit=1] {text: '{"text":"random","color":"dark_purple","strikethrough":false}'}

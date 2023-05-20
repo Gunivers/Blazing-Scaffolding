@@ -10,11 +10,11 @@ execute unless score TeamNumber options matches 4.. run setblock 6 23 2 coal_blo
 execute unless score TeamNumber options matches 3.. run setblock 2 23 6 coal_block
 
 #variable teams
-execute if score TeamNumber options matches 3.. run summon area_effect_cloud 2 24 6 {CustomName:'{"text":"Join Yellow","color":"yellow"}',Tags:["lobbyTeam","lobbyColorTeam","3", "lobbyText"],CustomNameVisible: 1,Age: -2147483648, Duration: -1, WaitTime: -2147483648}
-execute if score TeamNumber options matches 4.. run summon area_effect_cloud 6 24 2 {CustomName:'{"text":"Join Green","color":"green"}',Tags:["lobbyTeam","lobbyColorTeam","4", "lobbyText"],CustomNameVisible: 1,Age: -2147483648, Duration: -1, WaitTime: -2147483648}
+execute if score TeamNumber options matches 3.. run summon minecraft:text_display 2 25 6 {text:'{"text":"Join Yellow","color":"yellow"}',Tags:["lobbyTeam", "lobbyColorTeam", "lobbyText", "3"], billboard: 'center', default_background: 1b}
+execute if score TeamNumber options matches 4.. run summon minecraft:text_display 6 25 2 {text:'{"text":"Join Green","color":"green"}',Tags:["lobbyTeam", "lobbyColorTeam", "lobbyText", "4"], billboard: 'center', default_background: 1b}
 
 #constant teams
-summon area_effect_cloud 6 24 4 {CustomName:'{"text":"Join Blue","color":"blue"}',Tags:["lobbyTeam", "lobbyText"],CustomNameVisible: 1,Age: -2147483648, Duration: -1, WaitTime: -2147483648}
-summon area_effect_cloud 4 24 6 {CustomName:'{"text":"Join Red","color":"red"}',Tags:["lobbyTeam","lobbyColorTeam","lobbyText"],CustomNameVisible: 1,Age: -2147483648, Duration: -1, WaitTime: -2147483648}
+summon minecraft:text_display 6 25 4 {text:'{"text":"Join Blue","color":"blue"}',Tags:["lobbyTeam", "lobbyColorTeam", "lobbyText"], billboard: 'center', default_background: 1b}
+summon minecraft:text_display 4 25 6 {text:'{"text":"Join Red","color":"red"}',Tags:["lobbyTeam", "lobbyColorTeam", "lobbyText"], billboard: 'center', default_background: 1b}
 
-summon area_effect_cloud 8 24 -3 {CustomName:'{"text":"Spectate","bold":true,"color":"gray"}',Tags:["lobbyTeam","lobbyColorTeam","lobbyText"],CustomNameVisible: 1,Age: -2147483648, Duration: -1, WaitTime: -2147483648}
+summon minecraft:text_display 8 25 -2.2 {text:'{"text":"Spectate","bold":true,"color":"gray"}',Tags:["lobbyTeam", "lobbyRandomTeam", "lobbyText"], billboard: 'center', default_background: 1b}
