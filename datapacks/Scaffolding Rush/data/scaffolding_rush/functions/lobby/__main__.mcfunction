@@ -21,11 +21,6 @@ execute as @e[type=minecraft:armor_stand,tag=baseTeam,tag=!villagerSpawned] run 
 execute as @e[name="How to play"] at @s as @a[distance=..3,tag=!howtoplay] run function scaffolding_rush:lobby/how_to_play
 execute as @a[tag=howtoplay] at @s unless entity @e[name="How to play",distance=..3] run tag @s remove howtoplay 
 
-#startbutton
-execute if score Admin options matches 1 run setblock 0 25 6 air replace
-execute if block 0 25 6 minecraft:acacia_button[powered=true] run function scaffolding_rush:game/launch
-execute if score Admin options matches 0 unless block 0 25 6 minecraft:cave_air unless block 0 25 6 minecraft:acacia_button[powered=false] run setblock 0 25 6 minecraft:acacia_button[face=floor] replace
-
 #button place base
 execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function scaffolding_rush:lobby/base_egg/remove_at_button
 
@@ -39,3 +34,10 @@ execute as @e[type=marker,tag=lobbyLight] at @s if block ~ ~ ~ #scaffolding_rush
 
 # Suffocation
 execute as @a at @s if block ~ ~ ~ #scaffolding_rush:lobby_suffocation run function scaffolding_rush:lobby/suffocation
+
+# Start game
+execute as @a[scores={bellring=1..}] run scoreboard players set @s StartGame 1
+scoreboard players reset @a bellring
+
+# interaction
+function scaffolding_rush:lobby/interaction/__main__

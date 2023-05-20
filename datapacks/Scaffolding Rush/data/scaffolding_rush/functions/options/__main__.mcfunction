@@ -1,4 +1,5 @@
 execute as @a[scores={opt_preset=1..}] run function scaffolding_rush:options/preset
+execute as @a[scores={opt_preset=..-1}] run function scaffolding_rush:options/preset
 execute as @a[scores={opt_build_height=1..}] run function scaffolding_rush:options/map/build_height
 execute as @a[scores={opt_sand=1..}] run function scaffolding_rush:options/gameplay/sand
 execute as @a[scores={opt_instant_pil=1..}] run function scaffolding_rush:options/gameplay/instant_pillar

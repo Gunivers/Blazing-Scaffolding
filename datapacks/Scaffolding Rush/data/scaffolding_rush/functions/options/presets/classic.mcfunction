@@ -19,4 +19,5 @@ scoreboard players set FlagTakeOver options 0
 scoreboard players set Volcano options 0
 scoreboard players set UseTimeLimit options 0
 
+scoreboard players set Preset options 1
 function scaffolding_rush:options/refresh

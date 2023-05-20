@@ -1,5 +1,5 @@
-tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Rush Premium","color":"light_purple"},{"text":" has been chosen","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Rush Premium","color":"light_purple"},{"text":" a été choisi","color":"gray"}]
+tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"CTF","color":"light_purple"},{"text":" has been chosen","color":"gray"}]
+tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"CTF","color":"light_purple"},{"text":" a été choisi","color":"gray"}]
 
 scoreboard players set LavaSpeed options 5
 scoreboard players set WBSize options 40
@@ -20,4 +20,5 @@ scoreboard players set Volcano options 0
 scoreboard players set UseTimeLimit options 1
 scoreboard players set TimeLimit options 5
 
+scoreboard players set Preset options 3
 function scaffolding_rush:options/refresh
