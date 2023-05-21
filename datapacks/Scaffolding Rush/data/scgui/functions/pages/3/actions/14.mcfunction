@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_vil_resp_cd 10
+scoreboard players set @s opt_ender_pearl 1

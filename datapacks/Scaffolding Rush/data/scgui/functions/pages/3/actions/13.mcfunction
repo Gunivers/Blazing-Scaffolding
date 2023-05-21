@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_vil_resp_cd 5
+scoreboard players set @s opt_fireball 1
