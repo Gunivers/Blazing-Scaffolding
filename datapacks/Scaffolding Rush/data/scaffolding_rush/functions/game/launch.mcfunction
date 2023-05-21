@@ -15,11 +15,11 @@ execute if score RemainingTeam global matches 2.. if score ClearGame global matc
 # Start the game even if there are not enough players
 execute if score DevelopementMode global matches 1 if score ClearGame global matches 0 unless score GameLoading global matches 1 run function scaffolding_rush:game/countdown
 
-execute if score RemainingTeam global matches ..1 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Not enough teams","color":"red"}]
-execute if score ClearGame global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Please wait, a clear of the map is in progress","color":"red"}]
+execute if score RemainingTeam global matches ..1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Not enough player in teams!","color":"red"}]
+execute if score ClearGame global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Please wait, a clear of the map is in progress","color":"red"}]
 
-execute if score RemainingTeam global matches ..1 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Pas assez de team !","color":"red"}]
-execute if score ClearGame global matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Please wait, a clear of the map is in progress","color":"red"}]
+execute if score RemainingTeam global matches ..1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Pas assez de joueur dans les équipes !","color":"red"}]
+execute if score ClearGame global matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Merci de patienter, une réinitialisation de la carte est en cours","color":"red"}]
 
 effect give @a minecraft:instant_health 1 100 true
 effect give @a minecraft:fire_resistance 20 100 true
