@@ -13,7 +13,7 @@ item replace entity @s enderchest.13 with minecraft:snowball{scgui: 1, scgui.act
 item replace entity @s enderchest.15 with minecraft:fire_charge{scgui:1, scgui.action:15, display:{Name:'[{"text":"Volcano :","italic":false,"color":"gold"},{"text":" Boule de neige","italic":false,"color":"gold"}]',Lore:['[{"text":"Active ou non les volcans","italic":false}]']}} 1
 
 # Perf
-item replace entity @s enderchest.17 with tnt{scgui:1, scgui.action:17, display:{Name:'[{"text":"Mode performance","italic":false,"color":"gold"}]',Lore:['[{"text":"A utiliser pour les PC moins puissant","italic":false}]']}} 1
+item replace entity @s enderchest.18 with tnt{scgui:1, scgui.action:18, display:{Name:'[{"text":"Mode performance","italic":false,"color":"gold"}]',Lore:['[{"text":"A utiliser pour les PC moins puissant","italic":false}]']}} 1
 
 # Admin
 item replace entity @s enderchest.26 with minecraft:white_banner{scgui: 1, scgui.action: 26, BlockEntityTag: {Patterns: [{Pattern: mr, Color: 9}, {Pattern: bs, Color: 8}, {Pattern: cs, Color: 7}, {Pattern: bo, Color: 8}, {Pattern: ms, Color: 15}, {Pattern: hh, Color: 8}, {Pattern: mc, Color: 8}, {Pattern: bo, Color: 15}]}, HideFlags: 126, display: {Name: '[{"text":"Je suis l\'admin","italic":false,"color":"gold"}]', Lore: ['[{"text":"Vous seul peut configurer la partie","italic":false}]']}} 1

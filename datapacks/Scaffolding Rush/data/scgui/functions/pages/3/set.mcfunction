@@ -1,6 +1,6 @@
 
 # goback
-item replace entity @s enderchest.0 with arrow{scgui:1, scgui.action:0, display:{Name:'[{"text":"Retour","italic":false,"color":"gold"}]'}} 1
+item replace entity @s enderchest.0 with tipped_arrow{CustomPotionColor:16777215,scgui:1, scgui.action:0, display:{Name:'[{"text":"Retour","italic":false,"color":"gold"}]'}} 1
 
 # UseSand
 item replace entity @s enderchest.11 with minecraft:sand{scgui:1, scgui.action:11, display:{Name:'[{"text":"UseSand","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]']}} 1
