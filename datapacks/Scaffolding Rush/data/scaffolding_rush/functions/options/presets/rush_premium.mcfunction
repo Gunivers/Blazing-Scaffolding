@@ -47,5 +47,4 @@ scoreboard players set VolcanoPopPeriod options 40
 scoreboard players set VolcanoSummonPeriod options 300
 scoreboard players set VolcanoTargetRate options 25
 
-function scaffolding_rush:options/map/wb_size_refresh
 function scaffolding_rush:options/refresh
