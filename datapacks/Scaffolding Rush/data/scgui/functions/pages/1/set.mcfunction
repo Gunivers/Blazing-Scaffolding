@@ -4,16 +4,16 @@ item replace entity @s[scores={language=0}] enderchest.0 with tipped_arrow{Custo
 item replace entity @s[scores={language=1}] enderchest.0 with tipped_arrow{CustomPotionColor: 16777215, scgui: 1, scgui.action: 0, display: {Name: '[{"text":"Retour","italic":false,"color":"gold"}]'}, HideFlags: 127} 1
 
 # VillagerForgiveness
-item replace entity @s[scores={language=0}] enderchest.11 with minecraft:totem_of_undying{scgui: 1, scgui.action: 11, display: {Name: '[{"text":"Revival","italic":false,"color":"gold"}]', Lore: ['[{"text":"After the villager dies,","italic":false}]', '[{"text":"a villager\'s egg is given to the team","italic":false}]']}, HideFlags: 127} 1
-item replace entity @s[scores={language=1}] enderchest.11 with minecraft:totem_of_undying{scgui: 1, scgui.action: 11, display: {Name: '[{"text":"Réapparition","italic":false,"color":"gold"}]', Lore: ['[{"text":"Après la mort du villageois,","italic":false}]', '[{"text":"un œuf de villageois est donné à l\'équipe","italic":false}]']}, HideFlags: 127} 1
+item replace entity @s[scores={language=0}] enderchest.12 with minecraft:totem_of_undying{scgui: 1, scgui.action: 12, display: {Name: '[{"text":"Revival","italic":false,"color":"gold"}]', Lore: ['[{"text":"After the villager dies,","italic":false}]', '[{"text":"a villager\'s egg is given to the team","italic":false}]']}, HideFlags: 127} 1
+item replace entity @s[scores={language=1}] enderchest.12 with minecraft:totem_of_undying{scgui: 1, scgui.action: 12, display: {Name: '[{"text":"Réapparition","italic":false,"color":"gold"}]', Lore: ['[{"text":"Après la mort du villageois,","italic":false}]', '[{"text":"un œuf de villageois est donné à l\'équipe","italic":false}]']}, HideFlags: 127} 1
 
 # # InvulnerableVillager
 # item replace entity @s[scores={language=0}] enderchest.13 with minecraft:netherite_chestplate{scgui:1, scgui.action:13, display:{Name:'[{"text":"Invincibility","italic":false,"color":"gold"}]',Lore:['[{"text":"No player can kill the villager","italic":false}]']}, HideFlags: 127} 1
 # item replace entity @s[scores={language=1}] enderchest.13 with minecraft:netherite_chestplate{scgui:1, scgui.action:13, display:{Name:'[{"text":"Invincibilité","italic":false,"color":"gold"}]',Lore:['[{"text":"Aucun joueur ne peut tuer le villageois","italic":false}]']}, HideFlags: 127} 1
 
 # MovableVillager
-item replace entity @s[scores={language=0}] enderchest.15 with minecraft:lead{scgui: 1, scgui.action: 15, display: {Name: '[{"text":"Moveable","italic":false,"color":"gold"}]', Lore: ['[{"text":"Players can move the villager","italic":false}]']}, HideFlags: 127} 1
-item replace entity @s[scores={language=1}] enderchest.15 with minecraft:lead{scgui: 1, scgui.action: 15, display: {Name: '[{"text":"Déplaçable","italic":false,"color":"gold"}]', Lore: ['[{"text":"Les joueurs peuvent déplacer le villageois","italic":false}]']}, HideFlags: 127} 1
+item replace entity @s[scores={language=0}] enderchest.14 with minecraft:lead{scgui: 1, scgui.action: 14, display: {Name: '[{"text":"Moveable","italic":false,"color":"gold"}]', Lore: ['[{"text":"Players can move the villager","italic":false}]']}, HideFlags: 127} 1
+item replace entity @s[scores={language=1}] enderchest.14 with minecraft:lead{scgui: 1, scgui.action: 14, display: {Name: '[{"text":"Déplaçable","italic":false,"color":"gold"}]', Lore: ['[{"text":"Les joueurs peuvent déplacer le villageois","italic":false}]']}, HideFlags: 127} 1
 
 function scgui:pages/1/test
 
