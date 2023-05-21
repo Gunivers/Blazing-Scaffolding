@@ -1,7 +1,7 @@
 # Volcano Preset
 
-tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Volcano","color":"dark_red"},{"text":" has been chosen","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Volcano","color":"dark_red"},{"text":" a été choisi","color":"gray"}]
+# tellraw @s[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Volcano","color":"dark_red"},{"text":" has been chosen","color":"gray"}]
+# tellraw @s[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Volcano","color":"dark_red"},{"text":" a été choisi","color":"gray"}]
 
 scoreboard players set Preset options 6
 
