@@ -14,4 +14,5 @@ function scaffolding_rush:team/join/killbase
 scoreboard players set @s opt_team_number 0
 scoreboard players enable @s opt_team_number
 
+function scaffolding_rush:options/map/wb_size_refresh
 function scaffolding_rush:options/refresh
