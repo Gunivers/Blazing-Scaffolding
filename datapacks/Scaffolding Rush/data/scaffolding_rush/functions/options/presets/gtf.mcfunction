@@ -1,7 +1,7 @@
 # Get Those Flags Preset
 
-# tellraw @s[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Get Those Flags","color":"green"},{"text":" has been chosen","color":"gray"}]
-# tellraw @s[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Get Those Flags","color":"green"},{"text":" a été choisi","color":"gray"}]
+# tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Get Those Flags","color":"green"},{"text":" has been chosen","color":"gray"}]
+# tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Get Those Flags","color":"green"},{"text":" a été choisi","color":"gray"}]
 
 scoreboard players set Preset options 4
 

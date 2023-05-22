@@ -161,7 +161,7 @@ gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
 
-setworldspawn 0 24 0
+setworldspawn -500 1 0
 
 #Bossbar
 bossbar add filling_lava ""

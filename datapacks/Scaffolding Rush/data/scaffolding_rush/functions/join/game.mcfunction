@@ -1,8 +1,8 @@
 gamemode spectator
 team leave @s
 
-tellraw @s[scores={language=0}] ["",{"text":"[SR]","color":"gold"},{"text":" A game is already running. You can join a game after they finish it!\n\n ","color":"gray"}]
-tellraw @s[scores={language=1}] ["",{"text":"[SR]","color":"gold"},{"text":" Une partie est déjà en cours. Vous pourrez rejoindre après la fin de partie !\n\n ","color":"gray"}]
+tellraw @s[scores={language=0}] ["",{"text":"[BS]","color":"gold"},{"text":" A game is already running. You can join a game after they finish it!\n\n ","color":"gray"}]
+tellraw @s[scores={language=1}] ["",{"text":"[BS]","color":"gold"},{"text":" Une partie est déjà en cours. Vous pourrez rejoindre après la fin de partie !\n\n ","color":"gray"}]
 
 bossbar set minecraft:filling_lava players @s
 

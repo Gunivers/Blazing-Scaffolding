@@ -1,7 +1,7 @@
 # WTF Preset
 
-# tellraw @s[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"WTF","color":"aqua"},{"text":" has been chosen","color":"gray"}]
-# tellraw @s[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"WTF","color":"aqua"},{"text":" a été choisi","color":"gray"}]
+# tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"WTF","color":"aqua"},{"text":" has been chosen","color":"gray"}]
+# tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"WTF","color":"aqua"},{"text":" a été choisi","color":"gray"}]
 
 scoreboard players set Preset options 7
 
