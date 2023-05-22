@@ -21,6 +21,8 @@ scoreboard objectives add YEntity dummy
 scoreboard objectives add ZEntity dummy
 scoreboard objectives add usedSnowball minecraft.used:minecraft.snowball
 scoreboard objectives add gameId dummy
+scoreboard objectives add playerID dummy
+scoreboard objectives add interactionID dummy
 scoreboard objectives add language dummy
 scoreboard objectives add respawnTime dummy
 scoreboard objectives add respawnTimeTics dummy
@@ -28,6 +30,7 @@ scoreboard objectives add Score dummy
 scoreboard objectives add fallDistance minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add climbing minecraft.custom:minecraft.climb_one_cm
 scoreboard objectives add crouching minecraft.custom:minecraft.sneak_time
+scoreboard objectives add bellring minecraft.custom:minecraft.bell_ring
 scoreboard objectives add lightLevel dummy
 scoreboard objectives add health dummy
 

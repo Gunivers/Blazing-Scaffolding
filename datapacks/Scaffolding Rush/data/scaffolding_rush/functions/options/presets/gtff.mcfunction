@@ -3,6 +3,8 @@
 tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Get Those F Flags","color":"light_purple"},{"text":" has been chosen","color":"gray"}]
 tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Get Those F Flags","color":"light_purple"},{"text":" a été choisi","color":"gray"}]
 
+scoreboard players set Preset options 5
+
 # Map
 scoreboard players set LavaSpeed options 5
 scoreboard players set WBSize options 40
@@ -46,5 +48,4 @@ scoreboard players set VolcanoPopPeriod options 10
 scoreboard players set VolcanoSummonPeriod options 200
 scoreboard players set VolcanoTargetRate options 10
 
-function scaffolding_rush:options/map/wb_size_refresh
 function scaffolding_rush:options/refresh

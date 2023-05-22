@@ -3,6 +3,8 @@
 tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Rush Premium","color":"#9900FF"},{"text":" has been chosen","color":"gray"}]
 tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Rush Premium","color":"#9900FF"},{"text":" a été choisi","color":"gray"}]
 
+scoreboard players set Preset options 2
+
 # Map
 scoreboard players set LavaSpeed options 3
 scoreboard players set WBSize options 145
@@ -45,5 +47,4 @@ scoreboard players set VolcanoPopPeriod options 40
 scoreboard players set VolcanoSummonPeriod options 300
 scoreboard players set VolcanoTargetRate options 25
 
-function scaffolding_rush:options/map/wb_size_refresh
 function scaffolding_rush:options/refresh
