@@ -1,2 +1,1 @@
-
-function scaffolding_rush:game/launch
+scoreboard players set @s opt_volcano 1

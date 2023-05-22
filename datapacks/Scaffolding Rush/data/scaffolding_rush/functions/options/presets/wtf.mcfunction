@@ -1,7 +1,9 @@
 # WTF Preset
 
-tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"WTF","color":"aqua"},{"text":" has been chosen","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"WTF","color":"aqua"},{"text":" a été choisi","color":"gray"}]
+# tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"WTF","color":"aqua"},{"text":" has been chosen","color":"gray"}]
+# tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"WTF","color":"aqua"},{"text":" a été choisi","color":"gray"}]
+
+scoreboard players set Preset options 7
 
 # Map
 scoreboard players set LavaSpeed options 1
@@ -46,5 +48,4 @@ scoreboard players set VolcanoPopPeriod options 10
 scoreboard players set VolcanoSummonPeriod options 60
 scoreboard players set VolcanoTargetRate options 5
 
-function scaffolding_rush:options/map/wb_size_refresh
 function scaffolding_rush:options/refresh

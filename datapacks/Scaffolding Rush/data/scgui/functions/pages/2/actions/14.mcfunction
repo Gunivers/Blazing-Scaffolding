@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_team_number 2
+scoreboard players set @s opt_instant_pil 1

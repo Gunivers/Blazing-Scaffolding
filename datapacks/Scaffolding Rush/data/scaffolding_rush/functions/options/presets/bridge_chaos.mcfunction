@@ -1,7 +1,9 @@
 # Get Those Flags Preset
 
-tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Bridge Chaos","color":"green"},{"text":" has been chosen","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Bridge Chaos","color":"green"},{"text":" a été choisi","color":"gray"}]
+# tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Bridge Chaos","color":"green"},{"text":" has been chosen","color":"gray"}]
+# tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Bridge Chaos","color":"green"},{"text":" a été choisi","color":"gray"}]
+
+scoreboard players set Preset options 9
 
 # Map
 scoreboard players set LavaSpeed options 0
@@ -45,5 +47,4 @@ scoreboard players set VolcanoPopPeriod options 40
 scoreboard players set VolcanoSummonPeriod options 300
 scoreboard players set VolcanoTargetRate options 25
 
-function scaffolding_rush:options/map/wb_size_refresh
 function scaffolding_rush:options/refresh

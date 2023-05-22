@@ -1,3 +1,8 @@
+# Change wb size by number of teams
+execute if score TeamNumber options matches 2 run scoreboard players operation WBSize options = WBSize2 options
+execute if score TeamNumber options matches 3 run scoreboard players operation WBSize options = WBSize3 options
+execute if score TeamNumber options matches 4 run scoreboard players operation WBSize options = WBSize4 options
+
 # normalize values
 execute if score WBAddTemp options matches ..-5 run scoreboard players set WBAddTemp options -5
 execute if score WBAddTemp options matches 5.. run scoreboard players set WBAddTemp options 5
@@ -52,10 +57,10 @@ scoreboard players set -WBbyTwo global 0
 scoreboard players operation -WBbyTwo global -= WBbyTwo global
 
 # check for bases
-execute as @e[type=!minecraft:player] if score @s XEntity > WBbyTwo global run function scaffolding_rush:clean_kill
-execute as @e[type=!minecraft:player] if score @s XEntity < -WBbyTwo global run function scaffolding_rush:clean_kill
-execute as @e[type=!minecraft:player] if score @s ZEntity > WBbyTwo global run function scaffolding_rush:clean_kill
-execute as @e[type=!minecraft:player] if score @s ZEntity < -WBbyTwo global run function scaffolding_rush:clean_kill
+execute as @e[tag=LobbyBase] if score @s XEntity > WBbyTwo global run function scaffolding_rush:clean_kill
+execute as @e[tag=LobbyBase] if score @s XEntity < -WBbyTwo global run function scaffolding_rush:clean_kill
+execute as @e[tag=LobbyBase] if score @s ZEntity > WBbyTwo global run function scaffolding_rush:clean_kill
+execute as @e[tag=LobbyBase] if score @s ZEntity < -WBbyTwo global run function scaffolding_rush:clean_kill
 
 # reset values
 scoreboard players set WBAddTemp options 0

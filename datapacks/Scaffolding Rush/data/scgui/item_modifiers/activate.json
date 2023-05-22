@@ -9,7 +9,9 @@
         "lore": [
           {
             "text": "Activé",
-            "bold": true
+            "bold": true,
+            "italic": false,
+            "color": "green"
           }
         ],
         "replace": false,
@@ -28,7 +30,9 @@
         "lore": [
           {
             "text": "Activated",
-            "bold": true
+            "bold": true,
+            "color": "green",
+            "italic": false
           }
         ],
         "replace": false,
