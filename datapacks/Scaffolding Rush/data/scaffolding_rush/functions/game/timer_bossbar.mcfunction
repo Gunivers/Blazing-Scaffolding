@@ -2,7 +2,7 @@
 
 scoreboard players operation TimeLeftDisplayMinutes timer = TimeLeftTicks timer
 scoreboard players operation TimeLeftDisplayMinutes timer /= #1200 const
-scoreboard players operation TimeLeftDisplayMinutes timer -= #1 const
+# scoreboard players operation TimeLeftDisplayMinutes timer -= #1 const
 
 scoreboard players operation TimeLeftDisplaySeconds timer = TimeLeftTicks timer
 scoreboard players operation TimeLeftDisplaySeconds timer /= #20 const
