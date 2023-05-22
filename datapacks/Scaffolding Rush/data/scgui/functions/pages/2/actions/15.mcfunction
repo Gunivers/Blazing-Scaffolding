@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_team_number 3
+scoreboard players set @s opt_rafts 1

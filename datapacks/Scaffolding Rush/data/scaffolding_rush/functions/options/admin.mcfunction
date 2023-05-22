@@ -1,12 +1,12 @@
 execute store success score Admin options if score Admin options matches 0
 execute as @a[tag=!admin,scores={opt_admin=1}] if score Admin options matches 0 run scoreboard players set Admin options 2
 
-execute if score Admin options matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"closed","color":"red"}]
-execute if score Admin options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"open","color":"green"}]
+# execute if score Admin options matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"closed","color":"red"}]
+# execute if score Admin options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"open","color":"green"}]
 execute if score Admin options matches 1.. run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@a[scores={opt_admin=1}]","color":"gold"},{"text":" is now the administrator","color":"gray"}]
 
-execute if score Admin options matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le livre d'option est ","color":"gray"},{"text":"fermé","color":"red"}]
-execute if score Admin options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le livre d'option est ","color":"gray"},{"text":"ouvert","color":"green"}]
+# execute if score Admin options matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le livre d'option est ","color":"gray"},{"text":"fermé","color":"red"}]
+# execute if score Admin options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le livre d'option est ","color":"gray"},{"text":"ouvert","color":"green"}]
 execute if score Admin options matches 1.. run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@a[scores={opt_admin=1}]","color":"gold"},{"text":" est maintenant l'administrateur de partie","color":"gray"}]
 
 

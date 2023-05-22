@@ -1,7 +1,7 @@
 # Rush Premium Preset
 
-tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Rush Premium","color":"#9900FF"},{"text":" has been chosen","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Rush Premium","color":"#9900FF"},{"text":" a été choisi","color":"gray"}]
+# tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Rush Premium","color":"#9900FF"},{"text":" has been chosen","color":"gray"}]
+# tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Rush Premium","color":"#9900FF"},{"text":" a été choisi","color":"gray"}]
 
 scoreboard players set Preset options 2
 

@@ -50,6 +50,7 @@ scoreboard objectives add glib.parentId dummy
 
 scoreboard objectives add const dummy
 scoreboard players set -1 const -1
+scoreboard players set #0 const 0
 scoreboard players set #1 const 1
 scoreboard players set #20 const 20
 scoreboard players set #60 const 60

@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_team_number 4
+scoreboard players set @s opt_fast_climb 1

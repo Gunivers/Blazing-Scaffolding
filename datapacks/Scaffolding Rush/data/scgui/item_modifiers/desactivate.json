@@ -9,7 +9,9 @@
       "lore": [
         {
           "text": "Désactivé",
-          "bold": true
+          "bold": true,
+          "color": "red",
+          "italic": false
         }
       ],
       "replace": false,
@@ -28,7 +30,9 @@
       "lore": [
         {
           "text": "Unactivated",
-          "bold": true
+          "bold": true,
+          "color": "red",
+          "italic": false
         }
       ],
       "replace": false,
