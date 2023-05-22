@@ -1,2 +1,2 @@
-tellraw @a[scores={language=0}] ["",{"text":"[SR] ","color":"gold"},{"text":"Lobby loaded","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[SR] ","color":"gold"},{"text":"Lobby chargé","color":"gray"}]
+tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Lobby loaded","color":"gray"}]
+tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Lobby chargé","color":"gray"}]
