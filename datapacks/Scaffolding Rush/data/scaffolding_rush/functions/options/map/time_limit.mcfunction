@@ -8,7 +8,7 @@ tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The
 
 
 tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option time_limit a été mise à ","color":"gray"},{"score":{"name":"TimeLimit","objective":"options"},"color":"gold"},{"text":"","color":"gold"}]
-[BS]
+
 scoreboard players set @s opt_time_limit 0
 scoreboard players enable @s opt_time_limit
 
