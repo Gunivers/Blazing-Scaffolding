@@ -25,6 +25,9 @@ gamemode survival @a[team=!]
 
 #give items
 execute as @a[team=!] run function scaffolding_rush:game/give_items
+scoreboard players set @a fireball_timer 0
+scoreboard players set @a enderpearl_timer 0
+scoreboard players set @a enderpearl_timer 0
 
 
 function scaffolding_rush:broadcast/start
