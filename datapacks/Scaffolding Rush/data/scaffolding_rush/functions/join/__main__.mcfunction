@@ -4,8 +4,6 @@ tag @s remove has_egg
 clear @s
 tag @a remove HaveItems
 
-function scaffolding_rush:lobby/give_items
-
 execute as @s if entity @a[tag=admin] run function scaffolding_rush:options/disable_all
 
 execute unless score @s gameId matches 0.. run function scaffolding_rush:join/new_player
