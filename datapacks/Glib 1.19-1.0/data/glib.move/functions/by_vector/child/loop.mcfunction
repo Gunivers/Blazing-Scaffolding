@@ -8,8 +8,8 @@ scoreboard players operation move.vectorZ glib = @s glib.vectorZ
 #__________________________________________________
 # Collision
 
-execute if entity @s[tag=!ender_pearl,scores={glib.collision=1..}] at @s unless block ~ ~1.7 ~ air run tag @s add glib.collision
-execute if entity @s[tag=ender_pearl,scores={glib.collision=1..}] at @s unless block ~ ~2.1 ~ air run tag @s add glib.collision
+execute if entity @s[tag=!ender_pearl,scores={glib.collision=1..}] at @s unless block ~ ~1.7 ~ #glib.move:pass_through run tag @s add glib.collision
+execute if entity @s[tag=ender_pearl,scores={glib.collision=1..}] at @s unless block ~ ~2.1 ~ #glib.move:pass_through run tag @s add glib.collision
 tag @s[tag=glib.collision] add Impact
 
 # execute as @e[tag=ender_pearl,tag=!Impact] at @s run summon block_display ~-0.05 ~1.65 ~-0.05 {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.1f,0.1f,0.1f]},block_state:{Name:"minecraft:white_concrete"},Tags:["bs.debug","bs.debug.move.by_vector","bs.move.TrajectoryDisplay"]}
