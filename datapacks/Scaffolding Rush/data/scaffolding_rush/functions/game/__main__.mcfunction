@@ -49,7 +49,24 @@ execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store
 execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store result score @s YEntity run data get entity @s Pos[1]
 execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store result score @s ZEntity run data get entity @s Pos[2]
 
-execute as @e[type=villager,tag=!LobbyBase,tag=game_villager] at @s store result score @s YEntity run data get entity @s Pos[1]
+execute as @e[type=villager,tag=game_villager] at @s store result score @s XEntity run data get entity @s Pos[0]
+execute as @e[type=villager,tag=game_villager] at @s store result score @s YEntity run data get entity @s Pos[1]
+execute as @e[type=villager,tag=game_villager] at @s store result score @s ZEntity run data get entity @s Pos[2]
+
+
+# Behind WB
+execute store result score CurrentWBSize global run worldborder get
+scoreboard players operation WBbyTwo global = CurrentWBSize global
+scoreboard players operation WBbyTwo global /= #2 global
+scoreboard players set -WBbyTwo global 0
+scoreboard players operation -WBbyTwo global -= WBbyTwo global
+# offset game map
+scoreboard players operation WBbyTwo global += #1000 const
+scoreboard players operation -WBbyTwo global += #1000 const
+scoreboard players operation WBbyTwo global += #1 const
+scoreboard players operation -WBbyTwo global -= #1 const
+
+execute as @a[gamemode=!spectator,tag=InGame] at @s run function scaffolding_rush:game/correct_coordinates
 
 execute as @e[type=minecraft:villager,tag=game_villager] at @s if entity @a[distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
 
