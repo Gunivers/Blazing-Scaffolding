@@ -65,6 +65,8 @@ scoreboard players operation RespawnDelayTics global *= #20 global
 scoreboard players operation WorldborderStartTimeTics global = WorldborderStartTime options
 scoreboard players operation WorldborderStartTimeTics global *= #20 global
 scoreboard players operation WorldborderStartTimeTics global *= #60 global
+execute if score WorldborderStartTime options matches 0 run scoreboard players operation WorldborderStartTimeTics global = #0 const
+
 
 #reset villagers respawn countdowns
 scoreboard players set RedVillagerRespawn global -1
@@ -74,6 +76,11 @@ scoreboard players set GreenVillagerRespawn global -1
 
 #Reset teams scores, if relevant
 execute unless score FlagTakeOver options matches 0 run scoreboard objectives setdisplay sidebar Score
+execute if score FlagTakeOver options matches 0 run scoreboard objectives setdisplay sidebar
+scoreboard players reset Blue Score
+scoreboard players reset Green Score
+scoreboard players reset Red Score
+scoreboard players reset Yellow Score
 execute unless score FlagTakeOver options matches 0 if entity @a[team=blue] run scoreboard players set Blue Score 0
 execute unless score FlagTakeOver options matches 0 if entity @a[team=green] run scoreboard players set Green Score 0
 execute unless score FlagTakeOver options matches 0 if entity @a[team=red] run scoreboard players set Red Score 0

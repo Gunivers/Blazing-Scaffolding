@@ -7,6 +7,12 @@ execute if score InvulnerableVillager options matches 0 as @e[type=villager,tag=
 execute unless score InvulnerableVillager options matches 0 as @e[type=villager,tag=game_villager] at @s if block ~ ~-1.8 ~ magma_block run function scaffolding_rush:game/death/villager/save
 execute unless score InvulnerableVillager options matches 0 as @e[type=villager,tag=game_villager] at @s if block ~ ~-1 ~ magma_block run function scaffolding_rush:game/death/villager/save
 
+# Kill Villager behind WB
+execute as @e[type=villager,tag=game_villager] if score @s XEntity > WBbyTwo global run function scaffolding_rush:game/death/villager/kill
+execute as @e[type=villager,tag=game_villager] if score @s XEntity < -WBbyTwo global run function scaffolding_rush:game/death/villager/kill
+execute as @e[type=villager,tag=game_villager] if score @s ZEntity > WBbyTwo global run function scaffolding_rush:game/death/villager/kill
+execute as @e[type=villager,tag=game_villager] if score @s ZEntity < -WBbyTwo global run function scaffolding_rush:game/death/villager/kill
+
 # If player has been killed
 execute as @a[scores={killed=1..}] at @s run function scaffolding_rush:game/death/player/kill
 

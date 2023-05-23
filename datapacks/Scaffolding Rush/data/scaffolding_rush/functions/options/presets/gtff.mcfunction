@@ -11,7 +11,7 @@ scoreboard players set WBSize options 40
 scoreboard players set WBSize2 options 30
 scoreboard players set WBSize3 options 40
 scoreboard players set WBSize4 options 95
-scoreboard players set WorldborderShrink options 1
+scoreboard players set WorldborderShrink options 0
 scoreboard players set WorldborderStartTime options 2
 scoreboard players set WorldborderTimeToShrink options 5
 scoreboard players set BuildHeight options 30

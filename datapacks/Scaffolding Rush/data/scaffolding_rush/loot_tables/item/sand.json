@@ -77,7 +77,7 @@
         },
         {
           "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"minecraft:quartz_block\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
+          "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
         },
         {
           "function": "minecraft:set_name",
