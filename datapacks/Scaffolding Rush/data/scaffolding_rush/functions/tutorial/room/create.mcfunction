@@ -5,4 +5,4 @@ setblock ~ ~1 ~ redstone_block
 
 #tp the player and set it's spawn
 tp @s ~1 ~8.1 ~ -90 0
-spawnpoint @s ~ ~8 ~
+spawnpoint @s ~ ~8 ~ -90
