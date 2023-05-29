@@ -6,6 +6,7 @@
         "#scaffolding_rush:lava",
         "minecraft:black_concrete_powder",
         "minecraft:blackstone_slab",
-        "minecraft:coal_block"
+        "minecraft:coal_block",
+        "minecraft:moving_piston"
     ]
 }
