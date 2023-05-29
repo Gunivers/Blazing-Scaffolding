@@ -1,8 +1,6 @@
 execute as @e[type=marker,tag=VolcanoPop] at @s run function glib.move:by_vector
 scoreboard players remove @e[type=marker,tag=VolcanoPop] glib.vectorY 25
 
-execute as @e[type=marker,tag=VolcanoPop] at @s run tp @s ~ ~ ~ ~5 ~
-
 execute as @e[type=marker,tag=VolcanoPop] at @s run particle large_smoke ~ ~1.5 ~ 0.1 0.1 0.1 0.1 1 force
 execute as @e[type=marker,tag=VolcanoPop] at @s run particle flame ~ ~1.5 ~ 0.1 0.1 0.1 0.1 3 force
 # execute as @e[type=armor_stand,tag=VolcanoPop] at @s run particle lava ~ ~1.5 ~ 0.1 0.1 0.1 0.1 1 force

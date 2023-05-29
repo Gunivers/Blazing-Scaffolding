@@ -1,8 +1,6 @@
 execute as @e[type=marker,tag=Fireball] at @s run function glib.move:by_vector
 scoreboard players remove @e[type=marker,tag=Fireball] glib.vectorY 50
 
-execute as @e[type=marker,tag=Fireball] at @s run tp @s ~ ~ ~ ~5 ~
-
 execute as @e[type=marker,tag=Fireball] at @s run particle large_smoke ~ ~1.5 ~ 0.1 0.1 0.1 0.1 1 force
 execute as @e[type=marker,tag=Fireball] at @s run particle flame ~ ~1.5 ~ 0.1 0.1 0.1 0.1 3 force
 
