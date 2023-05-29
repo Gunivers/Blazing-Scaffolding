@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:overworld",
+    "generator": {
+      "type": "minecraft:flat",
+      "settings": {
+        "lakes": false,
+        "features": false,
+        "layers": [],
+        "coordinate_scale":10.0
+      }
+    }
+  }
+  

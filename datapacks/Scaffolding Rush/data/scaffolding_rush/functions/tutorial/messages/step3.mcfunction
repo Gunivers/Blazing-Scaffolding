@@ -1,0 +1,2 @@
+
+tellraw @a ["",{"text":"3/5) ","color":"gold"},{"text":"[","color":"yellow"},{"keybind":"key.sneak","color":"yellow"},{"text":" + ","color":"yellow"},{"keybind":"key.use","color":"yellow"},{"text":"]","color":"yellow"},{"text":" allows you to place scaffolding like regular blocks","color":"dark_green"}]

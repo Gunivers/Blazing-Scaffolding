@@ -1,0 +1,2 @@
+
+tellraw @a ["",{"text":"4/5) ","color":"gold"},{"text":"[Look straight down and hold ","color":"yellow"},{"keybind":"key.sneak","color":"yellow"},{"text":" + ","color":"yellow"},{"keybind":"key.use","color":"yellow"},{"text":"]","color":"yellow"},{"text":" to make a new support from your location","color":"dark_green"}]
