@@ -26,7 +26,7 @@ scoreboard players set UseEnderPearl options 0
 scoreboard players set UseFireball options 1
 scoreboard players set InstantPillar options 1
 scoreboard players set FastClimb options 0
-scoreboard players set LastingBases options 1
+scoreboard players set LastingBases options 0
 scoreboard players set Rafts options 0
 
 # Villager
