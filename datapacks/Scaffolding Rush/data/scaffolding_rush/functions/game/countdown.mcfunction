@@ -28,7 +28,7 @@ kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]
 
-schedule function scaffolding_rush:team/create_base/create 4s
+schedule function scaffolding_rush:team/create_base/create 2.5s
 
 schedule function scaffolding_rush:broadcast/5s 5s
 schedule function scaffolding_rush:broadcast/4s 6s
