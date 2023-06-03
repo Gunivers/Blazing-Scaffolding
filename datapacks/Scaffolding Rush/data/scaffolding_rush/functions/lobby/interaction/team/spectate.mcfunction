@@ -4,6 +4,6 @@ execute store result score @s interactionID run data get entity @s interaction.p
 
 tag @s add interactionSelect
 
-execute as @a[team=!] if score @s playerID = @e[type=minecraft:interaction,tag=interactionSelect,limit=1] interactionID run function scaffolding_rush:team/leave
+execute as @a[team=!] if score @s playerID = @e[type=minecraft:interaction,tag=interactionSelect,limit=1] interactionID at @s run function scaffolding_rush:team/leave
 
 tag @s remove interactionSelect
