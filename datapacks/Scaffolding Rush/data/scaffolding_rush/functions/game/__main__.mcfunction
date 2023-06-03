@@ -88,10 +88,10 @@ execute as @e[type=minecraft:villager,tag=game_villager] at @s positioned ~ ~1 ~
 title @a[scores={language=0},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg!! Place it to be able to respawn! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 title @a[scores={language=1},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" Vous avez l'œuf !! Placez-le pour pouvoir réapparaître ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 
-title @a[gamemode=!spectator,tag=!Respawning] times 0 2 0
 execute if score MovableVillager options matches 1 as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:villager/facing/msg
 
-execute if score MovableVillager options matches 1 unless entity @e[type=minecraft:villager,tag=game_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg
+execute if score MovableVillager options matches 1 unless entity @e[type=minecraft:villager,tag=game_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg_actionbar
+execute if score MovableVillager options matches 1 unless entity @e[type=minecraft:villager,tag=game_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:villager/warn/msg_title
 
 
 # Test end of game
