@@ -6,3 +6,8 @@ setblock ~ ~1 ~ redstone_block
 #tp the player and set it's spawn
 tp @s ~1 ~8.1 ~ -90 0
 spawnpoint @s ~ ~8 ~ -90
+
+execute as @s at @s store result score @s TutorialCellZ run data get entity @s Pos[2]
+
+
+tag @s add inTutorial

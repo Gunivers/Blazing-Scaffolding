@@ -19,6 +19,7 @@ scoreboard objectives add options dummy
 scoreboard objectives add XEntity dummy
 scoreboard objectives add YEntity dummy
 scoreboard objectives add ZEntity dummy
+scoreboard objectives add TutorialCellZ dummy
 scoreboard objectives add usedSnowball minecraft.used:minecraft.snowball
 scoreboard objectives add gameId dummy
 scoreboard objectives add playerID dummy

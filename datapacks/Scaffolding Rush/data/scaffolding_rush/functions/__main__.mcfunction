@@ -11,6 +11,9 @@ execute as @a unless score @s glib.id matches 1.. run function glib.id:get_suid
 # Lobby management
 execute if score GameLobby global matches 1 run function scaffolding_rush:lobby/__main__
 
+# Tutorial management
+function scaffolding_rush:tutorial/main
+
 # When a player join the game
 execute as @a[scores={leave=1..}] run function scaffolding_rush:join/__main__
 execute as @a unless score @s gameId = GameId global as @s run function scaffolding_rush:join/__main__
