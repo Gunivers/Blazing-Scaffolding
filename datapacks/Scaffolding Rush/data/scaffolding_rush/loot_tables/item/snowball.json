@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_name",
-              "name": "Bumping Arrow"
+              "name": {"text":"Bumping Arrow","italic":0}
             }
           ]
         }

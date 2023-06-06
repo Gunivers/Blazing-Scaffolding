@@ -10,7 +10,7 @@
           "functions": [
                 {
                 "function": "minecraft:set_name",
-                "name": "Fireball"
+                "name": {"text":"Fireball","italic":0}
                 }
             ]
         }
