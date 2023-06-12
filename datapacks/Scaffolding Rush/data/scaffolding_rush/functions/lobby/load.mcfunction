@@ -66,3 +66,6 @@ function scaffolding_rush:lobby/text/scaff
 
 function scaffolding_rush:lobby/text/refresh
 function scaffolding_rush:lobby/preset_villager/refresh
+
+# Load tutorial world
+function scaffolding_rush:tutorial/forceload

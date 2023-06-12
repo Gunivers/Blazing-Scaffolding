@@ -1,8 +1,12 @@
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 kill @e[type=!player]
 
+# Game
 forceload add 1100 1100 900 900
+# Lobby
 forceload add 100 100 -100 -100
+# tutorial
+function scaffolding_rush:tutorial/forceload
 
 #trigger controls
 # use "/scoreboard players set DevelopementMode global 1" in order to start the map solo

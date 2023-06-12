@@ -84,7 +84,7 @@ execute unless score RandomTeam options matches 0 run team join random @a[team=!
 #advancement replenish
 advancement revoke @a from scaffolding_rush:replenish
 
-execute as @a run function scaffolding_rush:lobby/give_items
+execute as @a[tag=!inTutorial] run function scaffolding_rush:lobby/give_items
 
 scoreboard players reset @a StartGame
 scoreboard players reset @a Reset
