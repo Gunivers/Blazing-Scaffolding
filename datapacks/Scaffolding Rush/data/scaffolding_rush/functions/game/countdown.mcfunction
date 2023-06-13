@@ -87,4 +87,4 @@ execute unless score FlagTakeOver options matches 0 if entity @a[team=red] run s
 execute unless score FlagTakeOver options matches 0 if entity @a[team=yellow] run scoreboard players set Yellow Score 0
 
 #create the firsts flags to capture in the flaghunt gamemode
-execute unless score FlagTakeOver options matches 0 run function scaffolding_rush:flag/new_spreaded
+execute unless score FlagTakeOver options matches 0 run function scaffolding_rush:game/flag/new_spreaded

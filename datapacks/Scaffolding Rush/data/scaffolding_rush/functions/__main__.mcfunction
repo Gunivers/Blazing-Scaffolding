@@ -28,7 +28,7 @@ execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:reset
 #execute as @a at @s run function scaffolding_rush:game/ghostblock_detection
 
 # Flag animation system
-function scaffolding_rush:flag/__main__
+function scaffolding_rush:game/flag/__main__
 
 # timer for animation
 scoreboard players add tick200 global 1
