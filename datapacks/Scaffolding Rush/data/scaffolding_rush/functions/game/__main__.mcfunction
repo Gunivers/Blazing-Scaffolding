@@ -21,10 +21,10 @@ execute unless score LavaSpeedTics options matches 0 if score LavaCountdown glob
 execute unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run scoreboard players set LavaCountdown global 0
 
 #villager placed
-execute if score GameRunning global matches 1 as @a[scores={bluePlaced=1..}] run function scaffolding_rush:villager/placed
-execute if score GameRunning global matches 1 as @a[scores={greenPlaced=1..}] run function scaffolding_rush:villager/placed
-execute if score GameRunning global matches 1 as @a[scores={redPlaced=1..}] run function scaffolding_rush:villager/placed
-execute if score GameRunning global matches 1 as @a[scores={yellowPlaced=1..}] run function scaffolding_rush:villager/placed
+execute if score GameRunning global matches 1 as @a[scores={bluePlaced=1..}] run function scaffolding_rush:game/villager/placed
+execute if score GameRunning global matches 1 as @a[scores={greenPlaced=1..}] run function scaffolding_rush:game/villager/placed
+execute if score GameRunning global matches 1 as @a[scores={redPlaced=1..}] run function scaffolding_rush:game/villager/placed
+execute if score GameRunning global matches 1 as @a[scores={yellowPlaced=1..}] run function scaffolding_rush:game/villager/placed
 
 function scaffolding_rush:game/death/__main__
 
@@ -73,13 +73,13 @@ execute as @e[type=minecraft:villager,tag=game_villager] at @s if entity @a[dist
 execute as @e[type=minecraft:villager,tag=game_villager] at @s unless block ~ ~ ~ #scaffolding_rush:air unless block ~ ~ ~ #scaffolding_rush:scaffolding run tp @s ~ ~0.1 ~
 
 # tag facing_villager
-execute as @a[gamemode=!spectator,tag=!Respawning] at @s run function scaffolding_rush:villager/facing/test
+execute as @a[gamemode=!spectator,tag=!Respawning] at @s run function scaffolding_rush:game/villager/facing/test
 
 #warn villagers height
-execute as @e[type=villager,tag=game_villager] run function scaffolding_rush:villager/warn/test
+execute as @e[type=villager,tag=game_villager] run function scaffolding_rush:game/villager/warn/test
 
 # Protect vilalger against arrows
-execute as @e[type=minecraft:villager,tag=game_villager] at @s positioned ~ ~1 ~ run function scaffolding_rush:villager/arrow_shield
+execute as @e[type=minecraft:villager,tag=game_villager] at @s positioned ~ ~1 ~ run function scaffolding_rush:game/villager/arrow_shield
 
 
 # Action bar msg
@@ -88,16 +88,16 @@ execute as @e[type=minecraft:villager,tag=game_villager] at @s positioned ~ ~1 ~
 title @a[scores={language=0},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg!! Place it to be able to respawn! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 title @a[scores={language=1},tag=has_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" Vous avez l'œuf !! Placez-le pour pouvoir réapparaître ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 
-execute if score MovableVillager options matches 1 as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:villager/facing/msg
+execute if score MovableVillager options matches 1 as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:game/villager/facing/msg
 
-execute if score MovableVillager options matches 1 unless entity @e[type=minecraft:villager,tag=game_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg_actionbar
-execute if score MovableVillager options matches 1 unless entity @e[type=minecraft:villager,tag=game_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:villager/warn/msg_title
+execute if score MovableVillager options matches 1 unless entity @e[type=minecraft:villager,tag=game_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:game/villager/warn/msg_actionbar
+execute if score MovableVillager options matches 1 unless entity @e[type=minecraft:villager,tag=game_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:game/villager/warn/msg_title
 
 
 # Test end of game
 execute if score GameEnd global matches 0 run function scaffolding_rush:game/test_end
 
-execute as @a[tag=has_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:slime_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:blaze_spawn_egg"}]}] run function scaffolding_rush:villager/egg/give/any
+execute as @a[tag=has_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:slime_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:blaze_spawn_egg"}]}] run function scaffolding_rush:game/villager/egg/give/any
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
 
