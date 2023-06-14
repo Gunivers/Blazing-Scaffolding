@@ -8,6 +8,7 @@ function scaffolding_rush:lobby/base_egg/clear_egg
 
 kill @e[tag=lobbyText]
 kill @e[tag=lobbyInteraction]
+kill @e[tag=lobbyMarker]
 execute as @e[type=villager,tag=lobbyVillager] run function scaffolding_rush:clean_kill
 
 
