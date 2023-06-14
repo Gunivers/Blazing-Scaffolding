@@ -13,7 +13,6 @@ scoreboard players set GameLoading global 1
 scoreboard players add GameId global 1
 scoreboard players operation @a gameId = GameId global
 
-setblock 0 5 7 cave_air
 
 function scaffolding_rush:team/random
 
@@ -23,7 +22,6 @@ function scaffolding_rush:broadcast/10s
 
 teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 2 1000
 
-kill @e[tag=lobbyText]
 kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]
