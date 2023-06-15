@@ -73,7 +73,7 @@ tag @a remove flagFive
 
 clear @a
 effect clear @a
-tag @a remove HaveItems
+execute as @a run function scaffolding_rush:item/clear_items
 effect give @a minecraft:instant_health 1 100 true
 
 function scaffolding_rush:clear/game/launch

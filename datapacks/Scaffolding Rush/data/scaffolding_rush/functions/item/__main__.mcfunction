@@ -23,11 +23,6 @@ execute as @a store result score @s sc.item.test.fireball run clear @s #scaffold
 execute as @a store result score @s sc.item.test.ender_pearl run clear @s #scaffolding_rush:item/ender_pearl 0
 execute as @a store result score @s sc.item.test.snowball run clear @s #scaffolding_rush:item/snowball 0
 
-# # Using items
-# execute as @a if score @s sc.item.test.fireball < @s sc.item.real.fireball run scoreboard players remove @s sc.item.real.fireball 1
-# execute as @a if score @s sc.item.test.ender_pearl < @s sc.item.real.ender_pearl run scoreboard players remove @s sc.item.real.ender_pearl 1
-# execute as @a if score @s sc.item.test.snowball < @s sc.item.real.snowball run scoreboard players remove @s sc.item.real.snowball 1
-
 # =====================================
 # Timers
 # =====================================
@@ -43,14 +38,14 @@ scoreboard players remove @a[scores={sc.item.timer.ender_pearl=0..}] sc.item.tim
 scoreboard players remove @a[scores={sc.item.timer.snowball=0..}] sc.item.timer.snowball 1
 
 # give back items
-execute as @a if score @s sc.item.timer.fireball matches 0 unless score @s sc.item.test.fireball >= @s sc.item.fireball run scoreboard players add @s sc.item.real.fireball 1
-execute as @a if score @s sc.item.timer.ender_pearl matches 0 unless score @s sc.item.test.ender_pearl >= @s sc.item.ender_pearl run scoreboard players add @s sc.item.real.ender_pearl 1
-execute as @a if score @s sc.item.timer.snowball matches 0 unless score @s sc.item.test.snowball >= @s sc.item.snowball run scoreboard players add @s sc.item.real.snowball 1
+execute as @a if score @s sc.item.timer.fireball matches 0 if score @s sc.item.real.fireball < @s sc.item.fireball run scoreboard players add @s sc.item.real.fireball 1
+execute as @a if score @s sc.item.timer.ender_pearl matches 0 if score @s sc.item.real.ender_pearl < @s sc.item.ender_pearl run scoreboard players add @s sc.item.real.ender_pearl 1
+execute as @a if score @s sc.item.timer.snowball matches 0 if score @s sc.item.real.snowball < @s sc.item.snowball run scoreboard players add @s sc.item.real.snowball 1
 
 # resart timers
-execute as @a if score @s sc.item.timer.fireball matches -1 unless score @s sc.item.real.fireball = @s sc.item.fireball run scoreboard players set @s sc.item.timer.fireball 100
-execute as @a if score @s sc.item.timer.ender_pearl matches -1 unless score @s sc.item.real.ender_pearl = @s sc.item.ender_pearl run scoreboard players set @s sc.item.timer.ender_pearl 100
-execute as @a if score @s sc.item.timer.snowball matches -1 unless score @s sc.item.real.snowball = @s sc.item.snowball run scoreboard players set @s sc.item.timer.snowball 100
+execute as @a if score @s sc.item.timer.fireball matches -1 unless score @s sc.item.real.fireball = @s sc.item.fireball run scoreboard players set @s sc.item.timer.fireball 300
+execute as @a if score @s sc.item.timer.ender_pearl matches -1 unless score @s sc.item.real.ender_pearl = @s sc.item.ender_pearl run scoreboard players set @s sc.item.timer.ender_pearl 600
+execute as @a if score @s sc.item.timer.snowball matches -1 unless score @s sc.item.real.snowball = @s sc.item.snowball run scoreboard players set @s sc.item.timer.snowball 40
 
 # reflect inventory
 execute as @a unless score @s sc.item.test.scaffolding = @s sc.item.scaffolding run function scaffolding_rush:item/give/scaffolding
@@ -60,9 +55,9 @@ execute as @a unless score @s sc.item.test.ender_pearl = @s sc.item.real.ender_p
 execute as @a unless score @s sc.item.test.snowball = @s sc.item.real.snowball run function scaffolding_rush:item/give/snowball
 
 # Adjust to max
-execute as @a unless score @s sc.item.real.fireball > @s sc.item.fireball run scoreboard players operation @s sc.item.fireball = @s sc.item.fireball
-execute as @a unless score @s sc.item.real.ender_pearl > @s sc.item.ender_pearl run scoreboard players operation @s sc.item.ender_pearl = @s sc.item.ender_pearl
-execute as @a unless score @s sc.item.real.snowball > @s sc.item.snowball run scoreboard players operation @s sc.item.snowball = @s sc.item.snowball
+execute as @a if score @s sc.item.real.fireball > @s sc.item.fireball run scoreboard players operation @s sc.item.real.fireball = @s sc.item.fireball
+execute as @a if score @s sc.item.real.ender_pearl > @s sc.item.ender_pearl run scoreboard players operation @s sc.item.real.ender_pearl = @s sc.item.ender_pearl
+execute as @a if score @s sc.item.real.snowball > @s sc.item.snowball run scoreboard players operation @s sc.item.real.snowball = @s sc.item.snowball
 
 
 

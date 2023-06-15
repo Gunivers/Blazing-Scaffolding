@@ -17,5 +17,7 @@ scoreboard players remove @a[tag=playerSelect] sc.item.real.snowball 1
 # loot replace entity @a[scores={usedSnowball=1..}] weapon.mainhand loot scaffolding_rush:item/snowball
 
 scoreboard players set @a usedSnowball 0
+tag @s remove snowballSelect
+tag @a remove playerSelect
 
 kill @s

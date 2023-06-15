@@ -7,8 +7,8 @@ execute unless score UseSand options matches 0 run tellraw @s[scores={language=0
 execute if score UseSand options matches 0 run tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le sable a été ","color":"gray"},{"text":"désactivé","color":"red"}]
 execute unless score UseSand options matches 0 run tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le sable a été ","color":"gray"},{"text":"activé","color":"green"}]
 
-execute if score UseSand options matches 0 run clear @a #scaffolding_rush:item/sand
-execute if score UseSand options matches 1 run loot give @a loot scaffolding_rush:item/sand
+execute if score UseSand options matches 0 run scoreboard players set @a[tag=HaveItems] sc.item.sand 0
+execute if score UseSand options matches 1 run scoreboard players set @a[tag=HaveItems] sc.item.sand 42
 
 scoreboard players set @s opt_sand 0
 scoreboard players enable @s opt_sand
