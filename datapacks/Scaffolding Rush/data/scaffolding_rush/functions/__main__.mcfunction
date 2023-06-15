@@ -34,6 +34,8 @@ execute if score tick200 global matches 200.. run scoreboard players set tick200
 # Mechanics
 function scaffolding_rush:mechanics/__main__
 
+# Item
+function scaffolding_rush:item/__main__
 
 # Admin mode
 execute unless entity @a[tag=admin] if score Admin options matches 1 run function scaffolding_rush:options/admin

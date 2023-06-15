@@ -10,7 +10,10 @@
           "functions": [
             {
               "function": "minecraft:set_name",
-              "name": {"text":"Bumping Arrow","italic":0}
+              "name": {
+                "text": "Bumping Arrow",
+                "italic": false
+              }
             }
           ]
         }
@@ -18,14 +21,17 @@
       "functions": [
         {
           "function": "minecraft:set_count",
-          "count": 1
+          "count": {
+            "type": "minecraft:score",
+            "target": "this",
+            "score": "sc.item.give.snowball"
+          }
         },
         {
           "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:24,CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
+          "tag": "{sc.item: 1,HideFlags:24,CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
         }
-    ]
+      ]
     }
   ]
 }
-  
