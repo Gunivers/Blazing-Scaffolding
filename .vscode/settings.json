@@ -1,0 +1,6 @@
+{
+    "search.exclude": {
+        "**/.git": true,
+        "datapacks/Glib 1.19-1.0/*": true,
+    },
+}
