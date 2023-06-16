@@ -23,6 +23,38 @@
         {
           "function": "minecraft:set_nbt",
           "tag": "{HideFlags:24,CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [{
+            "text": "Push opponents off the scaffolding"
+          }],
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [{
+            "text": "Pousser les adversaires hors des échaffaudages"
+          }],
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 1
+              }
+            }
+          ]
         }
     ]
     }
