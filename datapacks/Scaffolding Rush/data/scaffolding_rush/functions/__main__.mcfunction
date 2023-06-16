@@ -20,8 +20,8 @@ function scaffolding_rush:options/__main__
 
 # Game management (when a game is started)
 execute if score GameRunning global matches 1 run function scaffolding_rush:game/__main__
-execute if score Admin options matches 1 if entity @a[tag=admin,scores={StartGame=1..}] run function scaffolding_rush:game/launch
-execute unless score Admin options matches 1 if entity @a[scores={StartGame=1..}] run function scaffolding_rush:game/launch
+execute if score Admin options matches 1 as @a[tag=admin,scores={StartGame=1..}] run function scaffolding_rush:game/launch
+execute unless score Admin options matches 1 as @a[scores={StartGame=1..}] run function scaffolding_rush:game/launch
 execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:reset
 
 # Ghostblocks
