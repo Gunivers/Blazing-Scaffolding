@@ -8,6 +8,19 @@ execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store
 execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store result score @s YEntity run data get entity @s Pos[1]
 execute as @a[gamemode=!spectator,tag=!Respawning,scores={killed=0}] at @s store result score @s ZEntity run data get entity @s Pos[2]
 
+#Rise Lava
+execute unless score LavaSpeedTics options matches 0 run scoreboard players add LavaCountdown global 1
+execute unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run scoreboard players add LavaLevelDiscrete global 1
+execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_LavaLevel"] at @s run function scaffolding_rush:game/lava/rise_globally
+execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 1 as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/lava/rise_locally
+execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 1 as @e[type=villager,tag=!LobbyBase] at @s run function scaffolding_rush:game/lava/rise_locally
+
+#rise lasting bases
+execute unless score LastingBases options matches 0 unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run function scaffolding_rush:team/create_base/rise
+
+execute unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_Build"] at @s run function scaffolding_rush:game/air_replace
+execute unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run scoreboard players set LavaCountdown global 0
+
 # +++++++++++++++++++++++++++++++++++++
 # Mains
 # +++++++++++++++++++++++++++++++++++++
@@ -48,10 +61,6 @@ scoreboard players operation -WBbyTwo global -= #1 const
 execute as @a[gamemode=!spectator,tag=InGame] at @s run function scaffolding_rush:game/correct_coordinates
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
-
-# =====================================
-# End of game
-# =====================================
 
 # Test end of game
 execute if score GameEnd global matches 0 run function scaffolding_rush:game/test_end

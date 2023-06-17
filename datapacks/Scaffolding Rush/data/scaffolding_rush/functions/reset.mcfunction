@@ -31,7 +31,7 @@ function scaffolding_rush:game/lava/global_rising/stop
 schedule clear scaffolding_rush:lobby/particles
 schedule clear scaffolding_rush:game/ghostblocks
 
-scoreboard players set LavaLevel global 2
+scoreboard players set LavaLevelDiscrete global 2
 scoreboard players set GameLobby global 1
 scoreboard players set GameEnd global 0
 scoreboard players set GameRunning global 0
