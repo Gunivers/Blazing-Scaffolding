@@ -4,7 +4,7 @@ execute unless score LavaSpeedTics options matches 0 run scoreboard players add 
 execute unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run scoreboard players add LavaLevel global 1
 execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 0 if score LavaCountdown global >= LavaSpeedTics options as @e[type=marker,name="ScR_LavaLevel"] at @s run function scaffolding_rush:game/lava/rise_globally
 execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 1 as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/lava/rise_locally
-execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 1 as @e[type=villager,tag=!LobbyBase] at @s run function scaffolding_rush:game/lava/rise_locally
+execute unless score LavaSpeedTics options matches 0 if score PerformanceMode options matches 1 as @e[type=villager,tag=game_villager] at @s run function scaffolding_rush:game/lava/rise_locally
 
 #rise lasting bases
 execute unless score LastingBases options matches 0 unless score LavaSpeedTics options matches 0 if score LavaCountdown global >= LavaSpeedTics options run function scaffolding_rush:team/create_base/rise
