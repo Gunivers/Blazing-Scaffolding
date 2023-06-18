@@ -7,8 +7,9 @@ execute unless score UseSnowball options matches 0 run tellraw @s[scores={langua
 execute if score UseSnowball options matches 0 run tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Les Flèche coup de poing ont été ","color":"gray"},{"text":"désactivée","color":"red"}]
 execute unless score UseSnowball options matches 0 run tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Les Flèche coup de poing ont été ","color":"gray"},{"text":"activée","color":"green"}]
 
-execute if score UseSnowball options matches 0 run clear @a #scaffolding_rush:item/snowball
-execute unless score UseSnowball options matches 0 run loot give @s loot scaffolding_rush:item/snowball
+execute if score UseSnowball options matches 0 run scoreboard players set @a[tag=HaveItems] sc.item.snowball 0
+execute unless score UseSnowball options matches 0 run scoreboard players set @a[tag=HaveItems] sc.item.snowball 15
+execute unless score UseSnowball options matches 0 run scoreboard players set @a[tag=HaveItems] sc.item.real.snowball 1
 
 scoreboard players set @s opt_snowball 0
 scoreboard players enable @s opt_snowball

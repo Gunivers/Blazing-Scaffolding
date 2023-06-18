@@ -22,8 +22,8 @@ execute if score Volcano options matches 1 run function scaffolding_rush:game/vo
 # =====================================
 
 #can place on
-execute as @a[nbt=!{SelectedItem: {}},gamemode=adventure] run gamemode survival
-execute as @a[nbt={SelectedItem: {}},gamemode=survival] run gamemode adventure
+execute as @a[nbt=!{SelectedItem: {tag: {sc.item:1}}},gamemode=adventure] run gamemode survival
+execute as @a[nbt={SelectedItem: {tag: {sc.item:1}}},gamemode=survival] run gamemode adventure
 
 
 # =====================================

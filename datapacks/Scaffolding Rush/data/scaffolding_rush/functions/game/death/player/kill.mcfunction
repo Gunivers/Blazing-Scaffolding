@@ -16,8 +16,7 @@ execute unless score FlagTakeOver options matches 0 if entity @s[tag=flag_carry]
 kill @e[type=marker,tag=last_death]
 
 tag @s remove has_egg
-clear @s
-tag @s remove HaveItems
+function scaffolding_rush:item/clear_items
 gamemode spectator @s
 scoreboard players set @s killed 0
 effect give @s instant_health 1 20

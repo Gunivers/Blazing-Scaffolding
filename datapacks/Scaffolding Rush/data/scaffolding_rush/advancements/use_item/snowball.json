@@ -1,0 +1,20 @@
+{
+    "parent": "scaffolding_rush:use_item",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": [
+              "minecraft:snowball"
+            ],
+            "tag": "scaffolding_rush:item/snowball"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "scaffolding_rush:item/use_item/snowball"
+    }
+  }
+  

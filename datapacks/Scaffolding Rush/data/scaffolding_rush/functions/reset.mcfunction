@@ -73,7 +73,7 @@ tag @a remove flagFive
 
 clear @a
 effect clear @a
-tag @a remove HaveItems
+execute as @a run function scaffolding_rush:item/clear_items
 effect give @a minecraft:instant_health 1 100 true
 
 function scaffolding_rush:clear/game/launch
@@ -81,8 +81,8 @@ execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:clear/lob
 
 execute unless score RandomTeam options matches 0 run team join random @a[team=!]
 
-#advancement replenish
-advancement revoke @a from scaffolding_rush:replenish
+#advancement use_item
+advancement revoke @a from scaffolding_rush:use_item
 
 execute as @a run function scaffolding_rush:lobby/give_items
 
