@@ -112,6 +112,38 @@
               }
             }
           ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [{
+            "text": "To extend your scaffolding bridge"
+          }],
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [{
+            "text": "Pour prolonger votre pont d'échaffaudage"
+          }],
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 1
+              }
+            }
+          ]
         }
       ]
     }
