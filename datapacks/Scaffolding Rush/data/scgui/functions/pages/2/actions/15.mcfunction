@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_rafts 1
+scoreboard players set @s opt_fast_climb 1

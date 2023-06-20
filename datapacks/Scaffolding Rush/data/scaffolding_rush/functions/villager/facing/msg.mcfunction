@@ -1,2 +1,0 @@
-execute as @s[scores={language=0}] run title @s actionbar {"text":"Click to grab the villager","color":"white"}
-execute as @s[scores={language=1}] run title @s actionbar {"text":"Clicker pour reprendre le villageois","color":"white"}

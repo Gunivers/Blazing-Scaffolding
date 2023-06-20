@@ -8,24 +8,62 @@
           "type": "minecraft:item",
           "name": "minecraft:egg",
           "functions": [
-                {
-                "function": "minecraft:set_name",
-                "name": "Fireball"
-                }
-            ]
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Fireball",
+                "italic": false
+              }
+            }
+          ]
         }
       ],
       "functions": [
         {
           "function": "minecraft:set_count",
-          "count": 1
+          "count": {
+            "type": "minecraft:score",
+            "target": "this",
+            "score": "sc.item.give.fireball"
+          }
         },
         {
           "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:24,CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
+          "tag": "{sc.item: 1,HideFlags:24,CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [{
+            "text": "Throw a fireball to destroy the scaffolding"
+          }],
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [{
+            "text": "Lancez une boule de feu pour détruire les échaffaudages"
+          }],
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "language": 1
+              }
+            }
+          ]
         }
-    ]
+      ]
     }
   ]
 }
-  

@@ -1,0 +1,17 @@
+{
+    "parent": "scaffolding_rush:use_item",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:consume_item",
+        "conditions": {
+          "item": {
+            "tag": "scaffolding_rush:item/ender_pearl"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "scaffolding_rush:item/use_item/ender_pearl"
+    }
+  }
+  
