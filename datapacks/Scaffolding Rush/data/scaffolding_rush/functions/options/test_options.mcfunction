@@ -35,12 +35,12 @@ execute as @s[scores={opt_score_limit=1..}] run function scaffolding_rush:option
 execute as @s[scores={opt_use_time_limit=1..}] run function scaffolding_rush:options/map/use_time_limit
 execute as @s[scores={opt_use_score_limit=1..}] run function scaffolding_rush:options/map/use_score_limit
 execute as @s[scores={opt_worldborder_shrink=1..}] run function scaffolding_rush:options/map/worldborder_shrink
-execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_worldborder_start_time
-execute as @a[tag=game_options_enabled] if score @s usedTrigger matches 1 run function scaffolding_rush:options/map/worldborder_start_time
+execute as @s[scores={opt_worldborder_start_time=1..}] run function scaffolding_rush:options/map/worldborder_start_time
+execute as @s[scores={opt_worldborder_start_time=..-1}] run function scaffolding_rush:options/map/worldborder_start_time
 execute as @s[scores={opt_worldborder_time_to_shrink=1..}] run function scaffolding_rush:options/map/worldborder_time_to_shrink
 execute as @s[scores={opt_worldborder_time_to_shrink=..-1}] run function scaffolding_rush:options/map/worldborder_time_to_shrink
-execute as @a[tag=game_options_enabled] store result score @s usedTrigger run scoreboard players enable @s opt_lava_speed
-execute as @a[tag=game_options_enabled] if score @s usedTrigger matches 1 run function scaffolding_rush:options/map/lava_speed
+execute as @s[scores={opt_lava_speed=1..}] run function scaffolding_rush:options/map/lava_speed
+execute as @s[scores={opt_lava_speed=..-1}] run function scaffolding_rush:options/map/lava_speed
 execute as @s[scores={opt_fast_climb=1..}] run function scaffolding_rush:options/gameplay/fast_climb
 execute as @s[scores={opt_movable_villager=1..}] run function scaffolding_rush:options/villager/movable_villager
 execute as @s[scores={opt_invulnerable_villager=1..}] run function scaffolding_rush:options/villager/invulnerable_villager
