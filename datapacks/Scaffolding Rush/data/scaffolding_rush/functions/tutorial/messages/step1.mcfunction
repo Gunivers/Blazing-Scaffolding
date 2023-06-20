@@ -1,3 +1,6 @@
 
-tellraw @s ["",{"text":"1/5)","color":"gold"},{"text":" Supports are automatically created","color":"dark_green"}]
+tellraw @s[scores={language=0}] ["",{"text":"======================","color":"gray"},{"text":"\n\n"},{"text":"Tutorial [1/5]","bold":true,"color":"gold"},{"text":"\n\n"},{"text":"Scaffolding supports are created automatically","color":"white"},{"text":"\n\n"},{"text":"======================","color":"gray"}]
+tellraw @s[scores={language=1}] ["",{"text":"======================","color":"gray"},{"text":"\n\n"},{"text":"Tutoriel [1/5]","bold":true,"color":"gold"},{"text":"\n\n"},{"text":"Les supports d'échaffaudage sont automatiquement créés","color":"white"},{"text":"\n\n"},{"text":"======================","color":"gray"}]
+playsound block.note_block.bell ambient @s ~ ~ ~ 1000 1.41
+
 tag @s add TutorialMessage1
