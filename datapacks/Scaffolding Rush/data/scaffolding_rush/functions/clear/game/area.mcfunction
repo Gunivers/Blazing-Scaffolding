@@ -15,4 +15,4 @@ execute store result bossbar reset_map_fr value run scoreboard players get RESET
 
 #execute unless score @s YEntity matches 2 at @s run function scaffolding_rush:clear/game/area
 execute unless score @e[type=marker,name="ScR_ClearGame",limit=1] YEntity matches ..1 run schedule function scaffolding_rush:clear/game/area 1t
-execute as @e[type=marker,name="ScR_ClearGame",limit=1] if score @s YEntity matches ..1 at @s run function scaffolding_rush:clear/game/finish
+execute as @e[type=marker,name="ScR_ClearGame",limit=1] if score @s YEntity matches ..1 at @s run schedule function scaffolding_rush:clear/game/finish 5t

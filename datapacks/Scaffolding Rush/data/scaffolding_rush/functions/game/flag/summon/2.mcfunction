@@ -1,0 +1,6 @@
+
+summon minecraft:armor_stand ~ ~-2 ~ {Invisible:1b,NoGravity:1b,Invulnerable:1b,DisabledSlots:0,Tags:["Flag","new","selected","flagTwo"]}
+
+execute as @e[type=armor_stand,tag=selected,tag=Flag,limit=1] run function scaffolding_rush:game/flag/banner/head/2
+
+tag @e[type=armor_stand,tag=selected,tag=Flag,limit=1] remove selected

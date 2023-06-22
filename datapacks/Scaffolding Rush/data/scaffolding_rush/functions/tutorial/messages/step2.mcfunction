@@ -1,3 +1,6 @@
 
-tellraw @s ["",{"text":"2/5) ","color":"gold"},{"text":"[","color":"yellow"},{"keybind":"key.sneak","color":"yellow"},{"text":"]","color":"yellow"},{"text":" allows you to go down without falling throught the scaffoldings","color":"dark_green"}]
+tellraw @s[scores={language=0}]  ["",{"text":"======================","color":"gray"},{"text":"\n\n"},{"text":"Tutorial [2/5]","bold":true,"color":"gold"},{"text":"\n\n"},{"text":"You can ","color":"white"},{"text":"sneak","color":"light_purple"},{"text":" <","color":"gray"},{"keybind":"key.sneak","color":"gray"},{"text":">","color":"gray"},{"text":" to go ","color":"white"},{"text":"down","color":"gold"},{"text":" without falling throught the scaffoldings","color":"white"},{"text":"\n\n"},{"text":"======================","color":"gray"}]
+tellraw @s[scores={language=1}]  ["",{"text":"======================","color":"gray"},{"text":"\n\n"},{"text":"Tutorial [2/5]","bold":true,"color":"gold"},{"text":"\n\n"},{"text":"Tu peux ","color":"white"},{"text":"t'accroupir","color":"light_purple"},{"text":" <","color":"gray"},{"keybind":"key.sneak","color":"gray"},{"text":">","color":"gray"},{"text":" pour ","color":"white"},{"text":"descendre","color":"gold"},{"text":" sans tomber des échaffaudages","color":"white"},{"text":"\n\n"},{"text":"======================","color":"gray"}]
+playsound block.note_block.bell ambient @s ~ ~ ~ 1000 1.41
+
 tag @s add TutorialMessage2

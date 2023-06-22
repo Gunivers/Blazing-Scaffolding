@@ -2,6 +2,8 @@ scoreboard players reset @a StartGame
 execute if score Admin options matches 1 as @a[tag=admin] run scoreboard players enable @s StartGame
 execute if score Admin options matches 0 as @a run scoreboard players enable @s StartGame
 
+tag @s add titleStart
+
 # Count active teams
 scoreboard players set RemainingTeam global 0
 execute if entity @a[team=blue] run scoreboard players add RemainingTeam global 1

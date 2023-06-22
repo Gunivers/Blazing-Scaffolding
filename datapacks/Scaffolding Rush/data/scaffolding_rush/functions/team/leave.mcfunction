@@ -2,8 +2,7 @@
 team leave @s
 execute as @s run function scaffolding_rush:lobby/base_egg/clear_egg
 function scaffolding_rush:team/join/killbase
-clear @s
-tag @s remove HaveItems
+function scaffolding_rush:item/clear_items
 
 playsound minecraft:block.note_block.bit ambient @s ~ ~ ~ 1 0.5 1
 tellraw @a[scores={language=0}] ["",{"text":"[BS]","color":"gold"},{"text":" "},{"selector":"@s","color":"white"},{"text":" is a spectator","color":"gray"}]
