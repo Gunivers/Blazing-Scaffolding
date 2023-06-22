@@ -7,7 +7,7 @@
 #                                    |___/                                                                                                                                                                                                                                      
 
 # Avoid hunger
-effect give @a minecraft:saturation 999999 1 true
+effect give @a minecraft:saturation infinite 1 true
 
 # Disable offhand
 # execute as @a[tag=!flag_carry,nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand

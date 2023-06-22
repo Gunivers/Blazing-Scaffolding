@@ -1,8 +1,15 @@
+# grants levitation to players moving upward in a scaffolding and not shifting
 
-#grants levitation to players moving upward in a scaffolding and not shifting
-effect clear @a levitation
-effect give @a[scores={climbing=1..,crouching=0}] levitation 1 10
+tag @a[scores={climbing=1..,crouching=0}] add fastClimbTick
 
-#reset the detection scores
+effect clear @a[tag=fastClimb,tag=!fastClimbTick] levitation
+effect give @a[tag=fastClimbTick] levitation 1 10
+
+tag @a[tag=fastClimbTick] add fastClimb
+tag @a[tag=!fastClimbTick] remove fastClimb
+
+tag @a remove fastClimbTick
+
+# reset the detection scores
 scoreboard players set @a climbing 0
 scoreboard players set @a crouching 0
