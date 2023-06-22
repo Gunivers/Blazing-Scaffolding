@@ -4,5 +4,7 @@ tellraw @s ["",{"text":"\n"},{"text":"  Welcome on ","color":"gold"},{"text":"Bl
 
 scoreboard players operation @a gameId = GameId global
 
+execute if score GameLobby global matches 1 run schedule function scaffolding_rush:tutorial/msg_lobby 10s
+
 teleport @s 0 24 0 0 0
 spawnpoint @s 0 24 0 0
