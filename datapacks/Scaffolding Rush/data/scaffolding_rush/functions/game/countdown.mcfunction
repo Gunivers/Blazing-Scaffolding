@@ -62,7 +62,7 @@ scoreboard players operation RespawnDelayTics global *= #20 global
 scoreboard players operation WorldborderStartTimeTics global = WorldborderStartTime options
 scoreboard players operation WorldborderStartTimeTics global *= #20 global
 scoreboard players operation WorldborderStartTimeTics global *= #60 global
-execute if score WorldborderStartTime options matches 0 run scoreboard players operation WorldborderStartTimeTics global = #0 const
+execute if score WorldborderStartTime options matches 0 run scoreboard players operation WorldborderStartTimeTics global = #1 const
 
 
 #reset villagers respawn countdowns
