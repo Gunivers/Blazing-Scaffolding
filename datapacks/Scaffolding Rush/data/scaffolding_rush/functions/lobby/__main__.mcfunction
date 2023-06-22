@@ -3,7 +3,9 @@ execute as @e store result score @s XEntity run data get entity @s Pos[0]
 execute as @a store result score @s YEntity run data get entity @s Pos[1]
 execute as @e store result score @s ZEntity run data get entity @s Pos[2]
 
-execute as @a[gamemode=survival] run gamemode adventure
+#can place on
+execute as @a[nbt=!{SelectedItem: {tag: {sc.item:1}}},gamemode=adventure] run gamemode survival
+execute as @a[nbt={SelectedItem: {tag: {sc.item:1}}},gamemode=survival] run gamemode adventure
 
 #base
 execute at @e[type=minecraft:item,nbt={Item:{tag:{EntityTag:{Tags:["baseTeam"]}}}}] as @a[distance=..5] if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give

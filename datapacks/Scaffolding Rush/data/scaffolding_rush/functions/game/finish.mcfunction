@@ -13,8 +13,10 @@ execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] run scoreboard pla
 
 execute at @e[type=marker,name="ScR_BuildLimit"] run teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 ~10 1000
 
-schedule function scaffolding_rush:reset 60t
-schedule function scaffolding_rush:lobby/load 64t
+execute as @a run function scaffolding_rush:item/clear_items
+
+schedule function scaffolding_rush:reset 100t
+schedule function scaffolding_rush:lobby/load 104t
 
 execute if score RandomTeam options matches 1 as @a[team=!] run team join random @s
 

@@ -1,7 +1,6 @@
 gamemode adventure @a[team=!]
 gamemode spectator @a[team=]
-clear @a
-tag @a remove HaveItems
+execute as @a run function scaffolding_rush:item/clear_items
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 worldborder center 1000 1000
@@ -13,7 +12,6 @@ scoreboard players set GameLoading global 1
 scoreboard players add GameId global 1
 scoreboard players operation @a gameId = GameId global
 
-setblock 0 5 7 cave_air
 
 function scaffolding_rush:team/random
 
@@ -23,15 +21,16 @@ function scaffolding_rush:broadcast/10s
 
 teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 2 1000
 
-kill @e[tag=lobbyText]
 kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]
+
 
 # Unload the tutorial world
 function scaffolding_rush:tutorial/unload
 
 schedule function scaffolding_rush:team/create_base/create 4s
+schedule function scaffolding_rush:team/create_base/create 2.5s
 
 schedule function scaffolding_rush:broadcast/5s 5s
 schedule function scaffolding_rush:broadcast/4s 6s
@@ -68,7 +67,7 @@ scoreboard players operation RespawnDelayTics global *= #20 global
 scoreboard players operation WorldborderStartTimeTics global = WorldborderStartTime options
 scoreboard players operation WorldborderStartTimeTics global *= #20 global
 scoreboard players operation WorldborderStartTimeTics global *= #60 global
-execute if score WorldborderStartTime options matches 0 run scoreboard players operation WorldborderStartTimeTics global = #0 const
+execute if score WorldborderStartTime options matches 0 run scoreboard players operation WorldborderStartTimeTics global = #1 const
 
 
 #reset villagers respawn countdowns
@@ -90,4 +89,4 @@ execute unless score FlagTakeOver options matches 0 if entity @a[team=red] run s
 execute unless score FlagTakeOver options matches 0 if entity @a[team=yellow] run scoreboard players set Yellow Score 0
 
 #create the firsts flags to capture in the flaghunt gamemode
-execute unless score FlagTakeOver options matches 0 run function scaffolding_rush:flag/new_spreaded
+execute unless score FlagTakeOver options matches 0 run function scaffolding_rush:game/flag/new_spreaded
