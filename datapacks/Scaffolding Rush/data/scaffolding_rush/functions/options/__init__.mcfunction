@@ -95,3 +95,5 @@ execute unless score VolcanoTargetRate options matches 0.. run scoreboard player
 scoreboard objectives add opt_volcano trigger
 execute unless score Volcano options matches 0.. run scoreboard players set Volcano options 0
 
+# Tutorial
+scoreboard objectives add ExitTutorial trigger
