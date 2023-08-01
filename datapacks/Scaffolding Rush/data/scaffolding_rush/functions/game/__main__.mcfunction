@@ -75,3 +75,10 @@ execute if entity @a[team=green,tag=!TeamEliminated] run scoreboard players add 
 execute if entity @a[team=red,tag=!TeamEliminated] run scoreboard players add RemainingTeam global 1
 execute if entity @a[team=yellow,tag=!TeamEliminated] run scoreboard players add RemainingTeam global 1
 
+# Glow player holding villagers
+execute as @a[team=blue,gamemode=!spectator] store result score @s glib run clear @s squid_spawn_egg 0
+execute as @a[team=red,gamemode=!spectator] store result score @s glib run clear @s mooshroom_spawn_egg 0
+execute as @a[team=yellow,gamemode=!spectator] store result score @s glib run clear @s blaze_spawn_egg 0
+execute as @a[team=green,gamemode=!spectator] store result score @s glib run clear @s slime_spawn_egg 0
+
+effect give @a[gamemode=!spectator,scores={glib=1..}] minecraft:glowing 1 1 true
