@@ -6,9 +6,11 @@ data/raids.dat
 DIM-1/data/raids.dat
 DIM1/data/raids_end.dat
 level.dat_old
-
+.vscode/
 entities/
 poi/
-
+uid.dat
 dploy.yaml
 datapacks/.rev
+datapacks/bukkit/pack.mcmeta
+session.lock
