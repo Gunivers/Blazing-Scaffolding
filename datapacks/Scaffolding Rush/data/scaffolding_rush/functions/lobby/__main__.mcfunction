@@ -36,3 +36,5 @@ scoreboard players reset @a bellring
 
 # interaction
 function scaffolding_rush:lobby/interaction/__main__
+
+execute as @a[gamemode=survival] at @s if block ~ ~-0.01 ~ magma_block run kill @s
