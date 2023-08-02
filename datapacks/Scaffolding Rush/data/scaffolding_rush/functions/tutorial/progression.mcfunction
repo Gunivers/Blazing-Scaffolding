@@ -1,4 +1,5 @@
 execute as @s at @s store result score @s XEntity run data get entity @s Pos[0]
+scoreboard players add @s XEntity 1000
 
 execute if score @s[tag=!TutorialMessage1] XEntity matches -15.. run function scaffolding_rush:tutorial/messages/step1
 execute if score @s[tag=!TutorialMessage2] XEntity matches -9.. run function scaffolding_rush:tutorial/messages/step2

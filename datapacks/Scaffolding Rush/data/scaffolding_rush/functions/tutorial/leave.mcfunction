@@ -1,5 +1,5 @@
 
-execute unless entity @e[type=marker,tag=TutorialCellClear,limit=1] in scaffolding_rush:tutorialworld run summon marker -21.5 1 0.5 {Tags:["TutorialCellClear"]}
+execute unless entity @e[type=marker,tag=TutorialCellClear,limit=1] run summon marker -1021.5 1 1000.5 {Tags:["TutorialCellClear"]}
 execute store result entity @e[type=marker,tag=TutorialCellClear,limit=1] Pos[2] double 1 run scoreboard players get @s TutorialCellZ
 execute as @e[type=marker,tag=TutorialCellClear] at @s run function scaffolding_rush:tutorial/room/clear
 

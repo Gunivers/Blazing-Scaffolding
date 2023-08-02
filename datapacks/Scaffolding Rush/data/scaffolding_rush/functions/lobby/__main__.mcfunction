@@ -15,7 +15,7 @@ execute as @e[type=minecraft:armor_stand,tag=baseTeam,tag=!villagerSpawned] run 
 # execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function scaffolding_rush:lobby/base_egg/remove_at_button
 
 #check player coordonates
-execute unless score GameEnd global matches 1 as @a[gamemode=!spectator] at @s run function scaffolding_rush:lobby/correct_coordinates
+execute unless score GameEnd global matches 1 as @a[gamemode=!spectator,tag=!inTutorial] at @s run function scaffolding_rush:lobby/correct_coordinates
 
 function scaffolding_rush:lobby/animation/__main__
 

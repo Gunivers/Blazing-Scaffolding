@@ -1,9 +1,9 @@
 
-#increase the worldborder size in the dimension
-#worldborder set 171
+#increase the worldborder size 
+worldborder set 3000
 
 scoreboard players set TutorialPlacementRecursionStep global 0
-execute positioned -21.5 1 0.5 in scaffolding_rush:tutorialworld run function scaffolding_rush:tutorial/room/step_right
+execute positioned -1021.5 1 1000.5 run function scaffolding_rush:tutorial/room/step_right
 
 # Trigger
 scoreboard players set @s tuto 0
