@@ -12,8 +12,5 @@ scoreboard players set @s lobby 0
 loot replace entity @s hotbar.0 loot scaffolding_rush:item/scaffolding
 # item replace entity @s hotbar.1 with minecraft:cyan_concrete_powder{HideFlags:24,CanPlaceOn:["#scaffolding_rush:scaffolding"],CanDestroy:["#scaffolding_rush:scaffolding","#scaffolding_rush:sand"]} 42
 
-scoreboard players set @s timer 0
-scoreboard players enable @s ExitTutorial
-
 scoreboard players enable @s[tag=!inTutorial] tuto
 scoreboard players enable @s[tag=inTutorial] lobby
