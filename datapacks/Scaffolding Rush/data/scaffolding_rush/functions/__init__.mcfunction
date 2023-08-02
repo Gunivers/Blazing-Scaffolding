@@ -13,6 +13,9 @@ function scaffolding_rush:tutorial/forceload
 scoreboard objectives add StartGame trigger
 scoreboard objectives add Reset trigger
 
+scoreboard objectives add tuto trigger
+scoreboard objectives add lobby trigger
+
 scoreboard objectives add glib.res0 dummy
 
 #internal values
@@ -38,6 +41,7 @@ scoreboard objectives add crouching minecraft.custom:minecraft.sneak_time
 scoreboard objectives add bellring minecraft.custom:minecraft.bell_ring
 scoreboard objectives add lightLevel dummy
 scoreboard objectives add health dummy
+scoreboard objectives add sc.timer.tutorial dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg

@@ -36,3 +36,5 @@ scoreboard players reset @a bellring
 
 # interaction
 function scaffolding_rush:lobby/interaction/__main__
+
+execute as @a[scores={tuto=1}] run function scaffolding_rush:tutorial/join

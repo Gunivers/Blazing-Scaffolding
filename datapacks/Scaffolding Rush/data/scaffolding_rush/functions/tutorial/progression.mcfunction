@@ -16,3 +16,15 @@ execute if score @s timer matches 3600 run tellraw @s[scores={language=1}] ["",{
 # Command for exiting
 execute store result score @s usedTrigger run scoreboard players enable @s ExitTutorial
 execute if score @s usedTrigger matches 1 run function scaffolding_rush:tutorial/leave
+scoreboard players add @s sc.timer.tutorial 1
+execute if score @s sc.timer.tutorial matches 3600 run tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"It looks like you are stuck in the tutorial, it was not meant to last this long\nUse ","color":"gray"},{"text":"/trigger lobby","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger lobby"},"hoverEvent":{"action":"show_text","contents":"Suggest command"}},{"text":" to ","color":"gray"},{"text":"skip it","color":"gold"}]
+execute if score @s sc.timer.tutorial matches 3600 run tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Il semblerait que vous êtes bloqué dans le tutoriel, il n'était pas cencé durer si longtemps\nUtilisez ","color":"gray"},{"text":"/trigger lobby","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger lobby"},"hoverEvent":{"action":"show_text","contents":"Suggérer la commande"}},{"text":" pour ","color":"gray"},{"text":"en sortir","color":"gold"}]
+
+# Proposes to skip the tutorial if the player was in the tutorial for over 3 min
+scoreboard players add @s timer 1
+execute if score @s timer matches 3600 run tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"It looks like you are stuck in the tutorial, it was not meant to last this long\nUse ","color":"gray"},{"text":"/trigger ExitTutorial","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger ExitTutorial"},"hoverEvent":{"action":"show_text","contents":"Suggest command"}},{"text":" to ","color":"gray"},{"text":"skip it","color":"gold"}]
+execute if score @s timer matches 3600 run tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Il semblerait que vous êtes bloqué dans le tutoriel, il n'était pas cencé durer si longtemps\nUtilisez ","color":"gray"},{"text":"/trigger ExitTutorial","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger ExitTutorial"},"hoverEvent":{"action":"show_text","contents":"Suggérer la commande"}},{"text":" pour ","color":"gray"},{"text":"en sortir","color":"gold"}]
+
+# Command for exiting
+execute store result score @s usedTrigger run scoreboard players enable @s ExitTutorial
+execute if score @s usedTrigger matches 1 run function scaffolding_rush:tutorial/leave
