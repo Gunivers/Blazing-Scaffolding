@@ -20,3 +20,5 @@ scoreboard players enable @s tuto
 
 function scaffolding_rush:item/clear_items
 function scaffolding_rush:lobby/give_items
+
+execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh

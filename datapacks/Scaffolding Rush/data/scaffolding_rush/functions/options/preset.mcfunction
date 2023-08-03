@@ -20,5 +20,5 @@ execute if score @s opt_preset matches ..-1 run function scaffolding_rush:option
 scoreboard players set @s opt_preset 0
 scoreboard players enable @s opt_preset
 
-function scaffolding_rush:options/map/wb_size_refresh
+execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
 function scaffolding_rush:options/refresh

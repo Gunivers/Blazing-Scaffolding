@@ -40,7 +40,7 @@ scoreboard players set ClearGame global 0
 scoreboard players set ClearLobby global 0
 scoreboard players set WBAddTemp options 0
 scoreboard players set Language options 0
-function scaffolding_rush:options/map/wb_size_refresh
+execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
 
 scoreboard players set RedVillagerRespawn global -1
 scoreboard players set BlueVillagerRespawn global -1

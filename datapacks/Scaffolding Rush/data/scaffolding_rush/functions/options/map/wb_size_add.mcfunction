@@ -2,7 +2,7 @@ scoreboard players enable @a opt_wb_size_add
 
 scoreboard players operation WBAddTemp options = @s opt_wb_size_add
 
-function scaffolding_rush:options/map/wb_size_refresh
+execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
 
 function scaffolding_rush:options/refresh
 
