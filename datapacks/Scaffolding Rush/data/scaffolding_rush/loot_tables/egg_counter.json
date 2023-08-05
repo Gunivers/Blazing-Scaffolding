@@ -12,7 +12,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:24,CanPlaceOn:[],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
+          "tag": "{sc.item:1,HideFlags:24,CanPlaceOn:[],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"], EntityTag:{id:\"minecraft:area_effect_cloud\",Duration: 0}}"
         },
         {
           "function": "minecraft:set_count",
