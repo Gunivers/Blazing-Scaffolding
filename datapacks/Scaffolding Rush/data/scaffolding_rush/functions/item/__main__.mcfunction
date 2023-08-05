@@ -50,9 +50,9 @@ execute as @a if score @s sc.item.timer.snowball matches -1 unless score @s sc.i
 # reflect inventory
 execute as @a unless score @s sc.item.test.scaffolding = @s sc.item.scaffolding run function scaffolding_rush:item/give/scaffolding
 execute as @a unless score @s sc.item.test.sand = @s sc.item.sand run function scaffolding_rush:item/give/sand
-execute as @a unless score @s sc.item.test.fireball = @s sc.item.real.fireball run function scaffolding_rush:item/give/fireball
-execute as @a unless score @s sc.item.test.ender_pearl = @s sc.item.real.ender_pearl run function scaffolding_rush:item/give/ender_pearl
-execute as @a unless score @s sc.item.test.snowball = @s sc.item.real.snowball run function scaffolding_rush:item/give/snowball
+execute as @a[tag=!inTutorial] unless score @s sc.item.test.fireball = @s sc.item.real.fireball run function scaffolding_rush:item/give/fireball
+execute as @a[tag=!inTutorial] unless score @s sc.item.test.ender_pearl = @s sc.item.real.ender_pearl run function scaffolding_rush:item/give/ender_pearl
+execute as @a[tag=!inTutorial] unless score @s sc.item.test.snowball = @s sc.item.real.snowball run function scaffolding_rush:item/give/snowball
 
 # Adjust to max
 execute as @a if score @s sc.item.real.fireball > @s sc.item.fireball run scoreboard players operation @s sc.item.real.fireball = @s sc.item.fireball

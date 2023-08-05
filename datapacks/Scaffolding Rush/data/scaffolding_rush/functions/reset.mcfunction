@@ -40,7 +40,7 @@ scoreboard players set ClearGame global 0
 scoreboard players set ClearLobby global 0
 scoreboard players set WBAddTemp options 0
 scoreboard players set Language options 0
-function scaffolding_rush:options/map/wb_size_refresh
+execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
 
 scoreboard players set RedVillagerRespawn global -1
 scoreboard players set BlueVillagerRespawn global -1
@@ -85,7 +85,7 @@ execute unless score RandomTeam options matches 0 run team join random @a[team=!
 #advancement use_item
 advancement revoke @a from scaffolding_rush:use_item
 
-execute as @a run function scaffolding_rush:lobby/give_items
+execute as @a[tag=!inTutorial] run function scaffolding_rush:lobby/give_items
 
 scoreboard players reset @a StartGame
 scoreboard players reset @a Reset

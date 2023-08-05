@@ -26,6 +26,10 @@ kill @e[type=falling_block]
 kill @e[type=arrow]
 kill @e[type=item]
 
+
+# Unload the tutorial world
+function scaffolding_rush:tutorial/unload
+
 schedule function scaffolding_rush:team/create_base/create 2.5s
 
 schedule function scaffolding_rush:broadcast/5s 5s

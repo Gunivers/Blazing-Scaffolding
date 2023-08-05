@@ -29,8 +29,8 @@ function scaffolding_rush:lobby/text/team/summon
 setblock -4 24 8 minecraft:ender_chest
 summon minecraft:text_display -4 25.2 8 {text: '{"text":"Options", "color":"gray"}', Tags: ["lobbyText"], billboard: 'center', brightness: {block: 10, sky: 10}}
 # How to play
-summon minecraft:text_display 4 25.5 -2 {text: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], billboard: 'center', brightness: {block: 10, sky: 10}}
-summon minecraft:interaction 4 24 -2 {height: 1.2d, width: 1.2d, Tags: ["lobbyInteraction", "LobbyHTP"]}
+# summon minecraft:text_display 4 25.5 -2 {text: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], billboard: 'center', brightness: {block: 10, sky: 10}}
+# summon minecraft:interaction 4 24 -2 {height: 1.2d, width: 1.2d, Tags: ["lobbyInteraction", "LobbyHTP"]}
 
 scoreboard players reset @a bellring
 setblock 0 25 6 bell[attachment=floor,facing=south]
@@ -68,3 +68,7 @@ function scaffolding_rush:lobby/text/scaff
 
 function scaffolding_rush:lobby/text/refresh
 function scaffolding_rush:lobby/preset_villager/refresh
+
+# Load tutorial world
+function scaffolding_rush:tutorial/forceload
+scoreboard players enable @a[tag=!inTutorial] tuto

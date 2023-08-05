@@ -1,13 +1,20 @@
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 kill @e[type=!player]
 
+# Game
 forceload add 1100 1100 900 900
+# Lobby
 forceload add 100 100 -100 -100
+# tutorial
+function scaffolding_rush:tutorial/forceload
 
 #trigger controls
 # use "/scoreboard players set DevelopementMode global 1" in order to start the map solo
 scoreboard objectives add StartGame trigger
 scoreboard objectives add Reset trigger
+
+scoreboard objectives add tuto trigger
+scoreboard objectives add lobby trigger
 
 scoreboard objectives add glib.res0 dummy
 
@@ -19,6 +26,7 @@ scoreboard objectives add options dummy
 scoreboard objectives add XEntity dummy
 scoreboard objectives add YEntity dummy
 scoreboard objectives add ZEntity dummy
+scoreboard objectives add TutorialCellZ dummy
 scoreboard objectives add usedSnowball minecraft.used:minecraft.snowball
 scoreboard objectives add gameId dummy
 scoreboard objectives add playerID dummy
@@ -33,6 +41,7 @@ scoreboard objectives add crouching minecraft.custom:minecraft.sneak_time
 scoreboard objectives add bellring minecraft.custom:minecraft.bell_ring
 scoreboard objectives add lightLevel dummy
 scoreboard objectives add health dummy
+scoreboard objectives add sc.timer.tutorial dummy
 
 scoreboard objectives add killed deathCount
 scoreboard objectives add bluePlaced minecraft.used:squid_spawn_egg

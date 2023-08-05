@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "blue_concrete_powder placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "block": "minecraft:cyan_concrete_powder"
+      }
+    }
+  },
+  "rewards": {
+    "function": "scaffolding_rush:tutorial/replenish/cyan_concrete_powder"
+  },
+  "parent": "scaffolding_rush:replenish"
+}
