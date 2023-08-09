@@ -1,4 +1,5 @@
-execute at @s run teleport @s ~-1000 ~ ~-1000
+spreadplayers 0 0 0 5 false @s
+execute at @s run teleport @s ~ ~-11 ~ 0 0
 tag @s remove InGame
-spawnpoint @a 0 24 0
+spawnpoint @a 1 24 1
 gamemode adventure @s

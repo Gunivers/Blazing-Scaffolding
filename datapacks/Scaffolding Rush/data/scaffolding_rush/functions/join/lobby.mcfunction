@@ -1,4 +1,5 @@
 execute as @s[tag=InGame] at @s run function scaffolding_rush:lobby/tp_to_lobby
+execute as @s[tag=inTutorial] at @s run function scaffolding_rush:lobby/tp_to_lobby
 
 gamemode adventure
 execute if score RandomTeam options matches 1 if entity @s[team=] run team join random
