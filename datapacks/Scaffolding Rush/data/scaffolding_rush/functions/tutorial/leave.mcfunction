@@ -3,8 +3,7 @@ execute unless entity @e[type=marker,tag=TutorialCellClear,limit=1] run summon m
 execute store result entity @e[type=marker,tag=TutorialCellClear,limit=1] Pos[2] double 1 run scoreboard players get @s TutorialCellZ
 execute as @e[type=marker,tag=TutorialCellClear] at @s run function scaffolding_rush:tutorial/room/clear
 
-execute in overworld run tp @s 0 25 0 0 0
-spawnpoint @s 0 25 0
+function scaffolding_rush:join/lobby
 
 tag @s remove TutorialMessage1
 tag @s remove TutorialMessage2
