@@ -14,7 +14,6 @@ execute if score Admin options matches 1.. run scoreboard players set Admin opti
 
 tag @a remove admin
 execute if score Admin options matches 1 run tag @a[scores={opt_admin=1}] add admin
-execute if score Admin options matches 1 run clear @a[tag=!admin] minecraft:written_book
 
 scoreboard players set @a opt_admin 0
 execute as @a run function scaffolding_rush:options/disable_all
