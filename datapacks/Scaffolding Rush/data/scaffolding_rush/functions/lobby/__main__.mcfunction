@@ -39,6 +39,10 @@ function scaffolding_rush:lobby/interaction/__main__
 
 execute as @a[gamemode=survival] at @s if block ~ ~-0.01 ~ magma_block run kill @s
 
+execute as @a at @s if block ~ ~ ~ moving_piston run effect give @s weakness 1 255 true
+execute as @a at @s if block ~ ~ ~ moving_piston run effect give @s resistance 1 255 true
+execute as @a at @s if block ~ ~ ~ moving_piston run effect give @s regeneration 1 255 true
+
 
 execute as @e[type=arrow] at @s if block ~ ~ ~ moving_piston run tag @s add LobbyProtection
 execute as @e[tag=Fireball] at @s if block ~ ~ ~ moving_piston run tag @s add LobbyProtection
