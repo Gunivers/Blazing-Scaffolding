@@ -52,11 +52,11 @@ with open(option_name+".mcfunction", "w", encoding='utf-8') as f:
 
 execute if score @s opt_"""+option_name+""" matches """+min_val+""".."""+max_val+""" run scoreboard players operation """+fake_player_name+""" options = @s opt_"""+option_name+"""
 
-tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been set to ","color":"gray"},{"score":{"name":\""""+fake_player_name+"""","objective":"options"},"color":"gold"},{"text":"","color":"gold"}]
+tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been set to ","color":"gray"},{"score":{"name":\""""+fake_player_name+"""","objective":"options"},"color":"gold"},{"text":"","color":"gold"}]
 
 
 
-tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été mise à ","color":"gray"},{"score":{"name":\""""+fake_player_name+"""","objective":"options"},"color":"gold"},{"text":"","color":"gold"}]
+tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été mise à ","color":"gray"},{"score":{"name":\""""+fake_player_name+"""","objective":"options"},"color":"gold"},{"text":"","color":"gold"}]
 
 scoreboard players set @s opt_"""+option_name+""" 0
 scoreboard players enable @s opt_"""+option_name+"""
