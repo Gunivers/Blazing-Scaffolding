@@ -21,3 +21,6 @@ function scaffolding_rush:item/clear_items
 function scaffolding_rush:lobby/give_items
 
 execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
+
+tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s","color":"aqua"},{"text":" exited the tutorial ","color":"gray"},{"text":"[Join]","color":"green","clickEvent":{"action":"run_command","value":"/trigger tuto"},"hoverEvent":{"action":"show_text","contents":"/trigger tuto"}}]
+tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s","color":"aqua"},{"text":" est sorti du tutoriel ","color":"gray"},{"text":"[Rejoindre]","color":"green","clickEvent":{"action":"run_command","value":"/trigger tuto"},"hoverEvent":{"action":"show_text","contents":"/trigger tuto"}}]
