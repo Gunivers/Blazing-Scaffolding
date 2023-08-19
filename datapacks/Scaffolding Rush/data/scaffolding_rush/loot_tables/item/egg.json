@@ -86,7 +86,7 @@
           "function": "minecraft:set_name",
           "entity": "this",
           "name": {
-            "text": "Teams Villager",
+            "text": "Team's Villager",
             "italic": false
           },
           "conditions": [
