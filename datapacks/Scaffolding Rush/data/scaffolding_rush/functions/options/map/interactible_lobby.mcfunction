@@ -15,4 +15,4 @@ scoreboard players set @s opt_interactible_lobby 0
 scoreboard players enable @s opt_interactible_lobby
 
 function scaffolding_rush:options/refresh
-execute as @a at @s run function scaffolding_rush:lobby/give_items
+execute as @a at @s run function scaffolding_rush:lobby/refresh_items

@@ -10,6 +10,13 @@ execute as @e[type=minecraft:armor_stand,tag=baseTeam,tag=!villagerSpawned] run 
 # #button place base
 # execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function scaffolding_rush:lobby/base_egg/remove_at_button
 
+# Give items outside the central scaffolding and remove them inside of it
+execute as @a[tag=!inLobbyCenter] positioned -6 24 -5 if entity @s[dx=14,dy=14,dz=14] run function scaffolding_rush:lobby/refresh_items
+execute as @a[tag=!inLobbyCenter] positioned -6 24 -5 if entity @s[dx=14,dy=14,dz=14] run tag @s add inLobbyCenter
+
+execute as @a[tag=inLobbyCenter] positioned -6 24 -5 unless entity @s[dx=14,dy=14,dz=14] run function scaffolding_rush:lobby/refresh_items
+execute as @a[tag=inLobbyCenter] positioned -6 24 -5 unless entity @s[dx=14,dy=14,dz=14] run tag @s remove inLobbyCenter
+
 #check player coordonates
 execute unless score GameEnd global matches 1 as @a[gamemode=!spectator,tag=!inTutorial] at @s run function scaffolding_rush:lobby/correct_coordinates
 
