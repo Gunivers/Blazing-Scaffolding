@@ -3,7 +3,7 @@
 # tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Bridge Chaos","color":"green"},{"text":" has been chosen","color":"gray"}]
 # tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Bridge Chaos","color":"green"},{"text":" a été choisi","color":"gray"}]
 
-scoreboard players set Preset options 9
+scoreboard players set Preset options 6
 
 # Map
 scoreboard players set LavaSpeed options 0
@@ -15,8 +15,7 @@ scoreboard players set WorldborderShrink options 0
 scoreboard players set BuildHeight options 30
 scoreboard players set UseTimeLimit options 1
 scoreboard players set TimeLimit options 5
-scoreboard players set UseScoreLimit options 1
-scoreboard players set ScoreLimit options 20
+scoreboard players set UseScoreLimit options 0
 
 # Gameplay
 scoreboard players set Regen options 1

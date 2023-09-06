@@ -4,7 +4,7 @@ scoreboard objectives add usedTrigger dummy
 
 #initialize the options scores
 scoreboard objectives add opt_preset trigger
-execute unless score Preset options matches 1..9 run scoreboard players set Preset options 1
+execute unless score Preset options matches 1..7 run scoreboard players set Preset options 1
 scoreboard objectives add opt_perf_mode trigger
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
 scoreboard objectives add opt_language trigger
