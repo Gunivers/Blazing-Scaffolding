@@ -3,16 +3,19 @@ execute as @e store result score @s XEntity run data get entity @s Pos[0]
 execute as @a store result score @s YEntity run data get entity @s Pos[1]
 execute as @e store result score @s ZEntity run data get entity @s Pos[2]
 
-#can place on
-execute as @a[nbt=!{SelectedItem: {tag: {sc.item:1}}},gamemode=adventure] run gamemode survival
-execute as @a[nbt={SelectedItem: {tag: {sc.item:1}}},gamemode=survival] run gamemode adventure
-
 #base
 execute at @e[type=minecraft:item,nbt={Item:{tag:{EntityTag:{Tags:["baseTeam"]}}}}] as @a[distance=..5] if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
 execute as @e[type=minecraft:armor_stand,tag=baseTeam,tag=!villagerSpawned] run function scaffolding_rush:lobby/base_egg/spawn
 
 # #button place base
 # execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function scaffolding_rush:lobby/base_egg/remove_at_button
+
+# Give items outside the central scaffolding and remove them inside of it
+execute as @a[tag=!inLobbyCenter] positioned -6 24 -5 if entity @s[dx=14,dy=14,dz=14] run function scaffolding_rush:lobby/refresh_items
+execute as @a[tag=!inLobbyCenter] positioned -6 24 -5 if entity @s[dx=14,dy=14,dz=14] run tag @s add inLobbyCenter
+
+execute as @a[tag=inLobbyCenter] positioned -6 24 -5 unless entity @s[dx=14,dy=14,dz=14] run function scaffolding_rush:lobby/refresh_items
+execute as @a[tag=inLobbyCenter] positioned -6 24 -5 unless entity @s[dx=14,dy=14,dz=14] run tag @s remove inLobbyCenter
 
 #check player coordonates
 execute unless score GameEnd global matches 1 as @a[gamemode=!spectator,tag=!inTutorial] at @s run function scaffolding_rush:lobby/correct_coordinates

@@ -2,7 +2,7 @@ execute store success score RandomTeam options if score RandomTeam options match
 
 execute if score RandomTeam options matches 0 run function scaffolding_rush:team/random
 execute unless score RandomTeam options matches 0 run team join random @a[team=!]
-function scaffolding_rush:lobby/give_items
+function scaffolding_rush:lobby/refresh_items
 
 
 execute if score RandomTeam options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Random teams have been ","color":"gray"},{"text":"deactivated","color":"red"}]

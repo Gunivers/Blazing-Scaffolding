@@ -9,4 +9,4 @@ scoreboard players set @a opt_language 0
 scoreboard players enable @a opt_language
 
 function scaffolding_rush:options/refresh
-execute if score GameLobby global matches 1 run function scaffolding_rush:lobby/give_items
+execute if score GameLobby global matches 1 run function scaffolding_rush:lobby/refresh_items
