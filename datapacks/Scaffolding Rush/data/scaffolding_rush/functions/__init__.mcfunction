@@ -108,11 +108,19 @@ team add yellow
 team add green
 team add random
 
+team add purple_glow
+team add yellow_glow
+team add cyan_glow
+
+
 team modify red color red
 team modify blue color blue
 team modify yellow color yellow
 team modify green color green
 team modify random color dark_purple
+team modify purple_glow color dark_purple
+team modify yellow_glow color yellow
+team modify cyan_glow color aqua
 
 team modify red collisionRule never
 team modify blue collisionRule never
@@ -124,6 +132,7 @@ team modify blue friendlyFire false
 team modify yellow friendlyFire false
 team modify green friendlyFire false
 team modify random friendlyFire true
+
 
 #Score
 team join blue Blue
@@ -149,7 +158,7 @@ gamerule doFireTick false
 gamerule doImmediateRespawn true
 gamerule doInsomnia false
 gamerule doLimitedCrafting
-gamerule doMobLoot true
+gamerule doMobLoot false
 gamerule doMobSpawning false
 gamerule doPatrolSpawning false
 gamerule doTileDrops false

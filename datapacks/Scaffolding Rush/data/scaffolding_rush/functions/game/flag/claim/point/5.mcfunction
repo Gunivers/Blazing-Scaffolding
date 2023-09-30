@@ -1,7 +1,7 @@
 tag @s remove flagFive
 
 title @s times 0 20 0
-title @s title {"text":"+5","color":"dark_red"}
+title @s title {"text":"+5","color":"aqua"}
 
 execute if entity @s[team=blue] run tellraw @a ["",{"text":"[","color":"blue"},{"selector":"@s","color":"blue"},{"text":"]","color":"blue"},{"text":" +5 points","color":"gray"}]
 execute if entity @s[team=green] run tellraw @a ["",{"text":"[","color":"green"},{"selector":"@s","color":"green"},{"text":"]","color":"green"},{"text":" +5 points","color":"gray"}]

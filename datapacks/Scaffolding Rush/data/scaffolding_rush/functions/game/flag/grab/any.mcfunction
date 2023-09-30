@@ -12,4 +12,4 @@ execute if entity @e[type=armor_stand,tag=processed,tag=flagOne] run function sc
 execute if entity @e[type=armor_stand,tag=processed,tag=flagTwo] run function scaffolding_rush:game/flag/grab/point/2
 execute if entity @e[type=armor_stand,tag=processed,tag=flagFive] run function scaffolding_rush:game/flag/grab/point/5
 
-kill @e[type=armor_stand,tag=processed]
+execute as @e[type=armor_stand,tag=processed] at @s run function scaffolding_rush:game/flag/stack_kill

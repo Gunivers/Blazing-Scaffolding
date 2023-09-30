@@ -17,11 +17,11 @@ execute if score FlagTakeOverCountdown global >= FlagTakeOverSpawnInterval optio
 execute run scoreboard players add FlagTakeOverCountdown global 1
 
 #remove flags in lava
-execute as @e[type=armor_stand,tag=Flag] at @s if block ~ ~2 ~ magma_block run kill @s
+execute as @e[type=armor_stand,tag=Flag] at @s if block ~ ~2 ~ magma_block run function scaffolding_rush:game/flag/stack_kill
 
 #grabbing flag
-execute as @a[gamemode=adventure,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..2] run function scaffolding_rush:game/flag/grab/any
-execute as @a[gamemode=survival,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..2] run function scaffolding_rush:game/flag/grab/any
+execute as @a[gamemode=adventure,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..3] run function scaffolding_rush:game/flag/grab/any
+execute as @a[gamemode=survival,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..3] run function scaffolding_rush:game/flag/grab/any
 
 #depositing flag
 execute as @a[tag=flag_carry,team=blue] at @s if entity @e[type=villager,tag=game_villager,distance=..1, team=blue] run function scaffolding_rush:game/flag/claim/team/blue

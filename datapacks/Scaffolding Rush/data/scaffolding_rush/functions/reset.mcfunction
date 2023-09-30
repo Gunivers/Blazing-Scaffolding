@@ -4,7 +4,7 @@ worldborder center 0 0
 #remove bases markers
 kill @e[tag=baseTeam]
 
-kill @e[type=armor_stand,tag=Flag]
+execute as @e[type=armor_stand,tag=Flag] at @s run function scaffolding_rush:game/flag/stack_kill
 
 function scaffolding_rush:game/summon_markers
 
