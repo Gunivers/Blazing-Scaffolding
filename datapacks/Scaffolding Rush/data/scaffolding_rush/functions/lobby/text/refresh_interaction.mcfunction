@@ -13,10 +13,12 @@ data merge entity @e[type=text_display,tag=LobbyTeamMinus,limit=1,tag=!looked_at
 data merge entity @e[type=text_display,tag=LobbyTeamMinus,limit=1,tag=looked_at] {text: '{"text":"-","bold":true,"color":"white"}', background: -9426945}
 execute if score TeamNumber options matches 2 run data merge entity @e[type=text_display,tag=LobbyTeamMinus,limit=1] {text: '{"text":"-","bold":true,"color":"gray"}', background: 0}
 
-execute if score RandomTeam options matches 0 run data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=!looked_at] {text: '{"text":"random","color":"gray","strikethrough":true}', background: 0}
-execute if score RandomTeam options matches 0 run data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=looked_at] {text: '{"text":"random","color":"white","strikethrough":true}', background: -9426945}
+#execute if score RandomTeam options matches 0 run data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=!looked_at] {text: '{"text":"random","color":"gray","strikethrough":true}', background: 0}
+#execute if score RandomTeam options matches 0 run data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=looked_at] {text: '{"text":"random","color":"white","strikethrough":true}', background: -9426945}
 
-execute if score RandomTeam options matches 1 run data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=!looked_at] {text: '{"text":"random","color":"dark_purple","strikethrough":false}', background: 0}
-execute if score RandomTeam options matches 1 run data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=looked_at] {text: '{"text":"random","color":"white","strikethrough":false}', background: -9426945}
+#execute if score RandomTeam options matches 1 run 
+data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=!looked_at] {text: '{"text":"random","color":"dark_purple","strikethrough":false}', background: 0}
+#execute if score RandomTeam options matches 1 run 
+data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=looked_at] {text: '{"text":"random","color":"white","strikethrough":false}', background: -9426945}
 
 

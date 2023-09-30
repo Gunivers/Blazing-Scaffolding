@@ -1,5 +1,11 @@
-team join blue @r[team=random]
-team join red @r[team=random]
-execute if score TeamNumber options matches 3.. run team join yellow @r[team=random]
-execute if score TeamNumber options matches 4.. run team join green @r[team=random]
-execute if entity @a[team=random] run function scaffolding_rush:team/random
+
+team join random @a[team=!]
+execute store result score nb_players const if entity @a[team=random]
+
+tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Teams randomized","color":"gray"}]
+tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Equipes mélangées","color":"gray"}]
+
+execute if score nb_players const matches ..2 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"make sure to join a team in order to randomly be assigned to another.","color":"gray"}]
+execute if score nb_players const matches ..2 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"pensez à rejoindre une des équipe pour en avoir une autre attribuée au hasard","color":"gray"}]
+
+function scaffolding_rush:team/random_recursion

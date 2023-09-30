@@ -14,7 +14,7 @@ scoreboard players add GameId global 1
 scoreboard players operation @a gameId = GameId global
 
 
-function scaffolding_rush:team/random
+#function scaffolding_rush:team/random
 
 function scaffolding_rush:game/summon_markers
 
