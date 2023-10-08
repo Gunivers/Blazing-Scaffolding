@@ -6,7 +6,13 @@
       "type": "player",
       "looking_at": {
         "type": "minecraft:interaction",
-        "nbt": "{Tags:[\"lobbyTeam\"]}"
+        "nbt": "{Tags:[\"lobbyTeam\"]}",
+        "distance": {
+          "absolute": {
+            "min": 0,
+            "max": 3.6
+          }
+        }
       }
     }
   }
