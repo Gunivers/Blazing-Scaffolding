@@ -5,7 +5,7 @@ kill @e[tag=baseTeam]
 kill @e[type=armor_stand,tag=Flag]
 kill @e[type=marker,tag=fill]
 
-execute as @e[type=villager] run function scaffolding_rush:clean_kill
+execute as @e[type=villager] run function utils:clean_kill
 function scaffolding_rush:game/lava/global_rising/stop
 
 function scaffolding_rush:clear/game/launch

@@ -4,9 +4,9 @@
 # Time counter
 scoreboard players add #game.time.tick timer 1
 
-execute as @a[gamemode=!spectator,tag=!Respawning,scores={trigger.death=0}] at @s store result score @s pos.x run data get entity @s Pos[0]
-execute as @a[gamemode=!spectator,tag=!Respawning,scores={trigger.death=0}] at @s store result score @s pos.y run data get entity @s Pos[1]
-execute as @a[gamemode=!spectator,tag=!Respawning,scores={trigger.death=0}] at @s store result score @s pos.z run data get entity @s Pos[2]
+execute as @a[gamemode=!spectator,tag=!Respawning,scores={listener.death=0}] at @s store result score @s pos.x run data get entity @s Pos[0]
+execute as @a[gamemode=!spectator,tag=!Respawning,scores={listener.death=0}] at @s store result score @s pos.y run data get entity @s Pos[1]
+execute as @a[gamemode=!spectator,tag=!Respawning,scores={listener.death=0}] at @s store result score @s pos.z run data get entity @s Pos[2]
 
 # +++++++++++++++++++++++++++++++++++++
 # Mains

@@ -2,12 +2,12 @@ tp @e[type=marker,name="ScR_LavaLevel",limit=1] ~ 2 ~
 
 tag @a remove TeamEliminated
 tag @a remove player.item.have_egg
-scoreboard players set @a trigger.death 0
+scoreboard players set @a listener.death 0
 
-scoreboard players set @a trigger.use.blue_spawn_egg 0
-scoreboard players set @a trigger.use.green_spawn_egg 0
-scoreboard players set @a trigger.use.red_spawn_egg 0
-scoreboard players set @a trigger.use.yellow_spawn_egg 0
+scoreboard players set @a listener.use.blue_spawn_egg 0
+scoreboard players set @a listener.use.green_spawn_egg 0
+scoreboard players set @a listener.use.red_spawn_egg 0
+scoreboard players set @a listener.use.yellow_spawn_egg 0
 
 
 #reset flaghunt timer

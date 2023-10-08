@@ -17,7 +17,7 @@ execute if score #game.loading data matches 1 run tellraw @a[scores={option.lang
 execute if score DevelopementMode data matches 1 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
 execute if score DevelopementMode data matches 1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Rechargement en cours...","color":"gray"}]
 
-execute as @e[type=villager] run function scaffolding_rush:clean_kill
+execute as @e[type=villager] run function utils:clean_kill
 
 schedule clear scaffolding_rush:team/create_base/create
 schedule clear scaffolding_rush:broadcast/5s
@@ -47,12 +47,12 @@ scoreboard players set #villager.blue respawn.timer -1
 scoreboard players set #villager.yellow respawn.timer -1
 scoreboard players set #villager.green respawn.timer -1
 
-scoreboard players set @a trigger.use.blue_spawn_egg 0
-scoreboard players set @a trigger.use.green_spawn_egg 0
-scoreboard players set @a trigger.use.red_spawn_egg 0
-scoreboard players set @a trigger.use.yellow_spawn_egg 0
+scoreboard players set @a listener.use.blue_spawn_egg 0
+scoreboard players set @a listener.use.green_spawn_egg 0
+scoreboard players set @a listener.use.red_spawn_egg 0
+scoreboard players set @a listener.use.yellow_spawn_egg 0
 
-scoreboard players reset * trigger.death
+scoreboard players reset * listener.death
 
 team modify blue seeFriendlyInvisibles false
 team modify green seeFriendlyInvisibles false
@@ -78,7 +78,7 @@ effect give @a minecraft:instant_health 1 100 true
 execute if score Regen options matches 1 run effect give @s regeneration infinite 0 true
 
 function scaffolding_rush:clear/game/launch
-execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:clear/lobby/launch
+execute if entity @a[scores={trigger.reset=1..}] run function scaffolding_rush:clear/lobby/launch
 
 execute unless score RandomTeam options matches 0 run team join random @a[team=!]
 
@@ -87,8 +87,8 @@ advancement revoke @a from scaffolding_rush:use_item
 
 execute as @a[tag=!inTutorial] run function scaffolding_rush:lobby/refresh_items
 
-scoreboard players reset @a StartGame
-scoreboard players reset @a Reset
+scoreboard players reset @a trigger.start_game
+scoreboard players reset @a trigger.reset
 
 execute as @a run function scaffolding_rush:options/disable_all
 execute if score #admin.exist options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all

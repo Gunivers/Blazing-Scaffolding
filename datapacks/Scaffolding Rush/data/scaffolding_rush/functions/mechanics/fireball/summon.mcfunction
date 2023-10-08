@@ -3,10 +3,10 @@ playsound minecraft:entity.ghast.shoot master @a[distance=..30] ~ ~ ~ 2 2 1
 
 tag @s add eggSelect
 
-execute as @a store result score @s UUID run data get entity @s UUID[0]
-execute store result score @s interaction.UUID run data get entity @s Owner[0]
+execute as @a store result score @s uuid run data get entity @s UUID[0]
+execute store result score @s interaction.uuid run data get entity @s Owner[0]
 
-execute as @a if score @s UUID = @e[type=minecraft:egg,tag=eggSelect,limit=1] interaction.UUID run tag @s add playerSelect
+execute as @a if score @s uuid = @e[type=minecraft:egg,tag=eggSelect,limit=1] interaction.uuid run tag @s add playerSelect
 
 scoreboard players remove @a[tag=playerSelect] sc.item.real.fireball 1
 

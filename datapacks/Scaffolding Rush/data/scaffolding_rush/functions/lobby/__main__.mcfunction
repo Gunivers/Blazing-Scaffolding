@@ -29,8 +29,8 @@ execute as @e[type=marker,tag=lobbyLight] at @s if block ~ ~ ~ #scaffolding_rush
 execute as @a at @s if block ~ ~ ~ #scaffolding_rush:lobby_suffocation run function scaffolding_rush:lobby/suffocation
 
 # Start game
-execute unless score #admin.exist options matches 1 as @a[scores={bellring=1..}] run scoreboard players set @s StartGame 1
-execute if score #admin.exist options matches 1 as @a[scores={bellring=1..},tag=admin] run scoreboard players set @s StartGame 1
+execute unless score #admin.exist options matches 1 as @a[scores={bellring=1..}] run scoreboard players set @s trigger.start_game 1
+execute if score #admin.exist options matches 1 as @a[scores={bellring=1..},tag=admin] run scoreboard players set @s trigger.start_game 1
 execute if score #admin.exist options matches 1 as @a[scores={bellring=1..},tag=!admin] run tellraw @s[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Sorry, only ","color":"red"},{"selector":"@a[tag=admin]","color":"red"},{"text":" can start the game","color":"red"}]
 
 execute if score #admin.exist options matches 1 as @a[scores={bellring=1..},tag=!admin] run tellraw @s[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Désolez, seuleument ","color":"red"},{"selector":"@a[tag=admin]","color":"red"},{"text":" peut démarrer la partie","color":"red"}]

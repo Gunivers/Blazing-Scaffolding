@@ -49,7 +49,7 @@ execute at @e[tag=baseTeam,name="Yellow",limit=1] run spawnpoint @a[team=yellow]
 
 execute as @a[team=,tag=!InGame] at @s run function scaffolding_rush:game/tp_to_game
 
-execute as @e[type=villager,tag=LobbyBase] run function scaffolding_rush:clean_kill
+execute as @e[type=villager,tag=LobbyBase] run function utils:clean_kill
 execute as @a run function scaffolding_rush:lobby/base_egg/clear_egg
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit

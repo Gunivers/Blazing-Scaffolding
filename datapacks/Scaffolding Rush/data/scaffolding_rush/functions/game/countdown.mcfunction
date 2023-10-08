@@ -41,9 +41,9 @@ schedule function scaffolding_rush:game/start 10s
 
 #disable trigers
 execute as @a run function scaffolding_rush:options/disable_all
-scoreboard players reset @s tuto
-execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s Reset
-execute if score #admin.exist options matches 0 run scoreboard players enable @a Reset
+scoreboard players reset @s trigger.tuto
+execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.reset
+execute if score #admin.exist options matches 0 run scoreboard players enable @a trigger.reset
 
 #reset the time
 scoreboard players set #game.time.tick timer 0

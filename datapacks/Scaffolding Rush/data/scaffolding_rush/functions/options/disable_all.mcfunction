@@ -33,8 +33,8 @@ scoreboard players reset @s opt_volcano_pop_period
 scoreboard players reset @s opt_volcano_target_rate
 scoreboard players reset @s opt_scaff_stops_arrow
 
-scoreboard players reset @s Reset
-scoreboard players reset @s StartGame
+scoreboard players reset @s trigger.reset
+scoreboard players reset @s trigger.start_game
 
 #generated scores
 scoreboard players reset @s opt_time_limit

@@ -55,8 +55,6 @@ execute if score #villager.can_respawn options matches 1 \
 
 # Give egg --------------------------------------------------------------------
 
-tellraw @a {"score":{"name": "#villager.red","objective": "respawn.timer"}}
-
 # Red
 execute if score #villager.can_respawn options matches 1 \
         if score #villager.red respawn.timer matches 0 \

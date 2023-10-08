@@ -5,18 +5,18 @@ data modify entity @e[type=arrow,limit=1,sort=nearest] Motion set from entity @s
 
 tag @s add snowballSelect
 
-execute as @a store result score @s UUID run data get entity @s UUID[0]
-execute store result score @s interaction.UUID run data get entity @s Owner[0]
+execute as @a store result score @s uuid run data get entity @s UUID[0]
+execute store result score @s interaction.uuid run data get entity @s Owner[0]
 
-execute as @a if score @s UUID = @e[type=minecraft:snowball,tag=snowballSelect,limit=1] interaction.UUID run tag @s add playerSelect
+execute as @a if score @s uuid = @e[type=minecraft:snowball,tag=snowballSelect,limit=1] interaction.uuid run tag @s add playerSelect
 
 scoreboard players remove @a[tag=playerSelect] sc.item.real.snowball 1
 
 
-# item replace entity @a[scores={trigger.use.snowball=1..}] weapon.mainhand with air
-# loot replace entity @a[scores={trigger.use.snowball=1..}] weapon.mainhand loot scaffolding_rush:item/snowball
+# item replace entity @a[scores={listener.use.snowball=1..}] weapon.mainhand with air
+# loot replace entity @a[scores={listener.use.snowball=1..}] weapon.mainhand loot scaffolding_rush:item/snowball
 
-scoreboard players set @a trigger.use.snowball 0
+scoreboard players set @a listener.use.snowball 0
 tag @s remove snowballSelect
 tag @a remove playerSelect
 

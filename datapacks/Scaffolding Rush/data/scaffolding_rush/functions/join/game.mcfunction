@@ -9,7 +9,7 @@ tellraw @s[scores={option.language=1}] ["",{"text":"[BS]","color":"gold"},{"text
 
 bossbar set minecraft:filling_lava players @s
 
-execute if score #admin.exist options matches 1 unless entity @a[tag=admin] run scoreboard players enable @s Reset
+execute if score #admin.exist options matches 1 unless entity @a[tag=admin] run scoreboard players enable @s trigger.reset
 
 execute as @s[tag=!InGame] if score @s game.id matches 1.. at @s run function scaffolding_rush:game/tp_to_game
 

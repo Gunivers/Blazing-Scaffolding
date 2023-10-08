@@ -13,9 +13,9 @@ tag @s remove TutorialMessage5
 
 tag @s remove inTutorial
 
-scoreboard players set @s tuto 0
-scoreboard players set @s lobby 0
-scoreboard players enable @s tuto
+scoreboard players set @s trigger.tutorial 0
+scoreboard players set @s trigger.lobby 0
+scoreboard players enable @s trigger.tuto
 
 function scaffolding_rush:player/items/clear
 function scaffolding_rush:lobby/refresh_items

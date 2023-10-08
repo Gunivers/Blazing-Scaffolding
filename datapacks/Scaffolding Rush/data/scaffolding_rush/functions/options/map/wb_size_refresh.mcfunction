@@ -57,10 +57,10 @@ scoreboard players set -WBbyTwo data 0
 scoreboard players operation -WBbyTwo data -= WBbyTwo data
 
 # check for bases
-execute as @e[tag=LobbyBase] if score @s pos.x > WBbyTwo data run function scaffolding_rush:clean_kill
-execute as @e[tag=LobbyBase] if score @s pos.x < -WBbyTwo data run function scaffolding_rush:clean_kill
-execute as @e[tag=LobbyBase] if score @s pos.z > WBbyTwo data run function scaffolding_rush:clean_kill
-execute as @e[tag=LobbyBase] if score @s pos.z < -WBbyTwo data run function scaffolding_rush:clean_kill
+execute as @e[tag=LobbyBase] if score @s pos.x > WBbyTwo data run function utils:clean_kill
+execute as @e[tag=LobbyBase] if score @s pos.x < -WBbyTwo data run function utils:clean_kill
+execute as @e[tag=LobbyBase] if score @s pos.z > WBbyTwo data run function utils:clean_kill
+execute as @e[tag=LobbyBase] if score @s pos.z < -WBbyTwo data run function utils:clean_kill
 
 # reset values
 scoreboard players set WBAddTemp options 0

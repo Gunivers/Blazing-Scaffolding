@@ -18,7 +18,7 @@ kill @e[type=marker,tag=last_death]
 tag @s remove player.item.have_egg
 function scaffolding_rush:player/items/clear
 gamemode spectator @s
-scoreboard players set @s trigger.death 0
+scoreboard players set @s listener.death 0
 effect give @s instant_health 1 20
 
 # When player can respawn

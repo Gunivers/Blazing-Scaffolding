@@ -1,6 +1,6 @@
-scoreboard players reset @a StartGame
-execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s StartGame
-execute if score #admin.exist options matches 0 as @a run scoreboard players enable @s StartGame
+scoreboard players reset @a trigger.start_game
+execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.start_game
+execute if score #admin.exist options matches 0 as @a run scoreboard players enable @s trigger.start_game
 
 tag @s add titleStart
 

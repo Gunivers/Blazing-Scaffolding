@@ -15,7 +15,7 @@ execute if score #lobby.active data matches 1 run function scaffolding_rush:lobb
 function scaffolding_rush:tutorial/main
 
 # When a player join the game
-execute as @a[scores={trigger.leave=1..}] run function scaffolding_rush:join/__main__
+execute as @a[scores={listener.leave=1..}] run function scaffolding_rush:join/__main__
 execute as @a unless score @s game.id = #game.id data as @s run function scaffolding_rush:join/__main__
 
 # Flip the options value
@@ -23,9 +23,9 @@ function scaffolding_rush:options/__main__
 
 # Game management (when a game is started)
 execute if score #game.running data matches 1 run function scaffolding_rush:game/__main__
-execute if score #admin.exist options matches 1 as @a[tag=admin,scores={StartGame=1..}] run function scaffolding_rush:game/launch
-execute unless score #admin.exist options matches 1 as @a[scores={StartGame=1..}] run function scaffolding_rush:game/launch
-execute if entity @a[scores={Reset=1..}] run function scaffolding_rush:reset
+execute if score #admin.exist options matches 1 as @a[tag=admin,scores={trigger.start_game=1..}] run function scaffolding_rush:game/launch
+execute unless score #admin.exist options matches 1 as @a[scores={trigger.start_game=1..}] run function scaffolding_rush:game/launch
+execute if entity @a[scores={trigger.reset=1..}] run function scaffolding_rush:reset
 
 # Ghostblocks
 #execute as @a at @s run function scaffolding_rush:game/ghostblock_detection

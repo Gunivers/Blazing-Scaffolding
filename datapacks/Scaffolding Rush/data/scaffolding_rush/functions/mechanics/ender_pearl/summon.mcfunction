@@ -2,11 +2,11 @@ summon armor_stand ~ ~-2.1 ~ {Marker:1,NoGravity:1,Invisible:1,Tags:["ender_pear
 
 function glib.vector:classic/get_from_motion
 
-execute as @e[tag=ender_pearl_new] run scoreboard players operation @s glib.targetId = @p[scores={trigger.use.ender_pearl=1..}] glib.id
+execute as @e[tag=ender_pearl_new] run scoreboard players operation @s glib.targetId = @p[scores={listener.use.ender_pearl=1..}] glib.id
 
-scoreboard players remove @p[scores={trigger.use.ender_pearl=1..}] sc.item.real.ender_pearl 1
+scoreboard players remove @p[scores={listener.use.ender_pearl=1..}] sc.item.real.ender_pearl 1
 
-scoreboard players set @a trigger.use.ender_pearl 0
+scoreboard players set @a listener.use.ender_pearl 0
 
 scoreboard players operation @e[tag=ender_pearl_new] glib.vectorX = @s glib.vectorX
 scoreboard players operation @e[tag=ender_pearl_new] glib.vectorY = @s glib.vectorY

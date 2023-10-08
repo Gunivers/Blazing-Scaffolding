@@ -4,7 +4,7 @@ execute as @e[type=villager,tag=game_villager] at @s store result score @s pos.y
 execute as @e[type=villager,tag=game_villager] at @s store result score @s pos.z run data get entity @s Pos[2]
 
 # Clear unconsistent villagers
-execute as @e[type=villager,nbt=!{Age:0}] run function scaffolding_rush:clean_kill
+execute as @e[type=villager,nbt=!{Age:0}] run function utils:clean_kill
 
 #Add new villagers to team manually in case of server issues
 team join blue @e[type=villager,tag=new_villager,tag=blue_villager,tag=game_villager]
@@ -40,10 +40,10 @@ execute as @e[type=minecraft:villager,tag=game_villager] at @s positioned ~ ~1 ~
 
 
 #villager placed
-execute if score #game.running data matches 1 as @a[scores={trigger.use.blue_spawn_egg=1..}] run function scaffolding_rush:game/villager/placed
-execute if score #game.running data matches 1 as @a[scores={trigger.use.green_spawn_egg=1..}] run function scaffolding_rush:game/villager/placed
-execute if score #game.running data matches 1 as @a[scores={trigger.use.red_spawn_egg=1..}] run function scaffolding_rush:game/villager/placed
-execute if score #game.running data matches 1 as @a[scores={trigger.use.yellow_spawn_egg=1..}] run function scaffolding_rush:game/villager/placed
+execute if score #game.running data matches 1 as @a[scores={listener.use.blue_spawn_egg=1..}] run function scaffolding_rush:game/villager/placed
+execute if score #game.running data matches 1 as @a[scores={listener.use.green_spawn_egg=1..}] run function scaffolding_rush:game/villager/placed
+execute if score #game.running data matches 1 as @a[scores={listener.use.red_spawn_egg=1..}] run function scaffolding_rush:game/villager/placed
+execute if score #game.running data matches 1 as @a[scores={listener.use.yellow_spawn_egg=1..}] run function scaffolding_rush:game/villager/placed
 
 
 execute as @a[tag=player.item.have_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:slime_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:blaze_spawn_egg"}]}] run function scaffolding_rush:game/villager/egg/give/any

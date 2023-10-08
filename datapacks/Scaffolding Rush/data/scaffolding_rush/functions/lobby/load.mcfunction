@@ -2,14 +2,14 @@
 scoreboard players set #lobby.active data 1
 
 kill @e[tag=baseTeam]
-execute as @e[type=villager,tag=LobbyBase] run function scaffolding_rush:clean_kill
+execute as @e[type=villager,tag=LobbyBase] run function utils:clean_kill
 kill @e[type=!villager,tag=lobbyTeam]
 function scaffolding_rush:lobby/base_egg/clear_egg
 
 kill @e[tag=lobbyText]
 kill @e[tag=lobbyInteraction]
 kill @e[tag=lobbyMarker]
-execute as @e[type=villager,tag=lobbyVillager] run function scaffolding_rush:clean_kill
+execute as @e[type=villager,tag=lobbyVillager] run function utils:clean_kill
 
 
 # Preset option
@@ -71,4 +71,4 @@ function scaffolding_rush:lobby/preset_villager/refresh
 
 # Load tutorial world
 function scaffolding_rush:tutorial/forceload
-scoreboard players enable @a[tag=!inTutorial] tuto
+scoreboard players enable @a[tag=!inTutorial] trigger.tuto

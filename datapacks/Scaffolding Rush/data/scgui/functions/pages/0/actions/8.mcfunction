@@ -1,3 +1,3 @@
 
-scoreboard players set @s StartGame 1
+scoreboard players set @s trigger.start_game 1
 

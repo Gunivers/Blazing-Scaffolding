@@ -54,7 +54,7 @@ execute if entity @e[tag=ender_pearl] run function scaffolding_rush:mechanics/en
 execute if score ScaffoldingStopsArrow options matches 1 as @e[type=arrow] at @s if block ~ ~ ~ #scaffolding_rush:scaffolding run kill @s
 
 # Clear unconsistent villagers
-execute as @e[type=villager,nbt=!{Age: 0}] run function scaffolding_rush:clean_kill
+execute as @e[type=villager,nbt=!{Age: 0}] run function utils:clean_kill
 
 # hollow base
 execute as @e[type=falling_block,tag=hollow_base] run data modify entity @s Time set value 1

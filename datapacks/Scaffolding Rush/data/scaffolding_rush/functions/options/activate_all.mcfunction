@@ -32,8 +32,8 @@ scoreboard players enable @s opt_volcano_pop_period
 scoreboard players enable @s opt_volcano_target_rate
 scoreboard players enable @s opt_scaff_stops_arrow
 
-scoreboard players enable @s Reset
-scoreboard players enable @s StartGame
+scoreboard players enable @s trigger.reset
+scoreboard players enable @s trigger.start_game
 
 #generated scores
 scoreboard players enable @s opt_time_limit

@@ -18,7 +18,7 @@ scoreboard objectives add const dummy {"text":"Constants","color": "gold"}
 scoreboard objectives add game.id dummy {"text":"Game ID","color": "aqua"}
 scoreboard objectives add option.language dummy
 scoreboard objectives add tutorial.cell.z dummy {"text":"Tutorial Cell Z","color": "aqua"}
-scoreboard objectives add UUID dummy {"text":"UUID","color": "aqua"}
+scoreboard objectives add uuid dummy {"text":"UUID","color": "aqua"}
 scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "aqua"}
 
 # Entities data ---------------------------------------------------------------
@@ -27,18 +27,25 @@ scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "
 scoreboard objectives add pos.x dummy {"text":"Pos X","color": "blue"}
 scoreboard objectives add pos.y dummy {"text":"Pos Y","color": "blue"}
 scoreboard objectives add pos.z dummy {"text":"Pos Z","color": "blue"}
-scoreboard objectives add interaction.UUID dummy {"text":"Interaction UUID","color": "blue"}
+scoreboard objectives add interaction.uuid dummy {"text":"Interaction UUID","color": "blue"}
+
+# Listeners -------------------------------------------------------------------
+
+scoreboard objectives add listener.death deathCount {"text":"Trigger Death","color": "gray"}
+scoreboard objectives add listener.leave minecraft.custom:minecraft.leave_game {"text":"Trigger Leave","color": "gray"}
+scoreboard objectives add listener.use.snowball minecraft.used:minecraft.snowball {"text":"Trigger Use Snowball","color": "gray"}
+scoreboard objectives add listener.use.ender_pearl minecraft.used:minecraft.ender_pearl {"text":"Trigger Use Ender Pearl","color": "gray"}
+scoreboard objectives add listener.use.blue_spawn_egg minecraft.used:squid_spawn_egg {"text":"Trigger Use Blue Spawn Egg","color": "gray"}
+scoreboard objectives add listener.use.green_spawn_egg minecraft.used:slime_spawn_egg {"text":"Trigger Use Green Spawn Egg","color": "gray"}
+scoreboard objectives add listener.use.red_spawn_egg minecraft.used:mooshroom_spawn_egg {"text":"Trigger Use Red Spawn Egg","color": "gray"}
+scoreboard objectives add listener.use.yellow_spawn_egg minecraft.used:blaze_spawn_egg {"text":"Trigger Use Yellow Spawn Egg","color": "gray"}
 
 # Triggers --------------------------------------------------------------------
 
-scoreboard objectives add trigger.death deathCount {"text":"Trigger Death","color": "gray"}
-scoreboard objectives add trigger.leave minecraft.custom:minecraft.leave_game {"text":"Trigger Leave","color": "gray"}
-scoreboard objectives add trigger.use.snowball minecraft.used:minecraft.snowball {"text":"Trigger Use Snowball","color": "gray"}
-scoreboard objectives add trigger.use.ender_pearl minecraft.used:minecraft.ender_pearl {"text":"Trigger Use Ender Pearl","color": "gray"}
-scoreboard objectives add trigger.use.blue_spawn_egg minecraft.used:squid_spawn_egg {"text":"Trigger Use Blue Spawn Egg","color": "gray"}
-scoreboard objectives add trigger.use.green_spawn_egg minecraft.used:slime_spawn_egg {"text":"Trigger Use Green Spawn Egg","color": "gray"}
-scoreboard objectives add trigger.use.red_spawn_egg minecraft.used:mooshroom_spawn_egg {"text":"Trigger Use Red Spawn Egg","color": "gray"}
-scoreboard objectives add trigger.use.yellow_spawn_egg minecraft.used:blaze_spawn_egg {"text":"Trigger Use Yellow Spawn Egg","color": "gray"}
+scoreboard objectives add trigger.start_game trigger {"text":"Trigger Start Game","color": "white"}
+scoreboard objectives add trigger.reset trigger {"text":"Trigger Reset","color": "white"}
+scoreboard objectives add trigger.tutorial trigger {"text":"Trigger Tutorial","color": "white"}
+scoreboard objectives add trigger.lobby trigger {"text":"Trigger Lobby","color": "white"}
 
 
 ### TO SORT
@@ -170,33 +177,24 @@ gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
 #==============================================================================
-# CLEAR MAP
+# CLEAR
 #==============================================================================
 
 # Kill all entities
-execute as @e[type=villager] run function scaffolding_rush:clean_kill
+execute as @e[type=villager] run function utils:clean_kill
 kill @e[type=!player]
 
-
-
+# Reset maps
+function scaffolding_rush:lobby/map/reset
+function scaffolding_rush:game/map/reset
+function scaffolding_rush:tutorial/map/reset
 
 
 ### TO SORT -------------------------------------------------------------------
 
-# Game
-forceload add 1100 1100 900 900
-# Lobby
-forceload add 100 100 -100 -100
-# tutorial
-function scaffolding_rush:tutorial/forceload
-
 #trigger controls
 # use "/scoreboard players set DevelopementMode data 1" in order to start the map solo
-scoreboard objectives add StartGame trigger
-scoreboard objectives add Reset trigger
 
-scoreboard objectives add tuto trigger
-scoreboard objectives add lobby trigger
 
 scoreboard objectives add glib.res0 dummy
 
