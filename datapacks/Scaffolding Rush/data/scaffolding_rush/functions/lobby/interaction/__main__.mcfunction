@@ -12,7 +12,7 @@ execute as @a[predicate=scaffolding_rush:looking_at/team_plus] run tag @e[type=t
 execute as @a[predicate=scaffolding_rush:looking_at/team_minus] run tag @e[type=text_display,tag=LobbyTeamMinus,limit=1] add looked_at
 execute as @a[predicate=scaffolding_rush:looking_at/team_random] run tag @e[type=text_display,tag=LobbyTeamRandom,limit=1] add looked_at
 
-execute as @e[type=text_display,tag=looked_at,tag=!lobby.refresh_text] run function scaffolding_rush:lobby/text/refresh_interaction
-execute as @e[type=text_display,tag=looked_at,tag=!lobby.refresh_text] run tag @s add lobby.refresh_text
-execute as @e[type=text_display,tag=!looked_at,tag=lobby.refresh_text] run function scaffolding_rush:lobby/text/refresh_interaction
-execute as @e[type=text_display,tag=!looked_at,tag=lobby.refresh_text] run tag @s remove lobby.refresh_text
+execute as @e[type=text_display,tag=looked_at,tag=!lobby.refresh_interaction] run function scaffolding_rush:lobby/map/refresh/interaction
+execute as @e[type=text_display,tag=looked_at,tag=!lobby.refresh_interaction] run tag @s add lobby.refresh_interaction
+execute as @e[type=text_display,tag=!looked_at,tag=lobby.refresh_interaction] run function scaffolding_rush:lobby/map/refresh/interaction
+execute as @e[type=text_display,tag=!looked_at,tag=lobby.refresh_interaction] run tag @s remove lobby.refresh_interaction

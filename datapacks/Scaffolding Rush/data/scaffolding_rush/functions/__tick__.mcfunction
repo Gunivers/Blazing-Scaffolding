@@ -9,8 +9,7 @@ function scaffolding_rush:tutorial/main
 function scaffolding_rush:options/__main__
 
 # Game management (when a game is started)
-execute if score #admin.exist options matches 1 as @a[scores={trigger.start_game=1..}] run function scaffolding_rush:game/launch
-execute unless score #admin.exist options matches 1 as @a[scores={trigger.start_game=1..}] run function scaffolding_rush:game/launch
+execute as @a[scores={trigger.start_game=1..}] run function scaffolding_rush:game/launch
 
 
 execute if entity @a[scores={trigger.reset=1..}] run function scaffolding_rush:reset

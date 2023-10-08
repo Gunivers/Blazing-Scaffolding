@@ -72,8 +72,6 @@ execute if score Regen options matches 1 run effect give @s regeneration infinit
 function scaffolding_rush:game/map/reset/__start__
 execute if entity @a[scores={trigger.reset=1..}] run function scaffolding_rush:lobby/map/reset/__start__
 
-execute unless score RandomTeam options matches 0 run team join random @a[team=!]
-
 #advancement use_item
 advancement revoke @a from scaffolding_rush:use_item
 

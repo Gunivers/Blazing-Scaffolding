@@ -14,3 +14,4 @@ execute if score #game.loading data matches 1 run function scaffolding_rush:play
 execute if score #game.end data matches 1 run function scaffolding_rush:player/join/game
 
 scoreboard players operation @s game.id = #game.id data
+scoreboard players reset @s listener.leave

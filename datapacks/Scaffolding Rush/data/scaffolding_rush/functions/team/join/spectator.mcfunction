@@ -1,7 +1,6 @@
-
-team leave @s
+team join spectator @s
 execute as @s run function scaffolding_rush:lobby/base_egg/clear_egg
-function scaffolding_rush:team/join/killbase
+function scaffolding_rush:team/killbase
 function scaffolding_rush:player/item/clear
 
 playsound minecraft:block.note_block.bit ambient @s ~ ~ ~ 1 0.5 1

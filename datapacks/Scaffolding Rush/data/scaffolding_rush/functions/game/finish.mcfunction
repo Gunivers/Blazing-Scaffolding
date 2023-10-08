@@ -55,8 +55,6 @@ execute as @a run function scaffolding_rush:player/item/clear
 schedule function scaffolding_rush:reset 100t
 schedule function scaffolding_rush:lobby/map/setup 104t
 
-execute if score RandomTeam options matches 1 as @a[team=!] run team join random @s
-
 bossbar set minecraft:filling_lava visible false
 bossbar set minecraft:time_limit visible false
 

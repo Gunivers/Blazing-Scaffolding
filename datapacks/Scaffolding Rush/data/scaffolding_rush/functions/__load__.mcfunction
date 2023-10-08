@@ -98,6 +98,7 @@ scoreboard players set 0 const 0
 scoreboard players set 1 const 1
 scoreboard players set 2 const 2
 scoreboard players set 5 const 5
+scoreboard players set 8 const 8
 scoreboard players set 10 const 10
 scoreboard players set 20 const 20
 scoreboard players set 60 const 60
@@ -131,7 +132,7 @@ team add red
 team add blue
 team add yellow
 team add green
-team add random
+team add spectator
 
 team add purple_glow
 team add yellow_glow
@@ -141,7 +142,7 @@ team modify red color red
 team modify blue color blue
 team modify yellow color yellow
 team modify green color green
-team modify random color dark_purple
+team modify spectator color gray
 team modify purple_glow color dark_purple
 team modify yellow_glow color yellow
 team modify cyan_glow color aqua
@@ -150,12 +151,12 @@ team modify red collisionRule never
 team modify blue collisionRule never
 team modify yellow collisionRule never
 team modify green collisionRule never
-team modify random collisionRule never
+team modify spectator collisionRule never
 team modify red friendlyFire false
 team modify blue friendlyFire false
 team modify yellow friendlyFire false
 team modify green friendlyFire false
-team modify random friendlyFire true
+team modify spectator friendlyFire false
 
 # Score display
 team join blue Blue

@@ -16,7 +16,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "language": 0
+                    "option.language": 0
                   }
                 }
               ]
@@ -29,7 +29,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "language": 0
+                    "option.language": 0
                   }
                 }
               ]
@@ -43,7 +43,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "language": 1
+                    "option.language": 1
                   }
                 }
               ]
@@ -56,7 +56,7 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "language": 1
+                    "option.language": 1
                   }
                 }
               ]
