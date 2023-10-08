@@ -23,8 +23,11 @@
           "function": "minecraft:set_count",
           "count": {
             "type": "minecraft:score",
-            "target": "this",
-            "score": "sc.item.give.snowball"
+            "target": {
+                "type": "minecraft:fixed",
+                "name": "#give_item"
+            },
+            "score": "tmp"
           }
         },
         {

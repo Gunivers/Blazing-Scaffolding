@@ -14,8 +14,8 @@
           "function": "minecraft:set_count",
           "count": {
             "type": "minecraft:score",
-            "target": "this",
-            "score": "sc.item.give.sand"
+            "target": "#give_item",
+            "score": "tmp"
           }
         },
         {

@@ -24,5 +24,5 @@ execute if score RemainingTeam data matches ..1 run tellraw @a[scores={option.la
 execute if score #game.clear data matches 1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Merci de patienter, une réinitialisation de la carte est en cours","color":"red"}]
 
 effect give @a minecraft:instant_health 1 100 true
-effect give @a minecraft:fire_resistance 20 100 true
-effect give @a minecraft:resistance 10 100 true
+effect give @a minecraft:fire_resistance infinite 100 true
+effect give @a minecraft:resistance infinite 100 true

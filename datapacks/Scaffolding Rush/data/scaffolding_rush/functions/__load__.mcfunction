@@ -180,6 +180,8 @@ gamerule universalAnger false
 # CLEAR
 #==============================================================================
 
+scoreboard objectives setdisplay sidebar
+
 # Kill all entities
 execute as @e[type=villager] run function utils:clean_kill
 kill @e[type=!player]
@@ -192,22 +194,8 @@ function scaffolding_rush:tutorial/map/reset
 
 ### TO SORT -------------------------------------------------------------------
 
-#trigger controls
-# use "/scoreboard players set DevelopementMode data 1" in order to start the map solo
-
-
-scoreboard objectives add glib.res0 dummy
-
-
-# Remove Sidebar
-scoreboard objectives setdisplay sidebar
-
-# Init global
-
-
 #initialize options scores
 function scaffolding_rush:options/__init__
-
 function scaffolding_rush:item/__init__
 
 #advancement use_item

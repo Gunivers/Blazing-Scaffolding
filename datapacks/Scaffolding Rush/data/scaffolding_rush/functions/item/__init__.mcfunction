@@ -11,12 +11,6 @@ scoreboard objectives add sc.item.test.fireball dummy
 scoreboard objectives add sc.item.test.ender_pearl dummy
 scoreboard objectives add sc.item.test.snowball dummy
 
-scoreboard objectives add sc.item.give.scaffolding dummy
-scoreboard objectives add sc.item.give.sand dummy
-scoreboard objectives add sc.item.give.fireball dummy
-scoreboard objectives add sc.item.give.ender_pearl dummy
-scoreboard objectives add sc.item.give.snowball dummy
-
 scoreboard objectives add sc.item.timer.fireball dummy
 scoreboard objectives add sc.item.timer.ender_pearl dummy
 scoreboard objectives add sc.item.timer.snowball dummy

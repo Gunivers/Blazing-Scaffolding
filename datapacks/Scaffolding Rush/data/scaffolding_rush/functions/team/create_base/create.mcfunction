@@ -34,7 +34,7 @@ tag @e[type=villager,tag=new_villager] remove new_villager
 
 function scaffolding_rush:team/create_base/armor
 
-effect give @a minecraft:jump_boost 6 254 true
+effect give @a minecraft:jump_boost infinite 254 true
 
 execute at @e[tag=baseTeam,name="Blue",limit=1] run teleport @a[team=blue] ~ 4 ~
 execute at @e[tag=baseTeam,name="Green",limit=1] run teleport @a[team=green] ~ 4 ~
