@@ -15,7 +15,13 @@ execute at @e[type=minecraft:armor_stand,tag=baseTeam,name="Yellow"] run summon 
 
 kill @e[type=armor_stand,tag=baseTeam]
 
-function scaffolding_rush:spread_in_border
+# Spread in borders
+execute positioned 0 0 0 if score WBSize options matches 15..19 run spreadplayers 0 0 5 7 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 20..34 run spreadplayers 0 0 7 10 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 35..79 run spreadplayers 0 0 14 17 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 80..119 run spreadplayers 0 0 35 40 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 120..165 run spreadplayers 0 0 55 60 false @e[type=marker,tag=spread]
+tag @e[type=marker,tag=spread] remove spread
 
 execute as @e[tag=baseTeam] at @s run tp @s ~1000 4 ~1000
 

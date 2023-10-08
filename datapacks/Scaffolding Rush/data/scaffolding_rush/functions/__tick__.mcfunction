@@ -1,6 +1,6 @@
 
 
-execute as @a[scores={listener.leave=1..}] run function scaffolding_rush:join/__main__
+execute as @a[scores={listener.leave=1..}] run function scaffolding_rush:player/join/__main__
 
 execute if score #lobby.active data matches 1 run function scaffolding_rush:lobby/__main__
 execute if score #game.running data matches 1 run function scaffolding_rush:game/__main__
