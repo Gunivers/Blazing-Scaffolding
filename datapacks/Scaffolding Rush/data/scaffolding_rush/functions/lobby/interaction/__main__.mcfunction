@@ -1,21 +1,18 @@
-# Hover interaction
-tag @e[type=text_display,tag=lobbyText,tag=looked_at_tick] remove looked_at_tick
-execute as @a at @s if entity @e[type=interaction,tag=LobbyPresetVillagerNext,distance=..3.5] anchored eyes facing entity @e[type=interaction,tag=LobbyPresetVillagerNext,limit=1] eyes positioned ~ ~0.1 ~ anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.1] run tag @e[type=text_display,tag=LobbyPresetVillagerNext,limit=1] add looked_at_tick
-execute as @a at @s if entity @e[type=interaction,tag=LobbyPresetVillagerPrevious,distance=..3.5] anchored eyes facing entity @e[type=interaction,tag=LobbyPresetVillagerPrevious,limit=1] eyes positioned ~ ~0.1 ~ anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.1] run tag @e[type=text_display,tag=LobbyPresetVillagerPrevious,limit=1] add looked_at_tick
+# Hover messages
+title @a[tag=lobby.tooltip] actionbar [""]
+tag @a remove lobby.tooltip
+execute as @a[x=0,y=25,z=6,distance=..3] at @s anchored eyes facing 0 25 6 positioned ~ ~0.1 ~ anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run function scaffolding_rush:lobby/interaction/tooltip/start_game
+execute as @a[predicate=scaffolding_rush:looking_at/join_team] run function scaffolding_rush:lobby/interaction/tooltip/join_team
 
-execute as @a at @s if entity @e[type=interaction,tag=LobbyTeamPlus,distance=..3.5] anchored eyes facing entity @e[type=interaction,tag=LobbyTeamPlus,limit=1] eyes positioned ~ ~0.1 ~ anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.1] run tag @e[type=text_display,tag=LobbyTeamPlus,limit=1] add looked_at_tick
-execute as @a at @s if entity @e[type=interaction,tag=LobbyTeamMinus,distance=..3.5] anchored eyes facing entity @e[type=interaction,tag=LobbyTeamMinus,limit=1] eyes positioned ~ ~0.1 ~ anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.1] run tag @e[type=text_display,tag=LobbyTeamMinus,limit=1] add looked_at_tick
-execute as @a at @s if entity @e[type=interaction,tag=LobbyTeamRandom,distance=..3.5] anchored eyes facing entity @e[type=interaction,tag=LobbyTeamRandom,limit=1] eyes positioned ~ ~0.1 ~ anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.1] run tag @e[type=text_display,tag=LobbyTeamRandom,limit=1] add looked_at_tick
+# Hover update background
+tag @e[type=text_display,tag=looked_at] remove looked_at
+execute as @a[predicate=scaffolding_rush:looking_at/next_preset] run tag @e[type=text_display,tag=LobbyPresetVillagerNext,limit=1] add looked_at
+execute as @a[predicate=scaffolding_rush:looking_at/previous_preset] run tag @e[type=text_display,tag=LobbyPresetVillagerPrevious,limit=1] add looked_at
+execute as @a[predicate=scaffolding_rush:looking_at/team_plus] run tag @e[type=text_display,tag=LobbyTeamPlus,limit=1] add looked_at
+execute as @a[predicate=scaffolding_rush:looking_at/team_minus] run tag @e[type=text_display,tag=LobbyTeamMinus,limit=1] add looked_at
+execute as @a[predicate=scaffolding_rush:looking_at/team_random] run tag @e[type=text_display,tag=LobbyTeamRandom,limit=1] add looked_at
 
-execute as @a[tag=!titleJoinTeam] at @s if entity @e[type=interaction,tag=lobbyTeam,distance=..3.5] anchored eyes facing entity @e[type=interaction,tag=lobbyTeam] eyes positioned ~ ~0.1 ~ anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.25] run function scaffolding_rush:lobby/interaction/join_team_msg
-execute as @a[tag=!titleStart] at @s if entity @e[type=text_display,tag=startLabel,distance=..2] anchored eyes facing 0 25 6 positioned ~ ~0.1 ~ anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.25] run function scaffolding_rush:lobby/interaction/start_msg
-
-execute as @e[type=text_display,tag=looked_at_tick,tag=!looked_at] run tag @s add refresh_text
-execute as @e[type=text_display,tag=looked_at_tick,tag=!looked_at] run tag @s add looked_at
-execute if entity @e[type=text_display,tag=refresh_text] run function scaffolding_rush:lobby/text/refresh_interaction
-
-execute as @e[type=text_display,tag=!looked_at_tick,tag=looked_at] run tag @s add refresh_text
-execute as @e[type=text_display,tag=!looked_at_tick,tag=looked_at] run tag @s remove looked_at
-execute if entity @e[type=text_display,tag=refresh_text] run function scaffolding_rush:lobby/text/refresh_interaction
-
-tag @e[type=text_display,tag=lobbyText,tag=refresh_text] remove refresh_text
+execute as @e[type=text_display,tag=looked_at,tag=!lobby.refresh_text] run function scaffolding_rush:lobby/text/refresh_interaction
+execute as @e[type=text_display,tag=looked_at,tag=!lobby.refresh_text] run tag @s add lobby.refresh_text
+execute as @e[type=text_display,tag=!looked_at,tag=lobby.refresh_text] run function scaffolding_rush:lobby/text/refresh_interaction
+execute as @e[type=text_display,tag=!looked_at,tag=lobby.refresh_text] run tag @s remove lobby.refresh_text

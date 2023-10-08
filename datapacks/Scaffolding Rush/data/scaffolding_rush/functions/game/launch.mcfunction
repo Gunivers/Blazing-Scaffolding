@@ -2,8 +2,6 @@ scoreboard players reset @a trigger.start_game
 execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.start_game
 execute if score #admin.exist options matches 0 as @a run scoreboard players enable @s trigger.start_game
 
-tag @s add titleStart
-
 # Count active teams
 scoreboard players set RemainingTeam data 0
 execute if entity @a[team=blue] run scoreboard players add RemainingTeam data 1
