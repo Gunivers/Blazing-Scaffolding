@@ -248,4 +248,5 @@ bossbar set minecraft:filling_lava color red
 bossbar add time_limit ""
 bossbar set minecraft:time_limit color white
 
-execute unless score game.id data matches 0 run function scaffolding_rush:first_launch
+scoreboard players add #game.id data 1
+function scaffolding_rush:lobby/map/setup
