@@ -8,14 +8,14 @@ execute as @e[type=armor_stand,tag=Flag] at @s run function scaffolding_rush:gam
 
 function scaffolding_rush:game/summon_markers
 
-execute if score GameRunning global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]
-execute if score GameRunning global matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"La partie a été stoppée","color":"gray"}]
+execute if score #game.running data matches 1 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]
+execute if score #game.running data matches 1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"La partie a été stoppée","color":"gray"}]
 
-execute if score GameLoading global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The launching of the game has been stopped","color":"gray"}]
-execute if score GameLoading global matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le lancement de la partie a été annulé","color":"gray"}]
+execute if score #game.loading data matches 1 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The launching of the game has been stopped","color":"gray"}]
+execute if score #game.loading data matches 1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le lancement de la partie a été annulé","color":"gray"}]
 
-execute if score DevelopementMode global matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
-execute if score DevelopementMode global matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Rechargement en cours...","color":"gray"}]
+execute if score DevelopementMode data matches 1 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
+execute if score DevelopementMode data matches 1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Rechargement en cours...","color":"gray"}]
 
 execute as @e[type=villager] run function scaffolding_rush:clean_kill
 
@@ -31,39 +31,39 @@ function scaffolding_rush:game/lava/global_rising/stop
 schedule clear scaffolding_rush:lobby/particles
 schedule clear scaffolding_rush:game/ghostblocks
 
-scoreboard players set LavaLevel global 2
-scoreboard players set GameLobby global 1
-scoreboard players set GameEnd global 0
-scoreboard players set GameRunning global 0
-scoreboard players set GameLoading global 0
-scoreboard players set ClearGame global 0
-scoreboard players set ClearLobby global 0
+scoreboard players set LavaLevel data 2
+scoreboard players set #lobby.active data 1
+scoreboard players set #game.end data 0
+scoreboard players set #game.running data 0
+scoreboard players set #game.loading data 0
+scoreboard players set #game.clear data 0
+scoreboard players set #lobby.clear data 0
 scoreboard players set WBAddTemp options 0
 scoreboard players set Language options 0
 execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
 
-scoreboard players set RedVillagerRespawn global -1
-scoreboard players set BlueVillagerRespawn global -1
-scoreboard players set YellowVillagerRespawn global -1
-scoreboard players set GreenVillagerRespawn global -1
+scoreboard players set #villager.red respawn.timer -1
+scoreboard players set #villager.blue respawn.timer -1
+scoreboard players set #villager.yellow respawn.timer -1
+scoreboard players set #villager.green respawn.timer -1
 
-scoreboard players set @a bluePlaced 0
-scoreboard players set @a greenPlaced 0
-scoreboard players set @a redPlaced 0
-scoreboard players set @a yellowPlaced 0
+scoreboard players set @a trigger.use.blue_spawn_egg 0
+scoreboard players set @a trigger.use.green_spawn_egg 0
+scoreboard players set @a trigger.use.red_spawn_egg 0
+scoreboard players set @a trigger.use.yellow_spawn_egg 0
 
-scoreboard players reset * killed
+scoreboard players reset * trigger.death
 
 team modify blue seeFriendlyInvisibles false
 team modify green seeFriendlyInvisibles false
 team modify red seeFriendlyInvisibles false
 team modify yellow seeFriendlyInvisibles false
 
-scoreboard players add GameId global 1
-scoreboard players operation @a gameId = GameId global
+scoreboard players add #game.id data 1
+scoreboard players operation @a game.id = #game.id data
 
 tag @a remove TeamEliminated
-tag @a remove has_egg
+tag @a remove player.item.have_egg
 tag @a remove VillagerRecup
 tag @a remove Respawning
 tag @a remove flag_carry
@@ -73,7 +73,7 @@ tag @a remove flagFive
 
 clear @a
 effect clear @a
-execute as @a run function scaffolding_rush:item/clear_items
+execute as @a run function scaffolding_rush:player/items/clear
 effect give @a minecraft:instant_health 1 100 true
 execute if score Regen options matches 1 run effect give @s regeneration infinite 0 true
 
@@ -91,8 +91,8 @@ scoreboard players reset @a StartGame
 scoreboard players reset @a Reset
 
 execute as @a run function scaffolding_rush:options/disable_all
-execute if score Admin options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
-execute if score Admin options matches 0 as @a run function scaffolding_rush:options/activate_all
+execute if score #admin.exist options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
+execute if score #admin.exist options matches 0 as @a run function scaffolding_rush:options/activate_all
 scoreboard players enable @a opt_admin
 
 #Bossbar
@@ -102,7 +102,7 @@ bossbar set minecraft:time_limit visible false
 effect give @a minecraft:jump_boost 5 255 true
 
 #confirmation message
-execute if score DevelopementMode global matches 1 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"text":"Reset done","color":"gray"}]
+execute if score DevelopementMode data matches 1 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"text":"Reset done","color":"gray"}]
 
 execute as @a[tag=InGame] run function scaffolding_rush:lobby/tp_to_lobby
 

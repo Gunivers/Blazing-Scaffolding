@@ -7,14 +7,14 @@ place template scaffolding_rush:parkour/trainingparkour ~-1 ~ ~-2
 teleport @s ~1 ~8.1 ~ -90 0
 spawnpoint @s ~ ~8 ~ -90
 
-execute as @s at @s store result score @s TutorialCellZ run data get entity @s Pos[2]
+execute as @s at @s store result score @s tutorial.cell.z run data get entity @s Pos[2]
 
-tag @s remove HaveItems
+tag @s remove player.items.have_items
 clear @s
 gamemode adventure @s
 scoreboard players set @s sc.timer.tutorial 0
 
-function scaffolding_rush:item/clear_items
-scoreboard players set @s sc.item.scaffolding 42
+function scaffolding_rush:player/items/clear
+scoreboard players set @s player.item.scaffolding_count 42
 
 tag @s add inTutorial

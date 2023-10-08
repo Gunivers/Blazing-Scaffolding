@@ -1,5 +1,5 @@
 # When the player has finished respawning
-execute if score DevelopementMode global matches 1 run say game/death/player/respawn/loop_end
+execute if score DevelopementMode data matches 1 run say game/death/player/respawn/loop_end
 
 title @s title ["",{"text":""}]
 title @s subtitle ["",{"text":""}]

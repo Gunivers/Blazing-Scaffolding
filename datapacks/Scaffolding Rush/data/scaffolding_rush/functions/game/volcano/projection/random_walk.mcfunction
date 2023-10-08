@@ -18,5 +18,5 @@ execute at @s if score @s glib.res0 matches 25.. positioned ~ ~-1 ~ if block ~ ~
 
 # particle end_rod ~ ~1 ~ 0 0 0 0 1 force
 
-scoreboard players remove #RandoWalk global 1
-execute at @s if score #RandoWalk global matches 1.. run function scaffolding_rush:game/volcano/projection/random_walk
+scoreboard players remove #RandoWalk data 1
+execute at @s if score #RandoWalk data matches 1.. run function scaffolding_rush:game/volcano/projection/random_walk

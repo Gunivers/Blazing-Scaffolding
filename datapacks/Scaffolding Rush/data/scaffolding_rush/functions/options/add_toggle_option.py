@@ -48,11 +48,11 @@ with open(option_name+".mcfunction", "w", encoding='utf-8') as f:
 
 execute store success score """+fake_player_name+""" options if score """+fake_player_name+""" options matches 0
 
-execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"deactivated","color":"red"}]
-execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"activated","color":"green"}]
+execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"deactivated","color":"red"}]
+execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"activated","color":"green"}]
 
-execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"désactivée","color":"red"}]
-execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"activée","color":"green"}]
+execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"désactivée","color":"red"}]
+execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"activée","color":"green"}]
 
 scoreboard players set @s opt_"""+option_name+""" 0
 scoreboard players enable @s opt_"""+option_name+"""

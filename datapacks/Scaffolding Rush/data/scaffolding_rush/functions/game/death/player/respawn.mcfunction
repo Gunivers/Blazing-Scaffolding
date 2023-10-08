@@ -1,7 +1,7 @@
 # When player died and can respawn
-execute if score DevelopementMode global matches 1 run say game/death/player/respawn
+execute if score DevelopementMode data matches 1 run say game/death/player/respawn
 
-scoreboard players operation @s respawnTimeTics = RespawnDelayTics global
+scoreboard players operation @s respawn.timer = #respawn.delay.tick options
 
 teleport @s[team=red] @e[type=villager,tag=game_villager,tag=red_villager,limit=1]
 teleport @s[team=blue] @e[type=villager,tag=game_villager,tag=blue_villager,limit=1]

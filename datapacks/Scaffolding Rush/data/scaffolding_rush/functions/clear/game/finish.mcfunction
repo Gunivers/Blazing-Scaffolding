@@ -1,5 +1,5 @@
 
-scoreboard players set ClearGame global 0
+scoreboard players set #game.clear data 0
 
 
 bossbar remove reset_map_en

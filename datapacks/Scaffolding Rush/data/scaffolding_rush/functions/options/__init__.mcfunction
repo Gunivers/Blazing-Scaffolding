@@ -9,13 +9,13 @@ scoreboard objectives add opt_perf_mode trigger
 execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
 scoreboard objectives add opt_language trigger
 scoreboard objectives add opt_admin trigger
-execute unless score Admin options matches 0.. run scoreboard players set Admin options 0
+execute unless score #admin.exist options matches 0.. run scoreboard players set #admin.exist options 0
 
 # Flag
 scoreboard objectives add opt_flag_take_over trigger
-execute unless score FlagTakeOver options matches 0..1 run scoreboard players set FlagTakeOver options 0
+execute unless score #flag.take_over options matches 0..1 run scoreboard players set #flag.take_over options 0
 scoreboard objectives add opt_flag_spawn_interval trigger
-execute unless score FlagTakeOverSpawnInterval options matches 0.. run scoreboard players set FlagTakeOverSpawnInterval options 600
+execute unless score #flag.take_over.spawn_interval options matches 0.. run scoreboard players set #flag.take_over.spawn_interval options 600
 
 # Gameplay
 scoreboard objectives add opt_ender_pearl trigger
@@ -33,7 +33,7 @@ execute unless score LastingBases options matches 0..1 run scoreboard players se
 scoreboard objectives add opt_regen trigger
 execute unless score Regen options matches 0.. run scoreboard players set Regen options 1
 scoreboard objectives add opt_resp_delay trigger
-execute unless score RespawnDelay options matches 1.. run scoreboard players set RespawnDelay options 3
+execute unless score #respawn.delay.second options matches 1.. run scoreboard players set #respawn.delay.second options 3
 scoreboard objectives add opt_sand trigger
 execute unless score UseSand options matches 0.. run scoreboard players set UseSand options 1
 scoreboard objectives add opt_scaff_stops_arrow trigger
@@ -47,9 +47,9 @@ execute unless score BuildHeight options matches 5.. run scoreboard players set 
 scoreboard objectives add opt_interactible_lobby trigger
 execute unless score InteractibleLobby options matches 0..1 run scoreboard players set InteractibleLobby options 1
 scoreboard objectives add opt_lava_speed trigger
-execute unless score LavaSpeed options matches 0.. run scoreboard players set LavaSpeed options 20
+execute unless score #lava.speed.second options matches 0.. run scoreboard players set #lava.speed.second options 20
 scoreboard objectives add opt_time_limit trigger
-execute unless score TimeLimit options matches 1.. run scoreboard players set TimeLimit options 3
+execute unless score #game.time.limit options matches 1.. run scoreboard players set #game.time.limit options 3
 scoreboard objectives add opt_score_limit trigger
 execute unless score ScoreLimit options matches 1.. run scoreboard players set ScoreLimit options 20
 scoreboard objectives add opt_use_time_limit trigger
@@ -61,7 +61,7 @@ execute unless score WBSize options matches 25..165 run scoreboard players set W
 scoreboard objectives add opt_worldborder_shrink trigger
 execute unless score WorldborderShrink options matches 0..1 run scoreboard players set WorldborderShrink options 0
 scoreboard objectives add opt_worldborder_start_time trigger
-execute unless score WorldborderStartTime options matches 0.. run scoreboard players set WorldborderStartTime options 1
+execute unless score #worldborder.start_time.second options matches 0.. run scoreboard players set #worldborder.start_time.second options 1
 scoreboard objectives add opt_worldborder_time_to_shrink trigger
 execute unless score WorldborderTimeToShrink options matches 1.. run scoreboard players set WorldborderTimeToShrink options 2
 
@@ -75,15 +75,15 @@ execute unless score TeamNumber options matches 0.. run scoreboard players set T
 
 # Villager
 scoreboard objectives add opt_invulnerable_villager trigger
-execute unless score InvulnerableVillager options matches 0..1 run scoreboard players set InvulnerableVillager options 0
+execute unless score Invulnerable#villager.enabled options matches 0..1 run scoreboard players set Invulnerable#villager.enabled options 0
 scoreboard objectives add opt_villager trigger
-execute unless score Villager options matches 0.. run scoreboard players set Villager options 1
+execute unless score #villager.enabled options matches 0.. run scoreboard players set #villager.enabled options 1
 scoreboard objectives add opt_movable_villager trigger
-execute unless score MovableVillager options matches 0..1 run scoreboard players set MovableVillager options 1
+execute unless score Movable#villager.enabled options matches 0..1 run scoreboard players set Movable#villager.enabled options 1
 scoreboard objectives add opt_vil_resp_cd trigger
-execute unless score VillagerRespawn options matches 0.. run scoreboard players set VillagerRespawn options 30
+execute unless score #villager.respawn.seconds options matches 0.. run scoreboard players set #villager.respawn.seconds options 30
 scoreboard objectives add opt_vil_respawn trigger
-execute unless score VillagerForgiveness options matches 0.. run scoreboard players set VillagerForgiveness options 1
+execute unless score #villager.can_respawn options matches 0.. run scoreboard players set #villager.can_respawn options 1
 
 # Volcano
 scoreboard objectives add opt_volcano_pop_period trigger

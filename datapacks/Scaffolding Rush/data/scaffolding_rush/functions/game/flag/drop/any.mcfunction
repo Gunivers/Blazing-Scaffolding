@@ -6,9 +6,9 @@ execute if entity @s[tag=flagTwo] run function scaffolding_rush:game/flag/drop/p
 execute if entity @s[tag=flagFive] run function scaffolding_rush:game/flag/drop/point/5
 
 #rise the summoned armor stand (the function is executed as the player)
-scoreboard players operation @s fallDistance /= #100 global
+scoreboard players operation @s fallDistance /= 100 const
 execute unless score @s fallDistance matches 3.. run scoreboard players set @s fallDistance 3
-scoreboard players operation @e[type=armor_stand,tag=new] global = @s fallDistance
+scoreboard players operation @e[type=armor_stand,tag=new] data = @s fallDistance
 execute as @e[type=minecraft:armor_stand,tag=new] at @s run function scaffolding_rush:game/flag/rise
 
 tag @e[type=armor_stand,tag=Flag] remove new

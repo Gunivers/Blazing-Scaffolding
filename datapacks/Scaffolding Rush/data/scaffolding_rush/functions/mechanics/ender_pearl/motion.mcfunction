@@ -35,8 +35,8 @@ tag @e[tag=ender_pearl,tag=Impact,tag=!TP_in_pillar,tag=!TP_on_bridge,tag=!TP_ca
 
 # If the pearl goes beyond the walls, it is cancelled
 execute as @e[tag=ender_pearl] at @s run function glib.location:get
-execute if score GameRunning global matches 1 run scoreboard players operation @e[tag=ender_pearl] glib.locX -= 1000 glib.const
-execute if score GameRunning global matches 1 run scoreboard players operation @e[tag=ender_pearl] glib.locZ -= 1000 glib.const
+execute if score #game.running data matches 1 run scoreboard players operation @e[tag=ender_pearl] glib.locX -= 1000 glib.const
+execute if score #game.running data matches 1 run scoreboard players operation @e[tag=ender_pearl] glib.locZ -= 1000 glib.const
 scoreboard players operation @e[tag=ender_pearl,scores={glib.locX=..-1}] glib.locX *= -1 glib.const
 scoreboard players operation @e[tag=ender_pearl,scores={glib.locZ=..-1}] glib.locZ *= -1 glib.const
 scoreboard players operation @e[tag=ender_pearl] glib.locX *= 2 glib.const

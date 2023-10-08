@@ -1,5 +1,5 @@
 
-scoreboard players set GameLobby global 1
+scoreboard players set #lobby.active data 1
 
 kill @e[tag=baseTeam]
 execute as @e[type=villager,tag=LobbyBase] run function scaffolding_rush:clean_kill

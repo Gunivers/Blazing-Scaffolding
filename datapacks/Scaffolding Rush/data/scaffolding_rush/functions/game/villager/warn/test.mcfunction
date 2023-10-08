@@ -1,2 +1,2 @@
 
-scoreboard players operation @s YEntity -= LavaLevel global
+scoreboard players operation @s pos.y -= LavaLevel data

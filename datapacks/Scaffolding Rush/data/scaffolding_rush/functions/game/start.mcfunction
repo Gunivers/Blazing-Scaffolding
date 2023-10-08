@@ -1,22 +1,22 @@
 tp @e[type=marker,name="ScR_LavaLevel",limit=1] ~ 2 ~
 
 tag @a remove TeamEliminated
-tag @a remove has_egg
-scoreboard players set @a killed 0
+tag @a remove player.item.have_egg
+scoreboard players set @a trigger.death 0
 
-scoreboard players set @a bluePlaced 0
-scoreboard players set @a greenPlaced 0
-scoreboard players set @a redPlaced 0
-scoreboard players set @a yellowPlaced 0
+scoreboard players set @a trigger.use.blue_spawn_egg 0
+scoreboard players set @a trigger.use.green_spawn_egg 0
+scoreboard players set @a trigger.use.red_spawn_egg 0
+scoreboard players set @a trigger.use.yellow_spawn_egg 0
 
 
 #reset flaghunt timer
-execute unless score FlagTakeOver options matches 0 run scoreboard players set FlagTakeOverCountdown global 0
+execute unless score #flag.take_over options matches 0 run scoreboard players set #flag.take_overCountdown data 0
 
 #reset volcano timer
 scoreboard players set VolcanoSummonTimer timer 0
 
-execute as @a run function scaffolding_rush:item/clear_items
+execute as @a run function scaffolding_rush:player/items/clear
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 effect give @a minecraft:fire_resistance 20 100 true
@@ -40,6 +40,6 @@ team modify yellow seeFriendlyInvisibles true
 
 execute if score PerformanceMode options matches 0 run function scaffolding_rush:game/ghostblocks
 
-scoreboard players set GameRunning global 1
-scoreboard players set GameLoading global 0
-scoreboard players set LavaCountdown global 0
+scoreboard players set #game.running data 1
+scoreboard players set #game.loading data 0
+scoreboard players set LavaCountdown data 0

@@ -1,9 +1,9 @@
 
-scoreboard objectives add sc.item.scaffolding dummy
-scoreboard objectives add sc.item.sand dummy
-scoreboard objectives add sc.item.fireball dummy
-scoreboard objectives add sc.item.ender_pearl dummy
-scoreboard objectives add sc.item.snowball dummy
+scoreboard objectives add player.item.scaffolding_count dummy
+scoreboard objectives add player.item.sand_count dummy
+scoreboard objectives add player.item.fireball_count dummy
+scoreboard objectives add player.item.ender_pearl_count dummy
+scoreboard objectives add player.item.bumping_arrow_count dummy
 
 scoreboard objectives add sc.item.test.scaffolding dummy
 scoreboard objectives add sc.item.test.sand dummy

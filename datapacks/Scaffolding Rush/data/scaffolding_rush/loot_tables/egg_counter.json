@@ -20,7 +20,7 @@
             "type": "minecraft:score",
             "target": {
               "type": "minecraft:fixed",
-              "name": "VillagerRespawn"
+              "name": "#villager.respawn.seconds"
             },
             "score": "options",
             "scale": 1

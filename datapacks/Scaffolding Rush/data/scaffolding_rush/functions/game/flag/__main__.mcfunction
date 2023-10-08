@@ -13,8 +13,8 @@ execute as @a[gamemode=!spectator] at @s run fill ~-4 ~-4 ~-4 ~4 ~4 ~4 air repla
 
 
 #flag takeover gamemode
-execute if score FlagTakeOverCountdown global >= FlagTakeOverSpawnInterval options run function scaffolding_rush:game/flag/new_spreaded
-execute run scoreboard players add FlagTakeOverCountdown global 1
+execute if score #flag.take_overCountdown data >= #flag.take_over.spawn_interval options run function scaffolding_rush:game/flag/new_spreaded
+execute run scoreboard players add #flag.take_overCountdown data 1
 
 #remove flags in lava
 execute as @e[type=armor_stand,tag=Flag] at @s if block ~ ~2 ~ magma_block run function scaffolding_rush:game/flag/stack_kill
