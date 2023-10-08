@@ -13,6 +13,6 @@ scoreboard players operation RESET_MAP data += 256 const
 execute store result bossbar reset_map_en value run scoreboard players get RESET_MAP data
 execute store result bossbar reset_map_fr value run scoreboard players get RESET_MAP data
 
-#execute unless score @s pos.y matches 2 at @s run function scaffolding_rush:clear/game/area
-execute unless score @e[type=marker,name="ScR_ClearGame",limit=1] pos.y matches ..1 run schedule function scaffolding_rush:clear/game/area 1t
-execute as @e[type=marker,name="ScR_ClearGame",limit=1] if score @s pos.y matches ..1 at @s run schedule function scaffolding_rush:clear/game/finish 5t
+#execute unless score @s pos.y matches 2 at @s run function scaffolding_rush:game/map/reset/area
+execute unless score @e[type=marker,name="ScR_ClearGame",limit=1] pos.y matches ..1 run schedule function scaffolding_rush:game/map/reset/area 1t
+execute as @e[type=marker,name="ScR_ClearGame",limit=1] if score @s pos.y matches ..1 at @s run schedule function scaffolding_rush:game/map/reset/finish 5t

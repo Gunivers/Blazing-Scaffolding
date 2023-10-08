@@ -69,8 +69,8 @@ execute as @a run function scaffolding_rush:player/item/clear
 effect give @a minecraft:instant_health 1 100 true
 execute if score Regen options matches 1 run effect give @s regeneration infinite 0 true
 
-function scaffolding_rush:clear/game/launch
-execute if entity @a[scores={trigger.reset=1..}] run function scaffolding_rush:clear/lobby/launch
+function scaffolding_rush:game/map/reset/__start__
+execute if entity @a[scores={trigger.reset=1..}] run function scaffolding_rush:lobby/map/reset/__start__
 
 execute unless score RandomTeam options matches 0 run team join random @a[team=!]
 

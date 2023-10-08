@@ -224,7 +224,7 @@ advancement revoke @a from scaffolding_rush:use_item
 
 # Reset
 execute unless score #game.id data matches 0 run schedule function scaffolding_rush:reset 5t
-execute unless score #game.id data matches 0 run function scaffolding_rush:clear/lobby/launch
+execute unless score #game.id data matches 0 run function scaffolding_rush:lobby/map/reset/__start__
 
 
 #==============================================================================

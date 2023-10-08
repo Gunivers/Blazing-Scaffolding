@@ -16,4 +16,4 @@ execute unless entity @e[type=marker,name="ScR_ClearGame"] run summon minecraft:
 teleport @e[type=marker,name="ScR_ClearGame",limit=1] 1000 270 1000
 execute as @e[type=marker,name="ScR_ClearGame",limit=1] store result score @s pos.y run data get entity @s Pos[1]
 
-function scaffolding_rush:clear/game/wait_chunk
+function scaffolding_rush:game/map/reset/wait_chunk
