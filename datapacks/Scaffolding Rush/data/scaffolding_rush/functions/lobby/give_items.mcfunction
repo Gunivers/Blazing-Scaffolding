@@ -1,7 +1,7 @@
 
 
 # Color sand change
-clear @s #scaffolding_rush:item/sand
+clear @s #scaffolding_rush:sand
 
 scoreboard players set @s player.item.scaffolding_count 42
 

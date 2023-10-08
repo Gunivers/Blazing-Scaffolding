@@ -9,7 +9,7 @@ execute unless score UseEnderPearl options matches 0 run tellraw @a[scores={opti
 
 execute if score UseEnderPearl options matches 0 run scoreboard players set @a[tag=player.items.have_items] player.item.ender_pearl_count 0
 execute unless score UseEnderPearl options matches 0 run scoreboard players set @a[tag=player.items.have_items] player.item.ender_pearl_count 1
-execute unless score UseEnderPearl options matches 0 run scoreboard players set @a[tag=player.items.have_items] sc.item.real.ender_pearl 1
+execute unless score UseEnderPearl options matches 0 run scoreboard players set @a[tag=player.items.have_items] player.item.real.ender_pearl 1
 
 scoreboard players set @s opt_ender_pearl 0
 scoreboard players enable @s opt_ender_pearl

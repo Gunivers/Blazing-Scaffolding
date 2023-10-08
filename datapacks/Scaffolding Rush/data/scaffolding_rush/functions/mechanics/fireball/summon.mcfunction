@@ -8,7 +8,7 @@ execute store result score @s interaction.uuid run data get entity @s Owner[0]
 
 execute as @a if score @s uuid = @e[type=minecraft:egg,tag=eggSelect,limit=1] interaction.uuid run tag @s add playerSelect
 
-scoreboard players remove @a[tag=playerSelect] sc.item.real.fireball 1
+scoreboard players remove @a[tag=playerSelect] player.item.real.fireball 1
 
 function glib.vector:classic/get_from_motion
 

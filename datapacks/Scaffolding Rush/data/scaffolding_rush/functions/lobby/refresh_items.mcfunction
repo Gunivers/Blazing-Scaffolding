@@ -1,6 +1,6 @@
 
 # Reset Scores
-function scaffolding_rush:player/items/clear
+function scaffolding_rush:player/item/clear
 
 execute positioned -6 24 -5 unless entity @s[dx=14,dy=14,dz=14] run function scaffolding_rush:lobby/give_items
 

@@ -16,7 +16,7 @@ execute unless score #flag.take_over options matches 0 run scoreboard players se
 #reset volcano timer
 scoreboard players set VolcanoSummonTimer timer 0
 
-execute as @a run function scaffolding_rush:player/items/clear
+execute as @a run function scaffolding_rush:player/item/clear
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 effect give @a minecraft:fire_resistance 20 100 true

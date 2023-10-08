@@ -9,7 +9,7 @@ execute unless score UseSnowball options matches 0 run tellraw @a[scores={option
 
 execute if score UseSnowball options matches 0 run scoreboard players set @a[tag=player.items.have_items] player.item.bumping_arrow_count 0
 execute unless score UseSnowball options matches 0 run scoreboard players set @a[tag=player.items.have_items] player.item.bumping_arrow_count 15
-execute unless score UseSnowball options matches 0 run scoreboard players set @a[tag=player.items.have_items] sc.item.real.snowball 1
+execute unless score UseSnowball options matches 0 run scoreboard players set @a[tag=player.items.have_items] player.item.real.snowball 1
 
 scoreboard players set @s opt_snowball 0
 scoreboard players enable @s opt_snowball

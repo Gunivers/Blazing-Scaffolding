@@ -1,17 +1,17 @@
 {
-    "parent": "scaffolding_rush:use_item",
+    "parent": "scaffolding_rush:player:item/use_item",
     "criteria": {
       "requirement": {
         "trigger": "minecraft:using_item",
         "conditions": {
           "item": {
-            "tag": "scaffolding_rush:item/fireball"
+            "tag": "scaffolding_rush:fireball"
           }
         }
       }
     },
     "rewards": {
-      "function": "scaffolding_rush:item/use_item/fireball"
+      "function": "scaffolding_rush:player:item/use_item/fireball"
     }
   }
   

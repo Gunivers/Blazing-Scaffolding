@@ -13,7 +13,7 @@ execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] run scoreboard pla
 
 execute at @e[type=marker,name="ScR_BuildLimit"] run teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 ~10 1000
 
-execute as @a run function scaffolding_rush:player/items/clear
+execute as @a run function scaffolding_rush:player/item/clear
 
 schedule function scaffolding_rush:reset 100t
 schedule function scaffolding_rush:lobby/load 104t

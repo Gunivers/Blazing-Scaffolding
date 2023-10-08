@@ -10,11 +10,11 @@ execute store result score @s interaction.uuid run data get entity @s Owner[0]
 
 execute as @a if score @s uuid = @e[type=minecraft:snowball,tag=snowballSelect,limit=1] interaction.uuid run tag @s add playerSelect
 
-scoreboard players remove @a[tag=playerSelect] sc.item.real.snowball 1
+scoreboard players remove @a[tag=playerSelect] player.item.real.snowball 1
 
 
 # item replace entity @a[scores={listener.use.snowball=1..}] weapon.mainhand with air
-# loot replace entity @a[scores={listener.use.snowball=1..}] weapon.mainhand loot scaffolding_rush:item/snowball
+# loot replace entity @a[scores={listener.use.snowball=1..}] weapon.mainhand loot scaffolding_rush:snowball
 
 scoreboard players set @a listener.use.snowball 0
 tag @s remove snowballSelect

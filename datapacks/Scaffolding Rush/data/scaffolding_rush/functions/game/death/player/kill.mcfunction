@@ -16,7 +16,7 @@ execute unless score #flag.take_over options matches 0 if entity @s[tag=flag_car
 kill @e[type=marker,tag=last_death]
 
 tag @s remove player.item.have_egg
-function scaffolding_rush:player/items/clear
+function scaffolding_rush:player/item/clear
 gamemode spectator @s
 scoreboard players set @s listener.death 0
 effect give @s instant_health 1 20

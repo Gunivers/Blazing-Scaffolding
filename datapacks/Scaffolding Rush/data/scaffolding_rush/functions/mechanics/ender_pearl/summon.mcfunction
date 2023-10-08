@@ -4,7 +4,7 @@ function glib.vector:classic/get_from_motion
 
 execute as @e[tag=ender_pearl_new] run scoreboard players operation @s glib.targetId = @p[scores={listener.use.ender_pearl=1..}] glib.id
 
-scoreboard players remove @p[scores={listener.use.ender_pearl=1..}] sc.item.real.ender_pearl 1
+scoreboard players remove @p[scores={listener.use.ender_pearl=1..}] player.item.real.ender_pearl 1
 
 scoreboard players set @a listener.use.ender_pearl 0
 

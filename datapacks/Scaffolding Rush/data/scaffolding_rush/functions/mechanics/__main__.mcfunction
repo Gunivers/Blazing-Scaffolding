@@ -14,7 +14,7 @@ effect give @a minecraft:saturation infinite 1 true
 item replace entity @a[tag=!flag_carry] weapon.offhand with air
 
 # Disable drop
-# execute as @e[type=item,tag=!processed] run function scaffolding_rush:item/catch_drop
+# execute as @e[type=item,tag=!processed] run function scaffolding_rush:player/item/catch_drop
 kill @e[type=item,nbt={Item: {tag: {sc.item: 1}}}]
 
 # Disable advancements
@@ -38,17 +38,17 @@ execute if score InstantPillar options matches 1 run function scaffolding_rush:m
 
 # Snowball behavior
 execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:mechanics/snowball/summon
-# function scaffolding_rush:item/replenish/snowball
+# scaffolding_rush:player/item/replenish/snowball
 kill @e[type=arrow,nbt={inGround: 1b}]
 
 # Fireball behavior
 execute as @e[type=egg] at @s run function scaffolding_rush:mechanics/fireball/summon
 execute if entity @e[tag=Fireball] run function scaffolding_rush:mechanics/fireball/motion
-# function scaffolding_rush:item/replenish/fireball
+# scaffolding_rush:player/item/replenish/fireball
 
 execute as @e[type=ender_pearl,tag=!old_ender_pearl] at @s run function scaffolding_rush:mechanics/ender_pearl/summon
 execute if entity @e[tag=ender_pearl] run function scaffolding_rush:mechanics/ender_pearl/motion
-# function scaffolding_rush:item/replenish/ender_pearl
+# scaffolding_rush:player/item/replenish/ender_pearl
 
 # Scaffoldings blocks arrows
 execute if score ScaffoldingStopsArrow options matches 1 as @e[type=arrow] at @s if block ~ ~ ~ #scaffolding_rush:scaffolding run kill @s

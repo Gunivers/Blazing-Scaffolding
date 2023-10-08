@@ -47,6 +47,28 @@ scoreboard objectives add trigger.reset trigger {"text":"Trigger Reset","color":
 scoreboard objectives add trigger.tutorial trigger {"text":"Trigger Tutorial","color": "white"}
 scoreboard objectives add trigger.lobby trigger {"text":"Trigger Lobby","color": "white"}
 
+# Player items ----------------------------------------------------------------
+
+scoreboard objectives add player.item.scaffolding_count dummy
+scoreboard objectives add player.item.sand_count dummy
+scoreboard objectives add player.item.fireball_count dummy
+scoreboard objectives add player.item.ender_pearl_count dummy
+scoreboard objectives add player.item.bumping_arrow_count dummy
+
+scoreboard objectives add player.item.test.scaffolding dummy
+scoreboard objectives add player.item.test.sand dummy
+scoreboard objectives add player.item.test.fireball dummy
+scoreboard objectives add player.item.test.ender_pearl dummy
+scoreboard objectives add player.item.test.snowball dummy
+
+scoreboard objectives add player.item.timer.fireball dummy
+scoreboard objectives add player.item.timer.ender_pearl dummy
+scoreboard objectives add player.item.timer.snowball dummy
+
+scoreboard objectives add player.item.real.fireball dummy
+scoreboard objectives add player.item.real.ender_pearl dummy
+scoreboard objectives add player.item.real.snowball dummy
+
 
 ### TO SORT
 scoreboard objectives add fallDistance minecraft.custom:minecraft.fall_one_cm
@@ -94,6 +116,11 @@ execute unless score #game.running data matches 0.. run scoreboard players set #
 execute unless score #game.loading data matches 0.. run scoreboard players set #game.loading data 0
 execute unless score #game.clear data matches 0.. run scoreboard players set #game.clear data 0
 execute unless score #lobby.clear data matches 0.. run scoreboard players set #lobby.clear data 0
+
+
+# Options ---------------------------------------------------------------------
+
+function scaffolding_rush:options/__init__
 
 #==============================================================================
 # TEAMS INITIALIZATION
@@ -191,15 +218,18 @@ function scaffolding_rush:lobby/map/reset
 function scaffolding_rush:game/map/reset
 function scaffolding_rush:tutorial/map/reset
 
+# Revoke advancements ---------------------------------------------------------
 
-### TO SORT -------------------------------------------------------------------
-
-#initialize options scores
-function scaffolding_rush:options/__init__
-function scaffolding_rush:item/__init__
-
-#advancement use_item
 advancement revoke @a from scaffolding_rush:use_item
+
+# Reset
+execute unless score #game.id data matches 0 run schedule function scaffolding_rush:reset 5t
+execute unless score #game.id data matches 0 run function scaffolding_rush:clear/lobby/launch
+
+
+#==============================================================================
+# ENVIRONMENT
+#==============================================================================
 
 #worldborder
 worldborder warning distance 1
@@ -208,6 +238,7 @@ worldborder damage amount 0
 #time
 time set noon
 
+# World spawn
 setworldspawn -500 1 0
 
 #Bossbar
@@ -216,9 +247,5 @@ bossbar set minecraft:filling_lava color red
 
 bossbar add time_limit ""
 bossbar set minecraft:time_limit color white
-
-# Reset
-execute unless score #game.id data matches 0 run schedule function scaffolding_rush:reset 5t
-execute unless score #game.id data matches 0 run function scaffolding_rush:clear/lobby/launch
 
 execute unless score game.id data matches 0 run function scaffolding_rush:first_launch

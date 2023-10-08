@@ -1,6 +1,6 @@
 gamemode adventure @a[team=!]
 gamemode spectator @a[team=]
-execute as @a run function scaffolding_rush:player/items/clear
+execute as @a run function scaffolding_rush:player/item/clear
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 execute if score Regen options matches 1 run effect give @s regeneration infinite 0 true

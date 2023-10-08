@@ -17,7 +17,7 @@ scoreboard players set @s trigger.tutorial 0
 scoreboard players set @s trigger.lobby 0
 scoreboard players enable @s trigger.tuto
 
-function scaffolding_rush:player/items/clear
+function scaffolding_rush:player/item/clear
 function scaffolding_rush:lobby/refresh_items
 
 execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
