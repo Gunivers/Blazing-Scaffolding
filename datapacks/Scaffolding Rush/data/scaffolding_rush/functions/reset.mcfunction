@@ -19,17 +19,9 @@ execute if score DevelopementMode data matches 1 run tellraw @a[scores={option.l
 
 execute as @e[type=villager] run function utils:clean_kill
 
-schedule clear scaffolding_rush:team/create_base/create
-schedule clear scaffolding_rush:broadcast/5s
-schedule clear scaffolding_rush:broadcast/4s
-schedule clear scaffolding_rush:broadcast/3s
-schedule clear scaffolding_rush:broadcast/2s
-schedule clear scaffolding_rush:broadcast/1s
-schedule clear scaffolding_rush:game/start
-schedule clear scaffolding_rush:game/lava/sound
+schedule clear *
+
 function scaffolding_rush:game/lava/global_rising/stop
-schedule clear scaffolding_rush:lobby/particles
-schedule clear scaffolding_rush:game/ghostblocks
 
 scoreboard players set LavaLevel data 2
 scoreboard players set #lobby.active data 1

@@ -18,7 +18,7 @@ scoreboard players operation @a game.id = #game.id data
 
 function scaffolding_rush:game/summon_markers
 
-function scaffolding_rush:broadcast/10s
+function scaffolding_rush:game/show_mode_description
 
 teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 2 1000
 
@@ -32,11 +32,7 @@ function scaffolding_rush:tutorial/unload
 
 schedule function scaffolding_rush:team/create_base/create 2.5s
 
-schedule function scaffolding_rush:broadcast/5s 5s
-schedule function scaffolding_rush:broadcast/4s 6s
-schedule function scaffolding_rush:broadcast/3s 7s
-schedule function scaffolding_rush:broadcast/2s 8s
-schedule function scaffolding_rush:broadcast/1s 9s
+schedule function utils:countdown/5s 5s
 schedule function scaffolding_rush:game/start 10s
 
 #disable trigers
