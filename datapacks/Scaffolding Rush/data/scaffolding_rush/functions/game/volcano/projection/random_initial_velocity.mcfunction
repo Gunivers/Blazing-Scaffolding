@@ -27,7 +27,6 @@ scoreboard players operation @s glib.vectorZ = @s glib.res0
 tag @s remove reverse_motion
 
 # Y motion
-function scaffolding_rush:lib/random
-scoreboard players operation @s glib.res0 %= 500 glib.const
-scoreboard players add @s glib.res0 500
-scoreboard players operation @s glib.vectorY = @s glib.res0
+execute store result score @s glib.vectorY run random value 0..500
+scoreboard players operation @s glib.vectorY %= 500 glib.const
+scoreboard players add @s glib.vectorY 500
