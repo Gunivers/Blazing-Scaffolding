@@ -46,7 +46,7 @@ execute as @e[type=egg] at @s run function scaffolding_rush:mechanics/fireball/s
 execute if entity @e[tag=Fireball] run function scaffolding_rush:mechanics/fireball/motion
 # scaffolding_rush:player/item/replenish/fireball
 
-execute as @e[type=ender_pearl,tag=!old_ender_pearl] at @s run function scaffolding_rush:mechanics/ender_pearl/summon
+execute as @e[type=ender_pearl] at @s run function scaffolding_rush:mechanics/ender_pearl/summon
 execute if entity @e[tag=ender_pearl] run function scaffolding_rush:mechanics/ender_pearl/motion
 # scaffolding_rush:player/item/replenish/ender_pearl
 

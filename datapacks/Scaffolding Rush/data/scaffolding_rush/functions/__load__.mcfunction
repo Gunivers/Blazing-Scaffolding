@@ -18,7 +18,6 @@ scoreboard objectives add const dummy {"text":"Constants","color": "gold"}
 scoreboard objectives add game.id dummy {"text":"Game ID","color": "aqua"}
 scoreboard objectives add option.language dummy
 scoreboard objectives add tutorial.cell.z dummy {"text":"Tutorial Cell Z","color": "aqua"}
-scoreboard objectives add uuid dummy {"text":"UUID","color": "aqua"}
 scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "aqua"}
 
 # Entities data ---------------------------------------------------------------
@@ -27,14 +26,11 @@ scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "
 scoreboard objectives add pos.x dummy {"text":"Pos X","color": "blue"}
 scoreboard objectives add pos.y dummy {"text":"Pos Y","color": "blue"}
 scoreboard objectives add pos.z dummy {"text":"Pos Z","color": "blue"}
-scoreboard objectives add interaction.uuid dummy {"text":"Interaction UUID","color": "blue"}
 
 # Listeners -------------------------------------------------------------------
 
 scoreboard objectives add listener.death deathCount {"text":"Trigger Death","color": "gray"}
 scoreboard objectives add listener.leave minecraft.custom:minecraft.leave_game {"text":"Trigger Leave","color": "gray"}
-scoreboard objectives add listener.use.snowball minecraft.used:minecraft.snowball {"text":"Trigger Use Snowball","color": "gray"}
-scoreboard objectives add listener.use.ender_pearl minecraft.used:minecraft.ender_pearl {"text":"Trigger Use Ender Pearl","color": "gray"}
 scoreboard objectives add listener.use.blue_spawn_egg minecraft.used:squid_spawn_egg {"text":"Trigger Use Blue Spawn Egg","color": "gray"}
 scoreboard objectives add listener.use.green_spawn_egg minecraft.used:slime_spawn_egg {"text":"Trigger Use Green Spawn Egg","color": "gray"}
 scoreboard objectives add listener.use.red_spawn_egg minecraft.used:mooshroom_spawn_egg {"text":"Trigger Use Red Spawn Egg","color": "gray"}
