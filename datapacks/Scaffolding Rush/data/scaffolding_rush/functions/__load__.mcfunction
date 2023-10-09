@@ -38,6 +38,7 @@ scoreboard objectives add const dummy {"text":"Constants","color": "gold"}
 # Player data -----------------------------------------------------------------
 
 scoreboard objectives add game.id dummy {"text":"Game ID","color": "aqua"}
+scoreboard objectives add uuid dummy {"text":"UUID","color": "aqua"}
 scoreboard objectives add option.language dummy
 scoreboard objectives add tutorial.cell.z dummy {"text":"Tutorial Cell Z","color": "aqua"}
 scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "aqua"}
@@ -62,23 +63,23 @@ scoreboard objectives add listener.use.yellow_spawn_egg minecraft.used:blaze_spa
 
 # Triggers --------------------------------------------------------------------
 
-scoreboard objectives add trigger.start_game trigger {"text":"Trigger Start Game","color": "white"}
-scoreboard objectives add trigger.reset trigger {"text":"Trigger Reset","color": "white"}
-scoreboard objectives add trigger.tutorial trigger {"text":"Trigger Tutorial","color": "white"}
-scoreboard objectives add trigger.lobby trigger {"text":"Trigger Lobby","color": "white"}
+scoreboard objectives add trigger.start_game trigger {"text":"Trigger Start Game","color": "black"}
+scoreboard objectives add trigger.reset trigger {"text":"Trigger Reset","color": "black"}
+scoreboard objectives add trigger.tutorial trigger {"text":"Trigger Tutorial","color": "black"}
+scoreboard objectives add trigger.lobby trigger {"text":"Trigger Lobby","color": "black"}
 
 # Player items ----------------------------------------------------------------
 
-scoreboard objectives add player.item.scaffolding.count dummy
-scoreboard objectives add player.item.sand.count dummy
-scoreboard objectives add player.item.fireball.count dummy
-scoreboard objectives add player.item.ender_pearl.count dummy
-scoreboard objectives add player.item.bumping_arrow.count dummy
-scoreboard objectives add player.item.book.count dummy
+scoreboard objectives add player.item.scaffolding.count dummy {"text":"Scaffolding Count","color": "green"}
+scoreboard objectives add player.item.sand.count dummy {"text":"Sand Count","color": "green"}
+scoreboard objectives add player.item.fireball.count dummy {"text":"Fireball Count","color": "green"}
+scoreboard objectives add player.item.ender_pearl.count dummy {"text":"Ender Pearl Count","color": "green"}
+scoreboard objectives add player.item.bumping_arrow.count dummy {"text":"Bumping Arrow Count","color": "green"}
+scoreboard objectives add player.item.book.count dummy {"text":"Book Count","color": "green"}
 
-scoreboard objectives add player.item.fireball.timer dummy
-scoreboard objectives add player.item.ender_pearl.timer dummy
-scoreboard objectives add player.item.bumping_arrow.timer dummy
+scoreboard objectives add player.item.fireball.timer dummy {"text":"Fireball Timer","color": "green"}
+scoreboard objectives add player.item.ender_pearl.timer dummy {"text":"Ender Pearl Timer","color": "green"}
+scoreboard objectives add player.item.bumping_arrow.timer dummy {"text":"Bumping Arrow Timer","color": "green"}
 
 
 ### TO SORT

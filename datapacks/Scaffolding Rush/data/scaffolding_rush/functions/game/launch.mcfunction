@@ -3,7 +3,7 @@ tag @a remove player.item.can_have_book
 scoreboard players reset @a trigger.start_game
 execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.start_game
 execute if score #admin.exist options matches 0 as @a run scoreboard players enable @s trigger.start_game
-execute as @a[team=random] run function scaffolding_rush:team/join/random
+execute as @a[team=] run function scaffolding_rush:team/join/random
 
 # Count active teams
 scoreboard players set RemainingTeam data 0
