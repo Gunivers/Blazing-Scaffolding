@@ -2,10 +2,10 @@
 execute if score DevelopementMode data matches 1 run say game/death/player/kill
 
 # Check if player can respawn
-execute if entity @s[team=red] if entity @e[type=villager,tag=game_villager,tag=red_villager] run tag @s add Respawning
-execute if entity @s[team=blue] if entity @e[type=villager,tag=game_villager,tag=blue_villager] run tag @s add Respawning
-execute if entity @s[team=yellow] if entity @e[type=villager,tag=game_villager,tag=yellow_villager] run tag @s add Respawning
-execute if entity @s[team=green] if entity @e[type=villager,tag=game_villager,tag=green_villager] run tag @s add Respawning
+execute if entity @s[team=red] if entity @e[type=villager,tag=game.villager,tag=red_villager] run tag @s add Respawning
+execute if entity @s[team=blue] if entity @e[type=villager,tag=game.villager,tag=blue_villager] run tag @s add Respawning
+execute if entity @s[team=yellow] if entity @e[type=villager,tag=game.villager,tag=yellow_villager] run tag @s add Respawning
+execute if entity @s[team=green] if entity @e[type=villager,tag=game.villager,tag=green_villager] run tag @s add Respawning
 
 # Drop the flag
 summon marker ~ ~ ~ {Tags:["last_death"]}
@@ -16,7 +16,6 @@ execute unless score #flag.take_over options matches 0 if entity @s[tag=flag_car
 kill @e[type=marker,tag=last_death]
 
 tag @s remove player.item.have_egg
-function scaffolding_rush:player/item/clear
 gamemode spectator @s
 scoreboard players set @s listener.death 0
 effect give @s instant_health 1 20

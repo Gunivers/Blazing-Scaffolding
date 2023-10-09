@@ -2,5 +2,8 @@
 
 scoreboard players reset @s
 
-function scaffolding_rush:player/item/clear
+tag @a remove player.item.can_have_items
+tag @a remove player.item.have_egg
 function glib.id:get_suid
+
+function scaffolding_rush:player/setup

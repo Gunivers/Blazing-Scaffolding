@@ -6,7 +6,7 @@
 scoreboard players set Preset options 7
 
 # Map
-scoreboard players set #lava.speed.second options 5
+scoreboard players set #lava.period.second options 5
 scoreboard players set WBSize options 40
 scoreboard players set WBSize2 options 30
 scoreboard players set WBSize3 options 40
@@ -30,7 +30,7 @@ scoreboard players set UseFireball options 1
 scoreboard players set InstantPillar options 1
 scoreboard players set FastClimb options 1
 scoreboard players set #respawn.delay.second options 5
-scoreboard players set LastingBases options 1
+scoreboard players set #lasting_base options 1
 scoreboard players set Rafts options 1
 
 # Villager

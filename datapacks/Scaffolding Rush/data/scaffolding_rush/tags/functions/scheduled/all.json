@@ -1,0 +1,30 @@
+{
+    "values": [
+        "scaffolding_rush:team/create_base/create",
+        "#utils:scheduled/countdown",
+        "scaffolding_rush:game/__start__",
+        "scaffolding_rush:reset",
+        "scaffolding_rush:game/map/reset/wait_chunk",
+        "scaffolding_rush:game/map/reset/area",
+        "scaffolding_rush:game/map/reset/finish",
+        "scaffolding_rush:lobby/map/reset/wait_chunk",
+        "scaffolding_rush:lobby/map/reset/area",
+        "scaffolding_rush:lobby/map/reset/finish",
+        "scaffolding_rush:lobby/map/reset/finish_message",
+        "scaffolding_rush:lobby/map/setup",
+        "scaffolding_rush:game/ghostblocks",
+        "scaffolding_rush:game/villager/egg/give/recup_delay",
+        "scaffolding_rush:game/villager/respawn/egg_counter/blue",
+        "scaffolding_rush:game/villager/respawn/egg_counter/red",
+        "scaffolding_rush:game/villager/respawn/egg_counter/green",
+        "scaffolding_rush:game/villager/respawn/egg_counter/yellow",
+        "scaffolding_rush:lobby/text/team/restore_villager_pos/green",
+        "scaffolding_rush:lobby/text/team/restore_villager_pos/red",
+        "scaffolding_rush:lobby/text/team/restore_villager_pos/blue",
+        "scaffolding_rush:lobby/text/team/restore_villager_pos/yellow",
+        "scaffolding_rush:tutorial/msg_lobby",
+        "scaffolding_rush:game/lava/sound",
+        "scaffolding_rush:team/create_base/rise/rise_solid",
+        "#scaffolding_rush:scheduled/lava_fill"
+    ]
+}

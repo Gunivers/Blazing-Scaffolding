@@ -5,28 +5,28 @@
 # Red
 execute if score #villager.enabled options matches 1 \
         unless entity @a[team=red,tag=TeamEliminated,limit=1] \
-        unless entity @e[type=villager,tag=game_villager,tag=red_villager,limit=1] \
+        unless entity @e[type=villager,tag=game.villager,tag=red_villager,limit=1] \
         unless entity @a[tag=player.item.have_egg,team=red] \
     run function scaffolding_rush:game/villager/respawn/test/red
 
 # Blue
 execute if score #villager.enabled options matches 1 \
         unless entity @a[team=blue,tag=TeamEliminated,limit=1] \
-        unless entity @e[type=villager,tag=game_villager,tag=blue_villager,limit=1] \
+        unless entity @e[type=villager,tag=game.villager,tag=blue_villager,limit=1] \
         unless entity @a[tag=player.item.have_egg,team=blue] \
     run function scaffolding_rush:game/villager/respawn/test/blue
 
 # Yellow
 execute if score #villager.enabled options matches 1 \
         unless entity @a[team=yellow,tag=TeamEliminated,limit=1] \
-        unless entity @e[type=villager,tag=game_villager,tag=yellow_villager,limit=1] \
+        unless entity @e[type=villager,tag=game.villager,tag=yellow_villager,limit=1] \
         unless entity @a[tag=player.item.have_egg,team=yellow] \
     run function scaffolding_rush:game/villager/respawn/test/yellow
 
 # Green
 execute if score #villager.enabled options matches 1 \
         unless entity @a[team=green,tag=TeamEliminated,limit=1] \
-        unless entity @e[type=villager,tag=game_villager,tag=green_villager,limit=1] \
+        unless entity @e[type=villager,tag=game.villager,tag=green_villager,limit=1] \
         unless entity @a[tag=player.item.have_egg,team=green] \
     run function scaffolding_rush:game/villager/respawn/test/green
 

@@ -6,7 +6,7 @@ scoreboard players enable @s opt_preset
 scoreboard players enable @s opt_lava_speed
 scoreboard players enable @s opt_build_height
 scoreboard players enable @s opt_sand
-scoreboard players enable @s opt_snowball
+scoreboard players enable @s opt_bumping_arrow
 scoreboard players enable @s opt_fireball
 scoreboard players enable @s opt_ender_pearl
 scoreboard players enable @s opt_vil_respawn
@@ -22,7 +22,7 @@ scoreboard players enable @s opt_team_number
 scoreboard players enable @s opt_resp_delay
 scoreboard players enable @s opt_admin
 scoreboard players enable @s opt_villager
-scoreboard players enable @s opt_language
+scoreboard players enable @s option.language
 scoreboard players enable @s opt_lasting_bases
 scoreboard players enable @s opt_flag_take_over
 scoreboard players enable @s opt_interactible_lobby

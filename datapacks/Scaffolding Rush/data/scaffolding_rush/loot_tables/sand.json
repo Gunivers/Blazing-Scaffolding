@@ -106,7 +106,7 @@
             "type": "minecraft:score",
             "target": {
                 "type": "minecraft:fixed",
-                "name": "#give_item"
+                "name": "#give_sand"
               },
             "score": "tmp"
           }

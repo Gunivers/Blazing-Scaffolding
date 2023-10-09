@@ -14,7 +14,10 @@
           "function": "minecraft:set_count",
           "count": {
             "type": "minecraft:score",
-            "target": "#give_item",
+            "target": {
+                "type": "minecraft:fixed",
+                "name": "#give_item"
+            },
             "score": "tmp"
           }
         },

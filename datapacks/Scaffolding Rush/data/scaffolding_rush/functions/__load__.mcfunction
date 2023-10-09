@@ -1,6 +1,29 @@
 # Executed globally
 # Called by #minecraft:load
 
+# Forceload game map
+forceload add 1100 1100 900 900
+# Forceload lobby map
+forceload add 100 100 -100 -100
+# Forceload tutorial map
+forceload add -1003 997 -998 1002
+
+#==============================================================================
+# CLEAR
+#==============================================================================
+
+scoreboard objectives setdisplay sidebar
+
+# Kill all entities
+execute as @e[type=villager] run function utils:clean_kill
+kill @e[type=!player]
+
+# Revoke advancements ---------------------------------------------------------
+
+advancement revoke @a from scaffolding_rush:use_item
+
+execute as @a run function scaffolding_rush:player/setup
+
 #==============================================================================
 # OBJECTIVES DECLARATIONS
 #==============================================================================
@@ -33,7 +56,7 @@ scoreboard objectives add interaction.uuid dummy {"text":"Interaction UUID","col
 
 scoreboard objectives add listener.death deathCount {"text":"Trigger Death","color": "gray"}
 scoreboard objectives add listener.leave minecraft.custom:minecraft.leave_game {"text":"Trigger Leave","color": "gray"}
-scoreboard objectives add listener.use.snowball minecraft.used:minecraft.snowball {"text":"Trigger Use Snowball","color": "gray"}
+scoreboard objectives add listener.use.bumping_arrow minecraft.used:minecraft.snowball {"text":"Trigger Use Snowball","color": "gray"}
 scoreboard objectives add listener.use.ender_pearl minecraft.used:minecraft.ender_pearl {"text":"Trigger Use Ender Pearl","color": "gray"}
 scoreboard objectives add listener.use.blue_spawn_egg minecraft.used:squid_spawn_egg {"text":"Trigger Use Blue Spawn Egg","color": "gray"}
 scoreboard objectives add listener.use.green_spawn_egg minecraft.used:slime_spawn_egg {"text":"Trigger Use Green Spawn Egg","color": "gray"}
@@ -49,25 +72,16 @@ scoreboard objectives add trigger.lobby trigger {"text":"Trigger Lobby","color":
 
 # Player items ----------------------------------------------------------------
 
-scoreboard objectives add player.item.scaffolding_count dummy
-scoreboard objectives add player.item.sand_count dummy
-scoreboard objectives add player.item.fireball_count dummy
-scoreboard objectives add player.item.ender_pearl_count dummy
-scoreboard objectives add player.item.bumping_arrow_count dummy
+scoreboard objectives add player.item.scaffolding.count dummy
+scoreboard objectives add player.item.sand.count dummy
+scoreboard objectives add player.item.fireball.count dummy
+scoreboard objectives add player.item.ender_pearl.count dummy
+scoreboard objectives add player.item.bumping_arrow.count dummy
+scoreboard objectives add player.item.book.count dummy
 
-scoreboard objectives add player.item.test.scaffolding dummy
-scoreboard objectives add player.item.test.sand dummy
-scoreboard objectives add player.item.test.fireball dummy
-scoreboard objectives add player.item.test.ender_pearl dummy
-scoreboard objectives add player.item.test.snowball dummy
-
-scoreboard objectives add player.item.timer.fireball dummy
-scoreboard objectives add player.item.timer.ender_pearl dummy
-scoreboard objectives add player.item.timer.snowball dummy
-
-scoreboard objectives add player.item.real.fireball dummy
-scoreboard objectives add player.item.real.ender_pearl dummy
-scoreboard objectives add player.item.real.snowball dummy
+scoreboard objectives add player.item.fireball.timer dummy
+scoreboard objectives add player.item.ender_pearl.timer dummy
+scoreboard objectives add player.item.bumping_arrow.timer dummy
 
 
 ### TO SORT
@@ -79,12 +93,6 @@ scoreboard objectives add lightLevel dummy
 scoreboard objectives add health dummy
 scoreboard objectives add sc.timer.tutorial dummy
 
-
-scoreboard objectives add fireball_timer dummy
-scoreboard objectives add fireball_count dummy
-scoreboard objectives add enderpearl_timer dummy
-scoreboard objectives add enderpearl_count dummy
-scoreboard objectives add snowballs dummy
 scoreboard objectives add glib.parentId dummy
 
 #==============================================================================
@@ -204,30 +212,6 @@ gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
 
 #==============================================================================
-# CLEAR
-#==============================================================================
-
-scoreboard objectives setdisplay sidebar
-
-# Kill all entities
-execute as @e[type=villager] run function utils:clean_kill
-kill @e[type=!player]
-
-# Reset maps
-function scaffolding_rush:lobby/map/reset
-function scaffolding_rush:game/map/reset
-function scaffolding_rush:tutorial/map/reset
-
-# Revoke advancements ---------------------------------------------------------
-
-advancement revoke @a from scaffolding_rush:use_item
-
-# Reset
-execute unless score #game.id data matches 0 run schedule function scaffolding_rush:reset 5t
-execute unless score #game.id data matches 0 run function scaffolding_rush:lobby/map/reset/__start__
-
-
-#==============================================================================
 # ENVIRONMENT
 #==============================================================================
 
@@ -249,4 +233,8 @@ bossbar add time_limit ""
 bossbar set minecraft:time_limit color white
 
 scoreboard players add #game.id data 1
-function scaffolding_rush:lobby/map/setup
+
+
+execute if score #game.running data matches 1 run function scaffolding_rush:game/finish
+execute if score #game.running data matches 0 run function scaffolding_rush:game/map/reset/__start__
+function scaffolding_rush:lobby/map/reset/__start__

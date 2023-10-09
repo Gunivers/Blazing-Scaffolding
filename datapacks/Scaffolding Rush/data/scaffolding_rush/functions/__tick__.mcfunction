@@ -1,5 +1,4 @@
 
-
 execute as @a[scores={listener.leave=1..}] run function scaffolding_rush:player/join/__main__
 
 execute if score #lobby.active data matches 1 run function scaffolding_rush:lobby/__main__
@@ -26,7 +25,7 @@ execute if score tick200 data matches 200.. run scoreboard players set tick200 d
 function scaffolding_rush:mechanics/__main__
 
 # Item
-function scaffolding_rush:player/item/__main__
+function scaffolding_rush:player/__main__
 
 # Admin mode
 execute unless entity @a[tag=admin] if score #admin.exist options matches 1 run function scaffolding_rush:options/admin

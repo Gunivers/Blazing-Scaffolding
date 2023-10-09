@@ -4,7 +4,7 @@ execute as @s[scores={opt_build_height=1..}] run function scaffolding_rush:optio
 execute as @s[scores={opt_sand=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={opt_instant_pil=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={opt_perf_mode=1..}] run function scaffolding_rush:options/msg_unauthorized
-execute as @s[scores={opt_snowball=1..}] run function scaffolding_rush:options/msg_unauthorized
+execute as @s[scores={opt_bumping_arrow=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={opt_fireball=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={opt_ender_pearl=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={opt_perf_mode=1..}] run function scaffolding_rush:options/msg_unauthorized

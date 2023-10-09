@@ -4,7 +4,7 @@ execute as @s[scores={opt_build_height=1..}] run function scaffolding_rush:optio
 execute as @s[scores={opt_sand=1..}] run function scaffolding_rush:options/gameplay/sand
 execute as @s[scores={opt_instant_pil=1..}] run function scaffolding_rush:options/gameplay/instant_pillar
 execute as @s[scores={opt_perf_mode=1..}] run function scaffolding_rush:options/perf_mode
-execute as @s[scores={opt_snowball=1..}] run function scaffolding_rush:options/gameplay/snowball
+execute as @s[scores={opt_bumping_arrow=1..}] run function scaffolding_rush:options/gameplay/snowball
 execute as @s[scores={opt_fireball=1..}] run function scaffolding_rush:options/gameplay/fireball
 execute as @s[scores={opt_ender_pearl=1..}] run function scaffolding_rush:options/gameplay/ender_pearl
 execute as @s[scores={opt_perf_mode=1..}] run function scaffolding_rush:options/perf_mode

@@ -6,8 +6,8 @@ scoreboard objectives add usedTrigger dummy
 scoreboard objectives add opt_preset trigger
 execute unless score Preset options matches 1..7 run scoreboard players set Preset options 1
 scoreboard objectives add opt_perf_mode trigger
-execute unless score PerformanceMode options matches 0.. run scoreboard players set PerformanceMode options 0
-scoreboard objectives add opt_language trigger
+execute unless score #performance_mode options matches 0.. run scoreboard players set #performance_mode options 0
+scoreboard objectives add option.language trigger
 scoreboard objectives add opt_admin trigger
 execute unless score #admin.exist options matches 0.. run scoreboard players set #admin.exist options 0
 
@@ -29,7 +29,7 @@ execute unless score UseFireball options matches 0.. run scoreboard players set 
 scoreboard objectives add opt_instant_pil trigger
 execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
 scoreboard objectives add opt_lasting_bases trigger
-execute unless score LastingBases options matches 0..1 run scoreboard players set LastingBases options 0
+execute unless score #lasting_base options matches 0..1 run scoreboard players set #lasting_base options 0
 scoreboard objectives add opt_regen trigger
 execute unless score Regen options matches 0.. run scoreboard players set Regen options 1
 scoreboard objectives add opt_resp_delay trigger
@@ -38,7 +38,7 @@ scoreboard objectives add opt_sand trigger
 execute unless score UseSand options matches 0.. run scoreboard players set UseSand options 1
 scoreboard objectives add opt_scaff_stops_arrow trigger
 execute unless score ScaffoldingStopsArrow options matches 0.. run scoreboard players set ScaffoldingStopsArrow options 0
-scoreboard objectives add opt_snowball trigger
+scoreboard objectives add opt_bumping_arrow trigger
 execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
 
 # Map
@@ -47,7 +47,7 @@ execute unless score BuildHeight options matches 5.. run scoreboard players set 
 scoreboard objectives add opt_interactible_lobby trigger
 execute unless score InteractibleLobby options matches 0..1 run scoreboard players set InteractibleLobby options 1
 scoreboard objectives add opt_lava_speed trigger
-execute unless score #lava.speed.second options matches 0.. run scoreboard players set #lava.speed.second options 20
+execute unless score #lava.period.second options matches 0.. run scoreboard players set #lava.period.second options 20
 scoreboard objectives add opt_time_limit trigger
 execute unless score #game.time.limit options matches 1.. run scoreboard players set #game.time.limit options 3
 scoreboard objectives add opt_score_limit trigger

@@ -1,7 +1,6 @@
 team join green @s
 execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 function scaffolding_rush:team/join/killbase
-function scaffolding_rush:lobby/refresh_items
 
 playsound minecraft:block.note_block.bit ambient @s ~ ~ ~ 1 1 1
 particle minecraft:dust 0.098 0.98 0.02 1 ^ ^1 ^0.3 0.3 0.8 0.3 1 10 normal

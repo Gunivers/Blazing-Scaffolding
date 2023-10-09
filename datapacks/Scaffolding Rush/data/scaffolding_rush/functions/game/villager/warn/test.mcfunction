@@ -1,2 +1,2 @@
 
-scoreboard players operation @s pos.y -= LavaLevel data
+scoreboard players operation @s pos.y -= #lava.level data

@@ -13,4 +13,4 @@ execute if score #admin.exist options matches 1 unless entity @a[tag=admin] run 
 
 execute as @s[tag=!InGame] if score @s game.id matches 1.. at @s run function scaffolding_rush:game/tp_to_game
 
-execute at @e[type=marker,name="ScR_LavaLevel",limit=1] run teleport @s ~ ~50 ~ 0 90
+execute at @e[type=marker,name="lava.level",limit=1] run teleport @s ~ ~50 ~ 0 90

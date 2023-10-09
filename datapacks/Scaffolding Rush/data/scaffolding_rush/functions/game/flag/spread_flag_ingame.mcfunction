@@ -7,8 +7,8 @@ execute positioned 0 0 0 if score CurrentWBSize data matches 35..79 run spreadpl
 execute positioned 0 0 0 if score CurrentWBSize data matches 80..119 run spreadplayers 1000 1000 35 40 false @e[type=armor_stand,tag=spread]
 execute positioned 0 0 0 if score CurrentWBSize data matches 120..165 run spreadplayers 1000 1000 55 60 false @e[type=armor_stand,tag=spread]
 
-execute as @e[type=marker,name="ScR_LavaLevel",limit=1] at @s run function glib.location:get_y
-scoreboard players operation @e[type=armor_stand,tag=spread] glib.locY = @e[type=marker,name="ScR_LavaLevel",limit=1] glib.locY
+execute as @e[type=marker,name="lava.level",limit=1] at @s run function glib.location:get_y
+scoreboard players operation @e[type=armor_stand,tag=spread] glib.locY = @e[type=marker,name="lava.level",limit=1] glib.locY
 execute as @e[type=armor_stand,tag=spread] at @s run function glib.location:set_y
 
 tag @e[type=armor_stand,tag=spread] remove spread

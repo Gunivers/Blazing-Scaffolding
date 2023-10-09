@@ -1,9 +1,9 @@
 # Execute on threating arrows at villager position
 
-execute if entity @e[type=villager,tag=game_villager,limit=1,sort=nearest,tag=red_villager] run summon marker ~ ~ ~ {Tags:["VillagerArrowShield","Red"]}
-execute if entity @e[type=villager,tag=game_villager,limit=1,sort=nearest,tag=blue_villager] run summon marker ~ ~ ~ {Tags:["VillagerArrowShield","Blue"]}
-execute if entity @e[type=villager,tag=game_villager,limit=1,sort=nearest,tag=green_villager] run summon marker ~ ~ ~ {Tags:["VillagerArrowShield","Green"]}
-execute if entity @e[type=villager,tag=game_villager,limit=1,sort=nearest,tag=yellow_villager] run summon marker ~ ~ ~ {Tags:["VillagerArrowShield","Yellow"]}
+execute if entity @e[type=villager,tag=game.villager,limit=1,sort=nearest,tag=red_villager] run summon marker ~ ~ ~ {Tags:["VillagerArrowShield","Red"]}
+execute if entity @e[type=villager,tag=game.villager,limit=1,sort=nearest,tag=blue_villager] run summon marker ~ ~ ~ {Tags:["VillagerArrowShield","Blue"]}
+execute if entity @e[type=villager,tag=game.villager,limit=1,sort=nearest,tag=green_villager] run summon marker ~ ~ ~ {Tags:["VillagerArrowShield","Green"]}
+execute if entity @e[type=villager,tag=game.villager,limit=1,sort=nearest,tag=yellow_villager] run summon marker ~ ~ ~ {Tags:["VillagerArrowShield","Yellow"]}
 
 execute at @e[type=villager,limit=1,sort=nearest] positioned ~ ~1 ~ facing entity @s feet run tp @e[type=marker,tag=VillagerArrowShield] ~ ~ ~ ~ ~
 

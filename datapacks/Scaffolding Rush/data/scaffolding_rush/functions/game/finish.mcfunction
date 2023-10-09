@@ -48,11 +48,12 @@ execute if entity @a[team=green,tag=!TeamEliminated,limit=1] run scoreboard play
 execute if entity @a[team=red,tag=!TeamEliminated,limit=1] run scoreboard players add @a[team=red] Win 1
 execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] run scoreboard players add @a[team=yellow] Win 1
 
-execute at @e[type=marker,name="ScR_BuildLimit"] run teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 ~10 1000
+execute at @e[type=marker,name="build.limit"] run teleport @e[type=marker,name="lava.level",limit=1] 1000 ~10 1000
 
-execute as @a run function scaffolding_rush:player/item/clear
+tag @a remove player.item.can_have_items
+tag @a remove player.item.have_egg
 
-schedule function scaffolding_rush:reset 100t
+schedule function scaffolding_rush:game/reset 100t
 schedule function scaffolding_rush:lobby/map/setup 104t
 
 execute if score RandomTeam options matches 1 as @a[team=!] run team join random @s

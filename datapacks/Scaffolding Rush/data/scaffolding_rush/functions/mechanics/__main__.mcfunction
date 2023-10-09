@@ -10,11 +10,9 @@
 effect give @a minecraft:saturation infinite 1 true
 
 # Disable offhand
-# execute as @a[tag=!flag_carry,nbt={Inventory:[{Slot:-106b}]}] run item replace entity @s weapon.mainhand from entity @s weapon.offhand
 item replace entity @a[tag=!flag_carry] weapon.offhand with air
 
 # Disable drop
-# execute as @e[type=item,tag=!processed] run function scaffolding_rush:player/item/catch_drop
 kill @e[type=item,nbt={Item: {tag: {sc.item: 1}}}]
 
 # Disable advancements

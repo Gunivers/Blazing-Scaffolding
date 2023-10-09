@@ -1,7 +1,7 @@
-execute positioned as @e[type=marker,name="ScR_LavaLevel",limit=1] run function scaffolding_rush:game/flag/summon/random
-execute positioned as @e[type=marker,name="ScR_LavaLevel",limit=1] run function scaffolding_rush:game/flag/summon/random
-execute positioned as @e[type=marker,name="ScR_LavaLevel",limit=1] run function scaffolding_rush:game/flag/summon/random
-execute positioned as @e[type=marker,name="ScR_LavaLevel",limit=1] run function scaffolding_rush:game/flag/summon/random
+execute positioned as @e[type=marker,name="lava.level",limit=1] run function scaffolding_rush:game/flag/summon/random
+execute positioned as @e[type=marker,name="lava.level",limit=1] run function scaffolding_rush:game/flag/summon/random
+execute positioned as @e[type=marker,name="lava.level",limit=1] run function scaffolding_rush:game/flag/summon/random
+execute positioned as @e[type=marker,name="lava.level",limit=1] run function scaffolding_rush:game/flag/summon/random
 
 tag @e[type=minecraft:armor_stand,tag=new] add spread
 

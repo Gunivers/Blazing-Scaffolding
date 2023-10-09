@@ -1,8 +1,5 @@
 # Executed globally
 
-forceload add 100 100 -100 -100
-
-
 scoreboard players set #lobby.active data 1
 
 kill @e[tag=baseTeam]
@@ -63,16 +60,10 @@ summon minecraft:marker 6 24 2 {Tags: ["lobbyLight"]}
 summon minecraft:marker 4 25 -2 {Tags: ["lobbyLight"]}
 execute as @e[type=marker,tag=lobbyLight] unless score @s lightLevel matches 0..15 run scoreboard players set @s lightLevel 10
 
-execute as @a[team=blue] run function scaffolding_rush:lobby/refresh_items
-execute as @a[team=green] run function scaffolding_rush:lobby/refresh_items
-execute as @a[team=red] run function scaffolding_rush:lobby/refresh_items
-execute as @a[team=yellow] run function scaffolding_rush:lobby/refresh_items
-
 function scaffolding_rush:lobby/text/scaff
 
 function scaffolding_rush:lobby/text/refresh
 function scaffolding_rush:lobby/preset_villager/refresh
 
 # Load tutorial world
-function scaffolding_rush:tutorial/forceload
 scoreboard players enable @a[tag=!inTutorial] trigger.tuto

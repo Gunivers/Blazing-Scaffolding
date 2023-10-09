@@ -1,6 +1,11 @@
 gamemode adventure @a[team=!]
 gamemode spectator @a[team=]
-execute as @a run function scaffolding_rush:player/item/clear
+
+clear @s
+tag @a remove player.item.can_have_items
+tag @a remove player.item.have_egg
+
+
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
 execute if score Regen options matches 1 run effect give @s regeneration infinite 0 true
@@ -20,7 +25,7 @@ function scaffolding_rush:game/summon_markers
 
 function scaffolding_rush:game/show_mode_description
 
-teleport @e[type=marker,name="ScR_LavaLevel",limit=1] 1000 2 1000
+teleport @e[type=marker,name="lava.level",limit=1] 1000 2 1000
 
 kill @e[type=falling_block]
 kill @e[type=arrow]
@@ -33,7 +38,7 @@ function scaffolding_rush:tutorial/unload
 schedule function scaffolding_rush:team/create_base/create 2.5s
 
 schedule function utils:countdown/5s 5s
-schedule function scaffolding_rush:game/start 10s
+schedule function scaffolding_rush:game/__start__ 10s
 
 #disable trigers
 execute as @a run function scaffolding_rush:options/disable_all
@@ -50,8 +55,8 @@ scoreboard players operation #game.time.left timer *= 20 const
 scoreboard players operation #game.time.left timer *= 60 const
 
 #get lavaspeed timer in tics
-scoreboard players operation #lava.speed.tick options = #lava.speed.second options
-scoreboard players operation #lava.speed.tick options *= 20 const
+scoreboard players operation #lava.period.tick options = #lava.period.second options
+scoreboard players operation #lava.period.tick options *= 20 const
 
 #get villager respawn timer in tics
 scoreboard players operation #villager.respawn.tick options = #villager.respawn.seconds options

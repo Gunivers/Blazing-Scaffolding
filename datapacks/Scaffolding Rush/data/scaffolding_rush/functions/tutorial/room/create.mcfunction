@@ -9,12 +9,10 @@ spawnpoint @s ~ ~8 ~ -90
 
 execute as @s at @s store result score @s tutorial.cell.z run data get entity @s Pos[2]
 
-tag @s remove player.items.have_items
-clear @s
 gamemode adventure @s
 scoreboard players set @s sc.timer.tutorial 0
 
-function scaffolding_rush:player/item/clear
-scoreboard players set @s player.item.scaffolding_count 42
+tag @s add player.item.can_have_items
+scoreboard players set @s player.item.scaffolding.count 42
 
 tag @s add inTutorial

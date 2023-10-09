@@ -7,7 +7,7 @@ scoreboard players reset @s opt_preset
 scoreboard players reset @s opt_lava_speed
 scoreboard players reset @s opt_build_height
 scoreboard players reset @s opt_sand
-scoreboard players reset @s opt_snowball
+scoreboard players reset @s opt_bumping_arrow
 scoreboard players reset @s opt_fireball
 scoreboard players reset @s opt_ender_pearl
 scoreboard players reset @s opt_vil_respawn
@@ -23,7 +23,7 @@ scoreboard players reset @s opt_team_number
 scoreboard players reset @s opt_resp_delay
 scoreboard players reset @s opt_admin
 scoreboard players reset @s opt_villager
-scoreboard players reset @s opt_language
+# scoreboard players reset @s option.language
 scoreboard players reset @s opt_lasting_bases
 scoreboard players reset @s opt_flag_take_over
 scoreboard players reset @s opt_interactible_lobby

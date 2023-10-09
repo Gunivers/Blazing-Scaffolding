@@ -10,13 +10,6 @@ execute as @e[type=minecraft:armor_stand,tag=baseTeam,tag=!villagerSpawned] run 
 # #button place base
 # execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function scaffolding_rush:lobby/base_egg/remove_at_button
 
-# Give items outside the central scaffolding and remove them inside of it
-execute as @a[tag=!inLobbyCenter] positioned -6 24 -5 if entity @s[dx=14,dy=14,dz=14] run function scaffolding_rush:lobby/refresh_items
-execute as @a[tag=!inLobbyCenter] positioned -6 24 -5 if entity @s[dx=14,dy=14,dz=14] run tag @s add inLobbyCenter
-
-execute as @a[tag=inLobbyCenter] positioned -6 24 -5 unless entity @s[dx=14,dy=14,dz=14] run function scaffolding_rush:lobby/refresh_items
-execute as @a[tag=inLobbyCenter] positioned -6 24 -5 unless entity @s[dx=14,dy=14,dz=14] run tag @s remove inLobbyCenter
-
 #check player coordonates
 execute unless score #game.end data matches 1 as @a[gamemode=!spectator,tag=!inTutorial] at @s run function scaffolding_rush:lobby/correct_coordinates
 
@@ -42,15 +35,10 @@ function scaffolding_rush:lobby/interaction/__main__
 
 execute as @a[gamemode=survival] at @s if block ~ ~-0.01 ~ magma_block run kill @s
 
-execute as @a at @s if block ~ ~ ~ moving_piston run effect give @s weakness 1 255 true
-execute as @a at @s if block ~ ~ ~ moving_piston run effect give @s resistance 1 255 true
-execute as @a at @s if block ~ ~ ~ moving_piston run effect give @s regeneration 1 255 true
-
-
-execute as @e[type=arrow] at @s if block ~ ~ ~ moving_piston run tag @s add LobbyProtection
-execute as @e[tag=Fireball] at @s if block ~ ~ ~ moving_piston run tag @s add LobbyProtection
-
 execute at @e[tag=LobbyProtection] run particle cloud ~ ~ ~ 0 0 0 0.1 3 force
 execute as @e[tag=LobbyProtection] run kill @s
 
 execute as @a[scores={tuto=1}] run function scaffolding_rush:tutorial/join
+
+tag @a[tag=!player.item.can_have_book] add player.item.can_have_book
+function scaffolding_rush:lobby/protection/__main__
