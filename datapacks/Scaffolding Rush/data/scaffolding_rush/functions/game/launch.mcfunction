@@ -3,7 +3,7 @@ tag @a remove player.item.can_have_book
 scoreboard players reset @a trigger.start_game
 execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.start_game
 execute if score #admin.exist options matches 0 as @a run scoreboard players enable @s trigger.start_game
-execute as @a[team=] run function scaffolding_rush:team/join/random
+execute as @a[team=random] run function scaffolding_rush:team/join/random
 
 # Count active teams
 scoreboard players set RemainingTeam data 0
@@ -23,6 +23,3 @@ execute if score #game.clear data matches 1 run tellraw @a[scores={option.langua
 execute if score RemainingTeam data matches ..1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Pas assez de joueur dans les équipes !","color":"red"}]
 execute if score #game.clear data matches 1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Merci de patienter, une réinitialisation de la carte est en cours","color":"red"}]
 
-effect give @a minecraft:instant_health 1 100 true
-effect give @a minecraft:fire_resistance infinite 100 true
-effect give @a minecraft:resistance infinite 100 true

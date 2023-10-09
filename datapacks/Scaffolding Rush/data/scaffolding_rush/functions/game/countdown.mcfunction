@@ -5,6 +5,9 @@ clear @s
 tag @a remove player.item.can_have_items
 tag @a remove player.item.have_egg
 
+effect give @a minecraft:instant_health 1 100 true
+effect give @a minecraft:fire_resistance infinite 100 true
+effect give @a minecraft:resistance infinite 100 true
 
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true

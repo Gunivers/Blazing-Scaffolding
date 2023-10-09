@@ -21,7 +21,6 @@ kill @e[type=!player]
 # Revoke advancements ---------------------------------------------------------
 
 advancement revoke @a from scaffolding_rush:use_item
-
 execute as @a run function scaffolding_rush:player/setup
 
 #==============================================================================
@@ -233,7 +232,18 @@ bossbar set minecraft:time_limit color white
 
 scoreboard players add #game.id data 1
 
+# If the game is loading, force start it
+execute if score #game.loading data matches 1 run schedule clear utils:countdown/5s
+execute if score #game.loading data matches 1 run schedule clear utils:countdown/4s
+execute if score #game.loading data matches 1 run schedule clear utils:countdown/3s
+execute if score #game.loading data matches 1 run schedule clear utils:countdown/2s
+execute if score #game.loading data matches 1 run schedule clear utils:countdown/1s
+execute if score #game.loading data matches 1 run schedule clear scaffolding_rush:game/__start__
+execute if score #game.loading data matches 1 run function scaffolding_rush:game/__start__
 
+# If no game started, reset the map, otherwise, finish it (which wil lreset the map afterward)
+execute if score #game.running data matches 0 unless score #game.end data matches 1 run function scaffolding_rush:game/map/reset/__start__
 execute if score #game.running data matches 1 run function scaffolding_rush:game/finish
-execute if score #game.running data matches 0 run function scaffolding_rush:game/map/reset/__start__
+
+# Reset the lobby
 function scaffolding_rush:lobby/map/reset/__start__
