@@ -27,7 +27,6 @@ teleport @e[type=marker,name="lava.level",limit=1] 1000 2 1000
 
 kill @e[type=falling_block]
 kill @e[type=arrow]
-kill @e[type=item]
 
 
 # Unload the tutorial world

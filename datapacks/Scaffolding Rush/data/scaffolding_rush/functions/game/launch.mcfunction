@@ -1,3 +1,5 @@
+tag @a remove player.item.can_have_book
+
 scoreboard players reset @a trigger.start_game
 execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.start_game
 execute if score #admin.exist options matches 0 as @a run scoreboard players enable @s trigger.start_game

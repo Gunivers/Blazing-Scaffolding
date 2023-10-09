@@ -63,6 +63,7 @@ tag @a remove flagTwo
 tag @a remove flagFive
 
 effect clear @a
+clear @a
 tag @a remove player.item.can_have_items
 tag @a remove player.item.have_egg
 

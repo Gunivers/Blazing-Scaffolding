@@ -16,6 +16,8 @@ execute unless score #flag.take_over options matches 0 run scoreboard players se
 #reset volcano timer
 scoreboard players set VolcanoSummonTimer timer 0
 
+effect clear @a
+
 tag @a add player.item.can_have_items
 
 effect give @a minecraft:instant_health 1 100 true
