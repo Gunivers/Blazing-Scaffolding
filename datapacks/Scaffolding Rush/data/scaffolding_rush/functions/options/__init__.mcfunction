@@ -66,8 +66,6 @@ scoreboard objectives add opt_worldborder_time_to_shrink trigger
 execute unless score WorldborderTimeToShrink options matches 1.. run scoreboard players set WorldborderTimeToShrink options 2
 
 # Team
-scoreboard objectives add opt_random_team trigger
-execute unless score RandomTeam options matches 0..1 run scoreboard players set RandomTeam options 0
 scoreboard objectives add opt_team_egg trigger
 execute unless score TeamEgg options matches 0.. run scoreboard players set TeamEgg options 0
 scoreboard objectives add opt_team_number trigger

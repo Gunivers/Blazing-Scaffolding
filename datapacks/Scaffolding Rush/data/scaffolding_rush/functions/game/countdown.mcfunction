@@ -19,8 +19,6 @@ scoreboard players add #game.id data 1
 scoreboard players operation @a game.id = #game.id data
 
 
-#function scaffolding_rush:team/random
-
 function scaffolding_rush:game/summon_markers
 
 function scaffolding_rush:game/show_mode_description
