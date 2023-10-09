@@ -7,16 +7,11 @@
 #                                    |___/                                                                                                                                                                                                                                      
 
 # Avoid hunger
-effect give @a minecraft:saturation infinite 1 true
+
 
 # Disable offhand
 item replace entity @a[tag=!flag_carry] weapon.offhand with air
 
-# Disable drop
-kill @e[type=item,nbt={Item: {tag: {sc.item: 1}}}]
-
-# Disable advancements
-advancement revoke @a everything
 
 #  _   _                                                    _          
 # | \ | | _____      __      _ __ ___   ___  ___ __ _ _ __ (_) ___ ___ 

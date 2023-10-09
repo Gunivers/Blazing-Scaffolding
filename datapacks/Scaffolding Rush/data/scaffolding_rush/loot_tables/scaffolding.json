@@ -14,11 +14,8 @@
           "function": "minecraft:set_count",
           "count": {
             "type": "minecraft:score",
-            "target": {
-                "type": "minecraft:fixed",
-                "name": "#give_scaffolding"
-            },
-            "score": "tmp"
+            "target": "this",
+            "score": "player.item.scaffolding.count"
           }
         },
         {

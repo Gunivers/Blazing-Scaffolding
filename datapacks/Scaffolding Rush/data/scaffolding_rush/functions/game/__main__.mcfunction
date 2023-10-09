@@ -14,9 +14,8 @@ execute as @a[gamemode=!spectator,tag=!Respawning,scores={listener.death=0}] at 
 # Mains
 # +++++++++++++++++++++++++++++++++++++
 
-function scaffolding_rush:game/death/__main__
+function scaffolding_rush:game/death_detection
 execute unless score #lava.period.tick options matches 0 run function scaffolding_rush:game/lava/__main__
-function scaffolding_rush:game/villager/__main__
 
 execute if score #flag.take_over options matches 1 run function scaffolding_rush:game/flag/__main__
 execute if score Volcano options matches 1 run function scaffolding_rush:game/volcano/__main__
@@ -59,10 +58,10 @@ execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/buil
 execute if score #game.end data matches 0 run function scaffolding_rush:game/test_end
 
 # Elimination if team exist, unless players in game, unless players are respawning
-execute if entity @a[team=blue,tag=!TeamEliminated] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] unless entity @e[type=villager,tag=blue_villager,tag=game.villager] run function scaffolding_rush:game/elimination/blue
-execute if entity @a[team=green,tag=!TeamEliminated] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=green,tag=Respawning] unless entity @e[type=villager,tag=green_villager,tag=game.villager] run function scaffolding_rush:game/elimination/green
-execute if entity @a[team=red,tag=!TeamEliminated] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=red,tag=Respawning] unless entity @e[type=villager,tag=red_villager,tag=game.villager] run function scaffolding_rush:game/elimination/red
-execute if entity @a[team=yellow,tag=!TeamEliminated] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=yellow,tag=Respawning] unless entity @e[type=villager,tag=yellow_villager,tag=game.villager] run function scaffolding_rush:game/elimination/yellow
+execute if entity @a[team=blue,tag=!TeamEliminated] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] unless entity @e[type=villager,tag=blue_villager,tag=respawn_villager] run function scaffolding_rush:game/elimination/blue
+execute if entity @a[team=green,tag=!TeamEliminated] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=green,tag=Respawning] unless entity @e[type=villager,tag=green_villager,tag=respawn_villager] run function scaffolding_rush:game/elimination/green
+execute if entity @a[team=red,tag=!TeamEliminated] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=red,tag=Respawning] unless entity @e[type=villager,tag=red_villager,tag=respawn_villager] run function scaffolding_rush:game/elimination/red
+execute if entity @a[team=yellow,tag=!TeamEliminated] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=yellow,tag=Respawning] unless entity @e[type=villager,tag=yellow_villager,tag=respawn_villager] run function scaffolding_rush:game/elimination/yellow
 
 # Revive players from changed gamemode
 execute if entity @a[team=blue,tag=TeamEliminated,gamemode=!spectator] run tag @a[team=blue] remove TeamEliminated

@@ -27,10 +27,10 @@ execute as @e[tag=baseTeam] at @s run tp @s ~1000 4 ~1000
 
 execute as @e[tag=baseTeam] at @s run function scaffolding_rush:team/create_base/load_structure
 
-execute if score #villager.enabled options matches 1 as @e[tag=baseTeam,name="Blue"] at @s positioned ~1 ~ ~1 run function scaffolding_rush:game/villager/summon/blue
-execute if score #villager.enabled options matches 1 as @e[tag=baseTeam,name="Green"] at @s positioned ~1 ~ ~1 run function scaffolding_rush:game/villager/summon/green
-execute if score #villager.enabled options matches 1 as @e[tag=baseTeam,name="Red"] at @s positioned ~1 ~ ~1 run function scaffolding_rush:game/villager/summon/red
-execute if score #villager.enabled options matches 1 as @e[tag=baseTeam,name="Yellow"] at @s positioned ~1 ~ ~1 run function scaffolding_rush:game/villager/summon/yellow
+execute if score #villager.enabled options matches 1 as @e[tag=baseTeam,name="Blue"] at @s positioned ~1 ~ ~1 run function scaffolding_rush:villager/summon/blue
+execute if score #villager.enabled options matches 1 as @e[tag=baseTeam,name="Green"] at @s positioned ~1 ~ ~1 run function scaffolding_rush:villager/summon/green
+execute if score #villager.enabled options matches 1 as @e[tag=baseTeam,name="Red"] at @s positioned ~1 ~ ~1 run function scaffolding_rush:villager/summon/red
+execute if score #villager.enabled options matches 1 as @e[tag=baseTeam,name="Yellow"] at @s positioned ~1 ~ ~1 run function scaffolding_rush:villager/summon/yellow
 
 team join blue @e[type=villager,tag=new_villager,tag=blue_villager]
 team join green @e[type=villager,tag=new_villager,tag=green_villager]

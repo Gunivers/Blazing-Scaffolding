@@ -24,7 +24,7 @@ execute as @a[gamemode=adventure,tag=!flag_carry] at @s positioned ~ ~-2 ~ if en
 execute as @a[gamemode=survival,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..3] run function scaffolding_rush:game/flag/grab/any
 
 #depositing flag
-execute as @a[tag=flag_carry,team=blue] at @s if entity @e[type=villager,tag=game.villager,distance=..1, team=blue] run function scaffolding_rush:game/flag/claim/team/blue
-execute as @a[tag=flag_carry,team=red] at @s if entity @e[type=villager,tag=game.villager,distance=..1,team=red] run function scaffolding_rush:game/flag/claim/team/red
-execute as @a[tag=flag_carry,team=green] at @s if entity @e[type=villager,tag=game.villager,distance=..1,team=green] run function scaffolding_rush:game/flag/claim/team/green
-execute as @a[tag=flag_carry,team=yellow] at @s if entity @e[type=villager,tag=game.villager,distance=..1,team=yellow] run function scaffolding_rush:game/flag/claim/team/yellow
+execute as @a[tag=flag_carry,team=blue] at @s if entity @e[type=villager,tag=respawn_villager,distance=..1, team=blue] run function scaffolding_rush:game/flag/claim/team/blue
+execute as @a[tag=flag_carry,team=red] at @s if entity @e[type=villager,tag=respawn_villager,distance=..1,team=red] run function scaffolding_rush:game/flag/claim/team/red
+execute as @a[tag=flag_carry,team=green] at @s if entity @e[type=villager,tag=respawn_villager,distance=..1,team=green] run function scaffolding_rush:game/flag/claim/team/green
+execute as @a[tag=flag_carry,team=yellow] at @s if entity @e[type=villager,tag=respawn_villager,distance=..1,team=yellow] run function scaffolding_rush:game/flag/claim/team/yellow

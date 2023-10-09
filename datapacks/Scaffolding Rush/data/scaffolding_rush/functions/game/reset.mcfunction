@@ -31,10 +31,10 @@ scoreboard players set WBAddTemp options 0
 scoreboard players set Language options 0
 execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
 
-scoreboard players set #villager.red respawn.timer -1
-scoreboard players set #villager.blue respawn.timer -1
-scoreboard players set #villager.yellow respawn.timer -1
-scoreboard players set #villager.green respawn.timer -1
+scoreboard players set $villager.red respawn.timer 0
+scoreboard players set $villager.blue respawn.timer 0
+scoreboard players set $villager.yellow respawn.timer 0
+scoreboard players set $villager.green respawn.timer 0
 
 scoreboard players set @a listener.use.blue_spawn_egg 0
 scoreboard players set @a listener.use.green_spawn_egg 0
@@ -71,9 +71,6 @@ execute if score Regen options matches 1 run effect give @s regeneration infinit
 function scaffolding_rush:game/map/reset/__start__
 
 execute unless score RandomTeam options matches 0 run team join random @a[team=!spectator]
-
-#advancement use_item
-advancement revoke @a from scaffolding_rush:use_item
 
 scoreboard players reset @a trigger.start_game
 

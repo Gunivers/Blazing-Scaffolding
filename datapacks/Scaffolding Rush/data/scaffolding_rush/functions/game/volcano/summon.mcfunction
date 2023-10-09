@@ -4,7 +4,7 @@ spreadplayers 1000 1000 0 50 false @e[type=marker,tag=VolcanoBaseNew]
 
 execute as @e[type=marker,tag=VolcanoBaseNew] at @s unless block ~ ~-1 ~ magma_block run tag @s add VolcanoCanceled
 execute as @e[type=marker,tag=VolcanoBaseNew] at @s if block 1000 ~5 1000 magma_block run tag @s add VolcanoCanceled
-execute as @e[type=marker,tag=VolcanoBaseNew] at @s if entity @e[type=villager,tag=game.villager,distance=..15] run tag @s add VolcanoCanceled
+execute as @e[type=marker,tag=VolcanoBaseNew] at @s if entity @e[type=villager,tag=respawn_villager,distance=..15] run tag @s add VolcanoCanceled
 execute if entity @e[type=marker,tag=VolcanoCanceled] run scoreboard players remove VolcanoSummonTimer timer 10
 kill @e[type=marker,tag=VolcanoCanceled]
 

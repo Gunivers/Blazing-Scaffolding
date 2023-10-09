@@ -1,12 +1,11 @@
 
 kill @e[type=item]
 
+effect give @a minecraft:saturation infinite 1 true
+advancement revoke @a everything
 
-execute if score #lobby.active data matches 1 run function scaffolding_rush:lobby/__main__
-execute if score #game.running data matches 1 run function scaffolding_rush:game/__main__
-function scaffolding_rush:tutorial/main
+scoreboard players remove @a player.pick_villager_cooldown 1
 
-function scaffolding_rush:options/__main__
 
 # Game management (when a game is started)
 execute as @a[scores={trigger.start_game=1..}] run function scaffolding_rush:game/launch
@@ -21,10 +20,13 @@ execute if entity @a[scores={trigger.reset=1..}] run function scaffolding_rush:r
 scoreboard players add tick200 data 1
 execute if score tick200 data matches 200.. run scoreboard players set tick200 data 1
 
-# Mechanics
+# ORDER IS IMPORTANT!
+execute if score #lobby.active data matches 1 run function scaffolding_rush:lobby/__main__
+execute if score #game.running data matches 1 run function scaffolding_rush:game/__main__
+function scaffolding_rush:tutorial/__main__
+function scaffolding_rush:options/__main__
 function scaffolding_rush:mechanics/__main__
-
-# Item
+function scaffolding_rush:villager/__main__
 function scaffolding_rush:player/__main__
 
 # Admin mode

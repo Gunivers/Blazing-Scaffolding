@@ -20,7 +20,6 @@ kill @e[type=!player]
 
 # Revoke advancements ---------------------------------------------------------
 
-advancement revoke @a from scaffolding_rush:use_item
 execute as @a run function scaffolding_rush:player/setup
 
 #==============================================================================
@@ -42,6 +41,7 @@ scoreboard objectives add uuid dummy {"text":"UUID","color": "aqua"}
 scoreboard objectives add option.language dummy
 scoreboard objectives add tutorial.cell.z dummy {"text":"Tutorial Cell Z","color": "aqua"}
 scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "aqua"}
+scoreboard objectives add player.pick_villager_cooldown dummy {"text":"Pick Villager Cooldown","color": "aqua"}
 
 # Entities data ---------------------------------------------------------------
 
@@ -76,10 +76,14 @@ scoreboard objectives add player.item.fireball.count dummy {"text":"Fireball Cou
 scoreboard objectives add player.item.ender_pearl.count dummy {"text":"Ender Pearl Count","color": "green"}
 scoreboard objectives add player.item.bumping_arrow.count dummy {"text":"Bumping Arrow Count","color": "green"}
 scoreboard objectives add player.item.book.count dummy {"text":"Book Count","color": "green"}
+scoreboard objectives add player.item.spawn_egg.count dummy {"text":"Spawn Egg Count","color": "green"}
 
 scoreboard objectives add player.item.fireball.timer dummy {"text":"Fireball Timer","color": "green"}
 scoreboard objectives add player.item.ender_pearl.timer dummy {"text":"Ender Pearl Timer","color": "green"}
 scoreboard objectives add player.item.bumping_arrow.timer dummy {"text":"Bumping Arrow Timer","color": "green"}
+scoreboard objectives add player.item.spawn_egg.timer dummy {"text":"Spawn Egg Timer","color": "green"}
+
+scoreboard objectives add player.item.spawn_egg.countdown dummy {"text":"Spawn Egg (countdown)","color": "green"}
 
 
 ### TO SORT

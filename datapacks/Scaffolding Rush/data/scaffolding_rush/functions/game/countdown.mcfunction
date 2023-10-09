@@ -72,10 +72,10 @@ scoreboard players operation #worldborder.start_time.tick options *= 60 const
 execute if score #worldborder.start_time.second options matches 0 run scoreboard players operation #worldborder.start_time.tick options = 1 const
 
 #reset villagers respawn countdowns
-scoreboard players set #villager.red respawn.timer -1
-scoreboard players set #villager.blue respawn.timer -1
-scoreboard players set #villager.yellow respawn.timer -1
-scoreboard players set #villager.green respawn.timer -1
+scoreboard players set $villager.red respawn.timer 0
+scoreboard players set $villager.blue respawn.timer 0
+scoreboard players set $villager.yellow respawn.timer 0
+scoreboard players set $villager.green respawn.timer 0
 
 #Reset teams scores, if relevant
 execute unless score #flag.take_over options matches 0 run scoreboard objectives setdisplay sidebar Score
