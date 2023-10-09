@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": "{Tags:[\"lobbyInteraction\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "scaffolding_rush:lobby/interaction/on_interact"
+  }
+}

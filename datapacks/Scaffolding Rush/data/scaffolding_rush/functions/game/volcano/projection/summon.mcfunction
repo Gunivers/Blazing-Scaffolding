@@ -1,7 +1,7 @@
-scoreboard players set #VolcanoPopNumber global 0
-execute as @e[type=marker,tag=VolcanoPop] run scoreboard players add #VolcanoPopNumber global 1
+scoreboard players set #VolcanoPopNumber data 0
+execute as @e[type=marker,tag=VolcanoPop] run scoreboard players add #VolcanoPopNumber data 1
 
-execute if score #VolcanoPopNumber global matches 0..50 run summon marker ~ ~ ~ {Tags:["Volcano","VolcanoPop","VolcanoPopNew"]}
+execute if score #VolcanoPopNumber data matches 0..50 run summon marker ~ ~ ~ {Tags:["Volcano","VolcanoPop","VolcanoPopNew"]}
 # 
 # summon block_display ~ ~ ~ {block_state:{Name:"minecraft:magma_block"},Tags:["Volcano","VolcanoPop","VolcanoPopNew"]}
 

@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_ender_pearl 1
+scoreboard players set @s option.ender_pearl 1

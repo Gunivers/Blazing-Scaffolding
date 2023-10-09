@@ -1,12 +1,11 @@
 
-scoreboard players operation @s language = @s opt_language
-scoreboard players remove @s language 1
+scoreboard players operation @s option.language = @s option.language
+scoreboard players remove @s option.language 1
 
-execute if score @s language matches 0 run tellraw @s ["",{"text":"[BS] ","color":"gold"},{"text":"Your language has been set to ","color":"gray"},{"text":"English","color":"gold"}]
-execute if score @s language matches 1 run tellraw @s ["",{"text":"[BS] ","color":"gold"},{"text":"Votre langue a été mise en ","color":"gray"},{"text":"Française","color":"gold"}]
+execute if score @s option.language matches 0 run tellraw @s ["",{"text":"[BS] ","color":"gold"},{"text":"Your language has been set to ","color":"gray"},{"text":"English","color":"gold"}]
+execute if score @s option.language matches 1 run tellraw @s ["",{"text":"[BS] ","color":"gold"},{"text":"Votre langue a été mise en ","color":"gray"},{"text":"Française","color":"gold"}]
 
-scoreboard players set @a opt_language 0
-scoreboard players enable @a opt_language
+scoreboard players set @a option.language 0
+scoreboard players enable @a option.language
 
 function scaffolding_rush:options/refresh
-execute if score GameLobby global matches 1 run function scaffolding_rush:lobby/refresh_items

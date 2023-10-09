@@ -1,2 +1,2 @@
 
-clear @s #scaffolding_rush:item/egg
+clear @s #scaffolding_rush:egg

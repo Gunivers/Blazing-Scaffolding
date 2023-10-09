@@ -11,7 +11,7 @@ execute as @e[type=marker,tag=VolcanoTarget] at @s unless block ~ ~ ~ scaffoldin
 
 execute as @e[type=marker,tag=VolcanoTarget,tag=VolcanoAbortTarget] at @s run tp @s ~ ~5 ~
 
-scoreboard players set #RandoWalk global 25
+scoreboard players set #RandoWalk data 25
 execute as @e[type=marker,tag=VolcanoTarget] at @s run function scaffolding_rush:game/volcano/projection/random_walk
 
 execute at @e[type=marker,tag=VolcanoTarget,tag=!VolcanoAbortTarget] run particle lava ~ ~0.55 ~ 0.5 0.5 0.5 0 50 force
@@ -20,49 +20,49 @@ execute at @e[type=marker,tag=VolcanoTarget,tag=!VolcanoAbortTarget] run playsou
 
 # Final position rf in miliblock
 execute as @e[type=marker,tag=VolcanoTarget] at @s run function glib.location:get
-scoreboard players operation #rf_x global = @e[type=marker,tag=VolcanoTarget] glib.locX
-scoreboard players operation #rf_y global = @e[type=marker,tag=VolcanoTarget] glib.locY
-scoreboard players operation #rf_z global = @e[type=marker,tag=VolcanoTarget] glib.locZ
-scoreboard players operation #rf_x global *= 1000 glib.const
-scoreboard players operation #rf_y global *= 1000 glib.const
-scoreboard players operation #rf_z global *= 1000 glib.const
+scoreboard players operation #rf_x data = @e[type=marker,tag=VolcanoTarget] glib.locX
+scoreboard players operation #rf_y data = @e[type=marker,tag=VolcanoTarget] glib.locY
+scoreboard players operation #rf_z data = @e[type=marker,tag=VolcanoTarget] glib.locZ
+scoreboard players operation #rf_x data *= 1000 glib.const
+scoreboard players operation #rf_y data *= 1000 glib.const
+scoreboard players operation #rf_z data *= 1000 glib.const
 
 # Initial position ri in miliblock
 function glib.location:get
-scoreboard players operation #ri_x global = @s glib.locX
-scoreboard players operation #ri_y global = @s glib.locY
-scoreboard players operation #ri_z global = @s glib.locZ
-scoreboard players operation #ri_x global *= 1000 glib.const
-scoreboard players operation #ri_y global *= 1000 glib.const
-scoreboard players operation #ri_z global *= 1000 glib.const
+scoreboard players operation #ri_x data = @s glib.locX
+scoreboard players operation #ri_y data = @s glib.locY
+scoreboard players operation #ri_z data = @s glib.locZ
+scoreboard players operation #ri_x data *= 1000 glib.const
+scoreboard players operation #ri_y data *= 1000 glib.const
+scoreboard players operation #ri_z data *= 1000 glib.const
 
 # Time to reach the player in ticks (default: 2-3s -> 40-60 ticks)
 function glib.math:special/random
 scoreboard players operation @s glib.res0 %= 20 glib.const
-scoreboard players set #T global 40
-scoreboard players operation #T global += @s glib.res0
+scoreboard players set #T data 40
+scoreboard players operation #T data += @s glib.res0
 
 # Gravity in miliblock/tick² (default: 0.98m/s² -> 24 miliblock/tick²)
-scoreboard players set #g global -24
+scoreboard players set #g data -24
 
 # Apply formula
-scoreboard players operation @s glib.vectorX = #rf_x global
-scoreboard players operation @s glib.vectorX -= #ri_x global
-scoreboard players operation @s glib.vectorX /= #T global
+scoreboard players operation @s glib.vectorX = #rf_x data
+scoreboard players operation @s glib.vectorX -= #ri_x data
+scoreboard players operation @s glib.vectorX /= #T data
 
-scoreboard players operation @s glib.vectorY = #rf_y global
-scoreboard players operation @s glib.vectorY -= #ri_y global
-scoreboard players operation @s glib.vectorY /= #T global
+scoreboard players operation @s glib.vectorY = #rf_y data
+scoreboard players operation @s glib.vectorY -= #ri_y data
+scoreboard players operation @s glib.vectorY /= #T data
 
-scoreboard players operation @s glib.vectorZ = #rf_z global
-scoreboard players operation @s glib.vectorZ -= #ri_z global
-scoreboard players operation @s glib.vectorZ /= #T global
+scoreboard players operation @s glib.vectorZ = #rf_z data
+scoreboard players operation @s glib.vectorZ -= #ri_z data
+scoreboard players operation @s glib.vectorZ /= #T data
 
-scoreboard players operation #scnd_term global = #g global
-scoreboard players operation #scnd_term global *= #T global
-scoreboard players operation #scnd_term global /= 2 glib.const
+scoreboard players operation #scnd_term data = #g data
+scoreboard players operation #scnd_term data *= #T data
+scoreboard players operation #scnd_term data /= 2 glib.const
 
-scoreboard players operation @s glib.vectorY -= #scnd_term global
+scoreboard players operation @s glib.vectorY -= #scnd_term data
 
 # Clear
 kill @e[type=marker,tag=VolcanoTarget]

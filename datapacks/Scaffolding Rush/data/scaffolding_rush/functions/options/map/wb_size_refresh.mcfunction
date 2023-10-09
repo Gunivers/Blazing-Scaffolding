@@ -8,7 +8,7 @@ execute if score WBAddTemp options matches ..-5 run scoreboard players set WBAdd
 execute if score WBAddTemp options matches 5.. run scoreboard players set WBAddTemp options 5
 
 # update internal values
-scoreboard players operation WBAddTemp options *= #10 global
+scoreboard players operation WBAddTemp options *= 10 const
 scoreboard players operation WBSize options += WBAddTemp options
 
 # check 
@@ -51,17 +51,17 @@ execute if score WBSize options matches 160..164 run worldborder set 160 1
 execute if score WBSize options matches 165.. run worldborder set 165 1
 
 # set the border limits
-scoreboard players operation WBbyTwo global = WBSize options
-scoreboard players operation WBbyTwo global /= #2 global
-scoreboard players set -WBbyTwo global 0
-scoreboard players operation -WBbyTwo global -= WBbyTwo global
+scoreboard players operation WBbyTwo data = WBSize options
+scoreboard players operation WBbyTwo data /= 2 const
+scoreboard players set -WBbyTwo data 0
+scoreboard players operation -WBbyTwo data -= WBbyTwo data
 
 # check for bases
-execute as @e[tag=LobbyBase] if score @s XEntity > WBbyTwo global run function scaffolding_rush:clean_kill
-execute as @e[tag=LobbyBase] if score @s XEntity < -WBbyTwo global run function scaffolding_rush:clean_kill
-execute as @e[tag=LobbyBase] if score @s ZEntity > WBbyTwo global run function scaffolding_rush:clean_kill
-execute as @e[tag=LobbyBase] if score @s ZEntity < -WBbyTwo global run function scaffolding_rush:clean_kill
+execute as @e[tag=LobbyBase] if score @s pos.x > WBbyTwo data run function utils:clean_kill
+execute as @e[tag=LobbyBase] if score @s pos.x < -WBbyTwo data run function utils:clean_kill
+execute as @e[tag=LobbyBase] if score @s pos.z > WBbyTwo data run function utils:clean_kill
+execute as @e[tag=LobbyBase] if score @s pos.z < -WBbyTwo data run function utils:clean_kill
 
 # reset values
 scoreboard players set WBAddTemp options 0
-scoreboard players set @a opt_wb_size_add 0
+scoreboard players set @a option.wb_size_add 0

@@ -1,12 +1,12 @@
 # Volcano Preset
 
-# tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Volcano","color":"dark_red"},{"text":" has been chosen","color":"gray"}]
-# tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Volcano","color":"dark_red"},{"text":" a été choisi","color":"gray"}]
+# tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Volcano","color":"dark_red"},{"text":" has been chosen","color":"gray"}]
+# tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Volcano","color":"dark_red"},{"text":" a été choisi","color":"gray"}]
 
 scoreboard players set Preset options 4
 
 # Map
-scoreboard players set LavaSpeed options 10
+scoreboard players set #lava.period.second options 10
 scoreboard players set WBSize options 140
 scoreboard players set WBSize2 options 115
 scoreboard players set WBSize3 options 140
@@ -26,14 +26,14 @@ scoreboard players set UseEnderPearl options 0
 scoreboard players set UseFireball options 1
 scoreboard players set InstantPillar options 1
 scoreboard players set FastClimb options 0
-scoreboard players set LastingBases options 0
+scoreboard players set #lasting_base options 0
 scoreboard players set Rafts options 0
 
 # Villager
-scoreboard players set Villager options 0
+scoreboard players set #villager.enabled options 0
 
 # Flags
-scoreboard players set FlagTakeOver options 0
+scoreboard players set #flag.take_over options 0
 
 # Volcano
 scoreboard players set Volcano options 1
