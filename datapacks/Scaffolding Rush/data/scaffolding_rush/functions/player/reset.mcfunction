@@ -1,6 +1,7 @@
 # Execute as & at player
 
-effect @s clear
+function scaffolding_rush:tutorial/leave
+effect clear @s
 clear @s
 scoreboard players reset @s
 

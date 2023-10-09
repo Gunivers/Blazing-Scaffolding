@@ -232,6 +232,9 @@ bossbar set minecraft:time_limit color white
 
 scoreboard players add #game.id data 1
 
+
+execute as @a[tag=inTutorial] run function scaffolding_rush:tutorial/leave
+
 # If the game is loading, force start it
 execute if score #game.loading data matches 1 run schedule clear utils:countdown/5s
 execute if score #game.loading data matches 1 run schedule clear utils:countdown/4s

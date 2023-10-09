@@ -15,7 +15,7 @@ tag @s remove inTutorial
 
 scoreboard players set @s trigger.tutorial 0
 scoreboard players set @s trigger.lobby 0
-scoreboard players enable @s trigger.tuto
+scoreboard players enable @s trigger.tutorial
 
 clear @s
 tag @s remove player.item.can_have_items
@@ -23,5 +23,5 @@ tag @s remove player.item.have_egg
 
 execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
 
-tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s","color":"aqua"},{"text":" exited the tutorial ","color":"gray"},{"text":"[Join]","color":"green","clickEvent":{"action":"run_command","value":"/trigger tuto"},"hoverEvent":{"action":"show_text","contents":"/trigger tuto"}}]
-tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s","color":"aqua"},{"text":" est sorti du tutoriel ","color":"gray"},{"text":"[Rejoindre]","color":"green","clickEvent":{"action":"run_command","value":"/trigger tuto"},"hoverEvent":{"action":"show_text","contents":"/trigger tuto"}}]
+tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s","color":"aqua"},{"text":" exited the tutorial ","color":"gray"},{"text":"[Join]","color":"green","clickEvent":{"action":"run_command","value":"/trigger trigger.tutorial"},"hoverEvent":{"action":"show_text","contents":"/trigger trigger.tutorial"}}]
+tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s","color":"aqua"},{"text":" est sorti du tutoriel ","color":"gray"},{"text":"[Rejoindre]","color":"green","clickEvent":{"action":"run_command","value":"/trigger trigger.tutorial"},"hoverEvent":{"action":"show_text","contents":"/trigger trigger.tutorial"}}]

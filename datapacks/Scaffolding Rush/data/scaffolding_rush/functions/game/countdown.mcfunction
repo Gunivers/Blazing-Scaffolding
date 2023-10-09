@@ -1,6 +1,7 @@
-gamemode adventure @a[team=!]
-gamemode spectator @a[team=]
+gamemode adventure @a[team=!spectator]
+gamemode spectator @a[team=spectator]
 
+execute as @a[tag=inTutorial] run function scaffolding_rush:tutorial/leave
 clear @s
 tag @a remove player.item.can_have_items
 tag @a remove player.item.have_egg
@@ -42,9 +43,8 @@ schedule function scaffolding_rush:game/__start__ 10s
 
 #disable trigers
 execute as @a run function scaffolding_rush:options/disable_all
-scoreboard players reset @s trigger.tuto
-execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.reset
-execute if score #admin.exist options matches 0 run scoreboard players enable @a trigger.reset
+
+scoreboard players reset @s trigger.tutorial
 
 #reset the time
 scoreboard players set #game.time.tick timer 0

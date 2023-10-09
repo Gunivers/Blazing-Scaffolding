@@ -1,5 +1,3 @@
-schedule clear #scaffolding_rush:scheduled/all
-
 worldborder center 0 0
 
 kill @e[tag=baseTeam]
@@ -72,13 +70,12 @@ execute if score Regen options matches 1 run effect give @s regeneration infinit
 
 function scaffolding_rush:game/map/reset/__start__
 
-execute unless score RandomTeam options matches 0 run team join random @a[team=!]
+execute unless score RandomTeam options matches 0 run team join random @a[team=!spectator]
 
 #advancement use_item
 advancement revoke @a from scaffolding_rush:use_item
 
 scoreboard players reset @a trigger.start_game
-scoreboard players reset @a trigger.reset
 
 execute as @a run function scaffolding_rush:options/disable_all
 execute if score #admin.exist options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all

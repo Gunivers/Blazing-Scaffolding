@@ -29,3 +29,7 @@ function scaffolding_rush:player/__main__
 
 # Admin mode
 execute unless entity @a[tag=admin] if score #admin.exist options matches 1 run function scaffolding_rush:options/admin
+
+scoreboard players reset @a trigger.reset
+execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.reset
+execute if score #admin.exist options matches 0 run scoreboard players enable @a trigger.reset

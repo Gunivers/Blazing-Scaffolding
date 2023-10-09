@@ -1,9 +1,0 @@
-{
-    "values": [
-        "utils:countdown/5s",
-        "utils:countdown/4s",
-        "utils:countdown/3s",
-        "utils:countdown/2s",
-        "utils:countdown/1s"
-    ]
-}

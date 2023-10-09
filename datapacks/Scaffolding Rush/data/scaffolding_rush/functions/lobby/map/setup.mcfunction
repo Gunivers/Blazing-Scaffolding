@@ -76,5 +76,3 @@ teleport @e[type=block_display,tag=lobbyMagma1] 1 26.0 10.5
 teleport @e[type=block_display,tag=lobbyMagma2] -2.5 30.0 10.5
 teleport @e[type=block_display,tag=lobbyMagma3] -4.0 29.0 10.0
 
-# Load tutorial world
-scoreboard players enable @a[tag=!inTutorial] trigger.tuto

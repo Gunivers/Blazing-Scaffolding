@@ -38,7 +38,8 @@ execute as @a[gamemode=survival] at @s if block ~ ~-0.01 ~ magma_block run kill 
 execute at @e[tag=LobbyProtection] run particle cloud ~ ~ ~ 0 0 0 0.1 3 force
 execute as @e[tag=LobbyProtection] run kill @s
 
-execute as @a[scores={tuto=1}] run function scaffolding_rush:tutorial/join
+execute as @a[scores={trigger.tutorial=1}] run function scaffolding_rush:tutorial/join
 
 tag @a[tag=!player.item.can_have_book] add player.item.can_have_book
+scoreboard players enable @a[tag=!inTutorial] trigger.tutorial
 function scaffolding_rush:lobby/protection/__main__
