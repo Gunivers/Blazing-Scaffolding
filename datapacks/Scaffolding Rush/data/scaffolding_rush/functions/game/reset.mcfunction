@@ -80,7 +80,7 @@ scoreboard players reset @a trigger.start_game
 execute as @a run function scaffolding_rush:options/disable_all
 execute if score #admin.exist options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
 execute if score #admin.exist options matches 0 as @a run function scaffolding_rush:options/activate_all
-scoreboard players enable @a opt_admin
+scoreboard players enable @a option.admin
 
 #Bossbar
 bossbar set minecraft:filling_lava visible false

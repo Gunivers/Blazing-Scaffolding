@@ -10,7 +10,7 @@ execute unless score #flag.take_over options matches 0 run tellraw @a[scores={op
 #Hide the scores if disabled
 execute unless score #flag.take_over options matches 0 run scoreboard objectives setdisplay sidebar
 
-scoreboard players set @s opt_flag_take_over 0
-scoreboard players enable @s opt_flag_take_over
+scoreboard players set @s option.flag_take_over 0
+scoreboard players enable @s option.flag_take_over
 
 function scaffolding_rush:options/refresh

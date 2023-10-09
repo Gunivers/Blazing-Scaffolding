@@ -11,7 +11,7 @@ execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/b
 execute if score #admin.exist options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
 execute if score #admin.exist options matches 0 as @a run function scaffolding_rush:options/activate_all
 
-scoreboard players enable @s opt_admin
+scoreboard players enable @s option.admin
 scoreboard players enable @s trigger.tutorial
 
 bossbar set reset_lobby_en players @s[scores={option.language=0}]

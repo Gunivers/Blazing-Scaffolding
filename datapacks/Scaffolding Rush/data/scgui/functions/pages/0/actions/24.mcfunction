@@ -1,1 +1,1 @@
-scoreboard players set @s opt_perf_mode 1
+scoreboard players set @s option.perf_mode 1

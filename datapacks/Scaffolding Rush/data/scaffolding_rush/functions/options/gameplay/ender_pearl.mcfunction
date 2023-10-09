@@ -10,7 +10,7 @@ execute unless score UseEnderPearl options matches 0 run tellraw @a[scores={opti
 execute if score UseEnderPearl options matches 0 run scoreboard players set @a[tag=player.item.can_have_items] player.item.ender_pearl.count 0
 execute unless score UseEnderPearl options matches 0 run scoreboard players set @a[tag=player.item.can_have_items] player.item.ender_pearl.count 1
 
-scoreboard players set @s opt_ender_pearl 0
-scoreboard players enable @s opt_ender_pearl
+scoreboard players set @s option.ender_pearl 0
+scoreboard players enable @s option.ender_pearl
 
 function scaffolding_rush:options/refresh

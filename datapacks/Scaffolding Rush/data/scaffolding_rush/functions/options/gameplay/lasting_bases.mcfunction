@@ -7,7 +7,7 @@ execute unless score #lasting_base options matches 0 run tellraw @a[scores={opti
 execute if score #lasting_base options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Les bases pérennes ont été ","color":"gray"},{"text":"désactivés","color":"red"}]
 execute unless score #lasting_base options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Les bases pérennes ont été ","color":"gray"},{"text":"activés","color":"green"}]
 
-scoreboard players set @s opt_lasting_bases 0
-scoreboard players enable @s opt_lasting_bases
+scoreboard players set @s option.lasting_bases 0
+scoreboard players enable @s option.lasting_bases
 
 function scaffolding_rush:options/refresh

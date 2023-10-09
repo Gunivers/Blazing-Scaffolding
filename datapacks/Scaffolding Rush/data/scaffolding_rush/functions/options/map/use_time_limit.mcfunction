@@ -9,7 +9,7 @@ execute unless score UseTimeLimit options matches 0 run tellraw @a[scores={optio
 execute if score UseTimeLimit options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option use_time_limit a été ","color":"gray"},{"text":"désactivée","color":"red"}]
 execute unless score UseTimeLimit options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option use_time_limit a été ","color":"gray"},{"text":"activée","color":"green"}]
 
-scoreboard players set @s opt_use_time_limit 0
-scoreboard players enable @s opt_use_time_limit
+scoreboard players set @s option.use_time_limit 0
+scoreboard players enable @s option.use_time_limit
 
 function scaffolding_rush:options/refresh

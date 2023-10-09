@@ -9,7 +9,7 @@ execute unless score WorldborderShrink options matches 0 run tellraw @a[scores={
 execute if score WorldborderShrink options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option worldborder_shrink a été ","color":"gray"},{"text":"désactivée","color":"red"}]
 execute unless score WorldborderShrink options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option worldborder_shrink a été ","color":"gray"},{"text":"activée","color":"green"}]
 
-scoreboard players set @s opt_worldborder_shrink 0
-scoreboard players enable @s opt_worldborder_shrink
+scoreboard players set @s option.worldborder_shrink 0
+scoreboard players enable @s option.worldborder_shrink
 
 function scaffolding_rush:options/refresh

@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_fireball 1
+scoreboard players set @s option.fireball 1

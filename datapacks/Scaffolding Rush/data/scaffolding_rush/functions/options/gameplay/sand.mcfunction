@@ -10,7 +10,7 @@ execute unless score UseSand options matches 0 run tellraw @a[scores={option.lan
 execute if score UseSand options matches 0 run scoreboard players set @a[tag=player.item.can_have_items] player.item.sand.count 0
 execute if score UseSand options matches 1 run scoreboard players set @a[tag=player.item.can_have_items] player.item.sand.count 42
 
-scoreboard players set @s opt_sand 0
-scoreboard players enable @s opt_sand
+scoreboard players set @s option.sand 0
+scoreboard players enable @s option.sand
 
 function scaffolding_rush:options/refresh

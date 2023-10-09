@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_invulnerable_villager 1
+scoreboard players set @s option.invulnerable_villager 1

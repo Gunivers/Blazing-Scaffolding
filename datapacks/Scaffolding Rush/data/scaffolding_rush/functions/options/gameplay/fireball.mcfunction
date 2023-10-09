@@ -10,7 +10,7 @@ execute unless score UseFireball options matches 0 run tellraw @a[scores={option
 execute if score UseFireball options matches 0 run scoreboard players set @a[tag=player.item.can_have_items] player.item.fireball.count 0
 execute unless score UseFireball options matches 0 run scoreboard players set @a[tag=player.item.can_have_items] player.item.fireball.count 1
 
-scoreboard players set @s opt_fireball 0
-scoreboard players enable @s opt_fireball
+scoreboard players set @s option.fireball 0
+scoreboard players enable @s option.fireball
 
 function scaffolding_rush:options/refresh

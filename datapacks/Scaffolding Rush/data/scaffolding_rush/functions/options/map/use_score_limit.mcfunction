@@ -9,7 +9,7 @@ execute unless score UseScoreLimit options matches 0 run tellraw @a[scores={opti
 execute if score UseScoreLimit options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option use_score_limit a été ","color":"gray"},{"text":"désactivée","color":"red"}]
 execute unless score UseScoreLimit options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option use_score_limit a été ","color":"gray"},{"text":"activée","color":"green"}]
 
-scoreboard players set @s opt_use_score_limit 0
-scoreboard players enable @s opt_use_score_limit
+scoreboard players set @s option.use_score_limit 0
+scoreboard players enable @s option.use_score_limit
 
 function scaffolding_rush:options/refresh

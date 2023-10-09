@@ -7,7 +7,7 @@ execute unless score ScaffoldingStopsArrow options matches 0 run tellraw @a[scor
 execute if score ScaffoldingStopsArrow options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Flèches stoppées par les échafaudages a été ","color":"gray"},{"text":"désactivé","color":"red"}]
 execute unless score ScaffoldingStopsArrow options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Flèches stoppées par les échafaudages a été ","color":"gray"},{"text":"activé","color":"green"}]
 
-scoreboard players set @s opt_scaff_stops_arrow 0
-scoreboard players enable @s opt_scaff_stops_arrow
+scoreboard players set @s option.scaff_stops_arrow 0
+scoreboard players enable @s option.scaff_stops_arrow
 
 function scaffolding_rush:options/refresh

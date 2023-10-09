@@ -11,7 +11,7 @@ execute if score InteractibleLobby options matches 0 run tellraw @a[scores={opti
 execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le lobby intéractif a été ","color":"gray"},{"text":"activé","color":"green"}]
 execute unless score InteractibleLobby options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"Testez les échafaudages ! ","color":"gold"},{"text":"Vous pouvez maintenant placer et casser des blocs dans le lobby !","color":"gray"}]
 
-scoreboard players set @s opt_interactible_lobby 0
-scoreboard players enable @s opt_interactible_lobby
+scoreboard players set @s option.interactible_lobby 0
+scoreboard players enable @s option.interactible_lobby
 
 function scaffolding_rush:options/refresh

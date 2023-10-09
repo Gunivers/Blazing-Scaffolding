@@ -7,7 +7,7 @@ execute unless score Volcano options matches 0 run tellraw @a[scores={option.lan
 execute if score Volcano options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Les volcans ont été ","color":"gray"},{"text":"désactivés","color":"red"}]
 execute unless score Volcano options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Les volcans ont été ","color":"gray"},{"text":"activés","color":"green"}]
 
-scoreboard players reset @s opt_volcano
-scoreboard players enable @s opt_volcano
+scoreboard players reset @s option.volcano
+scoreboard players enable @s option.volcano
 
 function scaffolding_rush:options/refresh

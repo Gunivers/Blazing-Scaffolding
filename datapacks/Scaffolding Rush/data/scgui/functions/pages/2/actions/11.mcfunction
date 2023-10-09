@@ -1,2 +1,2 @@
 
-scoreboard players set @s opt_regen 1
+scoreboard players set @s option.regen 1

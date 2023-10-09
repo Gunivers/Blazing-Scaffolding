@@ -64,4 +64,4 @@ execute as @e[tag=LobbyBase] if score @s pos.z < -WBbyTwo data run function util
 
 # reset values
 scoreboard players set WBAddTemp options 0
-scoreboard players set @a opt_wb_size_add 0
+scoreboard players set @a option.wb_size_add 0
