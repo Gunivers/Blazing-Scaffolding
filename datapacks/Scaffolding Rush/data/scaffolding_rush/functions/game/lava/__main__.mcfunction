@@ -11,7 +11,7 @@ execute if score #performance_mode options matches 1 as @a[gamemode=!spectator] 
 execute if score #performance_mode options matches 1 as @e[type=villager,tag=respawn_villager] at @s run function scaffolding_rush:game/lava/rise_locally
 
 #rise lasting bases
-execute unless score #lasting_base options matches 0 if score #lava timer >= #lava.period.tick options run function scaffolding_rush:team/create_base/rise
+execute unless score #gameplay.lasting_base.enabled options matches 0 if score #lava timer >= #lava.period.tick options run function scaffolding_rush:team/create_base/rise
 
 execute if score #lava timer >= #lava.period.tick options as @e[type=marker,name="build"] at @s run function scaffolding_rush:game/air_replace
 execute if score #lava timer >= #lava.period.tick options run scoreboard players set #lava timer 0

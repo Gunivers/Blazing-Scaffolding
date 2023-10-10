@@ -195,8 +195,8 @@ gamerule doTileDrops false
 gamerule doTraderSpawning false
 gamerule doWeatherCycle false
 gamerule drowningDamage true
-execute if score FallDamage options matches 0 run gamerule fallDamage false
-execute unless score FallDamage options matches 0 run gamerule fallDamage true
+execute if score #gameplay.fall_damage.enabled options matches 0 run gamerule fallDamage false
+execute unless score #gameplay.fall_damage.enabled options matches 0 run gamerule fallDamage true
 gamerule fireDamage true
 gamerule forgiveDeadPlayers true
 gamerule keepInventory true

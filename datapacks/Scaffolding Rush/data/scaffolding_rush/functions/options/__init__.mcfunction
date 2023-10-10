@@ -19,33 +19,33 @@ execute unless score #flag.take_over.spawn_interval options matches 0.. run scor
 
 # Gameplay
 scoreboard objectives add option.ender_pearl trigger
-execute unless score UseEnderPearl options matches 0.. run scoreboard players set UseEnderPearl options 0
+execute unless score #player.item.ender_pearl.enabled options matches 0.. run scoreboard players set #player.item.ender_pearl.enabled options 0
 scoreboard objectives add option.fall_damage trigger
-execute unless score FallDamage options matches 0.. run scoreboard players set FallDamage options 0
+execute unless score #gameplay.fall_damage.enabled options matches 0.. run scoreboard players set #gameplay.fall_damage.enabled options 0
 scoreboard objectives add option.fast_climb trigger
-execute unless score FastClimb options matches 0..1 run scoreboard players set FastClimb options 0
+execute unless score #gameplay.fast_climb.enabled options matches 0..1 run scoreboard players set #gameplay.fast_climb.enabled options 0
 scoreboard objectives add option.fireball trigger
-execute unless score UseFireball options matches 0.. run scoreboard players set UseFireball options 0
+execute unless score #player.item.fireball.enabled options matches 0.. run scoreboard players set #player.item.fireball.enabled options 0
 scoreboard objectives add option.instant_pil trigger
-execute unless score InstantPillar options matches 0.. run scoreboard players set InstantPillar options 0
+execute unless score #gameplay.instant_pillar.enabled options matches 0.. run scoreboard players set #gameplay.instant_pillar.enabled options 0
 scoreboard objectives add option.lasting_bases trigger
-execute unless score #lasting_base options matches 0..1 run scoreboard players set #lasting_base options 0
+execute unless score #gameplay.lasting_base.enabled options matches 0..1 run scoreboard players set #gameplay.lasting_base.enabled options 0
 scoreboard objectives add option.regen trigger
-execute unless score Regen options matches 0.. run scoreboard players set Regen options 1
+execute unless score #gameplay.regeneration.enabled options matches 0.. run scoreboard players set #gameplay.regeneration.enabled options 1
 scoreboard objectives add option.resp_delay trigger
-execute unless score #respawn.delay.second options matches 1.. run scoreboard players set #respawn.delay.second options 3
+execute unless score #gameplay.respawn.delay.second options matches 1.. run scoreboard players set #gameplay.respawn.delay.second options 3
 scoreboard objectives add option.sand trigger
-execute unless score UseSand options matches 0.. run scoreboard players set UseSand options 1
+execute unless score #player.item.sand.enabled options matches 0.. run scoreboard players set #player.item.sand.enabled options 1
 scoreboard objectives add option.scaff_stops_arrow trigger
-execute unless score ScaffoldingStopsArrow options matches 0.. run scoreboard players set ScaffoldingStopsArrow options 0
+execute unless score #gameplay.scaffolding_stop_arrow.enabled options matches 0.. run scoreboard players set #gameplay.scaffolding_stop_arrow.enabled options 0
 scoreboard objectives add option.bumping_arrow trigger
-execute unless score UseSnowball options matches 0.. run scoreboard players set UseSnowball options 0
+execute unless score #player.item.bumping_arrow.enabled options matches 0.. run scoreboard players set #player.item.bumping_arrow.enabled options 0
 
 # Map
 scoreboard objectives add option.build_height trigger
-execute unless score BuildHeight options matches 5.. run scoreboard players set BuildHeight options 20
+execute unless score #map.build_height options matches 5.. run scoreboard players set #map.build_height options 20
 scoreboard objectives add option.interactible_lobby trigger
-execute unless score InteractibleLobby options matches 0..1 run scoreboard players set InteractibleLobby options 1
+execute unless score #map.indestructible_lobby options matches 0..1 run scoreboard players set #map.indestructible_lobby options 1
 scoreboard objectives add option.lava_speed trigger
 execute unless score #lava.period.second options matches 0.. run scoreboard players set #lava.period.second options 20
 scoreboard objectives add option.time_limit trigger

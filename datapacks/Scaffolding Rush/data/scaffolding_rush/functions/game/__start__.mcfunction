@@ -22,7 +22,7 @@ tag @a add player.item.can_have_items
 
 effect give @a minecraft:instant_health 1 100 true
 effect give @a minecraft:fire_resistance 20 100 true
-execute if score Regen options matches 1 run effect give @s regeneration infinite 0 true
+execute if score #gameplay.regeneration.enabled options matches 1 run effect give @s regeneration infinite 0 true
 gamemode survival @a[team=!spectator]
 
 # Start message

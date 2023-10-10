@@ -21,13 +21,13 @@ item replace entity @a[tag=!flag_carry] weapon.offhand with air
 #                                                 
 
 # accelerate scaffolding climbing
-execute if score FastClimb options matches 1 run function scaffolding_rush:mechanics/fast_climb/main
+execute if score #gameplay.fast_climb.enabled options matches 1 run function scaffolding_rush:mechanics/fast_climb/main
 
 # Avoid sand to physically stack (and then forbide creating sand towers)
 function scaffolding_rush:mechanics/sand/__main__
 
 # Make scaffolding pillars creating instantly (instead of having to place each block of the pillar and wait them to fall)
-execute if score InstantPillar options matches 1 run function scaffolding_rush:mechanics/instant_pillar/__main__
+execute if score #gameplay.instant_pillar.enabled options matches 1 run function scaffolding_rush:mechanics/instant_pillar/__main__
 
 # Snowball behavior
 execute as @e[type=snowball,tag=!t] at @s run function scaffolding_rush:mechanics/snowball/summon
@@ -44,7 +44,7 @@ execute if entity @e[tag=ender_pearl] run function scaffolding_rush:mechanics/en
 # scaffolding_rush:player/item/replenish/ender_pearl
 
 # Scaffoldings blocks arrows
-execute if score ScaffoldingStopsArrow options matches 1 as @e[type=arrow] at @s if block ~ ~ ~ #scaffolding_rush:scaffolding run kill @s
+execute if score #gameplay.scaffolding_stop_arrow.enabled options matches 1 as @e[type=arrow] at @s if block ~ ~ ~ #scaffolding_rush:scaffolding run kill @s
 
 # Clear unconsistent villagers
 execute as @e[type=villager,nbt=!{Age: 0}] run function utils:clean_kill
