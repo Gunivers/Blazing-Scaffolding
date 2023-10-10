@@ -1,0 +1,25 @@
+# Executed globally
+# tellraw @a [{"text":"GLOBAL"},{"text":" > global:features/animated_title/type/START","color":"gray"}]
+
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=1}] title [{"text":"S","color":"white","italic":true,"bold":true}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=2}] title [{"text":"S","color":"green","italic":true,"bold":true},{"text":"T","color":"white"}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=3}] title [{"text":"ST","color":"green","italic":true,"bold":true},{"text":"A","color":"white"}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=4}] title [{"text":"STA","color":"green","italic":true,"bold":true},{"text":"R","color":"white"}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=5}] title [{"text":"STAR","color":"green","italic":true,"bold":true},{"text":"T","color":"white"}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=6}] title [{"text":"START","color":"green","italic":true,"bold":true}]
+
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=8}] title [{"text": "-=","color":"green","obfuscated":true,"italic":true,"bold":true},{"text":"START","color":"green","obfuscated":false},{"text": "=-","color":"green","obfuscated":true}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=9}] title [{"text": "-= ","color":"green","obfuscated":true,"italic":true,"bold":true},{"text":"START","color":"green","obfuscated":false},{"text": " =-","color":"green","obfuscated":true}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=10}] title [{"text": "=  ","color":"green","italic":true,"bold":true},{"text":"START","color":"green"},{"text": "  =","color":"green"}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=11}] title [{"text": "=   ","color":"green","italic":true,"bold":true},{"text":"START","color":"green"},{"text": "   =","color":"green"}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=12}] title [{"text": "-    ","color":"green","italic":true,"bold":true},{"text":"START","color":"green"},{"text": "    -","color":"green"}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=13}] title [{"text": "-     ","color":"green","italic":true,"bold":true},{"text":"START","color":"green"},{"text": "     -","color":"green"}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=14}] title [{"text": "-      ","color":"green","italic":true,"bold":true},{"text":"START","color":"green"},{"text": "      -","color":"green"}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=15}] title [{"text":"START","color":"green","italic":true,"bold":true}]
+
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=20}] title [{"text":"S","color":"green","underlined":true,"italic":true,"bold":true},{"text": "TART","color":"green","underlined":false}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=21}] title [{"text": "S","color":"green","underlined":false,"italic":true,"bold":true},{"text":"T","color":"green","underlined":true},{"text": "ART","color":"green","underlined":false}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=22}] title [{"text": "ST","color":"green","underlined":false,"italic":true,"bold":true},{"text":"A","color":"green","underlined":true},{"text": "RT","color":"green","underlined":false}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=23}] title [{"text": "STA","color":"green","underlined":false,"italic":true,"bold":true},{"text":"R","color":"green","underlined":true},{"text": "T","color":"green","underlined":false}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=24}] title [{"text": "STAR","color":"green","underlined":false,"italic":true,"bold":true},{"text":"T","color":"green","underlined":true}]
+title @a[tag=player.animated_title.start,scores={player.animated_title.timer=25}] title [{"text": "START","color":"green","underlined":false,"italic":true,"bold":true}]

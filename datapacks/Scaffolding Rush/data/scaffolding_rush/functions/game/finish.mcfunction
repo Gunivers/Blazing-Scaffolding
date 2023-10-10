@@ -22,6 +22,10 @@ execute if score TeamWin data matches 2 run function scaffolding_rush:game/finis
 execute if score TeamWin data matches 3 run function scaffolding_rush:game/finish_message/3_teams
 execute if score TeamWin data matches 4 run function scaffolding_rush:game/finish_message/4_teams
 
+execute as @a[team=!spectator,tag=!TeamEliminated,scores={option.language=0}] \
+    run function scaffolding_rush:player/animated_title/start {type:"victory"}
+execute as @a[team=!spectator,tag=TeamEliminated,scores={option.language=0}] \
+    run function scaffolding_rush:player/animated_title/start {type:"defeat"}
 
 execute if score TeamWin data matches 0 unless entity @a[tag=!TeamEliminated] \
     run title @a[scores={option.language=0}] title ["",{"text":"No team won!"}]

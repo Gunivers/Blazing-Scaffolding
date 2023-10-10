@@ -22,10 +22,18 @@ scoreboard players remove $villager.green respawn.timer 1
 scoreboard players remove $villager.yellow respawn.timer 1
 scoreboard players remove $villager.blue respawn.timer 1
 
-execute unless score #game.running data matches 1 run scoreboard players remove $villager.red respawn.timer 4
-execute unless score #game.running data matches 1 run scoreboard players remove $villager.green respawn.timer 4
-execute unless score #game.running data matches 1 run scoreboard players remove $villager.yellow respawn.timer 4
-execute unless score #game.running data matches 1 run scoreboard players remove $villager.blue respawn.timer 4
+execute if score #lobby.active data matches 1 \
+        if score $villager.red respawn.timer matches 0.. \
+    run scoreboard players set $villager.red respawn.timer -1
+execute if score #lobby.active data matches 1 \
+        if score $villager.blue respawn.timer matches 0.. \
+    run scoreboard players set $villager.blue respawn.timer -1
+execute if score #lobby.active data matches 1 \
+        if score $villager.green respawn.timer matches 0.. \
+    run scoreboard players set $villager.green respawn.timer -1
+execute if score #lobby.active data matches 1 \
+        if score $villager.yellow respawn.timer matches 0.. \
+    run scoreboard players set $villager.yellow respawn.timer -1
 
 execute as @a[team=red] run scoreboard players operation @s player.item.spawn_egg.countdown = $villager.red respawn.timer
 execute as @a[team=blue] run scoreboard players operation @s player.item.spawn_egg.countdown = $villager.blue respawn.timer

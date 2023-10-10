@@ -1,7 +1,22 @@
 
-execute as @e[type=villager,tag=respawn_villager] at @s store result score @s pos.x run data get entity @s Pos[0]
-execute as @e[type=villager,tag=respawn_villager] at @s store result score @s pos.y run data get entity @s Pos[1]
-execute as @e[type=villager,tag=respawn_villager] at @s store result score @s pos.z run data get entity @s Pos[2]
+# Death Management ------------------------------------------------------------
+
+#Kill villagers in lava, or save them if they are invulnerable
+execute unless score #villager.cannot_fall_in_lava options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1.8 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
+execute unless score #villager.cannot_fall_in_lava options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
+
+# Kill Villager behind WB
+execute as @e[type=villager,tag=respawn_villager] if score @s pos.x > WBbyTwo data run function scaffolding_rush:villager/death/kill
+execute as @e[type=villager,tag=respawn_villager] if score @s pos.x < -WBbyTwo data run function scaffolding_rush:villager/death/kill
+execute as @e[type=villager,tag=respawn_villager] if score @s pos.z > WBbyTwo data run function scaffolding_rush:villager/death/kill
+execute as @e[type=villager,tag=respawn_villager] if score @s pos.z < -WBbyTwo data run function scaffolding_rush:villager/death/kill
+
+# Check if villager is alive
+function scaffolding_rush:villager/death/villager_loss_detection
+
+
+
+
 
 # Clear unconsistent villagers
 execute as @e[type=villager,nbt=!{Age:0}] run function utils:clean_kill
@@ -25,8 +40,8 @@ execute as @e[type=villager,tag=respawn_villager] run function scaffolding_rush:
 
 execute if score #village.movable options matches 1 as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:villager/facing/msg
 
-execute if score #village.movable options matches 1 unless score #lobby.active data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg_actionbar
-execute if score #village.movable options matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:villager/warn/msg_title
+execute if score #village.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg_actionbar
+execute if score #village.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:villager/warn/msg_title
 
 function scaffolding_rush:villager/health_bar
 

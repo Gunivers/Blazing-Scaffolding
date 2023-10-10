@@ -1,0 +1,27 @@
+# Executed globally
+# tellraw @a [{"text":"GLOBAL"},{"text":" > global:features/animated_title/type/defeat","color":"gray"}]
+
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=1}] title [{"text":"D","color":"white","italic":true,"bold":true}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=2}] title [{"text":"D","color":"red","italic":true,"bold":true},{"text":"E","color":"white"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=3}] title [{"text":"DE","color":"red","italic":true,"bold":true},{"text":"F","color":"white"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=4}] title [{"text":"DEF","color":"red","italic":true,"bold":true},{"text":"E","color":"white"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=5}] title [{"text":"DEFE","color":"red","italic":true,"bold":true},{"text":"A","color":"white"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=6}] title [{"text":"DEFEA","color":"red","italic":true,"bold":true},{"text":"T","color":"white"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=7}] title [{"text":"DEFEAT","color":"red","italic":true,"bold":true}]
+
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=8}] title [{"text": "-=","color":"red","obfuscated":true,"italic":true,"bold":true},{"text":"DEFEAT","color":"red","obfuscated":false},{"text": "=-","color":"red","obfuscated":true}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=9}] title [{"text": "-= ","color":"red","obfuscated":true,"italic":true,"bold":true},{"text":"DEFEAT","color":"red","obfuscated":false},{"text": " =-","color":"red","obfuscated":true}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=10}] title [{"text": "=  ","color":"red","italic":true,"bold":true},{"text":"DEFEAT","color":"red"},{"text": "  =","color":"red"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=11}] title [{"text": "=   ","color":"red","italic":true,"bold":true},{"text":"DEFEAT","color":"red"},{"text": "   =","color":"red"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=12}] title [{"text": "-    ","color":"red","italic":true,"bold":true},{"text":"DEFEAT","color":"red"},{"text": "    -","color":"red"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=13}] title [{"text": "-     ","color":"red","italic":true,"bold":true},{"text":"DEFEAT","color":"red"},{"text": "     -","color":"red"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=14}] title [{"text": "-      ","color":"red","italic":true,"bold":true},{"text":"DEFEAT","color":"red"},{"text": "      -","color":"red"}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=15}] title [{"text":"DEFEAT","color":"red","italic":true,"bold":true}]
+
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=20}] title [{"text":"D","color":"red","underlined":true,"italic":true,"bold":true},{"text": "EFEAT","color":"red","underlined":false}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=21}] title [{"text": "D","color":"red","underlined":false,"italic":true,"bold":true},{"text":"E","color":"red","underlined":true},{"text": "FEAT","color":"red","underlined":false}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=22}] title [{"text": "DE","color":"red","underlined":false,"italic":true,"bold":true},{"text":"F","color":"red","underlined":true},{"text": "EAT","color":"red","underlined":false}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=23}] title [{"text": "DEF","color":"red","underlined":false,"italic":true,"bold":true},{"text":"E","color":"red","underlined":true},{"text": "AT","color":"red","underlined":false}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=24}] title [{"text": "DEFE","color":"red","underlined":false,"italic":true,"bold":true},{"text":"A","color":"red","underlined":true},{"text": "T","color":"red","underlined":false}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=25}] title [{"text": "DEFEA","color":"red","underlined":false,"italic":true,"bold":true},{"text":"T","color":"red","underlined":true}]
+title @a[tag=player.animated_title.defeat,scores={player.animated_title.timer=26}] title [{"text":"DEFEAT","color":"red","italic":true,"bold":true}]

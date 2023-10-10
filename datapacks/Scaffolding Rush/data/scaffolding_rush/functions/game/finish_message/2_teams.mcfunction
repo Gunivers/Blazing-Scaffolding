@@ -1,6 +1,10 @@
 
-# EN
-# Blue and
+#==============================================================================
+# ENGLISH
+#==============================================================================
+
+# Blue and green win ----------------------------------------------------------
+
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
@@ -12,22 +16,8 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Green","color":"green"}, \
         {"text":" win!"} \
     ]
-execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Blue","color":"blue"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Green","color":"green"}, \
-        {"text":" win!","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
+
+# Blue and red win -----------------------------------------------------------
 
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
@@ -40,22 +30,8 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Red","color":"red"}, \
         {"text":" win!"} \
     ]
-execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Blue","color":"blue"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Red","color":"red"}, \
-        {"text":" win!","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
+
+# Blue and yellow win --------------------------------------------------------
 
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
@@ -68,24 +44,9 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Yellow","color":"yellow"}, \
         {"text":" win!"} \
     ]
-execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Blue","color":"blue"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Yellow","color":"yellow"}, \
-        {"text":" win!","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
 
-# Green and
+# Green and red win ----------------------------------------------------------
+
 execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
@@ -97,22 +58,8 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Red","color":"red"}, \
         {"text":" win!"} \
     ]
-execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Green","color":"green"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Red","color":"red"}, \
-        {"text":" win!","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
+
+# Green and yellow win -------------------------------------------------------
 
 execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
@@ -125,25 +72,9 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Yellow","color":"yellow"}, \
         {"text":" win!"} \
     ]
-execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Green","color":"green"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Yellow","color":"yellow"}, \
-        {"text":" win!","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
 
+# Red and yellow win ---------------------------------------------------------
 
-# Red and
 execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
@@ -155,27 +86,13 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Yellow","color":"yellow"}, \
         {"text":" win!"} \
     ]
-execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Red","color":"red"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Yellow","color":"yellow"}, \
-        {"text":" win!","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
 
+#==============================================================================
+# FRANCAIS
+#==============================================================================
 
+# Bleue et Verte gagne -------------------------------------------------------
 
-# FR
-# Bleu et
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
@@ -187,22 +104,8 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Verte","color":"green"}, \
         {"text":" a gagné !"} \
     ]
-execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"L'équipe ","color":"gray"}, \
-        {"text":"Bleue","color":"blue"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Verte","color":"green"}, \
-        {"text":" a gagné !","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
+
+# Bleue et Rouge gagne -------------------------------------------------------
 
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
@@ -215,22 +118,8 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Rouge","color":"red"}, \
         {"text":" a gagné !"} \
     ]
-execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"L'équipe ","color":"gray"}, \
-        {"text":"Bleue","color":"blue"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Rouge","color":"red"}, \
-        {"text":" a gagné !","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
+
+# Bleue et Jaune gagne -------------------------------------------------------
 
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
@@ -243,24 +132,9 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Jaune","color":"yellow"}, \
         {"text":" a gagné !"} \
     ]
-execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"L'équipe ","color":"gray"}, \
-        {"text":"Bleu","color":"blue"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Jaune","color":"yellow"}, \
-        {"text":" a gagné !","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
 
-# Verte and
+# Verte et Rouge gagne -------------------------------------------------------
+
 execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
@@ -272,22 +146,8 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Rouge","color":"red"}, \
         {"text":" a gagné !"} \
     ]
-execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"L'équipe ","color":"gray"}, \
-        {"text":"Verte","color":"green"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Rouge","color":"red"}, \
-        {"text":" a gagné !","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
+
+# Verte et Jaune gagne -------------------------------------------------------
 
 execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
@@ -300,25 +160,9 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"Jaune","color":"yellow"}, \
         {"text":" a gagné !"} \
     ]
-execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"L'équipe ","color":"gray"}, \
-        {"text":"Verte","color":"green"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Jaune","color":"yellow"}, \
-        {"text":" a gagné !","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
 
+# Rouge et Jaune gagne -------------------------------------------------------
 
-# Rouge and
 execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
@@ -329,20 +173,4 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":" et "}, \
         {"text":"Jaune","color":"yellow"}, \
         {"text":" a gagné !"} \
-    ]
-execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-        unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-        if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"L'équipe ","color":"gray"}, \
-        {"text":"Rouge","color":"red"}, \
-        {"text":" and ","color":"gray"}, \
-        {"text":"Jaune","color":"yellow"}, \
-        {"text":" a gagné !","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
     ]

@@ -1,85 +1,26 @@
 
-# EN
+#==============================================================================
+# BLUE TEAM WIN
+#==============================================================================
+
+# English ---------------------------------------------------------------------
+
+
+
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option.language=0}] title [ \
-        {"text":"Team "}, \
+    run tellraw @a[scores={option.language=0}] [ \
+        {"text":"====================================","color":"dark_gray"}, \
+        {"text":"\n\n"}, \
+        {"text":"[BS] ","color":"gold"}, \
+        {"text":"Team ","color":"gray"}, \
         {"text":"Blue","color":"blue"}, \
-        {"text":" wins!"} \
-    ]
-execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Blue","color":"blue"}, \
         {"text":" wins!","color":"gray"}, \
         {"text":"\n\n"}, \
         {"text":"====================================","color":"dark_gray"} \
     ]
 
-execute if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option.language=0}] title [ \
-        {"text":"Team "}, \
-        {"text":"Green","color":"green"}, \
-        {"text":" wins!"} \
-    ]
-execute if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Green","color":"green"}, \
-        {"text":" wins!","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
+# French ----------------------------------------------------------------------
 
-execute if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option.language=0}] title [ \
-        {"text":"Team "}, \
-        {"text":"Red","color":"red"}, \
-        {"text":" wins!"} \
-    ]
-execute if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Red","color":"red"}, \
-        {"text":" wins!","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
-
-execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option.language=0}] title [ \
-        {"text":"Team "}, \
-        {"text":"Yellow","color":"yellow"}, \
-        {"text":" wins!"} \
-    ]
-execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
-        {"text":"====================================","color":"dark_gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"[BS] ","color":"gold"}, \
-        {"text":"Team ","color":"gray"}, \
-        {"text":"Yellow","color":"yellow"}, \
-        {"text":" win!","color":"gray"}, \
-        {"text":"\n\n"}, \
-        {"text":"====================================","color":"dark_gray"} \
-    ]
-
-
-# FR
-execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option.language=1}] title [ \
-        {"text":"L'équipe "}, \
-        {"text":"Bleue","color":"blue"}, \
-        {"text":" a gagnée !"} \
-    ]
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
     run tellraw @a[scores={option.language=1}] [ \
         {"text":"====================================","color":"dark_gray"}, \
@@ -92,12 +33,26 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         {"text":"====================================","color":"dark_gray"} \
     ]
 
+#==============================================================================
+# GREEN TEAM WIN
+#==============================================================================
+
+# English ---------------------------------------------------------------------
+
 execute if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option.language=1}] title [ \
-        {"text":"L'équipe "}, \
-        {"text":"Verte","color":"green"}, \
-        {"text":" a gagnée !"} \
+    run tellraw @a[scores={option.language=0}] [ \
+        {"text":"====================================","color":"dark_gray"}, \
+        {"text":"\n\n"}, \
+        {"text":"[BS] ","color":"gold"}, \
+        {"text":"Team ","color":"gray"}, \
+        {"text":"Green","color":"green"}, \
+        {"text":" wins!","color":"gray"}, \
+        {"text":"\n\n"}, \
+        {"text":"====================================","color":"dark_gray"} \
     ]
+
+# French ----------------------------------------------------------------------
+
 execute if entity @a[team=green,tag=!TeamEliminated,limit=1] \
     run tellraw @a[scores={option.language=1}] [ \
         {"text":"====================================","color":"dark_gray"}, \
@@ -110,12 +65,26 @@ execute if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         {"text":"====================================","color":"dark_gray"} \
     ]
 
+#==============================================================================
+# RED TEAM WIN
+#==============================================================================
+
+# English ---------------------------------------------------------------------
+
 execute if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option.language=1}] title [ \
-        {"text":"L'équipe "}, \
-        {"text":"Rouge","color":"red"}, \
-        {"text":" a gagnée !"} \
+    run tellraw @a[scores={option.language=0}] [ \
+        {"text":"====================================","color":"dark_gray"}, \
+        {"text":"\n\n"}, \
+        {"text":"[BS] ","color":"gold"}, \
+        {"text":"Team ","color":"gray"}, \
+        {"text":"Red","color":"red"}, \
+        {"text":" wins!","color":"gray"}, \
+        {"text":"\n\n"}, \
+        {"text":"====================================","color":"dark_gray"} \
     ]
+
+# French ----------------------------------------------------------------------
+
 execute if entity @a[team=red,tag=!TeamEliminated,limit=1] \
     run tellraw @a[scores={option.language=1}] [ \
         {"text":"====================================","color":"dark_gray"}, \
@@ -128,12 +97,26 @@ execute if entity @a[team=red,tag=!TeamEliminated,limit=1] \
         {"text":"====================================","color":"dark_gray"} \
     ]
 
+#==============================================================================
+# YELLOW TEAM WIN
+#==============================================================================
+
+# English ---------------------------------------------------------------------
+
 execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option.language=1}] title [ \
-        {"text":"L'équipe "}, \
-        {"text":"Jaune","color":"yellow"}, \
-        {"text":" a gagnée !"} \
+    run tellraw @a[scores={option.language=0}] [ \
+        {"text":"====================================","color":"dark_gray"}, \
+        {"text":"\n\n"}, \
+        {"text":"[BS] ","color":"gold"}, \
+        {"text":"Team ","color":"gray"}, \
+        {"text":"Yellow","color":"yellow"}, \
+        {"text":" win!","color":"gray"}, \
+        {"text":"\n\n"}, \
+        {"text":"====================================","color":"dark_gray"} \
     ]
+
+# French ----------------------------------------------------------------------
+
 execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
     run tellraw @a[scores={option.language=1}] [ \
         {"text":"====================================","color":"dark_gray"}, \

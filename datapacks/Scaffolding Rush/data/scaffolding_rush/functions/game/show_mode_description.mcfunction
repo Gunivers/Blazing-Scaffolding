@@ -1,5 +1,5 @@
 # Executed globally
-# Called by #scaffolding_rush:game/countdown
+# Called by #scaffolding_rush:game/start/pre_start
 
 execute as @a run tellraw @s[scores={option.language=0}] ["",{"text":"[BS]","color":"gold"},{"text":" A game will start in 10 seconds!\n","color":"gray"}]
 execute as @a run tellraw @s[scores={option.language=1}] ["",{"text":"[BS]","color":"gold"},{"text":" Une partie va commencer dans 10 secondes !\n","color":"gray"}]

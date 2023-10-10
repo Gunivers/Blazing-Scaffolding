@@ -42,6 +42,7 @@ scoreboard objectives add option.language dummy
 scoreboard objectives add tutorial.cell.z dummy {"text":"Tutorial Cell Z","color": "aqua"}
 scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "aqua"}
 scoreboard objectives add player.pick_villager_cooldown dummy {"text":"Pick Villager Cooldown","color": "aqua"}
+scoreboard objectives add player.animated_title.timer dummy {"text":"Animated Title Timer","color": "aqua"}
 
 # Entities data ---------------------------------------------------------------
 
@@ -246,8 +247,8 @@ execute if score #game.loading data matches 1 run schedule clear utils:countdown
 execute if score #game.loading data matches 1 run schedule clear utils:countdown/3s
 execute if score #game.loading data matches 1 run schedule clear utils:countdown/2s
 execute if score #game.loading data matches 1 run schedule clear utils:countdown/1s
-execute if score #game.loading data matches 1 run schedule clear scaffolding_rush:game/__start__
-execute if score #game.loading data matches 1 run function scaffolding_rush:game/__start__
+execute if score #game.loading data matches 1 run schedule clear scaffolding_rush:game/start/start
+execute if score #game.loading data matches 1 run function scaffolding_rush:game/start/start
 
 # If no game started, reset the map, otherwise, finish it (which wil lreset the map afterward)
 execute if score #game.running data matches 0 unless score #game.end data matches 1 run function scaffolding_rush:game/map/reset/__start__
