@@ -20,6 +20,8 @@ execute unless score #lava.period.tick options matches 0 run function scaffoldin
 execute if score #flag.take_over options matches 1 run function scaffolding_rush:game/flag/__main__
 execute if score Volcano options matches 1 run function scaffolding_rush:game/volcano/__main__
 
+function scaffolding_rush:game/music/__main__
+
 # =====================================
 
 #can place on

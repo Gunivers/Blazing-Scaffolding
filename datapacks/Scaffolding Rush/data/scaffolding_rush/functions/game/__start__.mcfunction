@@ -9,6 +9,7 @@ scoreboard players set @a listener.use.green_spawn_egg 0
 scoreboard players set @a listener.use.red_spawn_egg 0
 scoreboard players set @a listener.use.yellow_spawn_egg 0
 
+function scaffolding_rush:game/music/__start__
 
 #reset flaghunt timer
 execute unless score #flag.take_over options matches 0 run scoreboard players set #flag.take_overCountdown data 0

@@ -1,0 +1,2 @@
+
+stopsound @a music

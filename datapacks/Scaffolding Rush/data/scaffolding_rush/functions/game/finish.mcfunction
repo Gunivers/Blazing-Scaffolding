@@ -4,6 +4,8 @@ kill @e[tag=Volcano]
 
 execute if score UseTimeLimit options matches 1.. run function scaffolding_rush:game/score_elimination
 
+function scaffolding_rush:game/music/__stop__
+
 # Finish message --------------------------------------------------------------
 
 scoreboard players set TeamWin data 0
