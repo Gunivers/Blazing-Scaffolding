@@ -110,7 +110,7 @@
         },
         {
           "function": "minecraft:set_nbt",
-          "tag": "{sc.item: 1,HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\"]}"
+          "tag": "{sc.item: 1,HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"]}"
         },
         {
           "function": "minecraft:set_name",

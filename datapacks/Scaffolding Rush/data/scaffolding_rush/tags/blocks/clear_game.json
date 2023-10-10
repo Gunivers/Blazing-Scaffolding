@@ -2,6 +2,7 @@
     "values": [
         "#scaffolding_rush:scaffolding",
         "#scaffolding_rush:sand",
+        "#scaffolding_rush:concrete",
         "#scaffolding_rush:base",
         "#scaffolding_rush:lava",
         "minecraft:black_concrete_powder",

@@ -11,7 +11,7 @@ scoreboard players set @s trigger.lobby 0
 tag @s add player.item.can_have_items
 
 loot replace entity @s hotbar.0 loot scaffolding_rush:scaffolding
-# item replace entity @s hotbar.1 with minecraft:cyan_concrete_powder{HideFlags:24,CanPlaceOn:["#scaffolding_rush:scaffolding"],CanDestroy:["#scaffolding_rush:scaffolding","#scaffolding_rush:sand"]} 42
+# item replace entity @s hotbar.1 with minecraft:cyan_concrete_powder{HideFlags:24,CanPlaceOn:["#scaffolding_rush:scaffolding"],CanDestroy:["#scaffolding_rush:scaffolding","#scaffolding_rush:sand","#scaffolding_rush:concrete"]} 42
 
 tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s","color":"aqua"},{"text":" joined the tutorial ","color":"gray"},{"text":"[Join]","color":"green","clickEvent":{"action":"run_command","value":"/trigger trigger.tutorial"},"hoverEvent":{"action":"show_text","contents":"/trigger trigger.tutorial"}}]
 tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s","color":"aqua"},{"text":" a rejoint le tutoriel ","color":"gray"},{"text":"[Rejoindre]","color":"green","clickEvent":{"action":"run_command","value":"/trigger trigger.tutorial"},"hoverEvent":{"action":"show_text","contents":"/trigger trigger.tutorial"}}]

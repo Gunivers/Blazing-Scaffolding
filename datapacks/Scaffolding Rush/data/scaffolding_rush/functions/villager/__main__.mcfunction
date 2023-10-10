@@ -25,7 +25,7 @@ execute as @e[type=villager,tag=respawn_villager] run function scaffolding_rush:
 
 execute if score #village.movable options matches 1 as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:villager/facing/msg
 
-execute if score #village.movable options matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg_actionbar
+execute if score #village.movable options matches 1 unless score #lobby.active data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg_actionbar
 execute if score #village.movable options matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:villager/warn/msg_title
 
 function scaffolding_rush:villager/health_bar
@@ -45,6 +45,7 @@ execute as @a[scores={listener.use.yellow_spawn_egg=1..}] run function scaffoldi
 
 execute as @a[tag=player.item.have_egg,nbt=!{Inventory: [{id: "minecraft:squid_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:slime_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:mooshroom_spawn_egg"}]},nbt=!{Inventory: [{id: "minecraft:blaze_spawn_egg"}]}] run function scaffolding_rush:villager/egg/give/any
 
+execute if score #lobby.active data matches 1 run effect give @e[type=villager,tag=respawn_villager] glowing infinite 1 true
 
 execute as @e[type=minecraft:villager,tag=respawn_villager] at @s positioned ~ ~1 ~ run function scaffolding_rush:villager/arrow_shield/trigger
 function scaffolding_rush:villager/death/trigger
