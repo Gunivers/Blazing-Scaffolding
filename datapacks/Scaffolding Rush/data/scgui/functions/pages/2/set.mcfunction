@@ -7,7 +7,7 @@ item replace entity @s[scores={option.language=1}] enderchest.22 with tipped_arr
 item replace entity @s[scores={option.language=0}] enderchest.2 with minecraft:golden_apple{scgui: 1, scgui.action: 2, display: {Name: '[{"text":"Regeneration","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 item replace entity @s[scores={option.language=1}] enderchest.2 with minecraft:golden_apple{scgui: 1, scgui.action: 2, display: {Name: '[{"text":"Régénération","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 
-# FallDamage
+# #gameplay.fall_damage.enabled
 item replace entity @s[scores={option.language=0}] enderchest.3 with minecraft:leather_boots{scgui: 1, scgui.action: 3, display: {Name: '[{"text":"Fall Damage","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 item replace entity @s[scores={option.language=1}] enderchest.3 with minecraft:leather_boots{scgui: 1, scgui.action: 3, display: {Name: '[{"text":"Dégats de chute","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 
@@ -15,11 +15,11 @@ item replace entity @s[scores={option.language=1}] enderchest.3 with minecraft:l
 item replace entity @s[scores={option.language=0}] enderchest.4 with minecraft:fire_charge{scgui:1, scgui.action:4, display:{Name:'[{"text":"Volcano","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 item replace entity @s[scores={option.language=1}] enderchest.4 with minecraft:fire_charge{scgui:1, scgui.action:4, display:{Name:'[{"text":"Volcans","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 
-# InstantPillar
+# #gameplay.instant_pillar.enabled
 item replace entity @s[scores={option.language=0}] enderchest.5 with minecraft:scaffolding{scgui: 1, scgui.action: 5, display: {Name: '[{"text":"Instant Pillar","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 item replace entity @s[scores={option.language=1}] enderchest.5 with minecraft:scaffolding{scgui: 1, scgui.action: 5, display: {Name: '[{"text":"Pillier Instantané","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 
-# FastClimb
+# #gameplay.fast_climb.enabled
 item replace entity @s[scores={option.language=0}] enderchest.6 with minecraft:ladder{scgui: 1, scgui.action: 6, display: {Name: '[{"text":"Fast Climb","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 item replace entity @s[scores={option.language=1}] enderchest.6 with minecraft:ladder{scgui: 1, scgui.action: 6, display: {Name: '[{"text":"Montée Rapide","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 

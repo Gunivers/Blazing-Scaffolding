@@ -12,23 +12,23 @@ scoreboard players set WBSize2 options 30
 scoreboard players set WBSize3 options 40
 scoreboard players set WBSize4 options 95
 scoreboard players set WorldborderShrink options 0
-scoreboard players set BuildHeight options 30
+scoreboard players set #map.build_height options 30
 scoreboard players set UseTimeLimit options 1
 scoreboard players set #game.time.limit options 5
 scoreboard players set UseScoreLimit options 0
 
 # Gameplay
-scoreboard players set Regen options 1
-scoreboard players set FallDamage options 1
-scoreboard players set UseSand options 1
-scoreboard players set UseSnowball options 1
-scoreboard players set ScaffoldingStopsArrow options 1
-scoreboard players set UseEnderPearl options 0
-scoreboard players set UseFireball options 0
-scoreboard players set InstantPillar options 1
-scoreboard players set FastClimb options 0
-scoreboard players set #respawn.delay.second options 5
-scoreboard players set #lasting_base options 1
+scoreboard players set #gameplay.regeneration.enabled options 1
+scoreboard players set #gameplay.fall_damage.enabled options 1
+scoreboard players set #player.item.sand.enabled options 1
+scoreboard players set #player.item.bumping_arrow.enabled options 1
+scoreboard players set #gameplay.scaffolding_stop_arrow.enabled options 1
+scoreboard players set #player.item.ender_pearl.enabled options 0
+scoreboard players set #player.item.fireball.enabled options 0
+scoreboard players set #gameplay.instant_pillar.enabled options 1
+scoreboard players set #gameplay.fast_climb.enabled options 0
+scoreboard players set #gameplay.respawn.delay.second options 5
+scoreboard players set #gameplay.lasting_base.enabled options 1
 scoreboard players set Rafts options 1
 
 # Villager

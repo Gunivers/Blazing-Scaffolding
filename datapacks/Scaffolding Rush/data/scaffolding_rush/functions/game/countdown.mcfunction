@@ -12,7 +12,7 @@ effect give @a minecraft:resistance infinite 100 true
 
 effect clear @a
 effect give @a minecraft:instant_health 1 100 true
-execute if score Regen options matches 1 run effect give @s regeneration infinite 0 true
+execute if score #gameplay.regeneration.enabled options matches 1 run effect give @s regeneration infinite 0 true
 worldborder center 1000 1000
 schedule clear scaffolding_rush:lobby/particles
 
@@ -62,7 +62,7 @@ scoreboard players operation #lava.period.tick options *= 20 const
 scoreboard players operation #villager.respawn.tick options = #villager.respawn.seconds options
 scoreboard players operation #villager.respawn.tick options *= 20 const
 
-scoreboard players operation #respawn.delay.tick options = #respawn.delay.second options
+scoreboard players operation #respawn.delay.tick options = #gameplay.respawn.delay.second options
 scoreboard players operation #respawn.delay.tick options *= 20 const
 
 #initialize the wordborder start time in tics

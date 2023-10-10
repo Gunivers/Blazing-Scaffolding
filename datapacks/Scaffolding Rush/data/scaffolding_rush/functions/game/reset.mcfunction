@@ -66,7 +66,7 @@ tag @a remove player.item.can_have_items
 tag @a remove player.item.have_egg
 
 effect give @a minecraft:instant_health 1 100 true
-execute if score Regen options matches 1 run effect give @s regeneration infinite 0 true
+execute if score #gameplay.regeneration.enabled options matches 1 run effect give @s regeneration infinite 0 true
 
 function scaffolding_rush:game/map/reset/__start__
 
