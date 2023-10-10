@@ -43,6 +43,7 @@ scoreboard objectives add tutorial.cell.z dummy {"text":"Tutorial Cell Z","color
 scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "aqua"}
 scoreboard objectives add player.pick_villager_cooldown dummy {"text":"Pick Villager Cooldown","color": "aqua"}
 scoreboard objectives add player.animated_title.timer dummy {"text":"Animated Title Timer","color": "aqua"}
+scoreboard objectives add player.death.animation dummy {"text":"Death Animation","color": "aqua"}
 
 # Entities data ---------------------------------------------------------------
 
