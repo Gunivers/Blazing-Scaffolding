@@ -1,2 +1,0 @@
-tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Lobby loaded","color":"gray"}]
-tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Lobby chargé","color":"gray"}]

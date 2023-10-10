@@ -1,1 +1,0 @@
-scoreboard players set @s option.volcano 1
