@@ -57,6 +57,10 @@ execute as @a[team=yellow,tag=!inTutorial,tag=!TeamEliminated,tag=player.item.ca
         unless entity @e[type=villager,tag=respawn_villager,tag=yellow_villager] \
     run tag @s add player.item.can_have_spawn_egg
 
+execute if score #villager.enabled options matches 1 \
+        if score #lobby.active data matches 0 \
+    run tag @s remove player.item.can_have_spawn_egg
+
 # Remove items if not supposed to have them -----------------------------------
 
 clear @a[tag=!player.item.can_have_items] #scaffolding_rush:scaffolding
