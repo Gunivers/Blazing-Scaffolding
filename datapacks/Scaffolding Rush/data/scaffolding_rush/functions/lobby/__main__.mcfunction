@@ -19,7 +19,7 @@ function scaffolding_rush:lobby/animation/__main__
 execute as @e[type=marker,tag=lobbyLight] at @s if block ~ ~ ~ #scaffolding_rush:air run function scaffolding_rush:lobby/light
 
 # Suffocation
-execute as @a at @s if block ~ ~ ~ #scaffolding_rush:lobby_suffocation run function scaffolding_rush:lobby/suffocation
+execute as @a[tag=!player.is_dead] at @s if block ~ ~ ~ #scaffolding_rush:lobby_suffocation run function scaffolding_rush:lobby/suffocation
 
 # Start game
 execute unless score #admin.exist options matches 1 as @a[scores={bellring=1..}] run scoreboard players set @s trigger.start_game 1
@@ -32,8 +32,6 @@ scoreboard players reset @a bellring
 
 # interaction
 function scaffolding_rush:lobby/interaction/__main__
-
-execute as @a[gamemode=survival] at @s if block ~ ~-0.01 ~ magma_block run kill @s
 
 execute as @a[scores={trigger.tutorial=1}] run function scaffolding_rush:tutorial/join
 

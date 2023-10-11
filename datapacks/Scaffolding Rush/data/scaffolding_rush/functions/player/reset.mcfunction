@@ -7,5 +7,6 @@ scoreboard players reset @s
 
 tag @a remove player.item.can_have_items
 tag @a remove player.item.have_egg
+tag @a remove player.is_dead
 
 function scaffolding_rush:player/setup

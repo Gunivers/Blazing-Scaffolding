@@ -6,15 +6,10 @@ tag @a[tag=player.item.can_have_book] remove player.item.can_have_book
 # Time counter
 scoreboard players add #game.time.tick timer 1
 
-execute as @a[gamemode=!spectator,tag=!Respawning,scores={listener.death=0}] at @s store result score @s pos.x run data get entity @s Pos[0]
-execute as @a[gamemode=!spectator,tag=!Respawning,scores={listener.death=0}] at @s store result score @s pos.y run data get entity @s Pos[1]
-execute as @a[gamemode=!spectator,tag=!Respawning,scores={listener.death=0}] at @s store result score @s pos.z run data get entity @s Pos[2]
-
 # +++++++++++++++++++++++++++++++++++++
 # Mains
 # +++++++++++++++++++++++++++++++++++++
 
-function scaffolding_rush:game/death_detection
 execute unless score #lava.period.tick options matches 0 run function scaffolding_rush:game/lava/__main__
 
 execute if score #flag.take_over options matches 1 run function scaffolding_rush:game/flag/__main__
@@ -60,16 +55,31 @@ execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/buil
 execute if score #game.end data matches 0 run function scaffolding_rush:game/test_end
 
 # Elimination if team exist, unless players in game, unless players are respawning
-execute if entity @a[team=blue,tag=!TeamEliminated] unless entity @a[team=blue,gamemode=!spectator] unless entity @a[team=blue,tag=Respawning] unless entity @e[type=villager,tag=blue_villager,tag=respawn_villager] run function scaffolding_rush:game/elimination/blue
-execute if entity @a[team=green,tag=!TeamEliminated] unless entity @a[team=green,gamemode=!spectator] unless entity @a[team=green,tag=Respawning] unless entity @e[type=villager,tag=green_villager,tag=respawn_villager] run function scaffolding_rush:game/elimination/green
-execute if entity @a[team=red,tag=!TeamEliminated] unless entity @a[team=red,gamemode=!spectator] unless entity @a[team=red,tag=Respawning] unless entity @e[type=villager,tag=red_villager,tag=respawn_villager] run function scaffolding_rush:game/elimination/red
-execute if entity @a[team=yellow,tag=!TeamEliminated] unless entity @a[team=yellow,gamemode=!spectator] unless entity @a[team=yellow,tag=Respawning] unless entity @e[type=villager,tag=yellow_villager,tag=respawn_villager] run function scaffolding_rush:game/elimination/yellow
+execute if entity @a[team=blue,tag=!TeamEliminated] \
+        unless entity @a[team=blue,tag=!player.is_dead] \
+        unless entity @e[type=villager,tag=blue_villager,tag=respawn_villager] \
+    run function scaffolding_rush:game/elimination/blue
+
+execute if entity @a[team=green,tag=!TeamEliminated] \
+        unless entity @a[team=green,tag=!player.is_dead] \
+        unless entity @e[type=villager,tag=green_villager,tag=respawn_villager] \
+    run function scaffolding_rush:game/elimination/green
+
+execute if entity @a[team=red,tag=!TeamEliminated] \
+        unless entity @a[team=red,tag=!player.is_dead] \
+        unless entity @e[type=villager,tag=red_villager,tag=respawn_villager] \
+    run function scaffolding_rush:game/elimination/red
+
+execute if entity @a[team=yellow,tag=!TeamEliminated] \
+        unless entity @a[team=yellow,tag=!player.is_dead] \
+        unless entity @e[type=villager,tag=yellow_villager,tag=respawn_villager] \
+    run function scaffolding_rush:game/elimination/yellow
 
 # Revive players from changed gamemode
-execute if entity @a[team=blue,tag=TeamEliminated,gamemode=!spectator] run tag @a[team=blue] remove TeamEliminated
-execute if entity @a[team=green,tag=TeamEliminated,gamemode=!spectator] run tag @a[team=gree] remove TeamEliminated
-execute if entity @a[team=red,tag=TeamEliminated,gamemode=!spectator] run tag @a[team=red] remove TeamEliminated
-execute if entity @a[team=yellow,tag=TeamEliminated,gamemode=!spectator] run tag @a[team=yellow] remove TeamEliminated
+execute if entity @e[type=villager,tag=red_villager,tag=respawn_villager] run tag @a[team=red] remove TeamEliminated
+execute if entity @e[type=villager,tag=blue_villager,tag=respawn_villager] run tag @a[team=blue] remove TeamEliminated
+execute if entity @e[type=villager,tag=green_villager,tag=respawn_villager] run tag @a[team=green] remove TeamEliminated
+execute if entity @e[type=villager,tag=yellow_villager,tag=respawn_villager] run tag @a[team=yellow] remove TeamEliminated
 
 # Count active teams
 scoreboard players set RemainingTeam data 0

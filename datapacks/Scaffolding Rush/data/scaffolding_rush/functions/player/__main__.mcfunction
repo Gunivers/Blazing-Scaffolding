@@ -15,3 +15,6 @@ function scaffolding_rush:player/items
 # Death Management ------------------------------------------------------------
 
 function scaffolding_rush:player/death/trigger
+
+# Animated title
+execute if entity @a[scores={player.animated_title.timer=1..}] run function scaffolding_rush:player/animated_title/animation

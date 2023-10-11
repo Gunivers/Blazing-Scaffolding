@@ -20,4 +20,3 @@ tellraw @s [ \
 execute if score #lobby.active data matches 1 run schedule function scaffolding_rush:tutorial/msg_lobby 10s
 
 teleport @s 0 24 0 0 0
-spawnpoint @s 0 24 0 0

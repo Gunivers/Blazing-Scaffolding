@@ -5,7 +5,7 @@ execute if entity @s[tag=flagOne] run function scaffolding_rush:game/flag/drop/p
 execute if entity @s[tag=flagTwo] run function scaffolding_rush:game/flag/drop/point/2
 execute if entity @s[tag=flagFive] run function scaffolding_rush:game/flag/drop/point/5
 
-#rise the summoned armor stand (the function is executed as the player)
+# rise the summoned armor stand (the function is executed as the player)
 scoreboard players operation @s fallDistance /= 100 const
 execute unless score @s fallDistance matches 3.. run scoreboard players set @s fallDistance 3
 scoreboard players operation @e[type=armor_stand,tag=new] data = @s fallDistance

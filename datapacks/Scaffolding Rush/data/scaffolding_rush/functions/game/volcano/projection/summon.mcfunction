@@ -2,8 +2,6 @@ scoreboard players set #VolcanoPopNumber data 0
 execute as @e[type=marker,tag=VolcanoPop] run scoreboard players add #VolcanoPopNumber data 1
 
 execute if score #VolcanoPopNumber data matches 0..50 run summon marker ~ ~ ~ {Tags:["Volcano","VolcanoPop","VolcanoPopNew"]}
-# 
-# summon block_display ~ ~ ~ {block_state:{Name:"minecraft:magma_block"},Tags:["Volcano","VolcanoPop","VolcanoPopNew"]}
 
 scoreboard players set @e[type=marker,tag=VolcanoPopNew] glib.lifetime -100
 
