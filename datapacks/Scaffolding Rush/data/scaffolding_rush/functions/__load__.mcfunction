@@ -26,6 +26,8 @@ execute as @a run function scaffolding_rush:player/setup
 # OBJECTIVES DECLARATIONS
 #==============================================================================
 
+scoreboard objectives add game.score dummy {"text":"SCORE","color": "gold","bold":true,"italic":true}
+
 # Global data -----------------------------------------------------------------
 
 scoreboard objectives add timer dummy {"text":"Timer","color": "gold"}

@@ -1,7 +1,7 @@
 tag @s remove flagTwo
 
 title @s times 0 20 0
-title @s title {"text":"+2","color":"gold"}
+title @s title {"text":"+2","color":"yellow"}
 
 execute if entity @s[team=blue] run tellraw @a ["",{"text":"[","color":"blue"},{"selector":"@s","color":"blue"},{"text":"]","color":"blue"},{"text":" +2 points","color":"gray"}]
 execute if entity @s[team=green] run tellraw @a ["",{"text":"[","color":"green"},{"selector":"@s","color":"green"},{"text":"]","color":"green"},{"text":" +2 points","color":"gray"}]

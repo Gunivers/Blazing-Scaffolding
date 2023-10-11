@@ -12,8 +12,8 @@ execute if score UseTimeLimit options matches 1.. if score #game.time.left timer
 
 #if the score limit is enabled, end the game if a team reaches it
 #UseScoreLimit
-execute if score UseScoreLimit options matches 1.. if score #blue.score data >= ScoreLimit options run function scaffolding_rush:game/finish
-execute if score UseScoreLimit options matches 1.. if score #green.score data >= ScoreLimit options run function scaffolding_rush:game/finish
-execute if score UseScoreLimit options matches 1.. if score #red.score data >= ScoreLimit options run function scaffolding_rush:game/finish
-execute if score UseScoreLimit options matches 1.. if score #yellow.score data >= ScoreLimit options run function scaffolding_rush:game/finish
+execute if score UseScoreLimit options matches 1.. if score Blue game.score >= ScoreLimit options run function scaffolding_rush:game/finish
+execute if score UseScoreLimit options matches 1.. if score Green game.score >= ScoreLimit options run function scaffolding_rush:game/finish
+execute if score UseScoreLimit options matches 1.. if score Red game.score >= ScoreLimit options run function scaffolding_rush:game/finish
+execute if score UseScoreLimit options matches 1.. if score Yellow game.score >= ScoreLimit options run function scaffolding_rush:game/finish
 

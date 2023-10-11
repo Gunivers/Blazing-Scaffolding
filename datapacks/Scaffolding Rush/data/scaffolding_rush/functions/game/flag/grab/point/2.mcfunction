@@ -1,2 +1,2 @@
 tag @s add flagTwo
-function scaffolding_rush:game/flag/banner/give/2
+function scaffolding_rush:game/flag/give/2

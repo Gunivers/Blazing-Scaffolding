@@ -76,16 +76,16 @@ scoreboard players set $villager.yellow respawn.timer 0
 scoreboard players set $villager.green respawn.timer 0
 
 #Reset teams scores, if relevant
-execute unless score #flag.take_over options matches 0 run scoreboard objectives setdisplay sidebar Score
+execute unless score #flag.take_over options matches 0 run scoreboard objectives setdisplay sidebar game.score
 execute if score #flag.take_over options matches 0 run scoreboard objectives setdisplay sidebar
-scoreboard players reset #blue.score data
-scoreboard players reset #green.score data
-scoreboard players reset #red.score data
-scoreboard players reset #yellow.score data
-execute unless score #flag.take_over options matches 0 if entity @a[team=blue] run scoreboard players set #blue.score data 0
-execute unless score #flag.take_over options matches 0 if entity @a[team=green] run scoreboard players set #green.score data 0
-execute unless score #flag.take_over options matches 0 if entity @a[team=red] run scoreboard players set #red.score data 0
-execute unless score #flag.take_over options matches 0 if entity @a[team=yellow] run scoreboard players set #yellow.score data 0
+scoreboard players reset Blue game.score
+scoreboard players reset Green game.score
+scoreboard players reset Red game.score
+scoreboard players reset Yellow game.score
+execute unless score #flag.take_over options matches 0 if entity @a[team=blue] run scoreboard players set Blue game.score 0
+execute unless score #flag.take_over options matches 0 if entity @a[team=green] run scoreboard players set Green game.score 0
+execute unless score #flag.take_over options matches 0 if entity @a[team=red] run scoreboard players set Red game.score 0
+execute unless score #flag.take_over options matches 0 if entity @a[team=yellow] run scoreboard players set Yellow game.score 0
 
 #create the firsts flags to capture in the flaghunt gamemode
 execute unless score #flag.take_over options matches 0 run function scaffolding_rush:game/flag/new_spreaded
