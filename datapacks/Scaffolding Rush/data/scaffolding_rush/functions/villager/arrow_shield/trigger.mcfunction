@@ -16,8 +16,8 @@ execute as @e[tag=arrow_threat] run function glib.vector:classic/normalize
 execute as @e[tag=arrow_threat] run function glib.vector:classic/scalar_product
 
 # Kill arrows that are too close to the villager and in direction of it
-execute as @e[tag=arrow_threat,scores={glib.var0=500..}] run function scaffolding_rush:villager/arrow_shield_laser
-execute at @e[tag=arrow_threat,scores={glib.var0=500..}] run particle smoke ~ ~ ~ 0 0 0 0.05 50 force
+execute as @e[tag=arrow_threat,scores={glib.var0=500..}] run function scaffolding_rush:villager/arrow_shield/laser
+execute at @e[tag=arrow_threat,scores={glib.var0=500..}] run particle smoke ~ ~ ~ 0 0 0 0.05 20 force
 execute at @e[tag=arrow_threat,scores={glib.var0=500..}] run playsound minecraft:block.amethyst_cluster.break master @a[distance=..30] ~ ~ ~ 0.5 2 0.5
 
 kill @e[tag=arrow_threat,scores={glib.var0=500..}]
