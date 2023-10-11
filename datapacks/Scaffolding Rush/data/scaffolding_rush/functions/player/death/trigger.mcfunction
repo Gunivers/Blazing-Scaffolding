@@ -1,7 +1,7 @@
 # Execute globally
 # Called by function scaffolding_rush:player/__main__
 
-execute as @a at @s run spawnpoint @s ~ ~ ~
+execute as @a at @s run spawnpoint @s ~ ~ ~ ~
 
 # Check if player can respawn -------------------------------------------------
 

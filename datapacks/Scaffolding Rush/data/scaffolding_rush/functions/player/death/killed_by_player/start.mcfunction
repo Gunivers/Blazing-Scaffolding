@@ -8,7 +8,7 @@ execute if entity @s run tellraw @a[scores={option.language=1}] ["",{"text":"[BS
 
 summon armor_stand ~ ~ ~ {Tags:["player.death.killed_by_player.animation","player.death.killed_by_player.animation.new"],NoGravity:1,Small:1,Marker:1,Invisible:1}
 
-tp @e[tag=player.death.killed_by_player.animation.new,limit=1,sort=nearest] @s
+execute at @s anchored eyes positioned ^ ^ ^ run tp @e[tag=player.death.killed_by_player.animation.new,limit=1,sort=nearest] ~ ~ ~ ~ 0
 gamemode spectator @s
 # spectate @e[tag=player.death.killed_by_player.animation.new,limit=1,sort=nearest] @s
 

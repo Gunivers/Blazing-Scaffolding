@@ -3,7 +3,7 @@
 
 # Force spectate camera
 spectate @e[tag=player.death.killed_by_player.animation,limit=1,sort=nearest] @s[scores={player.death.animation=1..39}]
-execute as @e[tag=player.death.killed_by_player.animation,limit=1,sort=nearest] at @s run tp @s ^ ^ ^-0.05 ~ ~1 
+execute as @e[tag=player.death.killed_by_player.animation,limit=1,sort=nearest] at @s run tp @s ^ ^ ^-0.1 ~ ~1 
 
 # End of animation
 kill @e[tag=player.death.killed_by_player.animation,scores={player.death.animation=..1}]
