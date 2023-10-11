@@ -1,2 +1,2 @@
 
-scoreboard players set @s option.vil_respawn 1
+scoreboard players set @s option_vil_respawn 1

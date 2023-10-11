@@ -1,2 +1,2 @@
 
-scoreboard players set @s option.movable_villager 1
+scoreboard players set @s option_movable_villager 1

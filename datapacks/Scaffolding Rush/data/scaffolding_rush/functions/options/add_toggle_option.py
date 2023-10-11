@@ -22,23 +22,23 @@ print("option name : "+option_name)
 #file generation
 #   init the scores
 with open("__init__.mcfunction", "a", encoding='utf-8') as f:
-    f.write("scoreboard objectives add option."+option_name+" trigger\n")
+    f.write("scoreboard objectives add option_"+option_name+" trigger\n")
     f.write("execute unless score "+fake_player_name+" options matches 0..1 run scoreboard players set "+fake_player_name+" options "+default_val+"\n")
 f.close
 
 #   activate all
 with open("activate_all.mcfunction", "a", encoding='utf-8') as f:
-    f.write("scoreboard players enable @s option."+option_name+"\n")
+    f.write("scoreboard players enable @s option_"+option_name+"\n")
 f.close
 
 #   disable all
 with open("disable_all.mcfunction", "a", encoding='utf-8') as f:
-    f.write("scoreboard players reset @s option."+option_name+"\n")
+    f.write("scoreboard players reset @s option_"+option_name+"\n")
 f.close
 
 #   main
 with open("__main__.mcfunction", "a", encoding='utf-8') as f:
-    f.write("execute as @a[scores={option."+option_name+"=1..}] run function scaffolding_rush:options/"+option_name+"\n")
+    f.write("execute as @a[scores={option_"+option_name+"=1..}] run function scaffolding_rush:options/"+option_name+"\n")
 f.close
 
 #   option function
@@ -48,14 +48,14 @@ with open(option_name+".mcfunction", "w", encoding='utf-8') as f:
 
 execute store success score """+fake_player_name+""" options if score """+fake_player_name+""" options matches 0
 
-execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"deactivated","color":"red"}]
-execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"activated","color":"green"}]
+execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"deactivated","color":"red"}]
+execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The """+option_name+""" option has been ","color":"gray"},{"text":"activated","color":"green"}]
 
-execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"désactivée","color":"red"}]
-execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"activée","color":"green"}]
+execute if score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"désactivée","color":"red"}]
+execute unless score """+fake_player_name+""" options matches 0 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'option """+option_name+""" a été ","color":"gray"},{"text":"activée","color":"green"}]
 
-scoreboard players set @s option."""+option_name+""" 0
-scoreboard players enable @s option."""+option_name+"""
+scoreboard players set @s option_"""+option_name+""" 0
+scoreboard players enable @s option_"""+option_name+"""
 
 function scaffolding_rush:options/refresh
 """

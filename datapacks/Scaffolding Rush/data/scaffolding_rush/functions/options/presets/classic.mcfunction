@@ -1,7 +1,7 @@
 # Classic Preset
 
-# tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Classic","color":"gold"},{"text":" has been chosen","color":"gray"}]
-# tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Classique","color":"gold"},{"text":" a été choisi","color":"gray"}]
+# tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Classic","color":"gold"},{"text":" has been chosen","color":"gray"}]
+# tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Classique","color":"gold"},{"text":" a été choisi","color":"gray"}]
 
 scoreboard players set Preset options 1
 

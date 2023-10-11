@@ -40,7 +40,7 @@ scoreboard objectives add const dummy {"text":"Constants","color": "gold"}
 
 scoreboard objectives add game.id dummy {"text":"Game ID","color": "aqua"}
 scoreboard objectives add uuid dummy {"text":"UUID","color": "aqua"}
-scoreboard objectives add option.language dummy
+scoreboard objectives add option_language dummy
 scoreboard objectives add tutorial.cell.z dummy {"text":"Tutorial Cell Z","color": "aqua"}
 scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "aqua"}
 scoreboard objectives add player.pick_villager_cooldown dummy {"text":"Pick Villager Cooldown","color": "aqua"}

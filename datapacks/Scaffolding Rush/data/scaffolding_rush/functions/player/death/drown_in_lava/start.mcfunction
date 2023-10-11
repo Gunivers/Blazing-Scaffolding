@@ -3,8 +3,8 @@
 
 function scaffolding_rush:player/death/just_died
 
-execute if entity @s run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s"},{"text":" fell into the lava","color":"gray"}]
-execute if entity @s run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s"},{"text":" est tombé·e dans la lave","color":"gray"}]
+execute if entity @s run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s"},{"text":" fell into the lava","color":"gray"}]
+execute if entity @s run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s"},{"text":" est tombé·e dans la lave","color":"gray"}]
 
 effect give @s resistance 3 127 true
 effect give @s fire_resistance 3 127 true

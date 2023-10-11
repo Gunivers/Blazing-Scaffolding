@@ -1,1 +1,1 @@
-scoreboard players set @s option.volcano 1
+scoreboard players set @s option_volcano 1

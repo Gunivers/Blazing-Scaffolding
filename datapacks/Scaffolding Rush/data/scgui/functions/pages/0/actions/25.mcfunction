@@ -1,2 +1,2 @@
 
-scoreboard players set @s option.admin 1
+scoreboard players set @s option_admin 1

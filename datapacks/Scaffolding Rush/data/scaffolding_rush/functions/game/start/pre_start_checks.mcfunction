@@ -24,21 +24,21 @@ execute if score DevelopementMode data matches 1 \
 
 # Error if not enough teams
 execute if score RemainingTeam data matches ..1 \
-    run tellraw @a[scores={option.language=0}] [ \
+    run tellraw @a[scores={option_language=0}] [ \
         {"text":"[BS] ","color":"gold"},{"text":"Not enough player in teams!","color":"red"} \
     ]
 execute if score RemainingTeam data matches ..1 \
-    run tellraw @a[scores={option.language=1}] [ \
+    run tellraw @a[scores={option_language=1}] [ \
         {"text":"[BS] ","color":"gold"},{"text":"Pas assez de joueur dans les équipes !","color":"red"} \
     ]
 
 # Error if the map reset is not complete
 execute if score #game.clear data matches 1 \
-    run tellraw @a[scores={option.language=0}] [ \
+    run tellraw @a[scores={option_language=0}] [ \
         {"text":"[BS] ","color":"gold"},{"text":"Please wait, a clear of the map is in progress","color":"red"} \
     ]
 execute if score #game.clear data matches 1 \
-    run tellraw @a[scores={option.language=1}] [ \
+    run tellraw @a[scores={option_language=1}] [ \
         {"text":"[BS] ","color":"gold"},{"text":"Merci de patienter, une réinitialisation de la carte est en cours","color":"red"} \
     ]
 

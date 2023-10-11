@@ -3,8 +3,8 @@
 
 function scaffolding_rush:player/death/just_died
 
-execute if entity @s run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s"},{"text":" was killed","color":"gray"}]
-execute if entity @s run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s"},{"text":" a été tué","color":"gray"}]
+execute if entity @s run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s"},{"text":" was killed","color":"gray"}]
+execute if entity @s run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@s"},{"text":" a été tué","color":"gray"}]
 
 summon armor_stand ~ ~ ~ {Tags:["player.death.killed_by_player.animation","player.death.killed_by_player.animation.new"],NoGravity:1,Small:1,Marker:1,Invisible:1}
 

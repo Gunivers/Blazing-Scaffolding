@@ -22,15 +22,15 @@ execute if score TeamWin data matches 2 run function scaffolding_rush:game/finis
 execute if score TeamWin data matches 3 run function scaffolding_rush:game/finish_message/3_teams
 execute if score TeamWin data matches 4 run function scaffolding_rush:game/finish_message/4_teams
 
-execute as @a[team=!spectator,tag=!TeamEliminated,scores={option.language=0}] \
+execute as @a[team=!spectator,tag=!TeamEliminated,scores={option_language=0}] \
     run function scaffolding_rush:player/animated_title/start {type:"victory"}
-execute as @a[team=!spectator,tag=TeamEliminated,scores={option.language=0}] \
+execute as @a[team=!spectator,tag=TeamEliminated,scores={option_language=0}] \
     run function scaffolding_rush:player/animated_title/start {type:"defeat"}
 
 execute if score TeamWin data matches 0 unless entity @a[tag=!TeamEliminated] \
-    run title @a[scores={option.language=0}] title ["",{"text":"No team won!"}]
+    run title @a[scores={option_language=0}] title ["",{"text":"No team won!"}]
 execute if score TeamWin data matches 0 unless entity @a[tag=!TeamEliminated] \
-    run tellraw @a[scores={option.language=0}] [ \
+    run tellraw @a[scores={option_language=0}] [ \
         {"text":"====================================\n\n","color":"dark_gray"}, \
         {"text":"[BS] ","color":"gold"}, \
         {"text":"No team won!","color":"gray"}, \
@@ -38,9 +38,9 @@ execute if score TeamWin data matches 0 unless entity @a[tag=!TeamEliminated] \
     ]
 
 execute if score TeamWin data matches 0 unless entity @a[tag=!TeamEliminated] \
-    run title @a[scores={option.language=1}] title ["",{"text":"Aucune équipe n'a gagnée !"}]
+    run title @a[scores={option_language=1}] title ["",{"text":"Aucune équipe n'a gagnée !"}]
 execute if score TeamWin data matches 0 unless entity @a[tag=!TeamEliminated] \
-    run tellraw @a[scores={option.language=1}] [ \
+    run tellraw @a[scores={option_language=1}] [ \
         {"text":"====================================\n\n","color":"dark_gray"}, \
         {"text":"[BS] ","color":"gold"}, \
         {"text":"Aucune équipe n'a gagnée !","color":"gray"}, \

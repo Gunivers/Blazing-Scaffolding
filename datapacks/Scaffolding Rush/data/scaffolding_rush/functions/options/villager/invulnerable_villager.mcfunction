@@ -9,7 +9,7 @@ execute unless score #villager.invulnerable options matches 0 run tellraw @a[sco
 execute if score #villager.invulnerable options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'Invincibilité du Villageois a été ","color":"gray"},{"text":"désactivée","color":"red"}]
 execute unless score #villager.invulnerable options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le Villageois est ","color":"gray"},{"text":"invincible","color":"green"}]
 
-scoreboard players set @s option.invulnerable_villager 0
-scoreboard players enable @s option.invulnerable_villager
+scoreboard players set @s option_invulnerable_villager 0
+scoreboard players enable @s option_invulnerable_villager
 
 function scaffolding_rush:options/refresh

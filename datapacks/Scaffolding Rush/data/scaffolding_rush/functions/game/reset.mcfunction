@@ -2,14 +2,14 @@ worldborder center 0 0
 
 function scaffolding_rush:game/summon_markers
 
-execute if score #game.running data matches 1 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]
-execute if score #game.running data matches 1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"La partie a été stoppée","color":"gray"}]
+execute if score #game.running data matches 1 run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]
+execute if score #game.running data matches 1 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"La partie a été stoppée","color":"gray"}]
 
-execute if score #game.loading data matches 1 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The launching of the game has been stopped","color":"gray"}]
-execute if score #game.loading data matches 1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le lancement de la partie a été annulé","color":"gray"}]
+execute if score #game.loading data matches 1 run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The launching of the game has been stopped","color":"gray"}]
+execute if score #game.loading data matches 1 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le lancement de la partie a été annulé","color":"gray"}]
 
-execute if score DevelopementMode data matches 1 run tellraw @a[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
-execute if score DevelopementMode data matches 1 run tellraw @a[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Rechargement en cours...","color":"gray"}]
+execute if score DevelopementMode data matches 1 run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
+execute if score DevelopementMode data matches 1 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Rechargement en cours...","color":"gray"}]
 
 
 function scaffolding_rush:game/lava/global_rising/stop
@@ -71,7 +71,7 @@ scoreboard players reset @a start_game
 execute as @a run function scaffolding_rush:options/disable_all
 execute if score #admin.exist options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all
 execute if score #admin.exist options matches 0 as @a run function scaffolding_rush:options/activate_all
-scoreboard players enable @a option.admin
+scoreboard players enable @a option_admin
 
 #Bossbar
 bossbar set minecraft:filling_lava visible false

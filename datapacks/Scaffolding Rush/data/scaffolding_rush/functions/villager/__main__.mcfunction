@@ -34,8 +34,8 @@ team join yellow @e[type=villager,tag=new_villager,tag=yellow_villager,tag=respa
 tag @e[type=villager,tag=new_villager,tag=respawn_villager] remove new_villager
 
 #inform the player that he has the egg
-title @a[scores={option.language=0},tag=player.item.have_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg!! Place it to be able to respawn! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
-title @a[scores={option.language=1},tag=player.item.have_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" Vous avez l'œuf !! Placez-le pour pouvoir réapparaître ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+title @a[scores={option_language=0},tag=player.item.have_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" You have the egg!! Place it to be able to respawn! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
+title @a[scores={option_language=1},tag=player.item.have_egg] actionbar ["",{"text":"||","obfuscated":true,"color":"gold"},{"text":" Vous avez l'œuf !! Placez-le pour pouvoir réapparaître ! ","color":"red"},{"text":"||","obfuscated":true,"color":"gold"}]
 
 # tag facing_villager
 execute as @a[gamemode=!spectator,tag=!Respawning] at @s run function scaffolding_rush:villager/facing/test

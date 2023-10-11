@@ -8,7 +8,7 @@
 
 
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
+    run tellraw @a[scores={option_language=0}] [ \
         {"text":"====================================","color":"dark_gray"}, \
         {"text":"\n\n"}, \
         {"text":"[BS] ","color":"gold"}, \
@@ -22,7 +22,7 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
 # French ----------------------------------------------------------------------
 
 execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
+    run tellraw @a[scores={option_language=1}] [ \
         {"text":"====================================","color":"dark_gray"}, \
         {"text":"\n\n"}, \
         {"text":"[BS] ","color":"gold"}, \
@@ -40,7 +40,7 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
 # English ---------------------------------------------------------------------
 
 execute if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
+    run tellraw @a[scores={option_language=0}] [ \
         {"text":"====================================","color":"dark_gray"}, \
         {"text":"\n\n"}, \
         {"text":"[BS] ","color":"gold"}, \
@@ -54,7 +54,7 @@ execute if entity @a[team=green,tag=!TeamEliminated,limit=1] \
 # French ----------------------------------------------------------------------
 
 execute if entity @a[team=green,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
+    run tellraw @a[scores={option_language=1}] [ \
         {"text":"====================================","color":"dark_gray"}, \
         {"text":"\n\n"}, \
         {"text":"[BS] ","color":"gold"}, \
@@ -72,7 +72,7 @@ execute if entity @a[team=green,tag=!TeamEliminated,limit=1] \
 # English ---------------------------------------------------------------------
 
 execute if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
+    run tellraw @a[scores={option_language=0}] [ \
         {"text":"====================================","color":"dark_gray"}, \
         {"text":"\n\n"}, \
         {"text":"[BS] ","color":"gold"}, \
@@ -86,7 +86,7 @@ execute if entity @a[team=red,tag=!TeamEliminated,limit=1] \
 # French ----------------------------------------------------------------------
 
 execute if entity @a[team=red,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
+    run tellraw @a[scores={option_language=1}] [ \
         {"text":"====================================","color":"dark_gray"}, \
         {"text":"\n\n"}, \
         {"text":"[BS] ","color":"gold"}, \
@@ -104,7 +104,7 @@ execute if entity @a[team=red,tag=!TeamEliminated,limit=1] \
 # English ---------------------------------------------------------------------
 
 execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=0}] [ \
+    run tellraw @a[scores={option_language=0}] [ \
         {"text":"====================================","color":"dark_gray"}, \
         {"text":"\n\n"}, \
         {"text":"[BS] ","color":"gold"}, \
@@ -118,7 +118,7 @@ execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
 # French ----------------------------------------------------------------------
 
 execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run tellraw @a[scores={option.language=1}] [ \
+    run tellraw @a[scores={option_language=1}] [ \
         {"text":"====================================","color":"dark_gray"}, \
         {"text":"\n\n"}, \
         {"text":"[BS] ","color":"gold"}, \

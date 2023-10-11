@@ -1,2 +1,2 @@
 
-scoreboard players set @s option.instant_pil 1
+scoreboard players set @s option_instant_pil 1

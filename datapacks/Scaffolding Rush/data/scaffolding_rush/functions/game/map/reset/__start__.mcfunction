@@ -11,8 +11,8 @@ scoreboard players set #game.clear data 1
 
 bossbar add reset_map_en {"text":"Reseting map..."}
 bossbar add reset_map_fr {"text":"Chargement de la map en cours..."}
-bossbar set reset_map_en players @a[scores={option.language=0}]
-bossbar set reset_map_fr players @a[scores={option.language=1}]
+bossbar set reset_map_en players @a[scores={option_language=0}]
+bossbar set reset_map_fr players @a[scores={option_language=1}]
 bossbar set reset_map_en max 256
 bossbar set reset_map_fr max 256
 bossbar set reset_map_en color red

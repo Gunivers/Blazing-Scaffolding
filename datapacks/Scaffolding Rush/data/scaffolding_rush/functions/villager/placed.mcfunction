@@ -25,8 +25,8 @@ scoreboard players set @e[type=minecraft:villager] listener.death 0
 execute as @e[type=minecraft:villager] run data merge entity @s {CustomName:""}
 
 #Recup delay
-tellraw @s[scores={option.language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Villager placed. You can't move it during the next ","color":"gray"},{"text":"5","color":"gold"},{"text":" seconds","color":"gray"}]
-tellraw @s[scores={option.language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Villager placé. Vous ne pouvez plus le bouger durant les ","color":"gray"},{"text":"5","color":"gold"},{"text":" prochaines secondes","color":"gray"}]
+tellraw @s[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Villager placed. You can't move it during the next ","color":"gray"},{"text":"5","color":"gold"},{"text":" seconds","color":"gray"}]
+tellraw @s[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Villager placé. Vous ne pouvez plus le bouger durant les ","color":"gray"},{"text":"5","color":"gold"},{"text":" prochaines secondes","color":"gray"}]
 
 execute at @s run playsound minecraft:entity.villager.celebrate master @a[distance=..30] ~ ~ ~ 1 1 0
 

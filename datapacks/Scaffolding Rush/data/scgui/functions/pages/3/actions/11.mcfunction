@@ -1,2 +1,2 @@
 
-scoreboard players set @s option.sand 1
+scoreboard players set @s option_sand 1
