@@ -67,10 +67,10 @@ scoreboard objectives add listener.use.yellow_spawn_egg minecraft.used:blaze_spa
 
 # Triggers --------------------------------------------------------------------
 
-scoreboard objectives add trigger.start_game trigger {"text":"Trigger Start Game","color": "black"}
-scoreboard objectives add trigger.reset trigger {"text":"Trigger Reset","color": "black"}
-scoreboard objectives add trigger.tutorial trigger {"text":"Trigger Tutorial","color": "black"}
-scoreboard objectives add trigger.lobby trigger {"text":"Trigger Lobby","color": "black"}
+scoreboard objectives add start_game trigger {"text":"Trigger Start Game","color": "black"}
+scoreboard objectives add reset trigger {"text":"Trigger Reset","color": "black"}
+scoreboard objectives add tutorial trigger {"text":"Trigger Tutorial","color": "black"}
+scoreboard objectives add lobby trigger {"text":"Trigger Lobby","color": "black"}
 
 # Player items ----------------------------------------------------------------
 

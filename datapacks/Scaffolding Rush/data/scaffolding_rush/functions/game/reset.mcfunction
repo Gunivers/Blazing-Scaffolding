@@ -72,7 +72,7 @@ function scaffolding_rush:game/map/reset/__start__
 #advancement use_item
 advancement revoke @a from scaffolding_rush:use_item
 
-scoreboard players reset @a trigger.start_game
+scoreboard players reset @a start_game
 
 execute as @a run function scaffolding_rush:options/disable_all
 execute if score #admin.exist options matches 1 as @a[tag=admin] run function scaffolding_rush:options/activate_all

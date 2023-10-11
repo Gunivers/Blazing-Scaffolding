@@ -16,9 +16,9 @@ execute if score tick200 data matches 200.. run scoreboard players set tick200 d
 # Game management -------------------------------------------------------------
 
 # Game management (when a game is started)
-execute as @a[scores={trigger.start_game=1..}] run function scaffolding_rush:game/start/pre_start_checks
+execute as @a[scores={start_game=1..}] run function scaffolding_rush:game/start/pre_start_checks
 
-execute if entity @a[scores={trigger.reset=1..}] run function scaffolding_rush:reset
+execute if entity @a[scores={reset=1..}] run function scaffolding_rush:reset
 
 # ORDER IS IMPORTANT!
 execute if score #lobby.active data matches 1 run function scaffolding_rush:lobby/__main__
@@ -32,9 +32,9 @@ function scaffolding_rush:player/__main__
 # Admin mode
 execute unless entity @a[tag=admin] if score #admin.exist options matches 1 run function scaffolding_rush:options/admin
 
-scoreboard players reset @a trigger.reset
-execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.reset
-execute if score #admin.exist options matches 0 run scoreboard players enable @a trigger.reset
+scoreboard players reset @a reset
+execute if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s reset
+execute if score #admin.exist options matches 0 run scoreboard players enable @a reset
 
 # Others generic behvaiors ----------------------------------------------------
 

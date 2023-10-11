@@ -21,7 +21,7 @@ execute if score #lobby.active data matches 1 if score #admin.exist options matc
 execute if score #lobby.active data matches 1 if score #admin.exist options matches 0 as @a run function scaffolding_rush:options/activate_all
 execute if score #lobby.active data matches 1 run scoreboard players enable @a option.admin
 execute if score #lobby.active data matches 1 run scoreboard players enable @a option.language
-execute if score #lobby.active data matches 0 if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s trigger.reset
-execute if score #lobby.active data matches 0 if score #admin.exist options matches 0 run scoreboard players enable @a trigger.reset
+execute if score #lobby.active data matches 0 if score #admin.exist options matches 1 as @a[tag=admin] run scoreboard players enable @s reset
+execute if score #lobby.active data matches 0 if score #admin.exist options matches 0 run scoreboard players enable @a reset
 
 execute if score #lobby.active data matches 1 run function scaffolding_rush:options/refresh

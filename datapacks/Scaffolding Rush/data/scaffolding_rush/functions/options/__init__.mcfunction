@@ -94,4 +94,4 @@ scoreboard objectives add option.volcano trigger
 execute unless score Volcano options matches 0.. run scoreboard players set Volcano options 0
 
 # Tutorial
-scoreboard objectives add trigger.lobby trigger
+scoreboard objectives add lobby trigger
