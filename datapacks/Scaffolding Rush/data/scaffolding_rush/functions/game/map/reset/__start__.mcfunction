@@ -2,8 +2,8 @@
 kill @e[tag=baseTeam]
 kill @e[type=armor_stand,tag=Flag]
 kill @e[type=marker,tag=fill]
+execute as @e[tag=game_villager] run function utils:clean_kill
 
-execute as @e[type=villager] run function utils:clean_kill
 function scaffolding_rush:game/lava/global_rising/stop
 
 #clear the blocks in the playing area

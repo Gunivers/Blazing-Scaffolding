@@ -22,9 +22,9 @@ execute if score #seconds tmp matches 1 run title @s subtitle ["",{"text":"\u25c
 
 # Force spectate villager -----------------------------------------------------
 
-spectate @e[type=villager,tag=respawn_villager,tag=red_villager,limit=1,sort=nearest] @s[team=red]
-spectate @e[type=villager,tag=respawn_villager,tag=blue_villager,limit=1,sort=nearest] @s[team=blue]
-spectate @e[type=villager,tag=respawn_villager,tag=green_villager,limit=1,sort=nearest] @s[team=green]
-spectate @e[type=villager,tag=respawn_villager,tag=yellow_villager,limit=1,sort=nearest] @s[team=yellow]
+spectate @e[type=villager,tag=respawn_villager,tag=red_villager,limit=1,sort=nearest,distance=..500] @s[team=red]
+spectate @e[type=villager,tag=respawn_villager,tag=blue_villager,limit=1,sort=nearest,distance=..500] @s[team=blue]
+spectate @e[type=villager,tag=respawn_villager,tag=green_villager,limit=1,sort=nearest,distance=..500] @s[team=green]
+spectate @e[type=villager,tag=respawn_villager,tag=yellow_villager,limit=1,sort=nearest,distance=..500] @s[team=yellow]
 
 execute if score @s respawn.timer matches 1 at @s run function scaffolding_rush:player/death/respawn/stop

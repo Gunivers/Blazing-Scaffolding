@@ -7,10 +7,10 @@ execute as @a at @s run spawnpoint @s ~ ~ ~ ~
 
 # /!\ Must be run before death animations
 tag @a remove player.can_respawn
-execute if entity @e[type=villager,tag=respawn_villager,tag=red_villager] run tag @a[team=red] add player.can_respawn
-execute if entity @e[type=villager,tag=respawn_villager,tag=blue_villager] run tag @a[team=blue] add player.can_respawn
-execute if entity @e[type=villager,tag=respawn_villager,tag=green_villager] run tag @a[team=green] add player.can_respawn
-execute if entity @e[type=villager,tag=respawn_villager,tag=yellow_villager] run tag @a[team=yellow] add player.can_respawn
+execute at @e[type=villager,tag=respawn_villager,tag=red_villager] run tag @a[team=red,distance=..500] add player.can_respawn
+execute at @e[type=villager,tag=respawn_villager,tag=blue_villager] run tag @a[team=blue,distance=..500] add player.can_respawn
+execute at @e[type=villager,tag=respawn_villager,tag=green_villager] run tag @a[team=green,distance=..500] add player.can_respawn
+execute at @e[type=villager,tag=respawn_villager,tag=yellow_villager] run tag @a[team=yellow,distance=..500] add player.can_respawn
 
 # Player fell in lava ---------------------------------------------------------
 

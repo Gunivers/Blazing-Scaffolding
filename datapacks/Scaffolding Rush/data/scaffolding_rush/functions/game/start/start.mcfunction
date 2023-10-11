@@ -9,9 +9,6 @@ scoreboard players set @a listener.use.green_spawn_egg 0
 scoreboard players set @a listener.use.red_spawn_egg 0
 scoreboard players set @a listener.use.yellow_spawn_egg 0
 
-# Kill lobby villagers
-kill @e[tag=respawn_villager,x=0,y=24,z=0,distance=..500]
-
 function scaffolding_rush:game/music/__start__
 
 #reset flaghunt timer
