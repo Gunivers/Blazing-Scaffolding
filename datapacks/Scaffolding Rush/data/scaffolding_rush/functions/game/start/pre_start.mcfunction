@@ -4,7 +4,7 @@
 # Force leave & disable tutorial
 execute as @a[tag=inTutorial] run function scaffolding_rush:tutorial/leave
 function scaffolding_rush:tutorial/unload
-scoreboard players reset @s trigger.tutorial
+scoreboard players reset @s tutorial
 
 # Clear
 clear @s
