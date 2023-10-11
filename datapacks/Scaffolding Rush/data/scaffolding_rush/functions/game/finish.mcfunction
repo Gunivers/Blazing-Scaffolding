@@ -60,7 +60,6 @@ tag @a remove player.item.can_have_items
 tag @a remove player.item.have_egg
 
 schedule function scaffolding_rush:game/reset 100t
-schedule function scaffolding_rush:lobby/map/setup 104t
 
 bossbar set minecraft:filling_lava visible false
 bossbar set minecraft:time_limit visible false

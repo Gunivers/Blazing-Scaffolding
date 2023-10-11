@@ -1,4 +1,9 @@
 
+execute as @e[type=villager] at @s anchored eyes facing entity @p[distance=0.5..] eyes run tp @s ~ ~ ~ ~ ~
+
+tag @e[type=villager,tag=respawn_villager,x=0,y=100,z=0,distance=..500] add lobby_villager
+tag @e[type=villager,tag=respawn_villager,x=1000,y=100,z=1000,distance=..500] add game_villager 
+
 # Death Management ------------------------------------------------------------
 
 #Kill villagers in lava, or save them if they are invulnerable
@@ -45,9 +50,9 @@ execute if score #village.movable options matches 1 if score #game.running data 
 
 function scaffolding_rush:villager/health_bar
 
-execute as @e[type=minecraft:villager,tag=respawn_villager] at @s if entity @a[distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
+execute as @e[type=minecraft:villager,tag=respawn_villager] at @s if entity @a[team=!spectator,tag=!player.is_dead,distance=..0.5] run effect give @s minecraft:invisibility 1 1 true
 
-execute as @e[type=minecraft:villager,tag=respawn_villager] at @s unless block ~ ~ ~ #scaffolding_rush:air unless block ~ ~ ~ #scaffolding_rush:scaffolding run tp @s ~ ~0.1 ~
+execute as @e[type=minecraft:villager,tag=respawn_villager] at @s unless block ~ ~ ~ #scaffolding_rush:air unless block ~ ~ ~ #scaffolding_rush:scaffolding run tp @s ~ ~0.1 ~ ~ ~
 
 execute as @e[tag=base.marker] at @s unless entity @e[type=villager,tag=respawn_villager,distance=..0.5] run function scaffolding_rush:villager/base/destroy
 

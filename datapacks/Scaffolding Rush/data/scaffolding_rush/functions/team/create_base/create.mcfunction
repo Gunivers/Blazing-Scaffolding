@@ -23,6 +23,12 @@ execute positioned 0 0 0 if score WBSize options matches 80..119 run spreadplaye
 execute positioned 0 0 0 if score WBSize options matches 120..165 run spreadplayers 0 0 55 60 false @e[type=marker,tag=spread]
 tag @e[type=marker,tag=spread] remove spread
 
+# Sync with lobby position if villager exist
+execute at @e[tag=respawn_villager,tag=red_villager] run tp @e[tag=baseTeam,name="Red"] ~ 2 ~
+execute at @e[tag=respawn_villager,tag=blue_villager] run tp @e[tag=baseTeam,name="Blue"] ~ 2 ~
+execute at @e[tag=respawn_villager,tag=green_villager] run tp @e[tag=baseTeam,name="Green"] ~ 2 ~
+execute at @e[tag=respawn_villager,tag=yellow_villager] run tp @e[tag=baseTeam,name="Yellow"] ~ 2 ~
+
 execute as @e[tag=baseTeam] at @s run tp @s ~1000 4 ~1000
 
 execute as @e[tag=baseTeam] at @s run function scaffolding_rush:team/create_base/load_structure

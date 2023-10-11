@@ -1,7 +1,7 @@
 #prevent the villager from falling in the lava
 
 #teleport it above the lava
-tp @s ~ ~1 ~
+tp @s ~ ~1 ~ ~ ~
 
 #place support blocks
 execute if entity @s[tag=blue_villager] run fill ~ ~ ~ ~ ~-2 ~ blue_concrete replace #scaffolding_rush:air
