@@ -22,6 +22,9 @@ execute if score TeamWin data matches 2 run function scaffolding_rush:game/finis
 execute if score TeamWin data matches 3 run function scaffolding_rush:game/finish_message/3_teams
 execute if score TeamWin data matches 4 run function scaffolding_rush:game/finish_message/4_teams
 
+scoreboard players set @a[team=!spectator,tag=TeamEliminated] player.win_streak 0
+scoreboard players add @a[team=!spectator,tag=!TeamEliminated] player.win_streak 1
+
 execute as @a[team=!spectator,tag=!TeamEliminated,scores={option_language=0}] \
     run function scaffolding_rush:player/animated_title/start {type:"victory"}
 execute as @a[team=!spectator,tag=TeamEliminated,scores={option_language=0}] \

@@ -43,10 +43,10 @@ execute as @a[gamemode=!spectator,tag=!Respawning] at @s run function scaffoldin
 #warn villagers height
 execute as @e[type=villager,tag=respawn_villager] run function scaffolding_rush:villager/warn/test
 
-execute if score #village.movable options matches 1 as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:villager/facing/msg
+execute if score #villager.movable options matches 1 as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:villager/facing/msg
 
-execute if score #village.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg_actionbar
-execute if score #village.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:villager/warn/msg_title
+execute if score #villager.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg_actionbar
+execute if score #villager.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:villager/warn/msg_title
 
 function scaffolding_rush:villager/health_bar
 

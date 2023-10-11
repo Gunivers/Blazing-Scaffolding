@@ -77,7 +77,7 @@ execute unless score #villager.cannot_fall_in_lava options matches 0..1 run scor
 scoreboard objectives add option_villager trigger
 execute unless score #villager.enabled options matches 0.. run scoreboard players set #villager.enabled options 1
 scoreboard objectives add option_movable_villager trigger
-execute unless score #village.movable options matches 0..1 run scoreboard players set #village.movable options 1
+execute unless score #villager.movable options matches 0..1 run scoreboard players set #villager.movable options 1
 scoreboard objectives add option_vil_resp_cd trigger
 execute unless score #villager.respawn.seconds options matches 0.. run scoreboard players set #villager.respawn.seconds options 30
 scoreboard objectives add option_vil_respawn trigger

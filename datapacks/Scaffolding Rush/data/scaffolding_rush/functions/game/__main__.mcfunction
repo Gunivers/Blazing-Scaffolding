@@ -3,6 +3,7 @@
 
 tag @a[tag=player.item.can_have_book] remove player.item.can_have_book
 
+
 # Time counter
 scoreboard players add #game.time.tick timer 1
 
@@ -23,6 +24,22 @@ function scaffolding_rush:game/music/__main__
 execute as @a[nbt=!{SelectedItem: {tag: {sc.item:1}}},gamemode=adventure] run gamemode survival
 execute as @a[nbt={SelectedItem: {tag: {sc.item:1}}},gamemode=survival] run gamemode adventure
 
+
+execute if score #villager.invulnerable options matches 1 as @a[team=blue] at @s if block ~ ~0.001 ~ red_concrete run effect give @s wither 1 1 true
+execute if score #villager.invulnerable options matches 1 as @a[team=blue] at @s if block ~ ~0.001 ~ green_concrete run effect give @s wither 1 1 true
+execute if score #villager.invulnerable options matches 1 as @a[team=blue] at @s if block ~ ~0.001 ~ yellow_concrete run effect give @s wither 1 1 true
+
+execute if score #villager.invulnerable options matches 1 as @a[team=red] at @s if block ~ ~0.001 ~ blue_concrete run effect give @s wither 1 1 true
+execute if score #villager.invulnerable options matches 1 as @a[team=red] at @s if block ~ ~0.001 ~ green_concrete run effect give @s wither 1 1 true
+execute if score #villager.invulnerable options matches 1 as @a[team=red] at @s if block ~ ~0.001 ~ yellow_concrete run effect give @s wither 1 1 true
+
+execute if score #villager.invulnerable options matches 1 as @a[team=green] at @s if block ~ ~0.001 ~ red_concrete run effect give @s wither 1 1 true
+execute if score #villager.invulnerable options matches 1 as @a[team=green] at @s if block ~ ~0.001 ~ blue_concrete run effect give @s wither 1 1 true
+execute if score #villager.invulnerable options matches 1 as @a[team=green] at @s if block ~ ~0.001 ~ yellow_concrete run effect give @s wither 1 1 true
+
+execute if score #villager.invulnerable options matches 1 as @a[team=yellow] at @s if block ~ ~0.001 ~ red_concrete run effect give @s wither 1 1 true
+execute if score #villager.invulnerable options matches 1 as @a[team=yellow] at @s if block ~ ~0.001 ~ green_concrete run effect give @s wither 1 1 true
+execute if score #villager.invulnerable options matches 1 as @a[team=yellow] at @s if block ~ ~0.001 ~ blue_concrete run effect give @s wither 1 1 true
 
 # =====================================
 # WorldBorder

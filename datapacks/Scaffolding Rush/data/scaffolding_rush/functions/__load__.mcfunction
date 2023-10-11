@@ -47,6 +47,10 @@ scoreboard objectives add player.pick_villager_cooldown dummy {"text":"Pick Vill
 scoreboard objectives add player.animated_title.timer dummy {"text":"Animated Title Timer","color": "aqua"}
 scoreboard objectives add player.death.animation dummy {"text":"Death Animation","color": "aqua"}
 
+scoreboard objectives add player.win_streak dummy {"text":"Win Streak","color": "aqua"}
+scoreboard objectives add player.kill_streak minecraft.killed:minecraft.villager {"text":"Kill Streak","color": "aqua"}
+scoreboard objectives add player.secret_cosmetic dummy {"text":"Secret Cosmetic","color": "aqua"}
+
 # Entities data ---------------------------------------------------------------
 
 scoreboard objectives add respawn.timer dummy {"text":"Respawn Timer","color": "blue"}

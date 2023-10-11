@@ -35,7 +35,7 @@ scoreboard players set #villager.enabled options 1
 scoreboard players set #villager.can_respawn options 1
 scoreboard players set #villager.respawn.seconds options 30
 scoreboard players set #villager.cannot_fall_in_lava options 0
-scoreboard players set #village.movable options 1
+scoreboard players set #villager.movable options 1
 
 # Flags
 scoreboard players set #flag.take_over options 0
@@ -47,3 +47,6 @@ scoreboard players set VolcanoSummonPeriod options 600
 scoreboard players set VolcanoTargetRate options 0
 
 function scaffolding_rush:options/refresh
+
+
+# tellraw @a ["",{"text":"[BS] ","color":"gold"},{"text":"Options have been refreshed","color":"gray"}]
