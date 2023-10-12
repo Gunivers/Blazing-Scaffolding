@@ -11,10 +11,7 @@ scoreboard players set @a listener.use.green_spawn_egg 0
 scoreboard players set @a listener.use.red_spawn_egg 0
 scoreboard players set @a listener.use.yellow_spawn_egg 0
 
-scoreboard players set $villager.red respawn.timer 0
-scoreboard players set $villager.blue respawn.timer 0
-scoreboard players set $villager.green respawn.timer 0
-scoreboard players set $villager.yellow respawn.timer 0
+scoreboard players set @a player.item.spawn_egg.timer 0
 
 function scaffolding_rush:game/music/__start__
 

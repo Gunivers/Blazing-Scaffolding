@@ -32,6 +32,12 @@ execute at @s run playsound minecraft:entity.villager.celebrate master @a[distan
 
 scoreboard players set @s player.pick_villager_cooldown 100
 
+execute if entity @s[team=red] run scoreboard players set @a[team=red] player.item.spawn_egg.timer 0
+execute if entity @s[team=blue] run scoreboard players set @a[team=blue] player.item.spawn_egg.timer 0
+execute if entity @s[team=green] run scoreboard players set @a[team=green] player.item.spawn_egg.timer 0
+execute if entity @s[team=yellow] run scoreboard players set @a[team=yellow] player.item.spawn_egg.timer 0
+
+
 scoreboard players set @a listener.use.blue_spawn_egg 0
 scoreboard players set @a listener.use.green_spawn_egg 0
 scoreboard players set @a listener.use.red_spawn_egg 0

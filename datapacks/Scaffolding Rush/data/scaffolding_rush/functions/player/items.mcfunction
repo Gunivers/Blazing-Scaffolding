@@ -16,29 +16,12 @@ execute as @a store result score @s player.item.spawn_egg.count run clear @s #sc
 scoreboard players remove @a player.item.fireball.timer 1
 scoreboard players remove @a player.item.ender_pearl.timer 1
 scoreboard players remove @a player.item.bumping_arrow.timer 1
+scoreboard players remove @a player.item.spawn_egg.timer 1
 
-scoreboard players remove $villager.red respawn.timer 1
-scoreboard players remove $villager.green respawn.timer 1
-scoreboard players remove $villager.yellow respawn.timer 1
-scoreboard players remove $villager.blue respawn.timer 1
 
-execute if score #lobby.active data matches 1 \
-        if score $villager.red respawn.timer matches 0.. \
-    run scoreboard players set $villager.red respawn.timer -1
-execute if score #lobby.active data matches 1 \
-        if score $villager.blue respawn.timer matches 0.. \
-    run scoreboard players set $villager.blue respawn.timer -1
-execute if score #lobby.active data matches 1 \
-        if score $villager.green respawn.timer matches 0.. \
-    run scoreboard players set $villager.green respawn.timer -1
-execute if score #lobby.active data matches 1 \
-        if score $villager.yellow respawn.timer matches 0.. \
-    run scoreboard players set $villager.yellow respawn.timer -1
+# execute if score #lobby.active data matches 1 run scoreboard players set @a[scores={player.item.spawn_egg.timer=1..}] player.item.spawn_egg.timer -1
 
-execute as @a[team=red] run scoreboard players operation @s player.item.spawn_egg.countdown = $villager.red respawn.timer
-execute as @a[team=blue] run scoreboard players operation @s player.item.spawn_egg.countdown = $villager.blue respawn.timer
-execute as @a[team=yellow] run scoreboard players operation @s player.item.spawn_egg.countdown = $villager.yellow respawn.timer
-execute as @a[team=green] run scoreboard players operation @s player.item.spawn_egg.countdown = $villager.green respawn.timer
+execute as @a run scoreboard players operation @s player.item.spawn_egg.countdown = @s player.item.spawn_egg.timer
 scoreboard players operation @a player.item.spawn_egg.countdown /= 20 const
 scoreboard players add @a player.item.spawn_egg.countdown 1
 execute as @a run scoreboard players operation @s player.item.spawn_egg.countdown -= @s player.item.spawn_egg.count

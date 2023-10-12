@@ -1,5 +1,5 @@
 
-scoreboard players operation $villager.yellow respawn.timer = #villager.respawn.tick options
+scoreboard players operation @a[team=yellow] player.item.spawn_egg.timer = #villager.respawn.tick options
 
 execute if score #game.running data matches 1 \
         as @a[team=yellow] \
