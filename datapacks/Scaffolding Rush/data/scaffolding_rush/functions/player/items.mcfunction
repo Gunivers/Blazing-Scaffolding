@@ -19,7 +19,7 @@ scoreboard players remove @a player.item.bumping_arrow.timer 1
 scoreboard players remove @a player.item.spawn_egg.timer 1
 
 
-# execute if score #lobby.active data matches 1 run scoreboard players set @a[scores={player.item.spawn_egg.timer=1..}] player.item.spawn_egg.timer -1
+execute if score #lobby.active data matches 1 run scoreboard players set @a[scores={player.item.spawn_egg.timer=1..}] player.item.spawn_egg.timer -1
 
 execute as @a run scoreboard players operation @s player.item.spawn_egg.countdown = @s player.item.spawn_egg.timer
 scoreboard players operation @a player.item.spawn_egg.countdown /= 20 const
