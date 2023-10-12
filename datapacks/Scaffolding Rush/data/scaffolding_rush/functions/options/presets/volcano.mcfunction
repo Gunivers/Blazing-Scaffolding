@@ -33,7 +33,7 @@ scoreboard players set Rafts options 0
 # Villager
 scoreboard players set #villager.enabled options 0
 
-
+scoreboard players set #villager.respawn.seconds options 30
 
 
 
