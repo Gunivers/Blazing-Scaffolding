@@ -44,15 +44,13 @@ advancement revoke @a everything
 
 # Cosmetics -------------------------------------------------------------------
 
-execute as @a[scores={player.win_streak=1..2}] at @s run particle smoke ~ ~0.1 ~ 0.3 0 0.3 0 1 normal
-execute as @a[scores={player.win_streak=3..}] at @s run particle flame ~ ~0.1 ~ 0.3 0 0.3 0 1 normal
-execute as @a[scores={player.win_streak=5..9}] at @s run particle smoke ~ ~0.1 ~ 0.3 0 0.3 0.01 1 normal
-execute as @a[scores={player.win_streak=10..}] at @s run particle flame ~ ~0.2 ~ 0.5 0.2 0.5 0 5 normal
-execute as @a[scores={player.win_streak=10..19}] at @s run particle minecraft:campfire_cosy_smoke ~ ~0.1 ~ 0.3 0 0.3 0.01 1 normal
-execute as @a[scores={player.win_streak=20..}] at @s run particle large_smoke ~ ~0.2 ~ 0.5 0.2 0.5 0.01 1 normal
-execute as @a[scores={player.win_streak=20..}] at @s run particle minecraft:campfire_cosy_smoke ~ ~0.1 ~ 0.3 0 0.3 0.05 1 normal
+execute as @a[gamemode=!spectator,scores={player.win_streak=1..2}] at @s run particle smoke ~ ~0.1 ~ 0.3 0 0.3 0 1 normal
+execute as @a[gamemode=!spectator,scores={player.win_streak=3..}] at @s run particle flame ~ ~0.1 ~ 0.3 0 0.3 0 1 normal
+execute as @a[gamemode=!spectator,scores={player.win_streak=5..9}] at @s run particle smoke ~ ~0.1 ~ 0.3 0 0.3 0.01 1 normal
+execute as @a[gamemode=!spectator,scores={player.win_streak=10..}] at @s run particle flame ~ ~0.2 ~ 0.5 0.2 0.5 0 5 normal
+execute as @a[gamemode=!spectator,scores={player.win_streak=10..19}] at @s run particle minecraft:campfire_cosy_smoke ~ ~0.1 ~ 0.3 0 0.3 0.01 1 normal
+execute as @a[gamemode=!spectator,scores={player.win_streak=20..}] at @s run particle large_smoke ~ ~0.2 ~ 0.5 0.2 0.5 0.01 1 normal
+execute as @a[gamemode=!spectator,scores={player.win_streak=20..}] at @s run particle minecraft:campfire_cosy_smoke ~ ~0.1 ~ 0.3 0 0.3 0.05 1 normal
 
-execute at @a[scores={player.kill_streak=3..4}] run particle flame ~ ~1 ~ 0 0.5 0 0 1 normal
-execute at @a[scores={player.kill_streak=5..}] run particle lava ~ ~ ~ 0 0 0 0 1 normal
-execute as @a run scoreboard players operation @s player.kill_streak += @s player.killed_villager
-scoreboard players set @a player.killed_villager 0
+execute at @a[gamemode=!spectator,scores={player.villager_kills=3..4}] run particle flame ~ ~1 ~ 0 0.5 0 0 1 normal
+execute at @a[gamemode=!spectator,scores={player.villager_kills=5..}] run particle lava ~ ~ ~ 0 0 0 0 1 normal

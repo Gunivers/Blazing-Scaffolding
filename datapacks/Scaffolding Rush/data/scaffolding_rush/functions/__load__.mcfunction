@@ -48,7 +48,7 @@ scoreboard objectives add player.animated_title.timer dummy {"text":"Animated Ti
 scoreboard objectives add player.death.animation dummy {"text":"Death Animation","color": "aqua"}
 
 scoreboard objectives add player.win_streak dummy {"text":"Win Streak","color": "aqua"}
-scoreboard objectives add player.kill_streak minecraft.killed:minecraft.villager {"text":"Kill Streak","color": "aqua"}
+scoreboard objectives add player.villager_kills minecraft.killed:minecraft.villager {"text":"Villager Killed","color": "aqua"}
 scoreboard objectives add player.secret_cosmetic dummy {"text":"Secret Cosmetic","color": "aqua"}
 
 # Entities data ---------------------------------------------------------------
