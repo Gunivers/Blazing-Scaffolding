@@ -1,8 +1,5 @@
 # Classic Preset
 
-# tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Classic","color":"gold"},{"text":" has been chosen","color":"gray"}]
-# tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Classique","color":"gold"},{"text":" a été choisi","color":"gray"}]
-
 scoreboard players set Preset options 1
 
 # Map
@@ -12,8 +9,11 @@ scoreboard players set WBSize2 options 60
 scoreboard players set WBSize3 options 95
 scoreboard players set WBSize4 options 130
 scoreboard players set WorldborderShrink options 0
+
+
 scoreboard players set #map.build_height options 20
 scoreboard players set UseTimeLimit options 0
+
 scoreboard players set UseScoreLimit options 0
 
 # Gameplay
@@ -48,5 +48,8 @@ scoreboard players set VolcanoTargetRate options 0
 
 function scaffolding_rush:options/refresh
 
+# EN
+tellraw @a[scores={option_language=0}] [{"text":"Classic\n\n","color":"gold","bold":true},{"text":"The original concept! Eliminate enemy teams by killing their villager and pushing them into the lava!\n\nYou will only have access to scaffoldings (with there natural behavior) and concrete powder that cannot be stacked. The lava rising is slow and you can move your villager at any time, so the main threat is your enemies!","color":"gray","bold":false},{"text":"\n---","color":"gold","bold":true}]
 
-# tellraw @a ["",{"text":"[BS] ","color":"gold"},{"text":"Options have been refreshed","color":"gray"}]
+# FR
+tellraw @a[scores={option_language=1}] [{"text":"Classique\n\n","color":"gold","bold":true},{"text":"Le concept originel ! Éliminez les équipes adverses en tuant leur villageois et en les poussant dans la lave !\nVous n'aurez accès qu'aux échafaudages (avec leur comportement naturel) et au béton en poudre qui ne peut pas être empilé. La montée de la lave est lente et vous pouvez déplacer votre villageois à tout moment, donc la principale menace est vos ennemis !","color":"gray","bold":false},{"text":"\n---","color":"gold","bold":true}]

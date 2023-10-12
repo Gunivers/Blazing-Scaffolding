@@ -1,7 +1,4 @@
-# WTF Preset
-
-# tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The preset ","color":"gray"},{"text":"Chaos","color":"#9900FF"},{"text":" has been chosen","color":"gray"}]
-# tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le préréglage ","color":"gray"},{"text":"Chaos","color":"#9900FF"},{"text":" a été choisi","color":"gray"}]
+# Chaos Preset
 
 scoreboard players set Preset options 3
 
@@ -16,6 +13,7 @@ scoreboard players set #worldborder.start_time.second options 0
 scoreboard players set WorldborderTimeToShrink options 5
 scoreboard players set #map.build_height options 100
 scoreboard players set UseTimeLimit options 0
+
 scoreboard players set UseScoreLimit options 0
 
 # Gameplay
@@ -49,3 +47,9 @@ scoreboard players set VolcanoSummonPeriod options 60
 scoreboard players set VolcanoTargetRate options 5
 
 function scaffolding_rush:options/refresh
+
+# EN
+tellraw @a[scores={option_language=0}] [{"text":"a?! ","obfuscated":true,"color":"aqua"},{"text":"Chaos","color":"aqua","bold":true,"obfuscated":false},{"text":" ?:§","obfuscated":true,"color":"aqua"},{"text":"\n\nWell, the name is not explicit enough? One objective: survive.\n\nLava raise REALLY fast, worldborder shrink and you will have ender pearls and fireballs. Oh, and that's not really fair to look at the code to read this description...","color":"gray","bold":false,"obfuscated":true},{"text":"\n---","color":"aqua","bold":true,"obfuscated":false}]
+
+# FR
+tellraw @a[scores={option_language=1}] [{"text":"a?! ","obfuscated":true,"color":"aqua"},{"text":"Chaos","color":"aqua","bold":true,"obfuscated":false},{"text":" ?:§","obfuscated":true,"color":"aqua"},{"text":"\n\nBon, le nom n'est pas assez explicite? Un seul objectif: survivre.\n\nLa lave monte VRAIMENT vite, la bordure du monde rétrécit et vous aurez des perles de l'end et des boules de feu. Oh, et ce n'est pas très fair-play de regarder le code pour lire cette description...","color":"gray","bold":false,"obfuscated":true},{"text":"\n---","color":"aqua","bold":true,"obfuscated":false}]
