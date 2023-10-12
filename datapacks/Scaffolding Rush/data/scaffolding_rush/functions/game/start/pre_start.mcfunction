@@ -52,17 +52,6 @@ scoreboard players operation #game.time.left timer = #game.time.limit options
 scoreboard players operation #game.time.left timer *= 20 const
 scoreboard players operation #game.time.left timer *= 60 const
 
-#get lavaspeed timer in tics
-scoreboard players operation #lava.period.tick options = #lava.period.second options
-scoreboard players operation #lava.period.tick options *= 20 const
-
-#get villager respawn timer in tics
-scoreboard players operation #villager.respawn.tick options = #villager.respawn.seconds options
-scoreboard players operation #villager.respawn.tick options *= 20 const
-
-scoreboard players operation #respawn.delay.tick options = #gameplay.respawn.delay.second options
-scoreboard players operation #respawn.delay.tick options *= 20 const
-
 #initialize the wordborder start time in tics
 scoreboard players operation #worldborder.start_time.tick options = #worldborder.start_time.second options
 scoreboard players operation #worldborder.start_time.tick options *= 20 const

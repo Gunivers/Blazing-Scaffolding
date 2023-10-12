@@ -32,6 +32,11 @@ execute if entity @s[team=blue,scores={player.pick_villager_cooldown=..0}] run s
 execute if entity @s[team=green,scores={player.pick_villager_cooldown=..0}] run scoreboard players operation @a[team=green] player.item.spawn_egg.timer = #villager.respawn.tick options
 execute if entity @s[team=yellow,scores={player.pick_villager_cooldown=..0}] run scoreboard players operation @a[team=yellow] player.item.spawn_egg.timer = #villager.respawn.tick options
 
+execute if entity @s[team=red,scores={player.pick_villager_cooldown=..0}] run scoreboard players operation @a[team=red] player.item.spawn_egg.timer /= 2 const
+execute if entity @s[team=blue,scores={player.pick_villager_cooldown=..0}] run scoreboard players operation @a[team=blue] player.item.spawn_egg.timer /= 2 const
+execute if entity @s[team=green,scores={player.pick_villager_cooldown=..0}] run scoreboard players operation @a[team=green] player.item.spawn_egg.timer /= 2 const
+execute if entity @s[team=yellow,scores={player.pick_villager_cooldown=..0}] run scoreboard players operation @a[team=yellow] player.item.spawn_egg.timer /= 2 const
+
 scoreboard players set @s[scores={player.pick_villager_cooldown=..0}] player.item.spawn_egg.timer 100
 
 #inform the player if the option is disabled
