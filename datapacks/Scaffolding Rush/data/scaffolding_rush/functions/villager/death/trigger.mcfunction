@@ -1,5 +1,5 @@
 
-execute if score #villager.cannot_fall_in_lava options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-0.0001 ~ magma_block run kill @s
+execute if score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-0.0001 ~ magma_block run kill @s
 
 # Red
 execute if score #villager.enabled options matches 1 \

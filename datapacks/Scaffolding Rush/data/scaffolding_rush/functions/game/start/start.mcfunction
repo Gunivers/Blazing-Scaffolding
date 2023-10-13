@@ -1,5 +1,4 @@
 tp @e[type=marker,name="lava.level",limit=1] ~ 2 ~
-scoreboard players set @s player.villager_kills 0
 
 tag @a remove TeamEliminated
 tag @a remove player.item.have_egg

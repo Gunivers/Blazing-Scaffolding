@@ -7,8 +7,8 @@ tag @e[type=villager,tag=respawn_villager,x=1000,y=100,z=1000,distance=..500] ad
 # Death Management ------------------------------------------------------------
 
 #Kill villagers in lava, or save them if they are invulnerable
-execute unless score #villager.cannot_fall_in_lava options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1.8 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
-execute unless score #villager.cannot_fall_in_lava options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
+execute unless score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1.8 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
+execute unless score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
 
 # Kill Villager behind WB
 execute as @e[type=villager,tag=respawn_villager] if score @s pos.x > WBbyTwo data run function scaffolding_rush:villager/death/kill
@@ -67,6 +67,7 @@ execute as @a[tag=player.item.have_egg,nbt=!{Inventory: [{id: "minecraft:squid_s
 
 execute if score #lobby.active data matches 1 run effect give @e[type=villager,tag=respawn_villager] glowing infinite 1 true
 execute if score #lobby.active data matches 1 run effect give @e[type=villager,tag=respawn_villager] resistance infinite 127 true
+execute if score #villager.invulnerable options matches 1 run effect give @e[type=villager,tag=respawn_villager] resistance infinite 127 true
 
 execute as @e[type=minecraft:villager,tag=respawn_villager] at @s positioned ~ ~1 ~ run function scaffolding_rush:villager/arrow_shield/trigger
 function scaffolding_rush:villager/death/trigger

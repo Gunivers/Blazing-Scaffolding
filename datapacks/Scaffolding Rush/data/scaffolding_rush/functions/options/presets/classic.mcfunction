@@ -34,7 +34,7 @@ scoreboard players set Rafts options 0
 scoreboard players set #villager.enabled options 1
 scoreboard players set #villager.can_respawn options 1
 scoreboard players set #villager.respawn.seconds options 30
-scoreboard players set #villager.cannot_fall_in_lava options 0
+scoreboard players set #villager.invulnerable options 0
 scoreboard players set #villager.movable options 1
 
 # Flags

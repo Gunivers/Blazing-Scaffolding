@@ -73,7 +73,7 @@ execute unless score TeamNumber options matches 0.. run scoreboard players set T
 
 # Villager
 scoreboard objectives add option_invulnerable_villager trigger
-execute unless score #villager.cannot_fall_in_lava options matches 0..1 run scoreboard players set #villager.cannot_fall_in_lava options 0
+execute unless score #villager.invulnerable options matches 0..1 run scoreboard players set #villager.invulnerable options 0
 scoreboard objectives add option_villager trigger
 execute unless score #villager.enabled options matches 0.. run scoreboard players set #villager.enabled options 1
 scoreboard objectives add option_movable_villager trigger
