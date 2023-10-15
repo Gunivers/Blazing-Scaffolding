@@ -47,11 +47,6 @@ execute unless score UseTimeLimit options matches 0 run execute store result bos
 
 function scaffolding_rush:game/lava/sound
 
-team modify blue seeFriendlyInvisibles true
-team modify green seeFriendlyInvisibles true
-team modify red seeFriendlyInvisibles true
-team modify yellow seeFriendlyInvisibles true
-
 execute if score #performance_mode options matches 0 run function scaffolding_rush:game/ghostblocks
 
 scoreboard players set #game.running data 1

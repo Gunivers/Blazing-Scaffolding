@@ -42,3 +42,8 @@ execute if score #game.clear data matches 1 \
         {"text":"[BS] ","color":"gold"},{"text":"Merci de patienter, une réinitialisation de la carte est en cours","color":"red"} \
     ]
 
+# make villagers transparent
+team modify blue seeFriendlyInvisibles true
+team modify green seeFriendlyInvisibles true
+team modify red seeFriendlyInvisibles true
+team modify yellow seeFriendlyInvisibles true
