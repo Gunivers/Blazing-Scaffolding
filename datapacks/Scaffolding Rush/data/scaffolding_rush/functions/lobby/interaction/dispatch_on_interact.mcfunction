@@ -1,4 +1,5 @@
-execute if entity @s[tag=LobbyPresetVillager] on target at @s run function scaffolding_rush:lobby/interaction/events/preset_info
+
+
 execute if entity @s[tag=LobbyPresetVillagerNext] on target at @s run function scaffolding_rush:lobby/interaction/events/next_preset
 execute if entity @s[tag=LobbyPresetVillagerPrevious] on target at @s run function scaffolding_rush:lobby/interaction/events/previous_preset
 
@@ -12,7 +13,6 @@ execute if entity @s[tag=teamRed] on target at @s run function scaffolding_rush:
 execute if entity @s[tag=teamYellow] on target at @s run function scaffolding_rush:team/join/yellow
 execute if entity @s[tag=teamSpectate] on target at @s run function scaffolding_rush:team/join/spectator
 
-execute if entity @s[tag=LobbyHTP] on target at @s run function scaffolding_rush:lobby/interaction/events/how_to_play
 execute if entity @s[tag=LobbyCredits] on target at @s run function scaffolding_rush:lobby/interaction/events/credits
 
 data remove entity @s interaction
