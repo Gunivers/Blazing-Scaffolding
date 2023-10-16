@@ -1,5 +1,5 @@
 
-execute as @e[type=villager] at @s anchored eyes facing entity @p[distance=0.5..] eyes run tp @s ~ ~ ~ ~ ~
+execute as @e[type=villager] at @s unless block ~ ~-0.001 ~ air anchored eyes facing entity @p[distance=0.5..] eyes run tp @s ~ ~ ~ ~ ~
 
 tag @e[type=villager,tag=respawn_villager,x=0,y=100,z=0,distance=..500] add lobby_villager
 tag @e[type=villager,tag=respawn_villager,x=1000,y=100,z=1000,distance=..500] add game_villager 
