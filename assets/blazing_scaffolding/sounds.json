@@ -23,5 +23,10 @@
         "sounds": [
           "blazing_scaffolding/Rage_by_Gvidon_LevkinBardyuzha"
         ]
+    },
+    "lava_drown": {
+        "sounds": [
+          "blazing_scaffolding/lava_drown"
+        ]
     }
 }
