@@ -1,3 +1,8 @@
+execute if score #villager.invulnerable options matches 1 run execute as @e[type=villager,tag=respawn_villager] run data merge entity @s {CustomName:'{"text":""}',CustomNameVisible:0b}
+execute if score #villager.invulnerable options matches 1 run return 0
+
+execute as @e[type=villager,tag=respawn_villager] run data merge entity @s {CustomNameVisible:1b}
+
 execute as @e[type=villager,tag=respawn_villager] store result score @s health run data get entity @s Health 1
 execute as @e[type=villager,tag=respawn_villager] run data modify entity @s CustomNameVisible set value True
 
