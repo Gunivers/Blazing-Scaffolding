@@ -1,6 +1,6 @@
 
 # Place a volcano in the middle and rise one layer of lava
-place template scaffolding_rush:volcano 993 2 993
+place template scaffolding_rush:volcano 994 2 994
 execute as @e[type=marker,name="lava.level"] at @s run function scaffolding_rush:game/lava/rise_globally
 
 execute if entity @a[team=blue] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Blue"] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Blue"}', Tags: ["baseTeam", "spread"]}

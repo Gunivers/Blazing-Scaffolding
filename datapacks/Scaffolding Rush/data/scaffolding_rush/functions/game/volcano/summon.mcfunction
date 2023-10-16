@@ -10,6 +10,8 @@ kill @e[type=marker,tag=VolcanoCanceled]
 
 execute at @e[type=marker,tag=VolcanoBaseNew] run playsound minecraft:entity.warden.dig master @a ~ ~1000 ~ 2 0.5 1
 
-execute at @e[type=marker,tag=VolcanoBaseNew] run place template scaffolding_rush:volcano ~-7 ~-5 ~-7
+execute at @e[type=marker,tag=VolcanoBaseNew] run place template scaffolding_rush:volcano ~-7 ~-6 ~-7
+
+execute store result score #volcano.type data run random value 0..3
 
 tag @e remove VolcanoBaseNew
