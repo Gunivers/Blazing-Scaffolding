@@ -47,33 +47,9 @@ execute as @a[gamemode=!spectator,tag=InGame] at @s run function scaffolding_rus
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
 
-# =====================================
-# End of game
-# =====================================
 
-# Test end of game
-execute if score #game.end data matches 0 run function scaffolding_rush:game/test_end
+function scaffolding_rush:game/team_elimination/trigger
 
-# Elimination if team exist, unless players in game, unless players are respawning
-execute if entity @a[team=blue,tag=!TeamEliminated] \
-        unless entity @a[team=blue,tag=!player.is_dead] \
-        unless entity @e[tag=blue_villager,tag=game_villager] \
-    run function scaffolding_rush:game/elimination/blue
-
-execute if entity @a[team=green,tag=!TeamEliminated] \
-        unless entity @a[team=green,tag=!player.is_dead] \
-        unless entity @e[tag=green_villager,tag=game_villager] \
-    run function scaffolding_rush:game/elimination/green
-
-execute if entity @a[team=red,tag=!TeamEliminated] \
-        unless entity @a[team=red,tag=!player.is_dead] \
-        unless entity @e[tag=red_villager,tag=game_villager] \
-    run function scaffolding_rush:game/elimination/red
-
-execute if entity @a[team=yellow,tag=!TeamEliminated] \
-        unless entity @a[team=yellow,tag=!player.is_dead] \
-        unless entity @e[tag=yellow_villager,tag=game_villager] \
-    run function scaffolding_rush:game/elimination/yellow
 
 # Revive players from changed gamemode
 execute if entity @e[tag=red_villager,tag=game_villager] run tag @a[team=red] remove TeamEliminated
@@ -81,17 +57,13 @@ execute if entity @e[tag=blue_villager,tag=game_villager] run tag @a[team=blue] 
 execute if entity @e[tag=green_villager,tag=game_villager] run tag @a[team=green] remove TeamEliminated
 execute if entity @e[tag=yellow_villager,tag=game_villager] run tag @a[team=yellow] remove TeamEliminated
 
-# Count active teams
-scoreboard players set RemainingTeam data 0
-execute if entity @a[team=blue,tag=!TeamEliminated] run scoreboard players add RemainingTeam data 1
-execute if entity @a[team=green,tag=!TeamEliminated] run scoreboard players add RemainingTeam data 1
-execute if entity @a[team=red,tag=!TeamEliminated] run scoreboard players add RemainingTeam data 1
-execute if entity @a[team=yellow,tag=!TeamEliminated] run scoreboard players add RemainingTeam data 1
-
 # Glow player holding villagers
-execute as @a[team=blue,gamemode=!spectator] store result score @s glib run clear @s squid_spawn_egg 0
-execute as @a[team=red,gamemode=!spectator] store result score @s glib run clear @s mooshroom_spawn_egg 0
-execute as @a[team=yellow,gamemode=!spectator] store result score @s glib run clear @s blaze_spawn_egg 0
-execute as @a[team=green,gamemode=!spectator] store result score @s glib run clear @s slime_spawn_egg 0
+execute as @a[team=blue,gamemode=!spectator] store result score @s tmp run clear @s squid_spawn_egg 0
+execute as @a[team=red,gamemode=!spectator] store result score @s tmp run clear @s mooshroom_spawn_egg 0
+execute as @a[team=yellow,gamemode=!spectator] store result score @s tmp run clear @s blaze_spawn_egg 0
+execute as @a[team=green,gamemode=!spectator] store result score @s tmp run clear @s slime_spawn_egg 0
+effect give @a[gamemode=!spectator,scores={tmp=1..}] minecraft:glowing 1 1 true
 
-effect give @a[gamemode=!spectator,scores={glib=1..}] minecraft:glowing 1 1 true
+
+# Test end of game
+execute if score #game.end data matches 0 run function scaffolding_rush:game/stop/trigger

@@ -17,10 +17,10 @@ execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] run scoreboard pla
 title @a times 0 60 20
 title @a subtitle {"text":""}
 
-execute if score TeamWin data matches 1 run function scaffolding_rush:game/finish_message/1_team
-execute if score TeamWin data matches 2 run function scaffolding_rush:game/finish_message/2_teams
-execute if score TeamWin data matches 3 run function scaffolding_rush:game/finish_message/3_teams
-execute if score TeamWin data matches 4 run function scaffolding_rush:game/finish_message/4_teams
+execute if score TeamWin data matches 1 run function scaffolding_rush:game/stop/message/1_team
+execute if score TeamWin data matches 2 run function scaffolding_rush:game/stop/message/2_teams
+execute if score TeamWin data matches 3 run function scaffolding_rush:game/stop/message/3_teams
+execute if score TeamWin data matches 4 run function scaffolding_rush:game/stop/message/4_teams
 
 scoreboard players set @a[team=!spectator,tag=TeamEliminated] player.win_streak 0
 scoreboard players add @a[team=!spectator,tag=!TeamEliminated] player.win_streak 1
@@ -62,7 +62,7 @@ execute at @e[type=marker,name="build.limit"] run teleport @e[type=marker,name="
 tag @a remove player.item.can_have_items
 tag @a remove player.item.have_egg
 
-schedule function scaffolding_rush:game/reset 100t
+schedule function scaffolding_rush:game/stop/stop 100t
 
 bossbar set minecraft:filling_lava visible false
 bossbar set minecraft:time_limit visible false
