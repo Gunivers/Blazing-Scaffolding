@@ -15,6 +15,12 @@ kill @e[tag=lobbyText]
 kill @e[tag=lobbyInteraction]
 kill @e[tag=lobbyMarker]
 
+summon text_display 3.75 27.7 10.99 {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[4f,4f,1f]},text:'{"text":"Blazing","color":"gold","bold":true}',background:16711680,Tags:["lobbyText","lobbyTitle"]}
+summon text_display 1.75 26.5 10.99 {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[4f,4f,1f]},text:'{"text":"Scaffolding","color":"gold","bold":true}',background:16711680,Tags:["lobbyText","lobbyTitle"]}
+summon text_display 2.5 26.2 10.99 {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]},text:'{"text":"from Gunivers Community","color":"white","bold":true}',background:16711680,Tags:["lobbyText","lobbyTitle"]}
+
+execute as @e[tag=lobbyTitle] at @s run tp @s ~ ~ ~ 180 0
+
 # Preset option
 setblock -2 24 6 minecraft:smooth_quartz_slab
 summon minecraft:villager -2 24.5 6 {VillagerData: {profession: "minecraft:none", level: 1, type: "minecraft:plains"}, NoAI: 1b, PersistenceRequired: 1b, NoGravity: 1b, CanPickUpLoot: 0b, Silent: 1, Invulnerable: 1, Age: 0, Rotation: [180f, 0f], Tags: ["LobbyPresetVillager", "lobbyVillager"], Offers: {}, CustomName: '["",{"keybind":"key.use","color":"gold"},{"text":" to change the preset","color":"gold"}]'}
