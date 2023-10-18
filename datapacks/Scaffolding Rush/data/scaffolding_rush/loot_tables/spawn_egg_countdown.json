@@ -42,7 +42,7 @@
         {
             "function": "minecraft:set_name",
             "name": {
-              "text": "Villageois de réaparition (cooldown)",
+              "text": "Villageois de réaparition (rechargement)",
               "italic": false
             },
             "conditions": [
