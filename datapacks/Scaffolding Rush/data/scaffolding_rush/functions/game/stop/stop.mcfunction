@@ -2,14 +2,14 @@ worldborder center 0 0
 
 function scaffolding_rush:game/summon_markers
 
-execute if score #game.running data matches 1 run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]
-execute if score #game.running data matches 1 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"La partie a été stoppée","color":"gray"}]
+execute if score #game.running data matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]
+execute if score #game.running data matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"La partie a été stoppée","color":"gray"}]
 
-execute if score #game.loading data matches 1 run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The launching of the game has been stopped","color":"gray"}]
-execute if score #game.loading data matches 1 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le lancement de la partie a été annulé","color":"gray"}]
+execute if score #game.loading data matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The launching of the game has been stopped","color":"gray"}]
+execute if score #game.loading data matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le lancement de la partie a été annulé","color":"gray"}]
 
-execute if score DevelopementMode data matches 1 run tellraw @a[scores={option_language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
-execute if score DevelopementMode data matches 1 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Rechargement en cours...","color":"gray"}]
+execute if score DevelopementMode data matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
+execute if score DevelopementMode data matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Rechargement en cours...","color":"gray"}]
 
 
 function scaffolding_rush:game/lava/global_rising/stop

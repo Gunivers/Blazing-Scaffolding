@@ -8,5 +8,5 @@ item replace entity @s armor.head with minecraft:yellow_banner{BlockEntityTag:{P
 
 title @s times 0 20 20
 title @s title {"text":""}
-execute if score @s option_language matches 0 run title @s subtitle {"text":"Bring it back to your villager!","color":"yellow"}
-execute if score @s option_language matches 1 run title @s subtitle {"text":"Raporte le à ton villageois !","color":"yellow"}
+execute if score @s language matches 0 run title @s subtitle {"text":"Bring it back to your villager!","color":"yellow"}
+execute if score @s language matches 1 run title @s subtitle {"text":"Raporte le à ton villageois !","color":"yellow"}

@@ -1,4 +1,4 @@
-scoreboard players set @s option_language 0
+scoreboard players set @s language 0
 
 tellraw @s [ \
     {"text":"\n  Welcome on ","color":"gold"}, \
@@ -12,8 +12,8 @@ tellraw @s [ \
     {"text":"[Discord]","color":"blue","clickEvent":{"action":"open_url","value":"https://discord.gg/E8qq6tN"}}, \
     {"text":"\n\n"}, \
     {"text":"choose your language: ","color":"gray"}, \
-    {"text":"[English]","color":"green","clickEvent":{"action":"run_command","value":"/trigger option_language set 1"}}, \
-    {"text":" ","color":"green"},{"text":"[Français]","color":"green","clickEvent":{"action":"run_command","value":"/trigger option_language set 2"}}, \
+    {"text":"[English]","color":"green","clickEvent":{"action":"run_command","value":"/trigger language set 1"}}, \
+    {"text":" ","color":"green"},{"text":"[Français]","color":"green","clickEvent":{"action":"run_command","value":"/trigger language set 2"}}, \
     {"text":"\n "} \
 ]
 

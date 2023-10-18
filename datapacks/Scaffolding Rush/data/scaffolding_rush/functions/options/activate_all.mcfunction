@@ -22,7 +22,7 @@ scoreboard players enable @s option_team_number
 scoreboard players enable @s option_resp_delay
 scoreboard players enable @s option_admin
 scoreboard players enable @s option_villager
-scoreboard players enable @s option_language
+scoreboard players enable @s language
 scoreboard players enable @s option_lasting_bases
 scoreboard players enable @s option_flag_take_over
 scoreboard players enable @s option_interactible_lobby

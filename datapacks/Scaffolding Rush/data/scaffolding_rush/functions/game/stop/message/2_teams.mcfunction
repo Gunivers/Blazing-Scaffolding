@@ -9,7 +9,7 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=0}] title [ \
+    run title @a[scores={language=0}] title [ \
         {"text":"Team "}, \
         {"text":"Blue","color":"blue"}, \
         {"text":" and "}, \
@@ -23,7 +23,7 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=0}] title [ \
+    run title @a[scores={language=0}] title [ \
         {"text":"Team "}, \
         {"text":"Blue","color":"blue"}, \
         {"text":" and "}, \
@@ -37,7 +37,7 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
         if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=0}] title [ \
+    run title @a[scores={language=0}] title [ \
         {"text":"Team "}, \
         {"text":"Blue","color":"blue"}, \
         {"text":" and "}, \
@@ -51,7 +51,7 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=0}] title [ \
+    run title @a[scores={language=0}] title [ \
         {"text":"Team "}, \
         {"text":"Green","color":"green"}, \
         {"text":" and "}, \
@@ -65,7 +65,7 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
         if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=0}] title [ \
+    run title @a[scores={language=0}] title [ \
         {"text":"Team "}, \
         {"text":"Green","color":"green"}, \
         {"text":" and "}, \
@@ -79,7 +79,7 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
         if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=0}] title [ \
+    run title @a[scores={language=0}] title [ \
         {"text":"Team "}, \
         {"text":"Red","color":"red"}, \
         {"text":" and "}, \
@@ -97,7 +97,7 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=1}] title [ \
+    run title @a[scores={language=1}] title [ \
         {"text":"L'équipe "}, \
         {"text":"Bleue","color":"blue"}, \
         {"text":" et "}, \
@@ -111,7 +111,7 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=1}] title [ \
+    run title @a[scores={language=1}] title [ \
         {"text":"L'équipe "}, \
         {"text":"Bleue","color":"blue"}, \
         {"text":" et "}, \
@@ -125,7 +125,7 @@ execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
         if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=1}] title [ \
+    run title @a[scores={language=1}] title [ \
         {"text":"L'équipe "}, \
         {"text":"Bleue","color":"blue"}, \
         {"text":" et "}, \
@@ -139,7 +139,7 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=1}] title [ \
+    run title @a[scores={language=1}] title [ \
         {"text":"L'équipe "}, \
         {"text":"Verte","color":"green"}, \
         {"text":" et "}, \
@@ -153,7 +153,7 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         if entity @a[team=green,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=red,tag=!TeamEliminated,limit=1] \
         if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=1}] title [ \
+    run title @a[scores={language=1}] title [ \
         {"text":"L'équipe "}, \
         {"text":"Verte","color":"green"}, \
         {"text":" et "}, \
@@ -167,7 +167,7 @@ execute unless entity @a[team=blue,tag=!TeamEliminated,limit=1] \
         unless entity @a[team=green,tag=!TeamEliminated,limit=1] \
         if entity @a[team=red,tag=!TeamEliminated,limit=1] \
         if entity @a[team=yellow,tag=!TeamEliminated,limit=1] \
-    run title @a[scores={option_language=1}] title [ \
+    run title @a[scores={language=1}] title [ \
         {"text":"L'équipe "}, \
         {"text":"Rouge","color":"red"}, \
         {"text":" et "}, \

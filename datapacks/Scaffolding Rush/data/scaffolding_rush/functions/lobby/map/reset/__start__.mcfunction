@@ -7,8 +7,8 @@ scoreboard players set #lobby.clear data 1
 
 bossbar add reset_lobby_en {"text":"Reseting lobby..."}
 bossbar add reset_lobby_fr {"text":"Chargement du lobby en cours..."}
-bossbar set reset_lobby_en players @a[scores={option_language=0}]
-bossbar set reset_lobby_fr players @a[scores={option_language=1}]
+bossbar set reset_lobby_en players @a[scores={language=0}]
+bossbar set reset_lobby_fr players @a[scores={language=1}]
 bossbar set reset_lobby_en max 256
 bossbar set reset_lobby_fr max 256
 bossbar set reset_lobby_en color purple

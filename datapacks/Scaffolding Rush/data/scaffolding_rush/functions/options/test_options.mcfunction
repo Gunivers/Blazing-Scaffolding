@@ -20,7 +20,7 @@ execute as @s[scores={option_team_number=1..}] run function scaffolding_rush:opt
 execute as @s[scores={option_resp_delay=1..}] run function scaffolding_rush:options/gameplay/respawn_delay
 execute as @s[scores={option_admin=1..}] run function scaffolding_rush:options/admin
 execute as @s[scores={option_villager=1..}] run function scaffolding_rush:options/villager/villager
-execute as @s[scores={option_option_language=1..}] run function scaffolding_rush:options/language
+execute as @s[scores={option_language=1..}] run function scaffolding_rush:options/language
 execute as @s[scores={option_lasting_bases=1..}] run function scaffolding_rush:options/gameplay/lasting_bases
 execute as @s[scores={option_flag_take_over=1..}] run function scaffolding_rush:options/flag/flag_take_over
 execute as @s[scores={option_flag_spawn_interval=1..}] run function scaffolding_rush:options/flag/flag_spawn_interval

@@ -23,7 +23,7 @@ scoreboard players reset @s option_team_number
 scoreboard players reset @s option_resp_delay
 scoreboard players reset @s option_admin
 scoreboard players reset @s option_villager
-# scoreboard players reset @s option_language
+# scoreboard players reset @s language
 scoreboard players reset @s option_lasting_bases
 scoreboard players reset @s option_flag_take_over
 scoreboard players reset @s option_interactible_lobby

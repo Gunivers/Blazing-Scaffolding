@@ -20,7 +20,7 @@ execute as @s[scores={option_team_number=1..}] run function scaffolding_rush:opt
 execute as @s[scores={option_resp_delay=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={option_admin=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={option_villager=1..}] run function scaffolding_rush:options/msg_unauthorized
-execute as @s[scores={option_option_language=1..}] run function scaffolding_rush:options/msg_unauthorized
+execute as @s[scores={option_language=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={option_lasting_bases=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={option_flag_take_over=1..}] run function scaffolding_rush:options/msg_unauthorized
 execute as @s[scores={option_flag_spawn_interval=1..}] run function scaffolding_rush:options/msg_unauthorized
