@@ -1,27 +1,27 @@
 {
     "classic_theme_1": {
       "sounds": [
-        "blazing_scaffolding/Valentine_By_Wintergatan"
+        "blazing_scaffolding/valentine_by_wintergatan"
       ]
     },
     "classic_theme_2": {
       "sounds": [
-        "blazing_scaffolding/The_Dying_by_DSTechnician"
+        "blazing_scaffolding/the_dying_by_dstechnician"
       ]
     },
     "classic_theme_3": {
         "sounds": [
-          "blazing_scaffolding/Rush_This_by_Keyframe_Audio"
+          "blazing_scaffolding/rush_this_by_keyframe_audio"
         ]
     },
     "hardcore_theme_1": {
       "sounds": [
-        "blazing_scaffolding/Epic_Metal_Dubstep_Cinematic_by_Alex_Kizenkov"
+        "blazing_scaffolding/epic_metal_dubstep_cinematic_by_alex_kizenkov"
       ]
     },
     "hardcore_theme_2": {
         "sounds": [
-          "blazing_scaffolding/Rage_by_Gvidon_LevkinBardyuzha"
+          "blazing_scaffolding/rage_by_gvidon_levkinBardyuzha"
         ]
     },
     "lava_drown": {
