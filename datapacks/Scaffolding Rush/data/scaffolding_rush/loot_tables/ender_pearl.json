@@ -6,7 +6,119 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:ender_pearl"
+          "name": "minecraft:ender_pearl",
+          "functions": [
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Ender pearl",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Perle de l'Ender",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+              },
+            {
+                "function": "minecraft:set_lore",
+                "lore": [
+                    {
+                    "text": "Allow to teleport you anywhere.",
+                    "color": "gray",
+                    "italic": false
+                    },
+                    {
+                    "text": "This ender pearl has a custom behavior",
+                    "color": "gray",
+                    "italic": false
+                    },
+                    {
+                    "text": "on scaffoldings. It will always try to",
+                    "color": "gray",
+                    "italic": false
+                    },
+                    {
+                    "text": "teleport you on top of the hitted scaffolding.",
+                    "color": "gray",
+                    "italic": false
+                    },
+                    {
+                    "text": "Also, if it touch the magma, you will not be teleported.",
+                    "color": "gray",
+                    "italic": false
+                    }
+                  ],
+                  "conditions": [
+                    {
+                      "condition": "minecraft:entity_scores",
+                      "entity": "this",
+                      "scores": {
+                        "option_language": 0
+                      }
+                    }
+                  ]
+            },
+            {
+                "function": "minecraft:set_lore",
+                "lore": [
+                    {
+                    "text": "Permet de se téléporter n'importe où.",
+                    "color": "gray",
+                    "italic": false
+                    },
+                    {
+                    "text": "Cette perle de l'Ender a un comportement particulier",
+                    "color": "gray",
+                    "italic": false
+                    },
+                    {
+                    "text": "sur les échafaudages. Elle essaiera toujours de vous",
+                    "color": "gray",
+                    "italic": false
+                    },
+                    {
+                    "text": "téléporter au dessus de l'échafaudage touché.",
+                    "color": "gray",
+                    "italic": false
+                    },
+                    {
+                    "text": "De plus, si elle touche de la lave, vous ne serez pas téléporté.",
+                    "color": "gray",
+                    "italic": false
+                    }
+                  ],
+                  "conditions": [
+                    {
+                      "condition": "minecraft:entity_scores",
+                      "entity": "this",
+                      "scores": {
+                        "option_language": 1
+                      }
+                    }
+                  ]
+            } 
+          ]
         }
       ],
       "functions": [

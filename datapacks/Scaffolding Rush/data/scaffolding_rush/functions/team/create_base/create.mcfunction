@@ -57,6 +57,5 @@ tag @a[team=!spectator] add InGame
 execute as @a[team=,tag=!InGame] at @s run function scaffolding_rush:game/tp_to_game
 
 execute as @e[type=villager,tag=LobbyBase] run function utils:clean_kill
-execute as @a run function scaffolding_rush:lobby/base_egg/clear_egg
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit

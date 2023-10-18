@@ -9,7 +9,6 @@ scoreboard players reset @a bellring
 kill @e[tag=baseTeam]
 kill @e[type=!villager,tag=lobbyTeam]
 execute as @e[type=villager] run function utils:clean_kill
-function scaffolding_rush:lobby/base_egg/clear_egg
 
 kill @e[tag=lobbyText]
 kill @e[tag=lobbyInteraction]
@@ -54,12 +53,6 @@ summon minecraft:text_display -5.0 27 -2.99 {text: '["",{"text":"Credits","under
 summon minecraft:text_display -5.0 26.4 -2.99 {text: '["",{"text":"Join us on Discord!","color":"white"}]', Tags: ["lobbyText"], billboard: 'fixed', background: -10983950, brightness: {block: 10, sky: 10}}
 summon minecraft:text_display -5.0 26.1 -2.99 {text: '["",{"text":"gunivers.net","color":"gold"}]', Tags: ["lobbyText"], billboard: 'fixed', background: 0, brightness: {block: 10, sky: 10}}
 summon minecraft:interaction -5.0 25.5 -3.5 {height: 4f, width: 1.9f, Tags: ["lobbyInteraction", "LobbyCredits"]}
-
-# How to play
-# summon minecraft:text_display 4 25.5 -2 {text: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], billboard: 'center', brightness: {block: 10, sky: 10}}
-# summon minecraft:interaction 4 24 -2 {height: 1.2d, width: 1.2d, Tags: ["lobbyInteraction", "LobbyHTP"]}
-
-execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 
 kill @e[type=marker,tag=lobbyLight]
 summon minecraft:marker 0 24 0 {Tags: ["lobbyLight"]}

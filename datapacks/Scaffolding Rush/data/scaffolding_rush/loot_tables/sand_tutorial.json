@@ -62,9 +62,23 @@
         {
           "function": "minecraft:set_lore",
           "entity": "this",
-          "lore": [{
-            "text": "To extend your scaffolding bridge"
-          }],
+          "lore": [
+            {
+              "text": "Use it to extand scaffolding bridges.",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": "But be careful, if the original pillar breaks,",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": "all the bridge will fall.",
+              "color": "gray",
+              "italic": false
+            }
+          ],
           "conditions": [
             {
               "condition": "minecraft:entity_scores",
@@ -78,9 +92,23 @@
         {
           "function": "minecraft:set_lore",
           "entity": "this",
-          "lore": [{
-            "text": "Pour prolonger votre pont d'échaffaudage"
-          }],
+          "lore": [
+            {
+              "text": "Utilisez le pour prolonger les ponts d'échafaudages.",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": "Attention, si le pilier d'origine casse",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": "l'ensemble du ponts s'effondrera.",
+              "color": "gray",
+              "italic": false
+            }
+          ],
           "conditions": [
             {
               "condition": "minecraft:entity_scores",

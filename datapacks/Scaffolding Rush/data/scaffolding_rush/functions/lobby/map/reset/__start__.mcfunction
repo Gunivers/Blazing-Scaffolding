@@ -1,7 +1,6 @@
 
 kill @e[tag=baseTeam]
 execute as @e[type=villager] run function utils:clean_kill
-execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 
 #clear the blocks in the lobby
 scoreboard players set #lobby.clear data 1

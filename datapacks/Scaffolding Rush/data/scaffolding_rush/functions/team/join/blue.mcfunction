@@ -1,5 +1,4 @@
 team join blue @s
-execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 function scaffolding_rush:team/join/killbase
 
 clear @s #scaffolding_rush:colored_items

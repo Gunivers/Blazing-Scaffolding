@@ -80,5 +80,3 @@ effect give @a minecraft:jump_boost 5 255 true
 execute if score DevelopementMode data matches 1 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"text":"Reset done","color":"gray"}]
 
 execute as @a[tag=InGame] run function scaffolding_rush:lobby/tp_to_lobby
-
-execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset

@@ -11,7 +11,117 @@
             {
               "function": "minecraft:set_nbt",
               "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"VillagerSpawnerBlue\"]}}"
-            }
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Respawn villager",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Villageois de réaparition",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "The villager allow your team to respawn on it.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "You can right-click it to move it at any time",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "(unless it is deactivated in the options).",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "If you place your villager in the lobby,",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "it's position will be conserved when the game will start.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Le villageois permet à votre équipe de réapparaître dessus.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Vous pouvez le déplacer en faisant un clic droit dessus à tout moment",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "(sauf si cette option est désactivée dans les options).",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Si vous placez votre villageois dans le lobby,",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "sa position sera conservée lorsque la partie commencera.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+              }
           ],
           "conditions": [
             {
@@ -30,7 +140,117 @@
             {
               "function": "minecraft:set_nbt",
               "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"VillagerSpawnerGreen\"]}}"
-            }
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Respawn villager",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Villageois de réaparition",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "The villager allow your team to respawn on it.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "You can right-click it to move it at any time",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "(unless it is deactivated in the options).",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "If you place your villager in the lobby,",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "it's position will be conserved when the game will start.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Le villageois permet à votre équipe de réapparaître dessus.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Vous pouvez le déplacer en faisant un clic droit dessus à tout moment",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "(sauf si cette option est désactivée dans les options).",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Si vous placez votre villageois dans le lobby,",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "sa position sera conservée lorsque la partie commencera.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+              }
           ],
           "conditions": [
             {
@@ -49,7 +269,117 @@
             {
               "function": "minecraft:set_nbt",
               "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"VillagerSpawnerRed\"]}}"
-            }
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Respawn villager",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Villageois de réaparition",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "The villager allow your team to respawn on it.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "You can right-click it to move it at any time",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "(unless it is deactivated in the options).",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "If you place your villager in the lobby,",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "it's position will be conserved when the game will start.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Le villageois permet à votre équipe de réapparaître dessus.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Vous pouvez le déplacer en faisant un clic droit dessus à tout moment",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "(sauf si cette option est désactivée dans les options).",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Si vous placez votre villageois dans le lobby,",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "sa position sera conservée lorsque la partie commencera.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+              }
           ],
           "conditions": [
             {
@@ -68,7 +398,117 @@
             {
               "function": "minecraft:set_nbt",
               "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"VillagerSpawnerYellow\"]}}"
-            }
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Respawn villager",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Villageois de réaparition",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "The villager allow your team to respawn on it.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "You can right-click it to move it at any time",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "(unless it is deactivated in the options).",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "If you place your villager in the lobby,",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "it's position will be conserved when the game will start.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Le villageois permet à votre équipe de réapparaître dessus.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Vous pouvez le déplacer en faisant un clic droit dessus à tout moment",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "(sauf si cette option est désactivée dans les options).",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Si vous placez votre villageois dans le lobby,",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "sa position sera conservée lorsque la partie commencera.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+              }
           ],
           "conditions": [
             {
@@ -76,42 +516,6 @@
               "entity": "this",
               "predicate": {
                 "team": "yellow"
-              }
-            }
-          ]
-        }
-      ],
-      "functions": [
-        {
-          "function": "minecraft:set_name",
-          "entity": "this",
-          "name": {
-            "text": "Team's Villager",
-            "italic": false
-          },
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 0
-              }
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_name",
-          "entity": "this",
-          "name": {
-            "text": "Villageois d'équipe",
-            "italic": false
-          },
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 1
               }
             }
           ]
