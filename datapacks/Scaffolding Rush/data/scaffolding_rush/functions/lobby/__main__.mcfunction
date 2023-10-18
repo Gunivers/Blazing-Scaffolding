@@ -3,13 +3,6 @@ execute as @e store result score @s pos.x run data get entity @s Pos[0]
 execute as @a store result score @s pos.y run data get entity @s Pos[1]
 execute as @e store result score @s pos.z run data get entity @s Pos[2]
 
-#base
-execute at @e[type=minecraft:item,nbt={Item:{tag:{EntityTag:{Tags:["baseTeam"]}}}}] as @a[distance=..5] if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/give
-execute as @e[type=minecraft:armor_stand,tag=baseTeam,tag=!villagerSpawned] run function scaffolding_rush:lobby/base_egg/spawn
-
-# #button place base
-# execute positioned 0 6 7 if entity @e[tag=LobbyBase,distance=..1] run function scaffolding_rush:lobby/base_egg/remove_at_button
-
 #check player coordonates
 execute unless score #game.end data matches 1 as @a[gamemode=!spectator,tag=!inTutorial] at @s run function scaffolding_rush:lobby/correct_coordinates
 

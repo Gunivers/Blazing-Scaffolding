@@ -13,8 +13,83 @@
               "name": {
                 "text": "Fireball",
                 "italic": false
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "option_language": 0
+                  }
+                }
+              ]
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Boule de feu",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+              },
+            {
+                "function": "minecraft:set_lore",
+                "entity": "this",
+                "lore": [
+                  {
+                  "text": "Throw a fireball to destroy scaffoldings.",
+                  "color": "gray",
+                  "italic": false
+                  },
+                  {
+                  "text": "It doesn't damage players or villagers.",
+                  "color": "gray",
+                  "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_lore",
+                "entity": "this",
+                "lore": [
+                  {
+                  "text": "Lancez une boule de feu pour détruire les échaffaudages.",
+                  "color": "gray",
+                  "italic": false
+                  },
+                  {
+                  "text": "Elle ne blesse pas les joueurs ni les villageois.",
+                  "color": "gray",
+                  "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
               }
-            }
           ]
         }
       ],
@@ -26,38 +101,6 @@
         {
           "function": "minecraft:set_nbt",
           "tag": "{sc.item: 1,HideFlags:24,CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"]}"
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [{
-            "text": "Throw a fireball to destroy the scaffolding"
-          }],
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 0
-              }
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [{
-            "text": "Lancez une boule de feu pour détruire les échaffaudages"
-          }],
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 1
-              }
-            }
-          ]
         }
       ]
     }

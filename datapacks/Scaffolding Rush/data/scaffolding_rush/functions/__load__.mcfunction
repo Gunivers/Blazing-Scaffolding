@@ -259,7 +259,7 @@ execute if score #game.loading data matches 1 run function scaffolding_rush:game
 
 # If no game started, reset the map, otherwise, finish it (which wil lreset the map afterward)
 execute if score #game.running data matches 0 unless score #game.end data matches 1 run function scaffolding_rush:game/map/reset/__start__
-execute if score #game.running data matches 1 run function scaffolding_rush:game/finish
+execute if score #game.running data matches 1 run function scaffolding_rush:game/stop/end_game
 
 # Reset the lobby
 function scaffolding_rush:lobby/map/reset/__start__

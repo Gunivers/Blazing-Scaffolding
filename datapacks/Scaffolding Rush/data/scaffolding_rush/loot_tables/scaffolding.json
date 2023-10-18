@@ -21,7 +21,117 @@
         {
           "function": "minecraft:set_nbt",
           "tag": "{sc.item: 1, HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:base\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"]}"
-        }
+        },
+        {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Scaffolding",
+              "italic": false
+            },
+            "conditions": [
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "option_language": 0
+                }
+              }
+            ]
+        },
+        {
+            "function": "minecraft:set_name",
+            "name": {
+              "text": "Échafaudage",
+              "italic": false
+            },
+            "conditions": [
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "option_language": 1
+                }
+              }
+            ]
+        },
+        {
+            "function": "minecraft:set_lore",
+            "lore": [
+              {
+                "text": "Rush your enemies by building bridges with this block.",
+                "color": "gray",
+                "italic": false
+              },
+              {
+                "text": "Be carfefull to the pillars that maintain your bridges!",
+                "color": "gray",
+                "italic": false
+              },
+              {
+                "text": "Scaffoldings have particular mecanics and some of them",
+                "color": "gray",
+                "italic": false
+              },
+              {
+                "text": "are poorly known. You can learn everything about them",
+                "color": "gray",
+                "italic": false
+              },
+              {
+                "text": "in the tutorial (in the \"How to play?\" book).",
+                "color": "gray",
+                "italic": false
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "option_language": 0
+                }
+              }
+            ]
+          },
+          {
+            "function": "minecraft:set_lore",
+            "lore": [
+              {
+                "text": "Rushez vos ennemis en construisant des ponts avec ce bloc.",
+                "color": "gray",
+                "italic": false
+              },
+              {
+                "text": "Faites attention aux piliers qui maintiennent vos ponts !",
+                "color": "gray",
+                "italic": false
+              },
+              {
+                "text": "Les échafaudages ont des mécaniques particulières et certaines",
+                "color": "gray",
+                "italic": false
+              },
+              {
+                "text": "d'entre elles sont peu connues. Vous pouvez tout apprendre à leur sujet",
+                "color": "gray",
+                "italic": false
+              },
+              {
+                "text": "dans le tutoriel (dans le livre \"Comment jouer ?\").",
+                "color": "gray",
+                "italic": false
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "option_language": 1
+                }
+              }
+            ]
+          }
     ]
     }
   ]

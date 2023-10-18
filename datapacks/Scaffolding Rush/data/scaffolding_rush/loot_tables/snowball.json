@@ -9,12 +9,95 @@
           "name": "minecraft:snowball",
           "functions": [
             {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Bumping Arrow",
-                "italic": false
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Bumping arrow",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Flèche cinétique",
+                  "italic": false
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
+            },
+            {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Use these arrow to push your enemies",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "and make them fall into the lava.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Villagers destroy nearby incoming arrows.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Utilisez ces flèches pour pousser vos ennemis",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "et les faire tomber dans la lave.",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "Les villageois détruisent les flèches qui les approchent.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                      "option_language": 1
+                    }
+                  }
+                ]
               }
-            }
           ]
         }
       ],
@@ -26,38 +109,6 @@
         {
           "function": "minecraft:set_nbt",
           "tag": "{sc.item: 1,HideFlags:24,CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"]}"
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [{
-            "text": "Push opponents off the scaffolding"
-          }],
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 0
-              }
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [{
-            "text": "Pousser les adversaires hors des échaffaudages"
-          }],
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 1
-              }
-            }
-          ]
         }
       ]
     }

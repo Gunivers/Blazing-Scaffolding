@@ -9,11 +9,16 @@ scoreboard players reset @a bellring
 kill @e[tag=baseTeam]
 kill @e[type=!villager,tag=lobbyTeam]
 execute as @e[type=villager] run function utils:clean_kill
-function scaffolding_rush:lobby/base_egg/clear_egg
 
 kill @e[tag=lobbyText]
 kill @e[tag=lobbyInteraction]
 kill @e[tag=lobbyMarker]
+
+summon text_display 3.75 27.7 10.99 {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[4f,4f,1f]},text:'{"text":"Blazing","color":"gold","bold":true}',background:16711680,Tags:["lobbyText","lobbyTitle"]}
+summon text_display 1.75 26.5 10.99 {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[4f,4f,1f]},text:'{"text":"Scaffolding","color":"gold","bold":true}',background:16711680,Tags:["lobbyText","lobbyTitle"]}
+summon text_display 2.5 26.2 10.99 {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]},text:'{"text":"from Gunivers Community","color":"white","bold":true}',background:16711680,Tags:["lobbyText","lobbyTitle"]}
+
+execute as @e[tag=lobbyTitle] at @s run tp @s ~ ~ ~ 180 0
 
 # Preset option
 setblock -2 24 6 minecraft:smooth_quartz_slab
@@ -48,12 +53,6 @@ summon minecraft:text_display -5.0 27 -2.99 {text: '["",{"text":"Credits","under
 summon minecraft:text_display -5.0 26.4 -2.99 {text: '["",{"text":"Join us on Discord!","color":"white"}]', Tags: ["lobbyText"], billboard: 'fixed', background: -10983950, brightness: {block: 10, sky: 10}}
 summon minecraft:text_display -5.0 26.1 -2.99 {text: '["",{"text":"gunivers.net","color":"gold"}]', Tags: ["lobbyText"], billboard: 'fixed', background: 0, brightness: {block: 10, sky: 10}}
 summon minecraft:interaction -5.0 25.5 -3.5 {height: 4f, width: 1.9f, Tags: ["lobbyInteraction", "LobbyCredits"]}
-
-# How to play
-# summon minecraft:text_display 4 25.5 -2 {text: '{"text":"How to play","bold":true,"color":"light_purple"}', Tags: ["lobbyText"], billboard: 'center', brightness: {block: 10, sky: 10}}
-# summon minecraft:interaction 4 24 -2 {height: 1.2d, width: 1.2d, Tags: ["lobbyInteraction", "LobbyHTP"]}
-
-execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 
 kill @e[type=marker,tag=lobbyLight]
 summon minecraft:marker 0 24 0 {Tags: ["lobbyLight"]}

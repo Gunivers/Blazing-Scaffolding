@@ -6,8 +6,6 @@ execute unless score TeamEgg options matches 0 run tellraw @a[scores={option_lan
 execute if score TeamEgg options matches 0 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le placement des équipes a été ","color":"gray"},{"text":"désactivé","color":"red"}]
 execute unless score TeamEgg options matches 0 run tellraw @a[scores={option_language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le placement des équipes a été ","color":"gray"},{"text":"activé","color":"green"}]
 
-execute as @a if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
-
 scoreboard players set @s option_team_egg 0
 scoreboard players enable @s option_team_egg
 

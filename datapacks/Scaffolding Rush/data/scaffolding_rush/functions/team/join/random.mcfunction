@@ -37,6 +37,5 @@ execute if score #team.random data matches 2 run team join blue @s
 execute if score #team.random data matches 3 run team join yellow @s
 execute if score #team.random data matches 4 run team join green @s
 
-execute if score TeamEgg options matches 1 run function scaffolding_rush:lobby/base_egg/reset
 function scaffolding_rush:team/killbase
 function scaffolding_rush:lobby/refresh_items
