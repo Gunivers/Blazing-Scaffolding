@@ -1,0 +1,21 @@
+{
+    "parent": "scaffolding_rush:rewards/win_streak/5",
+    "display": {
+      "icon": {
+        "item": "minecraft:golden_apple"
+      },
+      "title": "10 wins in a row!",
+      "description": "OMG... go touch some grass",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      " ": {
+        "trigger": "impossible"
+      }
+    }
+  }
+  

@@ -1,0 +1,18 @@
+{
+    "pack": {
+        "pack_format": 10,
+        "description": "Datapack for Gunivers' Blazing Scaffolding map"
+    },
+    "filter": {
+        "block": [
+            {
+                "namespace": "minecraft",
+                "path": "advancements/.*"
+            },
+        {
+                "namespace": "minecraft",
+                "path": "recipes/.*"
+            }
+        ]
+    }
+}

@@ -46,6 +46,7 @@ scoreboard players operation @a game.id = #game.id data
 scoreboard players set #game.time.tick timer 0
 
 scoreboard players set @a player.villager_kills 0
+scoreboard players set @a player.death_streak 0
 
 # Get game data ---------------------------------------------------------------
 

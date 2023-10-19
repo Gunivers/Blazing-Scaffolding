@@ -1,0 +1,21 @@
+{
+    "parent": "scaffolding_rush:rewards/win_streak/10",
+    "display": {
+      "icon": {
+        "item": "minecraft:enchanted_golden_apple"
+      },
+      "title": "Cheater spotted!",
+      "description": "You got 10 wins in a row! You are either a cheater, either a robot, but definitely not a human!",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      " ": {
+        "trigger": "impossible"
+      }
+    }
+  }
+  

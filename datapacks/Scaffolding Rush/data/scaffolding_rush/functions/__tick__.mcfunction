@@ -40,7 +40,11 @@ execute if score #admin.exist options matches 0 run scoreboard players enable @a
 
 kill @e[type=item]
 effect give @a minecraft:saturation infinite 1 true
-advancement revoke @a everything
+advancement revoke @a only scaffolding_rush:lobby_interact
+advancement revoke @a only scaffolding_rush:use_item
+advancement revoke @a from scaffolding_rush:grab_villager
+advancement revoke @a from scaffolding_rush:replenish
+advancement revoke @a from scaffolding_rush:use_item
 
 # Negative effects of other teams blocks --------------------------------------
 
@@ -81,5 +85,9 @@ execute as @a[gamemode=!spectator,scores={player.win_streak=10..19}] at @s run p
 execute as @a[gamemode=!spectator,scores={player.win_streak=20..}] at @s run particle large_smoke ~ ~0.2 ~ 0.5 0.2 0.5 0.01 1 normal
 execute as @a[gamemode=!spectator,scores={player.win_streak=20..}] at @s run particle minecraft:campfire_cosy_smoke ~ ~0.1 ~ 0.3 0 0.3 0.05 1 normal
 
+
+advancement grant @a[scores={player.villager_kills=3}] only scaffolding_rush:rewards/kill_streak/3
+advancement grant @a[scores={player.villager_kills=5}] only scaffolding_rush:rewards/kill_streak/5
+advancement grant @a[scores={player.villager_kills=10}] only scaffolding_rush:rewards/kill_streak/10
 execute at @a[gamemode=!spectator,scores={player.villager_kills=3..4}] run particle flame ~ ~1 ~ 0 0.5 0 0 1 normal
 execute at @a[gamemode=!spectator,scores={player.villager_kills=5..}] run particle lava ~ ~ ~ 0 0 0 0 1 normal

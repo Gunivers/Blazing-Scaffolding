@@ -1,0 +1,21 @@
+{
+    "parent": "scaffolding_rush:rewards/kill_streak/5",
+    "display": {
+      "icon": {
+        "item": "minecraft:diamond_sword"
+      },
+      "title": "Cheater spotted!",
+      "description": "You got a 10 kill streak! You are either a cheater, either a robot, but definitely not a human!",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      " ": {
+        "trigger": "impossible"
+      }
+    }
+  }
+  

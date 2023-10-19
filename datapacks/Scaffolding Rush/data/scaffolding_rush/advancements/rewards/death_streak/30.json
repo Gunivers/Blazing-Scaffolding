@@ -1,0 +1,21 @@
+{
+    "parent": "scaffolding_rush:rewards/death_streak/10",
+    "display": {
+      "icon": {
+        "item": "minecraft:totem_of_undying"
+      },
+      "title": "You died 30 times",
+      "description": "At this point, it's a performance that deserve to be rewarded. You're so bad... congratulations!",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      " ": {
+        "trigger": "impossible"
+      }
+    }
+  }
+  

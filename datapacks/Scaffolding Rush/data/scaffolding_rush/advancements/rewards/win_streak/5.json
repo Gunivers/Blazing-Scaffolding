@@ -1,0 +1,21 @@
+{
+    "parent": "scaffolding_rush:rewards/win_streak/3",
+    "display": {
+      "icon": {
+        "item": "minecraft:gold_block"
+      },
+      "title": "5 wins in a row!",
+      "description": "You are a true champion!",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      " ": {
+        "trigger": "impossible"
+      }
+    }
+  }
+  

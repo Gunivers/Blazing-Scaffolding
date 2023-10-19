@@ -14,3 +14,7 @@ kill @e[type=marker,tag=last_death]
 effect clear @s
 clear @s
 tag @s remove player.item.can_have_items
+
+execute if score #game.running data matches 1 run scoreboard players add @s player.death_streak 1
+advancement grant @s[scores={player.death_streak=10}] only scaffolding_rush:rewards/death_streak/10
+advancement grant @s[scores={player.death_streak=30}] only scaffolding_rush:rewards/death_streak/30

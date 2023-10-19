@@ -1,0 +1,19 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:bone"
+      },
+      "title": "Deaths",
+      "description": "Advancements related to your deaths",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": false
+    },
+    "criteria": {
+      " ": {
+        "trigger": "impossible"
+      }
+    }
+  }
+  

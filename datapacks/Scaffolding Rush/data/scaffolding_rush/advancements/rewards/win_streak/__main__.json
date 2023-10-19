@@ -1,0 +1,19 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:gold_ingot"
+      },
+      "title": "Games won",
+      "description": "Advancements related to won games",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": false
+    },
+    "criteria": {
+      " ": {
+        "trigger": "impossible"
+      }
+    }
+  }
+  

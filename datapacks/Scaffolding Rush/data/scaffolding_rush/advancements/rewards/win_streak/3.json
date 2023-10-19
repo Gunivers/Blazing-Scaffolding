@@ -1,0 +1,21 @@
+{
+    "parent": "scaffolding_rush:rewards/win_streak/first",
+    "display": {
+      "icon": {
+        "item": "minecraft:gold_ingot"
+      },
+      "title": "3 wins in a row!",
+      "description": "Things are starting to be serious!",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      " ": {
+        "trigger": "impossible"
+      }
+    }
+  }
+  

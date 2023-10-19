@@ -1,0 +1,21 @@
+{
+    "parent": "scaffolding_rush:rewards/win_streak/__main__",
+    "display": {
+      "icon": {
+        "item": "minecraft:gold_nugget"
+      },
+      "title": "Your first win!",
+      "description": "Awww, like a baby doing it's first steps, that's cute :3",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      " ": {
+        "trigger": "impossible"
+      }
+    }
+  }
+  

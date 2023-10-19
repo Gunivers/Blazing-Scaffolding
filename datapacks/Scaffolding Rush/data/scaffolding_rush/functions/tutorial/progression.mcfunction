@@ -7,6 +7,7 @@ execute if score @s[tag=!TutorialMessage3] pos.x matches -4.. run function scaff
 execute if score @s[tag=!TutorialMessage4] pos.x matches 1.. run function scaffolding_rush:tutorial/messages/step4
 execute if score @s[tag=!TutorialMessage5] pos.x matches 5.. run function scaffolding_rush:tutorial/messages/step5
 
+execute if score @s pos.x matches 16.. run advancement grant @s only scaffolding_rush:rewards/tutorial/completed_tutorial
 execute if score @s pos.x matches 16.. run function scaffolding_rush:tutorial/leave
 
 # Proposes to skip the tutorial if the player was in the tutorial for over 10 min

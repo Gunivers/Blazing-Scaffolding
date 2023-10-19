@@ -48,6 +48,7 @@ scoreboard objectives add player.death.animation dummy {"text":"Death Animation"
 
 scoreboard objectives add player.win_streak dummy {"text":"Win Streak","color": "aqua"}
 scoreboard objectives add player.villager_kills minecraft.killed:minecraft.villager {"text":"Villager Killed","color": "aqua"}
+scoreboard objectives add player.death_streak dummy {"text":"Death streak","color": "aqua"}
 scoreboard objectives add player.secret_cosmetic dummy {"text":"Secret Cosmetic","color": "aqua"}
 
 # Entities data ---------------------------------------------------------------
@@ -186,7 +187,7 @@ team join yellow Yellow
 # GAMERULES
 #==============================================================================
 
-gamerule announceAdvancements false
+gamerule announceAdvancements true
 gamerule commandBlockOutput false
 gamerule disableElytraMovementCheck false
 gamerule disableRaids true

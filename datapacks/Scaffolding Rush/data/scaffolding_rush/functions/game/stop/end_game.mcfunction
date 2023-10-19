@@ -6,6 +6,19 @@ execute if score UseTimeLimit options matches 1.. run function scaffolding_rush:
 
 function scaffolding_rush:game/music/__stop__
 
+# Get best score --------------------------------------------------------------
+
+scoreboard players operation #best_score data = Blue game.score
+scoreboard players operation #best_score data > Green game.score
+scoreboard players operation #best_score data > Red game.score
+scoreboard players operation #best_score data > Yellow game.score
+
+# Eliminate teams that doesn't have the best score
+execute if score Blue game.score < #best_score data run tag @a[team=blue] add TeamEliminated
+execute if score Green game.score < #best_score data run tag @a[team=green] add TeamEliminated
+execute if score Red game.score < #best_score data run tag @a[team=red] add TeamEliminated
+execute if score Yellow game.score < #best_score data run tag @a[team=yellow] add TeamEliminated
+
 # Finish message --------------------------------------------------------------
 
 scoreboard players set TeamWin data 0
@@ -24,6 +37,11 @@ execute if score TeamWin data matches 4 run function scaffolding_rush:game/stop/
 
 scoreboard players set @a[team=!spectator,tag=TeamEliminated] player.win_streak 0
 scoreboard players add @a[team=!spectator,tag=!TeamEliminated] player.win_streak 1
+advancement grant @a[scores={player.win_streak=1}] only scaffolding_rush:rewards/win_streak/first
+advancement grant @a[scores={player.win_streak=3}] only scaffolding_rush:rewards/win_streak/3
+advancement grant @a[scores={player.win_streak=5}] only scaffolding_rush:rewards/win_streak/5
+advancement grant @a[scores={player.win_streak=10}] only scaffolding_rush:rewards/win_streak/10
+advancement grant @a[scores={player.win_streak=20}] only scaffolding_rush:rewards/win_streak/20
 
 execute as @a[team=!spectator,tag=!TeamEliminated] \
     run function scaffolding_rush:player/animated_title/start {type:"victory"}
