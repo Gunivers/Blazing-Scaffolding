@@ -20,7 +20,7 @@ execute if score #flag.take_overCountdown data >= #flag.take_over.spawn_interval
 execute run scoreboard players add #flag.take_overCountdown data 1
 
 # remove flags in lava
-execute as @e[type=armor_stand,tag=Flag] at @s if block ~ ~2 ~ magma_block run function scaffolding_rush:game/flag/stack_kill
+execute as @e[type=armor_stand,tag=Flag] at @s unless block ~ ~2 ~ air run function scaffolding_rush:game/flag/stack_kill
 
 # grabbing flag
 execute as @a[gamemode=adventure,tag=!flag_carry] at @s positioned ~ ~-2 ~ if entity @e[type=armor_stand,tag=Flag,distance=..3] run function scaffolding_rush:game/flag/grab/any
