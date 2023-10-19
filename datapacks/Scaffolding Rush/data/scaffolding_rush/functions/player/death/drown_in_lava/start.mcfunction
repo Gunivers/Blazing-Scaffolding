@@ -23,3 +23,6 @@ scoreboard players set @s player.death.animation 40
 tag @s add player.death.drown_in_lava
 
 tag @e[tag=player.death.drown_in_lava.animation.new] remove player.death.drown_in_lava.animation.new
+
+effect give @s mining_fatigue 3 127 true
+effect give @s weakness 3 127 true
