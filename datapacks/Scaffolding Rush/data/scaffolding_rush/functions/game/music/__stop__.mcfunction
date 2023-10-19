@@ -1,2 +1,2 @@
 
-stopsound @a music
+stopsound @a record
