@@ -2,6 +2,7 @@
 # Called by functions scaffolding_rush:player/death/trigger and scaffolding_rush:player/death/<type>/animation
 
 scoreboard players operation @s respawn.timer = #respawn.delay.tick options
+scoreboard players operation @s respawn.timer > 1 const
 
 gamemode spectator @s
 tag @s remove player.death.drown_in_lava
