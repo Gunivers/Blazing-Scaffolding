@@ -7,7 +7,6 @@ scoreboard objectives add option_preset trigger
 execute unless score Preset options matches 1..7 run scoreboard players set Preset options 1
 scoreboard objectives add option_perf_mode trigger
 execute unless score #performance_mode options matches 0.. run scoreboard players set #performance_mode options 0
-scoreboard objectives add language trigger
 scoreboard objectives add option_admin trigger
 execute unless score #admin.exist options matches 0.. run scoreboard players set #admin.exist options 0
 
