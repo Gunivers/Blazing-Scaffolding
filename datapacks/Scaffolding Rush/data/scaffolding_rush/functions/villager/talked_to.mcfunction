@@ -41,3 +41,9 @@ scoreboard players set @s[scores={player.pick_villager_cooldown=..0}] player.ite
 
 #inform the player if the option is disabled
 execute if score #villager.movable options matches 0 run tellraw @s ["",{"text":"/!\\ You can't move the villager\n/!\\ That option is ","color":"gold"},{"text":"disabled","color":"red"},{"text":" !","color":"gold"}]
+
+# Reset advancement
+advancement revoke @s only scaffolding_rush:grab_villager/red
+advancement revoke @s only scaffolding_rush:grab_villager/blue
+advancement revoke @s only scaffolding_rush:grab_villager/green
+advancement revoke @s only scaffolding_rush:grab_villager/yellow
