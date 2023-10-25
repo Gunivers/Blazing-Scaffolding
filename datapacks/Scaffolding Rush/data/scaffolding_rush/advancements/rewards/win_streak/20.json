@@ -5,7 +5,7 @@
         "item": "minecraft:enchanted_golden_apple"
       },
       "title": "Cheater spotted!",
-      "description": "You got 10 wins in a row! You are either a cheater, either a robot, but definitely not a human!",
+      "description": "You got 20 wins in a row! You are either a cheater, either a robot, but definitely not a human!",
       "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
       "frame": "challenge",
       "show_toast": true,
