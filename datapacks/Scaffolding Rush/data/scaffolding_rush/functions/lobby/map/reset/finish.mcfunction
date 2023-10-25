@@ -5,7 +5,6 @@ execute if score DevelopementMode data matches 1 run schedule function scaffoldi
 scoreboard players set #lobby.clear data 0
 
 
-bossbar remove reset_lobby_en
-bossbar remove reset_lobby_fr
+bossbar remove reset_lobby
 
 function scaffolding_rush:lobby/map/setup

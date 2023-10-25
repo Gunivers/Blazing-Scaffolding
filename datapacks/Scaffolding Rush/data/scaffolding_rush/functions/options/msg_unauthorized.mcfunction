@@ -1,3 +1,2 @@
 
-tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Sorry, only ","color":"red"},{"selector":"@a[tag=admin]","color":"red"},{"text":" can change settings","color":"red"}]
-tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Désolez, seuleument ","color":"red"},{"selector":"@a[tag=admin]","color":"red"},{"text":" peut modifier les paramètres","color":"red"}]
+tellraw @s ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.sorry_only","color":"red"},{"selector":"@a[tag=admin]","color":"red"},{"translate":"blazing_scaffolding.can_change_settings","color":"red"}]

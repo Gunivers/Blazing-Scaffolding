@@ -1,10 +1,6 @@
 # grants levitation to players moving upward in a scaffolding and not shifting
 
-execute as @a[scores={climbing=1..,crouching=0}] at @s if block ~0.3 ~1 ~0.3 scaffolding run tag @s add fastClimbTick
-execute as @a[scores={climbing=1..,crouching=0}] at @s if block ~-0.3 ~1 ~0.3 scaffolding run tag @s add fastClimbTick
-execute as @a[scores={climbing=1..,crouching=0}] at @s if block ~0.3 ~1 ~-0.3 scaffolding run tag @s add fastClimbTick
-execute as @a[scores={climbing=1..,crouching=0}] at @s if block ~-0.3 ~1 ~-0.3 scaffolding run tag @s add fastClimbTick
-
+tag @a[scores={climbing=1..,crouching=0}] add fastClimbTick
 
 effect clear @a[tag=fastClimb,tag=!fastClimbTick] levitation
 effect give @a[tag=!fastClimb,tag=fastClimbTick,tag=!inTutorial] levitation infinite 10

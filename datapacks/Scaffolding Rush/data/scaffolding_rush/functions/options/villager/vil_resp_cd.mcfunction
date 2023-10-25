@@ -1,8 +1,7 @@
 
 scoreboard players operation #villager.respawn.seconds options = @s option_vil_resp_cd
 
-tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The time to get your villager back has been set to ","color":"gray"},{"score":{"name":"#villager.respawn.seconds","objective":"options"},"color":"gold"},{"text":" seconds","color":"gold"}]
-tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le temps de recevoir un nouveau villageois a été défini à ","color":"gray"},{"score":{"name":"#villager.respawn.seconds","objective":"options"},"color":"gold"},{"text":" secondes","color":"gold"}]
+tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.the_time_to_get_your_villager_back_has_been_set_to","color":"gray"},{"score":{"name":"#villager.respawn.seconds","objective":"options"},"color":"gold"},{"translate":"blazing_scaffolding.seconds","color":"gold"}]
 
 scoreboard players set @s option_vil_resp_cd 0
 scoreboard players enable @s option_vil_resp_cd

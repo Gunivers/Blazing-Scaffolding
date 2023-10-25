@@ -1,11 +1,8 @@
 
 execute store success score #performance_mode options if score #performance_mode options matches 0
 
-execute if score #performance_mode options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The perfomance mode has been ","color":"gray"},{"text":"deactivated","color":"red"}]
-execute unless score #performance_mode options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The perfomance mode has been ","color":"gray"},{"text":"activated","color":"green"}]
-
-execute if score #performance_mode options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le mode de performance a été ","color":"gray"},{"text":"désactivé","color":"red"}]
-execute unless score #performance_mode options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le mode de performance a été ","color":"gray"},{"text":"activé","color":"green"}]
+execute if score #performance_mode options matches 0 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.the_perfomance_mode_has_been","color":"gray"},{"translate":"blazing_scaffolding.deactivated","color":"red"}]
+execute unless score #performance_mode options matches 0 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.the_perfomance_mode_has_been","color":"gray"},{"translate":"blazing_scaffolding.activated","color":"green"}]
 
 scoreboard players set @s option_perf_mode 0
 scoreboard players enable @s option_perf_mode

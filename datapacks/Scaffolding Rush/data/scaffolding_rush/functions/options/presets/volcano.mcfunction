@@ -49,7 +49,4 @@ scoreboard players set VolcanoTargetRate options 5
 function scaffolding_rush:options/refresh
 
 # EN
-tellraw @a[scores={language=0}] [{"text":"Volcanos","color":"dark_red","bold":true},{"text":"\n\nOh sh*t! The volcanos are waking up! There is a high probability of lava projectiles touching your scaffolding bridges! Be carefull to the near scaffoldings, you can see them heating 2-3 seconds before the projectile reach them... unless it is actually a fireball launched by another player! Oh and, there is no villager, at all. Good luck & run fast!","color":"gray","bold":false},{"text":"\n---","color":"dark_red","bold":true}]
-
-# FR
-tellraw @a[scores={language=1}] [{"text":"Volcans","color":"dark_red","bold":true},{"text":"\n\nOh mer** ! les volcans se réveillent! Il y a une forte probabilité que des projectiles de lave touchent vos échafaudages ! Faites attention aux échafaudages proches, vous pouvez les voir chauffer 2-3 secondes avant que le projectile ne les atteigne... à moins que ce ne soit une boule de feu lancée par un autre joueur ! Oh et, il n'y a pas de villageois, du tout. Bonne chance et courez vite !","color":"gray","bold":false},{"text":"\n---","color":"dark_red","bold":true}]
+tellraw @a [{"translate":"blazing_scaffolding.volcanos","color":"dark_red","bold":true},{"translate":"blazing_scaffolding.volcano_preset","color":"gray","bold":false},{"text":"\n---","color":"dark_red","bold":true}]

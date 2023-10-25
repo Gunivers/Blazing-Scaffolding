@@ -9,57 +9,16 @@
           "functions": [
             {
               "function": "minecraft:set_name",
-              "entity": "this",
-              "name": {"text":"How to Play?","bold":true,"color":"#7027FF","italic":false},
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "language": 0
-                  }
-                }
-              ]
+              "name": {
+                "translate": "blazing_scaffolding.how_to_play",
+                "color": "#7027FF",
+                "bold": true,
+                "italic": false
+              }
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{pages:['[\"\",{\"text\":\" \\\\u0020How do you play\",\"bold\":true},{\"text\":\"\\\\n\",\"color\":\"reset\"},{\"text\":\" \\\\u0020 \\\\u0020 \\\\u0020Blazing\\\\n \\\\u0020 \\\\u0020Scaffolding\",\"bold\":true,\"color\":\"#f79714\"},{\"text\":\"?\",\"color\":\"reset\",\"bold\":true},{\"text\":\"\\\\n\",\"color\":\"reset\"},{\"text\":\"    Good question!\",\"italic\":true},{\"text\":\"\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"\\\\u25b6\",\"color\":\"#7027FF\"},{\"text\":\" Using scaffolds build up to escape the rising \",\"color\":\"reset\"},{\"text\":\"lava\",\"color\":\"red\"},{\"text\":\"!\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"\\\\u25b6\",\"color\":\"#7027FF\"},{\"text\":\" Place your team\\'s villager somewhere \",\"color\":\"reset\"},{\"text\":\"safe\",\"color\":\"#f79714\"},{\"text\":\" as it is where you respawn.\\\\n\\\\n \",\"color\":\"reset\"}]','[\"\",{\"text\":\"\\\\nYou can take it with you using \"},{\"text\":\"right click\",\"color\":\"#f79714\"},{\"text\":\" but be careful as your team cannot respawn until it is placed again.\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"\\\\u25b6\",\"color\":\"#7027FF\"},{\"text\":\" Win \",\"color\":\"#f79714\"},{\"text\":\"by throwing opposing teams and their villagers into the lava until you are the \",\"color\":\"reset\"},{\"text\":\"last team standing\",\"color\":\"#7027FF\"},{\"text\":\"!\",\"color\":\"reset\"}]','[\"\",{\"text\":\"\\\\n\\\\n\\\\n\\\\n \\\\u0020 Don\\'t know how to\\\\n \\\\u0020use a scaffolding?\\\\n\\\\n\"},{\"text\":\" \\\\u0020 \",\"color\":\"#38ec26\"},{\"text\":\"[join the tutorial]\",\"color\":\"#38ec26\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger tutorial\"}},{\"text\":\"\\\\n \",\"color\":\"reset\"}]','[\"\",{\"text\":\"\\\\n\\\\n\\\\n\\\\n \\\\u0020 \\\\u0020 \\\\u0020A map by the\\\\n\"},{\"text\":\"Gunivers community\",\"color\":\"#f79714\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://gunivers.net/\"}},{\"text\":\"\\\\n\",\"color\":\"reset\"},{\"text\":\" \\\\u0020 \\\\u0020 \\\\u0020 \\\\u0020Join us!\",\"italic\":true},{\"text\":\"\\\\n\\\\n\\\\n\\\\n \\\\u0020 \\\\u0020 \\\\u0020a problem?\\\\n\",\"color\":\"reset\"},{\"text\":\" \\\\u0020 \",\"color\":\"#38ec26\"},{\"text\":\"[/trigger reset]\",\"color\":\"#38ec26\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger reset\"}},{\"text\":\"\\\\n\\\\n \",\"color\":\"reset\"}]'],title:\"How to play\",author:\"Gunivers\"}",
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "language": 0
-                  }
-                }
-              ]
-            },
-            {
-              "function": "minecraft:set_name",
-              "entity": "this",
-              "name": {"text":"Comment Jouer ?","bold":true,"color":"#7027FF","italic":false},
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "language": 1
-                  }
-                }
-              ]
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{pages:['[\"\",{\"text\":\"\\\\n\\\\n Comment jouer à\",\"bold\":true},{\"text\":\"\\\\n\",\"color\":\"reset\"},{\"text\":\" \\\\u0020 \\\\u0020 \\\\u0020Blazing\\\\n \\\\u0020 \\\\u0020Scaffolding\",\"bold\":true,\"color\":\"#f79714\"},{\"text\":\" ?\",\"color\":\"reset\",\"bold\":true},{\"text\":\"\\\\n\",\"color\":\"reset\"},{\"text\":\"\\\\n Excellente question !\",\"italic\":true},{\"text\":\"\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"\\\\n\\\\u25b6\",\"color\":\"#7027FF\"},{\"text\":\" Construisez avec les échaffaudages pour échapper à la \",\"color\":\"reset\"},{\"text\":\"lave\",\"color\":\"red\"},{\"text\":\" qui monte !\\\\n\\\\n\",\"color\":\"reset\"}]{\"text\":\"\\\\u25b6\",\"color\":\"#7027FF\"},{\"text\":\" Placez votre villageois d\\'équipe pour réapparaître. \",\"color\":\"reset\"}','[\"\",{\"text\":\"\\\\nVous pouvez le déplacer \"},{\"text\":\"en cliquant\",\"color\":\"#f79714\"},{\"text\":\" dessus, mais attention, vos coéquipiers ne pourront plus réapparaître tant que vous l\\'avez.\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"\\\\u25b6\",\"color\":\"#7027FF\"},{\"text\":\" Remportez \",\"color\":\"#f79714\"},{\"text\":\"la victoire en poussant vos adversaires dans la lave, \",\"color\":\"reset\"},{\"text\":\"il n\\'en restera qu\\'un\",\"color\":\"#7027FF\"},{\"text\":\" !\",\"color\":\"reset\"}]','[\"\",{\"text\":\"\\\\n\\\\n\\\\n\\\\n\\\\n \\\\u0020 \\\\u0020Tu ne sais pas\\\\n \\\\u0020comment utiliser les \\\\n \\\\u0020 \\\\u0020échaffaudages ?\\\\n\\\\n\"},{\"text\":\"[rejoindre le tutoriel]\",\"color\":\"#38ec26\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger tutorial\"}},{\"text\":\"\\\\n \",\"color\":\"reset\"}]','[\"\",{\"text\":\"\\\\n\\\\n\\\\n\\\\n \\\\u0020 \\\\u0020Une map par la \\\\n\"},{\"text\":\"\",\"color\":\"#f79714\"},{\"text\":\"\\\\u0020 \\\\u0020 Communauté\\\\n \\\\u0020 \\\\u0020 \\\\u0020Gunivers\",\"color\":\"#f79714\",\"bold\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://gunivers.net/\"}},{\"text\":\"\\\\n\",\"color\":\"reset\"},{\"text\":\" \\\\u0020 Rejoignez nous !\",\"italic\":true},{\"text\":\"\\\\n\\\\n\\\\n\\\\n \\\\u0020 \\\\u0020 un problème ?\\\\n\",\"color\":\"reset\"},{\"text\":\" \\\\u0020 \",\"color\":\"#38ec26\"},{\"text\":\"[/trigger reset]\",\"color\":\"#38ec26\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger reset\"}},{\"text\":\"\\\\n\\\\n \",\"color\":\"reset\"}]'],title:\"Comment jouer\",author:\"Gunivers\"}",
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "language": 1
-                  }
-                }
-              ]
+              "tag": "{title:\"\",author:\"Gunivers\",pages:['[\"\",{\"translate\":\"blazing_scaffolding.how_to_play\",\"bold\":true},{\"text\":\"\\\\n\"},{\"text\":\"Blazing Scaffolding\",\"color\":\"#F79714\",\"bold\":true},{\"text\":\"?\\\\n\",\"bold\":true},{\"translate\":\"blazing_scaffolding.good_question\",\"italic\":true},{\"text\":\"\\\\n\\\\n\"},{\"text\":\"▶ \",\"color\":\"#7027FF\"},{\"translate\":\"blazing_scaffolding.using_scaffolds\"},{\"translate\":\"blazing_scaffolding.lava\",\"color\":\"red\"},{\"text\":\"\\\\n\\\\n▶ \",\"color\":\"#7027FF\"},{\"translate\":\"blazing_scaffolding.place_your_team_villager\"},{\"translate\":\"blazing_scaffolding.safe\",\"color\":\"#F79714\"},{\"translate\":\"blazing_scaffolding.as_it_s_where_you_respawn\"}]','[\"\",{\"text\":\"▶ \",\"color\":\"#7027FF\"},{\"translate\":\"blazing_scaffolding.you_can_take_it_with_you_using\"},{\"keybind\":\"key.use\",\"color\":\"#F79714\"},{\"translate\":\"blazing_scaffolding.but_be_careful_as_your_team\"},{\"text\":\"\\\\n\\\\n▶ \",\"color\":\"#7027FF\"},{\"translate\":\"blazing_scaffolding.how_win\",\"color\":\"#f79714\"},{\"translate\":\"blazing_scaffolding.by_throwing_opposing_teams\"},{\"translate\":\"blazing_scaffolding.last_team_standing\",\"color\":\"#7027FF\"},{\"text\":\"!\"}]','[{\"text\":\"\\\\n\\\\n\\\\n\\\\n\"},{\"translate\":\"blazing_scaffolding.don_t_know_how_to\"},{\"text\":\"\\\\n\\\\n\"},{\"translate\":\"blazing_scaffolding.join_the_tutorial\",\"color\":\"green\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger tutorial\"}}]','[{\"text\":\"\\\\n\\\\n\\\\n\\\\n\"},{\"translate\":\"blazing_scaffolding.a_map_by_the\"},{\"text\":\"\\\\n\"},{\"text\":\"Gunnivers community\",\"color\":\"#F79714\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://gunivers.net/\"}},{\"text\":\"\\\\n\"},{\"translate\":\"blazing_scaffolding.join_us\",\"italic\":true},{\"text\":\"\\\\n\\\\n\\\\n\\\\n\"},{\"translate\":\"blazing_scaffolding.a_problem\"},{\"text\":\"\\\\n\"},{\"text\":\"[/trigger reset]\",\"color\":\"green\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger reset\"}}]']}"
             }
           ]
         }

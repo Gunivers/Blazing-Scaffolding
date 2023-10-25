@@ -1,8 +1,7 @@
 
 scoreboard players operation VolcanoPopPeriod options = @s option_volcano_pop_period
 
-tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The interval between volcano projectiles has been set to ","color":"gray"},{"score":{"name":"VolcanoPopPeriod","objective":"options"},"color":"gold"},{"text":" tics","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"L'intervalle entre chaque projectile de volcan a été défini à ","color":"gray"},{"score":{"name":"VolcanoPopPeriod","objective":"options"},"color":"gold"},{"text":" tics","color":"gray"}]
+tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.the_interval_between_volcano_projectiles_has_been_set_to","color":"gray"},{"score":{"name":"VolcanoPopPeriod","objective":"options"},"color":"gold"},{"translate":"blazing_scaffolding.ticks","color":"gray"}]
 
 scoreboard players set @s option_volcano_pop_period 0
 scoreboard players enable @s option_volcano_pop_period

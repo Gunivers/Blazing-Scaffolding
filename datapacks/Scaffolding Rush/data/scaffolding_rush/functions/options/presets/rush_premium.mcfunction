@@ -49,7 +49,6 @@ scoreboard players set VolcanoTargetRate options 25
 function scaffolding_rush:options/refresh
 
 # EN
-tellraw @a[scores={language=0}] [{"text":"Rush Premium\n\n","color":"#7027FF","bold":true},{"text":"Same as the classic preset, but faster and with spectial items!\n\nScaffoldings will now create pillars instantly and you climb faster inside them, you will recieve some bumping arrows and fireballs that break scaffoldings in order to kill you enemies at distance, the lava raise faster, the worldborder is shrinking and your villager can't respawn!","color":"gray","bold":false},{"text":"\n---","color":"#7027FF","bold":true}]
+tellraw @a [{"translate":"blazing_scaffolding.rush_prenium","color":"#7027FF","bold":true},{"text":"\n\n"},{"translate":"blazing_scaffolding.rush_prenium_preset","color":"gray","bold":false},{"text":"\n---","color":"#7027FF","bold":true}]
 
 # FR
-tellraw @s[scores={language=1}] [{"text":"Rush Premium\n\n","color":"#7027FF","bold":true},{"text":"Idem que le preset classique, mais en plus rapide avec des items spéciaux! Les échaffaudages créent désormais des pilliers instantanément et vous grimpez plus vite dans ces derniers. Vous aurez accès a des flèches cinétiques et des boules de feu afin de tuer vos anemis à distance, la lave monte plus vite, la bordure de monde rétrécit et la mort de votre villageois est définitive!","color":"gray","bold":false},{"text":"\n---","color":"#7027FF","bold":true}]

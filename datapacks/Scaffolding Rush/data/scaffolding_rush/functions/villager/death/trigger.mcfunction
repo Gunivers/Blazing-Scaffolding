@@ -29,5 +29,4 @@ execute if score #villager.enabled options matches 1 \
         unless entity @e[type=villager,tag=respawn_villager,tag=green_villager] \
     run function scaffolding_rush:villager/death/just_died/green
 
-title @s[scores={language=0},tag=TeamEliminated] actionbar ["",{"text":"You can't respawn","color":"dark_red"}]
-title @s[scores={language=1},tag=TeamEliminated] actionbar ["",{"text":"Vous ne pouvez plus réapparaître","color":"dark_red"}]
+title @s[tag=TeamEliminated] actionbar ["",{"translate":"blazing_scaffolding.you_can_t_respawn","color":"dark_red"}]

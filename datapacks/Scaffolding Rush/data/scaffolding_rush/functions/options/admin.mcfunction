@@ -1,13 +1,12 @@
 execute store success score #admin.exist options if score #admin.exist options matches 0
 execute as @a[tag=!admin,scores={option_admin=1}] if score #admin.exist options matches 0 run scoreboard players set #admin.exist options 2
 
-# execute if score #admin.exist options matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"closed","color":"red"}]
-# execute if score #admin.exist options matches 0 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"open","color":"green"}]
-execute if score #admin.exist options matches 1.. run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@a[scores={option_admin=1}]","color":"gold"},{"text":" is now the administrator","color":"gray"}]
+# execute if score #admin.exist options matches 1 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"closed","color":"red"}]
+# execute if score #admin.exist options matches 0 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"text":"The option book is ","color":"gray"},{"text":"open","color":"green"}]
+execute if score #admin.exist options matches 1.. run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"selector":"@a[scores={option_admin=1}]","color":"gold"},{"translate":"blazing_scaffolding.is_now_the_admin","color":"gray"}]
 
 # execute if score #admin.exist options matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le livre d'option est ","color":"gray"},{"text":"fermé","color":"red"}]
 # execute if score #admin.exist options matches 0 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le livre d'option est ","color":"gray"},{"text":"ouvert","color":"green"}]
-execute if score #admin.exist options matches 1.. run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"selector":"@a[scores={option_admin=1}]","color":"gold"},{"text":" est maintenant l'administrateur de partie","color":"gray"}]
 
 
 execute if score #admin.exist options matches 1.. run scoreboard players set #admin.exist options 1
