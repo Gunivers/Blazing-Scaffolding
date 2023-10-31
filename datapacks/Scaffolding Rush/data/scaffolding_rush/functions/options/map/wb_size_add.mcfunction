@@ -6,5 +6,4 @@ execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/m
 
 function scaffolding_rush:options/refresh
 
-tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The worldborder has been set to ","color":"gray"},{"score":{"name":"WBSize","objective":"options"},"color":"gold"},{"text":" blocks","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"La taille de la map a été mise à ","color":"gray"},{"score":{"name":"WBSize","objective":"options"},"color":"gold"},{"text":" blocks","color":"gray"}]
+tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.worldborder_size_add","color":"gray"},{"score":{"name":"WBSize","objective":"options"},"color":"gold"},{"text":" "},{"translate":"blazing_scaffolding.blocks","color":"gray"}]

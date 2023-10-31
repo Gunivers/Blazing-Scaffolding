@@ -11,121 +11,43 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "text": "Sand",
+                                "translate": "block.minecraft.sand",
                                 "italic": false
-                            },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 0
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "function": "minecraft:set_name",
-                            "name": {
-                                "text": "Sable",
-                                "italic": false
-                            },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 1
-                                    }
-                                }
-                            ]
+                            }
                         },
                         {
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "text": "Extand scaffolding bridges without having to",
+                                    "translate": "blazing_scaffolding.sand.lore_0",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "create a new pillar using these sand blocks.",
+                                    "translate": "blazing_scaffolding.sand.lore_1",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "Be carefull, if the initial pillar is destroyed",
+                                    "translate": "blazing_scaffolding.sand.lore_2",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "the overall bridge will collapse.",
+                                    "translate": "blazing_scaffolding.sand.lore_3",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "Also, enemies are slowed and take damage",
+                                    "translate": "blazing_scaffolding.sand.lore_4",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "when they walk on it.",
+                                    "translate": "blazing_scaffolding.sand.lore_5",
                                     "color": "gray",
                                     "italic": false
                                 }   
-                            ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 0
-                                    }
-                                }
-                            ]
-                          },
-                          {
-                            "function": "minecraft:set_lore",
-                            "lore": [
-                                {
-                                    "text": "Aggrandissez les ponts d'échaffaudages sans",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "avoir à créer un nouveau pilier en utilisant",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "ces blocs de sable. Attention, si le pilier",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "initial est détruit, l'ensemble du pont s'effondrera.",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "De plus, les ennemis sont ralentis et prennent",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "des dégâts lorsqu'ils marchent dessus.",
-                                    "color": "gray",
-                                    "italic": false
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 1
-                                    }
-                                }
                             ]
                           }
                     ],
@@ -146,121 +68,43 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "text": "Sand",
+                                "translate": "block.minecraft.sand",
                                 "italic": false
-                            },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 0
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "function": "minecraft:set_name",
-                            "name": {
-                                "text": "Sable",
-                                "italic": false
-                            },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 1
-                                    }
-                                }
-                            ]
+                            }
                         },
                         {
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "text": "Extand scaffolding bridges without having to",
+                                    "translate": "blazing_scaffolding.sand.lore_0",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "create a new pillar using these sand blocks.",
+                                    "translate": "blazing_scaffolding.sand.lore_1",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "Be carefull, if the initial pillar is destroyed",
+                                    "translate": "blazing_scaffolding.sand.lore_2",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "the overall bridge will collapse.",
+                                    "translate": "blazing_scaffolding.sand.lore_3",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "Also, enemies are slowed and take damage",
+                                    "translate": "blazing_scaffolding.sand.lore_4",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "when they walk on it.",
+                                    "translate": "blazing_scaffolding.sand.lore_5",
                                     "color": "gray",
                                     "italic": false
                                 }   
-                            ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 0
-                                    }
-                                }
-                            ]
-                          },
-                          {
-                            "function": "minecraft:set_lore",
-                            "lore": [
-                                {
-                                    "text": "Aggrandissez les ponts d'échaffaudages sans",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "avoir à créer un nouveau pilier en utilisant",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "ces blocs de sable. Attention, si le pilier",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "initial est détruit, l'ensemble du pont s'effondrera.",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "De plus, les ennemis sont ralentis et prennent",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "des dégâts lorsqu'ils marchent dessus.",
-                                    "color": "gray",
-                                    "italic": false
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 1
-                                    }
-                                }
                             ]
                           }
                     ],
@@ -281,121 +125,43 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "text": "Sand",
+                                "translate": "block.minecraft.sand",
                                 "italic": false
-                            },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 0
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "function": "minecraft:set_name",
-                            "name": {
-                                "text": "Sable",
-                                "italic": false
-                            },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 1
-                                    }
-                                }
-                            ]
+                            }
                         },
                         {
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "text": "Extand scaffolding bridges without having to",
+                                    "translate": "blazing_scaffolding.sand.lore_0",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "create a new pillar using these sand blocks.",
+                                    "translate": "blazing_scaffolding.sand.lore_1",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "Be carefull, if the initial pillar is destroyed",
+                                    "translate": "blazing_scaffolding.sand.lore_2",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "the overall bridge will collapse.",
+                                    "translate": "blazing_scaffolding.sand.lore_3",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "Also, enemies are slowed and take damage",
+                                    "translate": "blazing_scaffolding.sand.lore_4",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "when they walk on it.",
+                                    "translate": "blazing_scaffolding.sand.lore_5",
                                     "color": "gray",
                                     "italic": false
                                 }    
-                            ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 0
-                                    }
-                                }
-                            ]
-                          },
-                          {
-                            "function": "minecraft:set_lore",
-                            "lore": [
-                                {
-                                    "text": "Aggrandissez les ponts d'échaffaudages sans",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "avoir à créer un nouveau pilier en utilisant",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "ces blocs de sable. Attention, si le pilier",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "initial est détruit, l'ensemble du pont s'effondrera.",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "De plus, les ennemis sont ralentis et prennent",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "des dégâts lorsqu'ils marchent dessus.",
-                                    "color": "gray",
-                                    "italic": false
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 1
-                                    }
-                                }
                             ]
                           }
                     ],
@@ -416,122 +182,44 @@
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "text": "Sand",
+                                "translate": "block.minecraft.sand",
                                 "italic": false
-                            },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 0
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "function": "minecraft:set_name",
-                            "name": {
-                                "text": "Sable",
-                                "italic": false
-                            },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 1
-                                    }
-                                }
-                            ]
+                            }
                         },
                         {
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                    "text": "Extand scaffolding bridges without having to",
+                                    "translate": "blazing_scaffolding.sand.lore_0",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "create a new pillar using these sand blocks.",
+                                    "translate": "blazing_scaffolding.sand.lore_1",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "Be carefull, if the initial pillar is destroyed",
+                                    "translate": "blazing_scaffolding.sand.lore_2",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "the overall bridge will collapse.",
+                                    "translate": "blazing_scaffolding.sand.lore_3",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "Also, enemies are slowed and take damage",
+                                    "translate": "blazing_scaffolding.sand.lore_4",
                                     "color": "gray",
                                     "italic": false
                                 },
                                 {
-                                    "text": "when they walk on it.",
+                                    "translate": "blazing_scaffolding.sand.lore_5",
                                     "color": "gray",
                                     "italic": false
                                 }   
                             ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 0
-                                    }
-                                }
-                            ]
-                          },
-                          {
-                            "function": "minecraft:set_lore",
-                            "lore": [
-                                {
-                                    "text": "Aggrandissez les ponts d'échaffaudages sans",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "avoir à créer un nouveau pilier en utilisant",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "ces blocs de sable. Attention, si le pilier",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "initial est détruit, l'ensemble du pont s'effondrera.",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "De plus, les ennemis sont ralentis et prennent",
-                                    "color": "gray",
-                                    "italic": false
-                                },
-                                {
-                                    "text": "des dégâts lorsqu'ils marchent dessus.",
-                                    "color": "gray",
-                                    "italic": false
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        "language": 1
-                                    }
-                                }
-                            ]
                           }
                     ],
                     "conditions": [

@@ -26,110 +26,37 @@
         {
             "function": "minecraft:set_name",
             "name": {
-              "text": "Respawn villager (cooldown)",
+              "translate": "blazing_scaffolding.respawn_villager_cooldown",
               "italic": false
-            },
-            "conditions": [
-              {
-                "condition": "minecraft:entity_scores",
-                "entity": "this",
-                "scores": {
-                  "language": 0
-                }
-              }
-            ]
-        },
-        {
-            "function": "minecraft:set_name",
-            "name": {
-              "text": "Villageois de réaparition (rechargement)",
-              "italic": false
-            },
-            "conditions": [
-              {
-                "condition": "minecraft:entity_scores",
-                "entity": "this",
-                "scores": {
-                  "language": 1
-                }
-              }
-            ]
+            }
         },
         {
             "function": "minecraft:set_lore",
             "lore": [
               {
-                "text": "The villager allow your team to respawn on it.",
+                "translate": "blazing_scaffolding.respawn_villager_cooldown.lore_0",
                 "color": "gray",
                 "italic": false
               },
               {
-                "text": "You can right-click it to move it at any time",
+                "translate": "blazing_scaffolding.respawn_villager_cooldown.lore_1",
                 "color": "gray",
                 "italic": false
               },
               {
-                "text": "(unless it is deactivated in the options).",
+                "translate": "blazing_scaffolding.respawn_villager_cooldown.lore_2",
                 "color": "gray",
                 "italic": false
               },
               {
-                "text": "If you place your villager in the lobby,",
+                "translate": "blazing_scaffolding.respawn_villager_cooldown.lore_3",
                 "color": "gray",
                 "italic": false
               },
               {
-                "text": "it's position will be conserved when the game will start.",
+                "translate": "blazing_scaffolding.respawn_villager_cooldown.lore_4",
                 "color": "gray",
                 "italic": false
-              }
-            ],
-            "conditions": [
-              {
-                "condition": "minecraft:entity_scores",
-                "entity": "this",
-                "scores": {
-                  "language": 0
-                }
-              }
-            ]
-          },
-          {
-            "function": "minecraft:set_lore",
-            "lore": [
-              {
-                "text": "Le villageois permet à votre équipe de réapparaître dessus.",
-                "color": "gray",
-                "italic": false
-              },
-              {
-                "text": "Vous pouvez le déplacer en faisant un clic droit dessus à tout moment",
-                "color": "gray",
-                "italic": false
-              },
-              {
-                "text": "(sauf si cette option est désactivée dans les options).",
-                "color": "gray",
-                "italic": false
-              },
-              {
-                "text": "Si vous placez votre villageois dans le lobby,",
-                "color": "gray",
-                "italic": false
-              },
-              {
-                "text": "sa position sera conservée lorsque la partie commencera.",
-                "color": "gray",
-                "italic": false
-              }
-            ],
-            "conditions": [
-              {
-                "condition": "minecraft:entity_scores",
-                "entity": "this",
-                "scores": {
-                  "language": 1
-                }
               }
             ]
           }

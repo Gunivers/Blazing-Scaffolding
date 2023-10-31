@@ -1,2 +1,1 @@
-tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Lobby loaded","color":"gray"}]
-tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Lobby chargé","color":"gray"}]
+tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.lobby_loaded","color":"gray"}]

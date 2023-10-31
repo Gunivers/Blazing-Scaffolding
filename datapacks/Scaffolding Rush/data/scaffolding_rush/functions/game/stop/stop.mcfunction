@@ -2,14 +2,11 @@ worldborder center 0 0
 
 function scaffolding_rush:game/summon_markers
 
-execute if score #game.running data matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The game has been stopped","color":"gray"}]
-execute if score #game.running data matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"La partie a été stoppée","color":"gray"}]
+execute if score #game.running data matches 1 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.game_stopped","color":"gray"}]
 
-execute if score #game.loading data matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"The launching of the game has been stopped","color":"gray"}]
-execute if score #game.loading data matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Le lancement de la partie a été annulé","color":"gray"}]
+execute if score #game.loading data matches 1 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.launching_stopped","color":"gray"}]
 
-execute if score DevelopementMode data matches 1 run tellraw @a[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Reset in progress...","color":"gray"}]
-execute if score DevelopementMode data matches 1 run tellraw @a[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Rechargement en cours...","color":"gray"}]
+execute if score DevelopementMode data matches 1 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.reset_in_progress","color":"gray"}]
 
 
 function scaffolding_rush:game/lava/global_rising/stop
@@ -77,6 +74,6 @@ bossbar set minecraft:time_limit visible false
 effect give @a minecraft:jump_boost 5 255 true
 
 #confirmation message
-execute if score DevelopementMode data matches 1 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"text":"Reset done","color":"gray"}]
+execute if score DevelopementMode data matches 1 run tellraw @a ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.reset_done","color":"gray"}]
 
-execute as @a run function scaffolding_rush:lobby/tp_to_lobby
+execute as @a[tag=InGame] run function scaffolding_rush:lobby/tp_to_lobby

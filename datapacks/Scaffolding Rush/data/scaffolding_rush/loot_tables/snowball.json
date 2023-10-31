@@ -11,90 +11,27 @@
             {
                 "function": "minecraft:set_name",
                 "name": {
-                  "text": "Bumping arrow",
+                  "translate": "blazing_scaffolding.bumping_arrow",
                   "italic": false
-                },
-                "conditions": [
-                  {
-                    "condition": "minecraft:entity_scores",
-                    "entity": "this",
-                    "scores": {
-                      "language": 0
-                    }
-                  }
-                ]
-            },
-            {
-                "function": "minecraft:set_name",
-                "name": {
-                  "text": "Flèche cinétique",
-                  "italic": false
-                },
-                "conditions": [
-                  {
-                    "condition": "minecraft:entity_scores",
-                    "entity": "this",
-                    "scores": {
-                      "language": 1
-                    }
-                  }
-                ]
+                }
             },
             {
                 "function": "minecraft:set_lore",
                 "lore": [
                   {
-                    "text": "Use these arrow to push your enemies",
+                    "translate": "blazing_scaffolding.bumping_arrow.lore_0",
                     "color": "gray",
                     "italic": false
                   },
                   {
-                    "text": "and make them fall into the lava.",
+                    "translate": "blazing_scaffolding.bumping_arrow.lore_1",
                     "color": "gray",
                     "italic": false
                   },
                   {
-                    "text": "Villagers destroy nearby incoming arrows.",
+                    "translate": "blazing_scaffolding.bumping_arrow.lore_2",
                     "color": "gray",
                     "italic": false
-                  }
-                ],
-                "conditions": [
-                  {
-                    "condition": "minecraft:entity_scores",
-                    "entity": "this",
-                    "scores": {
-                      "language": 0
-                    }
-                  }
-                ]
-              },
-              {
-                "function": "minecraft:set_lore",
-                "lore": [
-                  {
-                    "text": "Utilisez ces flèches pour pousser vos ennemis",
-                    "color": "gray",
-                    "italic": false
-                  },
-                  {
-                    "text": "et les faire tomber dans la lave.",
-                    "color": "gray",
-                    "italic": false
-                  },
-                  {
-                    "text": "Les villageois détruisent les flèches qui les approchent.",
-                    "color": "gray",
-                    "italic": false
-                  }
-                ],
-                "conditions": [
-                  {
-                    "condition": "minecraft:entity_scores",
-                    "entity": "this",
-                    "scores": {
-                      "language": 1
-                    }
                   }
                 ]
               }

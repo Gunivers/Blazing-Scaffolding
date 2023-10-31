@@ -3,41 +3,10 @@
     "function": "minecraft:set_name",
     "name": [
       {
-        "text": "Activé",
-        "bold": true,
-        "italic": false,
-        "color": "green"
-      }
-    ],
-    "replace": false,
-    "conditions": [
-      {
-        "condition": "minecraft:entity_scores",
-        "entity": "this",
-        "scores": {
-          "language": 1
-        }
-      }
-    ]
-  },
-  {
-    "function": "minecraft:set_name",
-    "name": [
-      {
-        "text": "Activated",
-        "bold": true,
+        "translate": "blazing_scaffolding.activated",
         "color": "green",
+        "bold": true,
         "italic": false
-      }
-    ],
-    "replace": false,
-    "conditions": [
-      {
-        "condition": "minecraft:entity_scores",
-        "entity": "this",
-        "scores": {
-          "language": 0
-        }
       }
     ]
   }

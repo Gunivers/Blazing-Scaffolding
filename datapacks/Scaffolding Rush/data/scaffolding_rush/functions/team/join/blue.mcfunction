@@ -8,5 +8,4 @@ execute positioned as @e[type=villager,tag=teamJoinVillager,tag=teamBlue] run te
 schedule clear scaffolding_rush:lobby/animation/restore_villager_pos/blue
 schedule function scaffolding_rush:lobby/animation/restore_villager_pos/blue 30t
 
-tellraw @a[scores={language=0}] ["",{"text":"[BS]","color":"gold"},{"text":" "},{"selector":"@s","color":"blue"},{"text":" joined team ","color":"gray"},{"text":"Blue","color":"blue"}]
-tellraw @a[scores={language=1}] ["",{"text":"[BS]","color":"gold"},{"text":" "},{"selector":"@s","color":"blue"},{"text":" a rejoint l'équipe ","color":"gray"},{"text":"Bleue","color":"blue"}]
+tellraw @a ["",{"text":"[BS]","color":"gold"},{"text":" "},{"selector":"@s","color":"blue"},{"translate":"blazing_scaffolding.joined_team","color":"gray"},{"translate":"color.minecraft.blue","color":"blue"}]

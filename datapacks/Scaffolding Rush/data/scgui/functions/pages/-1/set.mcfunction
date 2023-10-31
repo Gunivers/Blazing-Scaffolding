@@ -2,8 +2,7 @@
 function scgui:pages/blank
 
 #admin
-item replace entity @s[scores={language=0}] enderchest.13 with barrier{scgui:1, scgui.action:13, display:{Name:'[{"text":"Sorry, only the admin","color":"red"},{"text":" can change settings","color":"red"}]'}, Enchantments: [{}]} 1
-item replace entity @s[scores={language=1}] enderchest.13 with barrier{scgui:1, scgui.action:13, display:{Name:'[{"text":"Désolez, seuleument l\'administrateur","color":"red"},{"text":" peut modifier les paramètres","color":"red"}]'}, Enchantments: [{}]} 1
+item replace entity @s enderchest.13 with barrier{scgui:1, scgui.action:13, display:{Name:'[{"translate":"blazing_scaffolding.sorry_only_the_admin","color":"red"},{"translate":"blazing_scaffolding.can_change_settings","color":"red"}]'}, Enchantments: [{}]} 1
 
 loot replace entity @s enderchest.18 loot scgui:empty_cell
 loot replace entity @s enderchest.19 loot scgui:empty_cell

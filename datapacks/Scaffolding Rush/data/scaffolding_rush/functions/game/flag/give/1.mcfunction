@@ -7,5 +7,4 @@ item replace entity @s armor.head with minecraft:purple_banner{BlockEntityTag:{P
 
 title @s times 0 20 20
 title @s title {"text":""}
-execute if score @s language matches 0 run title @s subtitle {"text":"Bring it back to your villager!","color":"dark_purple"}
-execute if score @s language matches 1 run title @s subtitle {"text":"Raporte le à ton villageois !","color":"dark_purple"}
+title @s subtitle {"translate":"blazing_scaffolding.bring_it_back_to_your_villager","color":"dark_purple"}

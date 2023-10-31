@@ -49,7 +49,6 @@ scoreboard players set VolcanoTargetRate options 10
 function scaffolding_rush:options/refresh
 
 # EN
-tellraw @a[scores={language=0}] [{"text":"Flag Mayhem\n\n","color":"light_purple","bold":true},{"text":"Another variant of GTF. Accumulate point by capturing flags and bringing them back to your villager. But here, lava raise quickly and the worldborder shrink! In counterpart, scaffoldings create pillars instantly and you climb faster inside them. Moreover, you have bumping arrows and fireballs, and the last but not least: you can move your villager!","color":"gray","bold":false},{"text":"\n---","color":"light_purple","bold":true}]
+tellraw @a [{"translate":"blazing_scaffolding.flag_mayhem","color":"light_purple","bold":true},{"text":"\n\n"},{"translate":"blazing_scaffolding.flag_mayhem_preset","color":"gray","bold":false},{"text":"\n---","color":"light_purple","bold":true}]
 
 # FR
-tellraw @a[scores={language=1}] [{"text":"Flag Mayhem\n\n","color":"light_purple","bold":true},{"text":"Une autre variante de GTF. Accumulez des points en capturant des drapeaux et en les ramenant à votre villageois. Mais ici, la lave monte vite et la bordure du monde rétrécit ! En contrepartie, les échafaudages créent des piliers instantanément et vous grimpez plus vite à l'intérieur. De plus, vous avez des flèches cinétique et des boules de feu. Et le meilleur pour la fin: vous pouvez déplacer votre villageois !","color":"gray","bold":false},{"text":"\n---","color":"light_purple","bold":true}]

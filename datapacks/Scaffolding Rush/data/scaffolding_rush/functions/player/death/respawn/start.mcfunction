@@ -4,8 +4,6 @@
 scoreboard players operation @s respawn.timer = #respawn.delay.tick options
 scoreboard players operation @s respawn.timer > 1 const
 
-title @s times 0 10 10
-
 gamemode spectator @s
 tag @s remove player.death.drown_in_lava
 tag @s remove player.death.killed_by_player

@@ -49,7 +49,6 @@ scoreboard players set VolcanoTargetRate options 25
 function scaffolding_rush:options/refresh
 
 # EN
-tellraw @a[scores={language=0}] [{"text":"Get Those Flags\n\n","color":"green","bold":true},{"text":"As the name suggest it, the goal is to accumulate point by capturing flags and bringing them back to your villager. Direct fights now only matter to reach a flag before enemy teams, as killing enemies is no longer a victory condition. Scaffoldings behave in the natural way and you can't move your villager. However, you will have access to bumping arrows to distrub your enemies!","color":"gray","bold":false},{"text":"\n---","color":"green","bold":true}]
+tellraw @a [{"translate":"blazing_scaffolding.get_those_flags","color":"green","bold":true},{"text":"\n\n"},{"translate":"blazing_scaffolding.get_those_flags_preset","color":"gray","bold":false},{"text":"\n---","color":"green","bold":true}]
 
 # FR
-tellraw @a[scores={language=1}] [{"text":"Get Those Flags\n\n","color":"green","bold":true},{"text":"Accumulez des points en capturant des drapeaux et en les ramenant à votre villageois. Les combats directs vous permettent d'atteindre un drapeau avant les autres, mais tuer les ennemis n'est plus une condition de victoire. Les échafaudages se comportent de manière naturelle et vous ne pouvez pas déplacer votre villageois. Cependant, vous aurez accès à des flèches cinétiques pour pousser vos ennemis !","color":"gray","bold":false},{"text":"\n---","color":"green","bold":true}]

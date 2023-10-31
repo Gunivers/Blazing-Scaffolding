@@ -17,9 +17,7 @@ execute as @a[tag=!player.is_dead] at @s if block ~ ~ ~ #scaffolding_rush:lobby_
 # Start game
 execute unless score #admin.exist options matches 1 as @a[scores={bellring=1..}] run scoreboard players set @s start_game 1
 execute if score #admin.exist options matches 1 as @a[scores={bellring=1..},tag=admin] run scoreboard players set @s start_game 1
-execute if score #admin.exist options matches 1 as @a[scores={bellring=1..},tag=!admin] run tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"text":"Sorry, only ","color":"red"},{"selector":"@a[tag=admin]","color":"red"},{"text":" can start the game","color":"red"}]
-
-execute if score #admin.exist options matches 1 as @a[scores={bellring=1..},tag=!admin] run tellraw @s[scores={language=1}] ["",{"text":"[BS] ","color":"gold"},{"text":"Désolez, seuleument ","color":"red"},{"selector":"@a[tag=admin]","color":"red"},{"text":" peut démarrer la partie","color":"red"}]
+execute if score #admin.exist options matches 1 as @a[scores={bellring=1..},tag=!admin] run tellraw @s ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.sorry_only","color":"red"},{"selector":"@a[tag=admin]","color":"red"},{"translate":"blazing_scaffolding.can_start","color":"red"}]
 
 scoreboard players reset @a bellring
 

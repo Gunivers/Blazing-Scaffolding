@@ -9,8 +9,6 @@ execute if score #admin.exist options matches 0 as @a run function scaffolding_r
 scoreboard players enable @s option_admin
 scoreboard players enable @s tutorial
 
-bossbar set reset_lobby_en players @s[scores={language=0}]
-bossbar set reset_lobby_fr players @a[scores={language=1}]
+bossbar set reset_lobby players @a
 
-bossbar set reset_map_en players @s[scores={language=0}]
-bossbar set reset_map_fr players @a[scores={language=1}]
+bossbar set reset_map players @a

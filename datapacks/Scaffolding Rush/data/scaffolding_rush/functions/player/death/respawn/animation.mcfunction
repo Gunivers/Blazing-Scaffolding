@@ -1,8 +1,7 @@
 
 # say player/death/respawn/animation @s
 
-title @s[scores={language=0}] title ["",{"text":"Respawning...","color":"red"}]
-title @s[scores={language=1}] title ["",{"text":"Réapparition...","color":"red"}]
+title @s title ["",{"translate":"blazing_scaffolding.respawning","color":"red"}]
 
 # Progress bar ----------------------------------------------------------------
 

@@ -29,93 +29,28 @@
           "function": "minecraft:set_name",
           "entity": "this",
           "name": {
-            "text": "Sand",
+            "translate": "block.minecraft.sand",
             "italic": false
-          },
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 0
-              }
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_name",
-          "entity": "this",
-          "name": {
-            "text": "Sable",
-            "italic": false
-          },
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 1
-              }
-            }
-          ]
+          }
         },
         {
           "function": "minecraft:set_lore",
           "entity": "this",
           "lore": [
             {
-              "text": "Use it to extand scaffolding bridges.",
+              "translate": "blazing_scaffolding.sand_tutorial.lore_0",
               "color": "gray",
               "italic": false
             },
             {
-              "text": "But be careful, if the original pillar breaks,",
+              "translate": "blazing_scaffolding.sand_tutorial.lore_1",
               "color": "gray",
               "italic": false
             },
             {
-              "text": "all the bridge will fall.",
+              "translate": "blazing_scaffolding.sand_tutorial.lore_2",
               "color": "gray",
               "italic": false
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 0
-              }
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "entity": "this",
-          "lore": [
-            {
-              "text": "Utilisez le pour prolonger les ponts d'échafaudages.",
-              "color": "gray",
-              "italic": false
-            },
-            {
-              "text": "Attention, si le pilier d'origine casse",
-              "color": "gray",
-              "italic": false
-            },
-            {
-              "text": "l'ensemble du ponts s'effondrera.",
-              "color": "gray",
-              "italic": false
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "language": 1
-              }
             }
           ]
         }
