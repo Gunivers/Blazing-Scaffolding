@@ -119,6 +119,10 @@ execute as @a[tag=player.item.can_have_book] \
         if score @s player.item.book.count matches 0 \
     run loot replace entity @s hotbar.8 loot scaffolding_rush:lobby_book
 
+execute as @a[tag=inTutorial,scores={pos.x=5..}] \
+        if score #player.item.sand.enabled options matches 1 \
+        unless data entity @s Inventory[{id:"minecraft:cyan_concrete_powder"}] \
+    run give @s cyan_concrete_powder 64
 # Reset timer -----------------------------------------------------------------
 
 scoreboard players set @a[scores={player.item.fireball.timer=..-1}] player.item.fireball.timer 300
