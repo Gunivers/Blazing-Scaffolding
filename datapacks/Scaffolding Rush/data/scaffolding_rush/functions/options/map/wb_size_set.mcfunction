@@ -1,6 +1,6 @@
-scoreboard players enable @a option_wb_size_add
+scoreboard players enable @a option_worldborder_size
 
-scoreboard players operation WBAddTemp options = @s option_wb_size_add
+scoreboard players operation WBSize options = @s option_worldborder_size
 
 execute unless entity @a[tag=inTutorial] run function scaffolding_rush:options/map/wb_size_refresh
 

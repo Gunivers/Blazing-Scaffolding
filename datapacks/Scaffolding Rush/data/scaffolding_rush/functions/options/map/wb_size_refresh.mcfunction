@@ -1,8 +1,3 @@
-# Change wb size by number of teams
-execute if score TeamNumber options matches 2 run scoreboard players operation WBSize options = WBSize2 options
-execute if score TeamNumber options matches 3 run scoreboard players operation WBSize options = WBSize3 options
-execute if score TeamNumber options matches 4 run scoreboard players operation WBSize options = WBSize4 options
-
 # normalize values
 execute if score WBAddTemp options matches ..-5 run scoreboard players set WBAddTemp options -5
 execute if score WBAddTemp options matches 5.. run scoreboard players set WBAddTemp options 5
@@ -58,4 +53,4 @@ scoreboard players operation -WBbyTwo data -= WBbyTwo data
 
 # reset values
 scoreboard players set WBAddTemp options 0
-scoreboard players set @a option_wb_size_add 0
+scoreboard players set @a option_worldborder_size 0

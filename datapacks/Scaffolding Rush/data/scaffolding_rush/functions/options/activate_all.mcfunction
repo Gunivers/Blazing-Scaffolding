@@ -14,7 +14,7 @@ scoreboard players enable @s option_vil_resp_cd
 scoreboard players enable @s option_instant_pil
 scoreboard players enable @s option_perf_mode
 scoreboard players enable @s option_team_egg
-scoreboard players enable @s option_wb_size_add
+scoreboard players enable @s option_worldborder_size
 scoreboard players enable @s option_regen
 scoreboard players enable @s option_fall_damage
 scoreboard players enable @s option_random_team
