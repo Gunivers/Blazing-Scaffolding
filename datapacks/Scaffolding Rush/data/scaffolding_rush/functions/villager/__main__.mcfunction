@@ -10,12 +10,6 @@ tag @e[type=villager,tag=respawn_villager,x=1000,y=100,z=1000,distance=..500] ad
 execute unless score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1.8 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
 execute unless score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
 
-# Kill Villager behind WB
-execute as @e[type=villager,tag=respawn_villager] if score @s pos.x > WBbyTwo data run function scaffolding_rush:villager/death/kill
-execute as @e[type=villager,tag=respawn_villager] if score @s pos.x < -WBbyTwo data run function scaffolding_rush:villager/death/kill
-execute as @e[type=villager,tag=respawn_villager] if score @s pos.z > WBbyTwo data run function scaffolding_rush:villager/death/kill
-execute as @e[type=villager,tag=respawn_villager] if score @s pos.z < -WBbyTwo data run function scaffolding_rush:villager/death/kill
-
 # Check if villager is alive
 function scaffolding_rush:villager/death/villager_loss_detection
 
