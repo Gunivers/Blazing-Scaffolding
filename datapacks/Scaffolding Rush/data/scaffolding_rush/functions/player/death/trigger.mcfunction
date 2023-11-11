@@ -6,15 +6,15 @@ execute as @a at @s run spawnpoint @s ~ ~ ~ ~
 # Exit world border -----------------------------------------------------------
 
 #check X
-execute as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.x > WBbyTwo data run kill @s
-execute as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.x < -WBbyTwo data run kill @s
+execute unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.x > WBbyTwo data run kill @s
+execute unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.x < -WBbyTwo data run kill @s
 
 #check Y
-execute as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.y < 0 const run kill @s
+execute unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.y < 0 const run kill @s
 
 #check Z
-execute as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.z > WBbyTwo data run kill @s
-execute as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.z < -WBbyTwo data run kill @s
+execute unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.z > WBbyTwo data run kill @s
+execute unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.z < -WBbyTwo data run kill @s
 
 
 # Check if player can respawn -------------------------------------------------

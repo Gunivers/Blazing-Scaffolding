@@ -3,9 +3,6 @@ execute as @e store result score @s pos.x run data get entity @s Pos[0]
 execute as @a store result score @s pos.y run data get entity @s Pos[1]
 execute as @e store result score @s pos.z run data get entity @s Pos[2]
 
-#check player coordonates
-execute unless score #game.end data matches 1 as @a[gamemode=!spectator,tag=!inTutorial] at @s run function scaffolding_rush:lobby/correct_coordinates
-
 function scaffolding_rush:lobby/animation/__main__
 
 # Light
