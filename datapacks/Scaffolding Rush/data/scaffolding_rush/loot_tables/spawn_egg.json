@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"VillagerSpawnerBlue\"]}}"
+              "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"villager.spawner.blue\"]}}"
             },
             {
                 "function": "minecraft:set_name",
@@ -66,7 +66,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"VillagerSpawnerGreen\"]}}"
+              "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"villager.spawner.green\"]}}"
             },
             {
                 "function": "minecraft:set_name",
@@ -122,7 +122,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"VillagerSpawnerRed\"]}}"
+              "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"villager.spawner.red\"]}}"
             },
             {
                 "function": "minecraft:set_name",
@@ -178,7 +178,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"VillagerSpawnerYellow\"]}}"
+              "tag": "{HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:base\",\"#scaffolding_rush:sand\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"], EntityTag: {id: \"minecraft:marker\", Tags: [\"villager.spawner.yellow\"]}}"
             },
             {
                 "function": "minecraft:set_name",

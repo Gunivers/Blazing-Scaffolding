@@ -4,5 +4,5 @@ summon villager ~ ~ ~ {Attributes:[{Base:0d,Name:"minecraft:generic.movement_spe
 
 execute unless block ~ ~ ~ air run teleport @e[type=villager,tag=new_villager,tag=blue_villager] ~ ~1 ~
 
-kill @s[tag=VillagerSpawnerBlue]
+kill @s[tag=villager.spawner.blue]
 execute as @a[team=blue] run function scaffolding_rush:villager/egg/clear
