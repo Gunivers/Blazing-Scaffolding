@@ -9,7 +9,7 @@ execute unless score #game.loading data matches 1 \
         unless score #villager.movable options matches 0 \
         as @e[type=villager,tag=red_villager] \
         if entity @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/red=true},scores={player.pick_villager_cooldown=..0}] \
-    run function utils:clean_kill
+    run say yolo ça marche
 
 execute unless score #game.loading data matches 1 \
         unless score #villager.movable options matches 0 \
