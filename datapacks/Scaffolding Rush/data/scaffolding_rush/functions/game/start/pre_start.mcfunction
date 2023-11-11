@@ -37,6 +37,7 @@ worldborder center 1000 1000
 function scaffolding_rush:game/summon_markers
 teleport @e[type=marker,name="lava.level",limit=1] 1000 2 1000
 schedule function scaffolding_rush:team/create_base/create 2.5s
+execute as @a[team=spectator,x=0,y=128,z=0,distance=..500] run tp @s ~1000 ~ ~1000
 
 # Update game state
 scoreboard players set #lobby.active data 0
