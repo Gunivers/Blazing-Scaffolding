@@ -1,8 +1,8 @@
 # When player click on villager
 
-say ---
-say @e[type=villager,tag=red_villager]
-say @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/red=true},scores={player.pick_villager_cooldown=..0}]
+
+execute unless score #game.loading data matches 1 run say @e[type=villager,tag=red_villager]
+execute unless score #villager.movable options matches 0 run say @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/red=true},scores={player.pick_villager_cooldown=..0}]
 
 # In game
 execute unless score #game.loading data matches 1 \
