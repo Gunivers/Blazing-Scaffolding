@@ -10,6 +10,7 @@ scoreboard players set @s tutorial 0
 scoreboard players set @s lobby 0
 tag @s add player.item.can_have_items
 
+gamemode adventure @s
 loot replace entity @s hotbar.0 loot scaffolding_rush:scaffolding
 clear @s #scaffolding_rush:sand
 

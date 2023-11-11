@@ -120,7 +120,7 @@ execute as @a[tag=player.item.can_have_book] \
     run loot replace entity @s hotbar.8 loot scaffolding_rush:lobby_book
 
 execute as @a[tag=inTutorial,scores={pos.x=5..}] \
-        if score @s player.item.tutorialsand.count matches 1.. \
+        if score @s player.item.sand.count matches 1.. \
     run loot give @s loot scaffolding_rush:sand
 # Reset timer -----------------------------------------------------------------
 

@@ -7,6 +7,6 @@ execute positioned as @e[type=villager,tag=respawn_villager,tag=yellow_villager,
 execute if score #lobby.active data matches 1 run tp @s[tag=!player.can_respawn,tag=!inTutorial] 0 24 0 0 0
 execute if score #lobby.active data matches 1 at @s run tp @s[tag=inTutorial] -1020 9 ~
 
-gamemode survival @s
+gamemode adventure @s
 
 tag @s remove player.is_dead
