@@ -31,7 +31,6 @@ execute as @a[team=yellow,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~0
 execute as @a[team=yellow,tag=!player.is_dead] at @s positioned ~0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_yellow_block run tag @s add player.walk_on_other_team_block
 execute as @a[team=yellow,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_yellow_block run tag @s add player.walk_on_other_team_block
 
-effect give @a[tag=player.walk_on_other_team_block,tag=!lobby.in_protected_area] wither 1 1 true
-effect clear @a[tag=!player.walk_on_other_team_block,tag=!lobby.in_protected_area] wither
-effect give @a[tag=player.walk_on_other_team_block,tag=!lobby.in_protected_area] slowness 1 1 true
+execute as @a[tag=player.walk_on_other_team_block,tag=!lobby.in_protected_area] run damage @s 3
+effect give @a[tag=player.walk_on_other_team_block,tag=!lobby.in_protected_area] slowness 1 2 true
 effect clear @a[tag=!player.walk_on_other_team_block,tag=!lobby.in_protected_area] slowness
