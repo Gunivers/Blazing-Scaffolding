@@ -1,34 +1,28 @@
 # When player click on villager
 
-
-execute unless score #game.loading data matches 1 run say not loading
-execute unless score #villager.movable options matches 0 run say movable
-say @e[type=villager,tag=red_villager]
-say @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/red=true},scores={player.pick_villager_cooldown=..0}]
-
 # In game
 execute unless score #game.loading data matches 1 \
         unless score #villager.movable options matches 0 \
-        as @e[type=villager,tag=red_villager] \
         if entity @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/red=true},scores={player.pick_villager_cooldown=..0}] \
-    run say yolo ça marche
+        as @e[type=villager,tag=red_villager] \
+    run function utils:clean_kill
 
 execute unless score #game.loading data matches 1 \
         unless score #villager.movable options matches 0 \
-        as @e[type=villager,tag=blue_villager] \
         if entity @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/blue=true},scores={player.pick_villager_cooldown=..0}] \
+        as @e[type=villager,tag=blue_villager] \
     run function utils:clean_kill
 
 execute unless score #game.loading data matches 1 \
         unless score #villager.movable options matches 0 \
-        as @e[type=villager,tag=green_villager] \
         if entity @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/green=true},scores={player.pick_villager_cooldown=..0}] \
+        as @e[type=villager,tag=green_villager] \
     run function utils:clean_kill
 
 execute unless score #game.loading data matches 1 \
         unless score #villager.movable options matches 0 \
-        as @e[type=villager,tag=yellow_villager] \
         if entity @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/yellow=true},scores={player.pick_villager_cooldown=..0}] \
+        as @e[type=villager,tag=yellow_villager] \
     run function utils:clean_kill
 
 advancement revoke @s[team=red] only scaffolding_rush:grab_villager/red

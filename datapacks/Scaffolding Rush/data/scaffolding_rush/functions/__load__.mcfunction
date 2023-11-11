@@ -262,5 +262,10 @@ execute if score #game.loading data matches 1 run function scaffolding_rush:game
 execute if score #game.running data matches 0 unless score #game.end data matches 1 run function scaffolding_rush:game/map/reset/__start__
 execute if score #game.running data matches 1 run function scaffolding_rush:game/stop/end_game
 
+advancement revoke @a only scaffolding_rush:grab_villager/red
+advancement revoke @a only scaffolding_rush:grab_villager/blue
+advancement revoke @a only scaffolding_rush:grab_villager/green
+advancement revoke @a only scaffolding_rush:grab_villager/yellow
+
 # Reset the lobby
 function scaffolding_rush:lobby/map/reset/__start__
