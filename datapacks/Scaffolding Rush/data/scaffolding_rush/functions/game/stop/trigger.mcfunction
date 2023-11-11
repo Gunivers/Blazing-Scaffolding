@@ -2,11 +2,11 @@
 # 1 team left -----------------------------------------------------------------
 
 # Count active teams
-scoreboard players set RemainingTeam data 0
-execute if entity @a[team=blue,tag=!TeamEliminated] run scoreboard players add RemainingTeam data 1
-execute if entity @a[team=green,tag=!TeamEliminated] run scoreboard players add RemainingTeam data 1
-execute if entity @a[team=red,tag=!TeamEliminated] run scoreboard players add RemainingTeam data 1
-execute if entity @a[team=yellow,tag=!TeamEliminated] run scoreboard players add RemainingTeam data 1
+scoreboard players set RemainingTeam data 4
+execute unless entity @a[team=blue,tag=!player.is_dead,tag=!TeamEliminated,limit=1] unless entity @e[tag=blue_villager,tag=game_villager,limit=1] run scoreboard players remove RemainingTeam data 1
+execute unless entity @a[team=green,tag=!player.is_dead,tag=!TeamEliminated,limit=1] unless entity @e[tag=green_villager,tag=game_villager,limit=1] run scoreboard players remove RemainingTeam data 1
+execute unless entity @a[team=red,tag=!player.is_dead,tag=!TeamEliminated,limit=1] unless entity @e[tag=red_villager,tag=game_villager,limit=1] run scoreboard players remove RemainingTeam data 1
+execute unless entity @a[team=yellow,tag=!player.is_dead,tag=!TeamEliminated,limit=1] unless entity @e[tag=yellow_villager,tag=game_villager,limit=1] run scoreboard players remove RemainingTeam data 1
 
 execute unless score DevelopementMode data matches 1 if score RemainingTeam data matches ..1 run function scaffolding_rush:game/stop/end_game
 
