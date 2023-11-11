@@ -10,8 +10,9 @@ scoreboard players set @s tutorial 0
 scoreboard players set @s lobby 0
 tag @s add player.item.can_have_items
 
+gamemode adventure @s
 loot replace entity @s hotbar.0 loot scaffolding_rush:scaffolding
-# item replace entity @s hotbar.1 with minecraft:cyan_concrete_powder{HideFlags:24,CanPlaceOn:["#scaffolding_rush:scaffolding"],CanDestroy:["#scaffolding_rush:scaffolding","#scaffolding_rush:sand","#scaffolding_rush:concrete"]} 42
+clear @s #scaffolding_rush:sand
 
 tellraw @a ["",{"text":"[BS] ","color":"gold"},{"selector":"@s","color":"aqua"},{"translate":"blazing_scaffolding.joined_the_tutorial","color":"gray"},{"translate":"blazing_scaffolding.join","color":"green","clickEvent":{"action":"run_command","value":"/trigger tutorial"},"hoverEvent":{"action":"show_text","contents":"/trigger tutorial"}}]
 
