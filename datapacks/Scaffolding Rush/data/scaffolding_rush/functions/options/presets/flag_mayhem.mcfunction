@@ -27,7 +27,7 @@ scoreboard players set #player.item.fireball.enabled options 1
 scoreboard players set #gameplay.instant_pillar.enabled options 1
 scoreboard players set #gameplay.fast_climb.enabled options 1
 scoreboard players set #gameplay.respawn.delay.second options 5
-scoreboard players set #gameplay.lasting_base.enabled options 1
+scoreboard players set #gameplay.lasting_base.enabled options 0
 scoreboard players set Rafts options 1
 
 # Villager

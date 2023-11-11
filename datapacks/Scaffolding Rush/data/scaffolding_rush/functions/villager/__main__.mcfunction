@@ -7,8 +7,7 @@ tag @e[type=villager,tag=respawn_villager,x=1000,y=100,z=1000,distance=..500] ad
 # Death Management ------------------------------------------------------------
 
 #Kill villagers in lava, or save them if they are invulnerable
-execute unless score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1.8 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
-execute unless score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-1 ~ magma_block run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
+execute unless score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if score @s pos.y <= @e[type=marker,name="lava.level",limit=1] pos.y run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
 
 # Check if villager is alive
 function scaffolding_rush:villager/death/villager_loss_detection
@@ -38,8 +37,8 @@ execute as @e[type=villager,tag=respawn_villager] run function scaffolding_rush:
 
 execute if score #villager.movable options matches 1 as @a[gamemode=!spectator,tag=!Respawning,tag=facing_villager] run function scaffolding_rush:villager/facing/msg
 
-execute if score #villager.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run function scaffolding_rush:villager/warn/msg_actionbar
-execute if score #villager.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:villager/warn/msg_title
+execute if score #villager.invulnerable options matches 0 if score #villager.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning,tag=!facing_villager] run execute if score #villager.invulnerable options matches 0 run function scaffolding_rush:villager/warn/msg_actionbar
+execute if score #villager.invulnerable options matches 0 if score #villager.movable options matches 1 if score #game.running data matches 1 unless entity @e[type=minecraft:villager,tag=respawn_villager,nbt={ActiveEffects:[{Id:25}]}] as @a[gamemode=!spectator,tag=!Respawning] run function scaffolding_rush:villager/warn/msg_title
 
 function scaffolding_rush:villager/health_bar
 

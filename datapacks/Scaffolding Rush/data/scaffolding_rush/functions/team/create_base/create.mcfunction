@@ -24,12 +24,12 @@ execute positioned 0 0 0 if score WBSize options matches 120..165 run spreadplay
 tag @e[type=marker,tag=spread] remove spread
 
 # Sync with lobby position if villager exist
-execute at @e[tag=respawn_villager,tag=red_villager] run tp @e[tag=baseTeam,name="Red"] ~ 2 ~
-execute at @e[tag=respawn_villager,tag=blue_villager] run tp @e[tag=baseTeam,name="Blue"] ~ 2 ~
-execute at @e[tag=respawn_villager,tag=green_villager] run tp @e[tag=baseTeam,name="Green"] ~ 2 ~
-execute at @e[tag=respawn_villager,tag=yellow_villager] run tp @e[tag=baseTeam,name="Yellow"] ~ 2 ~
+execute at @e[tag=respawn_villager,tag=red_villager] run tp @e[tag=baseTeam,name="Red"] ~ 3 ~
+execute at @e[tag=respawn_villager,tag=blue_villager] run tp @e[tag=baseTeam,name="Blue"] ~ 3 ~
+execute at @e[tag=respawn_villager,tag=green_villager] run tp @e[tag=baseTeam,name="Green"] ~ 3 ~
+execute at @e[tag=respawn_villager,tag=yellow_villager] run tp @e[tag=baseTeam,name="Yellow"] ~ 3 ~
 
-execute as @e[tag=baseTeam] at @s run tp @s ~1000 4 ~1000
+execute as @e[tag=baseTeam] at @s run tp @s ~1000 5 ~1000
 
 execute as @e[tag=baseTeam] at @s run function scaffolding_rush:team/create_base/load_structure
 
@@ -48,10 +48,10 @@ function scaffolding_rush:team/create_base/armor
 
 effect give @a minecraft:jump_boost infinite 254 true
 
-execute at @e[tag=baseTeam,name="Blue",limit=1] run teleport @a[team=blue] ~ 4 ~
-execute at @e[tag=baseTeam,name="Green",limit=1] run teleport @a[team=green] ~ 4 ~
-execute at @e[tag=baseTeam,name="Red",limit=1] run teleport @a[team=red] ~ 4 ~
-execute at @e[tag=baseTeam,name="Yellow",limit=1] run teleport @a[team=yellow] ~ 4 ~
+execute at @e[tag=baseTeam,name="Blue",limit=1] run teleport @a[team=blue] ~ 5 ~
+execute at @e[tag=baseTeam,name="Green",limit=1] run teleport @a[team=green] ~ 5 ~
+execute at @e[tag=baseTeam,name="Red",limit=1] run teleport @a[team=red] ~ 5 ~
+execute at @e[tag=baseTeam,name="Yellow",limit=1] run teleport @a[team=yellow] ~ 5 ~
 tag @a[team=!spectator] add InGame
 
 execute as @a[team=,tag=!InGame] at @s run function scaffolding_rush:game/tp_to_game
