@@ -4,8 +4,8 @@
 tp @s ~ ~1 ~ ~ ~
 
 #place support blocks
-execute if entity @s[tag=blue_villager] run fill ~ ~ ~ ~ ~-2 ~ blue_concrete replace #scaffolding_rush:air
-execute if entity @s[tag=green_villager] run fill ~ ~ ~ ~ ~-2 ~ lime_concrete replace #scaffolding_rush:air
-execute if entity @s[tag=red_villager] run fill ~ ~ ~ ~ ~-2 ~ red_concrete replace #scaffolding_rush:air
-execute if entity @s[tag=yellow_villager] run fill ~ ~ ~ ~ ~-2 ~ yellow_concrete replace #scaffolding_rush:air
+execute if entity @s[tag=blue_villager] run fill ~-1 ~ ~1 ~ ~-2 ~ blue_concrete replace #scaffolding_rush:air
+execute if entity @s[tag=green_villager] run fill ~-1 ~ ~1 ~ ~-2 ~ lime_concrete replace #scaffolding_rush:air
+execute if entity @s[tag=red_villager] run fill ~-1 ~ ~1 ~ ~-2 ~ red_concrete replace #scaffolding_rush:air
+execute if entity @s[tag=yellow_villager] run fill ~-1 ~ ~1 ~ ~-2 ~ yellow_concrete replace #scaffolding_rush:air
 
