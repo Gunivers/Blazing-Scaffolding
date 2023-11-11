@@ -82,7 +82,7 @@ scoreboard players operation @a player.item.sand.count *= -1 const
 execute as @a[tag=player.item.can_have_items,scores={player.item.scaffolding.count=1..}] \
     run loot give @s loot scaffolding_rush:scaffolding
 
-execute as @a[tag=player.item.can_have_items,scores={player.item.sand.count=1..}] \
+execute as @a[tag=!inTutorial,tag=player.item.can_have_items,scores={player.item.sand.count=1..}] \
         if score #player.item.sand.enabled options matches 1 \
     run loot give @s loot scaffolding_rush:sand
 
@@ -120,9 +120,8 @@ execute as @a[tag=player.item.can_have_book] \
     run loot replace entity @s hotbar.8 loot scaffolding_rush:lobby_book
 
 execute as @a[tag=inTutorial,scores={pos.x=5..}] \
-        if score #player.item.sand.enabled options matches 1 \
-        unless data entity @s Inventory[{id:"minecraft:cyan_concrete_powder"}] \
-    run give @s cyan_concrete_powder 64
+        if score @s player.item.tutorialsand.count matches 1.. \
+    run loot give @s loot scaffolding_rush:sand
 # Reset timer -----------------------------------------------------------------
 
 scoreboard players set @a[scores={player.item.fireball.timer=..-1}] player.item.fireball.timer 300
@@ -133,7 +132,8 @@ scoreboard players set @a[scores={player.item.bumping_arrow.timer=..-1}] player.
 # In case another system need to know the how many items a player have
 
 execute as @a store result score @s player.item.scaffolding.count run clear @s #scaffolding_rush:scaffolding 0
-execute as @a store result score @s player.item.sand.count run clear @s #scaffolding_rush:sand 0
+execute as @a store result score @s player.item.sand.count run clear @s #scaffolding_rush:sand{sc.teamsand: 1} 0
+execute as @a store result score @s player.item.tutorialsand.count run clear @s cyan_concrete_powder 0
 execute as @a store result score @s player.item.fireball.count run clear @s #scaffolding_rush:fireball 0
 execute as @a store result score @s player.item.ender_pearl.count run clear @s #scaffolding_rush:ender_pearl 0
 execute as @a store result score @s player.item.bumping_arrow.count run clear @s #scaffolding_rush:snowball 0
