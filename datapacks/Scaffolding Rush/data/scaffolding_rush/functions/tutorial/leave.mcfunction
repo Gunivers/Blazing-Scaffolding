@@ -5,6 +5,10 @@ execute as @e[type=marker,tag=TutorialCellClear] at @s run function scaffolding_
 
 function scaffolding_rush:player/join/lobby
 
+scoreboard players set @s pos.x 0
+scoreboard players set @s pos.y 24
+scoreboard players set @s pos.z 0
+
 tag @s remove TutorialMessage1
 tag @s remove TutorialMessage2
 tag @s remove TutorialMessage3
