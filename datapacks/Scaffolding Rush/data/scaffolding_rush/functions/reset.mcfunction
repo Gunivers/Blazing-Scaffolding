@@ -1,6 +1,7 @@
 
 kill @e[type=!player]
 scoreboard players reset *
+stopsound @a
 
 advancement revoke @a everything
 
