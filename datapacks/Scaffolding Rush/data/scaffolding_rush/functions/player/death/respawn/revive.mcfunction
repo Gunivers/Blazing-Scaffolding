@@ -9,7 +9,7 @@ execute if score #lobby.active data matches 1 at @s run tp @s[tag=inTutorial] -1
 
 gamemode adventure @s
 
-effect give @s miencraft:instant_health 1 127 true
-effect give @s miencraft:resistance 2 127 true
+effect give @s minecraft:instant_health 1 127 true
+effect give @s minecraft:resistance 2 127 true
 
 tag @s remove player.is_dead

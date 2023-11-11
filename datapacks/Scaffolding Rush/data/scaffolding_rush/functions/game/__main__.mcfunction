@@ -43,8 +43,6 @@ scoreboard players operation -WBbyTwo data += 1000 const
 scoreboard players operation WBbyTwo data += 1 const
 scoreboard players operation -WBbyTwo data -= 1 const
 
-execute as @a[gamemode=!spectator,tag=InGame] at @s run function scaffolding_rush:game/correct_coordinates
-
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
 
 
