@@ -2,10 +2,10 @@
 execute if score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if block ~ ~-0.0001 ~ magma_block run kill @s
 
 # Kill Villager behind WB
-execute unless score #game.loading matches 1 as @e[type=villager,tag=respawn_villager] if score @s pos.x > WBbyTwo data run kill @s
-execute unless score #game.loading matches 1 as @e[type=villager,tag=respawn_villager] if score @s pos.x < -WBbyTwo data run kill @s
-execute unless score #game.loading matches 1 as @e[type=villager,tag=respawn_villager] if score @s pos.z > WBbyTwo data run kill @s
-execute unless score #game.loading matches 1 as @e[type=villager,tag=respawn_villager] if score @s pos.z < -WBbyTwo data run kill @s
+execute unless score #game.loading data matches 1 as @e[type=villager,tag=respawn_villager] if score @s pos.x > WBbyTwo data run kill @s
+execute unless score #game.loading data matches 1 as @e[type=villager,tag=respawn_villager] if score @s pos.x < -WBbyTwo data run kill @s
+execute unless score #game.loading data matches 1 as @e[type=villager,tag=respawn_villager] if score @s pos.z > WBbyTwo data run kill @s
+execute unless score #game.loading data matches 1 as @e[type=villager,tag=respawn_villager] if score @s pos.z < -WBbyTwo data run kill @s
 
 # Red
 execute if score #villager.enabled options matches 1 \
