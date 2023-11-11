@@ -46,35 +46,6 @@ advancement revoke @a from scaffolding_rush:grab_villager
 advancement revoke @a from scaffolding_rush:replenish
 advancement revoke @a from scaffolding_rush:use_item
 
-# Negative effects of other teams blocks --------------------------------------
-
-tag @a remove player.walk_on_other_team_block
-
-execute as @a[team=red,tag=!player.is_dead] at @s positioned ~0.3 ~-0.001 ~0.3 if block ~ ~ ~ #scaffolding_rush:not_red_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=red,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~0.3 if block ~ ~ ~ #scaffolding_rush:not_red_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=red,tag=!player.is_dead] at @s positioned ~0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_red_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=red,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_red_block run tag @s add player.walk_on_other_team_block
-
-execute as @a[team=blue,tag=!player.is_dead] at @s positioned ~0.3 ~-0.001 ~0.3 if block ~ ~ ~ #scaffolding_rush:not_blue_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=blue,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~0.3 if block ~ ~ ~ #scaffolding_rush:not_blue_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=blue,tag=!player.is_dead] at @s positioned ~0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_blue_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=blue,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_blue_block run tag @s add player.walk_on_other_team_block
-
-execute as @a[team=green,tag=!player.is_dead] at @s positioned ~0.3 ~-0.001 ~0.3 if block ~ ~ ~ #scaffolding_rush:not_green_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=green,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~0.3 if block ~ ~ ~ #scaffolding_rush:not_green_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=green,tag=!player.is_dead] at @s positioned ~0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_green_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=green,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_green_block run tag @s add player.walk_on_other_team_block
-
-execute as @a[team=yellow,tag=!player.is_dead] at @s positioned ~0.3 ~-0.001 ~0.3 if block ~ ~ ~ #scaffolding_rush:not_yellow_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=yellow,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~0.3 if block ~ ~ ~ #scaffolding_rush:not_yellow_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=yellow,tag=!player.is_dead] at @s positioned ~0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_yellow_block run tag @s add player.walk_on_other_team_block
-execute as @a[team=yellow,tag=!player.is_dead] at @s positioned ~-0.3 ~-0.001 ~-0.3 if block ~ ~ ~ #scaffolding_rush:not_yellow_block run tag @s add player.walk_on_other_team_block
-
-effect give @a[tag=player.walk_on_other_team_block,tag=!lobby.in_protected_area] wither 1 1 true
-effect clear @a[tag=!player.walk_on_other_team_block,tag=!lobby.in_protected_area] wither
-effect give @a[tag=player.walk_on_other_team_block,tag=!lobby.in_protected_area] slowness 1 1 true
-effect clear @a[tag=!player.walk_on_other_team_block,tag=!lobby.in_protected_area] slowness
-
 # Cosmetics -------------------------------------------------------------------
 
 execute as @a[gamemode=!spectator,scores={player.win_streak=1..2}] at @s run particle smoke ~ ~0.1 ~ 0.3 0 0.3 0 1 normal

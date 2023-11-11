@@ -4,6 +4,7 @@ tag @a remove TeamEliminated
 tag @a remove player.item.have_egg
 scoreboard players set @a listener.death 0
 tag @a remove lobby.already_seen_playground_message
+tag @a remove lobby.in_protected_area
 
 scoreboard players set @a listener.use.blue_spawn_egg 0
 scoreboard players set @a listener.use.green_spawn_egg 0

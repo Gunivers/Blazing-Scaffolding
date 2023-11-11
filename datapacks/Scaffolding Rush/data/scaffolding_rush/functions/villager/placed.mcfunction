@@ -25,11 +25,9 @@ scoreboard players set @e[type=minecraft:villager] listener.death 0
 execute as @e[type=minecraft:villager] run data merge entity @s {CustomName:""}
 
 #Recup delay
-tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.villager_placed","color":"gray"},{"text":"5","color":"gold"},{"translate":"blazing_scaffolding.villager_placed_seconds","color":"gray"}]
-
-execute at @s run playsound minecraft:entity.villager.celebrate master @a[distance=..30] ~ ~ ~ 1 1 0
-
-scoreboard players set @s player.pick_villager_cooldown 100
+# tellraw @s[scores={language=0}] ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.villager_placed","color":"gray"},{"text":"5","color":"gold"},{"translate":"blazing_scaffolding.villager_placed_seconds","color":"gray"}]
+# execute at @s run playsound minecraft:entity.villager.celebrate master @a[distance=..30] ~ ~ ~ 1 1 0
+scoreboard players set @s player.pick_villager_cooldown 0
 
 execute if entity @s[team=red] run scoreboard players set @a[team=red] player.item.spawn_egg.timer 0
 execute if entity @s[team=blue] run scoreboard players set @a[team=blue] player.item.spawn_egg.timer 0
