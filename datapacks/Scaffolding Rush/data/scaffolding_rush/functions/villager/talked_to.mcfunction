@@ -4,7 +4,7 @@
 execute unless score #game.loading data matches 1 run say not loading
 execute unless score #villager.movable options matches 0 run say movable
 say @e[type=villager,tag=red_villager]
-esay @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/red=true},scores={player.pick_villager_cooldown=..0}]
+say @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/red=true},scores={player.pick_villager_cooldown=..0}]
 
 # In game
 execute unless score #game.loading data matches 1 \
