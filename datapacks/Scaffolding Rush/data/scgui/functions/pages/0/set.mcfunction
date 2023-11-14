@@ -13,7 +13,7 @@ item replace entity @s enderchest.12 with minecraft:snowball{scgui: 1, scgui.act
 item replace entity @s enderchest.15 with tnt{scgui:1, scgui.action:15, display:{Name:'[{"translate":"blazing_scaffolding.performance_mode","italic":false,"color":"gold"}]',Lore:['[{"translate":"blazing_scaffolding.performance_mode.lore","italic":false}]']}, HideFlags: 127} 1
 
 # Admin
-item replace entity @s enderchest.16 with minecraft:command_block{scgui: 1, scgui.action: 16, HideFlags: 127, display: {Name: '[{"text":"I am the admin","italic":false,"color":"gold"}]', Lore: ['[{"translate":"blazing_scaffolding.i_am_the_admin.lore","italic":false}]']}} 1
+item replace entity @s enderchest.16 with minecraft:command_block{scgui: 1, scgui.action: 16, HideFlags: 127, display: {Name: '[{"translate":"blazing_scaffolding.i_am_the_admin","italic":false,"color":"gold"}]', Lore: ['[{"translate":"blazing_scaffolding.i_am_the_admin.lore","italic":false}]']}} 1
 
 # item replace entity @s enderchest.1 with minecraft:player_head{scgui: 1,display:{Name:"{\"text\":\"\"}"},SkullOwner:{Id:[I;-1835423445,-1327217786,-1647442586,-951435585],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWMyNzIzNWRlM2E1NTQ2NmI2Mjc0NTlmMTIzMzU5NmFiNmEyMmM0MzVjZmM4OWE0NDU0YjQ3ZDMyYjE5OTQzMSJ9fX0="}]}}}
 # item replace entity @s enderchest.2 with minecraft:player_head{scgui: 1,display:{Name:"{\"text\":\"\"}"},SkullOwner:{Id:[I;-1835423445,-1327217786,-1647442586,-951435585],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzU4NGRjN2VjZjM2YjRmMDQ0ZjgyNjI1Mjc5ODU3MThiZjI0YTlkYWVmMDEyZGU5MmUxZTc2ZDQ1ODZkOTYifX19"}]}}}

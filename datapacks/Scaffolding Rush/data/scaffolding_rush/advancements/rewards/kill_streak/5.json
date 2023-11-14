@@ -1,21 +1,23 @@
 {
-    "parent": "scaffolding_rush:rewards/kill_streak/3",
-    "display": {
-      "icon": {
-        "item": "minecraft:iron_sword"
-      },
-      "title": "5 villagers killed!",
-      "description": "The village will remember you. One day, one of the villagers will look for you, will find you, and will sell you common stuff for a MUCH MORE unreasonable price than usual! You can only blame yourself.",
-      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-      "frame": "challenge",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword"
     },
-    "criteria": {
-      " ": {
-        "trigger": "impossible"
-      }
+    "title": {
+      "translate": "blazing_scaffolding.advancement_kill_streak_5_title"
+    },
+    "description": {
+      "translate": "blazing_scaffolding.advancement_kill_streak_5_description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "scaffolding_rush:rewards/kill_streak/3",
+  "criteria": {
+    " ": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}
