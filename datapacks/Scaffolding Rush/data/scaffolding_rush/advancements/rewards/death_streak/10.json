@@ -1,21 +1,23 @@
 {
-    "parent": "scaffolding_rush:rewards/death_streak/__main__",
-    "display": {
-      "icon": {
-        "item": "minecraft:bone"
-      },
-      "title": "You died 10 times",
-      "description": "It's actually pathetic, but as you are probably raging right now, here is an virtual reward with a satisfying sound that can help your brain not being too sad.",
-      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-      "frame": "challenge",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:bone"
     },
-    "criteria": {
-      " ": {
-        "trigger": "impossible"
-      }
+    "title": {
+      "translate": "blazing_scaffolding.advancement_death_streak_10_title"
+    },
+    "description": {
+      "translate": "blazing_scaffolding.advancement_death_streak_10_description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "scaffolding_rush:rewards/death_streak/__main__",
+  "criteria": {
+    " ": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}

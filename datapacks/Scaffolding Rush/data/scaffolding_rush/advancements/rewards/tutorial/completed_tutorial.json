@@ -1,21 +1,23 @@
 {
-    "parent": "scaffolding_rush:rewards/tutorial/__main__",
-    "display": {
-      "icon": {
-        "item": "minecraft:written_book"
-      },
-      "title": "Tutorial completed!",
-      "description": "You successfully completed the tutorial. You now know everything about scaffolding mechanics!",
-      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-      "frame": "challenge",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:written_book"
     },
-    "criteria": {
-      " ": {
-        "trigger": "impossible"
-      }
+    "title": {
+      "translate": "blazing_scaffolding.advancement_tutorial_completed_title"
+    },
+    "description": {
+      "translate": "blazing_scaffolding.advancement_tutorial_completed_description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "scaffolding_rush:rewards/tutorial/__main__",
+  "criteria": {
+    " ": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}

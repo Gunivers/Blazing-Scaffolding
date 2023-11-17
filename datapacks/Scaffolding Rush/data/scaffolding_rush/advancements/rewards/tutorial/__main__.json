@@ -1,19 +1,22 @@
 {
-    "display": {
-      "icon": {
-        "item": "minecraft:written_book"
-      },
-      "title": "Deaths",
-      "description": "Advancements related to the tutorial",
-      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-      "show_toast": false,
-      "announce_to_chat": false,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:written_book"
     },
-    "criteria": {
-      " ": {
-        "trigger": "impossible"
-      }
+    "title": {
+      "translate": "blazing_scaffolding.advancement_tutorial_main_title"
+    },
+    "description": {
+      "translate": "blazing_scaffolding.advancement_tutorial_main_description"
+    },
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    " ": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}

@@ -1,21 +1,23 @@
 {
-    "parent": "scaffolding_rush:rewards/win_streak/10",
-    "display": {
-      "icon": {
-        "item": "minecraft:enchanted_golden_apple"
-      },
-      "title": "Cheater spotted!",
-      "description": "You got 10 wins in a row! You are either a cheater, either a robot, but definitely not a human!",
-      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-      "frame": "challenge",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanted_golden_apple"
     },
-    "criteria": {
-      " ": {
-        "trigger": "impossible"
-      }
+    "title": {
+      "translate": "blazing_scaffolding.advancement_win_streak_20_title"
+    },
+    "description": {
+      "translate": "blazing_scaffolding.advancement_win_streak_20_description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "scaffolding_rush:rewards/win_streak/10",
+  "criteria": {
+    " ": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}

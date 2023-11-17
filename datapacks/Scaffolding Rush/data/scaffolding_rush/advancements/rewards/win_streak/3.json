@@ -1,21 +1,23 @@
 {
-    "parent": "scaffolding_rush:rewards/win_streak/first",
-    "display": {
-      "icon": {
-        "item": "minecraft:gold_ingot"
-      },
-      "title": "3 wins in a row!",
-      "description": "Things are starting to be serious!",
-      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-      "frame": "challenge",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_ingot"
     },
-    "criteria": {
-      " ": {
-        "trigger": "impossible"
-      }
+    "title": {
+      "translate": "blazing_scaffolding.advancement_win_streak_3_title"
+    },
+    "description": {
+      "translate": "blazing_scaffolding.advancement_win_streak_3_description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "scaffolding_rush:rewards/win_streak/first",
+  "criteria": {
+    " ": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}

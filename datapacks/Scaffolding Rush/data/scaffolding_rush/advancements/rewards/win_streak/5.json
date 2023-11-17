@@ -1,21 +1,23 @@
 {
-    "parent": "scaffolding_rush:rewards/win_streak/3",
-    "display": {
-      "icon": {
-        "item": "minecraft:gold_block"
-      },
-      "title": "5 wins in a row!",
-      "description": "You are a true champion!",
-      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-      "frame": "challenge",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_block"
     },
-    "criteria": {
-      " ": {
-        "trigger": "impossible"
-      }
+    "title": {
+      "translate": "blazing_scaffolding.advancement_win_streak_5_title"
+    },
+    "description": {
+      "translate": "blazing_scaffolding.advancement_win_streak_5_description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "scaffolding_rush:rewards/win_streak/3",
+  "criteria": {
+    " ": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}

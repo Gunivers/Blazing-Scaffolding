@@ -1,21 +1,23 @@
 {
-    "parent": "scaffolding_rush:rewards/kill_streak/__main__",
-    "display": {
-      "icon": {
-        "item": "minecraft:wooden_sword"
-      },
-      "title": "3 villagers killed",
-      "description": "Stop there or I call the golem.",
-      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
-      "frame": "challenge",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:wooden_sword"
     },
-    "criteria": {
-      " ": {
-        "trigger": "impossible"
-      }
+    "title": {
+      "translate": "blazing_scaffolding.advancement_kill_streak_3_title"
+    },
+    "description": {
+      "translate": "blazing_scaffolding.advancement_kill_streak_3_description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "scaffolding_rush:rewards/kill_streak/__main__",
+  "criteria": {
+    " ": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}

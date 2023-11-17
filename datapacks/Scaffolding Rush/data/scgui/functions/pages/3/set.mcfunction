@@ -3,7 +3,7 @@
 item replace entity @s enderchest.22 with tipped_arrow{CustomPotionColor: 16777215, scgui: 1, scgui.action: 22, display: {Name: '[{"translate":"blazing_scaffolding.back","italic":false,"color":"gold"}]'}, HideFlags: 127} 1
 
 # #player.item.sand.enabled
-item replace entity @s[ enderchest.2 with minecraft:sand{scgui: 1, scgui.action: 2, display: {Name: '[{"translate":"block.minecraft.sand","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
+item replace entity @s enderchest.2 with minecraft:sand{scgui: 1, scgui.action: 2, display: {Name: '[{"translate":"block.minecraft.sand","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
 
 # #player.item.bumping_arrow.enabled
 item replace entity @s enderchest.3 with minecraft:snowball{scgui: 1, scgui.action: 3, display: {Name: '[{"translate":"blazing_scaffolding.bumping_arrow","italic":false,"color":"gold"}]', Lore: ['[{"text":"","italic":false}]']}, HideFlags: 127} 1
