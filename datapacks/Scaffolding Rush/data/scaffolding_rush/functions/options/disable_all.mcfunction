@@ -15,7 +15,7 @@ scoreboard players reset @s option_vil_resp_cd
 scoreboard players reset @s option_instant_pil
 scoreboard players reset @s option_perf_mode
 scoreboard players reset @s option_team_egg
-scoreboard players reset @s option_wb_size_add
+scoreboard players reset @s option_worldborder_size
 scoreboard players reset @s option_regen
 scoreboard players reset @s option_fall_damage
 scoreboard players reset @s option_random_team
