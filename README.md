@@ -18,5 +18,6 @@ This work is licensed under the Creative Commons Attribution-NonCommercial-Share
  - Laizo : dev
  - TretinV3 : dev
  - KaliTheKitsune : dev
+ - MrBurdy : dev
 
 Special thanks to all our testers, we had a nice time playing the map with you🙂

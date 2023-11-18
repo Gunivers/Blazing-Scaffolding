@@ -1,6 +1,6 @@
 # Execute as & at player
 
-function scaffolding_rush:tutorial/leave
+execute if entity @s[tag=inTutorial] run function scaffolding_rush:tutorial/leave
 effect clear @s
 clear @s
 scoreboard players reset @s
