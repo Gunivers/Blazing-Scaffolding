@@ -9,13 +9,6 @@ tag @e[type=villager,tag=respawn_villager,x=1000,y=100,z=1000,distance=..500] ad
 #Kill villagers in lava, or save them if they are invulnerable
 execute unless score #villager.invulnerable options matches 0 as @e[type=villager,tag=respawn_villager] at @s if score @s pos.y <= @e[type=marker,name="lava.level",limit=1] pos.y run function scaffolding_rush:game/prevent_villager_from_falling_in_lava
 
-# Check if villager is alive
-function scaffolding_rush:villager/death/villager_loss_detection
-
-
-
-
-
 # Clear unconsistent villagers
 execute as @e[type=villager,nbt=!{Age:0}] run function utils:clean_kill
 
