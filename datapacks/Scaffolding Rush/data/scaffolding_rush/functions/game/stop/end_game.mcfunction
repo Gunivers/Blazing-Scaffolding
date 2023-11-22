@@ -35,8 +35,13 @@ execute if score TeamWin data matches 2 run function scaffolding_rush:game/stop/
 execute if score TeamWin data matches 3 run function scaffolding_rush:game/stop/message/3_teams
 execute if score TeamWin data matches 4 run function scaffolding_rush:game/stop/message/4_teams
 
+#win streak
 scoreboard players set @a[team=!spectator,tag=TeamEliminated] player.win_streak 0
-scoreboard players add @a[team=!spectator,tag=!TeamEliminated] player.win_streak 1
+execute if entity @a[team=blue,tag=!TeamEliminated,limit=1] run scoreboard players add @a[team=blue] player.win_streak 1
+execute if entity @a[team=green,tag=!TeamEliminated,limit=1] run scoreboard players add @a[team=green] player.win_streak 1
+execute if entity @a[team=red,tag=!TeamEliminated,limit=1] run scoreboard players add @a[team=red] player.win_streak 1
+execute if entity @a[team=yellow,tag=!TeamEliminated,limit=1] run scoreboard players add @a[team=yellow] player.win_streak 1
+
 advancement grant @a[scores={player.win_streak=1}] only scaffolding_rush:rewards/win_streak/first
 advancement grant @a[scores={player.win_streak=3}] only scaffolding_rush:rewards/win_streak/3
 advancement grant @a[scores={player.win_streak=5}] only scaffolding_rush:rewards/win_streak/5
