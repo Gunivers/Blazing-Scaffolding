@@ -56,7 +56,7 @@ execute unless score UseTimeLimit options matches 0..1 run scoreboard players se
 scoreboard objectives add option_use_score_limit trigger
 execute unless score UseScoreLimit options matches 0..1 run scoreboard players set UseScoreLimit options 0
 scoreboard objectives add option_worldborder_size trigger
-execute unless score WBSize options matches 25..165 run scoreboard players set WBSize options 95
+execute unless score WBSize options matches 25..165 run scoreboard players set WBSize options 120
 scoreboard objectives add option_worldborder_shrink trigger
 execute unless score WorldborderShrink options matches 0..1 run scoreboard players set WorldborderShrink options 0
 scoreboard objectives add option_worldborder_start_time trigger
