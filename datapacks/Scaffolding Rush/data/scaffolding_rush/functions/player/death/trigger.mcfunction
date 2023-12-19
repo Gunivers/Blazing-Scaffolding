@@ -4,17 +4,7 @@
 execute as @a at @s run spawnpoint @s ~ ~ ~ ~
 
 # Exit world border -----------------------------------------------------------
-
-#check X
-execute unless entity @a[tag=inTutorial] unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.x > WBbyTwo data run kill @s
-execute unless entity @a[tag=inTutorial] unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.x < -WBbyTwo data run kill @s
-
-#check Y
-execute unless entity @a[tag=inTutorial] unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.y < 0 const run kill @s
-
-#check Z
-execute unless entity @a[tag=inTutorial] unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.z > WBbyTwo data run kill @s
-execute unless entity @a[tag=inTutorial] unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] if score @s pos.z < -WBbyTwo data run kill @s
+execute unless entity @a[tag=inTutorial] unless score #game.loading data matches 1 as @a[tag=!player.is_dead,gamemode=!spectator] run function scaffolding_rush:worldborder/is_behind
 
 
 # Check if player can respawn -------------------------------------------------
