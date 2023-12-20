@@ -39,9 +39,3 @@ execute as @a[scores={respawn.timer=1..}] at @s run function scaffolding_rush:pl
 
 scoreboard players remove @e[scores={player.death.animation=1..}] player.death.animation 1
 scoreboard players remove @e[scores={respawn.timer=1..}] respawn.timer 1
-
-# Update is_dead tag ---------------------------------------------------------
-
-tag @a remove player.is_dead
-tag @a[scores={player.death.animation=1..}] add player.is_dead
-tag @a[scores={respawn.timer=1..}] add player.is_dead
