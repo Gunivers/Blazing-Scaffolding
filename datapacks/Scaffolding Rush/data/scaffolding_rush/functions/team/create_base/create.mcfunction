@@ -3,31 +3,24 @@
 place template scaffolding_rush:volcano 994 2 994
 execute as @e[type=marker,name="lava.level"] at @s run function scaffolding_rush:game/lava/rise_globally
 
-execute if entity @a[team=blue] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Blue"] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Blue"}', Tags: ["baseTeam", "spread"]}
-execute if entity @a[team=green] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Green"] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Green"}', Tags: ["baseTeam", "spread"]}
-execute if entity @a[team=red] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Red"] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Red"}', Tags: ["baseTeam", "spread"]}
-execute if entity @a[team=yellow] unless entity @e[type=minecraft:armor_stand,tag=baseTeam,name="Yellow"] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Yellow"}', Tags: ["baseTeam", "spread"]}
+execute if entity @a[team=blue] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Blue"}', Tags: ["baseTeam", "spread"]}
+execute if entity @a[team=green] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Green"}', Tags: ["baseTeam", "spread"]}
+execute if entity @a[team=red] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Red"}', Tags: ["baseTeam", "spread"]}
+execute if entity @a[team=yellow] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Yellow"}', Tags: ["baseTeam", "spread"]}
 
-execute at @e[type=minecraft:armor_stand,tag=baseTeam,name="Blue"] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Blue"}', Tags: ["baseTeam", "spread"]}
-execute at @e[type=minecraft:armor_stand,tag=baseTeam,name="Green"] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Green"}', Tags: ["baseTeam", "spread"]}
-execute at @e[type=minecraft:armor_stand,tag=baseTeam,name="Red"] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Red"}', Tags: ["baseTeam", "spread"]}
-execute at @e[type=minecraft:armor_stand,tag=baseTeam,name="Yellow"] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Yellow"}', Tags: ["baseTeam", "spread"]}
-
-kill @e[type=armor_stand,tag=baseTeam]
-
-# Spread in borders
-execute positioned 0 0 0 if score WBSize options matches 15..19 run spreadplayers 0 0 5 7 false @e[type=marker,tag=spread]
-execute positioned 0 0 0 if score WBSize options matches 20..34 run spreadplayers 0 0 7 10 false @e[type=marker,tag=spread]
-execute positioned 0 0 0 if score WBSize options matches 35..79 run spreadplayers 0 0 14 17 false @e[type=marker,tag=spread]
-execute positioned 0 0 0 if score WBSize options matches 80..119 run spreadplayers 0 0 35 40 false @e[type=marker,tag=spread]
-execute positioned 0 0 0 if score WBSize options matches 120..165 run spreadplayers 0 0 55 60 false @e[type=marker,tag=spread]
+# Spread in borders (1 block away from it)
+execute positioned 0 0 0 if score WBSize options matches 15..19 run spreadplayers 0 0 5 6 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 20..34 run spreadplayers 0 0 7 9 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 35..79 run spreadplayers 0 0 14 16 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 80..119 run spreadplayers 0 0 35 39 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 120..165 run spreadplayers 0 0 55 59 false @e[type=marker,tag=spread]
 tag @e[type=marker,tag=spread] remove spread
 
 # Sync with lobby position if villager exist
-execute at @e[tag=respawn_villager,tag=red_villager] run tp @e[tag=baseTeam,name="Red"] ~ 3 ~
-execute at @e[tag=respawn_villager,tag=blue_villager] run tp @e[tag=baseTeam,name="Blue"] ~ 3 ~
-execute at @e[tag=respawn_villager,tag=green_villager] run tp @e[tag=baseTeam,name="Green"] ~ 3 ~
-execute at @e[tag=respawn_villager,tag=yellow_villager] run tp @e[tag=baseTeam,name="Yellow"] ~ 3 ~
+execute at @e[tag=respawn_villager,tag=red_villager] run tp @e[type=marker,tag=baseTeam,name="Red"] ~ 3 ~
+execute at @e[tag=respawn_villager,tag=blue_villager] run tp @e[type=marker,tag=baseTeam,name="Blue"] ~ 3 ~
+execute at @e[tag=respawn_villager,tag=green_villager] run tp @e[type=marker,tag=baseTeam,name="Green"] ~ 3 ~
+execute at @e[tag=respawn_villager,tag=yellow_villager] run tp @e[type=marker,tag=baseTeam,name="Yellow"] ~ 3 ~
 
 execute as @e[tag=baseTeam] at @s run tp @s ~1000 5 ~1000
 
