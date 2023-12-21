@@ -3,11 +3,11 @@
 scoreboard players set Preset options 5
 
 # Map
-scoreboard players set #lava.period.second options 5
+scoreboard players set #lava.period.second options 10
 scoreboard players set WBSize options 40
 scoreboard players set WBSize2 options 30
-scoreboard players set WBSize3 options 40
-scoreboard players set WBSize4 options 95
+scoreboard players set WBSize3 options 35
+scoreboard players set WBSize4 options 45
 scoreboard players set WorldborderShrink options 0
 
 
@@ -43,8 +43,8 @@ scoreboard players set #flag.take_over options 1
 # Volcano
 scoreboard players set Volcano options 1
 scoreboard players set VolcanoPopPeriod options 40
-scoreboard players set VolcanoSummonPeriod options 300
-scoreboard players set VolcanoTargetRate options 25
+scoreboard players set VolcanoSummonPeriod options 600
+scoreboard players set VolcanoTargetRate options 0
 
 function scaffolding_rush:options/refresh
 
