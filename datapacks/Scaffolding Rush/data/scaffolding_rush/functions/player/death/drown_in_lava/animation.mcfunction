@@ -1,6 +1,9 @@
 # Execute as & at the player
 # Called by function scaffolding_rush:player/death/trigger
 
+# Show a dead message
+title @s actionbar {"translate":"deathScreen.title"}
+
 # Force ride and sink into lava
 ride @s mount @e[tag=player.death.drown_in_lava.animation,limit=1,sort=nearest]
 execute as @e[tag=player.death.drown_in_lava.animation,limit=1,sort=nearest] at @s run tp @s ~ ~-0.025 ~
