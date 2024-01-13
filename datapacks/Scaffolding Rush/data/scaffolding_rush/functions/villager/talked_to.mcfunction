@@ -1,26 +1,25 @@
-# When player click on villager
+# Executed as the player that interact with the villager
 
-# In game
-execute unless score #game.loading data matches 1 \
-        unless score #villager.movable options matches 0 \
+scoreboard players set #movable_conditions data 1
+execute if score #game.loading data matches 1 run scoreboard players set #movable_conditions data 0
+execute if score #villager.movable options matches 0 unless score #lobby.active data matches 1 run scoreboard players set #movable_conditions data 0
+
+execute if score #movable_conditions data matches 1 \
         if entity @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/red=true},scores={player.pick_villager_cooldown=..0}] \
         as @e[type=villager,tag=red_villager] \
     run function utils:clean_kill
 
-execute unless score #game.loading data matches 1 \
-        unless score #villager.movable options matches 0 \
+execute if score #movable_conditions data matches 1 \
         if entity @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/blue=true},scores={player.pick_villager_cooldown=..0}] \
         as @e[type=villager,tag=blue_villager] \
     run function utils:clean_kill
 
-execute unless score #game.loading data matches 1 \
-        unless score #villager.movable options matches 0 \
+execute if score #movable_conditions data matches 1 \
         if entity @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/green=true},scores={player.pick_villager_cooldown=..0}] \
         as @e[type=villager,tag=green_villager] \
     run function utils:clean_kill
 
-execute unless score #game.loading data matches 1 \
-        unless score #villager.movable options matches 0 \
+execute if score #movable_conditions data matches 1 \
         if entity @s[tag=!player.is_dead,advancements={scaffolding_rush:grab_villager/yellow=true},scores={player.pick_villager_cooldown=..0}] \
         as @e[type=villager,tag=yellow_villager] \
     run function utils:clean_kill
@@ -31,6 +30,7 @@ advancement revoke @s[team=green] only scaffolding_rush:grab_villager/green
 advancement revoke @s[team=yellow] only scaffolding_rush:grab_villager/yellow
 
 execute if score #villager.movable options matches 1 run tag @s add player.item.can_have_spawn_egg
+execute if score #lobby.active data matches 1 run tag @s add player.item.can_have_spawn_egg
 
 execute if entity @s[team=red,scores={player.pick_villager_cooldown=..0}] run scoreboard players operation @a[team=red] player.item.spawn_egg.timer = #villager.respawn.tick options
 execute if entity @s[team=blue,scores={player.pick_villager_cooldown=..0}] run scoreboard players operation @a[team=blue] player.item.spawn_egg.timer = #villager.respawn.tick options
@@ -45,4 +45,4 @@ execute if entity @s[team=yellow,scores={player.pick_villager_cooldown=..0}] run
 scoreboard players set @s[scores={player.pick_villager_cooldown=..0}] player.item.spawn_egg.timer 100
 
 #inform the player if the option is disabled
-execute if score #villager.movable options matches 0 run tellraw @s ["",{"text":"/!\\ You can't move the villager\n/!\\ That option is ","color":"gold"},{"text":"disabled","color":"red"},{"text":" !","color":"gold"}]
+execute if score #villager.movable options matches 0 unless score #lobby.active data matches 1 run tellraw @s ["",{"text":"/!\\ You can't move the villager\n/!\\ That option is ","color":"gold"},{"text":"disabled","color":"red"},{"text":" !","color":"gold"}]
