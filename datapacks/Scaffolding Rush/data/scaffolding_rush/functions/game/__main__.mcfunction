@@ -45,15 +45,13 @@ scoreboard players operation -WBbyTwo data -= 1 const
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
 
-
-function scaffolding_rush:game/team_elimination/trigger
-
-
 # Revive players from changed gamemode
 execute if entity @e[tag=red_villager,tag=game_villager] run tag @a[team=red] remove TeamEliminated
 execute if entity @e[tag=blue_villager,tag=game_villager] run tag @a[team=blue] remove TeamEliminated
 execute if entity @e[tag=green_villager,tag=game_villager] run tag @a[team=green] remove TeamEliminated
 execute if entity @e[tag=yellow_villager,tag=game_villager] run tag @a[team=yellow] remove TeamEliminated
+
+function scaffolding_rush:game/team_elimination/trigger
 
 # Glow player holding villagers
 execute as @a[team=blue,gamemode=!spectator] store result score @s tmp run clear @s squid_spawn_egg 0

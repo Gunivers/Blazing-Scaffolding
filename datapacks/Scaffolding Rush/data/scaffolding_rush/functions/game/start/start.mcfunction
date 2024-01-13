@@ -24,6 +24,7 @@ scoreboard players set VolcanoSummonTimer timer 0
 effect clear @a
 
 tag @a add player.item.can_have_items
+tag @a remove player.is_dead
 
 effect give @a minecraft:instant_health 1 100 true
 effect give @a minecraft:fire_resistance 20 100 true
