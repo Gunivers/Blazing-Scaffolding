@@ -31,7 +31,7 @@ execute as @a[scores={player.death.animation=1..},tag=player.death.killed_by_pla
 
 # Respawn --------------------------------------------------------------------
 
-execute as @e[team=!spectator,tag=player.can_respawn,scores={respawn.timer=0},gamemode=spectator] at @s run function scaffolding_rush:player/respawn/start
+execute as @a[team=!spectator,tag=player.can_respawn,scores={respawn.timer=0},gamemode=spectator] at @s run function scaffolding_rush:player/death/respawn/start
 execute as @a[scores={respawn.timer=1..},tag=!player.can_respawn] at @s run function scaffolding_rush:player/death/respawn/stop
 execute as @a[scores={respawn.timer=1..}] at @s run function scaffolding_rush:player/death/respawn/animation
 
