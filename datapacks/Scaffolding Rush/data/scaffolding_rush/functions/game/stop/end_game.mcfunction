@@ -2,8 +2,6 @@ scoreboard players set #game.running data 0
 scoreboard players set #game.end data 1
 kill @e[tag=Volcano]
 
-execute if score UseTimeLimit options matches 1.. run function scaffolding_rush:game/score_elimination
-
 function scaffolding_rush:game/music/__stop__
 
 # Get best score --------------------------------------------------------------
