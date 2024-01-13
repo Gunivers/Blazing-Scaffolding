@@ -5,6 +5,8 @@ function scaffolding_rush:player/death/just_died
 
 tellraw @a ["",{"text":"[BS] ","color":"gold"},{"selector":"@s"},{"translate":"blazing_scaffolding.fell_into_the_lava","color":"gray"}]
 
+# Replace with a pumpkin head to have the color death message
+item replace entity @s armor.head with carved_pumpkin{display:{Name:'{"text":""}'},HideFlags:1,CustomModelData:127,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1
 effect give @s resistance 3 127 true
 effect give @s fire_resistance 3 127 true
 
