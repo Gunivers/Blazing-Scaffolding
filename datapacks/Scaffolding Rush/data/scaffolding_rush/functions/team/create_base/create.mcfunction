@@ -9,11 +9,11 @@ execute if entity @a[team=red] run summon minecraft:marker 0 0 0 {CustomName: '{
 execute if entity @a[team=yellow] run summon minecraft:marker 0 0 0 {CustomName: '{"text":"Yellow"}', Tags: ["baseTeam", "spread"]}
 
 # Spread in borders (1 block away from it)
-execute positioned 0 0 0 if score WBSize options matches 15..19 run spreadplayers 0 0 5 6 false @e[type=marker,tag=spread]
-execute positioned 0 0 0 if score WBSize options matches 20..34 run spreadplayers 0 0 7 9 false @e[type=marker,tag=spread]
-execute positioned 0 0 0 if score WBSize options matches 35..79 run spreadplayers 0 0 14 16 false @e[type=marker,tag=spread]
-execute positioned 0 0 0 if score WBSize options matches 80..119 run spreadplayers 0 0 35 39 false @e[type=marker,tag=spread]
-execute positioned 0 0 0 if score WBSize options matches 120..165 run spreadplayers 0 0 55 59 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 15..19 run spreadplayers 0 0 5 5 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 20..34 run spreadplayers 0 0 7 8 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 35..79 run spreadplayers 0 0 14 15 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 80..119 run spreadplayers 0 0 35 38 false @e[type=marker,tag=spread]
+execute positioned 0 0 0 if score WBSize options matches 120..165 run spreadplayers 0 0 55 58 false @e[type=marker,tag=spread]
 tag @e[type=marker,tag=spread] remove spread
 
 # Sync with lobby position if villager exist
