@@ -47,8 +47,6 @@ execute at @e[tag=baseTeam,name="Red",limit=1] run teleport @a[team=red] ~ 5 ~
 execute at @e[tag=baseTeam,name="Yellow",limit=1] run teleport @a[team=yellow] ~ 5 ~
 tag @a[team=!spectator] add InGame
 
-execute as @a[team=,tag=!InGame] at @s run function scaffolding_rush:game/tp_to_game
-
 execute as @e[type=villager,tag=LobbyBase] run function utils:clean_kill
 
 execute as @a[gamemode=!spectator] at @s run function scaffolding_rush:game/build_limit
