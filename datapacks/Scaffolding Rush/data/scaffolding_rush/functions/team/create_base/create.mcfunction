@@ -37,7 +37,7 @@ team join red @e[type=villager,tag=new_villager,tag=red_villager]
 team join yellow @e[type=villager,tag=new_villager,tag=yellow_villager]
 tag @e[type=villager,tag=new_villager] remove new_villager
 
-function scaffolding_rush:team/create_base/armor
+execute as @a at @s run function scaffolding_rush:team/create_base/armor
 
 effect give @a minecraft:jump_boost infinite 254 true
 
