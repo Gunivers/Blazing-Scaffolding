@@ -1,4 +1,8 @@
 
+# Remove the "Red Screen"
+item replace entity @s armor.head with air
+
+
 execute positioned as @e[type=villager,tag=respawn_villager,tag=red_villager,limit=1,sort=nearest] run tp @s[team=red,tag=player.can_respawn,tag=!inTutorial] ~ ~ ~
 execute positioned as @e[type=villager,tag=respawn_villager,tag=blue_villager,limit=1,sort=nearest] run tp @s[team=blue,tag=player.can_respawn,tag=!inTutorial] ~ ~ ~
 execute positioned as @e[type=villager,tag=respawn_villager,tag=green_villager,limit=1,sort=nearest] run tp @s[team=green,tag=player.can_respawn,tag=!inTutorial] ~ ~ ~
