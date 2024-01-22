@@ -29,6 +29,6 @@ fill ~-2 ~2 ~1 ~2 ~2 ~1 minecraft:air replace minecraft:light_gray_concrete
 
 execute if entity @s[tag=blue_villager] run fill ~-2 ~-1 ~-2 ~2 ~2 ~2 minecraft:blue_concrete replace minecraft:light_gray_concrete
 execute if entity @s[tag=red_villager] run fill ~-2 ~-1 ~-2 ~2 ~2 ~2 minecraft:red_concrete replace minecraft:light_gray_concrete
-execute if entity @s[tag=green_villager] run fill ~-2 ~-1 ~-2 ~2 ~2 ~2 minecraft:green_concrete replace minecraft:light_gray_concrete
+execute if entity @s[tag=green_villager] run fill ~-2 ~-1 ~-2 ~2 ~2 ~2 minecraft:lime_concrete replace minecraft:light_gray_concrete
 execute if entity @s[tag=yellow_villager] run fill ~-2 ~-1 ~-2 ~2 ~2 ~2 minecraft:yellow_concrete replace minecraft:light_gray_concrete
 
