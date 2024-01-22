@@ -3,7 +3,7 @@
 tag @a[scores={climbing=1..,crouching=0}] add fastClimbTick
 
 effect clear @a[tag=fastClimb,tag=!fastClimbTick] levitation
-effect give @a[tag=!fastClimb,tag=fastClimbTick,tag=!inTutorial] levitation infinite 10
+effect give @a[tag=fastClimbTick,tag=!inTutorial] levitation 1 10
 
 tag @a[tag=fastClimbTick] add fastClimb
 tag @a[tag=!fastClimbTick] remove fastClimb
