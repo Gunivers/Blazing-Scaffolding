@@ -5,7 +5,7 @@ scoreboard players set Preset options 1
 # Map
 scoreboard players set #lava.period.second options 7
 scoreboard players set WBSize options 95
-scoreboard players set WBSize2 options 75
+scoreboard players set WBSize2 options 85
 scoreboard players set WBSize3 options 95
 scoreboard players set WBSize4 options 130
 scoreboard players set WorldborderShrink options 0
