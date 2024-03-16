@@ -16,7 +16,7 @@ execute at @s run tp @s @s
 
 gamemode adventure @s
 
-function scaffolding_rush:team/create_base/armor
+execute if score #game.running data matches 1 run function scaffolding_rush:team/create_base/armor
 
 effect give @s minecraft:instant_health 1 127 true
 effect give @s minecraft:resistance 2 127 true
