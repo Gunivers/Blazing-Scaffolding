@@ -4,7 +4,7 @@
 place template scaffolding_rush:parkour/trainingparkour ~-1 ~ ~-2
 
 #tp the player and set it's spawn
-teleport @s ~1 ~8.1 ~ -90 0
+teleport @s ~1 ~8.1 ~ -90 -7
 
 execute as @s at @s store result score @s tutorial.cell.z run data get entity @s Pos[2]
 

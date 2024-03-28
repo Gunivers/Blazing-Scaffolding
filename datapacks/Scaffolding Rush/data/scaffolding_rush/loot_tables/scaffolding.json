@@ -20,7 +20,7 @@
         },
         {
           "function": "minecraft:set_nbt",
-          "tag": "{sc.item: 1, HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:base\",\"#scaffolding_rush:concrete\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"]}"
+          "tag": "{sc.item: 1, HideFlags:24,CanPlaceOn:[\"#scaffolding_rush:lobby\",\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:base\",\"#scaffolding_rush:concrete\",\"white_concrete_powder\"],CanDestroy:[\"#scaffolding_rush:scaffolding\",\"#scaffolding_rush:sand\",\"#scaffolding_rush:concrete\"]}"
         },
         {
             "function": "minecraft:set_name",
