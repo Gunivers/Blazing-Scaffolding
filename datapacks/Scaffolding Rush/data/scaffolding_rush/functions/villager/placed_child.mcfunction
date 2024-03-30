@@ -1,4 +1,11 @@
-$execute as @e[type=marker,tag=villager.spawner.$(color)] at @s run function scaffolding_rush:villager/summon/$(color)
+
+$tag @e[type=marker,tag=villager.spawner.$(color)] add processed
+
+execute if score #lobby.active data matches 1 run tag @s add player_place_base
+execute if score #lobby.active data matches 1 as @e[type=marker,tag=processed] at @s run function scaffolding_rush:villager/check_placement
+tag @s remove player_place_base
+
+$execute as @e[type=marker,tag=processed] at @s run function scaffolding_rush:villager/summon/$(color)
 
 $execute if score #lobby.active data matches 1 \
         as @e[tag=$(color)_villager,tag=respawn_villager] \
