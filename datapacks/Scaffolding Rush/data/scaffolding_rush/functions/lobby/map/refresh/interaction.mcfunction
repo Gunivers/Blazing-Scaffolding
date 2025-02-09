@@ -14,3 +14,8 @@ execute if score TeamNumber options matches 2 run data merge entity @e[type=text
 
 data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=!looked_at] {text: '{"translate":"blazing_scaffolding.random","color":"dark_purple","strikethrough":false}', background: 0}
 data merge entity @e[type=text_display,tag=LobbyTeamRandom,limit=1,tag=looked_at] {text: '{"translate":"blazing_scaffolding.random","color":"white","strikethrough":false}', background: -9426945}
+
+# Tutorial access
+#data merge entity @e[type=text_display,tag=LobbyTutoAccess,limit=1,tag=!looked_at] {text: '{"color":"dark_purple","strikethrough":false}', background: 0}
+#data merge entity @e[type=text_display,tag=LobbyTutoAccess,limit=1,tag=looked_at] {text: '{"color":"white","strikethrough":false}', background: -9426945}
+

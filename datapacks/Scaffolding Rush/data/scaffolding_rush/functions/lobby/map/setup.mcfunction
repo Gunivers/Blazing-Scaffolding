@@ -52,7 +52,9 @@ summon minecraft:text_display -4 25.2 8 {text: '{"translate":"blazing_scaffoldin
 summon minecraft:text_display -5.0 27 -2.99 {text: '["",{"translate":"blazing_scaffolding.credits","underlined":true,"color":"gold","bold":true},{"text":"\\n"},{"text":"Leirof\\nLoumardes\\nTheaustudio\\nLaizo\\nascpial\\nTretinV3\\nKali\\nMrBurdy\\n","color":"#e5e5e5"},{"translate":"blazing_scaffolding.and_many_other","color":"gold"}]', Tags: ["lobbyText"], billboard: 'fixed', background: 0, brightness: {block: 10, sky: 10}}
 summon minecraft:text_display -5.0 26.4 -2.99 {text: '["",{"translate":"blazing_scaffolding.join_discord","color":"white"}]', Tags: ["lobbyText"], billboard: 'fixed', background: -10983950, brightness: {block: 10, sky: 10}}
 summon minecraft:text_display -5.0 26.1 -2.99 {text: '["",{"text":"gunivers.net","color":"gold"}]', Tags: ["lobbyText"], billboard: 'fixed', background: 0, brightness: {block: 10, sky: 10}}
-summon minecraft:interaction -5.0 25.5 -3.5 {height: 4f, width: 1.9f, Tags: ["lobbyInteraction", "LobbyCredits"]}
+summon minecraft:interaction -5.0 26 -3.5 {height: 4f, width: 1.9f, Tags: ["lobbyInteraction", "LobbyCredits"]}
+summon minecraft:text_display 7.9 25.1 -4.0 {text: '["",{"text":"Tutorial Area","color":"aqua"}]',transformation:[0f, 0f, -1f, 0f, 0f, 1f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, 0f, 0f, 1f], Tags: ["lobbyText","LobbyTutoAccess"], billboard: 'fixed', background: 0, brightness: {block: 10, sky: 10}}
+summon minecraft:interaction 8.5 24.75 -4.0 {height: 1f, width: 1.9f, Tags: ["lobbyInteraction", "LobbyTutoAccess"]}
 
 kill @e[type=marker,tag=lobbyLight]
 summon minecraft:marker 0 24 0 {Tags: ["lobbyLight"]}

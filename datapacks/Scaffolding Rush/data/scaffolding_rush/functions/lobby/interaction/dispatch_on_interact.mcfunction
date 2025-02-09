@@ -6,6 +6,7 @@ execute if entity @s[tag=LobbyPresetVillagerPrevious] on target at @s run functi
 execute if entity @s[tag=LobbyTeamPlus] on target at @s run function scaffolding_rush:lobby/interaction/events/add_team
 execute if entity @s[tag=LobbyTeamMinus] on target at @s run function scaffolding_rush:lobby/interaction/events/remove_team
 execute if entity @s[tag=LobbyTeamRandom] on target at @s run function scaffolding_rush:team/randomize/randomize
+execute if entity @s[tag=LobbyTutoAccess] on target at @s run function scaffolding_rush:tutorial/join
 
 execute if entity @s[tag=teamBlue] on target at @s[team=!blue] run function scaffolding_rush:team/join/blue
 execute if entity @s[tag=teamGreen] on target at @s[team=!green] run function scaffolding_rush:team/join/green

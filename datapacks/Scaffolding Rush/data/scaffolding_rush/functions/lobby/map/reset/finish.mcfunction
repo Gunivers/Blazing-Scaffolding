@@ -6,5 +6,3 @@ scoreboard players set #lobby.clear data 0
 
 
 bossbar remove reset_lobby
-
-function scaffolding_rush:lobby/map/setup
