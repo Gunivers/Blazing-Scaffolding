@@ -10,6 +10,6 @@ execute if entity @s[tag=NoSupport] run fill ~ 0 ~ ~ 319 ~ minecraft:air replace
 
 particle crit ~ ~1.5 ~ 0.2 0.2 0 0.2 5
 
-execute unless entity @s[tag=NoSupport] run playsound minecraft:block.scaffolding.fall master @a ~ ~ ~ 
+execute unless entity @s[tag=NoSupport] run playsound minecraft:block.scaffolding.fall master @a ~ ~ ~ 0.5
 
 kill @s

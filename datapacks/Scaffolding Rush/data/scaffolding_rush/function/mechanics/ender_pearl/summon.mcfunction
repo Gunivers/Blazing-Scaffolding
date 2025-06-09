@@ -1,4 +1,4 @@
-summon armor_stand ~ ~-2.1 ~ {Marker:1,NoGravity:1,Invisible:1,Tags:["ender_pearl","ender_pearl_new"],ArmorItems:[{},{},{},{id:"minecraft:ender_pearl",Count:1b}]}
+summon armor_stand ~ ~-2.1 ~ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["ender_pearl","ender_pearl_new"],ArmorItems:[{},{},{},{id:"minecraft:ender_pearl",Count:1b}]}
 
 function glib.vector:classic/get_from_motion
 

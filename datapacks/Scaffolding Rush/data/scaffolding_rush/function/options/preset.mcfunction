@@ -7,7 +7,7 @@ execute if score @s option_preset matches 5 run function scaffolding_rush:option
 execute if score @s option_preset matches 6 run function scaffolding_rush:options/presets/sky_scrappers
 execute if score @s option_preset matches 7 run function scaffolding_rush:options/presets/flag_mayhem
 
-execute unless score @s option_preset matches -1..8 run tellraw @s ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.invalid_preset_number","color":"red"},{"text":"\n"},{"translate":"blazing_scaffolding.use","color":"gray"},{"translate":"blazing_scaffolding.trigger_option_preset_set","italic":true,"color":"gold","clickEvent":{"action":"suggest_command","value":"/trigger option_preset set"},"hoverEvent":{"action":"show_text","value":[{"translate":"blazing_scaffolding.suggest_command"}]}},{"translate":"blazing_scaffolding.to_choose_one","color":"gray"}]
+execute unless score @s option_preset matches -1..8 run tellraw @s ["",{"text":"[BS] ","color":"gold"},{"translate":"blazing_scaffolding.invalid_preset_number","color":"red"},{"text":"\n"},{"translate":"blazing_scaffolding.use","color":"gray"},{"translate":"blazing_scaffolding.trigger_option_preset_set","italic":true,"color":"gold",click_event:{"action":"suggest_command","command":"/trigger option_preset set"},hover_event:{"action":"show_text","value":[{"translate":"blazing_scaffolding.suggest_command"}]}},{"translate":"blazing_scaffolding.to_choose_one","color":"gray"}]
 
 execute if score @s option_preset matches 8.. run function scaffolding_rush:options/presets/classic
 execute if score @s option_preset matches ..-1 run function scaffolding_rush:options/presets/flag_mayhem
