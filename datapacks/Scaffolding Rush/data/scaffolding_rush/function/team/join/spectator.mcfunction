@@ -1,5 +1,6 @@
 team join spectator @s
-function scaffolding_rush:team/join/killbase
+function scaffolding_rush:team/killbase
+
 tag @a remove player.item.can_have_items
 tag @a remove player.item.have_egg
 
