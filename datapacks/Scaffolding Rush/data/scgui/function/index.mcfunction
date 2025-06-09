@@ -1,6 +1,6 @@
 
 scoreboard players reset @a scgui.testclear
-execute as @a store success score @s scgui.testclear run clear @s #scgui:all{scgui:1}
+execute as @a store success score @s scgui.testclear run clear @s #scgui:all[custom_data={scgui:1}]
 
 execute if entity @e[nbt={Item:{tag:{scgui:1}}}] run scoreboard players set @a scgui.change 1
 kill @e[nbt={Item:{tag:{scgui:1}}}]
