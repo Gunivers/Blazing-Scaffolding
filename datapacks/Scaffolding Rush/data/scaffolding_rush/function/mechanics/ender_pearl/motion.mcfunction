@@ -1,5 +1,5 @@
 execute as @e[tag=ender_pearl] at @s run function glib.move:by_vector
-execute as @e[tag=ender_pearl] at @s run particle dust 0.314 0 0.604 1 ~ ~2.1 ~ 0 0 0 0 1 force
+execute as @e[tag=ender_pearl] at @s run particle dust{color:13962709,scale:1} ~ ~2.1 ~ 0 0 0 0.6 1 force
 
 # Gravity
 scoreboard players remove @e[tag=ender_pearl,tag=!Impact] glib.vectorY 30
