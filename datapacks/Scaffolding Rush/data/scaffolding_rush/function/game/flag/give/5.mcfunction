@@ -1,10 +1,10 @@
 
 clear @s minecraft:red_banner
 
-item replace entity @s weapon.offhand with minecraft:light_blue_banner{BlockEntityTag:{Patterns:[{Pattern:bs,Color:0},{Pattern:mr,Color:3},{Pattern:ts,Color:0},{Pattern:drs,Color:0},{Pattern:bo,Color:3}]}}
+item replace entity @s weapon.offhand with minecraft:light_blue_banner[banner_patterns=[{color:"white",pattern:"stripe_bottom"},{color:"light_blue",pattern:"rhombus"},{color:"white",pattern:"stripe_top"},{color:"white",pattern:"stripe_downright"},{color:"light_blue",pattern:"border"}]]
 function scaffolding_rush:game/flag/give/head/5
 
-item replace entity @s armor.head with minecraft:light_blue_banner{BlockEntityTag:{Patterns:[{Pattern:bs,Color:0},{Pattern:mr,Color:3},{Pattern:ts,Color:0},{Pattern:drs,Color:0},{Pattern:bo,Color:3}]}}
+item replace entity @s armor.head with minecraft:light_blue_banner[banner_patterns=[{color:"white",pattern:"stripe_bottom"},{color:"light_blue",pattern:"rhombus"},{color:"white",pattern:"stripe_top"},{color:"white",pattern:"stripe_downright"},{color:"light_blue",pattern:"border"}]]
 
 title @s times 0 20 20
 title @s title {"text":""}

@@ -1,9 +1,9 @@
 
 clear @s minecraft:purple_banner
 
-item replace entity @s weapon.offhand with minecraft:purple_banner{BlockEntityTag:{Patterns:[{Pattern:cs,Color:0},{Pattern:tl,Color:0},{Pattern:cbo,Color:10},{Pattern:bs,Color:0},{Pattern:bo,Color:10}]}}
+item replace entity @s weapon.offhand with purple_banner[banner_patterns=[{color:"white",pattern:"stripe_center"},{color:"white",pattern:"square_top_left"},{color:"purple",pattern:"curly_border"},{color:"white",pattern:"stripe_bottom"},{color:"purple",pattern:"border"}]] 1
 
-item replace entity @s armor.head with minecraft:purple_banner{BlockEntityTag:{Patterns:[{Pattern:cs,Color:0},{Pattern:tl,Color:0},{Pattern:cbo,Color:10},{Pattern:bs,Color:0},{Pattern:bo,Color:10}]}}
+item replace entity @s armor.head with purple_banner[banner_patterns=[{color:"white",pattern:"stripe_center"},{color:"white",pattern:"square_top_left"},{color:"purple",pattern:"curly_border"},{color:"white",pattern:"stripe_bottom"},{color:"purple",pattern:"border"}]] 1
 
 title @s times 0 20 20
 title @s title {"text":""}
