@@ -47,7 +47,8 @@
                     "color": "gray",
                     "italic": false
                   }
-                ]
+                ],
+                "mode": "replace_all"
               }
           ],
           "conditions": [
@@ -103,7 +104,8 @@
                     "color": "gray",
                     "italic": false
                   }
-                ]
+                ],
+                "mode": "replace_all"
               }
           ],
           "conditions": [
@@ -159,7 +161,8 @@
                     "color": "gray",
                     "italic": false
                   }
-                ]
+                ],
+                "mode": "replace_all"
               }
           ],
           "conditions": [
@@ -215,7 +218,8 @@
                     "color": "gray",
                     "italic": false
                   }
-                ]
+                ],
+                "mode": "replace_all"
               }
           ],
           "conditions": [
