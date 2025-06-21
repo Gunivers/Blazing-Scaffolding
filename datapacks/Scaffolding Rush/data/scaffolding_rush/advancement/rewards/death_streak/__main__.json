@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:bone"
+      "id": "minecraft:bone"
     },
     "title": {
       "translate": "blazing_scaffolding.advancement_death_streak_main_title"

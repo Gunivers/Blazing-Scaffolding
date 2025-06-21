@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:gold_nugget"
+      "id": "minecraft:gold_nugget"
     },
     "title": {
       "translate": "blazing_scaffolding.advancement_win_streak_first_title"

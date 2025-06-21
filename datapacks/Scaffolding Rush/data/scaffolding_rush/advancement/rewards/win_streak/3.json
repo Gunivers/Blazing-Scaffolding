@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:gold_ingot"
+      "id": "minecraft:gold_ingot"
     },
     "title": {
       "translate": "blazing_scaffolding.advancement_win_streak_3_title"

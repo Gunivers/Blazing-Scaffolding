@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:wooden_sword"
+      "id": "minecraft:wooden_sword"
     },
     "title": {
       "translate": "blazing_scaffolding.advancement_kill_streak_3_title"

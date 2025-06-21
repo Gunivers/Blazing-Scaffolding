@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:golden_apple"
+      "id": "minecraft:golden_apple"
     },
     "title": {
       "translate": "blazing_scaffolding.advancement_win_streak_10_title"
