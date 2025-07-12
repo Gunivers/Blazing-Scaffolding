@@ -14,9 +14,10 @@ bossbar set reset_map players @a
 bossbar set reset_map max 256
 bossbar set reset_map color red
 
-kill @e[type=marker,name="ScR_ClearGame"]
-execute unless entity @e[type=marker,name="ScR_ClearGame"] run summon minecraft:marker 1000 319 1000 {CustomName: '{"text":"ScR_ClearGame"}'}
-teleport @e[type=marker,name="ScR_ClearGame",limit=1] 1000 319 1000
-execute as @e[type=marker,name="ScR_ClearGame",limit=1] store result score @s pos.y run data get entity @s Pos[1]
+forceload add 1000 1000
+kill @e[type=marker,tag=ScR_ClearGame]
+execute unless entity @n[type=marker,tag=ScR_ClearGame] run summon minecraft:marker 1000 319 1000 {Tags:["ScR_ClearGame"]}
+teleport @n[type=marker,tag=ScR_ClearGame,limit=1] 1000 319 1000
+execute as @n[type=marker,tag=ScR_ClearGame,limit=1] store result score @s pos.y run data get entity @s Pos[1]
 
 function scaffolding_rush:game/map/reset/wait_chunk

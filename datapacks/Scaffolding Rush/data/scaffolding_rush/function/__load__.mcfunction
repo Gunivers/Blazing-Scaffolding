@@ -269,3 +269,4 @@ advancement revoke @a only scaffolding_rush:grab_villager/yellow
 
 # Reset the lobby
 function scaffolding_rush:lobby/map/reset/__start__
+function scaffolding_rush:game/map/reset/__start__
